@@ -70,7 +70,7 @@
             </tr>
             <tr>
                 <td colspan="2" id="footer">
-                    <center>2015 Company - <a href="#">Home</a> - <a href="#">Browse</a> - <a href="#">Contact</a></center>
+                    <?php echo file_get_contents('Footer.html'); ?>
                 </td>
             </tr>
         </table>
