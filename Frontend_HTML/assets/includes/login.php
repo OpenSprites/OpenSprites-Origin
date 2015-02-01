@@ -1,4 +1,4 @@
-<?
+<?php
 
   //Firedrake969's login script v000
   
