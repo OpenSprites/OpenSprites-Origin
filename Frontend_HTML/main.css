@@ -28,9 +28,19 @@
         font-family: "Lucida Grande", Serif;
     }
 
-    #header big {
+    #header h2 {
         font-size: 24px;
+		font-family: Fredoka One;
+		padding: 0px;
+		margin-bottom: 0px;
+		margin-top: 0px;
     }
+	
+	#header p {
+	padding: 0px;
+	margin-top: 0px;
+	font-family: Comfortaa;
+	}
 
     #header a {
         text-decoration: none;
