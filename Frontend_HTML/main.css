@@ -1,0 +1,278 @@
+@media screen and (min-width: 600px) {
+    /* Body */
+
+    #page-table {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #CFCFCF;
+        padding: 8px;
+        font-family: Arial, Serif;
+    }
+
+    div.container {
+        overflow: scroll;
+    }
+
+    /* Header */
+
+    #header {
+        background-color: #3999E5;
+        height: 80px;
+        color: #EFEFEF;
+        border-radius: 20px;
+        border: 10px solid rgba(0,0,0,0);
+        line-height: 18px;
+        font-family: "Lucida Grande", Serif;
+    }
+
+    #header big {
+        font-size: 24px;
+    }
+
+    #header a {
+        text-decoration: none;
+        color: white;
+        letter-spacing: 0px;
+        transition-duration: 0.5s;
+    }
+
+    #header a:hover {
+        color: #EEEEEE;
+        letter-spacing: 0.5px;
+        transition-duration: 0.3s;
+    }
+
+    /* Main page */
+
+    #main-page {
+        background-color: white;
+        padding: 10px;
+    }
+
+    #main-page #sign-up {
+        background-color: #43D8E4;
+        width: 98%;
+        height: 100px;
+        border: 5px solid rgba(0,0,0,0);
+        border-radius: 5px;
+        color: #EEEEEE;
+    }
+
+    #main-page #sign-up-btn {
+        float: right;
+        padding: 8px;
+        background-color: #1147F1;
+        position: relative;
+        border-radius: 8px;
+    }
+
+    #main-page #sign-up-btn a {
+        text-decoration: none;
+        color: white;
+    }
+
+    @media screen and (max-width: 871px) {
+        #main-page #sign-up-btn {
+            top: 20px;
+        }
+    }
+
+    @media screen and (min-width: 872px) {
+        #main-page #sign-up-btn {
+            top: 40px;
+        }
+    }
+
+    .showcase figure {
+        width: 130px;
+        float: left;
+    }
+
+    .showcase li {
+        margin-left: 220px;
+        margin-bottom: 8px;
+        width: 60%;
+    }
+
+    .showcase .file-title {
+        background-color: #CCCCCC;
+        color: #EFEFEF;
+    }
+
+    .showcase .file-title a {
+        color: white;
+        text-decoration: none;
+    }
+
+    .showcase .file-version {
+        background-color: #999999;
+        color: #DDDDDD;
+    }
+
+    /* Side bar (upload) */
+
+    #upload {
+        background-color: white;
+        width: 150px;
+        padding: 8px;
+        font-family: Arial;
+        color: #CCCCCC;
+        overflow: scroll; /* Does this work? */
+    }
+
+    #upload-head {
+        background-color: #43D8E4;
+        padding: 5px;
+        border-radius: 8px;
+        color: white;
+    }
+
+    /* Footer */
+
+    #footer {
+        background-color: #CFCFCF;
+        height: 50px;
+        color: #FFFFFF;
+    }
+
+    #footer a {
+        text-decoration: none;
+        color: #EEEEEE;
+    }
+
+    #footer a:hover {
+        color: #FFFFFF;
+    }
+}
+
+@media screen and (max-width: 599px) {
+    /* Body */
+
+    #page-table {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #CFCFCF;
+        font-family: Arial, Serif;
+    }
+
+    div.container {
+        overflow: scroll;
+    }
+
+    /* Header */
+
+    #header {
+        background-color: #3999E5;
+        height: 80px;
+        color: #EFEFEF;
+        border: 10px solid rgba(0,0,0,0);
+        line-height: 18px;
+        font-family: "Lucida Grande", Serif;
+    }
+
+    #header big {
+        font-size: 24px;
+    }
+
+    #header a {
+        text-decoration: none;
+        color: white;
+        letter-spacing: 0px;
+        transition-duration: 0.5s;
+    }
+
+    #header a:hover {
+        color: #EEEEEE;
+        letter-spacing: 0.5px;
+        transition-duration: 0.3s;
+    }
+
+    /* Main page */
+
+    #main-page {
+        background-color: white;
+    }
+
+    #main-page #sign-up {
+        background-color: #43D8E4;
+        width: 100%;
+        height: 100px;
+        padding: 5px;
+        color: #EEEEEE;
+    }
+
+    #main-page #sign-up-btn {
+        float: right;
+        padding: 8px;
+        background-color: #1147F1;
+        position: relative;
+        border-radius: 8px;
+        top: 18px;
+        right: 18px;
+    }
+
+    #main-page #sign-up-btn a {
+        text-decoration: none;
+        color: white;
+    }
+
+    .showcase {
+        padding: 5px;
+    }
+
+    .showcase figure {
+        width: 130px;
+        float: left;
+    }
+
+    .showcase li {
+        margin-left: 220px;
+        margin-bottom: 8px;
+        width: 60%;
+    }
+
+    .showcase .file-title {
+        background-color: #CCCCCC;
+        color: #EFEFEF;
+    }
+
+    .showcase .file-title a {
+        color: white;
+        text-decoration: none;
+    }
+
+    .showcase .file-version {
+        background-color: #999999;
+        color: #DDDDDD;
+    }
+
+    /* Side bar (upload) */
+
+    #upload {
+        /* Hide upload because we're on an iOS device (probably). */
+        display: none;
+    }
+
+    /* Footer */
+
+    #footer {
+        background-color: #CFCFCF;
+        height: 50px;
+        color: #FFFFFF;
+    }
+
+    #footer a {
+        text-decoration: none;
+        color: #EEEEEE;
+    }
+
+    #footer a:hover {
+        color: #FFFFFF;
+    }
+}
