@@ -7,11 +7,11 @@
   
   // TODO: make a page that errors are redirected to?
   
-  // Currently commented out since logging in doesn't quite work yet
-//   if(!isset($_SESSION["username"])){
-//     echo "You cannot upload files if you are not logged in!";
-//     exit;
-//   }
+  // If you need to test it, comment out the test for if you are logged in
+  if(!isset($_SESSION["username"])){
+    echo "You cannot upload files if you are not logged in!";
+    exit;
+  }
   if(!isset($_FILES["ScriptSpriteFile"]) || !isset($_POST["ScratchVersion"]) || !isset($_POST["ScriptSpriteName"]) || !isset($_POST["IsScriptSprite"])){
     echo "Missing info about Script/Sprite";
     exit;
