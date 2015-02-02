@@ -1,3 +1,8 @@
+<?php
+  session_start();
+  // IMPORTANT!
+  // Don't send any html before this, or it will break this
+?>
 <!DOCTYPE html>
 <html>
 <head>

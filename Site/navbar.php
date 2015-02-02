@@ -14,7 +14,6 @@
 			<a href="https://github.com/OpenSprites/"><li class="two">Development</li></a>
 			<a href="http://opensprites.x10.mx/"><li class="two">About</li></a>
 			<?php
-			  session_start();
 			  if(!isset($_SESSION["username"])){
 			?>
             <a href="#"><li class="two">
