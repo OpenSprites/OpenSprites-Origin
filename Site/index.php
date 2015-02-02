@@ -11,7 +11,7 @@
 	<link href='http://fonts.googleapis.com/css?family=Comfortaa' rel='stylesheet' type='text/css'>
 	<link href='http://fonts.googleapis.com/css?family=Bubblegum+Sans' rel='stylesheet' type='text/css'>
 	<!--Imports navigation bar-->
-	<?php echo file_get_contents('navbar.html'); ?>
+	<?php include "navbar.php"; ?>
 	        <table id="page-table">
 	        <!--
             <tr>
