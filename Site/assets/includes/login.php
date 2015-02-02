@@ -26,4 +26,4 @@
 		setcookie("key", "", time()-3600, "/");  //destroy cookie
 	}
 	header("Location: /");  //redirect to home page - can be changed later
->
+?>

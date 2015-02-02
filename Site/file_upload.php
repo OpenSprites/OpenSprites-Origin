@@ -34,6 +34,9 @@
   }
   
   // TODO: add the name & hash to a database
+  $hash_file = file_get_contents("./uploads/hashes.txt");
+  $hash_file .= "\n".$ShaHash.' = '.$_POST["ScriptSpriteName"].'';
+  file_put_contents("./uploads/hashes.txt", $hash_file);
   
   header("Location: /"); // Redirect to main page, can be changed later
 ?>

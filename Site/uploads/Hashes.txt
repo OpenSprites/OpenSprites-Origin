@@ -1,0 +1,3 @@
+; .ini style file that hold the hashes -> name info
+
+[hashes]
