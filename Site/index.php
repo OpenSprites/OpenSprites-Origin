@@ -13,6 +13,7 @@
 	<!--Imports navigation bar-->
 	<?php echo file_get_contents('navbar.html'); ?>
 	        <table id="page-table">
+	        <!--
             <tr>
                 <td colspan="2" id="header">
 					<h2>OpenSprites</h2><br>
@@ -25,6 +26,7 @@
                     </div>
                 </td>
             </tr>
+            -->
             <tr>
                 <td id="main-page"><div class="container">
                     <div id="sign-up">

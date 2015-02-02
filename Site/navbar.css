@@ -3,7 +3,7 @@ padding: 0em;
 list-style-type: none;
 text-align: center;
 list-style-type: none;
-width: 50%;
+/*width: 50%;*/   /* Commented because it messes up the navbar */
 margin: auto;
 }
 #main ul li {
