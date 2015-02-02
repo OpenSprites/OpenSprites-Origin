@@ -20,6 +20,8 @@
                     <div style="float: right; position: relative; bottom: 10px;">
                         <a href="#">Create a free account</a>
                         <!-- Put an image here for the three bars -->
+                        <!-- Not sure if 10px is the optimal size, can be changed -->
+                        <img src="assets/images/hamburger.png" width="10" height="10">
                     </div>
                 </td>
             </tr>
