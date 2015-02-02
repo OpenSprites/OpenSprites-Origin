@@ -27,7 +27,7 @@
                         <a href="#">Create a free account</a>
                         <!-- Put an image here for the three bars -->
                         <!-- Not sure if 10px is the optimal size, can be changed -->
-                        <img src="/assets/images/hamburger.png" width="10" height="10">
+                        <img src="/assets/images/Hamburger.png" width="10" height="10">
                     </div>
                 </td>
             </tr>
