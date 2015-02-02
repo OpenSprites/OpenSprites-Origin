@@ -34,11 +34,12 @@
             -->
             <tr>
                 <td id="main-page"><div class="container">
+                    <?php if(!isset($_SESSION["username"])){ ?>
                     <div id="sign-up">
-                        <!-- We should hide this if the user is already logged in -->
                         <!-- <img style="float: left;" src="PUT_SOMETHING_HERE"> --><big>Create your account!<br>
                         Sign up for free, and start creating, sharing and downloading open source media to use in your Scratch Projects!<div id="sign-up-btn"><a href="#">Sign Up</a></div>
                     </div>
+                    <?php } ?>
                     <div id="hot-scripts" class="showcase">
                         <!-- Use PHP or JavaScript or something to fill in this -->
                         <h1>Hot Scripts</h1>

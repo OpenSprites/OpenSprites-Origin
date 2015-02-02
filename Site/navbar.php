@@ -10,7 +10,6 @@
 			<!-- <a href="http://opensprites.x10.mx/"><li class="two">Home</li></a> -->
 			<a href="http://opensprites.x10.mx/"><li class="two">Upload</li></a>
 			<a href="http://opensprites.x10.mx/"><li class="two">Resources</li></a>
-			<a href="http://opensprites.x10.mx/"><li class="two">My account</li></a>
 			<a href="https://github.com/OpenSprites/"><li class="two">Development</li></a>
 			<a href="http://opensprites.x10.mx/"><li class="two">About</li></a>
 			<?php
@@ -25,8 +24,9 @@
             ?>
               <a>
                 <li class="two">
-                  <?php echo $_SESSION["username"]; ?>
-                  <!-- Image here maybe? -->
+			      <a href="http://opensprites.x10.mx/"><li class="two">My account</li></a>
+			      <?php echo $_SESSION["username"]; ?>
+			      <!-- Maybe an image? -->
                 </li>
               </a>
             <?php
