@@ -6,13 +6,13 @@
 	
 	$username = mysqli_real_escape_string($connection, $_POST['username']);  //username sent from login form
 	$password = mysqli_real_escape_string($connection, $_POST['password']);  //same
-	$hash_pass = password_hash($password, PASSWORD_DEFAULT);  //hash pass
-	$query = "SELECT user_key FROM user_data WHERE password='$hash_pass' AND username='$username'";  //get user key
+	
+	$query = "SELECT password FROM user_data WHERE username='$username'";  //get hashed pass
 	$result = mysqli_query($connection, $query);  //query
 	$row = mysqli_fetch_assoc($result);
-	$user_key = $row["user_key"];  //get the actual key!
+	$hashed_pass = $row["password"];  //get hashed pass
 
-	if (mysqli_num_rows($result) == 1) {  //can log in?  then do so
+	if (password_verify($password, $hashed_pass)) {  //can log in?  then do so
 		$username_query = "SELECT username FROM user_data WHERE user_key = '$user_key'";  //get the username based on the key found
 		$username_result = mysqli_query($connection, $username_query);
 		$username_row = mysqli_fetch_assoc($username_result);
