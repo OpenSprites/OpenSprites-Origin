@@ -17,7 +17,7 @@
 			?>
             <a href="#"><li class="two">
               Create a free account
-              <img src="http://i.cubeupload.com/G2ocHE.png" width="10" height="10">
+              <img src="/assets/images/Hamburger.png" width="10" height="10">
             </li></a>
             <?php
               }else{
