@@ -12,10 +12,6 @@
         font-family: Arial, Serif;
     }
 
-    div.container {
-        overflow: scroll;
-    }
-
     /* Header */
 
     #header {
@@ -135,7 +131,6 @@
         padding: 8px;
         font-family: Arial;
         color: #CCCCCC;
-        overflow: scroll; /* Does this work? */
     }
 
     #upload-head {
@@ -174,10 +169,6 @@
         height: 100%;
         background-color: #CFCFCF;
         font-family: Arial, Serif;
-    }
-
-    div.container {
-        overflow: scroll;
     }
 
     /* Header */
