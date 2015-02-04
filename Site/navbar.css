@@ -9,7 +9,7 @@ margin: auto;
 #main ul li {
 display: inline;
 padding: 0.65em 1.5em;
-margin: 0em 0em;
+margin: 0em -0.1em;
 cursor: pointer;
 line-height: 1.9em;
 }
