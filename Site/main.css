@@ -281,4 +281,10 @@
     #footer a:hover {
         color: #FFFFFF;
     }
+    
+    .footer{
+    	text-align: center;
+    	color:grey;
+    }
+    }
 }
