@@ -264,21 +264,3 @@
         /* Hide upload because we're on an iOS device (probably). */
         display: none;
     }
-
-    /* Footer */
-
-    #footer {
-        background-color: #CFCFCF;
-        height: 50px;
-        color: #FFFFFF;
-    }
-
-    #footer a {
-        text-decoration: none;
-        color: #EEEEEE;
-    }
-
-    #footer a:hover {
-        color: #FFFFFF;
-    }
-}
