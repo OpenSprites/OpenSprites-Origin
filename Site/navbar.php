@@ -1,6 +1,8 @@
 <head>
 	<LINK REL=StyleSheet HREF="navbar.css" TYPE="text/css" MEDIA=screen>
 	<link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+        <style>
+        </style>
 </head>
 <body>
 	<div id="main">
@@ -15,6 +17,9 @@
 			<?php
 			  if(!isset($_SESSION["username"])){
 			?>
+            <a href="#"><li class="two" style="border-left: 1px solid #149acb;">
+              Login
+            </li></a>
             <a href="#"><li class="two">
               Create a free account
               <img src="/assets/images/Hamburger.png" width="10" height="10">
