@@ -45,9 +45,9 @@
                                 <figcaption>Undefined Script</figcaption>
                             </figure>
                             <dl style="list-style: none;">
-                                <li><div class="file-title"><a href="#">Webcam Kinect</a> by <a href="#">dillon836</a></div><div class="file-version">2.0</div></li>
-                                <li><div class="file-title"><a href="#">My cool thing</a> by <a href="#">coolspy23</a></div><div class="file-version">2.0</div></li>
-                                <li><div class="file-title"><a href="#">Number Rounder</a> by <a href="#">muffins22</a></div><div class="file-version">1.4</div></li>
+                                <li><div class="file-title"><a href="#">Webcam Kinect</a> by <a href="#">dillon836</a><span id="scratch-version">2.0</span></div></li>
+                                <li><div class="file-title"><a href="#">My cool thing</a> by <a href="#">coolspy23</a><span id="scratch-version">2.0</span></div></li>
+                                <li><div class="file-title"><a href="#">Number Rounder</a> by <a href="#">muffins22</a><span id="scratch-version">1.4</span></div></li>
                             </dl>
                         </div>
                     </div>
@@ -61,9 +61,9 @@
                                 <figcaption>Undefined Sprite</figcaption>
                             </figure>
                             <dl style="list-style: none;">
-                                <li><div class="file-title"><a href="#">Webcam Kinect</a> by <a href="#">dillon836</a></div><div class="file-version">2.0</div></li>
-                                <li><div class="file-title"><a href="#">My cool thing</a> by <a href="#">coolspy23</a></div><div class="file-version">2.0</div></li>
-                                <li><div class="file-title"><a href="#">Number Rounder</a> by <a href="#">muffins22</a></div><div class="file-version">1.4</div></li>
+                                <li><div class="file-title"><a href="#">Webcam Kinect</a> by <a href="#">dillon836</a><span id="scratch-version">2.0</span></div></li>
+                                <li><div class="file-title"><a href="#">My cool thing</a> by <a href="#">coolspy23</a><span id="scratch-version">2.0</span></div></li>
+                                <li><div class="file-title"><a href="#">Number Rounder</a> by <a href="#">muffins22</a><span id="scratch-version">1.4</span></div></li>
                             </dl>
                         </div>
                     </div>

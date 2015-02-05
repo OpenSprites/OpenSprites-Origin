@@ -122,6 +122,13 @@
         background-color: #999999;
         color: #DDDDDD;
     }
+     #scratch-version {
+        height:100%;
+        background-color:#999999;
+        float:right;
+        padding-left:5px;
+        padding-right:5px;
+    }
 
     /* Side bar (upload) */
 
