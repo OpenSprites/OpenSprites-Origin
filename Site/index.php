@@ -2,7 +2,7 @@
 <html>
 <head>
 	<?php
-		require __FILE__ . "/assets/includes/connect.php";  //Connect - insludes session_start();
+		require "./assets/includes/connect.php";  //Connect - includes session_start();
 	?>
 	<!--Imports the metadata and information that will go in the <head> of every page-->
 	<?php echo file_get_contents('Header.html'); ?>
