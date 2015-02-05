@@ -1,11 +1,9 @@
-<?php
-  session_start();
-  // IMPORTANT!
-  // Don't send any html before this, or it will break this
-?>
 <!DOCTYPE html>
 <html>
 <head>
+	<?php
+		require __FILE__ . "/assets/includes/connect.php";  //Connect - insludes session_start();
+	?>
 	<!--Imports the metadata and information that will go in the <head> of every page-->
 	<?php echo file_get_contents('Header.html'); ?>
 	<!--Keep this link in so the page renders correctly on PCs without PHP installed.-->
