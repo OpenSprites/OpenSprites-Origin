@@ -8,18 +8,15 @@
 	<div id="main">
 		<ul>
 		    <a href="/">
-			<img id="oslogo" src="/assets/images/os-logo.svg" alt="OpenSprites logo" ></img>
-			<li class="one">OpenSprites</li></a>
-		    <!-- Just seems somewhat redundant -->
-			<!-- <a href="http://opensprites.x10.mx/"><li class="two">Home</li></a> -->
-			<a href="http://opensprites.x10.mx/"><li class="two">Upload</li></a>
+			<img id="oslogo" src="/assets/images/os-logo.svg" alt="OpenSprites logo"></img>
+			<a href="http://opensprites.x10.mx/"><li class="one">Upload</li></a>
 			<a href="http://opensprites.x10.mx/"><li class="two">Resources</li></a>
 			<a href="https://github.com/OpenSprites/"><li class="two">Development</li></a>
 			<a href="http://opensprites.x10.mx/"><li class="two">About</li></a>
 			<?php
 			  if(!isset($_SESSION["username"])){
 			?>
-            <a href="#"><li class="two" style="border-left: 1px solid #149acb;">
+            <a href="#"><li class="two">
               Login
             </li></a>
             <a href="#"><li class="two">
