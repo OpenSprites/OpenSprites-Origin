@@ -6,6 +6,14 @@ list-style-type: none;
 /*width: 50%;*/   /* Commented because it messes up the navbar */
 margin: auto;
 }
+#oslogo {
+width:101.7084966666667px;
+height:33.90102666666667px;
+position:relative;
+margin-left:2em;
+margin-right: -2em;
+float:left;
+}
 #main ul li {
 display: inline;
 padding: 0.65em 1.5em;
