@@ -2,7 +2,7 @@
   session_start();
   
   if(!isset($_SESSION["username"])){
-    header('Location: /'); // TODO: redirect to login page
+    header('Location: ./show_error.php?e=Please%20login%20before%20trying%20to%20upload'); // TODO: redirect to login page
   }
 ?>
 <!-- TODO: prettify -->

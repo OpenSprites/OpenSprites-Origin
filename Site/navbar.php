@@ -7,7 +7,7 @@
 <body>
 	<div id="main">
 		<ul>
-		    <a href="/">
+		    <a href="index.php">
 			<img id="oslogo" src="assets/images/os-logo.svg" alt="OpenSprites logo"></img>
 			<a href="upload.php"><li class="one">Upload</li></a>
 			<a href="http://opensprites.x10.mx/"><li class="two">Resources</li></a>
