@@ -8,7 +8,7 @@
 	<div id="main">
 		<ul>
 		    <a href="/">
-			<img id="oslogo" src="/assets/images/os-logo.svg" alt="OpenSprites logo"></img>
+			<img id="oslogo" src="assets/images/os-logo.svg" alt="OpenSprites logo"></img>
 			<a href="http://opensprites.x10.mx/"><li class="one">Upload</li></a>
 			<a href="http://opensprites.x10.mx/"><li class="two">Resources</li></a>
 			<a href="https://github.com/OpenSprites/"><li class="two">Development</li></a>
@@ -21,7 +21,7 @@
             </li></a>
             <a href="#"><li class="two">
               Create a free account
-              <img src="/assets/images/Hamburger.png" width="10" height="10">
+              <img src="assets/images/Hamburger.png" width="10" height="10">
             </li></a>
             <?php
               }else{
