@@ -7,7 +7,9 @@
 <body>
 	<div id="main">
 		<ul>
-		    <a href=""><li class="one">OpenSprites</li></a>
+		    <a href="/">
+			<img src="/assets/images/os-logo.svg" alt="OpenSprites logo" width="101.7084966666667px" height="33.90102666666667px"></img>
+			<li class="one">OpenSprites</li></a>
 		    <!-- Just seems somewhat redundant -->
 			<!-- <a href="http://opensprites.x10.mx/"><li class="two">Home</li></a> -->
 			<a href="http://opensprites.x10.mx/"><li class="two">Upload</li></a>
