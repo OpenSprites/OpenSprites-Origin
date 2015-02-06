@@ -1,0 +1,3 @@
+; .ini style file that hold the hashes -> type (script/sprite)
+
+[hashes]
