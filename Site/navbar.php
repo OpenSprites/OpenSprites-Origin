@@ -9,7 +9,7 @@
 		<ul>
 		    <a href="/">
 			<img id="oslogo" src="assets/images/os-logo.svg" alt="OpenSprites logo"></img>
-			<a href="http://opensprites.x10.mx/"><li class="one">Upload</li></a>
+			<a href="upload.php"><li class="one">Upload</li></a>
 			<a href="http://opensprites.x10.mx/"><li class="two">Resources</li></a>
 			<a href="https://github.com/OpenSprites/"><li class="two">Development</li></a>
 			<a href="http://opensprites.x10.mx/"><li class="two">About</li></a>
