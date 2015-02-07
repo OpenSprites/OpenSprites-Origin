@@ -130,23 +130,6 @@
         padding-right:5px;
     }
 
-    /* Side bar (upload) */
-
-    #upload {
-        background-color: white;
-        width: 150px;
-        padding: 8px;
-        font-family: Arial;
-        color: #444444;
-    }
-
-    #upload-head {
-        background-color: #43D8E4;
-        padding: 5px;
-        border-radius: 8px;
-        color: white;
-    }
-
     /* Footer */
 
     #footer {
