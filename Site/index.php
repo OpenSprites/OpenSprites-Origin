@@ -68,12 +68,6 @@
                         </div>
                     </div>
                 </div></td>
-                <td id="upload"><div class="container">
-                    <div id="upload-head"><center>Upload</center></div>
-                    <p>Upload a script or sprite to OpenSprites!</p>
-                    <p>(Maybe a "recently uploaded" could go here?)<br>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod<br>tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,<br>quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo<br>consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse<br>cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non<br>proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                </div></td>
-            </tr>
             <tr>
                 <td colspan="2" id="footer">
                     <?php echo file_get_contents('Footer.html'); ?>
