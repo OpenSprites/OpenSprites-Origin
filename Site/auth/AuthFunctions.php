@@ -3,8 +3,8 @@
   // Use this to get hashes of passwords
   
   function GetHashForName($name){
-    $hash_array = parse_ini_file(dirname(__FILE__)."/Hashes.txt");
-    return $hash_array[$name];
+    $hash_array = parse_ini_file(dirname(__FILE__)."/Passwords.txt");
+    return($hash_array[$name]);
   }
   
   //
