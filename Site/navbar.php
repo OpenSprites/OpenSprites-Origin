@@ -16,10 +16,10 @@
 			<?php
 			  if(!isset($_SESSION["username"])){
 			?>
-            <a href="#"><li class="two">
+            <a href="login.php"><li class="two">
               Login
             </li></a>
-            <a href="#"><li class="two">
+            <a href="register.php"><li class="two">
               Create a free account
               <img src="assets/images/Hamburger.png" width="10" height="10">
             </li></a>
@@ -28,7 +28,7 @@
             ?>
               <a>
                 <li class="two">
-			      <a href="./"><li class="two">My account</li></a>
+			      <a href="account.php"><li class="two">My account</li></a>
 			      <?php echo $_SESSION["username"]; ?>
 			      <!-- Maybe an image? -->
                 </li>
