@@ -10,7 +10,7 @@
   <body>
   <?php include 'navbar.php'; ?>
   <div style="padding:35px;">
-    <form enctype="multipart/form-data" action="handle_register.php" method="POST">
+    <form enctype="multipart/form-data" action="auth/handle_register.php" method="POST">
       Username you want to register: <input name="FormUsername" type="text" /><br>
       Password of that account: <input name="FormPassword" type="password" /><br>
       <input type="Submit"/>
