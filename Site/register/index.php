@@ -1,11 +1,15 @@
 <?php
 
   session_start();
+  
+  //connect to server and login check via cookie
+  
   if (isset($_SESSION['username'])) {
     header("Location: /");
   }
   
 ?>
+<!DOCTYPE html>
 <html>
   <head>
   <?php include 'Header.html'; ?>
