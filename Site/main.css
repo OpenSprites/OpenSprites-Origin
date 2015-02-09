@@ -129,6 +129,10 @@
         padding-left:5px;
         padding-right:5px;
     }
+    
+    #hot-sprites, #hot-scripts {
+    	display:inline-block;
+    }
 
     /* Footer */
 
