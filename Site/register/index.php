@@ -20,7 +20,7 @@
     <form enctype="multipart/form-data" action="register.php" method="POST">
       Username: <input name="username" type="text" /><br>
       Password: <input name="password" type="password" /><br>
-      Confirm password:  <input name="confirm_assword" type="password" /><br>
+      Confirm password:  <input name="confirm_password" type="password" /><br>
       <input type="Submit"/>
     </form>
   </div>
