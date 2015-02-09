@@ -1,7 +1,13 @@
 <?php
   session_start();
   include 'auth/AuthFunctions.php';
-
+  include 'config.php';
+  
+  if($ALLOW_ALTERNATE_LOGINS !== true){
+    header('Location: ./show_error.php?e=You%20are%20not%20allowed%20to%20do%20that');
+    exit;
+  }
+  
   if(!isset($_POST["FormUsername"]) || !isset($_POST["FormPassword"])){
     header('Location: ./show_error.php?e=Please%20enter%20your%20username%20and%20password');
     exit;

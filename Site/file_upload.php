@@ -1,6 +1,12 @@
 <?php
   
   include "uploads/GetHash.php";
+  include 'config.php';
+  
+  if($ALLOW_UPLOADS !== true){
+    header('Location: ./show_error.php?e=You%20are%20not%20allowed%20to%20do%20that');
+    exit;
+  }
   
   // Upload script, puts uploaded files in /uploads/ [scripts|sprites]
   // in file upload form, ScriptSpriteFile file chooser, ScratchVersion text, ScriptSpriteName text, IsScriptSprite text
