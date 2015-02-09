@@ -11,8 +11,9 @@
   <?php include 'navbar.php'; ?>
   <div style="padding:35px;">
     <form enctype="multipart/form-data" action="auth/handle_register.php" method="POST">
-      Username you want to register: <input name="FormUsername" type="text" /><br>
-      Password of that account: <input name="FormPassword" type="password" /><br>
+      Username: <input name="username" type="text" /><br>
+      Password: <input name="password" type="password" /><br>
+      Confirm password:  <input name="confirm_assword" type="password" /><br>
       <input type="Submit"/>
     </form>
   </div>
