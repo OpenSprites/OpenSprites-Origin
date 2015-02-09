@@ -1,1 +1,2 @@
-# todo
+# 404 error page
+ErrorDocument 404 /404.html
