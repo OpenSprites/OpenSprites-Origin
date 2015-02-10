@@ -1,4 +1,4 @@
-<head>
+<!--<head>
 	<LINK REL=StyleSheet HREF="navbar.css" TYPE="text/css" MEDIA=screen>
 	<link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
         <style>
@@ -30,7 +30,6 @@
                 <li class="two">
 			      <a href="account.php"><li class="two">My account</li></a>
 			      <?php echo $_SESSION["username"]; ?>
-			      <!-- Maybe an image? -->
                 </li>
               </a>
             <?php
@@ -38,3 +37,21 @@
             ?>
         </ul>
 	</div>
+-->
+
+<body>
+	<div class="header">
+		<div class="container">
+			<a class="scratch" href=""></a>
+			<ul class="left">
+				<li><a href="">Sprites</a></li>
+				<li><a href="">Scripts</a></li>
+				<li class="last"><a href="">Media</a></li>
+			</ul>
+			<ul class="right">
+				<li><a href="">Sign Up</a></li>
+				<li class="last"><a href="">Log In</a></li>
+			</ul>
+		</div>
+	</div>
+</body>
