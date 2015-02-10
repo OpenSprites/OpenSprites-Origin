@@ -5,7 +5,7 @@
         </style>
 </head>
 <body>
-	<div id="main">
+	<div class="main">
 		<ul>
 		    <a href="index.php">
 			<img id="oslogo" src="assets/images/os-logo-2.svg" alt="OpenSprites logo"></img>
