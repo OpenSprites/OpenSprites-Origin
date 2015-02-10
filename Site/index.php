@@ -44,5 +44,8 @@
 			</div>
 		</div>
 	</div>
+	
+	<!-- footer -->
+	<?php echo file_get_contents('footer.html'); ?>
 </body>
 </html>
