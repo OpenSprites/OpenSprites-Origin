@@ -13,66 +13,36 @@
 	<link href='http://fonts.googleapis.com/css?family=Fredoka+One' rel='stylesheet' type='text/css'>
 	<link href='http://fonts.googleapis.com/css?family=Comfortaa' rel='stylesheet' type='text/css'>
 	<link href='http://fonts.googleapis.com/css?family=Bubblegum+Sans' rel='stylesheet' type='text/css'>
+	
 	<!--Imports navigation bar-->
 	<?php include "navbar.php"; ?>
-	        <table id="page-table">
-	        <!--
-            <tr>
-                <td colspan="2" id="header">
-					<h2>OpenSprites</h2><br>
-                    <p>Scripts and sprites to make something nice</p>
-                    <div style="float: right; position: relative; bottom: 10px;">
-                        <a href="#">Create a free account</a>
-                        <img src="/assets/images/Hamburger.png" width="10" height="10">
-                    </div>
-                </td>
-            </tr>
-            -->
-            <tr>
-                <td id="main-page"><div class="container">
-                    <?php if(!isset($_SESSION["username"])){ ?>
-                    <div id="sign-up">
-                        <!-- <img style="float: left;" src="PUT_SOMETHING_HERE"> --><big>Create your account!<br>
-                        Sign up for free, and start creating, sharing and downloading open source media to use in your Scratch Projects!<div id="sign-up-btn"><a href="#">Sign Up</a></div>
-                    </div>
-                    <?php } ?>
-                    <div id="hot-scripts" class="showcase">
-                        <!-- Use PHP or JavaScript or something to fill in this -->
-                        <h1>Hot Scripts</h1>
-                        <div class="showcase-highlight">
-                            <figure class="highlight">
-                                <img src="" width="160" height="120">
-                                <figcaption>Undefined Script</figcaption>
-                            </figure>
-                            <dl style="list-style: none;">
-                                <li><div class="file-title"><a href="#">Webcam Kinect</a> by <a href="#">dillon836</a><span id="scratch-version">2.0</span></div></li>
-                                <li><div class="file-title"><a href="#">My cool thing</a> by <a href="#">coolspy23</a><span id="scratch-version">2.0</span></div></li>
-                                <li><div class="file-title"><a href="#">Number Rounder</a> by <a href="#">muffins22</a><span id="scratch-version">1.4</span></div></li>
-                            </dl>
-                        </div>
-                    </div>
-                    <br>
-                    <div id="hot-sprites" class="showcase">
-                        <!-- Also use PHP or JS or something to fill this in -->
-                        <h1>Hot Sprites</h1>
-                        <div class="showcase-highlight">
-                            <figure class="highlight">
-                                <img src="" width="160" height="120">
-                                <figcaption>Undefined Sprite</figcaption>
-                            </figure>
-                            <dl style="list-style: none;">
-                                <li><div class="file-title"><a href="#">Webcam Kinect</a> by <a href="#">dillon836</a><span id="scratch-version">2.0</span></div></li>
-                                <li><div class="file-title"><a href="#">My cool thing</a> by <a href="#">coolspy23</a><span id="scratch-version">2.0</span></div></li>
-                                <li><div class="file-title"><a href="#">Number Rounder</a> by <a href="#">muffins22</a><span id="scratch-version">1.4</span></div></li>
-                            </dl>
-                        </div>
-                    </div>
-                </div></td>
-            <tr>
-                <td colspan="2" id="footer">
-                    <?php echo file_get_contents('Footer.html'); ?>
-                </td>
-            </tr>
-        </table>
+	
+	<!-- Main wrapper -->
+	<div class="container main">
+		<div class="main-inner">
+			<h1 id="opensprites-heading">OpenSprites - Share Sprites, Scripts, and More!</h1>
+			<div id="about">
+				<h2>About</h2>
+				<p>Blah blah blah</p>
+			</div>
+			<div id="top-sprites">
+				<div class="box">
+					<h1>Top Sprites</h1>
+					<div class="box-content">
+						<p>Sort by: 
+							<select id="sortby">
+								<option>Popularity (downloads)</option>
+								<option>Ratings</option>
+								<option>A-Z</option>
+								<option>Newest</option>
+								<option>Oldest</option>
+							</select>
+						</p>
+						
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 </body>
 </html>
