@@ -8,7 +8,3 @@ ErrorDocument 404 /404.html
 <FilesMatch "*.js">
 SetHandler php5-script
 </FilesMatch>
-
-# add trailing slash to .php files and remove the .php
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteRule ^([^\.]+)$ $1.php [NC,L]
