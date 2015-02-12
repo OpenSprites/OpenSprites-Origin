@@ -1,2 +1,23 @@
-# 404 error page
+# engines
+RewriteEngine On
+
+# custom 404 error page
 ErrorDocument 404 /404.html
+
+# allows php inside javascript
+<FilesMatch "*.js">
+SetHandler php5-script
+</FilesMatch>
+
+# force no "www"
+RewriteCond %{HTTP_HOST} !^your-site.com$ [NC]
+RewriteRule ^(.*)$ http://your-site.com/$1 [L,R=301]
+
+# add trailing slash to .php files and remove the .php
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^([^/]+)/$ $1.php
+RewriteRule ^([^/]+)/([^/]+)/$ /$1/$2.php
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_URI} !(\.[a-zA-Z0-9]{1,5}|/)$
+RewriteRule (.*)$ /$1/ [R=301,L]
