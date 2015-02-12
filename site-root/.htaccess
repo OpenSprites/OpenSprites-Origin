@@ -9,10 +9,6 @@ ErrorDocument 404 /404.html
 SetHandler php5-script
 </FilesMatch>
 
-# force no "www"
-RewriteCond %{HTTP_HOST} !^opensprites.x10.mx$ [NC]
-RewriteRule ^(.*)$ http://opensprites.x10.mx/$1 [L,R=301]
-
 # add trailing slash to .php files and remove the .php
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteRule ^([^/]+)/$ $1.php
