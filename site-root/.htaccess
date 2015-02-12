@@ -10,8 +10,8 @@ SetHandler php5-script
 </FilesMatch>
 
 # force no "www"
-RewriteCond %{HTTP_HOST} !^your-site.com$ [NC]
-RewriteRule ^(.*)$ http://your-site.com/$1 [L,R=301]
+RewriteCond %{HTTP_HOST} !^opensprites.x10.mx$ [NC]
+RewriteRule ^(.*)$ http://opensprites.x10.mx/$1 [L,R=301]
 
 # add trailing slash to .php files and remove the .php
 RewriteCond %{REQUEST_FILENAME} !-f
