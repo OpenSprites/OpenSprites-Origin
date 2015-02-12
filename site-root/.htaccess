@@ -1,7 +1,2 @@
 # custom 404 error page
 ErrorDocument 404 /404.html
-
-# no www
-RewriteEngine on
-RewriteCond %{HTTP_HOST} ^(www\.opensprites\.x10\.mx)(:80)? [NC]
-RewriteRule ^(.*) http://opensprites.x10.mx/$1 [R=301,L]
