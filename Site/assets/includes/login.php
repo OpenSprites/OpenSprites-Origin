@@ -1,6 +1,7 @@
 <?php
 
-  //Firedrake969's login script v000
+  //Firedrake969
+  //Apache v2.0 License
   
   require "connect.php";
 	
