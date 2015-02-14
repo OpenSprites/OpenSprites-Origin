@@ -52,3 +52,12 @@
 #login-popup input[type='submit'] {
 	float:right;
 }
+
+.logo-name {
+	float:left;
+	margin-top:9px;
+	margin-right:5px;
+	font-weight:bold;
+	color:white;
+	font-size:15px	
+}
