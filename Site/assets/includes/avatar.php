@@ -8,11 +8,17 @@
   }
   
   function update_user_avatar($username) {
-    
+    $next_avatar = grab_user_avatar($username);
+    $avatar_query = "UPDATE user_data SET avatar='$next_avatar' WHERE username='$username'";
+    mysqli_query($connection, $avatar_query);
   }
   
   function display_user_avatar($username, $size) {
-    $src = grab_user_avatar($username);
+    //$src = grab_user_avatar($username);
+    
+    $disp_query = "SELECT avatar FROM user_data WHERE username='$username'"
+    $disp_result = mysqli_query($connection, $disp_query);
+    $src = (mysqli_fetch_assoc($disp_result))['avatar'];
     echo '<img class="user-avatar ' . $size . '" src="' . $src . '">'
   }
 ?>
