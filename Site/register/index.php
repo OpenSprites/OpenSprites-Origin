@@ -17,7 +17,7 @@
     <!--Imports the metadata and information that will go in the <head> of every page-->
   	<?php echo file_get_contents('../Header.html'); ?>
   	<!-- do we really need this?  it should be in header.html -->
-  	<LINK REL=StyleSheet HREF="main.css" TYPE="text/css" MEDIA=screen>
+  	<link rel=StyleSheet href="../main.css" type="text/css" media=screen>
   </head>
   <body>
     <?php include '../navbar.php'; ?>
