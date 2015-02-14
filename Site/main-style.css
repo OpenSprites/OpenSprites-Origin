@@ -55,7 +55,8 @@ a.scratch:hover{
 .header li {
 	float: left;
 }
-.header li a {
+.header li a,
+.header li span {
 	display: block;
 	border-left: 1px solid #659593;
 	padding: 0px 15px;
@@ -69,10 +70,13 @@ a.scratch:hover{
 	border-right: 1px solid #659593;
 }
 .header li a,
-.header li a:active {
+.header li a:active,
+.header li span{
 	color: #fff;
 }
-.header li a:hover, #userfcttoggle.open {
+.header li a:hover,
+.header li span:hover,
+#userfcttoggle.open {
 	background-color: #476866;
 }
 

@@ -14,7 +14,7 @@
         <?php if(!isset($_SESSION['username'])) { ?>
             <li><a href="/live/alpha/register/">Sign Up</a>
             </li>
-            <li class="last" id='login'>Log In
+            <li class="last" id='login'><span>Log In</span>
                 <div id='login-popup'>
 					<form method='POST' action='/assets/includes/login.php'>
 						<input type='text' name='username'></input>
