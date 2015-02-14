@@ -1,9 +1,4 @@
-<!--<head>
-	<LINK REL=StyleSheet HREF="navbar.css" TYPE="text/css" MEDIA=screen>
-	<link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
-        <style>
-        </style>
-</head>
+
 <body>
 	<div class="main">
 		<ul>
@@ -37,9 +32,6 @@
             ?>
         </ul>
 	</div>
--->
-
-<body>
 	<div class="header">
 		<div class="container">
 			<a class="scratch" href=""></a>
@@ -50,8 +42,7 @@
 			</ul>
 			<ul class="right">
 				<li><a href="/live/alpha/register/">Sign Up</a></li>
-				<li class="last"><a href="/live/alpha/login/">Log In</a></li>
+				<li class="last" id='login'>Log In<div id='login-menu'>login form would pop up when you hit login</div></li>
 			</ul>
 		</div>
 	</div>
-</body>
