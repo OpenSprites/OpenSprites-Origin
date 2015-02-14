@@ -1,16 +1,24 @@
 #login-popup {
 	position:absolute;
 	top: 50px;
-	padding: 20px;
+	padding: 10px;
 	background-color: #659593;
 	color: white;
 	border-radius: 10px;
 	z-index: -1;
 	box-shadow: 0 1px 1px #ccc;
+	
+	width: 200px;
+	height: 200px;
 }
 
 #login-popup input[type='submit'] {
-	
+	box-shadow: inset 0 1px 1px rgba(0,0,0,0.075);
+	height: 18px;
+	margin-bottom: 9px;
+	border-radius: 3px;
+	border: 1px solid #ccc;
+	padding: 3px;
 }
 
 #login-popup input[type='text'], #login-popup input[type='password'] {
@@ -19,6 +27,7 @@
 	margin-bottom: 9px;
 	border-radius: 3px;
 	border: 1px solid #ccc;
+	padding: 3px;
 }
 
 .arrow {
