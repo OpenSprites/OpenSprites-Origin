@@ -17,7 +17,7 @@
     <!--Imports the metadata and information that will go in the <head> of every page-->
   	<?php echo file_get_contents('../Header.html'); ?>
   	<style>
-  	  input {
+  	  input.register {
       	box-shadow: inset 0 1px 1px rgba(0,0,0,0.075);
       	margin-bottom: 3px;
       	line-height: 18px;
@@ -38,7 +38,7 @@
       	margin-left: 0;
       }
       
-      #submit {
+      #submit.register {
         width: 90px;
         height: 30px;
         background-color: #55bee8;
@@ -51,11 +51,11 @@
         cursor: pointer;
       }
       
-      #submit:hover {
+      #submit.register:hover {
         background-color: #E59D54;
       }
       
-      #labels {
+      #labels.register {
         width: 200px;
         margin-top: 20px;
       }
@@ -69,10 +69,10 @@
         <h1 id="opensprites-heading">Register</h1>
         <p>
           <form enctype="multipart/form-data" action="register.php" method="POST">
-            <div id="labels">Your Scratch Username:</div><input name="username" type="text" /><br>
-            <div id="labels">Choose a Password:</div><input name="password" type="password" /><br>
-            <div id="labels">Confirm Password:</div><input name="confirm_password" type="password" /><br>
-            <input type="Submit" id="submit" />
+            <div class="register" id="labels">Your Scratch Username:</div><input name="username" type="text" /><br>
+            <div class="register" id="labels">Choose a Password:</div><input name="password" type="password" /><br>
+            <div class="register" id="labels">Confirm Password:</div><input name="confirm_password" type="password" /><br>
+            <input class="register" type="Submit" id="submit" />
           </form>
         </p>
       </div>
