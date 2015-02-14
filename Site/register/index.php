@@ -69,9 +69,9 @@
         <h1 id="opensprites-heading">Register</h1>
         <p>
           <form enctype="multipart/form-data" action="register.php" method="POST">
-            <div class="register" id="labels">Your Scratch Username:</div><input name="username" type="text" /><br>
-            <div class="register" id="labels">Choose a Password:</div><input name="password" type="password" /><br>
-            <div class="register" id="labels">Confirm Password:</div><input name="confirm_password" type="password" /><br>
+            <div class="register" id="labels">Your Scratch Username:</div><input class="register" name="username" type="text" /><br>
+            <div class="register" id="labels">Choose a Password:</div><input class="register" name="password" type="password" /><br>
+            <div class="register" id="labels">Confirm Password:</div><input class="register" name="confirm_password" type="password" /><br>
             <input class="register" type="Submit" id="submit" />
           </form>
         </p>
