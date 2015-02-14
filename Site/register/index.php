@@ -55,7 +55,7 @@
       }
       
       #labels {
-        
+        width: 100px;
       }
   	</style>
   </head>
