@@ -12,12 +12,20 @@
         <?php if(!isset($_SESSION['username'])) { ?>
         
         <ul class="right">
-            <li><a href="/live/alpha/register/">Sign Up</a>
+            <li>
+                <a href="/live/alpha/register/">Sign Up</a>
             </li>
-            <li class="last" id='login'>Log In
-                <div id='login-menu'>login form would pop up when you hit login</div>
+            <li class="last" id='login'>
+                <a href="javascript:void(0);">Login</a>
             </li>
         </ul>
+        
+        <script>
+            // when login is clicked do swag
+            $('#login').on('click', function() {
+                alert('swag');
+            });
+        </script>
         
         <?php } else  { ?>  <!-- display login info/username/etc -->
         
