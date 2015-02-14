@@ -15,15 +15,20 @@
             <li><a href="/live/alpha/register/">Sign Up</a>
             </li>
             <li class="last" id='login'>Log In
-                <div id='login-menu'>
-					<ul>
-						<li>option1</li>
-						<li>option2</li>
-					</ul>
+                <div id='login-popup'>
+					<form method='POST' action='/assets/includes/login.php'>
+						
+					</form>
 				</div>
             </li>
         <?php } else  { ?>  <!-- display login info/username/etc -->
-			<div id='login-display'>Welcome, <?= $_SESSION['username'] ?></div> 
+			<div id='login-display'>Welcome, <?= $_SESSION['username'] ?></div>
+			<div id='login-menu'>
+				<ul>
+					<li>option1</li>
+					<li>option2</li>
+				</ul>
+			</div>
         <?php } ?>
         </ul>
     </div>
