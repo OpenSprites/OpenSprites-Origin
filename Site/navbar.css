@@ -1,7 +1,7 @@
 #login-popup {
 	position:absolute;
-	top: 0;
-	padding: 50px;
+	top: 50px;
+	padding: 20px;
 	background-color: #659593;
 	color: white;
 	border-radius: 10px;
@@ -10,12 +10,16 @@
 }
 
 .arrow {
+	position: absolute;
+	left: 165px;
+	top: -10px;
+	
 	width: 0; 
 	height: 0; 
-	border-left: 5px solid transparent;
-	border-right: 5px solid transparent;
+	border-left: 15px solid transparent;
+	border-right: 15px solid transparent;
 	
-	border-bottom: 5px solid black;
+	border-bottom: 15px solid #659593;
 }
 
 #login-popup input {
