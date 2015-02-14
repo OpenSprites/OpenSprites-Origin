@@ -1,6 +1,6 @@
 <?php
   // gets the user's image src and echos it
-  $raw_json = file_get_contents("http://scratch.mit.edu/site-api/users/all/" . $_GET['username'] . "/");
+  $encoded = file_get_contents("http://scratch.mit.edu/site-api/users/all/" . $_GET['username'] . "/");
   
   preg_match('/thumbnail_url/', $encoded, $matches, PREG_OFFSET_CAPTURE, 3);
   $i = $matches[0];
