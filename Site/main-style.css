@@ -57,7 +57,7 @@ a.scratch:hover{
 }
 .header li a {
 	display: block;
-	border-left: 1px solid #149acb;
+	border-left: 1px solid #659593;
 	padding: 0px 15px;
 	line-height: 35px;
 	text-decoration: none !important;
@@ -66,14 +66,14 @@ a.scratch:hover{
 }
 
 .header li.last{
-	border-right: 1px solid #149acb;
+	border-right: 1px solid #659593;
 }
 .header li a,
 .header li a:active {
 	color: #fff;
 }
 .header li a:hover, #userfcttoggle.open {
-	background-color: #0c6185;
+	background-color: #476866;
 }
 
 .caret{
