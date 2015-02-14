@@ -1,13 +1,21 @@
 #login-popup {
 	position:absolute;
 	top: 0;
-	padding: 10px;
+	padding: 50px;
 	background-color: #659593;
 	color: white;
 	border-radius: 10px;
 	z-index: -1;
-	padding-top: 45px;
 	box-shadow: 0 1px 1px #ccc;
+}
+
+.arrow {
+	width: 0; 
+	height: 0; 
+	border-left: 5px solid transparent;
+	border-right: 5px solid transparent;
+	
+	border-bottom: 5px solid black;
 }
 
 #login-popup input {
