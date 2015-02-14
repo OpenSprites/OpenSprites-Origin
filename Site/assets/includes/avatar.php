@@ -13,6 +13,6 @@
   
   function display_user_avatar($username, $size) {
     $src = grab_user_avatar($username);
-    echo '<img class="user-avatar ' . $size . '" src="' . $src . '>'
+    echo '<img class="user-avatar ' . $size . '" src="' . $src . '">'
   }
 ?>
