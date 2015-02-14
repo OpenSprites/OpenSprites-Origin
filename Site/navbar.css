@@ -5,6 +5,8 @@
 	background-color: #659593;
 	color: white;
 	border-radius: 10px;
+	z-index: 199;
+	box-shadow: 0 1px 1px #ccc;
 }
 
 #login-popup input {
