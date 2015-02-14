@@ -4,6 +4,7 @@
   //Apache v2.0 License
   
   require "connect.php";
+  include "avatar.php";
 	
 	$username = mysqli_real_escape_string($connection, $_POST['username']);  //username sent from login form
 	$password = mysqli_real_escape_string($connection, $_POST['password']);  //same
@@ -14,6 +15,10 @@
 	$hashed_pass = $row["password"];  //get hashed pass
 
 	if (password_verify($password, $hashed_pass)) {  //can log in?  then do so
+	
+		//update cached avatar right here...
+		update_user_avatar();
+		
 		$username_query = "SELECT username FROM user_data WHERE user_key = '$user_key'";  //get the username based on the key found
 		$username_result = mysqli_query($connection, $username_query);
 		$username_row = mysqli_fetch_assoc($username_result);
