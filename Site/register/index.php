@@ -53,6 +53,10 @@
       #submit:hover {
         background-color: #E59D54;
       }
+      
+      #labels {
+        
+      }
   	</style>
   </head>
   <body>
@@ -63,9 +67,9 @@
         <h1 id="opensprites-heading">Register</h1>
         <p>
           <form enctype="multipart/form-data" action="register.php" method="POST">
-            Username: <input name="username" type="text" /><br>
-            Password: <input name="password" type="password" /><br>
-            Confirm password: <input name="confirm_password" type="password" /><br>
+            <span id="labels">Username:</span><input name="username" type="text" /><br>
+            <span id="labels">Password:</span><input name="password" type="password" /><br>
+            <span id="labels">Confirm Password:</span><input name="confirm_password" type="password" /><br>
             <input type="Submit" id="submit" />
           </form>
         </p>
