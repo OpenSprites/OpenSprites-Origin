@@ -10,7 +10,6 @@ body {
 body {
 	font: 13px Helvetica Neue, Helvetica, sans-serif;
 	margin: 0;
-	background-image: url("img/background.png");
 }
 .header {
 	position: fixed;
@@ -33,12 +32,12 @@ a.scratch{
 	display: block;
 	width: 80px;
 	height: 35px;
-	background: url("img/oslogo.png") left center no-repeat;
+	background: url("assets/image/oslogo.png") left center no-repeat;
 	text-indent: -99999em;
 	padding: 0 2px;
 }
 a.scratch:hover{
-	background: url("img/oslogo_highlight.png") left center no-repeat;
+	background: url("assets/images/oslogo_highlight.png") left center no-repeat;
 }
 
 .header ul,
