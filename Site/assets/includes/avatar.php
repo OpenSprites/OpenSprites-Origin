@@ -7,7 +7,7 @@
     return "http:$user_avatar";
   }
   
-  function set_user_avatar($username) {
+  function update_user_avatar($username) {
     
   }
   
