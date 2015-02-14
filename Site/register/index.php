@@ -41,7 +41,8 @@
       }
       
       #submit {
-        width: 100px;
+        width: 90px;
+        height: 30px;
         background-color: #55bee8;
         color: white;
         border-color: white;
