@@ -37,7 +37,7 @@ a.scratch{
 	padding: 0 2px;
 }
 a.scratch:hover{
-	background: url("assets/images/oslogo_highlight.png") left center no-repeat;
+	background: url("assets/images/oslogo.png") left center no-repeat;
 }
 
 .header ul,
