@@ -18,6 +18,30 @@
   	<?php echo file_get_contents('../Header.html'); ?>
   	<!-- do we really need this?  it should be in header.html -->
   	<link rel=StyleSheet href="../main.css" type="text/css" media=screen>
+  	<style>
+  	  input {
+      	box-shadow: inset 0 1px 1px rgba(0,0,0,0.075);
+      	margin-bottom: 3px;
+      	line-height: 18px;
+      	font-size: 15px;
+      	height: 32px;
+      	padding: 0 0 0 3px;
+      	width: 210px;
+      	
+      	display: inline-block;
+      	padding: 4px;
+      	margin-bottom: 9px;
+      	font-size: 13px;
+      	line-height: 18px;
+      	color: #555;
+      	border: 1px solid #ccc;
+      	border-radius: 3px;
+      }
+      
+      input:hover {
+      	border: 3px solid #0F8BC0;
+      }
+  	</style>
   </head>
   <body>
     <?php include '../navbar.php'; ?>
