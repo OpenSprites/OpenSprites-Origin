@@ -16,8 +16,6 @@
   <head>
     <!--Imports the metadata and information that will go in the <head> of every page-->
   	<?php echo file_get_contents('../Header.html'); ?>
-  	<!-- do we really need this?  it should be in header.html -->
-  	<link rel=StyleSheet href="../main.css" type="text/css" media=screen>
   	<style>
   	  input {
       	box-shadow: inset 0 1px 1px rgba(0,0,0,0.075);
