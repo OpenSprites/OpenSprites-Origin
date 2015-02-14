@@ -8,9 +8,8 @@
 	<?php echo file_get_contents('Header.html'); ?>
 </head>
 <body>
-	<link href='http://fonts.googleapis.com/css?family=Fredoka+One' rel='stylesheet' type='text/css'>
-	<link href='http://fonts.googleapis.com/css?family=Comfortaa' rel='stylesheet' type='text/css'>
-	<link href='http://fonts.googleapis.com/css?family=Bubblegum+Sans' rel='stylesheet' type='text/css'>
+	
+	<link href='main-style.css' rel='stylesheet' type='text/css'>
 	
 	<!--Imports navigation bar-->
 	<?php include "navbar.php"; ?>
