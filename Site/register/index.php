@@ -24,22 +24,18 @@
       	margin-bottom: 3px;
       	line-height: 18px;
       	font-size: 15px;
-      	height: 32px;
+      	height: 24px;
       	padding: 0 0 0 3px;
       	width: 210px;
       	
       	display: inline-block;
       	padding: 4px;
       	margin-bottom: 9px;
-      	font-size: 13px;
+      	font-size: 16px;
       	line-height: 18px;
       	color: #555;
       	border: 1px solid #ccc;
       	border-radius: 3px;
-      }
-      
-      input:hover {
-      	border: 3px solid #0F8BC0;
       }
   	</style>
   </head>
