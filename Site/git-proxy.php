@@ -8,7 +8,7 @@
     header('Content-Type: text/css');
   }
   // default case
-  $url = 'OpenSprites/OpenSprites/master/Site/' . $_GET['p'];
+  $url = 'https://raw.githubusercontent.com/OpenSprites/OpenSprites/master/Site/' . $_GET['p'];
   
   echo file_get_contents($url);
 ?>
