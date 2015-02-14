@@ -30,7 +30,7 @@ body {
 a.scratch{	
 	float: left;
 	display: block;
-	width: 80px;
+	width: 35px;
 	height: 35px;
 	background: url("assets/image/oslogo.png") left center no-repeat;
 	text-indent: -99999em;
