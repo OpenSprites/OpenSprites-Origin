@@ -1,12 +1,12 @@
+<?php
+	require "assets/includes/connect.php";  //Connect - includes session_start();
+?>
 <!DOCTYPE html>
 <html>
 <head>
-	<?php
-		require "assets/includes/connect.php";  //Connect - includes session_start();
-	?>
 	<!--Imports the metadata and information that will go in the <head> of every page-->
 	<?php echo file_get_contents('Header.html'); ?>
-	<!--Keep this link in so the page renders correctly on PCs without PHP installed.-->
+	<!-- do we really need this?  it should be in header.html -->
 	<LINK REL=StyleSheet HREF="main.css" TYPE="text/css" MEDIA=screen>
 </head>
 <body>
