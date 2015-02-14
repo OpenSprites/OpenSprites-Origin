@@ -14,13 +14,9 @@
         <?php if(!isset($_SESSION['username'])) { ?>
             <li><a href="/live/alpha/register/">Sign Up</a>
             </li>
-            <li class="last" id='login'>Log In
-                <div id='login-popup'>
-					<form method='POST' action='/assets/includes/login.php'>
-						<input type='text' name='username'></input>
-						<input type='password' name='password'></input>
-						<input type='submit' value='Submit'></input>
-					</form>
+            <li class="last" id='login'><a href="javascript:void(0);">Log In</a>
+                <div id='login-popup' style="display:none;">
+					<iframe src="/live/alpha/login.php" width="400" height="400">Could not load login.</iframe>
 				</div>
             </li>
         <?php } else  { ?>  <!-- display login info/username/etc -->
