@@ -10,18 +10,21 @@
         
         <a href="login.php"><li class="two">
               Login
-            </li></a>
- <a href="register.php"><li class="two">
+        </li></a>
+	<a href="register.php"><li class="two">
               Create a free account
-     <img src="assets/images/Hamburger.png" width="10" height="10" />
-            </li></a>
+	<img src="assets/images/Hamburger.png" width="10" height="10" />
+        </li></a>
 
         <?php }else{ ?> <a>
         
-                <li class="two">
-			      <a href="account.php"><li class="two">My account</li></a>
+        <li class="two">
+		<a href="account.php">
+			<li class="two">My account</li>
+		</a>
 
         <?php echo $_SESSION[ "username"]; ?>
+        
         </li>
         </a>
         
@@ -40,6 +43,8 @@
             <li class="last"><a href="">Media</a>
             </li>
         </ul>
+        <?php if(!isset($_SESSION['username'])) { ?>
+        
         <ul class="right">
             <li><a href="/live/alpha/register/">Sign Up</a>
             </li>
@@ -47,5 +52,8 @@
                 <div id='login-menu'>login form would pop up when you hit login</div>
             </li>
         </ul>
+        
+        <?php } ?>
+        
     </div>
 </div>
