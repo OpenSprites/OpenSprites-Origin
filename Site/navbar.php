@@ -18,8 +18,8 @@
             <div id='login-popup'>
             	<div class="arrow"></div>
 				<form method='POST' action='/live/alpha/assets/includes/login.php'>
-					Username<br><input type='text' name='username'></input>
-					Password<br><input type='password' name='password'></input>
+					<span>Username</span><br><input type='text' name='username'></input>
+					<span>Password</span><br><input type='password' name='password'></input>
 					<input type='submit' value='Log In'></input>
 				</form>
 			</div>
