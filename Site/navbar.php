@@ -12,14 +12,15 @@
 		
 		<ul class="right">
         <?php if(!isset($_SESSION['username'])) { ?>
-            <li><a href="/live/alpha/register/">Sign Up</a>
+            <li><a href="/live/alpha/register/">Join OpenSprites</a>
             </li>
             <li class="last" id='login'><span>Log In</span></li>
             <div id='login-popup'>
-				<form method='POST' action='live/alpha/assets/includes/login.php'>
+            	<div class="arrow"></div>
+				<form method='POST' action='/live/alpha/assets/includes/login.php'>
 					<input type='text' name='username'></input>
 					<input type='password' name='password'></input>
-					<input type='submit' value='Submit'></input>
+					<input type='submit' value='Log In'></input>
 				</form>
 			</div>
             
