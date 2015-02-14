@@ -7,6 +7,10 @@ body {
 	text-align: center;
 }
 
+input {
+	margin-left: 50px;
+}
+
 body {
 	font: 13px Helvetica Neue, Helvetica, sans-serif;
 	margin: 0;
