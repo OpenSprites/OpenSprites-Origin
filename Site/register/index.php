@@ -46,6 +46,7 @@
         background-color: #55bee8;
         color: white;
         border-color: white;
+        border-radius: 9px;
         
         transition: 100ms all;
       }
@@ -68,8 +69,8 @@
         <h1 id="opensprites-heading">Register</h1>
         <p>
           <form enctype="multipart/form-data" action="register.php" method="POST">
-            <div id="labels">Username:</div><input name="username" type="text" /><br>
-            <div id="labels">Password:</div><input name="password" type="password" /><br>
+            <div id="labels">Your Scratch Username:</div><input name="username" type="text" /><br>
+            <div id="labels">Choose a Password:</div><input name="password" type="password" /><br>
             <div id="labels">Confirm Password:</div><input name="confirm_password" type="password" /><br>
             <input type="Submit" id="submit" />
           </form>
