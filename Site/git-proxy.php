@@ -5,7 +5,12 @@
   if($mime_type != '') {
     header('Content-Type: ' . $mime_type);
   } else {
-    header('Content-Type: text/css');
+    if(substr($_GET['p'], -4) == '.css') {
+      header('Content-Type: text/css');
+    } else {
+      header('Content-Type: text/javascript');
+    }
+    
   }
   // default case
   $url = 'https://raw.githubusercontent.com/OpenSprites/OpenSprites/master/Site/' . $_GET['p'];
