@@ -39,7 +39,7 @@
       }
       
       #submit.register {
-        width: 90px;
+        width: 107px;
         height: 30px;
         background-color: #55bee8;
         color: white;
