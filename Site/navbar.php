@@ -50,7 +50,7 @@
 			</ul>
 			<ul class="right">
 				<li><a href="/live/alpha/register/">Sign Up</a></li>
-				<li class="last"><a href="">Log In</a></li>
+				<li class="last"><a href="/live/alpha/login/">Log In</a></li>
 			</ul>
 		</div>
 	</div>
