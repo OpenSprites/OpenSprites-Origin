@@ -49,6 +49,8 @@
         border-radius: 9px;
         
         transition: 100ms all;
+        
+        cursor: pointer;
       }
       
       #submit:hover {
