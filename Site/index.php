@@ -8,7 +8,7 @@
 	<?php echo file_get_contents('Header.html'); ?>
 </head>
 <body>
-	
+	<!--Imports site-wide main styling-->
 	<link href='main-style.css' rel='stylesheet' type='text/css'>
 	
 	<!--Imports navigation bar-->
