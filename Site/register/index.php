@@ -36,6 +36,21 @@
       	color: #555;
       	border: 1px solid #ccc;
       	border-radius: 3px;
+      	
+      	margin-left: 0;
+      }
+      
+      #submit {
+        width: 100px;
+        background-color: #55bee8;
+        color: white;
+        border-color: white;
+        
+        transition: 100ms all;
+      }
+      
+      #submit:hover {
+        background-color: #E59D54;
       }
   	</style>
   </head>
