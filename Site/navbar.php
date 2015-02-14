@@ -1,5 +1,5 @@
 <div class="header">
-    <div class="container">	<a class="scratch" href=""></a>
+    <div class="container">	<a class="scratch" href="/"></a>
 
         <ul class="left">
             <li><a href="">Sprites</a>
