@@ -1,4 +1,4 @@
-(function () { //wrap everything w/(function() {}) to keep it safe
+(function () { //wrap everything for safety
 
     var isShown = false;
 
