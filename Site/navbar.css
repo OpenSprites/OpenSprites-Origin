@@ -1,6 +1,10 @@
 #login-popup {
 	position:absolute;
-	right:200px;
+	top: 30px;
+	padding: 10px;
+	background-color: #659593;
+	color: white;
+	border-radius: 10px;
 }
 
 #login-popup input {
