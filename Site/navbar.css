@@ -1,7 +1,13 @@
-.login-popup {
-
+#login-popup {
+	position:absolute;
+	right:200px;
 }
 
-.login-popup input {
+#login-popup input {
 	display:block;
+	margin:3px;
+}
+
+#login-popup input[type='submit'] {
+	float:right;
 }

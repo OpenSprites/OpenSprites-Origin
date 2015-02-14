@@ -16,7 +16,7 @@
             </li>
             <li class="last" id='login'><span>Log In</span>
                 <div id='login-popup'>
-					<form method='POST' action='/assets/includes/login.php'>
+					<form method='POST' action='live/alpha/assets/includes/login.php'>
 						<input type='text' name='username'></input>
 						<input type='password' name='password'></input>
 						<input type='submit' value='Submit'></input>
