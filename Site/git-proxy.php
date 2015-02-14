@@ -1,5 +1,5 @@
 <?php
-  // usage: http://opensprites.x10.mx/live/alpha/git-proxy.php?file=main-style.css
+  // usage: http://opensprites.x10.mx/live/alpha/git-proxy.php?p=main-style.css
   header("Access-Control-Allow-Origin: *");
   $mime_type = $_GET['mime'];
   if($mime_type != '') {
