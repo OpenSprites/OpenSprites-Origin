@@ -18,7 +18,7 @@ body {
 	right: 0;
 	height: 35px;
 	padding: 0 10px;
-	background-color: #0F8BC0;
+	background-color: #659593;
 	-webkit-box-shadow: 0 1px 1px #ccc;
 	-moz-box-shadow: 0 1px 1px #ccc;
 	-o-box-shadow: 0 1px 1px #ccc;
@@ -32,7 +32,7 @@ a.scratch{
 	display: block;
 	width: 35px;
 	height: 35px;
-	background: url("assets/image/oslogo.png") left center no-repeat;
+	background: url("assets/images/oslogo.png") left center no-repeat;
 	text-indent: -99999em;
 	padding: 0 2px;
 }
@@ -62,7 +62,7 @@ a.scratch:hover{
 	line-height: 35px;
 	text-decoration: none !important;
 	cursor: pointer;
-
+	transition: 250ms all;
 }
 
 .header li.last{
