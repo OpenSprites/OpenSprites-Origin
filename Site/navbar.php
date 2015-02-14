@@ -49,7 +49,7 @@
 				<li class="last"><a href="">Media</a></li>
 			</ul>
 			<ul class="right">
-				<li><a href="">Sign Up</a></li>
+				<li><a href="/live/alpha/register/">Sign Up</a></li>
 				<li class="last"><a href="">Log In</a></li>
 			</ul>
 		</div>
