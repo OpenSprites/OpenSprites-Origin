@@ -6,8 +6,6 @@
 <head>
 	<!--Imports the metadata and information that will go in the <head> of every page-->
 	<?php echo file_get_contents('Header.html'); ?>
-	<!-- do we really need this?  it should be in header.html -->
-	<LINK REL=StyleSheet HREF="main.css" TYPE="text/css" MEDIA=screen>
 </head>
 <body>
 	<link href='http://fonts.googleapis.com/css?family=Fredoka+One' rel='stylesheet' type='text/css'>
