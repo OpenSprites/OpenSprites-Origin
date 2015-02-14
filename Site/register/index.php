@@ -67,9 +67,9 @@
         <h1 id="opensprites-heading">Register</h1>
         <p>
           <form enctype="multipart/form-data" action="register.php" method="POST">
-            <span id="labels">Username:</span><input name="username" type="text" /><br>
-            <span id="labels">Password:</span><input name="password" type="password" /><br>
-            <span id="labels">Confirm Password:</span><input name="confirm_password" type="password" /><br>
+            <div id="labels">Username:</div><input name="username" type="text" /><br>
+            <div id="labels">Password:</div><input name="password" type="password" /><br>
+            <div id="labels">Confirm Password:</div><input name="confirm_password" type="password" /><br>
             <input type="Submit" id="submit" />
           </form>
         </p>
