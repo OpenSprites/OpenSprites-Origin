@@ -1,5 +1,6 @@
 <div class="header">
-    <div class="container">	<a class="scratch" href="/live/alpha/"></a>
+    <div class="container">	<a class="scratch" href="/live/alpha/"></a><a href="/live/alpha/">
+    <span class="logo-name">OPEN SPRITES</span></a>
 
         <ul class="left">
             <li><a href="">Sprites</a>
