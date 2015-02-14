@@ -1,11 +1,12 @@
 #login-popup {
 	position:absolute;
-	top: 30px;
+	top: 0;
 	padding: 10px;
 	background-color: #659593;
 	color: white;
 	border-radius: 10px;
-	z-index: 199;
+	z-index: -1;
+	padding-top: 45px;
 	box-shadow: 0 1px 1px #ccc;
 }
 
