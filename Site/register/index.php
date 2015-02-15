@@ -30,9 +30,20 @@
 			<div class="register" id="labels">Email:</div><input class="register" name="email" type="text" /><br>
             <div class="register" id="labels">Choose a Password:</div><input class="register" name="password" type="password" /><br>
             <div class="register" id="labels">Confirm Password:</div><input class="register" name="confirm_password" type="password" /><br>
+			Please paste this code into <a href='http://scratch.mit.edu/projects/47606468/'>this</a> project:<br />
+			<?php
+				//get a random code...
+				$id = uniqid();
+				$_SESSION['user_code'] = $id;
+				echo $id;
+			?>
             <input class="register" type="Submit" id="submit" />
           </form>
         </p>
+		<div id='left-reg-panel'>
+			Already registered and submitted the code?  Click this button to confirm your account.
+			<button>Confirm</button>
+		</div>
       </div>
     </div>
     

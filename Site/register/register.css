@@ -29,3 +29,6 @@ input.register {
     width: 200px;
     margin-top: 20px;
 }
+#left-reg-panel {
+	float:left;
+}
