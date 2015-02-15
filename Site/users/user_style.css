@@ -57,7 +57,7 @@
   height: 335px;
   text-align: right;
   line-height: 335px;
-  padding-right: 50px;
+  padding-right: 0;
 }
 
 #overlay-inner {
