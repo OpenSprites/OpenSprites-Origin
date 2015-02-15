@@ -27,7 +27,7 @@
 		</div>
 		<div id="user-pane">
 			<?php
-			$size = 'container main x100';
+			$size = 'x100';
 		    	$raw_json = file_get_contents("http://scratch.mit.edu/site-api/users/all/" . $username . "/");
 		    	$user_arr = json_decode($raw_json, true);
 		    	$user_avatar = $user_arr["thumbnail_url"];
