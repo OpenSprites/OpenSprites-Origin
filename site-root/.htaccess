@@ -23,5 +23,5 @@ RewriteRule ^(.*)/$ $1.php [L]
 
 
 # Force trailing slash
-RewriteCond %{REQUEST_FILENAME}.php -f
-RewriteRule .*[^/]$ $0/ [L,R=301]
+#RewriteCond %{REQUEST_FILENAME}.php -f
+#RewriteRule .*[^/]$ $0/ [L,R=301]
