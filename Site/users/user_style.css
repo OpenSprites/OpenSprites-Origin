@@ -74,6 +74,10 @@
   text-align: left;
 }
 
+.main-inner {
+  padding: 10px;
+}
+
 .user-avatar.x100 {
   margin-top: 70px;
   width: 200px !important;
