@@ -23,7 +23,7 @@
 		<div id='username'>
 			<?php echo $username; ?>
 		</div>
-		<?php display_user_avatar($username, 2, 'no-cache'); echo 'user-avatar?'; ?>
+		<?php display_user_avatar($username, 2); ?>
 	</div>
 
 	<div class="container main" id="collections">
