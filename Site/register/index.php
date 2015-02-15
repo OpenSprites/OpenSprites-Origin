@@ -19,11 +19,7 @@
   	<style>
   	  input.register {
       	box-shadow: inset 0 1px 1px rgba(0,0,0,0.075);
-      	margin-bottom: 3px;
-      	line-height: 18px;
-      	font-size: 15px;
       	height: 24px;
-      	padding: 0 0 0 3px;
       	width: 210px;
       	
       	display: inline-block;
