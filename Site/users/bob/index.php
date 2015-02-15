@@ -9,7 +9,7 @@
 	
 	<!--Imports styling-->
 	<link href='../../main-style.css' rel='stylesheet' type='text/css'>
-	<link href='../user-style.css' rel='stylesheet' type='text/css'>
+	<link href='../user_style.css' rel='stylesheet' type='text/css'>
 </head>
 <body>
 	<!--Imports navigation bar-->
