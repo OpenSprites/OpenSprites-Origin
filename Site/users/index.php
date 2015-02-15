@@ -28,14 +28,16 @@
 			<div id='username'>
 				<?php echo $username; ?>
 			</div>
+			<div id="userjoined">
+			<h3>Joined:</h3> 19th may 1834
 			<div id='description'>
 				blah blah blah
 			</div>
 			<div id='follow'>
-				follow
+				Follow
 			</div>
 			<div id='report'>
-				report
+				Report
 			</div>
 		</div>
 		<div id="user-pane-left">
