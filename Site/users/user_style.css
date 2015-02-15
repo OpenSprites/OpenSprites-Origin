@@ -25,7 +25,9 @@
 }
 
 #collections {
-  margin-top: 350px;
+  margin-top: 50px;
+  padding: 20px !important;
+  margin-bottom: 50px;
 }
 
 #user-pane-left {
