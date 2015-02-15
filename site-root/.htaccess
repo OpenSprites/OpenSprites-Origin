@@ -12,17 +12,4 @@ Header set Expires "Wed, 11 Jan 1984 05:00:00 GMT"
 
 # Remove .php extension
 RewriteEngine On
-RewriteBase /
-RewriteCond %{THE_REQUEST} ^GET\ /[^?\s]+\.php
-RewriteRule (.*)\.php$ /$1/ [L,R=301]
-
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteCond %{REQUEST_FILENAME} !-d
-RewriteCond %{REQUEST_URI} ^/(.+)/$
-RewriteCond %{DOCUMENT_ROOT}/%1.php -f
-RewriteRule ^(.*)/$ $1.php [L]
-
-
-# Force trailing slash
-#RewriteCond %{REQUEST_FILENAME}.php -f
-#RewriteRule .*[^/]$ $0/ [L,R=301]
+RewriteRule ^register$ register.php [L]
