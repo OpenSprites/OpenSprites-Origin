@@ -18,7 +18,7 @@
 	
 	<!-- Main wrapper -->
 	<?php echo "<img id='background-img' src='bg/" . $username . "_custom.png' "; ?>onerror='this.src="bg/default.png"'>
-	<div id='dark-overlay'>
+	<div id='dark-overlay'><div id='overlay-inner'>
 		<div id="user-pane-right">
 			<div id='username'>
 				<?php echo $username; ?>
@@ -29,7 +29,7 @@
 				display_user_avatar($username, 'x100', 'client');
 			?>
 		</div>
-	</div>
+	</div></div>
 
 	<div class="container main" id="collections">
 		<div class="main-inner">
