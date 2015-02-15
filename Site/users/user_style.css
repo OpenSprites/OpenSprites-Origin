@@ -22,7 +22,6 @@
   margin-top: 70px;
   font-size: 48px;
   background: none !important;
-  
 }
 
 #collections {
@@ -34,6 +33,7 @@
   max-width: 470px;
   padding: 0;
   margin: auto;
+  position: relative;
 }
 
 .user-avatar.x100 {
