@@ -6,7 +6,7 @@
 	$username = $_GET['username'];
 	$raw_json = file_get_contents("http://scratch.mit.edu/site-api/users/all/" . $username . "/");
 	$user_arr = json_decode($raw_json, true);
-	$username = $user_arr["username"];
+	print_r($user_arr["user"]);
 ?>
 <!DOCTYPE html>
 <html>
