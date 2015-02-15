@@ -6,6 +6,7 @@
   height: 335px;
   color: white;
   background-color: rgba(0, 0, 0, 0.78);
+  text-align: center;
 }
 
 #background-img {
@@ -15,14 +16,13 @@
 }
 
 #username {
-  position: absolute;
-  top: 50px;
+  margin-top: 50px;
   font-size: 64px;
+  
 }
 
 #collections {
-  position: absolute;
-  top: 350px;
+  margin-top: 350px;
 }
 
 img.2 {
