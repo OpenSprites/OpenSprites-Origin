@@ -1,6 +1,9 @@
 <?php
 	require "../assets/includes/connect.php";  //Connect - includes session_start();
+	require "../assets/includes/global_functions.php";
+	
 	$username = $_GET['username'];
+	update_user_avatar($username); // Temporary
 ?>
 <!DOCTYPE html>
 <html>
@@ -19,8 +22,9 @@
 	<?php echo "<img id='background-img' src='" . $username . "_bg_img.png'>"; ?>
 	<div id='dark-overlay'>
 		<div id='username'>
-			<?php echo $username ?>
+			<?php echo $username; ?>
 		</div>
+		<?php display_user_avatar($username, 2); ?>
 	</div>
 
 	<div class="container main" id="collections">
