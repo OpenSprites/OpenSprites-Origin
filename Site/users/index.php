@@ -23,7 +23,14 @@
 		<div id='username'>
 			<?php echo $username; ?>
 		</div>
-		<?php display_user_avatar($username, '2', 'from_scratch'); ?>
+		<?php
+		$size = '2';
+	    	$raw_json = file_get_contents("http://scratch.mit.edu/site-api/users/all/" . $username . "/");
+	    	$user_arr = json_decode($raw_json, true);
+	    	$user_avatar = $user_arr["thumbnail_url"];
+	    	$src = "http:" . $user_avatar;
+	    	echo '<img class="user-avatar ' . $size . '" src="' . $src . '">';
+		?>
 	</div>
 
 	<div class="container main" id="collections">
