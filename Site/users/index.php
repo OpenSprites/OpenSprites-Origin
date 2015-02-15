@@ -1,6 +1,6 @@
 <?php
 	require "../assets/includes/connect.php";  //Connect - includes session_start();
-	require "../assets/includes/global_functions.php";
+	require "../assets/includes/avatar.php";
 	
 	$username = $_GET['username'];
 ?>
@@ -27,7 +27,7 @@
 		</div>
 		<div id="user-pane">
 			<?php
-				display_user_avatar($username, 'x100');
+				display_user_avatar($username, 'x100', 'client');
 			?>
 		</div>
 	</div>

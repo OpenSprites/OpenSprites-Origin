@@ -4,7 +4,7 @@
     $raw_json = file_get_contents("http://scratch.mit.edu/site-api/users/all/" . $username_grabbed . "/");
     $user_arr = json_decode($raw_json, true);
     $user_avatar = $user_arr["thumbnail_url"];
-    return "http:" . $user_avatar;
+    return "http:$user_avatar";
   }
   
   function update_user_avatar($username) {
@@ -13,11 +13,12 @@
     mysqli_query($connection, $avatar_query);
   }
   
-  function display_user_avatar($username, $size, $method) {
+  function display_user_avatar($username, $size, $method='client') {
     if ($method=='server') {
-      $disp_query = "SELECT avatar FROM user_data WHERE username='$username'"
+      $disp_query = "SELECT avatar FROM user_data WHERE username='$username'";
       $disp_result = mysqli_query($connection, $disp_query);
-      $src = (mysqli_fetch_assoc($disp_result))['avatar'];
+	  $line = mysqli_fetch_assoc($disp_result);
+      $src = $line['avatar'];
     } else {
       $src = grab_user_avatar($username);
     }
