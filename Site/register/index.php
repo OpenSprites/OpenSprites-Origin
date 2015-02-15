@@ -4,7 +4,7 @@
   include 'config.php';
   
   //connect to server and login check via cookie
-  include 'assets/includes/login_check.php';  //to be added later!
+  include '../assets/includes/login_check.php';  //to be added later!
   
   if (isset($_SESSION['username'])) {
     header("Location: /");
@@ -15,50 +15,11 @@
 <html>
   <head>
     <!--Imports the metadata and information that will go in the <head> of every page-->
-  	<?php echo file_get_contents('Header.html'); ?>
-  	<style>
-  	  input.register {
-      	box-shadow: inset 0 1px 1px rgba(0,0,0,0.075);
-      	height: 24px;
-      	width: 210px;
-      	
-      	display: inline-block;
-      	padding: 4px;
-      	margin-bottom: 9px;
-      	font-size: 16px;
-      	line-height: 18px;
-      	color: #555;
-      	border: 1px solid #ccc;
-      	border-radius: 3px;
-      	
-      	margin-left: 0;
-      }
-      
-      #submit.register {
-        width: 107px;
-        height: 30px;
-        background-color: #55bee8;
-        color: white;
-        border-color: white;
-        border-radius: 9px;
-        
-        transition: 100ms all;
-        
-        cursor: pointer;
-      }
-      
-      #submit.register:hover {
-        background-color: #E59D54;
-      }
-      
-      #labels.register {
-        width: 200px;
-        margin-top: 20px;
-      }
-  	</style>
+  	<?php echo file_get_contents('../Header.html'); ?>
+  	<link rel=StyleSheet href="register.css" TYPE="text/css" media=screen>
   </head>
   <body>
-    <?php include 'navbar.php'; ?>
+    <?php include '../navbar.php'; ?>
     
     <div class="container main">
       <div class="main-inner">
@@ -66,6 +27,7 @@
         <p>
           <form enctype="multipart/form-data" action="register.php" method="POST">
             <div class="register" id="labels">Your Scratch Username:</div><input class="register" name="username" type="text" /><br>
+			<div class="register" id="labels">Email:</div><input class="register" name="email" type="text" /><br>
             <div class="register" id="labels">Choose a Password:</div><input class="register" name="password" type="password" /><br>
             <div class="register" id="labels">Confirm Password:</div><input class="register" name="confirm_password" type="password" /><br>
             <input class="register" type="Submit" id="submit" />
@@ -74,6 +36,6 @@
       </div>
     </div>
     
-    <?php echo file_get_contents('footer.html'); ?>
+    <?php echo file_get_contents('../footer.html'); ?>
   </body>
 </html>

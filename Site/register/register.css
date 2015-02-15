@@ -1,0 +1,31 @@
+input.register {
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+    height: 24px;
+    width: 210px;
+    display: inline-block;
+    padding: 4px;
+    margin-bottom: 9px;
+    font-size: 16px;
+    line-height: 18px;
+    color: #555;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    margin-left: 0;
+}
+#submit.register {
+    width: 107px;
+    height: 30px;
+    background-color: #55bee8;
+    color: white;
+    border-color: white;
+    border-radius: 9px;
+    transition: 100ms all;
+    cursor: pointer;
+}
+#submit.register:hover {
+    background-color: #E59D54;
+}
+#labels.register {
+    width: 200px;
+    margin-top: 20px;
+}
