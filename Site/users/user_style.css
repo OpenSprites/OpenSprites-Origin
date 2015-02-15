@@ -1,11 +1,15 @@
 #dark-overlay {
+  position: absolute;
+  top: 35px;
+  left: 0;
   width: 100%;
+  height: 200px;
   color: white;
   background-color: black;
 }
 
 #background-img {
-  -webkit-filter: blur(2px); 
-  -moz-filter: blur(2px); 
-  filter: blur(2px); 
+  -webkit-filter: blur(1px); 
+  -moz-filter: blur(1px); 
+  filter: blur(1px); 
 }
