@@ -1,10 +1,10 @@
 <?php
 
   session_start();
-  include '../config.php';
+  include 'config.php';
   
   //connect to server and login check via cookie
-  include '../assets/includes/login_check.php';  //to be added later!
+  include 'assets/includes/login_check.php';  //to be added later!
   
   if (isset($_SESSION['username'])) {
     header("Location: /");
@@ -15,7 +15,7 @@
 <html>
   <head>
     <!--Imports the metadata and information that will go in the <head> of every page-->
-  	<?php echo file_get_contents('../Header.html'); ?>
+  	<?php echo file_get_contents('Header.html'); ?>
   	<style>
   	  input.register {
       	box-shadow: inset 0 1px 1px rgba(0,0,0,0.075);
@@ -58,7 +58,7 @@
   	</style>
   </head>
   <body>
-    <?php include '../navbar.php'; ?>
+    <?php include 'navbar.php'; ?>
     
     <div class="container main">
       <div class="main-inner">
@@ -74,6 +74,6 @@
       </div>
     </div>
     
-    <?php echo file_get_contents('../footer.html'); ?>
+    <?php echo file_get_contents('footer.html'); ?>
   </body>
 </html>
