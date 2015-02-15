@@ -20,17 +20,21 @@
 	<!-- Main wrapper -->
 	<?php echo "<img id='background-img' src='bg/" . $username . "_custom.png' "; ?>onerror='this.src="bg/default.png"'>
 	<div id='dark-overlay'>
-		<div id='username' class="container main">
-			<?php echo $username; ?>
+		<div id="user-pane">
+			<div id='username'>
+				<?php echo $username; ?>
+			</div>
 		</div>
-		<?php
-		$size = 'container main x100';
-	    	$raw_json = file_get_contents("http://scratch.mit.edu/site-api/users/all/" . $username . "/");
-	    	$user_arr = json_decode($raw_json, true);
-	    	$user_avatar = $user_arr["thumbnail_url"];
-	    	$src = "http:" . $user_avatar;
-	    	echo '<img class="user-avatar ' . $size . '" src="' . $src . '">';
-		?>
+		<div id="user-pane">
+			<?php
+			$size = 'container main x100';
+		    	$raw_json = file_get_contents("http://scratch.mit.edu/site-api/users/all/" . $username . "/");
+		    	$user_arr = json_decode($raw_json, true);
+		    	$user_avatar = $user_arr["thumbnail_url"];
+		    	$src = "http:" . $user_avatar;
+		    	echo '<img class="user-avatar ' . $size . '" src="' . $src . '">';
+			?>
+		</div>
 	</div>
 
 	<div class="container main" id="collections">
