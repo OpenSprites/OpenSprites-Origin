@@ -20,11 +20,11 @@
 	<!-- Main wrapper -->
 	<?php echo "<img id='background-img' src='bg/" . $username . "_custom.png' "; ?>onerror='this.src="bg/default.png"'>
 	<div id='dark-overlay'>
-		<div id='username'>
+		<div id='username' class="container main">
 			<?php echo $username; ?>
 		</div>
 		<?php
-		$size = 'x100';
+		$size = 'container main x100';
 	    	$raw_json = file_get_contents("http://scratch.mit.edu/site-api/users/all/" . $username . "/");
 	    	$user_arr = json_decode($raw_json, true);
 	    	$user_avatar = $user_arr["thumbnail_url"];
