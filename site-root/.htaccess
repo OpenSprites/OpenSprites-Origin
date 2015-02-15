@@ -2,7 +2,7 @@
 ErrorDocument 404 /404.html
 
 # no cache
-<FilesMatch "\.(css|js|php)$">
+<FilesMatch "\.(css|js|php|png)$">
 FileETag None
 Header unset ETag
 Header set Cache-Control "max-age=0, no-cache, no-store, must-revalidate"
