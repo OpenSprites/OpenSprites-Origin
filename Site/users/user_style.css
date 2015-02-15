@@ -20,15 +20,24 @@
 
 #username {
   margin-top: 70px;
-  margin-left: 250px;
   font-size: 48px;
+  background: none !important;
+  
 }
 
 #collections {
   margin-top: 350px;
 }
 
+#user-pane {
+  text-align: left;
+  max-width: 470px;
+  padding: 0;
+  margin: auto;
+}
+
 .user-avatar.x100 {
   width: 100px !important;
   height: 100px !important;
+  min-height: 100px !important;
 }
