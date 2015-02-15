@@ -19,7 +19,10 @@
 	<div class="container main">
 		<div class="main-inner">
 			Test
-			<?php include "../user.php?username=bob"; ?>
+			<?php
+				$thing = file_get_contents("../user.php?username=bob");
+				print_r($thing);
+			?>
 		</div>
 	</div>
 	
