@@ -23,7 +23,7 @@
 		<div id='username'>
 			<?php echo $username; ?>
 		</div>
-		<?php display_user_avatar($username, '2'); ?>
+		<?php display_user_avatar($username, '2', 'from_scratch'); ?>
 	</div>
 
 	<div class="container main" id="collections">
