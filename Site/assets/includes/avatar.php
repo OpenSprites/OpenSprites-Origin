@@ -13,7 +13,7 @@
     mysqli_query($connection, $avatar_query);
   }
   
-  function display_user_avatar($username, $size, $method='server') {
+  function display_user_avatar($username, $size, $method) {
     if ($method=='server') {
       $disp_query = "SELECT avatar FROM user_data WHERE username='$username'"
       $disp_result = mysqli_query($connection, $disp_query);
