@@ -1,1 +1,11 @@
-/* todo */
+#dark-overlay {
+  width: 100%;
+  color: white;
+  background-color: black;
+}
+
+#background-img {
+  -webkit-filter: blur(2px); 
+  -moz-filter: blur(2px); 
+  filter: blur(2px); 
+}
