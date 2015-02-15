@@ -18,12 +18,12 @@
 	<!-- Main wrapper -->
 	<div class="container main">
 		<div class="main-inner">
-			"<div id='dark-overlay'>
+			<div id='dark-overlay'>
 				<img id='background-img' src='bg_img.png'>
 			</div>
 			<div id='username'>
 				<?php echo $username ?>
-			</div>"
+			</div>
 		</div>
 	</div>
 	
