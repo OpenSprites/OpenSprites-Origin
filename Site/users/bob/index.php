@@ -1,6 +1,7 @@
 <?php
 	require "../../assets/includes/connect.php";  //Connect - includes session_start();
 	$username = 'bob';
+	echo "../user.php?username=" . $username;
 	require "../user.php?username=" . $username;
 ?>
 <!DOCTYPE html>
