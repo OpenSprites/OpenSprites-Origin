@@ -18,6 +18,7 @@
 	<!-- Main wrapper -->
 	<div class="container main">
 		<div class="main-inner">
+			Test
 			<?php include "../user.php?username=bob"; ?>
 		</div>
 	</div>
