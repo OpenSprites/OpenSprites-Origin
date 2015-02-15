@@ -29,12 +29,14 @@
 }
 
 #user-pane-left {
+  position: absolute;
   margin-right: 470px;
   width: 470px;
   height: 335px;
 }
 
 #user-pane-right {
+  position: absolute;
   margin-left: 470px;
   width: 470px;
   height: 335px;
