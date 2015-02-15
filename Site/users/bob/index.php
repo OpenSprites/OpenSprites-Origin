@@ -16,15 +16,7 @@
 	<?php include "../../navbar.php"; ?>
 	
 	<!-- Main wrapper -->
-	<div class="container main">
-		<div class="main-inner">
-			<h1 id="opensprites-heading">Todo</h1>
-			<div id="about">
-				<h2>Welcome!</h2>
-				<p>Welcome to OpenSprites, the website that is designed for members of the <a href="http://www.scratch.mit.edu">Scratch</a> community to upload and share scripts, sprites, pictures, and more!</p>
-			</div>
-		</div>
-	</div>
+	<?php include "../user.php?username=bob"; ?>
 	
 	<!-- footer -->
 	<?php echo file_get_contents('../../footer.html'); ?>
