@@ -1,5 +1,5 @@
 <?php
-	require "../../assets/includes/connect.php";  //Connect - includes session_start();
+	require "../assets/includes/connect.php";  //Connect - includes session_start();
 	$username = $_GET['username'];
 ?>
 <!DOCTYPE html>
@@ -19,7 +19,6 @@
 	<div class="container main">
 		<div class="main-inner">
 			Hello and welcome to "bob".
-			<?php print_r $_GET; ?>
 		</div>
 	</div>
 	
