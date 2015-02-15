@@ -19,7 +19,7 @@
     $disp_query = "SELECT avatar FROM user_data WHERE username='$username'"
     $disp_result = mysqli_query($connection, $disp_query);
     $src = (mysqli_fetch_assoc($disp_result))['avatar'];
-    echo '<img class="user-avatar ' . $size . '" src="' . $src . '">'
+    echo '<img class="user-avatar ' . $size . '" src="' . $src . '">';
   }
   
   function temp_display_user_avatar($username, $size) {
@@ -27,6 +27,6 @@
     $user_arr = json_decode($raw_json, true);
     $user_avatar = $user_arr["thumbnail_url"];
     $src = "http:" . $user_avatar;
-    echo '<img class="user-avatar ' . $size . '" src="' . $src . '">'
+    echo '<img class="user-avatar ' . $size . '" src="' . $src . '">';
   }
 ?>
