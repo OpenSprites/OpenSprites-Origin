@@ -27,7 +27,13 @@
 		</div>
 		<div id="user-pane-left">
 			<?php
-				display_user_avatar($username, 'x100');
+				// TEMPORARY, DO NOT REMOVE
+				$size = 'x100';
+	-		    	$raw_json = file_get_contents("http://scratch.mit.edu/site-api/users/all/" . $username . "/");		
+	-		    	$user_arr = json_decode($raw_json, true);		
+	-		    	$user_avatar = $user_arr["thumbnail_url"];		
+	-		    	$src = "http:" . $user_avatar;		
+	-		    	echo '<img class="user-avatar ' . $size . '" src="' . $src . '">';
 			?>
 		</div>
 	</div>
