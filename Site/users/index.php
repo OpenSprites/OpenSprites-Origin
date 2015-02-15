@@ -5,8 +5,15 @@
 	// capitalise username correctly
 	$username = $_GET['username'];
 	$raw_json = file_get_contents("http://scratch.mit.edu/site-api/users/all/" . $username . "/");
-	$user_arr = json_decode($raw_json, true);
-	print_r($user_arr["user"]);
+	if($raw_json == 'FALSE' or $raw_json == FALSE or $raw_json == file_get_contents("http://scratch.mit.edu/404")) {
+		// something went wrong, display 404 error page instead
+		header('Location: /404.html');
+	} else {
+		// procceed
+		$user_arr = json_decode($raw_json, true);
+		$user = $user_arr["user"];
+		$username = $user["username"];
+	}
 ?>
 <!DOCTYPE html>
 <html>
@@ -28,8 +35,6 @@
 			<div id='username'>
 				<?php echo $username; ?>
 			</div>
-			<div id="userjoined">
-			<h3>Joined:</h3> 19th may 1834
 			<div id='description'>
 				blah blah blah
 			</div>
