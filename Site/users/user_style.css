@@ -33,7 +33,9 @@
   margin-right: 470px;
   width: 470px;
   height: 335px;
-  text-align: left;
+  text-align: right;
+  line-height: 335px;
+  padding-right: 50px;
 }
 
 #overlay-inner {
