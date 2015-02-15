@@ -14,6 +14,12 @@
   filter: blur(1px); 
 }
 
+#username {
+  position: absolute;
+  top: 50px;
+  font-size: 64px;
+}
+
 #collections {
   position: absolute;
   top: 350px;
