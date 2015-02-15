@@ -20,7 +20,7 @@
 	<div class="container main">
 		<div class="main-inner">
 			Hello and welcome to "bob".
-			<?php print_r $_GET;
+			<?php print_r $_GET; ?>
 		</div>
 	</div>
 	
