@@ -10,9 +10,8 @@ Header set Pragma "no-cache"
 Header set Expires "Wed, 11 Jan 1984 05:00:00 GMT"
 </FilesMatch>
 
-# Remove .php extension on some files
+# Remove .php extension
 RewriteEngine on
-RewriteRule ^live/alpha/users/ - [L]
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME}\.php -f
 RewriteRule ^(.*)$ $1.php
