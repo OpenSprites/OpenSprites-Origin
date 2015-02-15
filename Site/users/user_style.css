@@ -28,12 +28,18 @@
   margin-top: 350px;
 }
 
-#user-pane {
-  text-align: left;
-  max-width: 470px;
-  padding: 0;
-  margin: auto;
-  position: relative;
+#user-pane-left {
+  position: absolute;
+  top: 50%;
+  left: 25%;
+  transform: translate(-50%, -50%);
+}
+
+#user-pane-right {
+  position: absolute;
+  top: 50%;
+  left: 75%;
+  transform: translate(-50%, -50%);
 }
 
 .user-avatar.x100 {
