@@ -1,5 +1,6 @@
 <?php
 	require "../../assets/includes/connect.php";  //Connect - includes session_start();
+	$username = 'bob';
 ?>
 <!DOCTYPE html>
 <html>
@@ -18,10 +19,10 @@
 	<!-- Main wrapper -->
 	<div class="container main">
 		<div class="main-inner">
-			Test
+			Hello and welcome to
 			<?php
-				echo '<a href="../user.php?username=bob">Hello</a>';
-				$thing = file_get_contents("../user.php?username=bob");
+				echo '<a href="../user.php?username=' . $username . '">'. $username .'</a>';
+				$thing = file_get_contents("../user.php?username=" . $username);
 				print_r($thing);
 				echo $thing;
 			?>
