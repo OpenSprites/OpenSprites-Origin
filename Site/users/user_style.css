@@ -16,13 +16,14 @@
 }
 
 #username {
-  margin-top: 50px;
-  font-size: 64px;
-  
+  margin-top: 70px;
+  margin-left: 250px;
+  font-size: 48px;
 }
 
 #collections {
-  margin-top: 350px;
+  position: absolute;
+  top: 350px;
 }
 
 img.2 {
