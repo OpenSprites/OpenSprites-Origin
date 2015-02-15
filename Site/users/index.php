@@ -18,11 +18,11 @@
 	<!-- Main wrapper -->
 	<div class="container main">
 		<div class="main-inner">
+			<?php echo "<img id='background-img' src='" . $username . "_bg_img.png'>";
 			<div id='dark-overlay'>
-				<img id='background-img' src='bg_img.png'>
-			</div>
-			<div id='username'>
-				<?php echo $username ?>
+				<div id='username'>
+					<?php echo $username ?>
+				</div>
 			</div>
 		</div>
 	</div>
