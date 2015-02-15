@@ -3,6 +3,6 @@
 	<img id='background-img' src='bg_img.png'>
 </div>
 <div id='username'>
-	" . echo $_GET['username'] . "
+	" . $username . "
 </div>"
 ?>
