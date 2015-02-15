@@ -20,7 +20,7 @@
 			<h1 id="opensprites-heading">OpenSprites - Share Sprites, Scripts, and More!</h1>
 			<div id="about">
 				<h2>Welcome!</h2>
-				<p>Welcome to OpenSprites, the website that is designed for members of the <a href="http://www.scratch.mit.edu">Scratch</a> community to upload and share scripts, sprites, pictures, and more!</p>
+				<p>Welcome to OpenSprites, the free, open source site, that allows Scratch users to share their own scripts, sprites and project media!</p>
 			</div>
 			<div id="top-sprites">
 				<div class="box">
