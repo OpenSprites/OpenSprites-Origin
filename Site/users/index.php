@@ -2,6 +2,7 @@
 	require "../assets/includes/connect.php";  //Connect - includes session_start();
 	require "../assets/includes/avatar.php";
 	$username = $_GET['username'];
+	checkUsername($username);
 ?>
 <!DOCTYPE html>
 <html>
