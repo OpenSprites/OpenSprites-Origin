@@ -20,8 +20,10 @@
 		<div class="main-inner">
 			Test
 			<?php
+				echo '<br>Test again:';
 				$thing = file_get_contents("../user.php?username=bob");
 				print_r($thing);
+				echo $thing;
 			?>
 		</div>
 	</div>
