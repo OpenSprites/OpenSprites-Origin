@@ -21,4 +21,9 @@
     $src = (mysqli_fetch_assoc($disp_result))['avatar'];
     echo '<img class="user-avatar ' . $size . '" src="' . $src . '">'
   }
+  
+  function temp_display_user_avatar($username, $size) {
+    $src = grab_user_avatar($username);
+    echo '<img class="user-avatar ' . $size . '" src="' . $src . '">'
+  }
 ?>
