@@ -26,6 +26,12 @@
 			<div id='description'>
 				Blah blah blah
 			</div>
+			<div id='message'>
+				message
+			</div>
+			<div id='report'>
+				report
+			</div>
 		</div>
 		<div id="user-pane-left">
 			<?php
