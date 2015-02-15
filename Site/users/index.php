@@ -1,8 +1,12 @@
 <?php
 	require "../assets/includes/connect.php";  //Connect - includes session_start();
 	require "../assets/includes/avatar.php";
+	
+	// capitalise username correctly
 	$username = $_GET['username'];
-	checkUsername($username);
+	$raw_json = file_get_contents("http://scratch.mit.edu/site-api/users/all/" . $username . "/");
+	$user_arr = json_decode($raw_json, true);
+	$username = $user_arr["username"];
 ?>
 <!DOCTYPE html>
 <html>
