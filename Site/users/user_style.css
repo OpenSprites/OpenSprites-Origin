@@ -24,6 +24,11 @@
   background: none !important;
 }
 
+#description {
+  font-size: 36px;
+  margin-top: 30px;
+}
+
 #collections {
   margin-top: 50px;
   padding: 20px !important;
