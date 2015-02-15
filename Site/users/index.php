@@ -23,6 +23,9 @@
 			<div id='username'>
 				<?php echo $username; ?>
 			</div>
+			<div id='description'>
+				Blah blah blah
+			</div>
 		</div>
 		<div id="user-pane-left">
 			<?php
