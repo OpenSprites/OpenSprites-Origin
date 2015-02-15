@@ -18,7 +18,7 @@
 	<!-- Main wrapper -->
 	<div class="container main">
 		<div class="main-inner">
-			<?php echo "<img id='background-img' src='" . $username . "_bg_img.png'>";
+			<?php echo "<img id='background-img' src='" . $username . "_bg_img.png'>"; ?>
 			<div id='dark-overlay'>
 				<div id='username'>
 					<?php echo $username ?>
