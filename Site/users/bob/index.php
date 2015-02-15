@@ -16,7 +16,11 @@
 	<?php include "../../navbar.php"; ?>
 	
 	<!-- Main wrapper -->
-	<?php include "../user.php?username=bob"; ?>
+	<div class="container main">
+		<div class="main-inner">
+			<?php include "../user.php?username=bob"; ?>
+		</div>
+	</div>
 	
 	<!-- footer -->
 	<?php echo file_get_contents('../../footer.html'); ?>
