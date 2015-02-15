@@ -20,10 +20,6 @@ body {
 	height: 35px;
 	padding: 0 10px;
 	background-color: #659593;
-	-webkit-box-shadow: 0 1px 1px #ccc;
-	-moz-box-shadow: 0 1px 1px #ccc;
-	-o-box-shadow: 0 1px 1px #ccc;
-	box-shadow: 0 1px 1px #ccc;
 	z-index: 200;
 }
 
