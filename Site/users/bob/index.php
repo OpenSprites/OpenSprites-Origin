@@ -20,7 +20,7 @@
 		<div class="main-inner">
 			Test
 			<?php
-				echo '<br>Test again:';
+				echo '<a href="../user.php?username=bob">Hello</a>';
 				$thing = file_get_contents("../user.php?username=bob");
 				print_r($thing);
 				echo $thing;
