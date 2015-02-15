@@ -18,7 +18,7 @@
 	<!-- Main wrapper -->
 	<div class="container main">
 		<div class="main-inner">
-			<?php echo file_get_contents("../user.php?username=bob"); ?>
+			<?php include "../user.php?username=bob"; ?>
 		</div>
 	</div>
 	
