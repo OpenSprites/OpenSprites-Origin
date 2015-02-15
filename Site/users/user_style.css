@@ -1,5 +1,5 @@
 #dark-overlay {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
@@ -11,9 +11,9 @@
 }
 
 #background-img {
-  -webkit-filter: blur(1px); 
-  -moz-filter: blur(1px); 
-  filter: blur(1px);
+  -webkit-filter: blur(3px); 
+  -moz-filter: blur(3px); 
+  filter: blur(3px);
   width: 100%;
   height: 335px;
 }
