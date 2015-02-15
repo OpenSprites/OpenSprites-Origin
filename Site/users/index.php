@@ -3,7 +3,7 @@
 	require "../assets/includes/global_functions.php";
 	
 	$username = $_GET['username'];
-	//update_user_avatar($username); // Temporary
+	update_user_avatar($username); // Temporary
 ?>
 <!DOCTYPE html>
 <html>
@@ -24,7 +24,7 @@
 		<div id='username'>
 			<?php echo $username; ?>
 		</div>
-		<?php //display_user_avatar($username, 2); ?>
+		<?php display_user_avatar($username, 2); ?>
 	</div>
 
 	<div class="container main" id="collections">
