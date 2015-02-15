@@ -1,6 +1,6 @@
 <?php
 	require "../assets/includes/connect.php";  //Connect - includes session_start();
-	require "../assets/includes/global_functions.php";
+	//require "../assets/includes/global_functions.php";
 	
 	$username = $_GET['username'];
 ?>
