@@ -16,14 +16,16 @@
 	<?php include "../navbar.php"; ?>
 	
 	<!-- Main wrapper -->
-	<div class="container main">
+	<?php echo "<img id='background-img' src='" . $username . "_bg_img.png'>"; ?>
+	<div id='dark-overlay'>
+		<div id='username'>
+			<?php echo $username ?>
+		</div>
+	</div>
+
+	<div class="container main" id="collections">
 		<div class="main-inner">
-			<?php echo "<img id='background-img' src='" . $username . "_bg_img.png'>"; ?>
-			<div id='dark-overlay'>
-				<div id='username'>
-					<?php echo $username ?>
-				</div>
-			</div>
+			<h1>Collections</h1>
 		</div>
 	</div>
 	
