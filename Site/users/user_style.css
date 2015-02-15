@@ -8,6 +8,7 @@
   background-color: rgba(0, 0, 0, 0.78);
   text-align: center;
   overflow: hidden;
+  z-index: 2;
 }
 
 #background-img {
@@ -47,6 +48,17 @@
   position: absolute;
   bottom: 40px;
   left: 150px;
+}
+
+#userjoined {
+  position: absolute;
+  font-size: 15px;
+  margin: 15px;
+  top: 10px;
+}
+
+#userjoined h3{
+  font-style: bold;
 }
 
 #collections {
