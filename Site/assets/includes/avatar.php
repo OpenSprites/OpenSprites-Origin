@@ -18,9 +18,9 @@
       $disp_query = "SELECT avatar FROM user_data WHERE username='$username'"
       $disp_result = mysqli_query($connection, $disp_query);
       $src = (mysqli_fetch_assoc($disp_result))['avatar'];
-      echo '<img class="user-avatar ' . $size . '" src="' . $src . '">';
     } else {
       $src = grab_user_avatar($username);
     }
+    echo '<img class="user-avatar ' . $size . '" src="' . $src . '">';
   }
 ?>
