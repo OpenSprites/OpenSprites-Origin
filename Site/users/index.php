@@ -23,7 +23,7 @@
 		<div id='username'>
 			<?php echo $username; ?>
 		</div>
-		<?php temp_display_user_avatar($username, 2); ?>
+		<?php temp_display_user_avatar($username, 2); echo 'user-avatar?'; ?>
 	</div>
 
 	<div class="container main" id="collections">
