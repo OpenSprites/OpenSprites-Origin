@@ -18,7 +18,7 @@
 	<?php include "../navbar.php"; ?>
 	
 	<!-- Main wrapper -->
-	<?php echo "<img id='background-img' src='bg/" . $username . "_custom.png' "; ?>onerror='this.src="bg/default.png">
+	<?php echo "<img id='background-img' src='bg/" . $username . "_custom.png' "; ?>onerror='this.src="bg/default.png"'>
 	<div id='dark-overlay'>
 		<div id='username'>
 			<?php echo $username; ?>
