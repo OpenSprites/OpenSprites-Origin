@@ -24,10 +24,10 @@
 				<?php echo $username; ?>
 			</div>
 			<div id='description'>
-				Blah blah blah
+				blah blah blah
 			</div>
-			<div id='message'>
-				message
+			<div id='follow'>
+				follow
 			</div>
 			<div id='report'>
 				report
