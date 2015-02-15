@@ -30,6 +30,8 @@
 
 #user-pane-left {
   position: absolute;
+  width: 470px;
+  height: 335px;
   top: 50%;
   left: 25%;
   transform: translate(-50%, -50%);
@@ -37,6 +39,8 @@
 
 #user-pane-right {
   position: absolute;
+  width: 470px;
+  height: 335px;
   top: 50%;
   left: 75%;
   transform: translate(-50%, -50%);
