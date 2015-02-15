@@ -3,7 +3,7 @@
 	require "../assets/includes/global_functions.php";
 	
 	$username = $_GET['username'];
-	update_user_avatar($username); // Temporary
+	//update_user_avatar($username); // Temporary
 ?>
 <!DOCTYPE html>
 <html>
