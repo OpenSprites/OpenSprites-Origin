@@ -35,6 +35,12 @@
   height: 335px;
 }
 
+#overlay-inner {
+  width: 980px;
+  text-align: left;
+  margin: auto;
+}
+
 #user-pane-right {
   position: absolute;
   margin-left: 470px;
