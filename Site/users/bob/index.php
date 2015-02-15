@@ -1,7 +1,7 @@
 <?php
 	require "../../assets/includes/connect.php";  //Connect - includes session_start();
 	$username = 'bob';
-	require "../user.php";
+	require "/live/alpha/users/user.php";
 ?>
 <!DOCTYPE html>
 <html>
