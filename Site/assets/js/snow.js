@@ -1,6 +1,7 @@
 <script type="text/javascript">
-//you can download the gif from internet
+//Snowflake is in the /assets
 //picture of the snowflake goes under here
+//put this script on index.php under <title></title> for the best results
 var snowsrc="SnowFlake.svg"
 var no = 10;
 
@@ -43,7 +44,7 @@ for (i = 0; i < no; ++ i)
 
    if (i == 0)
    {
-      document.write("<div id=\"dot"+ i +"\" style=\"POSITION: absolute; Z-INDEX: "+ i +"; VISIBILITY: visible; TOP: 15px; LEFT: 15px;\"><a href=\"http://tietokone.club\"><img src='"+snowsrc+"' border=\"0\"><\/a><\/div>");
+      document.write("<div id=\"dot"+ i +"\" style=\"POSITION: absolute; Z-INDEX: "+ i +"; VISIBILITY: visible; TOP: 15px; LEFT: 15px;\"><a href=\"http://opensprites.x10.mx/\"><img src='"+snowsrc+"' border=\"0\"><\/a><\/div>");
    }
    else
    {
