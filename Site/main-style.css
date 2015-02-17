@@ -473,3 +473,16 @@ h1 {
 }
 
 .box > h1 { font-family: Helvetica Neue, Helvetica, sans-serif; }
+
+/* dropdown menus */
+
+select {
+  font-size: 12px;
+  background-color: #E3F4F2;
+  border: none;
+  -webkit-appearance: none;
+  color: #659593;
+  border-radius:5px;
+  padding:3px
+}
+
