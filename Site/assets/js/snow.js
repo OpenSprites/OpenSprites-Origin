@@ -1,7 +1,7 @@
 <script type="text/javascript">
 //you can download the gif from internet
 //picture of the snowflake goes under here
-var snowsrc="snow.gif"
+var snowsrc="SnowFlake.svg"
 var no = 10;
 
 var dx, xp, yp;
