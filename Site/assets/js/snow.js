@@ -2,7 +2,7 @@
 //picture of the snowflake goes under here
 //put this script on index.php under <title></title> for the best results
 //EdenStudio
-var snowsrc="/live/alpha/assets/images/SnowFlake.svg"
+var snowsrc="Site/assets/images/SnowFlake.svg"
 var no = 10;
 
 var dx, xp, yp;
