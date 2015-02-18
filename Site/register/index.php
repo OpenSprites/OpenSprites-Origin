@@ -40,7 +40,7 @@
         </p>
 		<div id='left-reg-panel'>
 			Already registered and submitted the code?  Enter your username and click this button to confirm your account.
-			<form>
+			<form method='POST' action='register_check.php'>
 				<input type='text' name='username_confirmation' />
 				<input type='submit' value='Confirm' />
 			</form>
