@@ -1,7 +1,7 @@
 <?php
 
   session_start();
-  include 'config.php';
+  echo file_get_contents('config.php');
   
   //connect to server and login check via cookie
   include '../assets/includes/login_check.php';  //to be added later!
@@ -19,8 +19,7 @@
   	<link rel=StyleSheet href="register.css" TYPE="text/css" media=screen>
   </head>
   <body>
-    <?php include '../navbar.php'; ?>
-    
+    <?php echo file_get_contents('../navbar.php'); ?>
     <div class="container main">
       <div class="main-inner">
         <h1 id="opensprites-heading">Register</h1>
