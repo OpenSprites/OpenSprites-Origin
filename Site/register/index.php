@@ -39,8 +39,11 @@
           </form>
         </p>
 		<div id='left-reg-panel'>
-			Already registered and submitted the code?  Click this button to confirm your account.
-			<a href='register_check.php'><button>Confirm</button></a>
+			Already registered and submitted the code?  Enter your username and click this button to confirm your account.
+			<form>
+				<input type='text' name='username_confirmation' />
+				<input type='submit' value='Confirm' />
+			</form>
 		</div>
       </div>
     </div>
