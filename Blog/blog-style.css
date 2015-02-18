@@ -13,10 +13,36 @@ body {
     padding: 0.5em;
 }
 
-h1 {
+#maintitle {
+    margin-left: auto;
+    margin-right: auto;
+    width: 22%;
+    background-color: black;
+    border-radius: 0.3em;
+    opacity: 0.58;
+    padding-left: 0.2em;
+    padding-right: 0.2em;
+    padding-bottom: 0.01em;
+    padding-top: 0.01em;
+}
+
+#maintitle p {
     text-align: center;
+    color: white;
     font-family: Josefin Sans;
-    font-size: 2.5em;
+    margin-top: 0em;
+}
+
+#maintitle p a {
+    text-decoration: none;
+    color: white;
+    font-family: Josefin Sans;
+    font-size: 1.2em;
+    margin-top: 0em;
+}
+
+#maintitle p a:hover {
+    color: green;
 }
 
 h3 {
@@ -26,7 +52,7 @@ h3 {
 }
 
 
-p {
+.content p {
     font-family: Noto Sans;
     padding-left: 1em;
     padding-right: 1em;
