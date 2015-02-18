@@ -1,1 +1,3 @@
-//EXISTS
+<?php
+  //EXIST!
+?>
