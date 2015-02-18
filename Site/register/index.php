@@ -1,7 +1,6 @@
 <?php
 
   session_start();
-  echo file_get_contents('config.php');
   
   //connect to server and login check via cookie
   include '../assets/includes/login_check.php';  //to be added later!
