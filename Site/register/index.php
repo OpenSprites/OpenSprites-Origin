@@ -40,7 +40,7 @@
         </p>
 		<div id='left-reg-panel'>
 			Already registered and submitted the code?  Click this button to confirm your account.
-			<button>Confirm</button>
+			<a href='register_check.php'><button>Confirm</button></a>
 		</div>
       </div>
     </div>
