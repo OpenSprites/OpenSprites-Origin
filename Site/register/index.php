@@ -15,11 +15,11 @@
 <html>
   <head>
     <!--Imports the metadata and information that will go in the <head> of every page-->
-  	<?php echo file_get_contents('../Header.php'); ?>
+  	<?php include '../Header.php'; ?>
   	<link rel=StyleSheet href="register.css" TYPE="text/css" media=screen>
   </head>
   <body>
-    <?php echo file_get_contents('../navbar.php'); ?>
+    <?php include '../navbar.php'; ?>
     <div class="container main">
       <div class="main-inner">
         <h1 id="opensprites-heading">Register</h1>
