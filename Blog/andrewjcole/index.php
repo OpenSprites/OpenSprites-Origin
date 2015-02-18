@@ -1,4 +1,4 @@
-<?php echo file_get_contents('top.php'); ?> 
+<?php include 'top.php'; ?>
         <!-- Article -->
         <div id="article">
 
@@ -16,5 +16,5 @@
         </div>
     </td>
 
-<?php echo file_get_contents('sidebar.php'); ?>
-<?php echo file_get_contents('bottom.php'); ?>
+<?php include 'sidebar.php'; ?>
+<?php include 'bottom.php'; ?>
