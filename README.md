@@ -18,7 +18,7 @@ The-Cheese-Eater is the founder of OS. He is also one of the lead developers.
 ## [Firedrake969](https://github.com/Firedrake969)
 ![GitHub Logo](https://avatars3.githubusercontent.com/u/8008245?v=3&s=320)
 
-Firedrake969 is one of the lead developers of OS. He is also one of the main oversears of the project.
+Firedrake969 is one of the lead developers of OS. He is also one of the main overseers of the project.
 * HTML
 * CSS
 * JavaScript
