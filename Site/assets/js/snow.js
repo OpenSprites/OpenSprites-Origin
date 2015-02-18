@@ -1,7 +1,7 @@
 //Snowflake is in the /assets
 //picture of the snowflake goes under here
 //put this script on index.php under <title></title> for the best results
-var snowsrc="SnowFlake.svg"
+var snowsrc="/live/alpha/assets/images/SnowFlake.svg"
 var no = 10;
 
 var dx, xp, yp;
