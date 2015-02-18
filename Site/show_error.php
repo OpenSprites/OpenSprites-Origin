@@ -7,7 +7,7 @@
 ?>
 <html>
   <head>
-  <?php include 'Header.html'; ?>
+  <?php include 'Header.php'; ?>
   </head>
   <body>
   <?php include 'navbar.php'; ?>
