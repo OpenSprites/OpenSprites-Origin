@@ -1,0 +1,90 @@
+body {
+    font-family:sans-serif;
+    font-size:20px;
+    color:black;
+    background-color:lightblue;
+    margin:0px;
+}
+
+#header {
+    background-color:#659593;
+    width:100%;
+    height:140px;
+}
+
+.blog {
+    margin-top:auto;
+    margin-bottom:auto;
+    line-height:120px;
+    font-family:Open Sans;
+    font-size:40px;
+    color:white;
+}
+
+#content {
+    width:70%;
+    background-color:white;
+    margin-left:auto;
+    margin-right:auto;
+    padding:20px;
+    font-size:18px
+}
+
+#title {
+    font-family:Open Sans;
+}
+
+#sidebar {
+    float:right;
+    width:20%;
+}
+
+#article {
+    border-bottom:solid 1px;
+    padding-bottom:10px
+}
+
+.sidebar {
+    padding-left:10px;
+}
+
+h1,h2,h3,h4,h5 {
+    font-family:Open Sans;
+}
+
+.sidebar-text {
+    font-size:16px;
+}
+
+#return {
+    float:left;
+    line-height:12px;
+    color:white;
+    font-size:12px;
+    margin-left:10px;
+}
+
+/* links */
+a:link {
+    color: #659593;
+}
+
+a:visited {
+    color: #659593;
+}
+
+a:hover {
+    color: #9BC5C3;
+}
+
+a:active {
+    color: #000000;
+}
+
+#footer {
+    width:100%;
+    background-color:#416F6D;
+    color:white;
+    padding-top:10px;
+    padding-bottom:10px;
+}
