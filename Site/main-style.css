@@ -159,7 +159,7 @@ article.box > h1 {
 }
 h1.firstHeading,
 h2 {
-  border-bottom: solid 1px black;
+	border-bottom: solid 1px black;
 }
 .box-content {
 	background: #fff;
@@ -170,9 +170,9 @@ h2 {
 	list-style-type: none;
 }
 .box-content h1 {
-    font-size: 2em;
-    border-bottom: 1px solid #aaa;
-    padding-bottom: 4px;
+	font-size: 2em;
+	border-bottom: 1px solid #aaa;
+	padding-bottom: 4px;
 }
 nav.box li a {
 	padding: 2px 0;
@@ -197,11 +197,11 @@ a:active {
 	text-decoration: underline;
 }
 .catlinks {
-    background-color: #EEEEEE;
-    border: 1px solid #CCCCCC;
-    margin: 20px 0 10px;
-    padding: 5px;
-    text-align: left;
+	background-color: #EEEEEE;
+	border: 1px solid #CCCCCC;
+	margin: 20px 0 10px;
+	padding: 5px;
+	text-align: left;
 }
 .footer {
 	background-color: #ececec;
@@ -237,39 +237,39 @@ a:active {
 /* search bar */
 
 form.search {
-   display: inline-block;
-   margin: 0 10px;
-   position: relative;
-   margin-top: 5px;
+	display: inline-block;
+	margin: 0 10px;
+	position: relative;
+	margin-top: 5px;
 }
 form.search input {
--webkit-border-radius: 10px;
-border-radius: 10px;
-height: 23px;
-padding-left: 33px;
-width: 204px;
-border: none;
+	-webkit-border-radius: 10px;
+	border-radius: 10px;
+	height: 23px;
+	padding-left: 33px;
+	width: 204px;
+	border: none;
 
 
 
 }
 form.search input:focus {
-outline: none;
+	outline: none;
  }
 form.search .glass {
-background: url("../images/nav-search-glass.62d43b28d86a.png") no-repeat 9px center;
-width: 26px;
-height: 23px;
-position: absolute;
-border: 0;
-border-right: 1px solid #ccc;
-padding-left: 28px;
-padding-right: 0;
-opacity: .8;
--moz-border-radius: 0;
--webkit-border-radius: 0;
-border-radius: 0;
- background: url("nav-search-glass.png") no-repeat center center;
+	background: url("../images/nav-search-glass.62d43b28d86a.png") no-repeat 9px center;
+	width: 26px;
+	height: 23px;
+	position: absolute;
+	border: 0;
+	border-right: 1px solid #ccc;
+	padding-left: 28px;
+	padding-right: 0;
+	opacity: .8;
+	-moz-border-radius: 0;
+	-webkit-border-radius: 0;
+	border-radius: 0;
+	background: url("nav-search-glass.png") no-repeat center center;
 }
 
 
@@ -280,11 +280,11 @@ border-radius: 0;
 }
 #pagefctbtn {
 	background: url("edit.png") no-repeat scroll center center transparent;
-    border-radius: 3px 3px 3px 3px;
-    display: inline-block;
-    width: 35px;
+	border-radius: 3px 3px 3px 3px;
+	display: inline-block;
+	width: 35px;
 	height: 25px;
-    vertical-align: top;
+	vertical-align: top;
 	float: right;
 	margin-top: 5px;
 	cursor: pointer;
@@ -392,62 +392,62 @@ border-radius: 0;
 
 
 .new {
-    color: #e1314c;
+	color: #e1314c;
 }
 dt {
-    font-weight: bold;
+	font-weight: bold;
 }
 
 
 #toc {
-    border: 1px solid #aaa;
-    padding: 10px 10px;
-    display: inline-block;
+	border: 1px solid #aaa;
+	padding: 10px 10px;
+	display: inline-block;
 }
 #toctitle h2 {
-    display: inline;
-    font-size: 1.25em;
+	display: inline;
+	font-size: 1.25em;
 }
 .toctoggle {
-    float: right;
-    padding-left: 5px; font-size: 14px; font-weight: normal;
-    margin: 0 5px 0 0;
-    line-height: 20px;
+	float: right;
+	padding-left: 5px; font-size: 14px; font-weight: normal;
+	margin: 0 5px 0 0;
+	line-height: 20px;
 }
 #toc ul {
-    list-style: none;
+	list-style: none;
 }
 #toc ul {
-    margin: 0.5em 0;
+	margin: 0.5em 0;
 }
 #toc li {
-    line-height: 18px;
+	line-height: 18px;
 }
 
 
 .thumbinner {
-    margin: 2em 0;
+	margin: 2em 0;
 }
 .thumb.tright {
-    margin-left: 2em;
+	margin-left: 2em;
 }
 .thumb.tleft {
-    margin-right: 2em;
+	margin-right: 2em;
 }
 
 div.thumbinner {
-  border: 1px solid #ccc;
-  padding: 3px !important;
-  background-color: #f9f9f9;
-  font-size: 94%;
-  text-align: center;
-  overflow: hidden;
+	border: 1px solid #ccc;
+	padding: 3px !important;
+ 	background-color: #f9f9f9;
+ 	font-size: 94%;
+	text-align: center;
+	overflow: hidden;
 }
 
 
 /* fix diff scrollbars */
 table.diff td div {
-    overflow: visible;
+	overflow: visible;
 }
 
 img{
@@ -477,12 +477,13 @@ h1 {
 /* dropdown menus */
 
 select {
-  font-size: 12px;
-  background-color: #E3F4F2;
-  border: none;
-  -webkit-appearance: none;
-  color: #659593;
-  border-radius:5px;
-  padding:3px
+	font-size: 12px;
+	background-color: #E3F4F2;
+	border: none;
+	-webkit-appearance: none;
+	color: #659593;
+	border-radius:5px;
+	padding:3px;
+	cursor:pointer
 }
 
