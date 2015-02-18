@@ -16,7 +16,7 @@ body {
 #maintitle {
     margin-left: auto;
     margin-right: auto;
-    width: 22%;
+    width: 25%;
     background-color: black;
     border-radius: 0.3em;
     opacity: 0.58;
@@ -31,18 +31,23 @@ body {
     color: white;
     font-family: Josefin Sans;
     margin-top: 0em;
+    font-size: 1em;
 }
 
 #maintitle p a {
     text-decoration: none;
     color: white;
     font-family: Josefin Sans;
-    font-size: 1.2em;
+    font-size: 1.1em;
     margin-top: 0em;
 }
 
 #maintitle p a:hover {
     color: green;
+}
+
+#maintitle img {
+    width: 10em;
 }
 
 h3 {
