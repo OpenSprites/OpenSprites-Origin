@@ -1,7 +1,6 @@
 <?php
 
   session_start();
-  echo file_get_contents('config.php');
   
   //connect to server and login check via cookie
   include '../assets/includes/login_check.php';  //to be added later!
@@ -15,11 +14,11 @@
 <html>
   <head>
     <!--Imports the metadata and information that will go in the <head> of every page-->
-  	<?php echo file_get_contents('../Header.php'); ?>
+  	<?php include '../Header.php'; ?>
   	<link rel=StyleSheet href="register.css" TYPE="text/css" media=screen>
   </head>
   <body>
-    <?php echo file_get_contents('../navbar.php'); ?>
+    <?php include '../navbar.php'; ?>
     <div class="container main">
       <div class="main-inner">
         <h1 id="opensprites-heading">Register</h1>
@@ -40,8 +39,11 @@
           </form>
         </p>
 		<div id='left-reg-panel'>
-			Already registered and submitted the code?  Click this button to confirm your account.
-			<button>Confirm</button>
+			Already registered and submitted the code?  Enter your username and click this button to confirm your account.
+			<form method='POST' action='register_check.php'>
+				<input type='text' name='username_confirmation' />
+				<input type='submit' value='Confirm' />
+			</form>
 		</div>
       </div>
     </div>
