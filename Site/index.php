@@ -5,7 +5,7 @@
 <html>
 <head>
 	<!--Imports the metadata and information that will go in the <head> of every page-->
-	<?php echo file_get_contents('Header.html'); ?>
+	<?php echo file_get_contents('Header.php'); ?>
 </head>
 <body>
 	<!--Imports site-wide main styling-->
