@@ -28,7 +28,7 @@
           <form enctype="multipart/form-data" action="register.php" method="POST">
             <div class="register" id="labels">Your Scratch Username:</div><input class="register" name="username" type="text" /><br>
 			<div class="register" id="labels">Email:</div><input class="register" name="email" type="text" /><br>
-            <div class="register" id="labels">Choose a Password:</div><input class="register" name="password" type="password" />Please, dont use the same password as on Scratch.<br>
+            <div class="register" id="labels">Choose a Password:</div><input class="register" name="password" type="password" /> Please, dont use the same password as on Scratch.<br>
             <div class="register" id="labels">Confirm Password:</div><input class="register" name="confirm_password" type="password" /><br>
 			Please paste this code into <a href='http://scratch.mit.edu/projects/47606468/'>this</a> project:<br />
 			<?php
