@@ -1,4 +1,3 @@
-<script type="text/javascript">
 //Snowflake is in the /assets
 //picture of the snowflake goes under here
 //put this script on index.php under <title></title> for the best results
@@ -72,5 +71,3 @@ function DoSnow()
 }
 
 setTimeout("DoSnow()", 500);
-
-</script>
