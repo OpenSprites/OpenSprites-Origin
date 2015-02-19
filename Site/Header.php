@@ -3,7 +3,7 @@
 <!--Imports style-sheets and handles search engine keywords-->
 <!--Sets characters-->
 <?php
-if (!is_dir("/assets/")){
+if (file_exists("assets/includes/connect.php")){
     include "Header-Local.html";
 }
 else{
