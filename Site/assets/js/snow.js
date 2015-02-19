@@ -1,7 +1,15 @@
-//Snowflake is in the /assets
-//picture of the snowflake goes under here
-//put this script on index.php under <title></title> for the best results
-//EdenStudio
+function scheduleMessage() {
+    var today=new Date()
+
+    var christmas=new Date(today.getFullYear(), 12, 25)
+    if (today.getMonth()==12 && today.getDate()>25)
+        christmas.setFullYear(christmas.getFullYear()+1)
+
+    var timeout = christmas.getTime()-today.getTime();
+    if( timeout > 2147483647 ){
+        window.setTimeout( scheduleMessage(), 2147483647 )
+    } else {
+        window.setTimeout(function()
 var snowsrc="http://opensprites.x10.mx/live/alpha/assets/images/SnowFlake.svg"
 var no = 10;
 
