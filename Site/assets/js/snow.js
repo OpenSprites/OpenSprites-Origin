@@ -7,8 +7,8 @@ function scheduleMessage() {
         var am, stx, sty;
         var i, doc_width = 800,
             doc_height = 600;
-        var christmas = new Date(today.getFullYear(), 12, 25)
-        if (today.getMonth() == 12 && today.getDate() > 25)
+        var christmas = new Date(today.getFullYear(), 12, 24)
+        if (today.getMonth() == 12 && today.getDate() > 24)
             christmas.setFullYear(christmas.getFullYear() + 1)
 
         var timeout = christmas.getTime() - today.getTime();
