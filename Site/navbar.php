@@ -1,5 +1,5 @@
 <div class="header">
-    <div class="container">	<a class="scratch" href="/live/alpha/"></a><a href="/live/alpha/">
+    <div class="container">	<a class="scratch" href="a/"></a><a href="/">
     <span class="logo-name"><b>OPEN</b>SPRITES</span></a>
 
         <ul class="left">
@@ -13,7 +13,7 @@
 		
 		<ul class="right">
         <?php if(!isset($_SESSION['username'])) { ?>
-            <li><a href="/live/alpha/register">Join OpenSprites!</a>
+            <li><a href="/register">Join OpenSprites!</a>
             </li>
             <li class="last" id='login'><span>Log In</span></li>
             <div id='login-popup'>

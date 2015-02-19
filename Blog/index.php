@@ -1,0 +1,21 @@
+<html>
+    <head>
+        <!--Imports standard metadata-->
+        <?php echo file_get_contents('Header.php'); ?>
+        <!--Imports CSS. We could put the CSS between <style> tags later on, but for now it just keeps things more orderly-->
+        <link href='blog-style.css' rel='stylesheet' type='text/css'>
+        <!--Imports Google font-->
+        <link href='http://fonts.googleapis.com/css?family=Josefin+Sans:600|Arimo|Raleway|Noto+Sans' rel='stylesheet' type='text/css'>
+        <title>OpenSprites Blog</title>
+	</head>
+<body>
+    <div id="maintitle">
+        <center><a href="//blog.opensprites.x10.mx"><img src="ESlogo.svg"></a></center>
+        <p><a href="//opensprites.x10.mx">OpenSprites</a> - <a href="//blog.opensprites.x10.mx">Blog Home</a></p>
+    </div>
+    <div class="content">
+        <h3>Our new blog!</h3>
+        <p>Blah blah blah</p>
+    </div>
+</body>
+</html>

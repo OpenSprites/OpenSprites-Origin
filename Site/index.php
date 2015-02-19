@@ -5,7 +5,7 @@
 <html>
 <head>
 	<!--Imports the metadata and information that will go in the <head> of every page-->
-	<?php include 'Header.php'; ?>
+	<?php include 'Header.html'; ?>
 </head>
 <body>
 	<!--Imports site-wide main styling-->
@@ -56,13 +56,35 @@
 					</div>
 				</div>
 			</div>
-		</div>
-	</div>
-    <div id="teams-favorite">
-           <div class="box">
-               <h1>Teams favorites</h1>
-				   <div class="box-content">
-						<p>OS Team chooses scripts/sprites daily for everyones pleasure!
+			<div id="feat-sprites">
+				<div class="box">
+					<h1>Featured Sprites</h1>
+					<div class="box-content">
+						<p>Sort by: 
+							<select id="sortby">
+								<option>Popularity (downloads)</option>
+								<option>Ratings</option>
+								<option>A-Z</option>
+								<option>Newest</option>
+								<option>Oldest</option>
+							</select>
+						</p>
+						PHP guys, get in here!
+					</div>
+				</div>
+			</div>
+				<div id="feat-scripts">
+				<div class="box">
+					<h1>Featured Scripts</h1>
+					<div class="box-content">
+						<p>Sort by: 
+							<select id="sortby">
+								<option>Popularity (downloads)</option>
+								<option>Ratings</option>
+								<option>A-Z</option>
+								<option>Newest</option>
+								<option>Oldest</option>
+							</select>
 						</p>
 						PHP guys, get in here!
 					</div>
@@ -70,6 +92,18 @@
 			</div>
 		</div>
 	</div>
+    <!-- <div id="teams-favorite">
+           <div class="box">
+               <h1>Featured Scripts and Sprites</h1>
+				   <div class="box-content">
+						<p>The OS Team will choose two scripts and two sprites daily.
+						</p>
+						PHP guys, get in here!
+					</div>
+				</div>
+			</div>
+		</div>
+	</div> -->
 	
 	<!-- footer -->
 	<?php echo file_get_contents('footer.html'); ?>
