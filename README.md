@@ -76,4 +76,4 @@ liam4 is a tester / bug reporter / feature suggester on the OS team.
 Rumanti is a dev on the OS team.
 * HTML
 * CSS
-* JavaScript
+
