@@ -69,10 +69,11 @@ andrewjcole is a dev on the OS team.
 liam4 is a tester / bug reporter / feature suggester on the OS team.
 * Idea creating
 * Bug reporting
-* 
+
 ## [Rumanti](https://github.com/Rumanti)
 ![Github logo](https://avatars1.githubusercontent.com/u/10893362?v=3&s=400)
-andrewjcole is a dev on the OS team.
+
+Rumnati is a dev on the OS team.
 * HTML
 * CSS
 * JavaScript
