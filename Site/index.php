@@ -58,6 +58,18 @@
 			</div>
 		</div>
 	</div>
+    <div id="teams-favorite">
+           <div class="box">
+               <h1>Teams favorites</h1>
+				   <div class="box-content">
+						<p>OS Team chooses scripts/sprites daily for everyones pleasure!
+						</p>
+						PHP guys, get in here!
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 	
 	<!-- footer -->
 	<?php echo file_get_contents('footer.html'); ?>
