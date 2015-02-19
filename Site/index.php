@@ -60,9 +60,9 @@
 	</div>
     <div id="teams-favorite">
            <div class="box">
-               <h1>Teams favorites</h1>
+               <h1>Featured Scripts and Sprites</h1>
 				   <div class="box-content">
-						<p>OS Team chooses scripts/sprites daily for everyones pleasure!
+						<p>The OS Team will choose two scripts and two sprites daily.
 						</p>
 						PHP guys, get in here!
 					</div>
