@@ -11,7 +11,6 @@ For more information, please visit the discussion thread: http://scratch.mit.edu
 The-Cheese-Eater is the founder of OS. He is also one of the lead developers.
 * HTML
 * CSS
-* JavaScript
 * Supervising
 * Task delegating
 
@@ -46,7 +45,7 @@ GrannyCookies is one of the most active devs on the OS team.
 
 pilppe is a dev on the OS team.
 * HTML
-* Javascript
+* JavaScript
 
 ## [zappy1333](https://github.com/zappy1333)
 ![GitHub Logo](https://avatars0.githubusercontent.com/u/10379486?v=3&s=110)
@@ -54,7 +53,7 @@ pilppe is a dev on the OS team.
 zappy1333 is a dev on the OS team.
 * HTML
 * CSS
-* Javascript
+* JavaScript
 
 ## [andrewjcole](https://github.com/andrewjcole)
 ![GitHub Logo](https://avatars1.githubusercontent.com/u/10202163?v=3&s=100)
@@ -70,3 +69,10 @@ andrewjcole is a dev on the OS team.
 liam4 is a tester / bug reporter / feature suggester on the OS team.
 * Idea creating
 * Bug reporting
+* 
+## [Rumanti](https://github.com/Rumanti)
+![Github logo](https://avatars1.githubusercontent.com/u/10893362?v=3&s=400)
+andrewjcole is a dev on the OS team.
+* HTML
+* CSS
+* JavaScript
