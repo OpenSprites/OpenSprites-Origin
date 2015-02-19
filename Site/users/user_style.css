@@ -62,7 +62,6 @@
 }
 
 #collections {
-  position: absolute;
   margin-top: 50px;
   padding: 20px !important;
   margin-bottom: 50px;
@@ -93,7 +92,6 @@
 }
 
 .main-inner {
-  position: absolute;
   padding: 10px;
 }
 
