@@ -64,3 +64,9 @@ andrewjcole is a dev on the OS team.
 * CSS
 * PHP
 
+## [liam4](https://github.com/liam4)
+![Github Logo](https://avatars3.githubusercontent.com/u/9948030?v=3&s=110)
+
+liam4 is a tester / bug reporter / feature suggester on the OS team.
+* Idea creating
+* Bug reporting
