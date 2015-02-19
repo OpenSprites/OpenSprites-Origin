@@ -7,7 +7,9 @@
             </li>
             <li><a href="">Scripts</a>
             </li>
-            <li class="last"><a href="">Media</a>
+            <li><a href="">Media</a>
+            </li>
+            <li class="last"><a href="http://opensprites.x10.mx/forums/">Forums</a>
             </li>
         </ul>
 		
