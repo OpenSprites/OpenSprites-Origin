@@ -10,8 +10,8 @@
 	</head>
 <body>
     <div id="maintitle">
-        <center><a href="blog.opensprites.x10.mx"><img src="ESlogo.svg"></a></center>
-        <p><a href="opensprites.x10.mx">OpenSprites</a> - <a href="blog.opensprites.x10.mx">Blog Home</a></p>
+        <center><a href="//blog.opensprites.x10.mx"><img src="ESlogo.svg"></a></center>
+        <p><a href="//opensprites.x10.mx">OpenSprites</a> - <a href="//blog.opensprites.x10.mx">Blog Home</a></p>
     </div>
     <div class="content">
         <h3>Our new blog!</h3>
