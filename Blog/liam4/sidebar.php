@@ -1,5 +1,6 @@
-<?php
-
-    // For now this is empty, I'll have to add something in here at some point. :P
-
-?>
+<div id="sidebar">
+    <h3>Sidebar</h3>
+    <a href="entries/">Entries folder</a>
+    <a href="/index.php">OpenSprites</a>
+    <a href="/Blog/liam4/index.php">Blog Index</a>
+</div>
