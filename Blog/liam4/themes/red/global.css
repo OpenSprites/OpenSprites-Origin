@@ -1,13 +1,16 @@
+@import url("footer.css");
+
 #entries {
     position: absolute;
     left: 150px;
     top: 0px;
     width: calc(100% - 150px);
+    background-color: #F36;
 }
 
 .entry {
     font-family: Georgia;
-    background-color: #EAEfB1;
+    background-color: #EA8;
     padding: 10px;
     margin-bottom: 20px;
     margin-top: 20px;
@@ -21,7 +24,7 @@
 
 .entry a {
     text-decoration: none;
-    color: #00F;
+    color: #A00;
 }
 
 .entry a:hover {
@@ -34,8 +37,8 @@
 
 #sidebar {
     width: 140px;
-    background-color: black;
-    color: white;
+    background-color: #F88;
+    color: #333;
     min-height: 100%;
     position: fixed;
     left: 0;
@@ -45,7 +48,7 @@
 }
 
 #sidebar a {
-    color: white;
+    color: #333;
     text-decoration: none;
     margin-bottom: 10px;
 }

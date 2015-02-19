@@ -1,0 +1,54 @@
+@import url("footer.css");
+
+#entries {
+    position: absolute;
+    left: 150px;
+    top: 0px;
+    background-color: #8DD;
+    width: calc(100% - 150px);
+}
+
+.entry {
+    font-family: Palatino, Georgia, serif;
+    background-color: #2DD;
+    padding: 10px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+.entry pre {
+    font-family: Monaco, Courier, monospace;
+    background-color: #DDD;
+    padding: 3px;
+}
+
+.entry a {
+    text-decoration: none;
+    color: #00F;
+}
+
+.entry a:hover {
+    text-decoration: underline;
+}
+
+.entry hr {
+    border: thin outset #CCC;
+}
+
+#sidebar {
+    width: 140px;
+    background-color: #388;
+    color: #EEE;
+    min-height: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    padding: 5px;
+    font-family: monospace;
+}
+
+#sidebar a {
+    color: #DDD;
+    text-decoration: none;
+    margin-bottom: 10px;
+}
