@@ -54,6 +54,7 @@ zappy1333 is a dev on the OS team.
 * HTML
 * CSS
 * JavaScript
+* PHP
 
 ## [andrewjcole](https://github.com/andrewjcole)
 ![GitHub Logo](https://avatars1.githubusercontent.com/u/10202163?v=3&s=100)
