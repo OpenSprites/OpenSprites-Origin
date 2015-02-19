@@ -1,0 +1,10 @@
+<blog:entry>
+    <blog:header>Hello, world!</blog:header>
+    <blog:contents>This is something awesome I'm making. Meanwhile you should check out <a href="opensprites.x10.mx">OpenSprites</a>, the cool website I'm checking out.<br />
+
+    Alright, let's see if formatting works - this should be <b>bold</b>, <i>italics</i>, <code>monospaced</code>, <sup>super</sup>.<br />
+
+    <blockquote>
+        Finally, let's see how blockquotes work.
+    </blockquote></blog:contents>
+</blog:entry>
