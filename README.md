@@ -77,3 +77,11 @@ Rumanti is a dev on the OS team.
 * HTML
 * CSS
 
+## [DM5555](https://github.com/DM5555)
+[Image is too big to fit here]
+
+DM5555 is a dev on the OS team.
+* HTML
+* CSS
+* Javascript
+* PHP(If nessecary)
