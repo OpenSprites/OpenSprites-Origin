@@ -1,6 +1,11 @@
 function scheduleMessage() {
     var today=new Date()
+    var snowsrc="http://opensprites.x10.mx/live/alpha/assets/images/SnowFlake.svg"
+    var no = 10;
 
+    var dx, xp, yp;
+    var am, stx, sty;
+    var i, doc_width = 800, doc_height = 600;
     var christmas=new Date(today.getFullYear(), 12, 25)
     if (today.getMonth()==12 && today.getDate()>25)
         christmas.setFullYear(christmas.getFullYear()+1)
@@ -10,13 +15,6 @@ function scheduleMessage() {
         window.setTimeout( scheduleMessage(), 2147483647 )
     } else {
         window.setTimeout(function()
-var snowsrc="http://opensprites.x10.mx/live/alpha/assets/images/SnowFlake.svg"
-var no = 10;
-
-var dx, xp, yp;
-var am, stx, sty;
-var i, doc_width = 800, doc_height = 600;
-
 if (typeof window.innerWidth != 'undefined')
 {
    doc_width = window.innerWidth;
