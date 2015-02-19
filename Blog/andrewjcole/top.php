@@ -15,7 +15,7 @@
 <noscript>Some features of this page may not work properly without javascript...</noscript>
     <div id="header">
         <h1 class="blog" align="center">BLOG</h1>
-        <span id="return"><a id="back" href="#" style="color:white">< Return to OpenSprites</a></span>
+        <span id="return"><a id="back" href="#" style="color:white">&lt; Return to OpenSprites</a></span>
     </div>
 <div id="content" align="left">
 <table style="width:100%">

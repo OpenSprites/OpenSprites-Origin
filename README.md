@@ -78,7 +78,7 @@ Rumanti is a dev on the OS team.
 * CSS
 
 ## [DM5555](https://github.com/DM5555)
-[Image is too big to fit here]
+![Github logo](https://avatars2.githubusercontent.com/u/9368136?v=3&s=130)
 
 DM5555 is a dev on the OS team.
 * HTML
