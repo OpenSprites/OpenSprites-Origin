@@ -28,14 +28,14 @@ body {
 a.scratch{	
 	float: left;
 	display: block;
-	width: 150px;
+	width: 35px;
 	height: 35px;
-	background: url("http://score.mclub.us/os-logotype.svg") left center no-repeat;
+	background: url("assets/images/oslogo.png") left center no-repeat;
 	text-indent: -99999em;
 	padding: 0 2px;
 }
 a.scratch:hover{
-	
+	background: url("assets/images/oslogo.png") left center no-repeat;
 }
 
 .header ul,
