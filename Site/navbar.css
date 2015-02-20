@@ -1,6 +1,7 @@
 #login-popup {
 	position:absolute;
 	top: 50px;
+	right: 50px;
 	padding: 10px;
 	color: white;
 	background-color: #659593;
@@ -33,7 +34,7 @@
 
 .arrow {
 	position: absolute;
-	left: 165px;
+	left: 135px;
 	top: -10px;
 	
 	width: 0; 
