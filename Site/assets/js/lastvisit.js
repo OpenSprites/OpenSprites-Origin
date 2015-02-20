@@ -1,3 +1,4 @@
+//Uses cookies
 var days = 730; // days until cookie expires = 2 years.
 var lastvisit = new Object();
 var firstvisitmsg = "This is your first visit to this page. Welcome!";
