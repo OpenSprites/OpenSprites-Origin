@@ -84,5 +84,5 @@ Rumanti is a dev on the OS team.
 DM5555 is a dev on the OS team.
 * HTML
 * CSS
-* Javascript
-* PHP(If nessecary)
+* JavaScript
+* PHP(If necessary)
