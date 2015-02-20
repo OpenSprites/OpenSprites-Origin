@@ -15,7 +15,7 @@
 		
 		<ul class="right">
         <?php if(!isset($_SESSION['username'])) { ?>
-            <li><a href="/register">Join OpenSprites!</a>
+            <li><a href="register">Join OpenSprites!</a>
             </li>
             <li class="last" id='login'><span>Log In</span></li>
             <div id='login-popup'>
