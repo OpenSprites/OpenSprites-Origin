@@ -16,7 +16,6 @@
     <!--Imports the metadata and information that will go in the <head> of every page-->
   	<?php include '../Header.php'; ?>
   	<link rel=StyleSheet href="register.css" TYPE="text/css" media=screen>
-  	<script src="<?php echo $_SERVER['SERVER_NAME']; ?>/assets/js/jquery.capslockdetector.js"></script>
   </head>
   <body>
     <?php include '../navbar.php'; ?>
