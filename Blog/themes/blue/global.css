@@ -1,0 +1,37 @@
+@import url("footer.css");
+@import url("sidebar.css");
+
+#entries {
+    position:         absolute;
+    left:             150px;
+    top:              0px;
+    background-color: #8DD;
+    width:            calc(100% - 150px);
+}
+
+.entry {
+    font-family:      Palatino, Georgia, serif;
+    background-color: #2DD;
+    padding:          10px;
+    margin-bottom:    20px;
+    margin-top:       20px;
+}
+
+.entry pre {
+    font-family:      Monaco, Courier, monospace;
+    background-color: #DDD;
+    padding:          3px;
+}
+
+.entry a {
+    text-decoration: none;
+    color:           #00F;
+}
+
+.entry a:hover {
+    text-decoration: underline;
+}
+
+.entry hr {
+    border: thin outset #CCC;
+}

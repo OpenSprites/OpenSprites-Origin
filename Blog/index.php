@@ -1,21 +1,39 @@
+<!DOCTYPE html>
 <html>
     <head>
-        <!--Imports standard metadata-->
-        <?php echo file_get_contents('Header.php'); ?>
-        <!--Imports CSS. We could put the CSS between <style> tags later on, but for now it just keeps things more orderly-->
-        <link href='blog-style.css' rel='stylesheet' type='text/css'>
-        <!--Imports Google font-->
-        <link href='http://fonts.googleapis.com/css?family=Josefin+Sans:600|Arimo|Raleway|Noto+Sans' rel='stylesheet' type='text/css'>
-        <title>OpenSprites Blog</title>
-	</head>
-<body>
-    <div id="maintitle">
-        <center><a href="//blog.opensprites.x10.mx"><img src="ESlogo.svg"></a></center>
-        <p><a href="//opensprites.x10.mx">OpenSprites</a> - <a href="//blog.opensprites.x10.mx">Blog Home</a></p>
-    </div>
-    <div class="content">
-        <h3>Our new blog!</h3>
-        <p>Blah blah blah</p>
-    </div>
-</body>
+        <title>liam4's Blog</title>
+        <?php include("header.php"); ?>
+    </head>
+    <body>
+        <!-- This is slightly inspired by andrewjcole's blog, those who haven't should
+        check it out at blog.opensprites.x10.mx/andrewjcole/ -->
+        <?php include("includes.php"); ?>
+        <div id="entries"></div>
+        <script type="text/javascript">
+            var on_page_limit = 5;
+            var count = <?php
+                // Yeah, I'm putting PHP in a script. Woo!
+                if ($_GET['count']) {
+                    $number = $_GET['count'];
+                } else {
+                    $items = glob("entries/*.xml");
+                    while ($number < count($items)) {
+                        // Error log I was using for testing, but it's disabled at the moment since the program's working now.
+                        #error_log("Number: $number; Current: " . $items[$number] . "; First Letter: " . $items[$number][8] . "; Int Value: " . intval($items[$number][8]));
+                        if (intval($items[$number][8]) < 1) {
+                            unset($items[$number]);
+                            $number = $number - 1;
+                        }
+                        $number = $number + 1;
+                    }
+                }
+                echo $number;
+            ?>;
+            var entries = "";
+            for (var i = count; i > count - on_page_limit && i > 0; i--) {
+                entries += blog_load_html(i.toString());
+            }
+            document.getElementById("entries").innerHTML = entries;
+        </script>
+    </body>
 </html>

@@ -1,0 +1,48 @@
+<blogentry>
+    <blogheader>Hello, world!</blogheader>
+    <blogcontents>
+
+This is something awesome I'm making. It's in progress, though - for now, go check out [OpenSprites](http://opensprites.x10.mx).
+
+Basically it's a blog-type thing I still have to style and make look pretty, but considering it uses markdown and is built mostly in JavaScript, I'm pretty proud.
+
+Here's what a simple blog post would look like:
+
+    &lt;blogentry&gt;
+        &lt;blogheader&gt;Stuff&lt;/blogheader&gt;
+        &lt;blogcontents&gt;
+
+    &lt;!-- Put stuff here. --&gt;
+
+        &lt;/blogcontents&gt;
+    &lt;/blogentry&gt;
+
+That would be stored in a file called `entries/**number**.xml`, with `**number**` being the ID or number of the entry. Technically it doesn't have to be a number but using a number for the file name keeps the entires organized. This post is actually stored at [entries/1.xml](entries/1.xml).
+
+After the file is saved inside of `entries`, we need to import it. Importing is done through a JavaScript function inside a file called `blogload.js`. First you'll need to import `blogload.js`:
+
+    &lt;head&gt;
+        &lt;script src="blogload.js" type="text/javascript"&gt;&lt;/script&gt;
+    &lt;/head&gt;
+
+Then, you'll need to import the post into something. For now we'll import in to `document.getElementById("demo")`:
+
+    &lt;body&gt;
+        &lt;div id="demo"&gt;&lt;/div&gt;
+        &lt;script type="text/javascript"&gt;
+            document.getElementById("demo").innerHTML = blog_load_html("NUMBER");
+        &lt;/script&gt;
+    &lt;/body&gt;
+
+with `NUMBER` being the name / number / id of the post you posted.
+
+---
+
+And last of all, it requires the package [marked](https://github.com/chjj/marked). Just include it in your script importing area:
+
+    &lt;head&gt;
+        ...
+        &lt;script src="/node_modules/marked/lib/marked.js"&gt;&lt;/script&gt;
+    &lt;/head&gt;
+    </blogcontents>
+</blogentry>
