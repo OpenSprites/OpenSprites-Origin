@@ -16,7 +16,7 @@
         
         <div clas="container main">
             <div class="main-inner">
-                <div class="box">
+                <div class="box" style="width:80%;margin-left:auto;margin-right:auto">
                     <h1 id="opensprites-heading">Privacy Policy</h1>
                     <div class="box-content">
                         <h3>What information does the OpenSprites website collect from it&#39s visitors?</h3>
