@@ -20,7 +20,6 @@
 //   Style option:       themes/beigedark/global.css
 //   Sidebar option:     themes/sidebarleft.css
 // You can also change or make one of your own themes by going in to the themes/ folder and editing the files there.
-//END
 #
 ?>
 
