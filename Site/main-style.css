@@ -31,6 +31,7 @@ a.scratch{
 	width: 150px;
 	height: 35px;
 	background: url("http://score.mclub.us/os-logotype.svg") left center no-repeat;
+	background-size:150px 35px;
 	text-indent: -99999em;
 	padding: 0 2px;
 }
