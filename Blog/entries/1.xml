@@ -1,48 +1,15 @@
 <blogentry>
-    <blogheader>Hello, world!</blogheader>
+    <blogheader>Why use this blog?</blogheader>
     <blogcontents>
 
-This is something awesome I'm making. It's in progress, though - for now, go check out [OpenSprites](http://opensprites.x10.mx).
+Why use this blog, you might wonder. I actually have quite a few reasons:
 
-Basically it's a blog-type thing I still have to style and make look pretty, but considering it uses markdown and is built mostly in JavaScript, I'm pretty proud.
+1. It uses [Markdown](https://github.com/chjj/marked). This means that you can easily put in formatting without having to worry about any tags.
+2. It's built in PHP and JavaScript. That means you don't have to worry about setting up a database, all you'll need is an entries folder to keep your blog posts in!
+3. It's got themes. There's quite a number of themes, actually - custom colors, backgrounds or even different layouts can all be made with the (simple!) themes.
+4. It's well organized. You put your entries in the [entries](entries/index.php) folder, your themes in the [themes](themes/index.php) folder, and done! Whenever you make a new post and save it in entries, they'll appear at the [index](index.php).
 
-Here's what a simple blog post would look like:
+The only real catch is that since it's run on files put in to the entries folder, you have to update your site (or the entries folder of your site) every time you want to publish a post. It also means that since it uses PHP and JavaScript to run, with no SQL, there's no ability to get comments. Perhaps we could get e-mails such as `liam4@blog.opensprites.x10.mx` (and later `liam4@blog.opensprites.org`)?
 
-    &lt;blogentry&gt;
-        &lt;blogheader&gt;Stuff&lt;/blogheader&gt;
-        &lt;blogcontents&gt;
-
-    &lt;!-- Put stuff here. --&gt;
-
-        &lt;/blogcontents&gt;
-    &lt;/blogentry&gt;
-
-That would be stored in a file called `entries/**number**.xml`, with `**number**` being the ID or number of the entry. Technically it doesn't have to be a number but using a number for the file name keeps the entires organized. This post is actually stored at [entries/1.xml](entries/1.xml).
-
-After the file is saved inside of `entries`, we need to import it. Importing is done through a JavaScript function inside a file called `blogload.js`. First you'll need to import `blogload.js`:
-
-    &lt;head&gt;
-        &lt;script src="blogload.js" type="text/javascript"&gt;&lt;/script&gt;
-    &lt;/head&gt;
-
-Then, you'll need to import the post into something. For now we'll import in to `document.getElementById("demo")`:
-
-    &lt;body&gt;
-        &lt;div id="demo"&gt;&lt;/div&gt;
-        &lt;script type="text/javascript"&gt;
-            document.getElementById("demo").innerHTML = blog_load_html("NUMBER");
-        &lt;/script&gt;
-    &lt;/body&gt;
-
-with `NUMBER` being the name / number / id of the post you posted.
-
----
-
-And last of all, it requires the package [marked](https://github.com/chjj/marked). Just include it in your script importing area:
-
-    &lt;head&gt;
-        ...
-        &lt;script src="/node_modules/marked/lib/marked.js"&gt;&lt;/script&gt;
-    &lt;/head&gt;
     </blogcontents>
 </blogentry>
