@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>liam4's Blog | Post Overview</title>
+        <title>OpenSprites Blog | Post Overview</title>
         <link rel="stylesheet" href="blogoverview.css">
         <?php include("header.php"); ?>
     </head>

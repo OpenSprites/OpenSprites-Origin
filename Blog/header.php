@@ -20,9 +20,9 @@
 ?>
 
 <?php ### Style option. Pick one, leave the rest commented. ### ?>
-<link rel="stylesheet" href="themes/beigedark/global.css">
+<!--<link rel="stylesheet" href="themes/beigedark/global.css">-->
 <!--<link rel="stylesheet" href="themes/beigelight/global.css">-->
-<!--<link rel="stylesheet" href="themes/blue/global.css">-->
+<link rel="stylesheet" href="themes/blue/global.css">
 <!--<link rel="stylesheet" href="themes/red/global.css">-->
 
 <?php ### Side bar option. Pick one, leave the rest commented. ### ?>
