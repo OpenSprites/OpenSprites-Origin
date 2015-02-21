@@ -19,22 +19,21 @@ function blog_load(entry) {
 
 function blog_load_html(entry) {
     // Returns the HTML that would compose an entry.
-    var response = blog_load(entry);                         // Get the entry.
-    var header = $(response).find("blogheader").text();      // Get the header.
-    var $contents = $(response).find("blogcontents");        // Get the <blogcontents>.
-    var contents = "";                                       // Set the initial output contents.
+    var response = blog_load(entry);
+    var header = $(response).find("blogheader").text();
+    var $contents = $(response).find("blogcontents");
+    var contents = "";
     contents = get_contents($contents);
-    console.log(contents);
     return ""
-        +"<div class='entry'>" 
-        +"<h1 class='entry-header'>"+header+"</h1>"
+        +"<div class='entry'>"
+        +"<h1 class='entry-header'><a href='viewpost.php?post="+entry+"'>"+header+"</a></h1>"
         +"<p class='entry-contents'>"+contents+"</p>"
         +"</div>";
 }
 
 function get_contents(xml) {
+    // Remove any tags from the XML inputted and turn in to a markdown string.
     var output = "";
-    console.log(xml);
     for (var i = 0; i < xml.length; i++) {
         if (xml[i].nodeValue !== null) {
             output += xml[i].nodeValue;
@@ -44,7 +43,5 @@ function get_contents(xml) {
     }
 
     output = marked(output);
-
-    console.log(output);
     return output;
 }

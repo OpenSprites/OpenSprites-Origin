@@ -1,29 +1,30 @@
 @import url("footer.css");
+@import url("sidebar.css");
 
 #entries {
     position: absolute;
-    left: 150px;
-    top: 0px;
-    width: calc(100% - 150px);
+    left:     150px;
+    top:      0px;
+    width:    calc(100% - 150px);
 }
 
 .entry {
-    font-family: Georgia;
-    background-color: #EAEfB1;
-    padding: 10px;
-    margin-bottom: 20px;
-    margin-top: 20px;
+    font-family:      Georgia;
+    background-color: #EAEFB1;
+    padding:          10px;
+    margin-bottom:    20px;
+    margin-top:       20px;
 }
 
 .entry pre {
-    font-family: Monaco, Courier, monospace;
+    font-family:      Monaco, Courier, monospace;
     background-color: #FDFDFD;
-    padding: 3px;
+    padding:          3px;
 }
 
 .entry a {
     text-decoration: none;
-    color: #00F;
+    color:           #00F;
 }
 
 .entry a:hover {
@@ -32,22 +33,4 @@
 
 .entry hr {
     border: thin outset #CCC;
-}
-
-#sidebar {
-    width: 140px;
-    background-color: black;
-    color: white;
-    min-height: 100%;
-    position: fixed;
-    left: 0;
-    top: 0;
-    padding: 5px;
-    font-family: monospace;
-}
-
-#sidebar a {
-    color: white;
-    text-decoration: none;
-    margin-bottom: 10px;
 }

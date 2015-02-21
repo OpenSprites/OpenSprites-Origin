@@ -1,4 +1,5 @@
 @import url("footer.css");
+@import url("sidebar.css");
 
 #entries {
     position: absolute;
@@ -33,22 +34,4 @@
 
 .entry hr {
     border: thin outset #CCC;
-}
-
-#sidebar {
-    width: 140px;
-    background-color: #F88;
-    color: #333;
-    min-height: 100%;
-    position: fixed;
-    left: 0;
-    top: 0;
-    padding: 5px;
-    font-family: monospace;
-}
-
-#sidebar a {
-    color: #333;
-    text-decoration: none;
-    margin-bottom: 10px;
 }
