@@ -18,8 +18,8 @@
 	<div class="container main">
 		<div class="main-inner">
 		<h2 id="about-title">About us</h2>
-		<p>OpenSprites is a free, open-source site that allows <a href='//scratch.mit.edu'>Scratch</a> users to share their own scripts, sprites and project media.</p>
-		<p>Blah Blah Blah</p>
+            <p>OpenSprites is a free, open-source site that allows <a href='//scratch.mit.edu'>Scratch</a> users to share their own scripts, sprites and project media. The site is almost entirley open-source, meaning that you can examine, modify and share our code without running into trouble. If you'd like to take a look at our souce-code, head over to our GitHub <a href="https://github.com/OpenSprites">organisation</a>.</p>
+		<p>Statistics:</p>
 		<p>Users on OpenSprites: <?php echo "32"; ?></p>
 		<p>Total Sprites shared: <?php echo "321"; ?></p>
 		<p>Total Scripts shared: <?php echo "193"; ?></p>
