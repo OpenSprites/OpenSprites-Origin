@@ -4,7 +4,7 @@
 <meta coding="utf-8">
 <link rel="stylesheet" href="themes/global.css">
 <script src="blogload.js" type="text/javascript"></script>
-<script src="jquery-1.10.2.min.js" type="text/javascript"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 <script src="marked/marked.min.js" type="text/javascript"></script>
 
 <?php ### About you ### ?>
