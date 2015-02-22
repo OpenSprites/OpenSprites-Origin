@@ -14,7 +14,7 @@
 <html>
   <head>
     <!--Imports the metadata and information that will go in the <head> of every page-->
-  	<?php include '../Header.php'; ?>
+  	<?php include '../Header.html; ?>
   	<link rel=StyleSheet href="register.css" TYPE="text/css" media=screen>
   </head>
   <body>
