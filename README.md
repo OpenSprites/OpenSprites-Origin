@@ -23,13 +23,12 @@ Firedrake969 is one of the lead developers of OS. He is also one of the main ove
 * JavaScript
 * PHP
 
-## [GrannyCookies](https://github.com/GrannyCookies)
-![GitHub Logo](https://avatars0.githubusercontent.com/u/9429556?v=3&s=110)
+## [andrewjcole](https://github.com/andrewjcole)
+![GitHub Logo](https://avatars1.githubusercontent.com/u/10202163?v=3&s=100)
 
-GrannyCookies is one of the most active devs on the OS team.
+andrewjcole is a dev on the OS team.
 * HTML
 * CSS
-* JavaScript
 * PHP
 
 ## [109C](https://github.com/109C)
@@ -40,12 +39,14 @@ GrannyCookies is one of the most active devs on the OS team.
 * JavaScript
 * PHP
 
-## [pilppe](https://github.com/pilppe)
-![GitHub Logo](https://avatars2.githubusercontent.com/u/8099538?v=3&s=460)
+## [GrannyCookies](https://github.com/GrannyCookies)
+![GitHub Logo](https://avatars0.githubusercontent.com/u/9429556?v=3&s=110)
 
-pilppe is a dev on the OS team.
+GrannyCookies is one of the most active devs on the OS team.
 * HTML
+* CSS
 * JavaScript
+* PHP
 
 ## [zappy1333](https://github.com/zappy1333)
 ![GitHub Logo](https://avatars0.githubusercontent.com/u/10379486?v=3&s=110)
@@ -54,14 +55,6 @@ zappy1333 is a dev on the OS team.
 * HTML
 * CSS
 * JavaScript
-* PHP
-
-## [andrewjcole](https://github.com/andrewjcole)
-![GitHub Logo](https://avatars1.githubusercontent.com/u/10202163?v=3&s=100)
-
-andrewjcole is a dev on the OS team.
-* HTML
-* CSS
 * PHP
 
 ## [liam4](https://github.com/liam4)
@@ -86,3 +79,10 @@ DM5555 is a dev on the OS team.
 * CSS
 * JavaScript
 * PHP(If necessary)
+
+## [pilppe](https://github.com/pilppe)
+![GitHub Logo](https://avatars2.githubusercontent.com/u/8099538?v=3&s=460)
+
+pilppe is a dev on the OS team.
+* HTML
+* JavaScript
