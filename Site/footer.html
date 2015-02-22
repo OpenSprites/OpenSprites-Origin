@@ -11,4 +11,20 @@
         	<option>Dark</option>
    		</select>
 	</p>
+    <script type="text/javascript">
+$(function(){
+    $(window).bind("load", function () {
+        var footer = $(".footer");
+        var pos = footer.position();
+        var height = $(window).height();
+        height = height - pos.top;
+        height = height - footer.height();
+        if (height > 0) {
+            main-style.css({
+                'margin-bot': height + 'px'
+            });
+        }
+    });
+}); // end jquery
+    </script>
 </div>
