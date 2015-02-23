@@ -1,5 +1,4 @@
 <?php
-	echo 'le test';
 	require "../assets/includes/connect.php";  //Connect - includes session_start();
 	require "../assets/includes/avatar.php";
 	
