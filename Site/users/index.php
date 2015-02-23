@@ -14,10 +14,10 @@
 	$user_registered = mysqli_num_rows($check_rows) == 0;
 	*/
 	
-	if($raw_json == 'FALSE' or $raw_json == FALSE or $raw_json == file_get_contents("http://scratch.mit.edu/404")) {
+	if($raw_json == 'FALSE' or $raw_json == FALSE or $_GET['username'] == null) {
 		// user was not found, display error
 		//header('Location: /users/not_found/');
-		echo 'Username was not found.';
+		echo '<b>Username "' . $_GET['username'] . '" was not found.</b>';
 	} else {
 		// procceed
 		$user_arr = json_decode($raw_json, true);
