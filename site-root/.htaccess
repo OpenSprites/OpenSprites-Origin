@@ -2,7 +2,7 @@
 RedirectMatch 301 ^/live/alpha/(.*)$ http://dev.opensprites.x10.mx/$1
 
 # custom 404 error page
-ErrorDocument 404 /404.html
+ErrorDocument 404 http://opensprites.x10.mx/404.html
 
 # no cache
 <FilesMatch "\.(css|js|php|html)$">
@@ -27,7 +27,7 @@ php_value error_reporting -1
 #RewriteRule ^(.*)$ $1.php
 #</FilesMatch>
 
-# Allow users/username=grannycookies to load at users/grannycookies [currently disabled!]
+# Allow users/username=grannycookies to load at users/grannycookies
 RewriteEngine On
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
