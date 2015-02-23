@@ -6,7 +6,7 @@
 	$username = $_GET['username'];
 	$raw_json = file_get_contents("http://scratch.mit.edu/site-api/users/all/" . $username . "/");
 	
-	//get username from database - make sure they're registered [currently disabled!]
+	//get username from database - make sure they're registered
 	
 	$check_query = "SELECT username FROM user_data WHERE username=$username";
 	$check_res = mysqli_query($connection, $check_query);
