@@ -16,8 +16,7 @@
 	
 	if($raw_json == 'FALSE' or $raw_json == FALSE or $_GET['username'] == undefined or !$user_registered) {
 		// user was not found, display error
-		//header('Location: /users/not_found/');
-		echo '<b>Username "' . $_GET['username'] . '" was not found.</b>';
+		header("Location: /404.html");
 	} else {
 		// procceed
 		$user_arr = json_decode($raw_json, true);
