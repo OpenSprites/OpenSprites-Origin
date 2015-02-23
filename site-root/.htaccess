@@ -1,3 +1,6 @@
+# redirect live/alpha/* to dev.opensprites.x10.mx/*
+RedirectMatch 301 ^/live/alpha/(.*)$ http://dev.opensprites.x10.mx/$1
+
 # custom 404 error page
 ErrorDocument 404 /404.html
 
@@ -31,5 +34,5 @@ php_value error_reporting -1
 #RewriteRule ^/?users/(.*?)/?$ /users/?username=$1 [L]
 
 # Redirect users/username=grannycookies to users/grannycookies
-#RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /users\?username=([^\&\ ]+)
-#RewriteRule ^/?users\$ /users/%1? [L,R=301]
+RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /users\?username=([^\&\ ]+)
+RewriteRule ^/?users\$ /users/%1? [L,R=301]
