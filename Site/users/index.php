@@ -47,7 +47,7 @@
 			<div id='description'>
 				<?php
 				if(FALSE) {
-					echo 'This user is not registered on OpenSprites.'
+					echo 'This user is not registered on OpenSprites.';
 				} else {
 					echo 'blah blah blah';
 				}
