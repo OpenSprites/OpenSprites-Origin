@@ -52,14 +52,12 @@
 				}
 				?>
 			</div>
-			<?php if($user_registered) { ?>
 			<div id='follow'>
 				Follow
 			</div>
 			<div id='report'>
 				Report
 			</div>
-			<?php } ?>
 		</div>
 		<div id="user-pane-left">
 			<?php
