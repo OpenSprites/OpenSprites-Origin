@@ -11,7 +11,7 @@
 	//$check_res = mysqli_query($connection, $check_query);
 	//$check_rows = mysqli_fetch_assoc($check_res);
 	//$user_registered = mysqli_num_rows($check_rows) == 0;
-	$user_registered = false;
+	$user_registered = FALSE;
 	
 	if($raw_json == 'FALSE' or $raw_json == FALSE or $raw_json == file_get_contents("http://scratch.mit.edu/404")) {
 		// something went wrong, display error page instead
