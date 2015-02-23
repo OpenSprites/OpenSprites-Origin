@@ -28,10 +28,10 @@ php_value error_reporting -1
 #</FilesMatch>
 
 # Allow users/username=grannycookies to load at users/grannycookies [currently disabled!]
-#RewriteEngine On
-#RewriteCond %{REQUEST_FILENAME} !-f
-#RewriteCond %{REQUEST_FILENAME} !-d
-#RewriteRule ^/?users/(.*?)/?$ /users/?username=$1 [L]
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^/?users/(.*?)/?$ /users/?username=$1 [L]
 
 # Redirect users/username=grannycookies to users/grannycookies
 RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /users\?username=([^\&\ ]+)
