@@ -6,14 +6,16 @@
 	$username = mysqli_real_escape_string($connection, $_GET['username']);  //shouldn't do anything, but to be safe...
 	$raw_json = file_get_contents("http://scratch.mit.edu/site-api/users/all/" . $username . "/");
 	
-	//get username from database - make sure they're registered
+	//get username from database - make sure they're registered [if not, notify viewer]
 	$check_query = "SELECT username FROM user_data WHERE username=$username";
 	$check_res = mysqli_query($connection, $check_query);
 	$check_rows = mysqli_fetch_assoc($check_res);
+	$user_registered = mysqli_num_rows($check_rows) == 0;
 	
-	if($raw_json == 'FALSE' or $raw_json == FALSE or $raw_json == file_get_contents("http://scratch.mit.edu/404") or mysqli_num_rows($check_rows) == 0) {
-		// something went wrong, display 404 error page instead
-		header('Location: /404.html');
+	if($raw_json == 'FALSE' or $raw_json == FALSE or $raw_json == file_get_contents("http://scratch.mit.edu/404")) {
+		// something went wrong, display error page instead
+		// user is probably not found
+		header('Location: /users/not_found/');
 	} else {
 		// procceed
 		$user_arr = json_decode($raw_json, true);
@@ -42,14 +44,22 @@
 				<?php echo $username; ?>
 			</div>
 			<div id='description'>
-				blah blah blah
+				<?php
+				if($user_registered) {
+					echo 'This user is not registered on OpenSprites.'
+				} else {
+					echo 'blah blah blah';
+				}
+				?>
 			</div>
+			<?php if($user_registered) { ?>
 			<div id='follow'>
 				Follow
 			</div>
 			<div id='report'>
 				Report
 			</div>
+			<?php } ?>
 		</div>
 		<div id="user-pane-left">
 			<?php
