@@ -27,7 +27,7 @@ php_value error_reporting -1
 #RewriteRule ^(.*)$ $1.php
 #</FilesMatch>
 
-# Load users/username=grannycookies at users/grannycookies
+# Load users/username=username at users/username
 RewriteEngine On
 RewriteCond %{THE_REQUEST} ^[A-Z]{3,}\s/+users\/?username=([^\s]+) [NC]
 RewriteRule ^ /%1? [R=302,L]
