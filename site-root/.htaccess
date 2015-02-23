@@ -1,5 +1,8 @@
+# redirect live/alpha/* to dev.opensprites.x10.mx/*
+RedirectMatch 301 ^/live/alpha/(.*)$ http://dev.opensprites.x10.mx/$1
+
 # custom 404 error page
-ErrorDocument 404 /404.html
+ErrorDocument 404 http://opensprites.x10.mx/404.html
 
 # no cache
 <FilesMatch "\.(css|js|php|html)$">
@@ -10,10 +13,26 @@ Header set Pragma "no-cache"
 Header set Expires "Wed, 11 Jan 1984 05:00:00 GMT"
 </FilesMatch>
 
-# Remove .php extension
-<FilesMatch "\.(php)$">
-RewriteEngine on
+# PHP error reporting
+php_flag display_startup_errors on
+php_flag display_errors on
+php_flag html_errors on
+php_value error_reporting -1
+
+# Remove .php extension [currently disabled!]
+#<FilesMatch "\.(php)$">
+#RewriteEngine On
+#RewriteCond %{REQUEST_FILENAME} !-d
+#RewriteCond %{REQUEST_FILENAME}\.php -f
+#RewriteRule ^(.*)$ $1.php
+#</FilesMatch>
+
+# Load users/username=username at users/username
+RewriteEngine On
+RewriteCond %{THE_REQUEST} ^[A-Z]{3,}\s/+users\/?username=([^\s]+) [NC]
+RewriteRule ^ /%1? [R=302,L]
+
 RewriteCond %{REQUEST_FILENAME} !-d
-RewriteCond %{REQUEST_FILENAME}\.php -f
-RewriteRule ^(.*)$ $1.php
-</FilesMatch>
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-l
+RewriteRule ^(.+)$ /users/?username=$1 [L,QSA,NC]
