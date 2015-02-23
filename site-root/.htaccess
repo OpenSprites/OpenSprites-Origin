@@ -18,12 +18,12 @@ Header set Expires "Wed, 11 Jan 1984 05:00:00 GMT"
 #RewriteRule ^(.*)$ $1.php
 #</FilesMatch>
 
-# Allow users/username=grannycookies to load at users/grannycookies
-RewriteEngine On
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule ^/?users/(.*?)/?$ /users/?username=$1 [L]
+# Allow users/username=grannycookies to load at users/grannycookies [currently disabled!]
+#RewriteEngine On
+#RewriteCond %{REQUEST_FILENAME} !-f
+#RewriteCond %{REQUEST_FILENAME} !-d
+#RewriteRule ^/?users/(.*?)/?$ /users/?username=$1 [L]
 
 # Redirect users/username=grannycookies to users/grannycookies
-RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /users\?username=([^\&\ ]+)
-RewriteRule ^/?users\$ /users/%1? [L,R=301]
+#RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /users\?username=([^\&\ ]+)
+#RewriteRule ^/?users\$ /users/%1? [L,R=301]
