@@ -48,10 +48,11 @@ GrannyCookies is one of the most active devs on the OS team.
 * HTML
 * CSS
 * JavaScript
-* (some) PHP
+* PHP
+* .htaccess
+* Annoying Firedrake969
 
 ## [zappy1333](https://github.com/zappy1333)
-![GitHub Logo](https://avatars0.githubusercontent.com/u/10379486?v=3&s=110)
 
 zappy1333 is a dev on the OS team.
 * HTML
