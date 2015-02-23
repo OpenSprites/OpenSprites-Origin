@@ -1,5 +1,4 @@
 <?php
-  /*
   $servername = '';
   $username = '';
   $password = '';
@@ -8,4 +7,3 @@
   $connection = mysqli_connect($servername, $username, $password, $dbname);
   
   session_start();
-  */
