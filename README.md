@@ -34,7 +34,7 @@ andrewjcole is a dev on the OS team.
 * PHP
 
 ## [109C](https://github.com/109C)
-
+![GitHub Logo](https://avatars1.githubusercontent.com/u/9680886?v=3&s=400)
 109C is a dev on the OS team.
 * HTML
 * CSS
