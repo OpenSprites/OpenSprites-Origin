@@ -16,7 +16,8 @@
 	
 	if($raw_json == 'FALSE' or $raw_json == FALSE or $raw_json == file_get_contents("http://scratch.mit.edu/404")) {
 		// user was not found, display error
-		header('Location: /users/not_found/');
+		//header('Location: /users/not_found/');
+		echo 'Username was not found.';
 	} else {
 		// procceed
 		$user_arr = json_decode($raw_json, true);
