@@ -14,7 +14,7 @@
 	$user_registered = mysqli_num_rows($check_rows) == 0;
 	*/
 	
-	if($raw_json == 'FALSE' or $raw_json == FALSE or $_GET['username'] == null) {
+	if($raw_json == 'FALSE' or $raw_json == FALSE or $_GET['username'] == undefined) {
 		// user was not found, display error
 		//header('Location: /users/not_found/');
 		echo '<b>Username "' . $_GET['username'] . '" was not found.</b>';
