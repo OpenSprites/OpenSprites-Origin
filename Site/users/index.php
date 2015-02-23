@@ -11,7 +11,7 @@
 	$check_query = "SELECT username FROM user_data WHERE username=$username";
 	$check_res = mysqli_query($connection, $check_query);
 	$check_rows = mysqli_fetch_assoc($check_res);
-	$user_registered = mysqli_num_rows($check_rows) == 0;
+	$user_registered = mysqli_num_rows($check_rows) != 0;
 	
 	
 	if($raw_json == 'FALSE' or $raw_json == FALSE or $_GET['username'] == undefined or !$user_registered) {
