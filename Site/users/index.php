@@ -6,11 +6,12 @@
 	$username = mysqli_real_escape_string($connection, $_GET['username']);  //shouldn't do anything, but to be safe...
 	$raw_json = file_get_contents("http://scratch.mit.edu/site-api/users/all/" . $username . "/");
 	
-	//get username from database - make sure they're registered [if not, notify viewer]
-	$check_query = "SELECT username FROM user_data WHERE username=$username";
-	$check_res = mysqli_query($connection, $check_query);
-	$check_rows = mysqli_fetch_assoc($check_res);
-	$user_registered = mysqli_num_rows($check_rows) == 0;
+	//get username from database - make sure they're registered [currently disabled!]
+	//$check_query = "SELECT username FROM user_data WHERE username=$username";
+	//$check_res = mysqli_query($connection, $check_query);
+	//$check_rows = mysqli_fetch_assoc($check_res);
+	//$user_registered = mysqli_num_rows($check_rows) == 0;
+	$user_registered = false;
 	
 	if($raw_json == 'FALSE' or $raw_json == FALSE or $raw_json == file_get_contents("http://scratch.mit.edu/404")) {
 		// something went wrong, display error page instead
