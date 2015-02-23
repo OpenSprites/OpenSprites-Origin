@@ -29,7 +29,7 @@
 <html>
 <head>
 	<!--Imports the metadata and information that will go in the <head> of every page-->
-	<?php echo file_get_contents('../Header.php'); ?>
+	<?php echo file_get_contents('../Header.html'); ?>
 	
 	<!--Imports styling-->
 	<link href='user_style.css' rel='stylesheet' type='text/css'>
