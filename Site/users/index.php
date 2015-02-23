@@ -1,5 +1,5 @@
-TEST
 <?php
+	echo 'le test';
 	require "../assets/includes/connect.php";  //Connect - includes session_start();
 	require "../assets/includes/avatar.php";
 	
@@ -8,13 +8,15 @@ TEST
 	$raw_json = file_get_contents("http://scratch.mit.edu/site-api/users/all/" . $username . "/");
 	
 	//get username from database - make sure they're registered [currently disabled!]
-	//$check_query = "SELECT username FROM user_data WHERE username=$username";
-	//$check_res = mysqli_query($connection, $check_query);
-	//$check_rows = mysqli_fetch_assoc($check_res);
-	//$user_registered = mysqli_num_rows($check_rows) == 0;
+	/*
+	$check_query = "SELECT username FROM user_data WHERE username=$username";
+	$check_res = mysqli_query($connection, $check_query);
+	$check_rows = mysqli_fetch_assoc($check_res);
+	$user_registered = mysqli_num_rows($check_rows) == 0;
+	*/
+	
 	if($raw_json == 'FALSE' or $raw_json == FALSE or $raw_json == file_get_contents("http://scratch.mit.edu/404")) {
-		// something went wrong, display error page instead
-		// user was probably not found
+		// user was not found, display error
 		header('Location: /users/not_found/');
 	} else {
 		// procceed
