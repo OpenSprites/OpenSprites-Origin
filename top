@@ -1,0 +1,292 @@
+[33mcommit 46ba916537435f6886e68ed3ffcd208f6f5e436c[m
+Author: Firedrake969 <Firedrake969@users.noreply.github.com>
+Date:   Mon Feb 23 15:28:21 2015 -0700
+
+    Add a 0 [minor]
+
+[33mcommit b8c41c4b797d03b2d4f03b83527c4ebee6525d78[m
+Author: Firedrake969 <Firedrake969@users.noreply.github.com>
+Date:   Mon Feb 23 15:18:44 2015 -0700
+
+    oops
+
+[33mcommit 30a0217569689aa2f7ef44b0cbe4e3b6f7d07d75[m
+Author: Firedrake969 <Firedrake969@users.noreply.github.com>
+Date:   Mon Feb 23 15:18:14 2015 -0700
+
+    hehe
+
+[33mcommit ae0dc9e71b4bfe780ea5df59a6f942371ad6c71b[m
+Author: Firedrake969 <Firedrake969@users.noreply.github.com>
+Date:   Mon Feb 23 15:17:28 2015 -0700
+
+    fix
+
+[33mcommit 31568f8108cf04ad49ad171aaa7450c7661009ba[m
+Author: Alex Bates <16batesa@gmail.com>
+Date:   Mon Feb 23 20:11:45 2015 +0000
+
+    Update README.md
+
+[33mcommit c9028f598749e996978b3612efb42e27d1656693[m
+Author: Firedrake969 <Firedrake969@users.noreply.github.com>
+Date:   Mon Feb 23 13:02:56 2015 -0700
+
+    generic name
+
+[33mcommit fcd855d0d8c39c2589d860c6fea40c87c0213b6e[m
+Author: Firedrake969 <Firedrake969@users.noreply.github.com>
+Date:   Mon Feb 23 13:01:32 2015 -0700
+
+    Delete global_functions.php
+
+[33mcommit bdbddb43ed3e0db87e06e2cf59f6e939a1ee52d1[m
+Author: Firedrake969 <Firedrake969@users.noreply.github.com>
+Date:   Mon Feb 23 13:01:03 2015 -0700
+
+    fix comment [ minor ]
+
+[33mcommit 45b58c4ae1b73d1e6620d5340057821dd71aa1a3[m
+Author: Firedrake969 <Firedrake969@users.noreply.github.com>
+Date:   Mon Feb 23 12:57:53 2015 -0700
+
+    removed the if (false)
+
+[33mcommit 068c716acce4a702712f7ffd56ffc8c8e95b920e[m
+Author: Firedrake969 <Firedrake969@users.noreply.github.com>
+Date:   Mon Feb 23 12:55:05 2015 -0700
+
+    use 404 for anything not found!
+
+[33mcommit 143943a0157d40ca20f657dfdedac0901461558d[m
+Author: Firedrake969 <Firedrake969@users.noreply.github.com>
+Date:   Mon Feb 23 12:50:44 2015 -0700
+
+    fix logic
+
+[33mcommit de50d6224d2acb3099fed2dc5b00727e32ec9e02[m
+Author: Firedrake969 <Firedrake969@users.noreply.github.com>
+Date:   Mon Feb 23 12:48:34 2015 -0700
+
+    it works but doesn't have login info
+
+[33mcommit 6875915931d0d06ccde98bf9e0753b40e0790364[m
+Author: Firedrake969 <Firedrake969@users.noreply.github.com>
+Date:   Mon Feb 23 12:47:50 2015 -0700
+
+    display not found if not registered
+
+[33mcommit 9f46fa719614aa96623c73ed1e6723633d76a323[m
+Author: Alex Bates <16batesa@gmail.com>
+Date:   Mon Feb 23 19:40:48 2015 +0000
+
+    Update index.php
+
+[33mcommit b4c257332f66e4254ce1f2377840699f7661dd7b[m
+Author: Alex Bates <16batesa@gmail.com>
+Date:   Mon Feb 23 19:37:38 2015 +0000
+
+    Update .htaccess
+
+[33mcommit 7f2b86987ecdecc9bbd9c02cabf37936b5f1b025[m
+Author: Alex Bates <16batesa@gmail.com>
+Date:   Mon Feb 23 19:25:09 2015 +0000
+
+    Update .htaccess
+
+[33mcommit 42fb635a1fbe20e0d50f73b980f5d7c6c7f68f21[m
+Author: Alex Bates <16batesa@gmail.com>
+Date:   Mon Feb 23 19:23:33 2015 +0000
+
+    Update .htaccess
+
+[33mcommit 72c5f768ab562e6f4d4c996a1fd629b56c44d401[m
+Author: Alex Bates <16batesa@gmail.com>
+Date:   Mon Feb 23 19:20:53 2015 +0000
+
+    Update index.php
+
+[33mcommit d9a918816e6bea6c4217e510c82fd20a5e621163[m
+Author: Alex Bates <16batesa@gmail.com>
+Date:   Mon Feb 23 19:17:02 2015 +0000
+
+    Update index.php
+
+[33mcommit 50ca3edc3d77f13d5be553b2da28b791e44170e8[m
+Author: Alex Bates <16batesa@gmail.com>
+Date:   Mon Feb 23 19:12:18 2015 +0000
+
+    disabled connect.php as it doesn't work
+    
+    please can somebody fix this soon?
+
+[33mcommit c784c7b243449b6dd280e3a7934d9054ecb6b273[m
+Author: Alex Bates <16batesa@gmail.com>
+Date:   Mon Feb 23 19:09:54 2015 +0000
+
+    Update index.php
+
+[33mcommit 7b71e4ebd37b409d068e6cbcee4dfda7d0417f8e[m
+Author: Alex Bates <16batesa@gmail.com>
+Date:   Mon Feb 23 18:49:08 2015 +0000
+
+    Update index.php
+
+[33mcommit dcf8f0da21bc4c8df5fd019f77c866eee415f5ab[m
+Author: Alex Bates <16batesa@gmail.com>
+Date:   Mon Feb 23 18:47:14 2015 +0000
+
+    Update index.php
+
+[33mcommit 4668adf26a425a4fc5132bb01803ae3fb2d1d709[m
+Author: Alex Bates <16batesa@gmail.com>
+Date:   Mon Feb 23 18:39:15 2015 +0000
+
+    Update .htaccess
+
+[33mcommit 80f9e53b9b515dde3883506d3a2afafd67ce89ab[m
+Author: Alex Bates <16batesa@gmail.com>
+Date:   Mon Feb 23 18:36:19 2015 +0000
+
+    Update index.php
+
+[33mcommit 9d9437dda9fa2a7d295003e34d3eb7981229ab8a[m
+Author: Alex Bates <16batesa@gmail.com>
+Date:   Mon Feb 23 18:34:57 2015 +0000
+
+    Update .htaccess
+
+[33mcommit d3935038d888bd05465e899be5dc520b5d5c3135[m
+Author: Alex Bates <16batesa@gmail.com>
+Date:   Mon Feb 23 18:30:05 2015 +0000
+
+    Update index.php
+
+[33mcommit 109ae52ff49294abcfa2ebcc1ff5a216e04557b0[m
+Author: Alex Bates <16batesa@gmail.com>
+Date:   Mon Feb 23 18:29:27 2015 +0000
+
+    Update index.php
+
+[33mcommit 50441eb1586d73ee8ae10b68e64828b37c57bc87[m
+Author: Alex Bates <16batesa@gmail.com>
+Date:   Mon Feb 23 18:27:40 2015 +0000
+
+    Update index.php
+
+[33mcommit d9d0633b87dd44bba192fb4adee07a4c4a18fada[m
+Author: Alex Bates <16batesa@gmail.com>
+Date:   Mon Feb 23 18:24:29 2015 +0000
+
+    Update index.php
+
+[33mcommit 474729c11a97ebdc1755c2c38769911eedcee3e4[m
+Author: Alex Bates <16batesa@gmail.com>
+Date:   Mon Feb 23 18:22:47 2015 +0000
+
+    Update .htaccess
+
+[33mcommit 9fc5d5122b43b8078214dd32c38b7c488fac4b12[m
+Author: Alex Bates <16batesa@gmail.com>
+Date:   Mon Feb 23 18:21:41 2015 +0000
+
+    Update index.php
+
+[33mcommit e8ba60d16e41d9264cb868e40274c2c5d54ca898[m
+Author: Alex Bates <16batesa@gmail.com>
+Date:   Mon Feb 23 18:19:10 2015 +0000
+
+    Update index.php
+
+[33mcommit 8a0540d7016744bcb44ec6531b652a8e9021e5be[m
+Author: Alex Bates <16batesa@gmail.com>
+Date:   Mon Feb 23 18:17:47 2015 +0000
+
+    Update index.php
+
+[33mcommit 7eac4772fd179f87d0b27144dd088cb709ae1998[m
+Author: Alex Bates <16batesa@gmail.com>
+Date:   Mon Feb 23 18:12:11 2015 +0000
+
+    Update index.php
+
+[33mcommit 00f4d4297dbb1bb9f5b3eecdf471d0d5470372e0[m
+Author: Alex Bates <16batesa@gmail.com>
+Date:   Mon Feb 23 18:06:55 2015 +0000
+
+    Delete .htaccess
+
+[33mcommit c1784002ea08ec90972e35639068c972eb609d5e[m
+Author: Alex Bates <16batesa@gmail.com>
+Date:   Mon Feb 23 18:06:47 2015 +0000
+
+    test user test thing
+
+[33mcommit fe0cfa337af7a5eed6cbbaf0d46791228ba72cdc[m
+Author: Alex Bates <16batesa@gmail.com>
+Date:   Mon Feb 23 17:56:51 2015 +0000
+
+    Update README.md
+
+[33mcommit d353e56e84e0544ac2b5d6d5473755e7e120ec66[m
+Author: Alex Bates <16batesa@gmail.com>
+Date:   Mon Feb 23 17:55:52 2015 +0000
+
+    Update README.md
+
+[33mcommit dc603c7bbf0bc0377bfb15093da92333e880626d[m
+Author: Firedrake969 <firedrake969@users.noreply.github.com>
+Date:   Sun Feb 22 13:50:47 2015 -0700
+
+    fix small conflict...
+
+[33mcommit 7e962e9250991e1ffe25bd99b5f4d26ead92058e[m
+Author: Firedrake969 <firedrake969@users.noreply.github.com>
+Date:   Sun Feb 22 13:48:09 2015 -0700
+
+    fixed .gitignore?
+
+[33mcommit f4ea89b61fb10ab89744545129f48bbd8f73508c[m
+Author: cheeseeater <The-Cheese-Eater@users.noreply.github.com>
+Date:   Sun Feb 22 20:09:03 2015 +0000
+
+    Update README.md
+
+[33mcommit 796ba47ed46261f36c6c3c432a2a6bc5d8b769e5[m
+Author: Firedrake969 <firedrake969@users.noreply.github.com>
+Date:   Sun Feb 22 12:57:50 2015 -0700
+
+    begin registration process
+
+[33mcommit 3f4150ec29cc1c0e76f7d011aa7cc4338df4a63f[m
+Author: Firedrake969 <firedrake969@users.noreply.github.com>
+Date:   Sun Feb 22 12:38:48 2015 -0700
+
+    order of member signups
+    
+    I think I got it right.
+
+[33mcommit 020402d9e0482cbf028dedc33f668d372bde18b6[m
+Author: Firedrake969 <firedrake969@users.noreply.github.com>
+Date:   Sun Feb 22 12:33:25 2015 -0700
+
+    fixed navbar
+    
+    fixed it - did an indirect revert of pilppe's changes and it fixed the
+    navbar
+
+[33mcommit 0a0fd2afabd2ecc40b60e930a79bd8ebf0c02c06[m
+Author: Firedrake969 <firedrake969@users.noreply.github.com>
+Date:   Sun Feb 22 12:26:15 2015 -0700
+
+    fix register page
+
+[33mcommit 97c91796c5d5777b2a693e860e94ec60f586e052[m
+Author: Firedrake969 <firedrake969@users.noreply.github.com>
+Date:   Sun Feb 22 12:18:48 2015 -0700
+
+    Revert "Add tipgiver"
+    
+    This reverts commit 1ff0d2c1cdf55245371c71d645a43f5b37f20935.
+
+[33mcommit 1ff0d2c1cdf55
