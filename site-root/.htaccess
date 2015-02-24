@@ -38,6 +38,6 @@ RewriteRule ^users/([^/]+)$ /users/$1/ [R=301,L]
 # Map /user/foo/ to foo's profile
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule ^users/([^/]+)/$ users/index.php?p=$1 [QSA]
+RewriteRule ^users/([^/]+)/$ users/index.php?username=$1 [QSA]
 
 # found with http://stackoverflow.com/questions/6861469/redirect-using-username-in-url-with-htaccess
