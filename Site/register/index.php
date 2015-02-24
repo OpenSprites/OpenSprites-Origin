@@ -1,6 +1,6 @@
 <?php
 
-  session_start();
+  require '../assets/includes/connect.php';
   
   //connect to server and login check via cookie
   include '../assets/includes/login_check.php';  //to be added later!
