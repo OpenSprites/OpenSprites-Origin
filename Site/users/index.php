@@ -3,7 +3,7 @@
 	require "../assets/includes/avatar.php";
 	
 	// capitalise username correctly
-	$username = substr($_GET['username'], 10);
+	$username = $_GET['username']
 	$raw_json = file_get_contents("http://scratch.mit.edu/site-api/users/all/" . $username . "/");
 	
 	//get username from database - make sure they're registered
