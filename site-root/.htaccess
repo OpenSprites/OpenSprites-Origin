@@ -29,10 +29,15 @@ php_value error_reporting -1
 
 # Load users/username=username at users/username
 RewriteEngine On
-RewriteCond %{THE_REQUEST} ^[A-Z]{3,}\s/+users\/?username=([^\s]+) [NC]
-RewriteRule ^ /%1? [R=302,L]
 
-RewriteCond %{REQUEST_FILENAME} !-d
+# Canonicalize /user/foo to /user/foo/
 RewriteCond %{REQUEST_FILENAME} !-f
-RewriteCond %{REQUEST_FILENAME} !-l
-RewriteRule ^(.+)$ /users/?username=$1 [L,QSA,NC]
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^users/([^/]+)$ /users/$1/ [R=301,L]
+
+# Map /user/foo/ to foo's profile
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^users/([^/]+)/$ users/index.php?username=$1 [QSA]
+
+# found with http://stackoverflow.com/questions/6861469/redirect-using-username-in-url-with-htaccess
