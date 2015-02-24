@@ -24,6 +24,7 @@ Firedrake969 is one of the lead developers of OS. He is also one of the main ove
 * JavaScript
 * PHP
 * Administration
+* Annoying [GrannyCookies](https://github.com/GrannyCookies)
 
 ## [andrewjcole](https://github.com/andrewjcole)
 ![GitHub Logo](https://avatars1.githubusercontent.com/u/10202163?v=3&s=100)
@@ -50,7 +51,7 @@ GrannyCookies is one of the most active devs on the OS team.
 * JavaScript
 * PHP
 * .htaccess
-* Annoying Firedrake969
+* Annoying [Firedrake969](https://github.com/Firedrake969)
 
 ## [zappy1333](https://github.com/zappy1333)
 
