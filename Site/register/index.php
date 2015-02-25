@@ -3,7 +3,7 @@
   require '../assets/includes/connect.php';
   
   //connect to server and login check via cookie
-  include '../assets/includes/login_check.php';  //to be added later!
+  //require '../assets/includes/login_check.php';  //to be added later!
   
   if (isset($_SESSION['username'])) {
     header("Location: /");
