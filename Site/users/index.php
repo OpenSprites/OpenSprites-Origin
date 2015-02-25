@@ -72,8 +72,7 @@
 	<!-- view scratch page link :D -->
 	<script>
 	$('#follow').onclick({
-		var link = "http://scratch.mit.edu" + window.location.pathname;
-		window.open(link);
+		window.open("http://scratch.mit.edu" + window.location.pathname);
 	});
 	</script>
 	
