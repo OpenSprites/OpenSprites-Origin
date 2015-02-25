@@ -50,7 +50,7 @@
 				?>
 			</div>
 			<div id='follow'>
-				Follow
+				View Scratch Page
 			</div>
 			<div id='report'>
 				Report
@@ -68,6 +68,13 @@
 			<h1>Collections</h1>
 		</div>
 	</div>
+	
+	<!-- view scratch page link :D -->
+	<script>
+	$('#follow').onclick({
+		window.open("http://scratch.mit.edu" + window.location.pathname);
+	});
+	</script>
 	
 	<!-- footer -->
 	<?php echo file_get_contents('../footer.html'); ?>
