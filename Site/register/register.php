@@ -47,8 +47,8 @@
 			
 			//Can edit this to your preference.  Just keep the username, password, and user_key - those are the important ones!
 			$query = "
-				INSERT INTO user_data (username, password, email, user_key, date, ip, reg_key) 
-				VALUES ('$username', '$hashedPassword', '$email', '$key', CURDATE(), '" . $_SERVER['REMOTE_ADDR'] . "', '" . $_SESSION['user_code'] . "')
+				INSERT INTO user_data (username, password, email, user_key, date, ip, reg_key, is_reg) 
+				VALUES ('$username', '$hashedPassword', '$email', '$key', CURDATE(), '" . $_SERVER['REMOTE_ADDR'] . "', '" . $_SESSION['user_code'] . ", false')
 			";
 			mysqli_query($connection, $query);
 		}
