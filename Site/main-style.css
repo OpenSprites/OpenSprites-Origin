@@ -487,3 +487,15 @@ select {
 	cursor:pointer
 }
 
+/*Change text selection color*/
+/*Should work in Chrome, IE, Opera, and Safari*/
+::selection{
+	background-color: #659593;
+	color: white;
+}
+
+/*Firefox support*/
+::-moz-selection{
+	background-color: #659593;
+	color: white;
+}
