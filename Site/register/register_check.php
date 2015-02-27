@@ -23,6 +23,7 @@
 	
 	if ($is_good_reg) {
 		$query = "UPDATE user_data SET is_reg='true' WHERE username='$$username'";
+		mysqli_query($connection, $query);
 	}
 	header("Location: /");
 ?>
