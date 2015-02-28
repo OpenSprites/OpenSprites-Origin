@@ -9,6 +9,10 @@
     header("Location: /");
   }
   
+  if(isset($_GET['return'])) {
+  	$return = $_GET['return'];
+  }
+  
 ?>
 <!DOCTYPE html>
 <html>
@@ -22,6 +26,11 @@
     <div class="container main">
       <div class="main-inner">
         <h1 id="opensprites-heading">Register</h1>
+        <?php
+        if(isset($return)) {
+        	echo '<h2><b>' . $return . '</h2></b>';
+        }
+        ?>
         <p>
           <form enctype="multipart/form-data" action="register.php" method="POST">
             <div class="register" id="labels">Your Scratch Username:</div><input class="register" name="username" type="text" /><br>
