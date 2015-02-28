@@ -11,7 +11,7 @@
 	
 	$is_bot = false;
 	
-	$min_time = 1.5
+	$min_time = 1.5;
 	
 	if (empty($_POST)) {
 		$_SESSION['init_time'] = time();
