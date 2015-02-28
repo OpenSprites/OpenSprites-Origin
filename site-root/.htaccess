@@ -27,7 +27,7 @@ php_value error_reporting -1
 #RewriteRule ^(.*)$ $1.php
 #</FilesMatch>
 
-# Load users/username=username at users/username
+# Load users/?username=username at users/username
 RewriteEngine On
 
 # Canonicalize /user/foo to /user/foo/
@@ -40,4 +40,13 @@ RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule ^users/([^/]+)/$ users/index.php?username=$1 [QSA]
 
-# found with http://stackoverflow.com/questions/6861469/redirect-using-username-in-url-with-htaccess
+# Load register/?return=error at register/error
+# Canonicalize register/error to register/error/
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^users/([^/]+)$ /users/$1/ [R=301,L]
+
+# Map register/error to return $_GET['return'];
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^register/([^/]+)/$ register/index.php?return=$1 [QSA]
