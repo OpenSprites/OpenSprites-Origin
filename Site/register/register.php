@@ -51,7 +51,8 @@
 				VALUES ('$username', '$hashedPassword', '$email', '$key', CURDATE(), '" . $_SERVER['REMOTE_ADDR'] . "', '" . $_SESSION['user_code'] . ", false')
 			";
 			mysqli_query($connection, $query);
+			header("Location: /register/done");
 		}
 	}
-	header("Location: /");
+	header("Location: /register/fail");
 ?>
