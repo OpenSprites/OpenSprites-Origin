@@ -13,9 +13,7 @@
 	
 	$min_time = 1.5;
 	
-	if (empty($_POST)) {
-		$_SESSION['init_time'] = time();
-	} else {
+	if (isset($_SESSION['init_time'])) {
 		//check if enough time has passed
 		$timediff = time() - $_SESSION['init_time'];
 		if ($timediff <= $min_time) {  //time diff is too small!
@@ -48,11 +46,14 @@
 			//Can edit this to your preference.  Just keep the username, password, and user_key - those are the important ones!
 			$query = "
 				INSERT INTO user_data (username, password, email, user_key, date, ip, reg_key, is_reg) 
-				VALUES ('$username', '$hashedPassword', '$email', '$key', CURDATE(), '" . $_SERVER['REMOTE_ADDR'] . "', '" . $_SESSION['user_code'] . ", false')
+				VALUES ('$username', '$hashedPassword', '$email', '$key', CURDATE(), '" . $_SERVER['REMOTE_ADDR'] . "', '" . $_SESSION['user_code'] . ", 'false')
 			";
-			mysqli_query($connection, $query);
-			header("Location: /register/done");
+			mysqli_query($connection, $query) or die(mysqli_error($connection));
+			header("Location: /");
+		} else {
+			header("Location: /register/");
 		}
+	} else {
+		header("Location: /register/");
 	}
-	header("Location: /register/fail");
 ?>
