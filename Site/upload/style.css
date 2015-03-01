@@ -1,0 +1,11 @@
+img.method {
+    opacity: 0.5;
+    transition: opacity 250ms;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+img.method:hover {
+    opacity: 1;
+    cursor: pointer;
+}
