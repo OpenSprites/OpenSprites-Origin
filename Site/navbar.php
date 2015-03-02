@@ -9,7 +9,9 @@
             </li>
             <li><a href="">Media</a>
             </li>
-            <li class="last"><a href="http://opensprites.x10.mx/forums/">Forums</a>
+            <li class="last"><a href="http://opensprites.x10.mx/upload/">Upload</a>
+            </li>
+			<li class="last"><a href="http://opensprites.x10.mx/forums/">Forums</a>
             </li>
         </ul>
 		
