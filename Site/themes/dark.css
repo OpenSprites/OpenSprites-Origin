@@ -31,3 +31,8 @@ h1.firstHeading, h2 {
 	background-color: #151515 !important;
 	color: #E8E8E8 !important;
 }
+
+img.method {
+	margin-left: 0 !important;
+	margin-right: 0 !important;
+}
