@@ -2,3 +2,8 @@
 body {
 	background-color: rgb(40, 40, 40) !important;
 }
+
+.container.main {
+	color: white !important;
+	background-color: rgb(40, 40, 40) !important;
+}
