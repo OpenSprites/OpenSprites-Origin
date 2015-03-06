@@ -3251,10 +3251,6 @@ textarea,
   color: white !important;
 }
 
-.link-join:after {
-  content: ' The Forums';
-}
-
 #hdr-inner > ul > li > a.link-newConversation.button {
   color: black !important;
 }
