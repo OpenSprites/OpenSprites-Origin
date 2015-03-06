@@ -2997,10 +2997,6 @@ pre { line-height:1.6em; }
   color: white !important;
 }
 
-.link-join, .link-login {
-  color: white !important;
-}
-
 #hdr-inner { padding-right:580px; }
 
 #hdr h1 {
@@ -3242,6 +3238,23 @@ textarea,
 .button { background-color:#eaeaea; }
 
 /* extra stuff */
-#hdr-inner > h1 a, #hdr-inner > ul > li > a.link-newConversation.button {
+.item-copyright {
+  /* bad? */
+  display: none;
+}
+
+.postBody a {
+  color: black !important;
+}
+
+.link-join, .link-login {
+  color: white !important;
+}
+
+.link-join:after {
+  content: ' The Forums';
+}
+
+#hdr-inner > ul > li > a.link-newConversation.button {
   color: black !important;
 }
