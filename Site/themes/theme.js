@@ -25,4 +25,4 @@ $('#theme-select').val(localStorage['os-theme']);
 // set theme based on the theme selection
 var theme = $('#theme-select').val();
 $('head').append('<!-- theme = "' + theme + '" -->');
-$('head').append('<link href="' + theme + '/themes/.css" rel="stylesheet" type="text/css">');
+$('head').append('<link href="/themes/' + theme + '.css" rel="stylesheet" type="text/css">');
