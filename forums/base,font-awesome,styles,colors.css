@@ -4,7 +4,7 @@
   display:block;
 }
 
-.link-newConversation {
+.link-newConversation.button {
   color: black !important;
 }
 
