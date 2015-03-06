@@ -4,6 +4,10 @@
   display:block;
 }
 
+.link-newConversation {
+  color: black !important;
+}
+
 .clearfix:after {
   content:" ";
   display:block;
