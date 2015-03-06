@@ -12,11 +12,16 @@
    		</select>
 	</p>
     <script>
-	$(function(){
+	var footer = function() {
 		if(window.innerHeight > $('body').height()) {
 			// if browser height is greater than the body height (aka no scrollbar on the y axis)
 			$('.footer').attr('style', 'position: absolute; bottom: 0;');
+		} else {
+			$('.footer').attr('style', ' ');
 		}
-	});
+	}
+	
+	footer();
+	window.onresize = footer;
     </script>
 </div>
