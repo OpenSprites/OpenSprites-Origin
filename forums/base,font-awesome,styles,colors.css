@@ -15,7 +15,7 @@
 
 a { text-decoration:none; }
 
-a:hover { text-decoration:underline; }
+a:hover { text-decoration:underline !important; }
 
 p,
 ul,
@@ -754,8 +754,6 @@ a.channel:hover {
   white-space:normal;
 }
 
-.notificationsList li>a:hover { text-decoration:none; }
-
 .notificationsList li a .avatar {
   float:left;
   margin-left:-50px;
@@ -770,8 +768,6 @@ a.channel:hover {
 .notificationsList li.unread { background-color:#ebf5fa; }
 
 #memberContent .notificationsList li { padding:0; }
-
-#memberContent .notificationsList li a:hover { text-decoration:none; }
 
 .channel-list i {
   font-size:14px;
@@ -2883,7 +2879,6 @@ strong { font-weight:600; }
 a { text-decoration:none; }
 
 a:hover {
-  text-decoration:none;
   color:#000;
 }
 
@@ -2991,11 +2986,19 @@ pre { line-height:1.6em; }
 .menu>li { display:inline-block; }
 
 #hdr {
-  background:#fff;
+  background:#659593;
   position:fixed;
   width:100%;
   z-index:100;
   border-bottom:1px solid;
+}
+
+#hdr-inner > h1 a, #hdr-inner > ul > li > a {
+  color: white !important;
+}
+
+.link-join, .link-login {
+  color: white !important;
 }
 
 #hdr-inner { padding-right:580px; }
