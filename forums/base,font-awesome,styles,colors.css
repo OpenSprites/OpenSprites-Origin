@@ -4,10 +4,6 @@
   display:block;
 }
 
-.link-newConversation.button {
-  color: black !important;
-}
-
 .clearfix:after {
   content:" ";
   display:block;
@@ -3003,6 +2999,10 @@ pre { line-height:1.6em; }
 
 .link-join, .link-login {
   color: white !important;
+}
+
+a.link-newConversation.button {
+  color: black !important;
 }
 
 #hdr-inner { padding-right:580px; }
