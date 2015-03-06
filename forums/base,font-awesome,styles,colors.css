@@ -3242,6 +3242,6 @@ textarea,
 .button { background-color:#eaeaea; }
 
 /* extra stuff */
-a.link-newConversation.button {
+#hdr-inner > h1 a, #hdr-inner > ul > li > a.link-newConversation.button {
   color: black !important;
 }
