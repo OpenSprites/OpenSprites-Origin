@@ -1,9 +1,32 @@
 /* add !important to everything that needs to be overwritten */
 body {
-	background-color: rgb(40, 40, 40) !important;
+	background-color: #282828 !important;
 }
 
 .container.main {
 	color: white !important;
-	background-color: rgb(40, 40, 40) !important;
+	background-color: #282828 !important;
+}
+
+h1.firstHeading, h2 {
+	border-bottom: solid 1px white !important;
+}
+
+.box > h1 {
+	border-top: none !important;
+}
+
+.box {
+	background: #595959;
+	border: 1px solid #595959 !important;
+	border-top: none !important;
+}
+
+.box-content {
+	background: #282828; !important;
+}
+
+.footer {
+	background-color: #151515 !important;
+	color: #E8E8E8 !important;
 }
