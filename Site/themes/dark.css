@@ -17,13 +17,13 @@ h1.firstHeading, h2 {
 }
 
 .box {
-	background: #595959;
+	background: #595959 !important;
 	border: 1px solid #595959 !important;
 	border-top: none !important;
 }
 
 .box-content {
-	background: #282828; !important;
+	background: #282828 !important;
 }
 
 .footer {
