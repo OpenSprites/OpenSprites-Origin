@@ -24,6 +24,7 @@ h1.firstHeading, h2 {
 
 .box-content {
 	background: #282828 !important;
+	border-top: none !important;
 }
 
 .footer {
