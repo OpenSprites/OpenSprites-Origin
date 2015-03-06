@@ -3001,10 +3001,6 @@ pre { line-height:1.6em; }
   color: white !important;
 }
 
-a.link-newConversation.button {
-  color: black !important;
-}
-
 #hdr-inner { padding-right:580px; }
 
 #hdr h1 {
@@ -3244,3 +3240,8 @@ textarea,
 .tabs .pathItem.selected a:before { border-left-color:#eaeaea; }
 
 .button { background-color:#eaeaea; }
+
+/* extra stuff */
+a.link-newConversation.button {
+  color: black !important;
+}
