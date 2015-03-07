@@ -3295,3 +3295,8 @@ a.channel.channel[data-channel=general-discussion] {
 	border-color: #e000c9 !important;
 	background: #e000c9 !important;
 }
+
+.avatar {
+	border-radius: none;
+	background: !important;
+}
