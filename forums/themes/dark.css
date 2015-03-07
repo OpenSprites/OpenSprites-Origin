@@ -32,7 +32,7 @@ blockquote {
 	background-color: #171717 !important;
 }
 
-.conversationList .title a, .conversationList .unread .title a, .action .name, .action a, .action strong, .postHeader h3, .postHeader h3 a, .button, .button i, .button:hover, #hdr-inner>a, #hdr-inner>h1 a, #hdr-inner>ul>li>a, #hdr, .tabs li.selected a, .channelList .channel, #conversationTitle a, #pluginList>li, #skinList>li, #languageList>li, .memberList strong a, .scrubber li.selected>a, .scrubber li ul li.selected a, a
+.conversationList .title a, .conversationList .unread .title a, .action .name, .action a, .action strong, .postHeader h3, .postHeader h3 a, #hdr-inner>a, #hdr-inner>h1 a, #hdr-inner>ul>li>a, #hdr, .tabs li.selected a, .channelList .channel, #conversationTitle a, #pluginList>li, #skinList>li, #languageList>li, .memberList strong a, .scrubber li.selected>a, .scrubber li ul li.selected a, a
 {
 	color: white !important;	
 }
