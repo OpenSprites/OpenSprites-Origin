@@ -3266,3 +3266,7 @@ textarea,
 .postContent:before, .postContent:after {
 	border-style: none !important;
 }
+
+#hdr h1 {
+	max-width: 480px !important;
+}
