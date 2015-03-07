@@ -15,10 +15,6 @@ blockquote {
 	color: #DBDBDB !important;
 }
 
-.tabs li.selected a {
-	color: black !important;
-}
-
 .sheet, .area, .thing {
 	background: #282828 !important;
 }
@@ -37,14 +33,10 @@ blockquote {
 	color: white !important;	
 }
 
-.conversationList .col-channel a {
+.popupMenu li a, #notifications, .tabs .pathItem a:first-child, .conversationList .col-channel a, .tabs li.selected a {
 	color: black !important;
 }
 
-.tabs .pathItem a:first-child {
-	color: black !important;
-}
-
-.popupMenu li a, [class*=control-] {
-	color: black !important;
+[class*=control-] {
+	color: white !important;
 }
