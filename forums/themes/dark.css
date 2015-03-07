@@ -44,3 +44,7 @@ blockquote {
 .tabs .pathItem a:first-child {
 	color: black !important;
 }
+
+.popupMenu li a, [class*=control-] {
+	color: black !important;
+}
