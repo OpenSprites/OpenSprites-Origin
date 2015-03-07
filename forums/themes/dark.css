@@ -20,3 +20,7 @@ body {
 {
 	color: white !important;	
 }
+
+.conversationList .col-channel a {
+	color: black !important;
+}
