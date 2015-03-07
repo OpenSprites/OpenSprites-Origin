@@ -1,1 +1,1 @@
-console.log('custom.js initialised! :D');
+$('#forumTitle').before('<a id="back-to-the-main-site" style="position: absolute;" href="http://dev.opensprites.x10.mx/">Back to the main site</a>');
