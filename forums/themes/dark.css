@@ -3,6 +3,10 @@ body {
 	background-color: #282828 !important;
 }
 
+blockquote {
+	  color: #DBDBDB !important;
+}
+
 .sheet, .area, .thing {
 	background: #282828 !important;
 }
