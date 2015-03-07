@@ -3,6 +3,10 @@ body {
 	background-color: #282828 !important;
 }
 
+code {
+	background: black !important;
+}
+
 blockquote {
 	color: #DBDBDB !important;
 }
