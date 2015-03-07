@@ -7,3 +7,7 @@ body {
 	background-color: #282828 !important;
 	color: white !important;
 }
+
+a {
+	color: white;
+}
