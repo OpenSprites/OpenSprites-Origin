@@ -2,6 +2,10 @@
 	text-align: center;
 }
 
+#theme-select {
+	margin-left: 10px;
+}
+
 body {
 	font: 13px 'Open Sans', Helvetica Neue, Helvetica, sans-serif;
 	font-weight: 300;
@@ -484,7 +488,6 @@ h1 {
 .box > h1 { font-family: Helvetica Neue, Helvetica, sans-serif; }
 
 /* dropdown menus */
-
 select {
 	font-size: 12px;
 	background-color: #E3F4F2;
@@ -498,14 +501,14 @@ select {
 	cursor:pointer
 }
 
-/*Change text selection color*/
-/*Should work in Chrome, IE, Opera, and Safari*/
+/* Change text selection color */
+/* Should work in Chrome, IE, Opera, and Safari */
 ::selection{
 	background-color: #659593;
 	color: white;
 }
 
-/*Firefox support*/
+/* Firefox support */
 ::-moz-selection{
 	background-color: #659593;
 	color: white;
