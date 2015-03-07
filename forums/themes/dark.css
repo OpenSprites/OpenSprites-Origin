@@ -2,3 +2,8 @@ body {
 	display: block !important;
 	background-color: #282828 !important;
 }
+
+#body, #body-content, #ftr, #ftr-content {
+	background-color: #282828 !important;
+	color: white !important;
+}
