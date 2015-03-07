@@ -3243,11 +3243,6 @@ textarea,
 .button { background-color:#eaeaea; }
 
 /* extra stuff */
-.item-copyright {
-  /* bad? */
-  display: none;
-}
-
 .postBody a {
   color: black !important;
 }
@@ -3258,4 +3253,12 @@ textarea,
 
 #hdr-inner > ul > li > a.link-newConversation.button {
   color: black !important;
+}
+
+.postBody a {
+	color: rgb(0, 178, 255) !important;
+}
+
+.link-external .icon-external-link {
+	display: none;
 }
