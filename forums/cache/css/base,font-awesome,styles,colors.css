@@ -4,6 +4,11 @@
   display:block;
 }
 
+body {
+  /* themes */
+  display: none;
+}
+
 .clearfix:after {
   content:" ";
   display:block;
