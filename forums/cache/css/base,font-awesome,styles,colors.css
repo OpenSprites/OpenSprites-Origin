@@ -3275,17 +3275,17 @@ textarea,
 a.channel.channel[data-channel=questions-and-issues] {
 	color: white !important;
 	border-color: rgba(250, 40, 40, 1) !important;
-	background: rgba(125, 20, 20, 1) !important;
+	background: rgba(250, 40, 40, 1) !important;
 }
 
 a.channel.channel[data-channel=news-and-announcements] {
 	color: white !important;
-	border-color: rgba(40, 40, 250, 1) !important;
-	background: rgba(20, 20, 125, 1) !important;
+	border-color: rgba(0, 158, 255, 1) !important;
+	background:rgba(0, 158, 255, 1) !important;
 }
 
 a.channel.channel[data-channel=suggestions] {
 	color: white !important;
-	border-color: rgb(21, 152, 24) !important;
-	background: rgb(11, 76, 12) !important;
+	border-color: rgb(32, 189, 35) !important;
+	background: rgb(32, 189, 35) !important;
 }
