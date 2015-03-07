@@ -1,3 +1,5 @@
 # OpenSprites Forum Theme
-Direct copy of "forums/cache/css/base,font-awesome,styles,colors.css".
-If you want to update this, FTP upload the css to there.
+#base,font-awesome,styles,colors.css
+Parallel to "http://opensprites.x10.mx/forums/cache/css/base,font-awesome,styles,colors.css".
+#main.js
+Parallel to "http://opensprites.x10.mx/forums/main.js".
