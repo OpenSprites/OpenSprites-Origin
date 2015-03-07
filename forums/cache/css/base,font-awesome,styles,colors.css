@@ -3289,3 +3289,9 @@ a.channel.channel[data-channel=suggestions] {
 	border-color: rgb(32, 189, 35) !important;
 	background: rgb(32, 189, 35) !important;
 }
+
+a.channel.channel[data-channel=general-discussion] {
+	color: white !important;
+	border-color: #e000c9 !important;
+	background: #e000c9 !important;
+}
