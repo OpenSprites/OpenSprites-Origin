@@ -60,3 +60,7 @@ img.avatar {
 span.avatar {
 	background: #ededed !important;
 }
+
+.button.big {
+	color: black !important;
+}
