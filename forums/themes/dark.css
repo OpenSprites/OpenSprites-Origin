@@ -4,7 +4,11 @@ body {
 }
 
 blockquote {
-	  color: #DBDBDB !important;
+	color: #DBDBDB !important;
+}
+
+.tabs li.selected a {
+	color: black !important;
 }
 
 .sheet, .area, .thing {
