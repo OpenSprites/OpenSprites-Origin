@@ -1,4 +1,3 @@
-/* don't use this */
 body {
-  display: inline !important;
+  display: block !important;
 }
