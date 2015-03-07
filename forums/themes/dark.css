@@ -20,3 +20,7 @@ body {
 .conversationList .col-channel a {
 	color: black !important;
 }
+
+.tabs .pathItem a:first-child {
+	color: black !important;
+}
