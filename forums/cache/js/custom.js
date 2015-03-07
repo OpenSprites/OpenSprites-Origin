@@ -24,6 +24,7 @@ $('#theme-select').on('change', function() {
 // is theme defined / valid?
 var themes = ['Regular', 'Dark'];
 if(typeof localStorage['os-theme'] === 'undefined' || !themes.contains(localStorage['os-theme'])) {
+	console.log('wrong theme');
 	localStorage['os-theme'] = 'Regular';
 }
 
