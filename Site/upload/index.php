@@ -31,11 +31,11 @@
 	<?php if(!isset($_GET['method'])) { ?>
     <div class="container main" style="text-align:center;display:none;">
 		<div class="main-inner" style="padding-bottom: 50px;">
-		 <h1 style="font-size:4em;margin-top:50px;">Upload</h1>
+		<h1 style="font-size:4em;margin-top:50px;">Upload</h1>
 		<h1 style="font-size:3em;margin-top:10px;">Choose an upload method</h1>
 		<img src="fromLocal.png" class="method" onclick="selectMethod('local');"><img src="fromScratch.png" class="method" onclick="selectMethod('scratch');">
+		<div style="height:100px;width:100%;"><!-- moves navbar down --></div>
 		</div>
-		
 	</div>
 	<?php } else if($_GET['method'] == 'local') { ?>
 	
