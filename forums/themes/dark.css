@@ -8,8 +8,8 @@ body {
 	color: white !important;
 }
 
-.list>li:hover {
-	border-color: #171717;
+.channel, .list>li, .thing, .sheet, .sheet h3, .sheet .section, .sheet .buttons, input[type=text], input[type=password], input[type=number], input[type=email], textarea, .input, .tabs li.selected a, .tabs li a:hover, .tabs.big, #adminMenu li.separator {
+	border-color: #171717 !important;
 }
 
 .list>li:hover {
