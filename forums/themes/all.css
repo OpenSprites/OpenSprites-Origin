@@ -68,3 +68,7 @@ span.avatar {
 .button.big, .icon-plus:hover {
 	color: black !important;
 }
+
+blockquote {
+	  background: transparent !important;
+}
