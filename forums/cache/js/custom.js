@@ -1,11 +1,3 @@
-// helper functions
-Array.prototype.contains = function (needle) {
-	for (i in this) {
-		if (this[i] == needle) return true;
-	}
-	return false;
-}
-
 // back to the main site link on navbar
 $('#forumTitle').before('<a id="back-to-the-main-site" style="position:absolute;top:40px;color:white;" href="http://dev.opensprites.x10.mx/">Back to the main site</a>');
 $('#forumTitle').attr('style', 'padding-top:10px;padding-bottom:20px;');
@@ -23,7 +15,7 @@ $('#theme-select').on('change', function() {
 
 // is theme defined / valid?
 var themes = ['Regular', 'Dark'];
-if(typeof localStorage['os-theme'] === 'undefined' || !themes.contains(localStorage['os-theme'])) {
+if(typeof localStorage['os-theme'] === 'undefined' || themes.indexOf(localStorage['os-theme']) === -1) {
 	console.log('wrong theme');
 	localStorage['os-theme'] = 'Regular';
 }
