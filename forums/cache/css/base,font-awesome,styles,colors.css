@@ -3262,3 +3262,7 @@ textarea,
 .link-external .icon-external-link {
 	display: none;
 }
+
+.postContent:before, .postContent:after {
+	border-style: none !important;
+}
