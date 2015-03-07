@@ -52,7 +52,11 @@ a.channel.channel[data-channel=general-discussion] {
 	background: #e000c9 !important;
 }
 
-.avatar {
-	border-radius: none !important;
-	background: !important;
+img.avatar {
+	border-radius: 0 !important;
+	background: transparent !important;
+}
+
+span.avatar {
+	background: #ededed !important;
 }
