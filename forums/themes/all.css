@@ -1,4 +1,5 @@
 /* global css for ALL themes */
+/* *ahem* this is NOT bad design :P */
 .postBody a {
   color: black !important;
 }
@@ -75,4 +76,8 @@ blockquote {
 
 .channelList .channel {
 	color: black !important;
+}
+
+#conversationsFilter .channels {
+	padding-left: 94px !important;
 }
