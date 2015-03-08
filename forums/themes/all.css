@@ -114,3 +114,17 @@ blockquote {
 #backButton {
 	display: none !important;
 }
+
+.scrubberContent .popupWrapper {
+	margin-top: 40px;
+}
+
+.scrubberContent .search {
+	position: absolute;
+	right: 0;
+	transition: width 250ms;
+}
+
+.scrubberContent .search:hover, .scrubberContent .search:active {
+	width: 250px;
+}
