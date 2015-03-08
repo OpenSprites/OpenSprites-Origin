@@ -90,4 +90,10 @@ blockquote {
 	#back-to-the-main-site, #conversationsFilter .channels {
 		display: none;
 	}
+	#hdr #forumTitle {
+		line-height: 23px !important;
+		margin-left: 0 !important;
+		padding-top: 0 !important;
+		padding-bottom: 0 !important;
+	}
 }
