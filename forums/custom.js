@@ -28,3 +28,10 @@ var theme = $('#theme-select').val();
 $('head').append('<!-- theme = "' + theme + '" -->');
 $('head').append('<link href="/forums/themes/' + 'all' + '.css" rel="stylesheet" type="text/css">');
 $('head').append('<link href="/forums/themes/' + theme.toLowerCase() + '.css" rel="stylesheet" type="text/css">');
+
+// channel fixes
+$('a[class|=channel').each(function() {
+	var goto = $(this).attr('href');
+	$(this).attr('href', '');
+	$(this).on('click', 'location.href = goto;');
+});
