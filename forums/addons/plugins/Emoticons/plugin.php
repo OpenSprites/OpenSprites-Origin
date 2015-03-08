@@ -6,9 +6,9 @@ if (!defined("IN_ESOTALK")) exit;
 
 ET::$pluginInfo["Emoticons"] = array(
 	"name" => "Emoticons",
-	"description" => "Converts text emoticons to their graphical equivalent.",
+	"description" => "Converts text emoticons to their graphical equivalent. Modified by the OpenSprites team.",
 	"version" => ESOTALK_VERSION,
-	"author" => "esoTalk Team",
+	"author" => "esoTalk Team / OpenSprites Team",
 	"authorEmail" => "support@esotalk.org",
 	"authorURL" => "http://esotalk.org",
 	"license" => "GPLv2"
@@ -83,10 +83,10 @@ public function handler_format_format($sender)
 	$styles[">:["] = "background-position:0 -480px";
 	$styles["._."] = "background-position:0 -500px";
 	$styles["T_T"] = "background-position:0 -520px";
-	// $styles["XD"] = "background-position:0 -540px";
+	$styles["XD"] = "background-position:0 -540px";
 	$styles["('<"] = "background-position:0 -560px";
-	// $styles["B)"] = "background-position:0 -580px";
-	// $styles["XP"] = "background-position:0 -600px";
+	$styles["B)"] = "background-position:0 -580px";
+	$styles["XP"] = "background-position:0 -600px";
 	$styles[":S"] = "background-position:0 -620px";
 	$styles["=S"] = "background-position:0 -620px";
 	$styles[">:)"] = "background-position:0 -640px";
