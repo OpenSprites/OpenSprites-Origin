@@ -32,7 +32,7 @@ $('head').append('<link href="/forums/themes/' + theme.toLowerCase() + '.css" re
 // channel fixes
 $('a[class|=channel').each(function() {
 	var goto = $(this).attr('href');
-	$(this).attr('href', '');
+	$(this).removeAttr('href');
 	$(this).on('click', function() {
 		location.href = goto;
 	});
