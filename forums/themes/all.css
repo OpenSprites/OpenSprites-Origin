@@ -91,9 +91,12 @@ blockquote {
 		display: none;
 	}
 	#hdr #forumTitle {
-		line-height: 23px !important;
+		line-height: 44px !important;
 		margin-left: 0 !important;
 		padding-top: 0 !important;
 		padding-bottom: 0 !important;
+		font-size: 16px;
+		text-align: left;
+		width: 150px;
 	}
 }
