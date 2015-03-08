@@ -106,3 +106,7 @@ blockquote {
 		width: 150px;
 	}
 }
+
+.depth0 .radio .channel {
+	color: black !important;
+}
