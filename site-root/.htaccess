@@ -28,7 +28,9 @@ php_value error_reporting -1
 #</FilesMatch>
 
 # Load users/?username=username at users/username
+Options +FollowSymlinks -MultiViews
 RewriteEngine On
+RewriteBase /
 
 # Canonicalize /user/foo to /user/foo/
 RewriteCond %{REQUEST_FILENAME} !-f
@@ -50,3 +52,9 @@ RewriteRule ^users/([^/]+)$ /users/$1/ [R=301,L]
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule ^register/([^/]+)/$ register/index.php?return=$1 [QSA]
+
+# forums
+RewriteCond %{THE_REQUEST} /forums/index.php\?p=([^&]+) [NC]
+RewriteRule  ^forums/index.php  /forums/%1/? [R=301,L,NC]
+RewriteCond %{REQUEST_URI}  !index\.php [NC]
+RewriteRule  ^forums/([^/]+)/ /forums/index.php?p=$1 [L]
