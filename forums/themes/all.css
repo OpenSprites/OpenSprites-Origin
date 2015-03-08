@@ -12,6 +12,10 @@
   color: black !important;
 }
 
+#hdr {
+	background: #659593 !important;
+}
+
 .postBody a {
 	color: rgb(0, 178, 255) !important;
 }
@@ -80,4 +84,10 @@ blockquote {
 
 #conversationsFilter .channels {
 	padding-left: 94px !important;
+}
+
+@media only screen and (max-device-width: 480px) {
+	#back-to-the-main-site, #conversationsFilter .channels {
+		display: none;
+	}
 }
