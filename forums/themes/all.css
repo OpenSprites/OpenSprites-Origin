@@ -86,6 +86,7 @@ blockquote {
 	padding-left: 94px !important;
 }
 
+/* mobile device support */
 @media only screen and (max-device-width: 480px) {
 	#back-to-the-main-site, #conversationsFilter .channels {
 		display: none;
