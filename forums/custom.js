@@ -29,7 +29,9 @@ $('head').append('<!-- theme = "' + theme + '" -->');
 $('head').append('<link href="/forums/themes/' + 'all' + '.css" rel="stylesheet" type="text/css">');
 $('head').append('<link href="/forums/themes/' + theme.toLowerCase() + '.css" rel="stylesheet" type="text/css">');
 
-// channel fixes
+// channel stuff
+$('a[data-channel=all]').html('All Conversations');
+$('.channelListItem').remove();
 $('a[class|=channel').each(function() {
 	var goto = $(this).attr('href');
 	$(this).removeAttr('href');
