@@ -50,6 +50,7 @@ public function __construct()
 {
 	// Start a session.
 	session_name(C("esoTalk.cookie.name")."_session");
+	session_set_cookie_params(0, '/', '.opensprites.x10.mx');
 	session_start();
 	if (empty($_SESSION["token"])) $this->regenerateToken();
 
