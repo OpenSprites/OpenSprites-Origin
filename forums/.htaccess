@@ -1,0 +1,4 @@
+RewriteEngine On
+RewriteBase /
+RewriteRule ^forums/(.+) /forums/index.php?p=$1
+RewriteCond %{QUERY_STRING} ^p=(.+)
