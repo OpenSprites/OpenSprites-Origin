@@ -58,7 +58,7 @@ a.channel.channel[data-channel=general-discussion] {
 }
 
 img.avatar {
-	border-radius: 0 !important;
+	border-radius: 3px !important;
 	background: transparent !important;
 }
 
