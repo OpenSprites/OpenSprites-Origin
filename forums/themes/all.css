@@ -110,3 +110,7 @@ blockquote {
 .depth0 .radio .channel {
 	color: black !important;
 }
+
+#backButton {
+	display: none !important;
+}
