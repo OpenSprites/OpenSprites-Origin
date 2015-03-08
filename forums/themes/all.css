@@ -74,6 +74,11 @@ span.avatar {
 	color: black !important;
 }
 
+.tabs.big li.selected a, #hdr .active .popupButton, #hdr #notifications.new, .button.submit, .popupMenu li>a:hover, ul.popupMenu li.selected>a, .unreadIndicator {
+	color: white !important;
+	background-color: #659593;
+}
+
 blockquote {
 	  background: transparent !important;
 }
