@@ -45,7 +45,7 @@ Please comment this unique code <a href="http://scratch.mit.edu/projects/4760646
 // get a random code and save it in the session
 $id = uniqid();
 $_SESSION['user_code'] = $id;
-echo $id;
+echo '<i>' . $id . '</i>';
 ?>
 </div>
 
