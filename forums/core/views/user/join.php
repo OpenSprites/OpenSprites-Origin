@@ -41,7 +41,7 @@ foreach ($form->getFieldsInSection($k) as $field): ?>
 
 </ul>
 Please comment that you have requested an account <a href="http://scratch.mit.edu/projects/47606468/" style="color: rgb(0, 178, 255) !important; font-weight: 600;" target="_blank">
-into this project</a></div>
+into this project</a>. An admin will check it is there before you can login.</div>
 
 </div>
 
