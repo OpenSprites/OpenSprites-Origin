@@ -54,15 +54,21 @@ if(isset($_GET['userid'])) {
     $userid = $_SESSION["userId"];
 }
 
-$username = username_of($userid);
-$usertype = usertype_of($userid);
-$avatar = avatar_of($userid);
-$scratch_userid = scratch_userid_of($userid);
-
-echo '{"userid": "' . $userid . '", ';
-echo '"username": "' . $username . '", ';
-echo '"usertype": "' . $usertype . '", ';
-echo '"scratch_userid": "' . $scratch_userid . '", ';
-echo '"avatar": "' . $avatar . '"}';
+$raw = file_get_contents("http://opensprites.x10.mx/forums/?p=member/".$userid);
+echo $raw;
+if($raw !== 'FALSE') {
+    $username = username_of($userid);
+    $usertype = usertype_of($userid);
+    $avatar = avatar_of($userid);
+    $scratch_userid = scratch_userid_of($userid);
+    
+    echo '{"userid": "' . $userid . '", ';
+    echo '"username": "' . $username . '", ';
+    echo '"usertype": "' . $usertype . '", ';
+    echo '"scratch_userid": "' . $scratch_userid . '", ';
+    echo '"avatar": "' . $avatar . '"}';
+} else {
+    echo 'FALSE';
+}
 
 ?>
