@@ -154,7 +154,7 @@ public function action_join()
 	$form->addSection("username", T("Username"));
 	$form->addField("username", "username", function($form)
 	{
-		return $form->input("username");
+		return $form->input("username")."<br><small>Make it <b>exactly</b> the same as your Scratch account</small>";
 	},
 	function($form, $key, &$data)
 	{
@@ -165,7 +165,7 @@ public function action_join()
 	$form->addSection("email", T("Email"));
 	$form->addField("email", "email", function($form)
 	{
-		return $form->input("email")."<br><small>".T("Used to verify your account and subscribe to conversations")."</small>";
+		return $form->input("email")."<br><small>Will not be shared with anybody</small>";
 	},
 	function($form, $key, &$data)
 	{
@@ -176,7 +176,7 @@ public function action_join()
 	$form->addSection("password", T("Password"));
 	$form->addField("password", "password", function($form)
 	{
-		return $form->input("password", "password")."<br><small>".sprintf(T("Choose a secure password of at least %s characters"), C("esoTalk.minPasswordLength"))."</small>";
+		return $form->input("password", "password")."<br><small>Don't use the same one as your Scratch account</small>";
 	},
 	function($form, $key, &$data)
 	{
