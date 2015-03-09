@@ -33,8 +33,7 @@
 		<div id="user-pane-right">
 			<div id='username'>
 				<?php
-				if($username==$logged_in_user) {echo 'You';}
-					echo $username;
+				if($username==$logged_in_user) {echo 'You';} else {echo $username;}
 				?>
 			</div>
 			<div id='description'>
