@@ -4,6 +4,11 @@
 	
 	// get username
 	$raw_json = file_get_contents("../site-api/user.php?userid=" . $_GET['username']);
+	if($raw_json == FALSE) {
+		header('HTTP/1.1 404 Not Found');
+		exit;
+	}
+	
 	$username = json_decode($raw_json, true);
 	$username = $username['username'];
 ?>
