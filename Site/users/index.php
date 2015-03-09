@@ -3,7 +3,7 @@
 	require "../assets/includes/avatar.php";
 	
 	// get username
-	$raw_json = file_get_contents("/site-api/user.php?userid=" . $_GET['username']);
+	$raw_json = file_get_contents("../site-api/user.php?userid=" . $_GET['username']);
 	$username = json_decode($raw_json, true);
 	$username = $username['username'];
 ?>
