@@ -221,26 +221,11 @@ public function action_join()
 			// Create the member.
 			$model = ET::memberModel();
 			$memberId = $model->create($data);
-			
-			// Check if comment is done
-			$commenterror = true;
-			$project_comments = file_get_html('http://scratch.mit.edu/site-api/comments/project/47606468/');
-			$comments = $project_comments -> find('.comment .info');
-			foreach ($comments as $comment) {
-				$creator = $comment -> find('name .a');
-				$content = $comment -> find('.content');
-				if ($creator == $data["username"] && $content == $_SESSION['user_code']) {
-					$commenterror = false;
-					break;
-				}
-			}
 
 			// If there were validation errors, pass them to the form.
 			if ($model->errorCount()) {
 				$form->errors($model->errors());
-			} else if($commenterror) {
-				$form->errors($model->errors());
-			} else if($commenterror) {
+			} else {
 				// If we require the user to confirm their email, send them an email and show a message.
 				if (C("esoTalk.registration.requireConfirmation") == "email") {
 					$this->sendConfirmationEmail($data["email"], $data["username"], $memberId.$data["resetPassword"]);
