@@ -239,9 +239,8 @@ public function action_join()
 			if ($model->errorCount()) {
 				$form->errors($model->errors());
 			} else if($commenterror) {
-				
-			} else {
-
+				$form->errors($model->errors());
+			} else if($commenterror) {
 				// If we require the user to confirm their email, send them an email and show a message.
 				if (C("esoTalk.registration.requireConfirmation") == "email") {
 					$this->sendConfirmationEmail($data["email"], $data["username"], $memberId.$data["resetPassword"]);
