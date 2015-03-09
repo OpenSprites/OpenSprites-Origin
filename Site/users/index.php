@@ -3,15 +3,11 @@
 	require "../assets/includes/avatar.php";
 	
 	// capitalise username correctly
-	$username = $_GET['username'];
+	$raw_json = file_get_contents("/site-api/user.php?userid=" . $_GET['username']);
+	$username = json_decode($raw_json, true)['username'];
 	$raw_json = file_get_contents("http://scratch.mit.edu/site-api/users/all/" . $username . "/");
 	
-	//get username from database - make sure they're registered
-	
-	/*$check_query = "SELECT username FROM user_data WHERE username=$username";
-	$check_res = mysqli_query($connection, $check_query);
-	$check_rows = mysqli_fetch_assoc($check_res);
-	$user_registered = mysqli_num_rows($check_rows) != 0;*/
+	// make sure they're registered
 	
 	
 	if(!$raw_json || empty($_GET['username']) || !$user_registered) {
