@@ -12,6 +12,7 @@ if (!defined("IN_ESOTALK")) exit;
 
 $form = $data["form"];
 ?>
+<a name="iframe-begin"></a>
 <div id='joinSheet' class='sheet'>
 <div class='sheetContent'>
 
