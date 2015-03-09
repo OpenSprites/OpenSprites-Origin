@@ -20,7 +20,7 @@
 	<?php echo file_get_contents('../Header.html'); ?>
 	
 	<!--Imports styling-->
-	<link href='/users/user_style.css' rel='stylesheet' type='text/css'>
+	<link href='user_style.css' rel='stylesheet' type='text/css'>
 </head>
 <body>
 	<!--Imports navigation bar-->
