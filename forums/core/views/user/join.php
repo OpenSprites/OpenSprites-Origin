@@ -40,7 +40,7 @@ foreach ($form->getFieldsInSection($k) as $field): ?>
 <?php endforeach; ?>
 
 </ul>
-Please comment this unique code <a href="http://scratch.mit.edu/projects/47606468/" target="_blank">into this project</a>:
+Please comment this unique code <a href="http://scratch.mit.edu/projects/47606468/" style="color: rgb(0, 178, 255) !important; font-weight: 600;" target="_blank">into this project</a>:
 <?php
 // get a random code and save it in the session
 $id = uniqid();
