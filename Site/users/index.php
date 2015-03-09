@@ -6,13 +6,12 @@
 	error_reporting(0);
 	$raw_json = file_get_contents("http://dev.opensprites.x10.mx/site-api/user.php?userid=" . $_GET['username']);
 	if($raw_json == 'FALSE') {
-		header('HTTP/1.1 404 Not Found');
-		include 'http://opensprites.x10.mx/404.html';
-		exit;
+		$user_exist = false;
+	} else {
+		$user_exist = true;
+		$user = json_decode($raw_json, true);
+		$username = $user['username'];	
 	}
-	
-	$user = json_decode($raw_json, true);
-	$username = $user['username'];
 ?>
 <!DOCTYPE html>
 <html>
@@ -31,6 +30,7 @@
 	<?php echo "<div id='background-img'></div>" ?>
 	<div id='dark-overlay'><div id='overlay-inner'>
 		<div id="user-pane-right">
+			<?php if($user_exist) { ?>
 			<div id='username'>
 				<?php
 				if($username==$logged_in_user) {echo 'You';} else {echo $username;}
@@ -47,19 +47,28 @@
 			<div id='report'>
 				Report
 			</div>
+			<?php } else { ?>
+			<div id='username'>
+				User not found!
+			</div>
+			<?php } ?>
 		</div>
 		<div id="user-pane-left">
 			<?php
-				display_user_avatar($username, 'x100', 'client');
+				if($user_exist) {
+					display_user_avatar($username, 'x100', 'client');
+				}
 			?>
 		</div>
 	</div></div>
 
+	<?php if($user_exist) { ?>
 	<div class="container main" id="collections">
 		<div class="main-inner">
 			<h1>Collections</h1>
 		</div>
 	</div>
+	<?php } ?>
 	
 	<!-- view scratch page link :D -->
 	<script>
