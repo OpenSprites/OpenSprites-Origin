@@ -11,8 +11,8 @@
 		exit;
 	}
 	
-	$username = json_decode($raw_json, true);
-	$username = $username['username'];
+	$user = json_decode($raw_json, true);
+	$username = $user['username'];
 ?>
 <!DOCTYPE html>
 <html>
@@ -39,7 +39,7 @@
 			</div>
 			<div id='description'>
 				<?php
-					echo 'blah blah blah';
+					echo $user['usertype'];
 				?>
 			</div>
 			<div id='follow'>
