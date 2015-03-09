@@ -32,7 +32,10 @@
 	<div id='dark-overlay'><div id='overlay-inner'>
 		<div id="user-pane-right">
 			<div id='username'>
-				<?php echo $username; ?>
+				<?php
+				if($username==$logged_in_user) {echo 'You';}
+					echo $username;
+				?>
 			</div>
 			<div id='description'>
 				<?php
