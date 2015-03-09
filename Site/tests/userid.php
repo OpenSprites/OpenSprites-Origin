@@ -1,6 +1,63 @@
 <?php
 
-echo 'UserID:'
-echo $_SESSION["userId"];
+require '../assets/includes/html_dom_parser.php';
+
+session_name("OpenSprites_Forum_session");
+session_start();
+
+header('Access-Control-Allow-Origin: *');
+header("Access-Control-Allow-Headers: Origin, x-requested-with, content-type, accept");
+header('Cache-Control: no-cache, must-revalidate');
+header('Expires: Mon, 26 Jul 1997 05:00:00 GMT');
+header('Content-Type: application/json');
+
+function is_404($url) {
+    $returned = get_headers('http://opensprites.x10.mx/forums/?p=member/' . $url, 1)[0];
+    return $returned == 'HTTP/1.1 404 Not Found';
+}
+
+function username_of($id) {
+    $html = file_get_html('http://opensprites.x10.mx/forums/?p=member/' . $id);
+    return $html->find('h1#memberName', 0)->innertext;
+}
+
+function usertype_of($id) {
+    $html = file_get_html('http://opensprites.x10.mx/forums/?p=member/' . $id);
+    return $html->find('p#memberGroup', 0)->children(0)->innertext;
+}
+
+function avatar_of($id) {
+    $username_grabbed = username_of($id);
+    $raw_json = file_get_contents("http://scratch.mit.edu/site-api/users/all/" . $username_grabbed . "/");
+    $user_arr = json_decode($raw_json, true);
+    $user_avatar = $user_arr["thumbnail_url"];
+    return "http:$user_avatar";
+}
+
+function scratch_userid_of($id) {
+    $username_grabbed = username_of($id);
+    $raw_json = file_get_contents("http://scratch.mit.edu/site-api/users/all/" . $username_grabbed . "/");
+    $user_arr = json_decode($raw_json, true);
+    $user_avatar = $user_arr["user"]["pk"];
+    return $user_avatar;
+}
+
+$userid = 'false';
+if(isset($_GET['userid'])) {
+    $userid = $_GET['userid'];
+} else {
+    $userid = $_SESSION["userId"];
+}
+
+$username = username_of($userid);
+$usertype = usertype_of($userid);
+$avatar = avatar_of($userid);
+$scratch_userid = scratch_userid_of($userid);
+
+echo '{"userid": "' . $userid . '", ';
+echo '"username": "' . $username . '", ';
+echo '"usertype": "' . $usertype . '", ';
+echo '"scratch_userid": "' . $scratch_userid . '", ';
+echo '"avatar": "' . $avatar . '"}';
 
 ?>
