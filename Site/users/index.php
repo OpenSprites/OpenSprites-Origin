@@ -6,16 +6,6 @@
 	$raw_json = file_get_contents("/site-api/user.php?userid=" . $_GET['username']);
 	$username = json_decode($raw_json, true);
 	$username = $username['username'];
-	
-	if(empty($username)) {
-		// user was not found, display error
-		header("Location: /404.html");
-	} else {
-		// procceed
-		$user_arr = json_decode($raw_json, true);
-		$user = $user_arr["user"];
-		$username = $user["username"];
-	}
 ?>
 <!DOCTYPE html>
 <html>
