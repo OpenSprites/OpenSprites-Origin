@@ -7,7 +7,7 @@
 	$raw_json = file_get_contents("../site-api/user.php?userid=" . $_GET['username']);
 	if($raw_json == FALSE) {
 		header('HTTP/1.1 404 Not Found');
-		include('http://opensprites.x10.mx/404.html');
+		include 'http://opensprites.x10.mx/404.html';
 		exit;
 	}
 	
