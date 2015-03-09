@@ -1,9 +1,3 @@
 <?php
-  $servername = '';
-  $username = '';
-  $password = '';
-  $dbname = '';
-  
-  $connection = mysqli_connect($servername, $username, $password, $dbname);
-  
+  session_name("OpenSprites_Forum_session");
   session_start();
