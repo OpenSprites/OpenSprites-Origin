@@ -133,3 +133,15 @@ blockquote {
 a:hover {
 	text-decoration: none !important;
 }
+
+.menu {
+	position: absolute;
+	top: 0;
+	margin-right: 0;
+	right: 10px;
+	margin-left: 0;
+}
+
+#hdr {
+	height: 63px !important;
+}
