@@ -57,7 +57,7 @@ if(isset($_GET['userid'])) {
 error_reporting(0);
 $raw = file_get_contents("http://opensprites.x10.mx/forums/?p=member/".$userid);
 echo $raw;
-if($raw !== 'FALSE') {
+if($raw !== '') {
     $username = username_of($userid);
     $usertype = usertype_of($userid);
     $avatar = avatar_of($userid);
