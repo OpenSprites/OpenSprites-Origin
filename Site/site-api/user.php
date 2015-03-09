@@ -54,6 +54,7 @@ if(isset($_GET['userid'])) {
     $userid = $_SESSION["userId"];
 }
 
+error_reporting(0);
 $raw = file_get_contents("http://opensprites.x10.mx/forums/?p=member/".$userid);
 echo $raw;
 if($raw !== 'FALSE') {
