@@ -34,13 +34,19 @@ foreach ($form->getSections() as $k => $v): ?>
 foreach ($form->getFieldsInSection($k) as $field): ?>
 
 <?php echo $field; ?>
-
 <?php endforeach; ?>
 </div></li>
 
 <?php endforeach; ?>
 
 </ul>
+Please comment this unique code <a href="http://scratch.mit.edu/projects/47606468/" target="_blank">into this project</a>:
+<?php
+// get a random code and save it in the session
+$id = uniqid();
+$_SESSION['user_code'] = $id;
+echo $id;
+?>
 </div>
 
 </div>
