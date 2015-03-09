@@ -2,15 +2,12 @@
 	require "../assets/includes/connect.php";  //Connect - includes session_start();
 	require "../assets/includes/avatar.php";
 	
-	// capitalise username correctly
+	// get username
 	$raw_json = file_get_contents("/site-api/user.php?userid=" . $_GET['username']);
 	$username = json_decode($raw_json, true)['username'];
 	$raw_json = file_get_contents("http://scratch.mit.edu/site-api/users/all/" . $username . "/");
 	
-	// make sure they're registered
-	
-	
-	if(!$raw_json || empty($_GET['username']) || !$user_registered) {
+	if(!$raw_json || empty($_GET['username'])) {
 		// user was not found, display error
 		header("Location: /404.html");
 	} else {
