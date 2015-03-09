@@ -23,7 +23,12 @@ function username_of($id) {
 
 function usertype_of($id) {
     $html = file_get_html('http://opensprites.x10.mx/forums/?p=member/' . $id);
-    return $html->find('p#memberGroup', 0)->children(0)->innertext;
+    $r = $html->find('p#memberGroup', 0)->first_child();
+    if($r == null) {
+        $r = $html->find('p#memberGroup', 0);
+    }
+    
+    return $r->innertext;
 }
 
 function avatar_of($id) {
