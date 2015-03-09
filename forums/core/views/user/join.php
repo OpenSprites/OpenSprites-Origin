@@ -47,7 +47,6 @@ into this project</a>. An admin will check it is there before you can login.</di
 </div>
 
 <div class='buttons'>
-<small><?php printf(T("Already have an account? <a href='%s' class='link-login'>Log in!</a>"), URL("user/login")); ?></small>
 <?php
 echo $form->button("submit", T("Sign Up"), array("class" => "big submit"));
 echo $form->cancelButton();
