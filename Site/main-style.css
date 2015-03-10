@@ -16,11 +16,8 @@ body {
 	display: none;
 }
 
-html{
-	height: 100%;
-}
-body {
-	min-height: 100%;
+html, body {
+	height: 100vh;
 }
 
 .header {
