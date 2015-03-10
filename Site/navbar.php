@@ -16,7 +16,7 @@
         </ul>
 		
 		<ul class="right">
-        <?php if(!isset($_SESSION['username'])) { ?>
+        <?php if($logged_in_user == 'not logged in') { ?>
             <li><a href="register">Join OpenSprites!</a>
             </li>
             <li class="last" id='login'><span>Log In</span></li>
@@ -30,7 +30,7 @@
 			</div>
             
         <?php } else  { ?>  <!-- display login info/username/etc -->
-			<div id='login-display'>Welcome, <?= $_SESSION['username'] ?></div>
+			<div id='login-display'><?php echo $logged_in_user; ?></div>
 			<div id='login-menu'>
 				<ul>
 					<li>option1</li>
