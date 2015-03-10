@@ -17,9 +17,9 @@
 		
 		<ul class="right">
         <?php if($logged_in_user == 'not logged in') { ?>
-            <li><a href="register">Join OpenSprites!</a>
+            <li><a href="register">Sign Up</a>
             </li>
-            <li class="last" id='login' onlick="window.location = 'http://opensprites.x10.mx/forums/?p=user/login&return=' + window.location.href;"><span>Log In</span></li>
+            <li class="last" id='login' onclick="window.location = 'http://opensprites.x10.mx/forums/?p=user/login&return=' + window.location.href;"><span>Log In</span></li>
             <!--<div id='login-popup'>
             	<div class="arrow"></div>
 				<form method='POST' action='assets/includes/login.php'>
@@ -30,13 +30,8 @@
 			</div>-->
             
         <?php } else  { ?>  <!-- display login info/username/etc -->
-			<div id='login-display'><?php echo $logged_in_user; ?></div>
-			<div id='login-menu'>
-				<ul>
-					<li>option1</li>
-					<li>option2</li>
-				</ul>
-			</div>
+			<li><a href="/users/"<?php echo $logged_in_userid; ?>><?php echo $logged_in_user; ?></a></li>
+			<li class="last" onclick="window.location = 'http://opensprites.x10.mx/forums/?p=user/logout&return=' + window.location.href;"><span>Log Out</span></li>
         <?php } ?>
         </ul>
     </div>
