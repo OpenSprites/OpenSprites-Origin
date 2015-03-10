@@ -30,7 +30,7 @@
 			</div>-->
             
         <?php } else  { ?>  <!-- display login info/username/etc -->
-			<li><a href="/users/"<?php echo $logged_in_userid; ?>><?php echo $logged_in_user; ?></a></li>
+			<li><a href="/users/<?php echo $logged_in_userid . '/'; ?>"><?php echo $logged_in_user; ?></a></li>
 			<li class="last" onclick="window.location = 'http://opensprites.x10.mx/forums/?p=user/logout&return=' + window.location.href;"><span>Log Out</span></li>
         <?php } ?>
         </ul>
