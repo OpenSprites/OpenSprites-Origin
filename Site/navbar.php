@@ -28,9 +28,8 @@
 					<input type='submit' value='Log In'></input>
 				</form>
 			</div>-->
-            
         <?php } else  { ?>  <!-- display login info/username/etc -->
-			<li><a href="/users/<?php echo $logged_in_userid . '/'; ?>"><?php
+			<li><a style="padding: 0;" href="/users/<?php echo $logged_in_userid . '/'; ?>"><?php
 			
 			$raw_json = file_get_contents("http://scratch.mit.edu/site-api/users/all/" . $logged_in_user . "/");
 			$user_arr = json_decode($raw_json, true);
