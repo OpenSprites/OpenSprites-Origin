@@ -13,3 +13,11 @@
 	</p>
 </div>
 <script src="/themes/theme.js"></script>
+<script>
+	var footer = function() {
+		$('.footer').css('height', (($('.footer').position().top - $(window).height()) * -1));
+	};
+	
+	footer();
+	window.resize = footer;
+</script>
