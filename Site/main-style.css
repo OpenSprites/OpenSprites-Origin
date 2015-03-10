@@ -14,12 +14,15 @@ body {
 	
 	/* wait for theme to load before showing the body */
 	display: none;
-	
-	bottom: 0;
-	top: 0;
-	left: 0;
-	right: 0;
 }
+
+html{
+	height: 100%;
+}
+body {
+	min-height: 100%;
+}
+
 .header {
 	position: fixed;
 	top: 0;
