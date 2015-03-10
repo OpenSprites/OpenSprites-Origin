@@ -223,12 +223,10 @@ a:active {
 	padding-bottom: 1em;
 	color: #5f5f5f;
 	text-align: center;
-	margin-top: -7em;
+	margin-top: -2.1em;
 	min-height: 125px;
 	height: 125px;
 	width: 100%;
-	position: absolute;
-	bottom: 0;
 }
 .footer ul li {
 	display: inline-block;
