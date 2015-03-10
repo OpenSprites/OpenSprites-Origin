@@ -108,6 +108,10 @@ blockquote {
 		text-align: left;
 		width: 150px;
 	}
+	
+	#hdr {
+		height: 45px !important;
+	}
 }
 
 .depth0 .radio .channel {
