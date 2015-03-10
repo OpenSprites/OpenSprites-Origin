@@ -16,8 +16,9 @@
 <script>
 	var footer = function() {
 		$('.footer').css('height', (($('.footer').position().top - $(window).height()) * -1));
+		$('.footer').css('margin-top', '1.5em');
+		setTimeout(footer, 100);
 	};
 	
 	footer();
-	window.resize = footer;
 </script>
