@@ -73,23 +73,6 @@
 					</div>
 				</div>
 			</div>
-				<div id="feat-scripts">
-				<div class="box">
-					<h1>Featured Scripts</h1>
-					<div class="box-content">
-						<p>Sort by: 
-							<select id="sortby">
-								<option>Popularity (downloads)</option>
-								<option>Ratings</option>
-								<option>A-Z</option>
-								<option>Newest</option>
-								<option>Oldest</option>
-							</select>
-						</p>
-						PHP guys, get in here!
-					</div>
-				</div>
-			</div>
 		</div>
 	</div>
     <!-- <div id="teams-favorite">
