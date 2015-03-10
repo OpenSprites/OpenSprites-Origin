@@ -9,9 +9,9 @@
             </li>
             <li><a href="">Media</a>
             </li>
-            <li class="last"><a href="/upload/">Upload</a>
+            <li><a href="/upload/">Upload</a>
             </li>
-			<li class="last"><a href="http://opensprites.x10.mx/forums/">Forums</a>
+	    <li class="last"><a href="http://opensprites.x10.mx/forums/">Forums</a>
             </li>
         </ul>
 		
@@ -30,7 +30,15 @@
 			</div>-->
             
         <?php } else  { ?>  <!-- display login info/username/etc -->
-			<li><a href="/users/<?php echo $logged_in_userid . '/'; ?>"><?php echo $logged_in_user; ?></a></li>
+			<li><a href="/users/<?php echo $logged_in_userid . '/'; ?>"><?php
+			
+			$raw_json = file_get_contents("http://scratch.mit.edu/site-api/users/all/" . $logged_in_user . "/");
+			$user_arr = json_decode($raw_json, true);
+			$user_avatar = $user_arr["thumbnail_url"];
+			
+			echo "<img class='user-avatar' style='width:32px;height:32px;' src='http:$user_avatar'>" . $logged_in_user;
+			
+			?></a></li>
 			<li class="last" onclick="window.location = 'http://opensprites.x10.mx/forums/?p=user/logout&return=' + window.location.href;"><span>Log Out</span></li>
         <?php } ?>
         </ul>
