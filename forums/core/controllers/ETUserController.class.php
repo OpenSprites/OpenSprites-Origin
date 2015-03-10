@@ -119,8 +119,6 @@ public function action_login()
  */
 public function action_logout()
 {
-	if (!$this->validateToken()) return;
-	
 	ET::$session->remove("messages");
 	ET::$session->logout();
 
