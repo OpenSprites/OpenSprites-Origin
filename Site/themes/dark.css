@@ -1,7 +1,7 @@
 /* add !important to everything that needs to be overwritten */
 body {
 	background-color: #282828 !important;
-	display: block !important;
+	display: inherit !important;
 }
 
 .container.main {
