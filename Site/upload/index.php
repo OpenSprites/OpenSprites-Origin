@@ -30,7 +30,7 @@
 	<!-- Select Method -->
 	<?php if(!isset($_GET['method'])) { ?>
     <div class="container main" style="text-align:center;display:none;">
-		<div class="main-inner" style="padding-bottom: 50px;">
+		<div class="main-inner" style="">
 		<h1 style="font-size:4em;margin-top:50px;">Upload</h1>
 		<h1 style="font-size:3em;margin-top:10px;">Choose an upload method</h1>
 		<img src="fromLocal.png" class="method" onclick="selectMethod('local');"><img src="fromScratch.png" class="method" onclick="selectMethod('scratch');">
@@ -41,7 +41,7 @@
 	
 	<!-- From Local File -->
     <div class="container main" style="text-align:center;display:none;">
-		<div class="main-inner" style="padding-bottom: 50px;">
+		<div class="main-inner" style="">
 			<h1 style="font-size:4em;margin-top:50px;">Upload</h1>
 			<h1 style="font-size:3em;margin-top:10px;">Select a file</h1>
 		</div>
@@ -50,7 +50,7 @@
 	
 	<!-- From Scratch -->
 	<div class="container main" style="text-align:center;display:none;">
-		<div class="main-inner" style="padding-bottom: 50px;">
+		<div class="main-inner" style="">
 			<h1 style="font-size:4em;margin-top:50px;">Upload</h1>
 			<h1 style="font-size:3em;margin-top:10px;">Select a Scratch project</h1>
 		</div>
