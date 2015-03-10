@@ -228,6 +228,8 @@ a:active {
 	min-height: 125px;
 	height: 125px;
 	width: 100%;
+	position: absolute;
+	bottom: 0;
 }
 .footer ul li {
 	display: inline-block;
