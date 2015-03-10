@@ -2,7 +2,7 @@
   session_name("OpenSprites_Forum_session");
   session_start();
   
-  require "/assets/includes/html_dom_parser.php";
+  require "http://dev.opensprites.x10.mx/assets/includes/html_dom_parser.php";
   if(isset($_SESSION["userId"])) {
     $logged_in_userid = $_SESSION["userId"];
     $html = file_get_html('http://opensprites.x10.mx/forums/?p=member/' . $logged_in_userid);
