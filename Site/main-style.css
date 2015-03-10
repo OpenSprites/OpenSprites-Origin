@@ -14,10 +14,9 @@ body {
 	
 	/* wait for theme to load before showing the body */
 	display: none;
-}
-
-html, body {
-	height: 100vh;
+	
+	height: 100%;
+	width: 100%;
 }
 
 .header {
