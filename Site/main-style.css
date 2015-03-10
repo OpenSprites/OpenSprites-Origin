@@ -73,7 +73,6 @@ a.scratch{
 .header li a,
 .header li span {
 	display: block;
-	border-left: 1px solid #659593;
 	padding: 0px 15px;
 	line-height: 35px;
 	text-decoration: none !important;
@@ -81,9 +80,6 @@ a.scratch{
 	transition: 250ms background-color;
 }
 
-.header li.last{
-	border-right: 1px solid #659593;
-}
 .header li a,
 .header li a:active,
 .header li span{
