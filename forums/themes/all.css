@@ -1,5 +1,10 @@
 /* global css for ALL themes */
 /* *ahem* this is NOT bad design :P */
+body {
+	height: auto;
+	position: absolute;
+}
+
 .postBody a {
   color: black !important;
 }
