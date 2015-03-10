@@ -14,6 +14,9 @@ body {
 	
 	/* wait for theme to load before showing the body */
 	display: none;
+	
+	height: auto;
+	position: absolute;
 }
 .header {
 	position: fixed;
