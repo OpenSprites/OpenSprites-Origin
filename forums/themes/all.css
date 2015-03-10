@@ -14,6 +14,9 @@
 
 #hdr {
 	background: #659593 !important;
+	position: absolute;
+	top: 0;
+	height: 63px !important;
 }
 
 .postBody a {
@@ -132,8 +135,4 @@ blockquote {
 
 a:hover {
 	text-decoration: none !important;
-}
-
-#hdr {
-	height: 63px !important;
 }
