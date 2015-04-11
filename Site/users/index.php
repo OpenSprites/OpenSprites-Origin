@@ -42,7 +42,7 @@
 					echo $user['usertype'];
 				?>
 			</div>
-			<div id='follow'>
+			<div id='follow' onclick='window.location = "https://scratch.mit.edu/users/<?php echo $username; ?>";'>
 				View Scratch Page
 			</div>
 			<div id='report'>
@@ -70,13 +70,6 @@
 		</div>
 	</div>
 	<?php } ?>
-	
-	<!-- view scratch page link :D -->
-	<script>
-	$('#follow').onclick({
-		window.open("http://scratch.mit.edu" + window.location.pathname);
-	});
-	</script>
 	
 	<!-- footer -->
 	<?php echo file_get_contents('../footer.html'); ?>
