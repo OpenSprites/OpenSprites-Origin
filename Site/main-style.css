@@ -7,7 +7,7 @@
 }
 
 body {
-	font: 13px 'Open Sans', Helvetica Neue, Helvetica, sans-serif;
+	font: 13px 'Open Sans', 'Helvetica Neue', Helvetica, sans-serif;
 	font-weight: 300;
 	margin: 0;
 	background-color: white;
@@ -17,6 +17,10 @@ body {
 	
 	height: 100%;
 	width: 100%;
+}
+
+p {
+	font: 13px "helvetica neue", arial, sans-serif;
 }
 
 .header {
