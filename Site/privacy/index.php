@@ -54,7 +54,7 @@
             
             <p>To store information about account authentication, we use 'cookies'. Cookies are short pieces of text which are stored on your computer by your browser. Cookies make sure we can store your logged-in state between page navigations.</p>
             
-            <p style='font-size: 0.8em;'>Privacy policy revision one. Originally written by cheeseeater on 08/02/2015. Most recent edits by cheeseeater on 09/02/2015 This policy is subject to change without prior notice.</p>
+            <p style='font-size: 0.8em;padding-bottom:20px'>Privacy policy revision one. Originally written by cheeseeater on 08/02/2015. Most recent edits by cheeseeater on 09/02/2015 This policy is subject to change without prior notice.</p>
         </div>
     </div>
     
