@@ -674,4 +674,3 @@ var color=$("#"+id+" input").val();var farb=$.farbtastic(picker,handler).setColo
 window.onload = function() {
   $.getScript('/forums/custom.js');  
 }
-}
