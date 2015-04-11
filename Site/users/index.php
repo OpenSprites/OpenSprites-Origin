@@ -4,9 +4,10 @@
 	
 	// get username
 	error_reporting(0);
-	$raw_json = file_get_contents("http://dev.opensprites.x10.mx/site-api/user.php?userid=" . $_GET['username']);
+	$raw_json = file_get_contents("http://dev.opensprites.gwiddle.co.uk/site-api/user.php?userid=" . $_GET['username']);
 	if($raw_json == 'FALSE') {
 		$user_exist = false;
+		header('Location: /404');
 	} else {
 		$user_exist = true;
 		$user = json_decode($raw_json, true);
@@ -20,7 +21,7 @@
 	<?php echo file_get_contents('../Header.html'); ?>
 	
 	<!--Imports styling-->
-	<link href='http://dev.opensprites.x10.mx/users/user_style.css' rel='stylesheet' type='text/css'>
+	<link href='http://dev.opensprites.gwiddle.co.uk/users/user_style.css' rel='stylesheet' type='text/css'>
 </head>
 <body>
 	<!--Imports navigation bar-->
