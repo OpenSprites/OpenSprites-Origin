@@ -541,10 +541,10 @@ li > a {
 /* Welcome Box Button */
 .welcome-btn:link {
     color: #659593;
-    background-color:white;
-    padding:5px;
-    border-radius:10px;-webkit-border-radius:10px;-moz-border-radius:10px;
-    text-decoration:none;
+    background-color: #FFF;
+    padding: 5px;
+    border-radius: 10px;-webkit-border-radius:10px;-moz-border-radius:10px;
+    text-decoration: none;
 }
 
 a:visited {
@@ -557,5 +557,6 @@ a:visited {
 }
 
 .welcome-btn:active {
-    color: #659593;
+    color: #FFF;
+    background-color:#B87600;
 }
