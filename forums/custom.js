@@ -1,5 +1,5 @@
 // back to the main site link on navbar
-$('#forumTitle').before('<a id="back-to-the-main-site" style="position:absolute;top:40px;color:white;" href="http://dev.opensprites.x10.mx/">Back to the main site</a>');
+$('#forumTitle').before('<a id="back-to-the-main-site" style="position:absolute;top:40px;color:white;" href="http://dev.opensprites.gwiddle.co.uk/">Back to the main site</a>');
 $('#forumTitle').attr('style', 'padding-top:10px;padding-bottom:20px;');
 
 // themes
