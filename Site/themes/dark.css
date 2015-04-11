@@ -40,10 +40,10 @@ select {
 
 /* For welcome box... */
 #cats {
-	-webkit-filter: brightness(0%); !important
-	-moz-filter: brightness(0%); !important
-	-o-filter: brightness(0%); !important
-	filter: brightness(0%); !important
+	-webkit-filter: brightness(60%); !important
+	-moz-filter: brightness(60%); !important
+	-o-filter: brightness(60%); !important
+	filter: brightness(60%); !important
 }
 
 .welcome-btn:link {
