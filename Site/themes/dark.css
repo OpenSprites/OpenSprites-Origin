@@ -32,3 +32,8 @@ h1.firstHeading, h2 {
 	background-color: #151515 !important;
 	color: #E8E8E8 !important;
 }
+
+select {
+  background-color: black; !important
+  color: grey; !important
+}
