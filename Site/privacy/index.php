@@ -48,13 +48,13 @@
             
             <p>When you upload media to our website, we will keep related information about the media [NOTE: EXPAND THIS]</p>
             
-            <h3>What information does OpenSprites place on its visitor’s computer systems?</h3>
+            <h3>What information does OpenSprites place on its visitor's computer systems?</h3>
             
             <h5>Cookies (short pieces of text which are stored on a user's computer by their browser)</h5>
             
             <p>To store information about account authentication, we use 'cookies'. Cookies are short pieces of text which are stored on your computer by your browser. Cookies make sure we can store your logged-in state between page navigations.</p>
             
-            <p>Privacy policy revision one. Originally written by cheeseeater on 08/02/2015. Most recent edits by cheeseeater on 09/02/2015 This policy is subject to change without prior notice.</p>
+            <p style='font-size: 0.8em;'>Privacy policy revision one. Originally written by cheeseeater on 08/02/2015. Most recent edits by cheeseeater on 09/02/2015 This policy is subject to change without prior notice.</p>
         </div>
     </div>
     
