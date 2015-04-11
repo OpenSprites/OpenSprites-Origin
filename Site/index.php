@@ -17,7 +17,22 @@
     <!-- Main wrapper -->
     <div class="container main">
         <div class="main-inner">
-            <h1 id="opensprites-heading">OpenSprites - Share Sprites, Scripts, and More!</h1>
+        <!-- Info for new visistors. Sorry about using tables. I might fix later. -->
+            <div class="welcome">
+                <table>
+                 <tr>
+                 <td width="260">
+                  <img src="http://tinyurl.com/k9bxcpy" width="200" height="100" id="cats">
+                 </td>
+                 <td valign="top">
+                  <h2 class="welcome-title">Share your Scratch resources with the world!</h2>
+                  <p class="welcome-text">OpenSprites allows users to share their sprites, scripts, costumes and other Scratch-related resources for others to easily download and use.</p>
+                  <a href="#" class="welcome-btn">Create an Account</a>
+                 </td>
+                 </tr>
+                </table>
+        </div>
+
             <div id="about">
                 <h2>Welcome!</h2>
                 <p>Welcome to OpenSprites, the free, open-source site that allows <a href='//scratch.mit.edu'>Scratch</a> users to share their own scripts, sprites and project media!</p>
