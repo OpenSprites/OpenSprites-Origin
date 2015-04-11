@@ -34,6 +34,23 @@ h1.firstHeading, h2 {
 }
 
 select {
-  background-color: black; !important
-  color: grey; !important
+	background-color: black; !important
+	color: grey; !important
+}
+
+/* For welcome box... */
+#cats {
+	-webkit-filter: brightness(0%); !important
+	-moz-filter: brightness(0%); !important
+	-o-filter: brightness(0%); !important
+	filter: brightness(0%); !important
+}
+
+.welcome-btn:link {
+	color: grey; !important
+	background-color: black; !important
+}
+
+.welcome {
+	background-color: #595959; !important
 }
