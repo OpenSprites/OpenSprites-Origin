@@ -34,23 +34,23 @@ h1.firstHeading, h2 {
 }
 
 select {
-	background-color: black; !important
-	color: grey; !important
+	background-color: black !important;
+	color: grey !important;
 }
 
 /* For welcome box... */
 #cats {
-	-webkit-filter: brightness(60%); !important
-	-moz-filter: brightness(60%); !important
-	-o-filter: brightness(60%); !important
-	filter: brightness(60%); !important
+	-webkit-filter: brightness(60%) !important;
+	-moz-filter: brightness(60%) !important;
+	-o-filter: brightness(60%) !important;
+	filter: brightness(60%) !important;
 }
 
 .welcome-btn:link {
-	color: grey; !important
-	background-color: black; !important
+	color: grey !important;
+	background-color: black !important;
 }
 
 .welcome {
-	background-color: #595959; !important
+	background-color: #595959 !important;
 }
