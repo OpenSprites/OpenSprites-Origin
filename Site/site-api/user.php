@@ -12,17 +12,17 @@ header('Expires: Mon, 26 Jul 1997 05:00:00 GMT');
 header('Content-Type: application/json');
 
 function is_404($url) {
-    $returned = get_headers('http://opensprites.x10.mx/forums/?p=member/' . $url, 1)[0];
+    $returned = get_headers('http://opensprites.gwiddle.co.uk/forums/?p=member/' . $url, 1)[0];
     return $returned == 'HTTP/1.1 404 Not Found';
 }
 
 function username_of($id) {
-    $html = file_get_html('http://opensprites.x10.mx/forums/?p=member/' . $id);
+    $html = file_get_html('http://opensprites.gwiddle.co.uk/forums/?p=member/' . $id);
     return $html->find('h1#memberName', 0)->innertext;
 }
 
 function usertype_of($id) {
-    $html = file_get_html('http://opensprites.x10.mx/forums/?p=member/' . $id);
+    $html = file_get_html('http://opensprites.gwiddle.co.uk/forums/?p=member/' . $id);
     $r = $html->find('p#memberGroup', 0)->first_child();
     if($r == null) {
         $r = $html->find('p#memberGroup', 0);
@@ -55,7 +55,7 @@ if(isset($_GET['userid'])) {
 }
 
 error_reporting(0);
-$raw = file_get_contents("http://opensprites.x10.mx/forums/?p=member/".$userid);
+$raw = file_get_contents("http://opensprites.gwiddle.co.uk/forums/?p=member/".$userid);
 if($raw === FALSE) {
     echo 'FALSE';
 } else {
