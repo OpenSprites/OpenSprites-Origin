@@ -511,3 +511,7 @@ select {
 	background-color: #659593;
 	color: white;
 }
+
+li > a {
+	font-weight: normal;
+}
