@@ -19,10 +19,6 @@ body {
 	width: 100%;
 }
 
-p {
-	font: 13px "helvetica neue", arial, sans-serif;
-}
-
 .header {
 	position: fixed;
 	top: 0;
