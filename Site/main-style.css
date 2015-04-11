@@ -1,3 +1,7 @@
+:focus {
+	outline: none;	
+}
+
 #opensprites-heading {
 	text-align: center;
 }
