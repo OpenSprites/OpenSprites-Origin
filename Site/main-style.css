@@ -547,12 +547,12 @@ li > a {
     text-decoration:none;
 }
 
-.welcome-btn:visited {
-    color: white;
-}
+a:visited {
+    color: #659593;
+}  
 
 .welcome-btn:hover {
-    color: white;
+    color: #FFF;
     background-color: orange;
 }
 
