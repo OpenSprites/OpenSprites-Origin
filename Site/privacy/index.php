@@ -6,6 +6,21 @@
 <head>
     <!--Imports the metadata and information that will go in the <head> of every page-->
     <?php include '../Header.html'; ?>
+    <style>
+    h5 {
+        font-size: 1.1em;
+        margin-top: -10px;
+        font-weight: normal;
+        margin-bottom: 0;
+    }
+    
+    h3 {
+        font-size: 1.5em;
+        /* margin-top: -10px; */
+        font-weight: normal;
+        margin-bottom: 8px;
+    }
+    </style>
 </head>
 <body>
     <!--Imports site-wide main styling-->
