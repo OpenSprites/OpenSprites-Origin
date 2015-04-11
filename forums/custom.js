@@ -26,8 +26,8 @@ $('#theme-select').val(localStorage['os-theme']);
 // set theme based on the theme selection
 var theme = $('#theme-select').val();
 $('head').append('<!-- theme = "' + theme + '" -->');
-$('head').append('<link href="/forums/themes/' + 'all' + '.css" rel="stylesheet" type="text/css">');
-$('head').append('<link href="/forums/themes/' + theme.toLowerCase() + '.css" rel="stylesheet" type="text/css">');
+$('head').append('<link href="/forums/themes/' + 'all' + '.css' + '?_=' + (new Date()).toISOString() + '" rel="stylesheet" type="text/css">');
+$('head').append('<link href="/forums/themes/' + theme.toLowerCase() + '.css' + '?_=' + (new Date()).toISOString() + '" rel="stylesheet" type="text/css">');
 
 // channel stuff
 $('a[data-channel=all]').html('All Conversations');
