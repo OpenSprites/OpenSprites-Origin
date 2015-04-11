@@ -541,6 +541,10 @@ li > a {
     color:white;
 }
 
+a:visited {
+    color: #659593;
+}
+
 /* buttons */
 .btn {
     color: #659593;
@@ -550,15 +554,27 @@ li > a {
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
     text-decoration: none;
-    transition: 200ms background-color;
+    transition: 200ms all;
 }
 
 .btn:hover {
     color: #FFF !important;
-    background-color: orange !important;
+    background-color: #fc9c35 !important;
     text-decoration: none !important;
 }
 
-a:visited {
-    color: #659593;
-}  
+.btn.red:hover {
+    background-color: #fe3e34 !important;
+}
+
+.btn.blue:hover {
+    background-color: #35a6fc !important;
+}
+
+.btn.green:hover {
+    background-color: #1bd61e !important;
+}
+
+.btn.yellow:hover {
+    background-color: #f4ca1f !important;
+}
