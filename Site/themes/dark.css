@@ -38,7 +38,6 @@ select {
 	color: grey !important;
 }
 
-/* For welcome box... */
 #cats {
 	-webkit-filter: brightness(0%) !important;
 	-moz-filter: brightness(0%) !important;
@@ -46,7 +45,7 @@ select {
 	filter: brightness(0%) !important;
 }
 
-.welcome-btn {
+.btn {
 	color: grey !important;
 	background-color: black !important;
 }
