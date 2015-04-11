@@ -555,4 +555,5 @@ a:visited {
 .welcome-btn:hover {
     color: #FFF !important;
     background-color: orange !important;
+    text-decoration: none !important;
 }
