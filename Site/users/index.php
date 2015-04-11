@@ -4,7 +4,7 @@
 	
 	// get username
 	error_reporting(0);
-	$raw_json = file_get_contents("http://dev.opensprites.gwiddle.co.uk/site-api/user.php?userid=" . $_GET['username']);
+	$raw_json = file_get_contents("http://dev.opensprites.gwiddle.co.uk/site-api/user.php?userid=" . $_GET['id']);
 	if($raw_json == 'FALSE') {
 		$user_exist = false;
 		header('Location: /404');
