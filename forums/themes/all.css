@@ -3,8 +3,8 @@
   color: black !important;
 }
 
-#hdr {
-	color: white !important;
+#hdr, #hdr-inner > ul > li > a, #hdr-inner {
+  color: white !important;
 }
 
 .link-join, .link-login {
@@ -65,8 +65,8 @@ a.channel.channel[data-channel=general-discussion] {
 
 a.channel.channel[data-channel=development] {
 	color: white !important;
-	border-color: #e000c9 !important;
-	background: #e000c9 !important;
+	border-color: #1aa0db !important;
+	background: #1aa0db !important;
 }
 
 .channel-all, .channelListItem {
