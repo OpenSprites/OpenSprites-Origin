@@ -7,7 +7,7 @@
   display: none !important;
 }
 
-#hdr, #hdr-inner > ul > li > a, #hdr-inner {
+#hdr, #hdr-inner > ul > li > a, #hdr-inner, #forumTitle {
   color: white !important;
 }
 
