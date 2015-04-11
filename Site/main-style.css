@@ -515,3 +515,47 @@ select {
 li > a {
 	font-weight: normal;
 }
+
+/* Welcome Box */
+.welcome {
+    background-color:#659593;
+    padding:10px;
+    border-radius:20px;
+    -moz-border-radius:20px;
+    -webkit-border-radius:20px;
+}
+
+#cats {
+    padding:20px;
+}
+
+.welcome-title {
+    border-bottom: 0px;
+    color:white;
+}
+
+.welcome-text {
+    color:white;
+}
+
+/* Welcome Box Button */
+.welcome-btn:link {
+    color: #659593;
+    background-color:white;
+    padding:5px;
+    border-radius:10px;-webkit-border-radius:10px;-moz-border-radius:10px;
+    text-decoration:none;
+}
+
+.welcome-btn:visited {
+    color: white;
+}
+
+.welcome-btn:hover {
+    color: white;
+    background-color: orange;
+}
+
+.welcome-btn:active {
+    color: #659593;
+}
