@@ -3,6 +3,10 @@
   color: black !important;
 }
 
+#loading {
+  display: none !important;
+}
+
 #hdr, #hdr-inner > ul > li > a, #hdr-inner {
   color: white !important;
 }
