@@ -1,3 +1,7 @@
+<script>
+	var loggedInUser = <?php echo json_encode($logged_in_user); ?>;
+	var loggedInUserId = <?php echo json_encode($logged_in_userid); ?>;
+</script>
 <div class="header">
     <div class="container">	
     <a class="scratch" href="/"></a>
@@ -20,14 +24,6 @@
             <li><a href="register">Sign Up</a>
             </li>
             <li class="last" id='login' onclick="window.location = 'http://opensprites.gwiddle.co.uk/forums/?p=user/login&return=' + window.location.href;"><span>Log In</span></li>
-            <!--<div id='login-popup'>
-            	<div class="arrow"></div>
-				<form method='POST' action='assets/includes/login.php'>
-					<span>Username</span><br><input type='text' name='username'></input>
-					<span>Password</span><br><input type='password' name='password'></input>
-					<input type='submit' value='Log In'></input>
-				</form>
-			</div>-->
         <?php } else  { ?>  <!-- display login info/username/etc -->
 			<li><a style="padding: 0;" href="/users/<?php echo $logged_in_userid . '/'; ?>"><?php
 			
