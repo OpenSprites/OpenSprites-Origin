@@ -11,7 +11,7 @@
             </li>
             <li><a href="/upload/">Upload</a>
             </li>
-	    <li class="last"><a href="http://opensprites.x10.mx/forums/">Forums</a>
+	    <li class="last"><a href="http://opensprites.gwiddle.co.uk/forums/">Forums</a>
             </li>
         </ul>
 		
@@ -19,7 +19,7 @@
         <?php if($logged_in_user == 'not logged in') { ?>
             <li><a href="register">Sign Up</a>
             </li>
-            <li class="last" id='login' onclick="window.location = 'http://opensprites.x10.mx/forums/?p=user/login&return=' + window.location.href;"><span>Log In</span></li>
+            <li class="last" id='login' onclick="window.location = 'http://opensprites.gwiddle.co.uk/forums/?p=user/login&return=' + window.location.href;"><span>Log In</span></li>
             <!--<div id='login-popup'>
             	<div class="arrow"></div>
 				<form method='POST' action='assets/includes/login.php'>
