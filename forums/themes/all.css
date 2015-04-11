@@ -1,7 +1,10 @@
 /* global css for ALL themes */
-/* *ahem* this is NOT bad design :P */
 .postBody a {
   color: black !important;
+}
+
+#hdr {
+	color: white !important;
 }
 
 .link-join, .link-login {
@@ -42,7 +45,7 @@ a.channel.channel[data-channel=questions-and-issues] {
 	background: rgba(250, 40, 40, 1) !important;
 }
 
-a.channel.channel[data-channel=news-and-announcements] {
+a.channel.channel[data-channel=announcements] {
 	color: white !important;
 	border-color: rgba(0, 158, 255, 1) !important;
 	background:rgba(0, 158, 255, 1) !important;
@@ -58,6 +61,16 @@ a.channel.channel[data-channel=general-discussion] {
 	color: white !important;
 	border-color: #e000c9 !important;
 	background: #e000c9 !important;
+}
+
+a.channel.channel[data-channel=development] {
+	color: white !important;
+	border-color: #e000c9 !important;
+	background: #e000c9 !important;
+}
+
+.channel-all, .channelListItem {
+	display: none !important;
 }
 
 img.avatar {
