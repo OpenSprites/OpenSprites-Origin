@@ -1,18 +1,18 @@
 <?php
-    require "assets/includes/connect.php";  //Connect - includes session_start();
+    require "../assets/includes/connect.php";  //Connect - includes session_start();
 ?>
 <!DOCTYPE html>
 <html>
 <head>
     <!--Imports the metadata and information that will go in the <head> of every page-->
-    <?php include 'Header.html'; ?>
+    <?php include '../Header.html'; ?>
 </head>
 <body>
     <!--Imports site-wide main styling-->
-    <link href='main-style.css' rel='stylesheet' type='text/css'>
+    <link href='../main-style.css' rel='stylesheet' type='text/css'>
     
     <!--Imports navigation bar-->
-    <?php include "navbar.php"; ?>
+    <?php include "../navbar.php"; ?>
     
     <!-- Main wrapper -->
     <div class="container main">
@@ -44,6 +44,6 @@
     </div>
     
     <!-- footer -->
-    <?php echo file_get_contents('footer.html'); ?>
+    <?php echo file_get_contents('../footer.html'); ?>
 </body>
 </html>
