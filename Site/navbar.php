@@ -37,7 +37,7 @@
 			$pt2 = '<span style="margin-top: -41px;margin-left: 15px;">' . $logged_in_user . '</span>';
 			echo "<img class='user-avatar' style='width: 24px;height: 24px;margin-top: 5px;border-radius: 6px;margin-right: 5px;' src='http:$user_avatar'>" . $pt2;
 			?></a></li>
-			<li class="last" onclick="window.location = 'http://opensprites.x10.mx/forums/?p=user/logout&return=' + window.location.href;"><span>Log Out</span></li>
+			<li class="last" onclick="window.location = 'http://opensprites.gwiddle.co.uk/forums/?p=user/logout&return=' + window.location.href;"><span>Log Out</span></li>
         <?php } ?>
         </ul>
     </div>
