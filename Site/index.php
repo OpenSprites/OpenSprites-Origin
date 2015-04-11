@@ -22,7 +22,7 @@
                 <table>
                  <tr>
                  <td width="260">
-                  <img src="http://tinyurl.com/k9bxcpy" width="200" height="100" id="cats">
+                  <img src="/assets/images/sharingcats.png" width="200" height="100" id="cats">
                  </td>
                  <td valign="top">
                   <h2 class="welcome-title">Share your Scratch resources with the world!</h2>
