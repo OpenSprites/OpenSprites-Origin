@@ -4,15 +4,17 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <!--Imports the metadata and information that will go in the <head> of every page-->
-    <?php include 'Header.html'; ?>
+    <?php /* Imports the metadata and information that will go in the <head> of every page */
+        include 'Header.html';
+    ?>
 </head>
 <body>
     <!--Imports site-wide main styling-->
     <link href='main-style.css' rel='stylesheet' type='text/css'>
     
-    <!--Imports navigation bar-->
-    <?php include "navbar.php"; ?>
+    <?php /* imports the navigation bar */
+        require "navbar.php";
+    ?>
     
     <!-- Main wrapper -->
     <div class="container main">
@@ -26,7 +28,8 @@
         </div>
     </div>
     
-    <!-- footer -->
-    <?php require 'footer.html'; ?>
+    <?php /* footer */
+        require 'footer.html';
+    ?>
 </body>
 </html>
