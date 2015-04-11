@@ -27,6 +27,6 @@
     </div>
     
     <!-- footer -->
-    <?php echo file_get_contents('footer.html'); ?>
+    <?php require 'footer.html'; ?>
 </body>
 </html>
