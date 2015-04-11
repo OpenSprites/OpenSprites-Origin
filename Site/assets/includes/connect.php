@@ -7,7 +7,7 @@
   
   if(isset($_SESSION["userId"])) {
     $logged_in_userid = $_SESSION["userId"];
-    $html = file_get_html('http://opensprites.x10.mx/forums/?p=member/' . $logged_in_userid);
+    $html = file_get_html('http://opensprites.gwiddle.co.uk/forums/?p=member/' . $logged_in_userid);
     $logged_in_user = $html->find('h1#memberName', 0)->innertext;
   } else {
     $logged_in_userid = 'not logged in';
