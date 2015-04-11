@@ -69,8 +69,8 @@ a.channel.channel[data-channel=general-discussion] {
 
 a.channel.channel[data-channel=development] {
 	color: white !important;
-	border-color: #1aa0db !important;
-	background: #1aa0db !important;
+	border-color: #DB631A !important;
+	background: #DB631A !important;
 }
 
 .channel-all, .channelListItem {
