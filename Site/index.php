@@ -27,7 +27,7 @@
                  <td valign="top">
                   <h2 class="welcome-title">Share your Scratch resources with the world!</h2>
                   <p class="welcome-text">OpenSprites allows users to share their sprites, scripts, costumes and other Scratch-related resources for others to easily download and use.</p>
-                  <a href="#" class="welcome-btn">Create an Account</a>
+                  <a href="register" class="btn">Create an Account</a>
                  </td>
                  </tr>
                 </table>
