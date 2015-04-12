@@ -33,15 +33,31 @@ function usertype_of($id) {
 
 function avatar_of($id) {
     $username_grabbed = username_of($id);
-    $raw_json = file_get_contents("http://scratch.mit.edu/site-api/users/all/" . $username_grabbed . "/");
+    $raw_json = file_get_contents("https://scratch.mit.edu/site-api/users/all/" . $username_grabbed . "/");
     $user_arr = json_decode($raw_json, true);
     $user_avatar = $user_arr["thumbnail_url"];
     return "http:$user_avatar";
+    
+    $html = file_get_html('http://opensprites.gwiddle.co.uk/forums/?p=member/' . $id);
+    $r = $html->find('#memberProfile', 0)->first_child()->src;
+    
+    // temporary
+    echo '<script>console.log("' . $r . '");</script>';
+    
+    if($r == null) {
+        $username_grabbed = username_of($id);
+        $raw_json = file_get_contents("https://scratch.mit.edu/site-api/users/all/" . $username_grabbed . "/");
+        $user_arr = json_decode($raw_json, true);
+        $user_avatar = $user_arr["thumbnail_url"];
+        return "http:$user_avatar";
+    }
+    
+    return $r;
 }
 
 function scratch_userid_of($id) {
     $username_grabbed = username_of($id);
-    $raw_json = file_get_contents("http://scratch.mit.edu/site-api/users/all/" . $username_grabbed . "/");
+    $raw_json = file_get_contents("https://scratch.mit.edu/site-api/users/all/" . $username_grabbed . "/");
     $user_arr = json_decode($raw_json, true);
     $user_avatar = $user_arr["user"]["pk"];
     return $user_avatar;
@@ -64,10 +80,10 @@ if($raw === FALSE) {
     $avatar = avatar_of($userid);
     $scratch_userid = scratch_userid_of($userid);
     
-    echo '{"userid": "' . $userid . '", ';
+    echo '{"userid": ' . $userid . ', ';
     echo '"username": "' . $username . '", ';
     echo '"usertype": "' . $usertype . '", ';
-    echo '"scratch_userid": "' . $scratch_userid . '", ';
+    echo '"scratch_userid": ' . $scratch_userid . ', ';
     echo '"avatar": "' . $avatar . '"}';
 }
 
