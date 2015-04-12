@@ -17,7 +17,7 @@
     <!-- Main wrapper -->
     <div class="container main">
         <div class="main-inner">
-            <iframe src='http://opensprites.gwiddle.co.uk/forums/?p=user/login&return=http://dev.opensprites.gwiddle.co.uk/'></iframe>
+            <iframe scrolling="no" src="http://opensprites.gwiddle.co.uk/forums/?p=user/login&return=http://dev.opensprites.gwiddle.co.uk/&iframe=true" style="width: 100%; height: 360px;overflow: hidden;border: none;"></iframe>
         </div>
     </div>
     
