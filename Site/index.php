@@ -17,7 +17,9 @@
     <!-- Main wrapper -->
     <div class="container main">
         <div class="main-inner">
-        <!-- Info for new visistors. Sorry about using tables. I might fix later. -->
+        
+        <?php if($logged_in_user == 'not logged in') { ?>
+        <!-- Info for new visistors. -->
             <div class="welcome">
                 <table>
                  <tr>
@@ -32,6 +34,7 @@
                  </tr>
                 </table>
         </div>
+        <?php } ?>
 
             <div id="about">
                 <h2>Welcome!</h2>
