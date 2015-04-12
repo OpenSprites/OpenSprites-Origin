@@ -25,7 +25,7 @@
             </li>
             <li class="last" id='login' onclick="window.location = 'http://opensprites.gwiddle.co.uk/forums/?p=user/login&return=' + window.location.href;"><span>Log In</span></li>
         <?php } else  { ?>  <!-- display login info/username/etc -->
-		<li><a style="padding: 0;" href="/users/<?php echo $logged_in_userid . '/'; ?>"><?php echo $logged_in_user; ?></li>
+		<li><a style="padding: 0;" href="/users/<?php echo $logged_in_userid . '/'; ?>"><?php echo $logged_in_user; ?></a></li>
 		<li class="last" onclick="window.location = 'http://dev.opensprites.gwiddle.co.uk/logout.php?return=/';"><span>Log Out</span></li>
         <?php } ?>
         </ul>
