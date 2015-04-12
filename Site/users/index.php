@@ -7,7 +7,8 @@
 	$raw_json = file_get_contents("http://dev.opensprites.gwiddle.co.uk/site-api/user.php?userid=" . $_GET['id']);
 	if($raw_json == 'FALSE') {
 		$user_exist = false;
-		header('Location: /404');
+		header('HTTP/1.1 404 Not Found');
+		exit();
 	} else {
 		$user_exist = true;
 		$user = json_decode($raw_json, true);
