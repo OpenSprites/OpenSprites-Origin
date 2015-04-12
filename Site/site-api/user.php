@@ -32,9 +32,8 @@ function usertype_of($id) {
 }
 
 function avatar_of($id) {
-    if(get_headers('http://opensprites.gwiddle.co.uk/uploads/avatars/' . $id)[0] == 'HTTP/1.1 404 Not Found') {
-        return 'http://opensprites.gwiddle.co.uk/uploads/avatars/' . $id;
-    } else {
+    
+    if(get_headers('http://opensprites.gwiddle.co.uk/uploads/avatars/' . $id . '.png')[0] == 'HTTP/1.1 404 Not Found') {
         $username_grabbed = username_of($id);
         $raw_json = file_get_contents("https://scratch.mit.edu/site-api/users/all/" . $username_grabbed . "/");
         $user_arr = json_decode($raw_json, true);
@@ -42,7 +41,9 @@ function avatar_of($id) {
         return "http:$user_avatar";
         
         $html = file_get_html('http://opensprites.gwiddle.co.uk/forums/?p=member/' . $id);
-        $r = $html->find('#memberProfile', 0)->first_child()->src;
+        return $html->find('#memberProfile', 0)->first_child()->src;
+    } else {
+        return 'http://opensprites.gwiddle.co.uk/uploads/avatars/' . $id . '.png';
     }
 }
 
