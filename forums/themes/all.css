@@ -3,6 +3,10 @@
   color: black !important;
 }
 
+.sheetOverlay {
+	background: none !important;
+}
+
 #loading {
   display: none !important;
 }
