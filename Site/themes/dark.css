@@ -4,6 +4,10 @@ body {
 	display: inherit !important;
 }
 
+.themebg {
+	background-color: #282828;
+}
+
 .container.main {
 	color: white !important;
 	background-color: #282828 !important;
