@@ -21,7 +21,7 @@
 		
 	<ul class="right">
         <?php if($logged_in_user == 'not logged in') { ?>
-            <li><a href="register">Sign Up</a>
+            <li><a href="/register/">Sign Up</a>
             </li>
             <li class="last" id='login' onclick="window.location = '/login/';"><span>Log In</span></li>
         <?php } else  { ?>  <!-- display login info/username/etc -->
