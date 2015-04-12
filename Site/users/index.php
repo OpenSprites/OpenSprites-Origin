@@ -8,7 +8,8 @@
 	if($raw_json == 'FALSE') {
 		$user_exist = false;
 		header('HTTP/1.1 404 Not Found');
-		exit();
+		include('/404.php');
+		die();
 	} else {
 		$user_exist = true;
 		$user = json_decode($raw_json, true);
