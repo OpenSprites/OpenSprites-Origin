@@ -1,3 +1,7 @@
 body {
   display: inherit !important;
 }
+
+.themebg {
+	background-color: white;
+}
