@@ -32,27 +32,18 @@ function usertype_of($id) {
 }
 
 function avatar_of($id) {
-    $username_grabbed = username_of($id);
-    $raw_json = file_get_contents("https://scratch.mit.edu/site-api/users/all/" . $username_grabbed . "/");
-    $user_arr = json_decode($raw_json, true);
-    $user_avatar = $user_arr["thumbnail_url"];
-    return "http:$user_avatar";
-    
-    $html = file_get_html('http://opensprites.gwiddle.co.uk/forums/?p=member/' . $id);
-    $r = $html->find('#memberProfile', 0)->first_child()->src;
-    
-    // temporary
-    echo '<script>console.log("' . $r . '");</script>';
-    
-    if($r == null) {
+    if(file_exists('http://opensprites.gwiddle.co.uk/uploads/avatars/' . $id)) {
+        return 'http://opensprites.gwiddle.co.uk/uploads/avatars/' . $id;
+    } else {
         $username_grabbed = username_of($id);
         $raw_json = file_get_contents("https://scratch.mit.edu/site-api/users/all/" . $username_grabbed . "/");
         $user_arr = json_decode($raw_json, true);
         $user_avatar = $user_arr["thumbnail_url"];
         return "http:$user_avatar";
+        
+        $html = file_get_html('http://opensprites.gwiddle.co.uk/forums/?p=member/' . $id);
+        $r = $html->find('#memberProfile', 0)->first_child()->src;
     }
-    
-    return $r;
 }
 
 function scratch_userid_of($id) {
