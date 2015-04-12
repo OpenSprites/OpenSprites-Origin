@@ -19,14 +19,14 @@
             </li>
         </ul>
 		
-		<ul class="right">
+	<ul class="right">
         <?php if($logged_in_user == 'not logged in') { ?>
             <li><a href="register">Sign Up</a>
             </li>
             <li class="last" id='login' onclick="window.location = 'http://opensprites.gwiddle.co.uk/forums/?p=user/login&return=' + window.location.href;"><span>Log In</span></li>
         <?php } else  { ?>  <!-- display login info/username/etc -->
-			<li><a style="padding: 0;" href="/users/<?php echo $logged_in_userid . '/'; ?>">
-			<li class="last" onclick="window.location = 'http://dev.opensprites.gwiddle.co.uk/logout.php?return=/';"><span>Log Out</span></li>
+		<li><a style="padding: 0;" href="/users/<?php echo $logged_in_userid . '/'; ?>"><?php echo $logged_in_user; ?></li>
+		<li class="last" onclick="window.location = 'http://dev.opensprites.gwiddle.co.uk/logout.php?return=/';"><span>Log Out</span></li>
         <?php } ?>
         </ul>
     </div>
