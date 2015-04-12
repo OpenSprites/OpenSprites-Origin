@@ -32,7 +32,7 @@ function usertype_of($id) {
 }
 
 function avatar_of($id) {
-    if(file_exists('http://opensprites.gwiddle.co.uk/uploads/avatars/' . $id)) {
+    if(get_headers('http://opensprites.gwiddle.co.uk/uploads/avatars/' . $id)[0] == 'HTTP/1.1 404 Not Found') {
         return 'http://opensprites.gwiddle.co.uk/uploads/avatars/' . $id;
     } else {
         $username_grabbed = username_of($id);
