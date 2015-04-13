@@ -8,14 +8,12 @@ For more information, please visit the discussion thread: http://scratch.mit.edu
 ## [MegaApuTurkUltra](https://github.com/MegaApuTurkUltra)
 ![GitHub Logo](https://avatars0.githubusercontent.com/u/8547938?v=3&s=100)
 
-MegaApuTurkUltra is a sample text super-active non-administrator main-overseer and mlg-haxxscoper on the OS team. (What's the difference between a lead developer and regular developer anyway?)
+MegaApuTurkUltra is a pineapple
 * HTML
 * CSS
 * JavaScript
-* PHP / server-side stuff
-* Sample Text
-* Dank Meme Haxxscoping
-* OSDEV site administator
+* PHP / Server-side
+* OSDev Site Administator
 
 ## [The-Cheese-Eater](https://github.com/The-Cheese-Eater)
 ![GitHub Logo](https://avatars0.githubusercontent.com/u/9347154?v=3&s=100)
