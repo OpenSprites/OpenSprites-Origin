@@ -52,10 +52,10 @@ GrannyCookies is one of the most active devs on the OS team and helps administra
 
 ## [andrewjcole](https://github.com/andrewjcole)
 ![GitHub Logo](https://avatars1.githubusercontent.com/u/10202163?v=3&s=100)
-andrewjcole is a dev on the OS team.
+andrewjcole is a dev on the OS team. 
 * HTML
 * CSS
-* PHP
+* A tiny bit of PHP
 
 ## [109C](https://github.com/109C)
 ![GitHub Logo](https://avatars1.githubusercontent.com/u/9680886?v=3&s=400)
@@ -76,7 +76,7 @@ zappy1333 is a dev on the OS team.
 ## [liam4](https://github.com/liam4)
 ![Github Logo](https://avatars3.githubusercontent.com/u/9948030?v=3&s=110)
 
-liam4 is a tester / bug reporter / feature suggester on the OS team.
+liam4 is a tester / bug reporter / feature suggester on the OS team. He designed the blog.
 * Idea creating
 * Bug reporting
 
