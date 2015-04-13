@@ -98,6 +98,6 @@ DM5555 is a dev on the OS team.
 ## [pilppe](https://github.com/pilppe)
 ![GitHub Logo](https://avatars2.githubusercontent.com/u/8099538?v=3&s=460)
 
-pilppe is a dev on the OS team.
+pilppe is a potato. 
 * HTML
 * JavaScript
