@@ -23,7 +23,7 @@
 		};
 		$(document).ready(footer);
 		$(window).load(footer);
-		setTimeout(footer, 1000); // extra protection
+		for(var i=500;i<5000;i+=500) setTimeout(footer, i); // idk why document.ready and window.load aren't working...
 		$(window).resize(footer);
 	})();
 </script>
