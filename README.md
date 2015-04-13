@@ -1,7 +1,7 @@
 # OpenSprites
 Welcome to the main OpenSprites development repository. Inspired by Scratch Resources, OpenSprites is a new sharing platform designed for Scratchers to upload their own content, as well as download other's content for free use in their projects. It is being developed open-source by a small group of collaborating Scratchers. The code is available on GitHub.
 
-For more information, please visit the discussion thread: http://scratch.mit.edu/discuss/topic/85320/ The site shall be hosted here: http://opensprites.gwiddle.co.uk/ (to be changed, most likely) If you want to see our progress so far, our live alpha testing site is here: http://dev.opensprites.gwiddle.co.uk/ If you have any questions, don't hesitate to use our new forums: http://opensprites.gwiddle.co.uk/forums/. Thank you to cauzality who kindly made our logos and various graphical mockups!
+For more information, please visit the discussion thread: http://scratch.mit.edu/discuss/topic/85320/ The site shall be hosted here: http://opensprites.gwiddle.co.uk/ (to be changed, most likely) If you want to see our progress so far, our alpha site is here: http://dev.opensprites.gwiddle.co.uk/ For a bleeding edge version of the site that updates after each commit, see OSDEV: http://osdev.aputurk.tk/index.php If you have any questions, don't hesitate to use our new forums: http://opensprites.gwiddle.co.uk/forums/. Thank you to cauzality who kindly made our logos and various graphical mockups!
 
 # The OpenSprites team:
 
@@ -15,16 +15,18 @@ MegaApuTurkUltra is a sample text super-active non-administrator main-overseer a
 * PHP / server-side stuff
 * Sample Text
 * Dank Meme Haxxscoping
+* OSDEV site administator
 
 ## [The-Cheese-Eater](https://github.com/The-Cheese-Eater)
 ![GitHub Logo](https://avatars0.githubusercontent.com/u/9347154?v=3&s=100)
 
-The-Cheese-Eater is the founder of OS. He is also one of the lead developers.
-* HTML
-* CSS
+The-Cheese-Eater is the founder of the OpenSprites project. He mostly manages hosting, forums, organisation and accounts.
+* Administration
 * Supervising
 * Task delegating
-* Administration
+* HTML
+* CSS
+* Keeper of the FTP keys
 
 ## [Firedrake969](https://github.com/Firedrake969)
 ![GitHub Logo](https://avatars3.githubusercontent.com/u/8008245?v=3&s=320)
