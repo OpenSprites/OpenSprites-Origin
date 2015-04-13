@@ -57,3 +57,7 @@ select {
 .welcome {
 	background-color: #595959 !important;
 }
+
+#upload-method-select img.method:hover {
+    box-shadow: 5px 5px 10px black !important;
+}
