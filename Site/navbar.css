@@ -52,3 +52,19 @@
     color:white;
     font-size:15px
 }
+
+.navbar-upload {
+    margin-right: 1em;
+}
+
+.navbar-upload a {
+    background: rgba(255, 255, 255, 0.3);
+	border-radius: 10px;
+}
+
+.navbar-upload .upload-icon {
+	vertical-align: middle;
+	float: left;
+	margin-top: 10px;
+	margin-right: 0.5em;
+}

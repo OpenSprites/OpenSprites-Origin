@@ -1,25 +1,37 @@
 <script>
-	var loggedInUser = <?php echo json_encode($logged_in_user); ?>;
-	var loggedInUserId = <?php echo json_encode($logged_in_userid); ?>;
+	// @deprecated
+	var loggedInUser = "Use OpenSprites.user.name";
+	var loggedInUserId = "Use OpenSprites.user.id";
+	
+	// let's try to merge to using proper JS technique. Remember, we want this code to be maintainable.
+	var OpenSprites = OpenSprites || {};
+	OpenSprites.user = {};
+	OpenSprites.user.name = <?php echo json_encode($logged_in_user); ?>;
+	OpenSprites.user.id = <?php echo json_encode($logged_in_userid); ?>;
 </script>
 <div class="header">
     <div class="container">	
-    <a class="scratch" href="/"></a>
+		<a class="scratch" href="/"></a>
 
         <ul class="left">
-            <li><a href="">Sprites</a>
+            <li>
+				<a href="/sprites">Sprites</a>
             </li>
-            <li><a href="">Scripts</a>
+            <li>
+				<a href="/scripts">Scripts</a>
             </li>
-            <li><a href="">Media</a>
+            <li>
+				<a href="/media">Media</a>
             </li>
-            <li><a href="/upload/">Upload</a>
-            </li>
-	    <li class="last"><a href="http://opensprites.gwiddle.co.uk/forums/">Forums</a>
+			<li class="last">
+				<a href="http://opensprites.gwiddle.co.uk/forums/">Forums</a>
             </li>
         </ul>
 		
 	<ul class="right">
+		<li class='navbar-upload'>
+			<a href="/upload/"><img class='upload-icon' src='/assets/images/upload.png' /> Upload</a>
+        </li>
         <?php if($logged_in_user == 'not logged in') { ?>
             <li><a href="/register/">Sign Up</a>
             </li>

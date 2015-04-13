@@ -20,6 +20,7 @@
                     <h1 id="opensprites-heading">Contribution Attribution</h1>
                     <div class="box-content">
                         <h3>Developers:</h3>
+						<p>Sample Text</p>
 					</div>
                 </div>
             </div>
