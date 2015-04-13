@@ -8,7 +8,7 @@ For more information, please visit the discussion thread: http://scratch.mit.edu
 ## [MegaApuTurkUltra](https://github.com/MegaApuTurkUltra)
 ![GitHub Logo](https://avatars0.githubusercontent.com/u/8547938?v=3&s=100)
 
-MegaApuTurkUltra is a pineapple
+MegaApuTurkUltra is a sample text
 * HTML
 * CSS
 * JavaScript
