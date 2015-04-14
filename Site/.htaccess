@@ -1,4 +1,5 @@
 ErrorDocument 404 /404.php
+ErrorDocument 403 /403.php
 
 php_flag display_startup_errors on
 php_flag display_errors on
