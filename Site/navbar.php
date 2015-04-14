@@ -1,7 +1,7 @@
 <script>
 	// @deprecated
-	var loggedInUser = "Use OpenSprites.user.name";
-	var loggedInUserId = "Use OpenSprites.user.id";
+	var loggedInUser = "deprecated: Use 'OpenSprites.user.name'";
+	var loggedInUserId = "deprecated: Use 'OpenSprites.user.id'";
 	
 	// let's try to merge to using proper JS technique. Remember, we want this code to be maintainable.
 	var OpenSprites = OpenSprites || {};
@@ -27,12 +27,13 @@
 				<a href="http://opensprites.gwiddle.co.uk/forums/">Forums</a>
             </li>
         </ul>
-		
+	
+	<?php if($logged_in_user !== 'not logged in') { ?>
 	<ul class="right">
 		<li class='navbar-upload'>
 			<a href="/upload/"><img class='upload-icon' src='/assets/images/upload.png' /> Upload</a>
         </li>
-        <?php if($logged_in_user == 'not logged in') { ?>
+        <?php } if($logged_in_user == 'not logged in') { ?>
             <li><a href="/register/">Sign Up</a>
             </li>
             <li class="last" id='login' onclick="window.location = '/login/';"><span>Log In</span></li>
