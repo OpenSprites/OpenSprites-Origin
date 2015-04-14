@@ -19,7 +19,7 @@
         <div class="main-inner">
             <h1 id="opensprites-heading">Our server is a little confused...</h1>
             <div id="about">
-                <img src='assets/images/404.png' style='position: absolute; margin: auto; left: 0; right: 0;'>
+                <img src='http://<?php echo $_SERVER['SERVER_NAME']; ?>/assets/images/404.png' style='position: absolute; margin: auto; left: 0; right: 0;'>
                 <div style='width: 100%; height: 470px;'>&nbsp;</div>
                 <p style='position: absolute; margin: auto; top: 480px; left: 0; right: 0; width: 50%; text-align: center; font-size: 18px;'>We couldn't find the page you're looking for.<br>You may want to <a href='/'>go back to the main page</a>.</p>
             </div>
