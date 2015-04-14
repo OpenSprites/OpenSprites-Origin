@@ -6,8 +6,8 @@
     // let's try to merge to using proper JS technique. Remember, we want this code to be maintainable.
     var OpenSprites = OpenSprites || {};
     OpenSprites.user = {};
-    OpenSprites.user.name = <? php echo json_encode($logged_in_user); ?> ;
-    OpenSprites.user.id = <? php echo json_encode($logged_in_userid); ?> ;
+    OpenSprites.user.name = <?php echo json_encode($logged_in_user); ?> ;
+    OpenSprites.user.id = <?php echo json_encode($logged_in_userid); ?> ;
 </script>
 <div class="header">
     <div class="container">
