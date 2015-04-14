@@ -21,7 +21,7 @@
             <div id="about">
                 <img src='assets/images/500.png' style='position: absolute; margin: auto; left: 0; right: 0;'>
                 <div style='width: 100%; height: 470px;'>&nbsp;</div>
-                <p style='position: absolute; margin: auto; top: 480px; left: 0; right: 0; width: 50%; text-align: center; font-size: 18px;'>For some reason our servers have gone slightly wrong on the inside.<br>This should be fixed soon... hopefully.</p>
+                <p style='position: absolute; margin: auto; top: 480px; left: 0; right: 0; width: 50%; text-align: center; font-size: 18px;'>Well, this is embarrassing... Our server can't complete your request just now.<br>You can see if this issue has already been reported on our <a href="http://opensprites.gwiddle.co.uk/forums/">forums</a>, or <a href="https://github.com/OpenSprites/OpenSprites/issues">GitHub</a>.</p>
             </div>
         </div>
     </div>
