@@ -20,9 +20,9 @@
     <?php echo file_get_contents('../Header.html'); ?>
     
     <!--Imports styling-->
-    <link href='http://dev.opensprites.gwiddle.co.uk/users/user_style.css' rel='stylesheet' type='text/css'>
+    <link href='http://<?php echo $_SERVER['SERVER_NAME']; ?>/users/user_style.css' rel='stylesheet' type='text/css'>
 </head>
-<body>
+<body>c
     <!--Imports navigation bar-->
     <?php include "../navbar.php"; ?>
     
@@ -67,7 +67,7 @@
     <?php if($user_exist) { ?>
     <div class="container main" id="collections">
         <div class="main-inner">
-            <h1>Collections</h1>
+            <h1>Recent Uploads</h1>
         </div>
     </div>
     <?php } ?>
