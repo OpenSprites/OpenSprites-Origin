@@ -7,15 +7,17 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <!--Imports the metadata and information that will go in the <head> of every page-->
-    <?php include $_SERVER['DOCUMENT_ROOT'].'/Header.html'; ?>
+    <?php
+        include $_SERVER['DOCUMENT_ROOT'].'/Header.html'; // Imports the metadata and information that will go in the <head> of every page
+    ?>
 </head>
 <body>
     <!--Imports site-wide main styling-->
     <link href='/main-style.css' rel='stylesheet' type='text/css'>
     
-    <!--Imports navigation bar-->
-    <?php include $_SERVER['DOCUMENT_ROOT']."/navbar.php"; ?>
+    <?php
+        include $_SERVER['DOCUMENT_ROOT']."/navbar.php"; // Imports navigation bar
+    ?>
     
     <!-- Main wrapper -->
     <div class="container main" style="height:700px;">
