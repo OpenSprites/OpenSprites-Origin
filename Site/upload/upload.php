@@ -32,11 +32,6 @@ if($filetype == 'bad') {
     die;
 }
 
-echo $ext . '<br>';
-echo $filetype . '<br>';
-echo $filename . '<br>';
-echo $target_path . '<br>';
-
 // find the biggest numbered file (aka the newest)
 $files = [];
 foreach(glob('../uploads/uploaded/' . $logged_in_userid . '-*.' . $ext) as $thefile) {
@@ -55,5 +50,8 @@ $filename_to_upload = $logged_in_userid . '-' . strval(intval(substr($great_file
 // upload file!
 $filename_to_upload = '../uploads/uploaded/' . $filename_to_upload;
 move_uploaded_file($_FILES['uploadedfile']['tmp_name'], $filename_to_upload);
+
+// temporary
+echo '<h1>Uploaded the file!</h1><a href="' . $filename_to_upload . '">Here it is.</a>';
 
 ?>
