@@ -10,7 +10,7 @@
         $logged_in_userid = $_SESSION["userId"];
         $html = file_get_html('http://opensprites.gwiddle.co.uk/forums/?p=member/' . $logged_in_userid);
         $logged_in_user = $html->find('h1#memberName', 0)->innertext;
-        $user_group = $html->find('p#memberGroup', 0)->find('span')->plaintext;
+        $user_group = $html->find('p#memberGroup span', 0)->innertext;
         $user_banned = $user_group == 'Suspended';
     } else {
         $logged_in_userid = 'not logged in';
