@@ -16,15 +16,18 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <!--Imports the metadata and information that will go in the <head> of every page-->
-    <?php echo file_get_contents('../Header.html'); ?>
+    <?php
+        echo file_get_contents('../Header.html'); //Imports the metadata and information that will go in the <head> of every page
+    ?>
     
-    <!--Imports styling-->
-    <link href='http://<?php echo $_SERVER['SERVER_NAME']; ?>/users/user_style.css' rel='stylesheet' type='text/css'>
+    <link href='http://<?php
+        echo $_SERVER['SERVER_NAME']; // Imports styling
+    ?>/users/user_style.css' rel='stylesheet' type='text/css'>
 </head>
-<body>c
-    <!--Imports navigation bar-->
-    <?php include "../navbar.php"; ?>
+<body>
+    <?php
+        include "../navbar.php"; // Imports navigation bar
+    ?>
     
     <?php if($user_exist) {?>
     
