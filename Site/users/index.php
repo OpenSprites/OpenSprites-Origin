@@ -32,13 +32,16 @@
     <?php if($user_exist) {?>
     
     <!-- Main wrapper -->
-    <?php echo "<div id='background-img'></div>" ?>
+    <?php
+        // background-image is a blurred avatar image
+        echo "<div id='background-img' style='background-image:url(\"" . $user['avatar'] . "\");'></div>";
+    ?>
     <div id='dark-overlay'><div id='overlay-inner'>
         <div id="user-pane-right">
             <?php if($user_exist) { ?>
             <div id='username'>
                 <?php
-                if($username==$logged_in_user) {echo 'You [' . $username . ']';} else {echo $username;}
+                if($username==$logged_in_user) {echo 'You';} else {echo $username;}
                 ?>
             </div>
             <div id='description'>
