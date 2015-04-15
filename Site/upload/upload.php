@@ -2,6 +2,11 @@
 
 require "../assets/includes/connect.php";
 
+if($logged_in_user == 'not logged in' or $user_banned) {
+    header('Location: /');
+    die;
+}
+
 if((!empty($_FILES["uploaded_file"])) and ($_FILES['uploaded_file']['error'] == 0)) {
     // something is wrong with the uploaded file (i.e. it is empty)
     header('Location: /upload/?method=local&error=empty');
