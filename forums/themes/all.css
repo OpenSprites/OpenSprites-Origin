@@ -3,6 +3,10 @@
   color: black !important;
 }
 
+.conversationList li.unread .unreadIndicator {
+	display: block !important;
+}
+
 .sheetOverlay {
 	background: none !important;
 }
