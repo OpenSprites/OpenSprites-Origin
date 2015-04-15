@@ -21,6 +21,7 @@ var themes = ['Regular', 'Dark'];
 if(typeof localStorage['os-theme'] === 'undefined' || themes.indexOf(localStorage['os-theme']) === -1) {
     console.log('wrong theme');
     localStorage['os-theme'] = 'Regular';
+    window.location.reload();
 }
 
 // set selection to the saved theme
