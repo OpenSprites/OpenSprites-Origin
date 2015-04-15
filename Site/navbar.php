@@ -8,6 +8,8 @@
     OpenSprites.user = {};
     OpenSprites.user.name = <?php echo json_encode($logged_in_user); ?> ;
     OpenSprites.user.id = <?php echo json_encode($logged_in_userid); ?> ;
+    OpenSprites.user.group = <?php echo json_encode($user_group); ?> ;
+    OpenSprites.user.banned = <?php echo json_encode($user_banned); ?> ;
 </script>
 <div class="header">
     <div class="container">
