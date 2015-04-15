@@ -1,104 +1,105 @@
 #dark-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 335px;
-  color: white;
-  background-color: rgb(21, 21, 21);
-  text-align: center;
-  overflow: hidden;
-  z-index: 2;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 335px;
+    color: white;
+    background-color: rgba(21, 21, 21, 0.7);
+    text-align: center;
+    overflow: hidden;
+    z-index: 2;
 }
 
 #background-img {
-  -webkit-filter: blur(4px); 
-  -moz-filter: blur(4px); 
-  filter: blur(4px);
-  width: 100%;
-  height: 335px;
+    -webkit-filter: blur(10px); 
+    -moz-filter: blur(10px); 
+    filter: blur(10px);
+    width: 100%;
+    height: 315px;
+    background-size: cover;
 }
 
 #username {
-  margin-top: 70px;
-  font-size: 48px;
-  background: none !important;
+    margin-top: 70px;
+    font-size: 48px;
+    background: none !important;
 }
 
 #description {
-  font-size: 24px;
-  margin-top: 10px;
+    font-size: 24px;
+    margin-top: 10px;
 }
 
 #follow {
-  font-style: italic;
-  font-size: 16px;
-  margin-bottom: 10px;
-  cursor: pointer;
-  position: absolute;
-  bottom: 40px;
+    font-style: italic;
+    font-size: 16px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    position: absolute;
+    bottom: 40px;
 }
 
 #report {
-  font-style: italic;
-  font-size: 16px;
-  margin-left: 30px;
-  margin-bottom: 10px;
-  cursor: pointer;
-  position: absolute;
-  bottom: 40px;
-  left: 150px;
+    font-style: italic;
+    font-size: 16px;
+    margin-left: 30px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    position: absolute;
+    bottom: 40px;
+    left: 150px;
 }
 
 #userjoined {
-  position: absolute;
-  font-size: 15px;
-  margin: 15px;
-  top: 10px;
+    position: absolute;
+    font-size: 15px;
+    margin: 15px;
+    top: 10px;
 }
 
 #userjoined h3{
-  font-style: bold;
+    font-style: bold;
 }
 
 #collections {
-  margin-top: 50px;
-  padding: 20px !important;
-  margin-bottom: 50px;
+    margin-top: 50px;
+    padding: 20px !important;
+    margin-bottom: 50px;
 }
 
 #user-pane-left {
-  position: absolute;
-  margin-right: 470px;
-  width: 470px;
-  height: 335px;
-  text-align: right;
-  line-height: 335px;
-  padding-right: 0;
+    position: absolute;
+    margin-right: 470px;
+    width: 470px;
+    height: 335px;
+    text-align: right;
+    line-height: 335px;
+    padding-right: 0;
 }
 
 #overlay-inner {
-  width: 980px;
-  margin: auto;
-  height: 100%;
+    width: 980px;
+    margin: auto;
+    height: 100%;
 }
 
 #user-pane-right {
-  position: absolute;
-  margin-left: 470px;
-  width: 470px;
-  height: 335px;
-  text-align: left;
+    position: absolute;
+    margin-left: 470px;
+    width: 470px;
+    height: 335px;
+    text-align: left;
 }
 
 .main-inner {
-  padding: 10px;
+    padding: 10px;
 }
 
 .user-avatar.x100 {
-  margin-top: 70px;
-  width: 200px !important;
-  height: 200px !important;
-  min-height: 200px !important;
-  padding-right: 80px;
+    margin-top: 70px;
+    width: 200px !important;
+    height: 200px !important;
+    min-height: 200px !important;
+    padding-right: 80px;
 }
