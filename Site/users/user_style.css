@@ -66,6 +66,9 @@
     margin-top: 50px;
     padding: 20px !important;
     margin-bottom: 50px;
+    
+    /* for scroll testing */
+    min-height: 1000px;
 }
 
 #user-pane-left {
