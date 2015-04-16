@@ -8,6 +8,7 @@ php_value error_reporting -1
 
 RewriteEngine On
 
+# user pages
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule ^users/([^/]+)$ /users/$1/ [R=301,L]
@@ -15,3 +16,9 @@ RewriteRule ^users/([^/]+)$ /users/$1/ [R=301,L]
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule ^users/([^/]+)/$ users/index.php?id=$1 [QSA]
+
+# file pages
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^uploads/([^/]+)$ uploads/index.php?file=$1 [QSA]
+
