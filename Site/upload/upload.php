@@ -53,8 +53,13 @@ if($files == []) {
 $filename_to_upload = $logged_in_userid . '-' . strval(intval(substr($great_file, strlen($logged_in_userid) + 1)) + 1) . '.' . $ext;
 
 // upload file!
+$filename_b4_upload = $filename_to_upload;
 $filename_to_upload = '../uploads/uploaded/' . $filename_to_upload;
 move_uploaded_file($_FILES['uploadedfile']['tmp_name'], $filename_to_upload);
+
+// create json file which has the details of the uploaded file in it
+$jsoncontents = array('name' => $filename_b4_upload, 'uploaded_by' => array('name' => $logged_in_user, 'id' => intval($logged_in_userid)), 'original_filename' => $filename);
+file_put_contents($filename_to_upload . '.json', json_encode($jsoncontents));
 
 // temporary
 echo '<h1>Uploaded the file!</h1><a href="' . $filename_to_upload . '">Here it is.</a>';

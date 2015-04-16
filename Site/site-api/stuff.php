@@ -1,4 +1,5 @@
 <?php
+
 require '../assets/includes/html_dom_parser.php';
 session_name("OpenSprites_Forum_session");
 session_start();
@@ -17,11 +18,16 @@ if(isset($_GET['userid'])) {
 
 if($userid === 'false') {
     echo 'FALSE';
-} else {
-    $files = glob('../uploads/uploaded/' . $logged_in_userid . '-*.*', GLOB_NOSORT);
-    print_r($files);
-    for ($i = 1; $i <= count($files); $i++) {
-        echo $files[i];
+    die();
+}
+
+$files = glob('../uploads/uploaded/' . $userid . '-*.*', GLOB_NOSORT);
+$read_files = array();
+for ($i = 0; $i < count($files); $i++) {
+    if(substr($files[$i], -4) !== 'json') {
+        array_push($read_files, json_decode(file_get_contents($files[$i] . '.json')));
     }
 }
+echo json_encode($read_files, JSON_PRETTY_PRINT);
+
 ?>
