@@ -1,3 +1,0 @@
-; .ini style file that hold the hashes -> user (aka the person that uploaded it)
-
-[hashes]
