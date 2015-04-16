@@ -14,11 +14,12 @@ if(isset($_GET['userid'])) {
 } else {
     $userid = $_SESSION["userId"];
 }
-error_reporting(0);
+
 if($userid === 'false') {
     echo 'FALSE';
 } else {
     $files = glob('../uploads/uploaded/' . $logged_in_userid . '-*.*', GLOB_NOSORT);
+    print_r($files);
     for ($i = 1; $i <= count($files); $i++) {
         echo $files[i];
     }
