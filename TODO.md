@@ -9,3 +9,5 @@
 4) Complete user page
 
 5) Create a dynamic download page (what do you call them?)
+
+6) When coming from somewhere else to the forums, dont display "Go back to the main page" in the top.
