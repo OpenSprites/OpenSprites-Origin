@@ -8,15 +8,18 @@
     background-color: rgba(21, 21, 21, 0.7);
     text-align: center;
     overflow: hidden;
-    z-index: 2;
+    z-index: -1;
 }
 
 #background-img {
-    -webkit-filter: blur(10px); 
-    -moz-filter: blur(10px); 
-    filter: blur(10px);
+    top: 0;
+    position: fixed;
+    z-index: -100;
+    -webkit-filter: blur(40px);
+    -moz-filter: blur(40px);
+    filter: blur(40px);
     width: 100%;
-    height: 315px;
+    height: 100%;
     background-size: cover;
 }
 
@@ -63,12 +66,9 @@
 }
 
 #collections {
-    margin-top: 50px;
+    margin-top: 400px;
     padding: 20px !important;
-    margin-bottom: 50px;
-    
-    /* for scroll testing */
-    min-height: 1000px;
+    margin-bottom: 80px;
 }
 
 #user-pane-left {
@@ -105,4 +105,8 @@
     height: 200px !important;
     min-height: 200px !important;
     padding-right: 80px;
+}
+
+.loading-ajax {
+    text-align: center;
 }

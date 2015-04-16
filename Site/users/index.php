@@ -73,7 +73,7 @@
     <?php if($user_exist) { ?>
     <div class="container main" id="collections">
         <div class="main-inner">
-            <h1>Recent Uploads</h1>
+            <h1 class='loading-ajax'>Loading...</h1>
         </div>
     </div>
     <?php } ?>
