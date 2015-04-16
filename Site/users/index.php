@@ -34,7 +34,7 @@
     <!-- Main wrapper -->
     <?php
         // background-image is a blurred avatar image
-        echo "<div id='background-img' style='background-image:url(\"" . $user['avatar'] . "\");'></div>";
+        echo "<div id='background-img' style='position:fixed;background-image:url(\"" . $user['avatar'] . "\");'></div>";
     ?>
     <div id='dark-overlay'><div id='overlay-inner'>
         <div id="user-pane-right">
@@ -64,7 +64,7 @@
         <div id="user-pane-left">
             <?php
                 if($user_exist) {
-                    display_user_avatar($username, 'x100', 'client');
+                    echo '<img class="user-avatar x100" src="' . $user['avatar'] . '">';
                 }
             ?>
         </div>
