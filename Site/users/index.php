@@ -31,6 +31,13 @@
     
     <?php if($user_exist) {?>
     
+    <script>
+        OpenSprites.view = {};
+        OpenSprites.view.user = {};
+        OpenSprites.view.user.id = <?php echo json_encode($user['userid']); ?>;
+        OpenSprites.view.user.name = <?php echo json_encode($user['username']); ?>;
+    </script>
+    
     <!-- Main wrapper -->
     <?php
         // background-image is a blurred avatar image
@@ -74,6 +81,7 @@
     <div class="container main" id="collections">
         <div class="main-inner">
             <h1 class='loading-ajax'>Loading...</h1>
+            <script src='../user.js'></script>
         </div>
     </div>
     <?php } ?>

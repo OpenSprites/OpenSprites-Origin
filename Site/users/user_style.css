@@ -69,6 +69,7 @@
     margin-top: 400px;
     padding: 20px !important;
     margin-bottom: 80px;
+    transition: height 500ms;
 }
 
 #user-pane-left {
@@ -97,6 +98,7 @@
 
 .main-inner {
     padding: 10px;
+    transition: height 500ms;
 }
 
 .user-avatar.x100 {
@@ -109,4 +111,24 @@
 
 .loading-ajax {
     text-align: center;
+}
+
+/* files */
+.file {
+    width: 100px;
+    height: 100px;
+    margin-right: 20px;
+    margin-top: 20px;
+    display: inline-table;
+}
+
+.file img {
+    width: 100px;
+    height: 100px;
+    background: rgba(0, 0, 0, 0.2);
+    transition: background 250ms;
+}
+
+.file:hover img {
+    background: transparent
 }

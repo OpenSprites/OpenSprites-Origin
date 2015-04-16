@@ -25,9 +25,23 @@ $files = glob('../uploads/uploaded/' . $userid . '-*.*', GLOB_NOSORT);
 $read_files = array();
 for ($i = 0; $i < count($files); $i++) {
     if(substr($files[$i], -4) !== 'json') {
-        array_push($read_files, json_decode(file_get_contents($files[$i] . '.json')));
+        array_push($read_files, json_decode(file_get_contents($files[$i] . '.json'), true));
     }
 }
-echo json_encode($read_files, JSON_PRETTY_PRINT);
+
+$files_sorted = array();
+for($i = 0; $i < count($read_files); $i++) {
+    $key = substr($read_files[$i]['name'], strlen($_GET['userid']) + 1, strrpos($read_files[$i]['name'], '.') - 2);
+    $files_sorted[$key] = $read_files[$i];
+}
+
+krsort($files_sorted, SORT_NUMERIC);
+
+$files = array();
+for($i = count($files_sorted); $i > 0; $i--) {
+    array_push($files, $files_sorted[$i]);
+}
+
+echo json_encode($files, JSON_PRETTY_PRINT);
 
 ?>
