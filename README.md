@@ -5,16 +5,6 @@ For more information, please visit the discussion thread: http://scratch.mit.edu
 
 # The OpenSprites team:
 
-## [MegaApuTurkUltra](https://github.com/MegaApuTurkUltra)
-![GitHub Logo](https://avatars0.githubusercontent.com/u/8547938?v=3&s=100)
-
-MegaApuTurkUltra is a sample text
-* HTML
-* CSS
-* JavaScript
-* PHP / Server-side
-* OSDev Site Administator
-
 ## [The-Cheese-Eater](https://github.com/The-Cheese-Eater)
 ![GitHub Logo](https://avatars0.githubusercontent.com/u/9347154?v=3&s=100)
 
@@ -26,6 +16,16 @@ The-Cheese-Eater is the founder of the OpenSprites project. He mostly manages ho
 * CSS
 * Keeper of the FTP keys
 * Administration and moderation
+
+## [MegaApuTurkUltra](https://github.com/MegaApuTurkUltra)
+![GitHub Logo](https://avatars0.githubusercontent.com/u/8547938?v=3&s=100)
+
+MegaApuTurkUltra is a sample text
+* HTML
+* CSS
+* JavaScript
+* PHP / Server-side
+* OSDev Site Administator
 
 ## [Firedrake969](https://github.com/Firedrake969)
 ![GitHub Logo](https://avatars3.githubusercontent.com/u/8008245?v=3&s=320)
