@@ -33,6 +33,7 @@ for ($i = 0; $i < count($files); $i++) {
 $files_sorted = array();
 for($i = 0; $i < count($read_files); $i++) {
     $key = substr($read_files[$i]['name'], strlen($_GET['userid']) + 1, strrpos($read_files[$i]['name'], '.') - 2);
+    //$key = $i + 1;
     $files_sorted[$key] = $read_files[$i];
 }
 

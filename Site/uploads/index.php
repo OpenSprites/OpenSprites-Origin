@@ -1,8 +1,11 @@
 <?php
     require "../assets/includes/connect.php";  //Connect - includes session_start();
-    require "../assets/includes/avatar.php";
 
     $file = json_decode(file_get_contents('uploaded/' . $_GET['file'] . '.json'));
+
+    if(isset($file->deleted) or !file_exists('uploaded/' . $_GET['file'] . '.json')) {
+        header('Location: ../404');
+    }
 ?>
 <!DOCTYPE html>
 <html>
@@ -30,15 +33,23 @@
         <div id="user-pane-right">
             <div id='username'>
                 <?php
-                    echo 'untitled';
+                    if(!isset($file->custom_name)) {
+                        $file->custom_name = 'untitled';
+                    }
+                    echo $file->custom_name;
                 ?>
             </div>
             <div id='description' onclick="window.location = '../users/<?php echo $file->uploaded_by->id; ?>';">
                 By <?php echo $file->uploaded_by->name; ?>
             </div>
-            <div id='follow' onclick="var win = window.open('download.php?file=<?php echo $file->name; ?>', 'mywindow');setTimeout(function() {win.close();}, 10);">
+            <div id='follow' onclick="var win = window.open('download.php?name=<?php echo $file->custom_name; ?>&file=<?php echo $file->name; ?>', 'mywindow');setTimeout(function() {win.close();}, 1000);">
                 <?php echo 'Download this ' . $file->type . '!'; ?>
             </div>
+            <?php if($logged_in_userid == $file->uploaded_by->id) { ?>
+            <div id='report' onclick="window.location = 'delete.php?file=<?php echo $file->name; ?>';">
+                Delete
+            </div>
+            <?php } ?>
         </div>
         <div id="user-pane-left">
             <?php if($file->type == 'image') { ?>

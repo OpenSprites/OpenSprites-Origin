@@ -52,7 +52,8 @@
             <div id='upload-method-select'>
                 <form enctype="multipart/form-data" action="upload.php" method="POST">
             		<input type="hidden" name="MAX_FILE_SIZE" value="100000">
-            		<input name="uploadedfile" type="file"><br>
+            		<input name="uploadedfile" type="file" required><br>
+                    <input name="name" type="text" placeholder="Pick a name..." required><br>
             		<input type="submit" value="Okay">
             	</form>
             </div>

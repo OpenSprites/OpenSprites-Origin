@@ -3,5 +3,4 @@ ehthumbs.db
 .Trashes
 node_modules/
 .idea/.name
-*.xml
 .idea/OpenSprites.iml

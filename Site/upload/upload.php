@@ -58,7 +58,8 @@ $filename_to_upload = '../uploads/uploaded/' . $filename_to_upload;
 move_uploaded_file($_FILES['uploadedfile']['tmp_name'], $filename_to_upload);
 
 // create json file which has the details of the uploaded file in it
-$jsoncontents = array('name' => $filename_b4_upload, 'uploaded_by' => array('name' => $logged_in_user, 'id' => intval($logged_in_userid)), 'original_filename' => $filename, 'type' => $filetype);
+$jsoncontents = array('name' => $filename_b4_upload, 'uploaded_by' => array('name' => $logged_in_user, 'id' => intval($logged_in_userid)), 'original_filename' => $filename, 'type' => $filetype, 'custom_name' => $_POST['name']);
+
 file_put_contents($filename_to_upload . '.json', json_encode($jsoncontents));
 
 // redirect to the "profile page" of the file
