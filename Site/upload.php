@@ -1,16 +1,23 @@
 <?php
-  session_start();
+    require "assets/includes/connect.php";  //Connect - includes session_start();
+?>
+<?php
   
   if(!isset($_SESSION["username"])){
-    header('Location: ./show_error.php?e=Please%20login%20before%20trying%20to%20upload'); // TODO: redirect to login page
+    // header('Location: ./show_error.php?e=Please%20login%20before%20trying%20to%20upload'); // TODO: redirect to login page
   }
 ?>
 <!-- TODO: prettify -->
 <html>
   <head>
-  <?php include 'navbar.php'; ?>
+    <?php include 'Header.html'; ?>
   </head>
   <body>
+   <!--Imports site-wide main styling-->
+    <link href='main-style.css' rel='stylesheet' type='text/css'>
+    
+    <!--Imports navigation bar-->
+    <?php include "navbar.php"; ?>
   <div style="padding:35px;">
     <form enctype="multipart/form-data" action="file_upload.php" method="POST">
       Script/Sprite file: <input name="ScriptSpriteFile" type="file" /><br>

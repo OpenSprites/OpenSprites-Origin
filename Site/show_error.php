@@ -1,5 +1,7 @@
 <?php
-  session_start();
+    require "assets/includes/connect.php";  //Connect - includes session_start();
+?>
+<?php
   
   if(!isset($_GET["e"])){
     header("Location: ./");
@@ -7,7 +9,7 @@
 ?>
 <html>
   <head>
-  <?php include 'Header.php'; ?>
+  <?php include 'Header.html'; ?>
   </head>
   <body>
   <?php include 'navbar.php'; ?>
