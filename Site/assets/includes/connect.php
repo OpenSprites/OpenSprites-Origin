@@ -13,8 +13,8 @@
         $user_group = $html->find('p#memberGroup span', 0)->innertext;
         $user_banned = $user_group == 'Suspended';
     } else {
-        $logged_in_userid = 'not logged in';
-        $logged_in_user = 'not logged in';
-        $user_group = 'not logged in';
+        $logged_in_userid = 0;
+        $logged_in_user = 'Guest';
+        $user_group = 'N/A';
         $user_banned = false;
     }
