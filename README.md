@@ -8,14 +8,14 @@ For more information, please visit the discussion thread: http://scratch.mit.edu
 ## [The-Cheese-Eater](https://github.com/The-Cheese-Eater)
 ![GitHub Logo](https://avatars0.githubusercontent.com/u/9347154?v=3&s=100)
 
-The-Cheese-Eater is the founder of the OpenSprites project. He mostly manages hosting, forums, organisation and accounts.
-* Administration
+The-Cheese-Eater, your localsysadmin! He mostly manages hosting, forums, organisation and accounts.
+* Doing whatever sysadmins do
 * Supervising
 * Task delegating
+* Keeper of the FTP keys
+* Moderation
 * HTML
 * CSS
-* Keeper of the FTP keys
-* Administration and moderation
 
 ## [MegaApuTurkUltra](https://github.com/MegaApuTurkUltra)
 ![GitHub Logo](https://avatars0.githubusercontent.com/u/8547938?v=3&s=100)
