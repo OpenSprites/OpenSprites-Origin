@@ -5,6 +5,10 @@
         header('Location: /');
         die;
     }
+	
+	$errors = array(
+		"toobig" => "That file is too big for our servers to handle! Try a file smaller than 8MB."
+	);
 ?>
 <!DOCTYPE html>
 <html>
@@ -30,7 +34,13 @@
     <div class="container main" style="text-align:center;">
         <div class="main-inner">
 
-            <!-- Select Method -->
+			<?php if(isset($_REQUEST['error'])){ ?>
+			<h1>Uh oh! Looks like something went wrong!</h1>
+			<p><?php echo $errors[$_REQUEST['error']]; ?></p>
+			<p><a href='/upload/'>Try again</a></p>
+			
+			<?php } else { ?>
+			
             <?php if(!isset($_GET[ 'method'])) { ?>
             <h1 style="font-size:4em;margin-top:50px;">Upload</h1>
             <h1 style="font-size:3em;margin-top:10px;">Choose an upload method</h1>
@@ -50,11 +60,12 @@
             <h1 style="font-size:4em;margin-top:50px;">Upload</h1>
             <h1 style="font-size:3em;margin-top:10px;">Select a file</h1>
             <div id='upload-method-select'>
-                <form enctype="multipart/form-data" action="upload.php" method="POST">
-            		<input type="hidden" name="MAX_FILE_SIZE" value="100000">
-            		<input name="uploadedfile" type="file" required><br>
+                <form id='uploadform' enctype="multipart/form-data" action="upload.php" method="POST">
+            		<input type="hidden" name="MAX_FILE_SIZE" value="8388608">
+            		<input name="uploadedfile[]" type="file" required multiple><br>
                     <input name="name" type="text" placeholder="Pick a name..." required><br>
             		<input type="submit" value="Okay">
+					<button type='button' onclick="$('form#uploadform').attr('action', '_matu_upload.php');this.innerText='Using';">Use MegaApuTurkUltra's upload script</button>
             	</form>
             </div>
             <?php } else if($_GET[ 'method']=='scratch' ) { ?>
@@ -76,7 +87,7 @@
             <p><a href="/upload/">Back</a>
             </p>
 
-            <?php } ?>
+            <?php }} ?>
 
         </div>
     </div>

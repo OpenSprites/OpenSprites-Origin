@@ -22,3 +22,7 @@ RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule ^uploads/([^/]+)$ uploads/index.php?file=$1 [QSA]
 
+# upload is 3 big
+RewriteCond %{REQUEST_METHOD} =POST
+RewriteCond %{HTTP:Content-Length}%{CONTENT_LENGTH} >8388608
+RewriteRule .* /upload/?error=toobig [R,NC]
