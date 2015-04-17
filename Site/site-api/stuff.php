@@ -21,6 +21,7 @@ if($userid === 'false') {
     die();
 }
 
+error_reporting(0);
 $files = glob('../uploads/uploaded/' . $userid . '-*.*', GLOB_NOSORT);
 $read_files = array();
 for ($i = 0; $i < count($files); $i++) {
@@ -37,11 +38,6 @@ for($i = 0; $i < count($read_files); $i++) {
 
 krsort($files_sorted, SORT_NUMERIC);
 
-$files = array();
-for($i = count($files_sorted); $i > 0; $i--) {
-    array_push($files, $files_sorted[$i]);
-}
-
-echo json_encode($files, JSON_PRETTY_PRINT);
+echo json_encode($files_sorted, JSON_PRETTY_PRINT);
 
 ?>

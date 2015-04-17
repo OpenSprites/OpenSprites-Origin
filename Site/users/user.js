@@ -15,7 +15,11 @@ function update() {
     });
 }
 
-function processAjax(json) {
+function processAjax(j) {
+    var json = $.map(j, function(value, index) {
+        return [value];
+    });
+    
     $('.main-inner').html('');
     $('.main-inner').append('<h1>Uploads (' + json.length + ')</h1>');
     
