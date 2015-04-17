@@ -102,3 +102,6 @@ DM5555 is a dev on the OS team.
 pilppe is a dev on the OS team. 
 * HTML
 * JavaScript
+
+-----------
+<sub>But wut if OpenSprites not kill? OpenSprites has 11 letters. 1+1 = 2. A person has 2 hands. Do you know what else has 2 hands? That's right, a clock. A clock shows the time. Time...Time has 4 letters. Do you know what sounds like time? That's right, Tim. Tim Horton's. Tim Horton's are located mostly in Canada. Canada has 6 letters. 4 letters for time, and 6 letters for Canada... Do you know what else has 4 and 6? That's right, the phrase 4spooky6me. AND THE ILLUMINATI IS 4SPOOKY6ME! OPENSPRITES = ILLUMINATI CONFIRMED!</sub>
