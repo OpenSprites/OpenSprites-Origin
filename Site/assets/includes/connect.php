@@ -12,6 +12,13 @@
         $logged_in_user = $html->find('h1#memberName', 0)->innertext;
         $user_group = $html->find('p#memberGroup span', 0)->innertext;
         $user_banned = $user_group == 'Suspended';
+
+        if($user_group == "Moderator" or $user_group == "Administrator")
+        {
+            //Debug Only!
+            echo "User has admin/moderator privileges!";
+            $is_admin = true;
+        }
     } else {
         $logged_in_userid = 0;
         $logged_in_user = 'not logged in';
