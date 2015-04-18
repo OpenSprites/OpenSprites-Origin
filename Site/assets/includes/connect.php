@@ -15,8 +15,6 @@
 
         if($user_group == "Moderator" or $user_group == "Administrator")
         {
-            //Debug Only!
-            echo "User has admin/moderator privileges!";
             $is_admin = true;
         }
     } else {
