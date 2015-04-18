@@ -4,3 +4,4 @@ ehthumbs.db
 node_modules/
 .idea/.name
 .idea/OpenSprites.iml
+.idea
