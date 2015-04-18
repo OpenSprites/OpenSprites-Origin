@@ -8,4 +8,4 @@ We keep it safe from prying eyes. The IP address we mentioned is logged in a fil
 ####I've heard about <del>Granny</del>Cookies, does OpenSprites place these on my computer?
 If you pardon the pun, a cookie is a small piece of harmless text that most websites place on your computer. This text is usually used by most sites to identify you across their site. We use cookies to keep you logged in without you needing to enter your password again. We also use cookies to make sure that you don't see a notice more than once. If you want to clear your cookies, <a href="http://www.wikihow.com/Clear-Your-Browser%27s-Cookies">this</a> how-to may explain how.
 
-Easy read privacy policy revision one. Originally written by cheeseeater on 08/02/2015, adapted on 18/04/2015. Most recent edits by cheeseeater on 18/04/2015 This policy is subject to change without prior notice.
+Easy read privacy policy revision one. Originally written by cheeseeater on 08/02/2015, adapted on 18/04/2015. Most recent edits by cheeseeater on 18/04/2015 The OpenSprites Team reserves the right to change, modify, remove and add text to this document without prior notice. This policy is subject to change.
