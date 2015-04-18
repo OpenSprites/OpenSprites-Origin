@@ -8,6 +8,10 @@
     font-family: monospace;
 }
 
+#sidebar a {
+    display: block;
+}
+
 #entries {
     position: absolute;
     left:     150px;

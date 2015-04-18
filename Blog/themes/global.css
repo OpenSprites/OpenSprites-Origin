@@ -1,3 +1,34 @@
+@import url("http://fonts.googleapis.com/css?family=Libre+Baskerville|Droid+Serif");
+
+body {
+    font-family: 'Libre Baskerville', 'Droid Serif';
+}
+
+code {
+    font-family: Monaco, Courier, monospace;
+}
+
 h1.entry-header a {
     color: black;
+}
+
+.login-alert {
+    z-index: 9999;
+    width: calc(100% - 35px);
+    height: 20px;
+    font-family: sans-serif;
+    position: absolute;
+    bottom: 5px;
+    left: 10px;
+    background-color: rgba(50, 255, 50, 180);
+    padding: 5px;
+}
+
+.login-alert.hide {
+    display: none;
+    transition-duration: 0.5s;
+}
+
+#entries {
+    height: 100%;
 }

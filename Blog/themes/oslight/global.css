@@ -2,24 +2,24 @@
 @import url("sidebar.css");
 
 #entries {
-    position:         absolute;
-    left:             150px;
-    top:              0px;
-    background-color: #8DD;
-    width:            calc(100% - 150px);
+    position: absolute;
+    left:     150px;
+    top:      35px;
+    width:    calc(100% - 170px);
 }
 
 .entry {
-    font-family:      Palatino, inherit;
-    background-color: #2DD;
+    background-color: #DED;
     padding:          10px;
     margin-bottom:    20px;
     margin-top:       20px;
 }
 
 .entry pre {
-    background-color: #DDD;
+    background-color: #FDFDFD;
     padding:          3px;
+    border:           1px solid #333;
+    border-radius:    3px;
 }
 
 .entry a {

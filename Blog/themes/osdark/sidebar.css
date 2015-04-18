@@ -1,0 +1,13 @@
+#sidebar {
+    background-color: #659593;
+    color:            white;
+    height:           30px;
+}
+
+#sidebar a, #sidebar h3 {
+    color: white;
+    padding-top: 21px;
+    padding-bottom: 5px;
+    margin: 0 !important;
+    border: 0 !important;
+}

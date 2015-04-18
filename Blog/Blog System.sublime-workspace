@@ -1,0 +1,1763 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"inputs",
+				"inputs	input - submit"
+			],
+			[
+				"inputc",
+				"inputc	input - color"
+			],
+			[
+				"font-",
+				"font-style"
+			],
+			[
+				"split",
+				"spliti"
+			],
+			[
+				"A",
+				"A_BOLD	(class)"
+			],
+			[
+				"log",
+				"log10"
+			],
+			[
+				"inl",
+				"inline-block"
+			],
+			[
+				"link",
+				"link	link - stylesheet"
+			],
+			[
+				"a",
+				"aprosopo_light_dirty_red"
+			],
+			[
+				"input",
+				"input	input - search"
+			],
+			[
+				"clien",
+				"client_width"
+			],
+			[
+				"b",
+				"boxes_element"
+			],
+			[
+				"on",
+				"ondblclick	Attr"
+			],
+			[
+				"if",
+				"iframe	Tag"
+			],
+			[
+				"dat",
+				"date_time_elem"
+			],
+			[
+				"crea",
+				"creator_url"
+			],
+			[
+				"name",
+				"name_elem"
+			],
+			[
+				"dump",
+				"dump_element"
+			],
+			[
+				"get",
+				"getElementById"
+			],
+			[
+				"http",
+				"http_request"
+			],
+			[
+				"content",
+				"counter-increment"
+			],
+			[
+				"navbarfile",
+				"navbarfilegetter"
+			],
+			[
+				"navbar",
+				"navbarfilecontents"
+			],
+			[
+				"nav",
+				"navbarfilegetter"
+			],
+			[
+				"getE",
+				"getElementsByTagName"
+			],
+			[
+				"t",
+				"timeout	setTimeout function"
+			],
+			[
+				"text",
+				"text-align"
+			],
+			[
+				"o",
+				"outline"
+			],
+			[
+				"valu",
+				"valueElements"
+			],
+			[
+				"tk",
+				"tEsIS4ZK2pYZLVy0dWOa9rGo5sjxxedsK4xUFK4ZWBqw8uIq2Km3VT6vtV5eufr0mek1rgV7ByoLBtQFr6wtVCuWFfevc1"
+			],
+			[
+				"border-col",
+				"border-collapse"
+			],
+			[
+				"te",
+				"text-decoration"
+			],
+			[
+				"text-",
+				"text-transform"
+			],
+			[
+				"poro",
+				"prototype"
+			],
+			[
+				"getMou",
+				"getMouseY"
+			],
+			[
+				"getMo",
+				"getMouseY"
+			],
+			[
+				"add",
+				"addEventListener"
+			],
+			[
+				"_after",
+				"_afterspritesloop"
+			],
+			[
+				"proto",
+				"prototype"
+			],
+			[
+				"sp",
+				"sprite2"
+			],
+			[
+				"l",
+				"log"
+			],
+			[
+				"fig",
+				"figcaption	<figcaption>"
+			],
+			[
+				"Labe",
+				"Labelframe	(class)"
+			],
+			[
+				"s",
+				"string"
+			],
+			[
+				"c",
+				"constant"
+			],
+			[
+				"list",
+				"listordered	orderedlist: ..."
+			],
+			[
+				"li",
+				"listdescription	descriptionlist: ..."
+			],
+			[
+				"in",
+				"input	input - text"
+			],
+			[
+				"getJsonFrom",
+				"getJsonFromPID"
+			],
+			[
+				"er",
+				"error	(class)"
+			],
+			[
+				"switch_s",
+				"switch_style"
+			],
+			[
+				"_",
+				"__"
+			],
+			[
+				"cl",
+				"close	(function)"
+			],
+			[
+				"read",
+				"readlines	(function)"
+			],
+			[
+				"styl",
+				"stylesheet"
+			],
+			[
+				"compl",
+				"complicated"
+			],
+			[
+				"pass",
+				"password	(statement)"
+			],
+			[
+				"hi",
+				"highlight_dict	(function)"
+			],
+			[
+				"add_",
+				"add_cascade	(function)"
+			],
+			[
+				"Extension",
+				"ExtensionStyle	(module)"
+			],
+			[
+				"extSrc",
+				"extSrc	(module)"
+			],
+			[
+				"highli",
+				"highlight_pattern	(function)"
+			],
+			[
+				"server_",
+				"server_activate	(function)"
+			],
+			[
+				"ad",
+				"add_command	(function)"
+			],
+			[
+				"high",
+				"highlight_dict"
+			],
+			[
+				"for",
+				"for	for (…) {…} (Improved Native For-Loop)"
+			],
+			[
+				"i",
+				"ife	if … else"
+			],
+			[
+				"r",
+				"raise	(keyword)"
+			],
+			[
+				"rota",
+				"rotate	rotateY"
+			],
+			[
+				"co",
+				"comment"
+			],
+			[
+				"p",
+				"pattern	(YAML-tmLanguage pattern)"
+			],
+			[
+				"tagSel",
+				"tagSelectionBG	(statement)"
+			],
+			[
+				"tagSelection",
+				"tagSelectionFG"
+			],
+			[
+				"selection",
+				"selectionTagForeground	(statement)"
+			],
+			[
+				"advancedGrid",
+				"advancedGridTargetLabel	(statement)"
+			],
+			[
+				"cod",
+				"command	<command>"
+			],
+			[
+				"indivi",
+				"individuals_length"
+			],
+			[
+				"individuals",
+				"individuals_name"
+			],
+			[
+				"data",
+				"data"
+			],
+			[
+				"ex",
+				"exit"
+			],
+			[
+				"fc",
+				"fam_close"
+			],
+			[
+				"global",
+				"global	(keyword)"
+			],
+			[
+				"height",
+				"min-height"
+			],
+			[
+				"cco",
+				"colmc	column-count"
+			],
+			[
+				"cc",
+				"ct-c	content: counter(${0});"
+			],
+			[
+				"arti",
+				"article_contents"
+			],
+			[
+				"textarea",
+				"textarea	Tag"
+			],
+			[
+				"n",
+				"armenian"
+			],
+			[
+				"h",
+				"h	<h1> - <h6>"
+			],
+			[
+				"x",
+				"x	(forflow)"
+			],
+			[
+				"line",
+				"lineHighlight"
+			],
+			[
+				"rand",
+				"randrange	(statement)"
+			],
+			[
+				"Inhabited",
+				"InhabitedTownTraditional	(class)"
+			],
+			[
+				"init",
+				"isinstance	(function)"
+			],
+			[
+				"AVG",
+				"AVG_POPULATION_MAX	(statement)"
+			],
+			[
+				"AVG_",
+				"AVG_POPULATION_MIN	(statement)"
+			],
+			[
+				"img",
+				"img	Tag"
+			],
+			[
+				"html",
+				"html5	Simple HTML5 Boilerplate"
+			],
+			[
+				"f",
+				"f	Anonymous Function"
+			],
+			[
+				"ani",
+				"anim	animation"
+			],
+			[
+				"anim",
+				"anim-	animation: ${1:name} ${2:duration} ${3:timing-function} ${4:delay} ${5:iteration-count} ${6:direction} ${7:fill-mode};"
+			],
+			[
+				"bkb",
+				"bdbk	border-break: ${1:close};"
+			],
+			[
+				"pos",
+				"pos-s	position: static;"
+			],
+			[
+				"debug",
+				"DEBUGGER	(function)"
+			],
+			[
+				"id",
+				"INSIDE	(statement)"
+			],
+			[
+				"MAKE_WIN",
+				"MAKE_WIN_EDITOR	(function)"
+			],
+			[
+				"ge",
+				"GeneratorExit	(class)"
+			],
+			[
+				"g",
+				"getboolean	(function)"
+			],
+			[
+				"all",
+				"all_lines	(statement)"
+			],
+			[
+				"pr",
+				"pardir	(class)"
+			],
+			[
+				"subtit",
+				"subtitle_file	(statement)"
+			],
+			[
+				"sub",
+				"subtitle_file	(statement)"
+			],
+			[
+				"m",
+				"m	method"
+			],
+			[
+				"get_",
+				"get_mechanical_advantage	(function)"
+			],
+			[
+				"effort_",
+				"effort_arm	(statement)"
+			],
+			[
+				"effo",
+				"effort_arm"
+			],
+			[
+				"st",
+				"StandardError	(class)"
+			],
+			[
+				"CustomName",
+				"CustomNameVisible"
+			],
+			[
+				"de",
+				"destroy"
+			],
+			[
+				"tr",
+				"try	Try/Except/Else"
+			],
+			[
+				"try",
+				"try	Try/Except/Finally"
+			],
+			[
+				"e",
+				"echoh	<?php echo htmlentities(…) ?>"
+			],
+			[
+				"fie",
+				"file_to_open"
+			],
+			[
+				"code",
+				"codemirror-4"
+			],
+			[
+				"dialog",
+				"dialog_input"
+			],
+			[
+				"default_op",
+				"default_options_contents"
+			],
+			[
+				"default_name",
+				"default_name"
+			],
+			[
+				"liam",
+				"liamapp"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "editor.php",
+			"settings":
+			{
+				"buffer_size": 3082,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "entries/1.xml",
+			"settings":
+			{
+				"buffer_size": 1922,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "editor.css",
+			"settings":
+			{
+				"buffer_size": 598,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "editorpost.php",
+			"settings":
+			{
+				"buffer_size": 446,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "blogoverview.php",
+			"settings":
+			{
+				"buffer_size": 2579,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "entries/index.php",
+			"settings":
+			{
+				"buffer_size": 320,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": ".htaccess",
+			"settings":
+			{
+				"buffer_size": 203,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 375.0,
+		"selected_items":
+		[
+			[
+				"Set Syntax: Report",
+				"Set Syntax: Report"
+			],
+			[
+				"Set Syntax: Rep",
+				"Set Syntax: Report"
+			],
+			[
+				"",
+				":w - Save"
+			],
+			[
+				"Set Syntax: REpo",
+				"Set Syntax: Reports Layout"
+			],
+			[
+				"Set Syntax: Reports",
+				"Set Syntax: Reports Layout"
+			],
+			[
+				"AAAPack",
+				"z:AAAPackageDev: New YAML Syntax Definition"
+			],
+			[
+				"JAVASCRIPT",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"Disable",
+				"Package Control: Disable Package"
+			],
+			[
+				"Achievem",
+				"Achievement: View Achievements"
+			],
+			[
+				":",
+				":0 - BOF"
+			],
+			[
+				"Pep",
+				"Python: Disable Pep8 Linting On View"
+			],
+			[
+				"Disable ",
+				"Package Control: Disable Package"
+			],
+			[
+				"Disab",
+				"Package Control: Disable Package"
+			],
+			[
+				"Remove P",
+				"Package Control: Remove Package"
+			],
+			[
+				"Package",
+				"Package Control: Disable Package"
+			],
+			[
+				"Set Syn",
+				"Set Syntax: Scratchblocks"
+			],
+			[
+				"Lorem",
+				"Snippet: Lorem ipsum"
+			],
+			[
+				"Set synta",
+				"Set Syntax: QBasic"
+			],
+			[
+				"Set Syntax: Q",
+				"Set Syntax: QBasic"
+			],
+			[
+				"New ",
+				"z:AAAPackageDev: New YAML Syntax Definition"
+			],
+			[
+				"Set syntax: BB",
+				"Set Syntax: BBCode"
+			],
+			[
+				"Set S",
+				"Set Syntax: Scratchblocks"
+			],
+			[
+				"Set SYntax: BBC",
+				"Set Syntax: BBCode"
+			],
+			[
+				"New Sett",
+				"z:AAAPackageDev: New Settings File"
+			],
+			[
+				"Set Syntax: HTMLC",
+				"Set Syntax: HTMLcompile"
+			],
+			[
+				"Set Syntax: HTML",
+				"Set Syntax: HTML"
+			],
+			[
+				"New Snippet",
+				"z:AAAPackageDev: New Raw Snippet"
+			],
+			[
+				"New Yaml",
+				"z:AAAPackageDev: New YAML Syntax Definition"
+			],
+			[
+				"Set syntax: HTMLC",
+				"Set Syntax: HTMLcompile"
+			],
+			[
+				"Set s",
+				"Set Syntax: Scratchblocks"
+			],
+			[
+				"Delete ",
+				"z:AAAPackageDev: Delete Package"
+			],
+			[
+				"New Package",
+				"z:AAAPackageDev: New Package"
+			],
+			[
+				"Set Syntax: Log",
+				"Set Syntax: Log"
+			],
+			[
+				"Set SY",
+				"Set Syntax: YAML"
+			],
+			[
+				"NEw YAML",
+				"z:AAAPackageDev: New YAML Syntax Definition"
+			],
+			[
+				"New JSON",
+				"z:AAAPackageDev: New JSON Syntax Definition"
+			],
+			[
+				"Package Remove",
+				"Package Control: Remove Package"
+			],
+			[
+				"Set SYnta",
+				"Set Syntax: Scratchblocks"
+			],
+			[
+				"New Syntax",
+				"z:AAAPackageDev: New YAML Syntax Definition"
+			],
+			[
+				"z:AAAPackageDev: New ",
+				"z:AAAPackageDev: New PList Syntax Definition"
+			],
+			[
+				"Set syntax: htmlc",
+				"Set Syntax: HTMLcompile"
+			],
+			[
+				"Set SYntax: HTML",
+				"Set Syntax: HTMLcompile"
+			],
+			[
+				"Theme",
+				"Colorsublime: Install Theme"
+			],
+			[
+				"Set theme",
+				"Colorsublime: Install Theme"
+			],
+			[
+				"Instlal",
+				"Colorsublime: Install Theme"
+			],
+			[
+				"Colorsublime",
+				"Colorsublime: Browse Themes"
+			],
+			[
+				"Set Syntax: Basic",
+				"Set Syntax: BasicEdit Syntax File"
+			],
+			[
+				"Edit Curr",
+				"Color Scheme Editor: Edit current color scheme"
+			],
+			[
+				"Edit Current",
+				"Color Scheme Editor: Edit current color scheme"
+			],
+			[
+				"Bash",
+				"Set Syntax: Shell Script (Bash)"
+			],
+			[
+				"Package Enable",
+				"Package Control: Enable Package"
+			],
+			[
+				"Package Disable",
+				"Package Control: Disable Package"
+			],
+			[
+				"PackageEnable",
+				"Package Control: Enable Package"
+			],
+			[
+				"Package Control: Disable",
+				"Package Control: Disable Package"
+			],
+			[
+				"Package Control: Disab",
+				"Package Control: Disable Package"
+			],
+			[
+				"set syntax: mine",
+				"Set Syntax: Minecraft Command Format"
+			],
+			[
+				"Set Syntax: Mine",
+				"Set Syntax: Minecraft Command Format"
+			],
+			[
+				"Set Syntax: Man",
+				"Set Syntax: Manual"
+			],
+			[
+				"Set Syntax: Minec",
+				"Set Syntax: Minecraft Command Format"
+			],
+			[
+				"Set Syntax: Minecraft",
+				"Set Syntax: Minecraft Command Format"
+			],
+			[
+				"Snippet Make",
+				"SnippetMaker: Make Snippet"
+			],
+			[
+				"Snippet: N",
+				"SnippetMaker: Make Snippet"
+			],
+			[
+				"Set Syntax: FTP",
+				"Set Syntax: FTP"
+			],
+			[
+				"Install",
+				"Colorsublime: Install Theme"
+			],
+			[
+				"Pack",
+				"Package Control: Disable Package"
+			],
+			[
+				"Sort",
+				"Sort Lines"
+			],
+			[
+				"Set Syntax: Matt",
+				"Set Syntax: Mattlang"
+			],
+			[
+				"YAML",
+				"z:AAAPackageDev: Convert (YAML, JSON, PList) to…"
+			],
+			[
+				"Y",
+				"z:AAAPackageDev: Convert (YAML, JSON, PList) to…"
+			],
+			[
+				"Set Syntax: ftp",
+				"Set Syntax: FTPlang"
+			],
+			[
+				"Color Scheme",
+				"Color Scheme Editor: Edit current color scheme"
+			],
+			[
+				"AAA",
+				"z:AAAPackageDev: New YAML Syntax Definition"
+			],
+			[
+				"AAAPackageDev: Convert (Y",
+				"z:AAAPackageDev: Convert (YAML, JSON, PList) to…"
+			],
+			[
+				"Snippet:",
+				"Snippet: #!/usr/bin/env"
+			],
+			[
+				"PHP",
+				"PHP Code Sniffer: Sniff this file"
+			],
+			[
+				"PHP Code Sniffer:",
+				"PHP Code Sniffer: Turn Execute On Save On"
+			],
+			[
+				"Package Install",
+				"Package Control: Install Package"
+			],
+			[
+				"Edit Color",
+				"Color Scheme Editor: Edit current color scheme"
+			],
+			[
+				"Snippet: set",
+				"Snippet: setTimeout function"
+			],
+			[
+				"lorem",
+				"Snippet: Lorem ipsum"
+			],
+			[
+				"Project: ADd",
+				"Project: Add Folder"
+			],
+			[
+				":0",
+				":0 - BOF"
+			],
+			[
+				"Markdown",
+				"Markdown HTML Preview"
+			],
+			[
+				"Markdown ",
+				"Markdown HTML Preview"
+			],
+			[
+				"HTML Preview",
+				"Markdown HTML Preview"
+			],
+			[
+				"Package Control :Install",
+				"Package Control: Install Package"
+			],
+			[
+				"JS",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"Edit color",
+				"Color Scheme Editor: Edit current color scheme"
+			],
+			[
+				"Edit Cure",
+				"Color Scheme Editor: Edit current color scheme"
+			],
+			[
+				"Edit Co",
+				"Color Scheme Editor: Edit current color scheme"
+			],
+			[
+				"Package Control: ",
+				"Package Control: List Packages"
+			],
+			[
+				"ColorSublime",
+				"Colorsublime: Install Theme"
+			],
+			[
+				"Make Snippet",
+				"SnippetMaker: Make Snippet"
+			],
+			[
+				"SnippetMaker:",
+				"SnippetMaker: Edit Snippet"
+			],
+			[
+				"Snippet",
+				"SnippetMaker: Make Snippet"
+			],
+			[
+				"Package ",
+				"Package Control: Install Package"
+			],
+			[
+				"HTML",
+				"Snippet: Simple HTML5 Boilerplate"
+			],
+			[
+				"Html",
+				"Snippet: html"
+			],
+			[
+				"Package Control:",
+				"Package Control: Add Repository"
+			],
+			[
+				"Package Control Create",
+				"Package Control: Create Package File"
+			],
+			[
+				"Color",
+				"Colorsublime: Install Theme"
+			],
+			[
+				"Install ",
+				"Colorsublime: Install Theme"
+			],
+			[
+				"Achie",
+				"Achievement: View Achievements"
+			],
+			[
+				"$",
+				":$ - EOF"
+			],
+			[
+				":$",
+				":$ - EOF"
+			],
+			[
+				"JS ",
+				"Project: Refresh Folders"
+			],
+			[
+				"Color Editor",
+				"Color Scheme Editor: Edit current color scheme"
+			],
+			[
+				"Achivements",
+				"Achievement: View Achievements"
+			],
+			[
+				"about",
+				"About"
+			],
+			[
+				":w",
+				":w - Save"
+			],
+			[
+				"test",
+				"TabsExtra: Sort Tabs"
+			],
+			[
+				"Set Syntax: HTML5",
+				"Set Syntax: HTML5"
+			],
+			[
+				"Achieve",
+				"Achievement: View Achievements"
+			],
+			[
+				"Color Code",
+				"Color Scheme Editor: Edit current color scheme"
+			],
+			[
+				"Mark",
+				"Set Syntax: Markdown"
+			],
+			[
+				"Delete",
+				"HTML: Encode Special Characters"
+			],
+			[
+				"Set Syntax: Python",
+				"Set Syntax: Python"
+			],
+			[
+				"Python",
+				"Set Syntax: Regular Expressions (Python)"
+			],
+			[
+				"Python Refactor:",
+				"Python Refactor: Extract Method"
+			],
+			[
+				"Zip",
+				"Python Refactor: Organize Imports"
+			],
+			[
+				"Edit ",
+				"Color Scheme Editor: Edit current color scheme"
+			],
+			[
+				"A",
+				"Achievement: View Achievements"
+			],
+			[
+				"Edit",
+				"Color Scheme Editor: Edit current color scheme"
+			],
+			[
+				"Coloer",
+				"Color Scheme Editor: Edit current color scheme"
+			],
+			[
+				"Package Control: Install",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control",
+				"Package Control: Add Repository"
+			],
+			[
+				"Package Control: Enable",
+				"Package Control: Enable Package"
+			],
+			[
+				"Settings",
+				"Preferences: Settings - Default"
+			]
+		],
+		"width": 570.0
+	},
+	"console":
+	{
+		"height": 290.0,
+		"history":
+		[
+			"view.run_command('ClearSelectoin')",
+			"view.run_command('example')",
+			"print(\"\\n\" * 100)",
+			"cls",
+			"clear",
+			"print(\"eh?\")",
+			"print",
+			"print \"eh?\"",
+			"subl src",
+			"import urllib.request,os,hashlib; h = '7183a2d3e96f11eeadd761d777e62404' + 'e330c659d4bb41d3bdf022e94cab3cd0'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)",
+			"print \"Python 2\"",
+			"print(\"Python 3\")",
+			"print(4 + 3)",
+			"print 4 + 3",
+			"print",
+			":(",
+			"exit()",
+			"exit",
+			"python",
+			"print \"Hello\"",
+			"print \"Hello.\"",
+			"print 'Hi.'",
+			"help"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": true,
+		"show_open_files": false,
+		"show_tabs": true,
+		"side_bar_visible": false,
+		"status_bar_visible": true
+	},
+	"expanded_folders":
+	[
+		"/Users/towerofnix/Desktop/Blog System",
+		"/Users/towerofnix/Desktop/Blog System/entries"
+	],
+	"file_history":
+	[
+		"/Users/towerofnix/Documents/Scratch/0.py",
+		"/Users/towerofnix/Desktop/Blog System/entries/1.xml",
+		"/Users/towerofnix/Desktop/Blog System/editor.js",
+		"/Users/towerofnix/Desktop/Blog System/themes/global.css",
+		"/Users/towerofnix/Desktop/Blog System/editor.css",
+		"/Users/towerofnix/Desktop/Blog System/entries/index.php",
+		"/Users/towerofnix/Desktop/Blog System/themes/login.css",
+		"/Users/towerofnix/Desktop/Blog System/login.php",
+		"/Users/towerofnix/Desktop/Blog System/password.php",
+		"/Users/towerofnix/Desktop/Blog System/header.php",
+		"/Users/towerofnix/Desktop/Blog System/includes.php",
+		"/Users/towerofnix/Library/Application Support/Sublime Text 3/Packages/User/Preferences.sublime-settings",
+		"/Users/towerofnix/Desktop/Homeschooling/Writing/Reports/Books Information.report",
+		"/Users/towerofnix/Desktop/Homeschooling/Writing/Reports/Books Layout.report",
+		"/Users/towerofnix/Desktop/Homeschooling/Writing/Reports/Books Sources.report",
+		"/Users/towerofnix/Desktop/Homeschooling/Writing/Reports/Books Introduction.report",
+		"/Users/towerofnix/Desktop/Homeschooling/Learning God's World/Understanding God's World/view.xsl",
+		"/Users/towerofnix/Desktop/Homeschooling/Learning God's World/Understanding God's World/cc51.xml",
+		"/Users/towerofnix/Desktop/Homeschooling/Learning God's World/Understanding God's World/cc21.xml",
+		"/Users/towerofnix/Desktop/Homeschooling/Learning God's World/Understanding God's World/Server.command",
+		"/Users/towerofnix/Desktop/Homeschooling/Learning God's World/Understanding God's World/style.css",
+		"/Users/towerofnix/Desktop/Homeschooling/Learning God's World/Understanding God's World/Comprehension Check 2-1.xml",
+		"/Users/towerofnix/Desktop/Homeschooling/Learning God's World/Understanding God's World/Compile.command",
+		"/Users/towerofnix/Desktop/Homeschooling/Learning God's World/Understanding God's World/View.xsl",
+		"/Users/towerofnix/Desktop/Homeschooling/Learning God's World/Understanding God's World/View.xml",
+		"/Users/towerofnix/Desktop/qqqqq.py",
+		"/Users/towerofnix/Desktop/helloworld.comment",
+		"/Users/towerofnix/Desktop/comments.py",
+		"/Applications/Portal 2/portal2/lights.rad",
+		"/Applications/Portal 2/portal2/demoheader.tmp",
+		"/Applications/Portal 2/portal2/voice_ban.dt",
+		"/Applications/Portal 2/portal2/dxsupport_override.cfg",
+		"/Users/towerofnix/Library/Application Support/Sublime Text 3/Packages/User/reportsLayout.YAML-tmLanguage",
+		"/Users/towerofnix/Desktop/Homeschooling/Writing/Reports/parsereport.py",
+		"/Users/towerofnix/Desktop/Homeschooling/Writing/Reports/Books Introduction.reportText",
+		"/Users/towerofnix/Desktop/Homeschooling/Writing/Reports/Books.reportLayout",
+		"/Users/towerofnix/Library/Application Support/Sublime Text 3/Packages/User/reportsLayout.tmLanguage",
+		"/Users/towerofnix/Desktop/Homeschooling/Writing/Reports/Books.reportLayout.as",
+		"/Users/towerofnix/Library/Application Support/minecraft/stats/stats_liammorgaine_unsent.old",
+		"/Users/towerofnix/Library/Application Support/minecraft/crash-reports/crash-2014-11-09_11.42.34-client.txt",
+		"/Users/towerofnix/Library/Application Support/minecraft/output-server.log",
+		"/Users/towerofnix/Library/Application Support/minecraft/output-client.log",
+		"/Users/towerofnix/Desktop/PythonGames/Space Invaders.py",
+		"/Users/towerofnix/Library/Application Support/minecraft/usercache.json",
+		"/Users/towerofnix/Desktop/test.py",
+		"/Users/towerofnix/Minecraft Versions/1.8/resourcepacks/Custom Sky/Custom Sky/assets/minecraft/mcpatcher/sky/world0/sky1.properties",
+		"/Users/towerofnix/Library/Processing/preferences.txt",
+		"/Users/towerofnix/Documents/Visual-Blocks/demos/trim.js",
+		"/Users/towerofnix/Documents/Visual-Blocks/docs/index.html",
+		"/Users/towerofnix/Documents/Visual-Blocks/demos/scratchblocks.html",
+		"/Users/towerofnix/Documents/Visual-Blocks/visualblocks.css",
+		"/Users/towerofnix/Documents/Visual-Blocks/scratchblocks.html",
+		"/Users/towerofnix/Desktop/easy_ftp.py",
+		"/Users/towerofnix/Desktop/Survival Server/minecraft_server.1.7.10.jar",
+		"/Users/towerofnix/Documents/OpenSprites/Blog/liam4/themes/blue/global.css",
+		"/Users/towerofnix/Documents/OpenSprites/Blog/liam4/themes/beigelight/global.css",
+		"/Users/towerofnix/Documents/OpenSprites/Blog/liam4/editor.php",
+		"/Users/towerofnix/Documents/OpenSprites/Blog/liam4/editor.css",
+		"/Users/towerofnix/Documents/OpenSprites/Blog/liam4/header.php",
+		"/Users/towerofnix/Documents/OpenSprites/Blog/liam4/blogload.js",
+		"/Users/towerofnix/Documents/OpenSprites/Blog/liam4/themes/beigedark/footer.css",
+		"/Users/towerofnix/Documents/OpenSprites/Blog/liam4/footer.php",
+		"/Users/towerofnix/Documents/OpenSprites/Blog/liam4/.htaccess",
+		"/Users/towerofnix/Documents/OpenSprites/Blog/liam4/entries/error_loading.xml",
+		"/Users/towerofnix/Documents/OpenSprites/Blog/liam4/editor.js",
+		"/Users/towerofnix/Documents/OpenSprites/Blog/liam4/HELP.php",
+		"/Users/towerofnix/Documents/OpenSprites/Blog/liam4/themes/sidebarright.css",
+		"/Users/towerofnix/Documents/OpenSprites/Blog/liam4/themes/sidebarleft.css",
+		"/Users/towerofnix/Documents/OpenSprites/Blog/liam4/themes/beigedark/global.css",
+		"/Users/towerofnix/Documents/OpenSprites/Blog/liam4/themes/beigedark/sidebar.css",
+		"/Users/towerofnix/Documents/OpenSprites/Blog/liam4/themes/beigelight/footer.css",
+		"/Users/towerofnix/Documents/OpenSprites/Blog/liam4/themes/beigelight/sidebar.css",
+		"/Users/towerofnix/Documents/OpenSprites/Blog/liam4/themes/blue/sidebar.css",
+		"/Users/towerofnix/Documents/OpenSprites/Blog/liam4/sidebar.php",
+		"/Users/towerofnix/Documents/OpenSprites/Blog/liam4/themes/sidebarasnavbar.css",
+		"/Users/towerofnix/Documents/OpenSprites/Blog/liam4/themes/blue/footer.css",
+		"/Users/towerofnix/Documents/OpenSprites/Blog/liam4/blogoverview.css",
+		"/Users/towerofnix/Documents/OpenSprites/Blog/liam4/blogoverview.php",
+		"/Users/towerofnix/Documents/OpenSprites/Blog/liam4/themes/red/sidebar.css",
+		"/Users/towerofnix/Documents/OpenSprites/Blog/liam4/themes/red/global.css",
+		"/Users/towerofnix/Documents/OpenSprites/Blog/liam4/viewpost.php",
+		"/Users/towerofnix/Documents/OpenSprites/Blog/liam4/themes/global.css",
+		"/Users/towerofnix/Documents/OpenSprites/Blog/liam4/index.php",
+		"/Users/towerofnix/Documents/OpenSprites/Blog/liam4/entries/2.xml",
+		"/Users/towerofnix/Documents/OpenSprites/Blog/liam4/entries/1.xml",
+		"/Users/towerofnix/Documents/OpenSprites/Blog/liam4/entries/4.xml",
+		"/Users/towerofnix/Documents/OpenSprites/Blog/liam4/entries/index.php",
+		"/Users/towerofnix/Documents/OpenSprites/Blog/liam4/entries/3.xml",
+		"/Users/towerofnix/Documents/OpenSprites/Blog/liam4/footer.css",
+		"/Users/towerofnix/Downloads/xaric-0.13.6/install-sh",
+		"/Users/towerofnix/Documents/OpenSprites/node_modules/marked/marked.min.js",
+		"/Users/towerofnix/Documents/OpenSprites/Blog/liam4/global.css",
+		"/Users/towerofnix/Library/Application Support/Sublime Text 3/Packages/User/qbasic.YAML-tmLanguage",
+		"/Users/towerofnix/Documents/OpenSprites/Blog/liam4/includes.php",
+		"/Users/towerofnix/OpenSprites/Blog/liam4/index.php",
+		"/Users/towerofnix/Downloads/Makefile",
+		"/Users/towerofnix/Desktop/Project with Dad/browser.css",
+		"/Users/towerofnix/Desktop/Project with Dad/global.css",
+		"/Users/towerofnix/Desktop/Project with Dad/browser-tabs.js",
+		"/Users/towerofnix/Desktop/Project with Dad/boxes.js",
+		"/Users/towerofnix/Desktop/Project with Dad/global.js",
+		"/Users/towerofnix/Desktop/Project with Dad/boxes.css",
+		"/Users/towerofnix/Desktop/Project with Dad/index.html",
+		"/Users/towerofnix/Desktop/binaries.py",
+		"/Users/towerofnix/Downloads/CjAZ_0.txt",
+		"/Users/towerofnix/Desktop/World Book in Directories 2001/What/does/an aardvark/look like.txt",
+		"/Users/towerofnix/Desktop/World Book in Directories 2001/What/is/an aardvark.txt",
+		"/Users/towerofnix/Desktop/World Book in Directories 2001/What/is/the length of/an aardvark.txt",
+		"/Users/towerofnix/Library/Application Support/Sublime Text 3/Packages/Default/Preferences.sublime-settings",
+		"/Users/towerofnix/Game/game.py",
+		"/Users/towerofnix/Documents/MinecraftGUI/example.html",
+		"/Users/towerofnix/Documents/Hi.sprite2",
+		"/Users/towerofnix/Desktop/World Book in Directories 2001/What/is/the weight of/an aardvark.txt",
+		"/Users/towerofnix/Desktop/World Book in Directories 2001/What/is/the color of/an aardvark.txt",
+		"/Users/towerofnix/Desktop/World Book in Directories 2001/When/does/an aardvark/give birth.txt",
+		"/Users/towerofnix/Desktop/World Book in Directories 2001/What/does/an aardvark/eat.txt",
+		"/Users/towerofnix/Desktop/World Book in Directories 2001/When/does/an aardvark/look like.txt",
+		"/Users/towerofnix/Desktop/World Book in Directories 2001/What/does/the aardvark/eat.txt",
+		"/Users/towerofnix/Desktop/World Book in Directories 2001/What/does/the aardvark/eat.tst",
+		"/Users/towerofnix/Downloads/recipe-576704-1.py",
+		"/Users/towerofnix/Paperscripts/paperscripts.github.io/navbar.xml",
+		"/Users/towerofnix/Paperscripts/paperscripts.github.io/global.js",
+		"/Users/towerofnix/Paperscripts/paperscripts.github.io/navbar.css",
+		"/Users/towerofnix/Paperscripts/paperscripts.github.io/global.css",
+		"/Users/towerofnix/Paperscripts/paperscripts.github.io/index.html",
+		"/Users/towerofnix/Desktop/Web Designer/editext.js",
+		"/Users/towerofnix/Desktop/Web Designer/global.css",
+		"/Users/towerofnix/Desktop/Web Designer/index.html"
+	],
+	"find":
+	{
+		"height": 37.0
+	},
+	"find_in_files":
+	{
+		"height": 93.0,
+		"where_history":
+		[
+			"1.xml",
+			"<open files>",
+			"//Users/towerofnix/Documents/ExperimentalExtension/test.py",
+			"//Users/towerofnix/Documents/Python/Tutorials/test.py",
+			"//Users/towerofnix/Documents/Python/Tutorials/curses",
+			""
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"script",
+			"&lt;script&gt;",
+			"<script>",
+			"$i",
+			"$T",
+			"\n*",
+			"<script>",
+			"entries",
+			"/*.",
+			"xml",
+			"1",
+			"contents>",
+			"header>",
+			"entry",
+			"b:entry",
+			"/b:entry",
+			"blog",
+			"ruler",
+			"=",
+			"floor",
+			"this._mousepos",
+			"#Include /private/etc/apache2/extra/httpd-vhosts.conf",
+			"e",
+			"o",
+			"k",
+			"m",
+			"k",
+			"stylesheet",
+			" ",
+			"Comment",
+			"Warning",
+			"Support",
+			"String",
+			"def _flatten",
+			"size",
+			"Open",
+			"Open()",
+			"lcd",
+			"matt",
+			"php",
+			"<a href=",
+			"<a ",
+			"<a",
+			"Strings",
+			"font_window",
+			"Split",
+			"S",
+			"\"\"",
+			"  ",
+			"\n    ",
+			"description",
+			".</",
+			"Hello",
+			"title",
+			"		\n",
+			"win",
+			"startcolor",
+			"></",
+			"class",
+			"li",
+			"keyword",
+			"span",
+			"class",
+			"keyword",
+			">\n",
+			">:</",
+			"	\n",
+			"str",
+			"screen",
+			"myscreen",
+			"nto_one_line",
+			"keyword"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": true,
+		"replace_history":
+		[
+			"blogcontents>",
+			"blogheader>",
+			"blogentry",
+			"/blogentry",
+			"b",
+			"*",
+			"g",
+			"q",
+			"m",
+			"k",
+			"m",
+			"-",
+			"$=-=-=-= = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =$\n$ = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = $\n$= = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =$",
+			"myscreen"
+		],
+		"reverse": false,
+		"show_context": false,
+		"use_buffer2": false,
+		"whole_word": false,
+		"wrap": false
+	},
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "editor.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3082,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2158,
+								2158
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"tab_size": 4,
+							"tabs_extra_last_activated": 1426697377.32,
+							"tabs_extra_last_activated_sheet_index": 0,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 413.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "entries/1.xml",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1922,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/XML/XML.tmLanguage",
+							"tab_size": 4,
+							"tabs_extra_last_activated": 1426693711.17,
+							"tabs_extra_last_activated_sheet_index": 1,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "editor.css",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 598,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								57,
+								57
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CSS/CSS.tmLanguage",
+							"tab_size": 4,
+							"tabs_extra_last_activated": 1426693490.82,
+							"tabs_extra_last_activated_sheet_index": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "editorpost.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 446,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								446,
+								446
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"tabs_extra_last_activated": 1426693500.32,
+							"tabs_extra_last_activated_sheet_index": 3
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "blogoverview.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2579,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"tab_size": 4,
+							"tabs_extra_last_activated": 1426693505.18,
+							"tabs_extra_last_activated_sheet_index": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "entries/index.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 320,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								7,
+								7
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"tabs_extra_last_activated": 1426693604.43,
+							"tabs_extra_last_activated_sheet_index": 5
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": ".htaccess",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 203,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								6,
+								6
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage",
+							"tabs_extra_last_activated": 1426693635.67,
+							"tabs_extra_last_activated_sheet_index": 6
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 22.0
+	},
+	"input":
+	{
+		"height": 31.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 148.0
+	},
+	"output.find_results":
+	{
+		"height": 96.0
+	},
+	"output.package_dev":
+	{
+		"height": 188.0
+	},
+	"output.unsaved_changes":
+	{
+		"height": 94.0
+	},
+	"project": "Blog System.sublime-project",
+	"replace":
+	{
+		"height": 40.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+			[
+				"sublime-theme",
+				"SublimeLinter/fixed-syntaxes/HTML/HTML.tmLanguage"
+			],
+			[
+				"",
+				"~/Documents/HTML/SpanCode/html_to_spancode.py"
+			],
+			[
+				".",
+				"~/Documents/Python/CTUI/ctui.py"
+			],
+			[
+				"cactus",
+				"WorldGenCactus.java"
+			],
+			[
+				"bow",
+				"ItemBow.java"
+			],
+			[
+				"potion",
+				"Potion.java"
+			],
+			[
+				"time",
+				"Timer.java"
+			],
+			[
+				"achievemnt",
+				"GuiAchievements.java"
+			],
+			[
+				"achievement",
+				"GuiAchievement.java"
+			],
+			[
+				"item",
+				"Item.java"
+			],
+			[
+				"blockclay",
+				"BlockClay.java"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"selected_items":
+		[
+			[
+				"",
+				"~/Desktop/Blog System/Blog System.sublime-project"
+			]
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 268.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+		"max_columns": 1
+	}
+}

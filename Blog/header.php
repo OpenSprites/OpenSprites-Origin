@@ -1,31 +1,46 @@
-<!-- Main header file containing scripts, stylesheets, and config. -->
+<?php /* Main header file containing scripts, stylesheets, and config. */ ?>
 
-<?php ### Important things; don't remove or change. ### ?>
+<?php /* Important things; don't remove or change. */ ?>
 <meta coding="utf-8">
 <link rel="stylesheet" href="themes/global.css">
 <script src="blogload.js" type="text/javascript"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script src="jquery-1.10.2.min.js" type="text/javascript"></script>
 <script src="marked/marked.min.js" type="text/javascript"></script>
 
-<?php ### About you ### ?>
-<meta name="author"      content="  Fill this in!  ">
-<meta name="description" content="  Fill this in!  ">
-<meta name="keywords"    content="  Fill this in!  ">
+<?php /* About you */ ?>
+<meta name="author"      content="The OpenSprites Team">
+<meta name="description" content="A group of pigeons working on OpenSprites.">
+<meta name="keywords"    content="OS, OpenSprites, OpenSpites Team, OS Team, Blog">
 <?php
 
-    $AUTHOR_NAME    = "  Fill this in!  ";
-    $AUTHOR_LINK    = "  Fill this in!  ";
-    $SITE_KEYWORDS  = "  Fill this in!  ";
+    $AUTHOR_NAME    = "The OpenSprites Team";
+    $AUTHOR_LINK    = "//opensprites.gwiddle.co.uk";
+    $SITE_KEYWORDS  = "OS, OpenSprites, OpenSpites Team, OS Team, Blog";
 
 ?>
 
-<?php ### Style option. Pick one, leave the rest commented. ### ?>
-<!--<link rel="stylesheet" href="themes/beigedark/global.css">-->
-<!--<link rel="stylesheet" href="themes/beigelight/global.css">-->
-<link rel="stylesheet" href="themes/blue/global.css">
-<!--<link rel="stylesheet" href="themes/red/global.css">-->
+<?php /* Style option. */
+echo '<link rel="stylesheet" href="themes/oslight/global.css">'
 
-<?php ### Side bar option. Pick one, leave the rest commented. ### ?>
-<link rel="stylesheet" href="themes/sidebarleft.css">
-<!--<link rel="stylesheet" href="themes/sidebarright.css">-->
-<!--<link rel="stylesheet" href="themes/sidebarasnavbar.css">-->
+/*
+Themes:
+    beigedark
+    beigelight
+    blue
+    osdark
+    oslight
+    red
+*/
+?>
+
+<?php /* Side bar option. Pick one, leave the rest commented. */
+echo '<link rel="stylesheet" href="themes/sidebarasnavbar.css">'
+/*
+Sidebars:
+    asnavbar
+    left
+    right
+
+If using the OpenSprites theme be sure to use asnavbar!
+*/
+?>

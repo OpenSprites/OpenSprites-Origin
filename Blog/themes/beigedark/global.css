@@ -9,7 +9,6 @@
 }
 
 .entry {
-    font-family:      Georgia;
     background-color: #EAEFB1;
     padding:          10px;
     margin-bottom:    20px;
@@ -17,7 +16,6 @@
 }
 
 .entry pre {
-    font-family:      Monaco, Courier, monospace;
     background-color: #FDFDFD;
     padding:          3px;
 }

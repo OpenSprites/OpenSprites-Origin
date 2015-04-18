@@ -1,4 +1,6 @@
-# HTAccess file. General redirecting to error pages.
+# HTTP-access file.
+
+# Redirect errors
 ErrorDocument 404 viewpost.php?post=error_loading
 ErrorDocument 303 viewpost.php?post=error_loading
 ErrorDocument 500 viewpost.php?post=error_loading

@@ -8,7 +8,8 @@
 ?>
 
 <footer id="footer">
-    Unless where otherwise stated, this site is licensed under a MIT license 2015. We are not endorsed or affiliated with the Scratch Team. This blog uses <a href="https://github.com/chjj/marked">marked</a> by chjj)
+    $COPYRIGHT$ 2015 - $THISYEAR$ <a href="$AUTHORLINK$">$AUTHORNAME$</a>
+    (used <a href="https://github.com/chjj/marked">marked</a> by chjj)
 </footer>
 
 <script>

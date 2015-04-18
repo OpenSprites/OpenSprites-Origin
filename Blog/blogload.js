@@ -1,4 +1,4 @@
-// This is a simple file to read XML and then return some data, which is then processed through
+// This is a simple file to read XML and then return some data, which is then processed through 
 // another function and turned to HTML that can be included in the file.
 
 function blog_load(entry) {
