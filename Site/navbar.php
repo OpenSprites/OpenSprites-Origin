@@ -21,6 +21,9 @@
             <li>
                 <a href="/media">Media</a>
             </li>
+            <li>
+                <a href="http://blog.opensprites.gwiddle.co.uk">Blog</a>
+            </li>
             <li class="last">
                 <a href="http://opensprites.gwiddle.co.uk/forums/">Forums</a>
             </li>
