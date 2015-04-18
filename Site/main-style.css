@@ -511,11 +511,6 @@ select {
 	cursor:pointer
 }
 
-.footer-select {
-  background-color: #D5D5D5 !important;
-  color: grey !important;
-}
-
 /* Change text selection color */
 /* Should work in Chrome, IE, Opera, and Safari */
 ::selection{
