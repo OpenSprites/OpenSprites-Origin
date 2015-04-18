@@ -49,13 +49,13 @@
             <div id='report' onclick="window.location = 'delete.php?file=<?php echo $file->name; ?>';">
                 Delete
             </div>
-            <?php } ?>
-
-            <?php if($is_admin == true) { ?>
-            <div id='report' onclick="window.location = 'admindelete.php?file=<?php echo $file->name; ?>';">
-                Delete (Admin)
-            </div>
-            <?php } ?>
+            <?php } else {
+                if ($is_admin == true) { ?>
+                    <div id='report' onclick="window.location = 'admindelete.php?file=<?php echo $file->name; ?>';">
+                        Delete (Admin)
+                    </div>
+                <?php }
+            }?>
 
         </div>
         <div id="user-pane-left">
