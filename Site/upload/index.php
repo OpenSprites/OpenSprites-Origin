@@ -45,9 +45,9 @@
             <h1 style="font-size:4em;margin-top:50px;">Upload</h1>
             <h1 style="font-size:3em;margin-top:10px;">Choose an upload method</h1>
             <div id='upload-method-select'>
-                <img src="local" class="method" onclick="selectMethod('local');">
-                <img src="scratch" class="method" onclick="selectMethod('scratch');">
-                <img src="url" class="method" onclick="selectMethod('url');">
+                <img src="local" class="method" onclick="selectMethod('local');" alt="Local file">
+                <img src="scratch" class="method" onclick="selectMethod('scratch');" alt="Scratch">
+                <img src="url" class="method" onclick="selectMethod('url');" alt="URL">
             </div>
             <script>
                 $('img[src=local]').attr('src', '/assets/images/upload/fromLocal' + localStorage['os-theme'] + '.png');
