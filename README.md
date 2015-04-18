@@ -1,8 +1,7 @@
 # OpenSprites
 Welcome to the main OpenSprites development repository. Inspired by Scratch Resources, OpenSprites is a new sharing platform designed for Scratchers to upload their own content, as well as download other's content for free use in their projects. It is being developed open-source by a small group of collaborating Scratchers. The code is available on GitHub.
 
-For more information, please visit the discussion thread: http://scratch.mit.edu/discuss/topic/85320/ The site shall be hosted here: http://opensprites.gwiddle.co.uk/ (to be changed, most likely) If you want to see our progress so far, our alpha site is here: http://dev.opensprites.gwiddle.co.uk/ For a bleeding edge version of the site that updates after each commit, see OSDev: http://osdev.aputurk.tk/index.php If you have any questions, don't hesitate to use our new forums: http://opensprites.gwiddle.co.uk/forums/. Thank you to cauzality who kindly made our logos and various graphical mockups!
-
+For more information, please visit the <a href="http://scratch.mit.edu/discuss/topic/85320/">discussion thread</a>. The completed site shall be hosted <a href="http://opensprites.gwiddle.co.uk/">here</a>. (however, it is likely that we buy our own domain) If you want to see our progress so far, see our <a href="http://dev.opensprites.gwiddle.co.uk/">alpha site</a>. For a bleeding edge version of the site that updates after each commit, see <a href="http://osdev.aputurk.tk/index.php">OSDev</a>. If you have any questions, don't hesitate to use our <a href="http://opensprites.gwiddle.co.uk/forums/">forums</a>. Thank you to cauzality who kindly made our logos and various graphical mockups!
 # The OpenSprites team:
 
 ## [The-Cheese-Eater](https://github.com/The-Cheese-Eater)
