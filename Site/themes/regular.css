@@ -1,7 +1,12 @@
 body {
-  display: inherit !important;
+	display: inherit !important;
 }
 
 .themebg {
 	background-color: white;
+}
+
+.footer-select {
+	background-color: #D5D5D5 !important;
+	color: grey !important;
 }
