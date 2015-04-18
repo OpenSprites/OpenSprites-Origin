@@ -16,16 +16,6 @@ The-Cheese-Eater, your localsysadmin! He mostly manages hosting, forums, organis
 * HTML
 * CSS
 
-## [MegaApuTurkUltra](https://github.com/MegaApuTurkUltra)
-![GitHub Logo](https://avatars0.githubusercontent.com/u/8547938?v=3&s=100)
-
-MegaApuTurkUltra is a sample text
-* HTML
-* CSS
-* JavaScript
-* PHP / Server-side
-* OSDev Site Administator
-
 ## [Firedrake969](https://github.com/Firedrake969)
 ![GitHub Logo](https://avatars3.githubusercontent.com/u/8008245?v=3&s=320)
 
@@ -36,6 +26,18 @@ Firedrake969 is one of the lead developers of OS. He is also one of the main ove
 * PHP
 * Administration
 * Annoying [GrannyCookies](https://github.com/GrannyCookies)
+
+## [MegaApuTurkUltra](https://github.com/MegaApuTurkUltra)
+![GitHub Logo](https://avatars0.githubusercontent.com/u/8547938?v=3&s=100)
+
+MegaApuTurkUltra is a sample text
+* HTML
+* CSS
+* JavaScript
+* PHP / Server-side
+* OSDev Site Administator
+
+
 
 ## [GrannyCookies](https://github.com/GrannyCookies)
 ![GitHub Logo](https://avatars0.githubusercontent.com/u/9429556?v=3&s=110)
