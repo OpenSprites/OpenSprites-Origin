@@ -40,7 +40,7 @@ function processAjax(json) {
                 html += '<img src="../../assets/images/defaultfile.png">';
 
             html += '</a>';
-            $('#collections .main-inner').append(html);
+            $('.main-inner').append(html);
         }
     }
 }

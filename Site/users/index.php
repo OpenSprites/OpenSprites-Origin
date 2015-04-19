@@ -33,8 +33,13 @@
     <script>
         OpenSprites.view = {};
         OpenSprites.view.user = {};
+<<<<<<< HEAD
         OpenSprites.view.user.id = <?php echo json_encode($user['userid']); ?>;
         OpenSprites.view.user.name = <?php echo json_encode($user['username']); ?>;
+=======
+        OpenSprites.view.user.id = <?php echo json_encode($user['userid']); ?> ;
+        OpenSprites.view.user.name = <?php echo json_encode($user['username']); ?> ;
+>>>>>>> origin/master
     </script>
     
     <!-- Main wrapper -->
@@ -122,19 +127,14 @@
     </div>
     <?php }?>
     
-    <form style="display:none;" enctype="multipart/form-data" action="http://opensprites.gwiddle.co.uk/user-avatar.php?id=<?php echo $logged_in_userid; ?>" method="POST">
-        <input type="hidden" name="MAX_FILE_SIZE" value="8388608">
-        <input name="uploadedfile" type="file">
-        <input type="submit">
-    </form>
+    <div id='img-modal'>
+        <iframe scrolling="no" src="upload-avatar.php"></iframe>
+    </div>
     
     <script>
         $('#change-image').click(function() {
-            $('input[name=uploadedfile]').click();
-        });
-        
-        $('input[name=uploadedfile]').change(function() {
-            $('form').submit();
+            // display modal for changing profile pic
+            $('#img-modal').fadeIn(200);
         });
         
         $('#follow').click(function() {
