@@ -33,8 +33,13 @@
     <script>
         OpenSprites.view = {};
         OpenSprites.view.user = {};
+<<<<<<< HEAD
         OpenSprites.view.user.id = <?php echo json_encode($user['userid']); ?>;
         OpenSprites.view.user.name = <?php echo json_encode($user['username']); ?>;
+=======
+        OpenSprites.view.user.id = <?php echo json_encode($user['userid']); ?> ;
+        OpenSprites.view.user.name = <?php echo json_encode($user['username']); ?> ;
+>>>>>>> origin/master
     </script>
     
     <!-- Main wrapper -->
