@@ -7,6 +7,8 @@
     
     $is_admin = false;
     if(isset($_SESSION["userId"])) {
+        $user = json_decode(file_get_contents('http://dev.opensprites.gwiddle.co.uk/site-api/user.php'));
+        
         $logged_in_userid = $_SESSION["userId"];
         $html = file_get_html('http://opensprites.gwiddle.co.uk/forums/?p=member/' . $logged_in_userid);
         $logged_in_user = $html->find('h1#memberName', 0)->innertext;
@@ -23,6 +25,7 @@
         }
     } else {
         $logged_in_userid = 0;
+        $user = 'not logged in';
         $logged_in_user = 'not logged in';
         $user_group = 'N/A';
         $user_banned = false;
