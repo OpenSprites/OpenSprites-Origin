@@ -4,6 +4,14 @@
 	border: 5px dashed rgb(101, 149, 147);
 	border-radius: 5em;
 	position: relative;
+	padding: 5em;
+	overflow-y: auto;
+	overflow-x: hidden;
+	padding-top: 10em;
+}
+
+#upload-area::after {
+	clear: both;
 }
 
 .upload-message {
@@ -13,17 +21,57 @@
 	font-size: 5em;
 }
 
-#upload-button {
-	background: rgba(101, 149, 147, 0.5);
-	transition: background 0.2s;
+.upload-message.error {
+	color: red;
+}
+
+#upload-button-container {
 	position: absolute;
 	top: 0px;
 	right: 0px;
 	border-radius: 5em;
 	font-size: 2em;
 	border: 2px solid rgb(101, 149, 147);
-	padding: 1em;
 	cursor: pointer;
+}
+
+#select-button {
+	border-bottom: 2px solid rgb(101, 149, 147);
+	border-top-right-radius: 5em;
+	border-top-left-radius: 5em;
+}
+
+#upload-button {
+	border-bottom-right-radius: 5em;
+	border-bottom-left-radius: 5em;
+	position: relative;
+}
+
+#select-button, #upload-button {
+	background: rgba(101, 149, 147, 0.5);
+	transition: background 0.2s;
+	padding-left: 1em;
+	padding-right: 1em;
+}
+
+#upload-button:hover, #select-button:hover {
+	background: rgba(101, 149, 147, 0.7);
+}
+
+#upload-status {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	font-size: 1.3em;
+	background: rgba(101, 149, 147, 0.5);
+	border-radius: 0.5em;
+	padding: 0.5em;
+}
+
+#upload-status p {
+	padding-left: 2em;
+	text-align: left;
 }
 
 #uploadbtn {
@@ -35,6 +83,34 @@
 	opacity: 0;
 }
 
-#upload-button:hover {
-	background: rgba(101, 149, 147, 0.7);
+.upload-image {
+	float: left;
+	width: 200px;
+	height: 200px;
+	background: rgba(101, 149, 147, 0.5);
+	border: 2px solid rgb(101, 149, 147);
+	border-radius: 1em;
+	text-align: left;
+	padding: 1em;
+	margin: 1em;
+}
+
+.upload-image p {
+	background: rgba(0, 0, 0, 0.5);
+	border-radius: 1em;
+	padding: 0.5em;
+	overflow: hidden;
+}
+
+.progress {
+	width: 100%;
+	height: 1em;
+	border-radius: 1em;
+}
+.progress .bar {
+	width: 0%;
+	background: rgba(0, 0, 0, 0.5);
+	border-radius: 1em;
+	height: 1em;
+	text-align: center;
 }

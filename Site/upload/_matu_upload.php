@@ -22,6 +22,12 @@ try {
 	die(json_encode($json));
 }
 
+
+if(!isset($_REQUEST['token']) || $_REQUEST['token'] != $_COOKIE['upload_session_id']){
+	$json['message'] = "Whoops! There was an unknown server-side error.";
+	die(json_encode($json));
+}
+
 // add spam protection here
 
 if(isset($_FILES['uploadedfile'])){
@@ -36,7 +42,7 @@ if(isset($_FILES['uploadedfile'])){
 	foreach($_FILES['uploadedfile']['tmp_name'] as $i => $tmpName){
 		$current_json = array("status"=>"error","message"=>"Unknown","image_url"=>"N/A","hash"=>"");
 		if($_FILES['uploadedfile']['error'][$i] != 0){
-			$current_json['message'] = "Sorry! Our servers encountered an error with your upload request. Maybe you didn't send us a file?";
+			$current_json['message'] = "Sorry! Our servers encountered an error with your upload request. Make sure each individual file is less than 2MB (error code ".$_FILES['uploadedfile']['error'][$i].")";
 		} else {
 			$ext = ".wut";
 			$type = exif_imagetype($tmpName);
@@ -50,7 +56,7 @@ if(isset($_FILES['uploadedfile'])){
 				if($type==3) $ext=".png";
 				// add more later
 			} else {
-				if(json_decode(file_get_contents($_FILES['uploadedfile']['tmp_name'])) != null){
+				if(json_decode(file_get_contents($tmpName)) != null){
 					// is it a script?
 					$ext = ".json";
 					$proceed = TRUE;
@@ -63,10 +69,10 @@ if(isset($_FILES['uploadedfile'])){
 							$ext=".svg";
 						} else throw new Exception("Not an SVG");
 					} catch(Exception $e){
-						$json['debug'] .= $e."\n";
+						$json['debug'] .= "Assuming audio file";
 						// validate audio files here <<<<<<<<<<
-						$current_json['message'] = "Whoops! Our servers didn't recognize this file's format."; 
-						$current_json['hash'] = hash_file('md5', $tmpName);
+						$proceed = TRUE;
+						$ext = ".mp3";
 					}
 				}
 			}

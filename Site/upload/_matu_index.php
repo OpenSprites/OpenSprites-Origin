@@ -6,6 +6,12 @@
         die;
     }*/
 	
+	function unique_id($l = 8) {
+		return substr(md5(uniqid(mt_rand(), true)), 0, $l);
+	}
+	
+	$sessionId = unique_id(8);
+	setCookie("upload_session_id", $sessionId);
 ?>
 <!DOCTYPE html>
 <html>
@@ -16,6 +22,10 @@
 
     <!--Imports styling-->
     <link href='_matu_upload.css' rel='stylesheet' type='text/css'>
+	
+	<script type="text/javascript">
+		window.uploadCsrfToken = "<?php echo $sessionId; ?>";
+	</script>
 </head>
 
 <body>
@@ -26,9 +36,18 @@
         <div class="main-inner">
 			
 			<div id="upload-area">
-				<div id="upload-button">
-					<input type='file' name='uploadfiles[]' id='uploadbtn' multiple title="Select files to upload" />
-					Select files
+				<div id="upload-status">
+					<p>Select some files to start</p>
+					<div class='progress'><div class='bar'></div></div>
+				</div>
+				<div id="upload-button-container">
+					<div id="select-button">
+						<input type='file' name='uploadfiles[]' id='uploadbtn' multiple title="Select files to upload" />
+						Select files
+					</div>
+					<div id="upload-button">
+						Start upload
+					</div>
 				</div>
 				<p class='upload-message'>Drop files here</p>
 			</div>
