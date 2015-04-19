@@ -93,6 +93,20 @@
 	text-align: left;
 	padding: 1em;
 	margin: 1em;
+	background-size: cover !important;
+	background-repeat: no-repeat;
+}
+
+.upload-image[data-url] {
+	cursor: pointer;
+}
+
+.upload-image p:hover {
+	background: rgba(0, 0, 0, 0.9);
+}
+
+.upload-image[data-url]:hover p {
+	background: rgba(0, 0, 0, 1);
 }
 
 .upload-image p {
@@ -100,16 +114,18 @@
 	border-radius: 1em;
 	padding: 0.5em;
 	overflow: hidden;
+	transition: all 0.2s;
 }
 
 .progress {
-	width: 100%;
+	width: 98%;
 	height: 1em;
 	border-radius: 1em;
+	background: rgba(0, 0, 0, 0.5);
 }
 .progress .bar {
 	width: 0%;
-	background: rgba(0, 0, 0, 0.5);
+	background: rgba(255,255,255, 0.5);
 	border-radius: 1em;
 	height: 1em;
 	text-align: center;

@@ -31,11 +31,114 @@ if (!(window.File && window.FileReader && window.FileList && window.Blob && wind
 }
 
 var allFiles = {};
+var totalFiles = 0;
+var addedFiles = 0;
+var totalSize = 0;
+
+function processArchive(file){
+	console.log("Reading archive: "+file.name);
+	var reader = new FileReader();
+	reader.onload = function (e) {
+		var zip = new JSZip(e.target.result);
+		console.log(zip);
+		for(key in zip.files){
+			var zipObj = zip.files[key];
+			var f = zipObj;
+			if(zipObj.dir) continue;
+			totalFiles++;
+			var type = "unknown";
+			if(f.name.endsWith(".jpg") || f.name.endsWith(".jpeg") || f.name.endsWith(".png") || f.name.endsWith(".gif") || f.name.endsWith(".svg")){
+				type = "image";
+			} else if(f.name.endsWith(".wav") || f.name.endsWith(".mp3")){
+				type = "audio";
+			} else if(f.name.endsWith(".json")){
+				type = "script";
+			}
+			
+			if(type == "unknown") continue;
+			addedFiles++;
+			
+			var asBinary = f.asBinary();
+			var asArrayBuffer = f.asArrayBuffer();
+			
+			var template = newTemplate();
+			template.find(".name").text(getPrettyName(f.name));
+			template.find(".type").text("Local Upload");
+			template.find(".ftype").text(type+" from archive");
+			template.find(".size").text(getPrettySize(asBinary.length));
+			template.find(".status").text("Ready to upload");
+			
+			totalSize += asBinary.length;
+			if(totalSize > 8388608){
+				$("#upload-status p").text("Some files were not added. Keep total file size below 8MB.");
+				return;
+			}
+			
+			if(type =="image"){
+				var type2 = "jpeg";
+				if(f.name.endsWith("svg")) type2 = "svg";
+				else if(f.name.endsWith("png")) type2 = "png";
+				template.css("background", "url(data:"+type+";base64,"+btoa(asBinary)+")");
+			}
+		
+			if(type == "audio"){
+				var buffer = asArrayBuffer;
+				window.AudioContext = window.AudioContext || window.webkitAudioContext ;
+				if (!AudioContext) return;
+				var audioContext = new AudioContext();
+				var canvas = document.createElement("canvas");
+				var canvasWidth = canvas.width = 230; var canvasHeight = canvas.height = 230;
+				var context = canvas.getContext('2d');
+				audioContext.decodeAudioData(buffer, function(currentBuffer) {
+                    var leftChannel = currentBuffer.getChannelData(0);
+					var lineOpacity = canvasWidth / leftChannel.length  ;      
+					context.save();
+					context.fillStyle = '#222' ;
+					context.fillRect(0,0,canvasWidth,canvasHeight );
+					context.strokeStyle = 'rgb(101, 149, 147)';
+					context.globalCompositeOperation = 'lighter';
+					context.globalAlpha = 1;
+					for (var i=0; i<  leftChannel.length; i += 4410) {
+						var x = Math.floor ( canvasWidth * i / leftChannel.length ) ;
+						var y = leftChannel[i] * canvasHeight / 2 ;
+						context.beginPath();
+						context.moveTo( x  , canvasHeight/2 + y );
+						context.lineTo( x+1, canvasHeight/2 - y );
+						context.stroke();
+					}
+					context.restore();
+					template.css("background", "url("+canvas.toDataURL()+")");
+                }, function(e){ console.log(e); });
+			}
+			var hash = md5(asBinary);
+			if(allFiles.hasOwnProperty(hash)) return;
+			allFiles[hash] = new Blob([f.asArrayBuffer()]);
+			template.attr("data-id", hash);
+			template.find(".del").click(function(){
+				var parent = $(this).parent().parent();
+				delete allFiles[parent.attr("data-id")];
+				parent.remove();
+			});
+			$("#upload-area").append(template);
+		}
+	}
+	reader.readAsArrayBuffer(file);
+}
 
 function processFiles(files){
-	var totalFiles = files.length;
-	var addedFiles = 0;
+	totalFiles = files.length;
+	addedFiles = 0;
+	totalSize = 0;
+	for(key in allFiles){
+		if(allFiles.hasOwnProperty(key)) totalSize += allFiles[key].size;
+	}
 	for (var i = 0, f; f = files[i]; i++) {
+		totalSize += f.size;
+		if(totalSize > 8388608){
+			$("#upload-status p").text("Some files were not added. Keep total file size below 8MB.");
+			return;
+		}
+	
 		var template = newTemplate();
 		
 		var type = "unknown";
@@ -43,8 +146,10 @@ function processFiles(files){
 			type = "image";
 		} else if(f.name.endsWith(".wav") || f.name.endsWith(".mp3")){
 			type = "audio";
-		} else if(f.name.endsWith(".sb2") || f.name.endsWith(".sprite2")){
-			type = "projectArchive";
+		} else if(f.name.endsWith(".sb2") || f.name.endsWith(".sprite2") || f.name.endsWith(".zip")){
+			totalFiles--;
+			processArchive(f);
+			continue;
 		} else if(f.name.endsWith(".json")){
 			type = "script";
 		}
@@ -57,8 +162,6 @@ function processFiles(files){
 		template.find(".ftype").text(type);
 		template.find(".size").text(getPrettySize(f.size));
 		template.find(".status").text("Ready to upload");
-		
-		$("#upload-area").append(template);
 		
 		if(type =="image"){
 			(function(template, file){ // wrap it so we can continue processing asynchronously without screwing with the stack
@@ -75,6 +178,33 @@ function processFiles(files){
 				var reader = new FileReader();
 				reader.onload = function(e) {
 					var buffer = e.target.result;
+					window.AudioContext = window.AudioContext || window.webkitAudioContext ;
+					if (!AudioContext) return;
+					var audioContext = new AudioContext();
+					var canvas = document.createElement("canvas");
+					var canvasWidth = canvas.width = 230; var canvasHeight = canvas.height = 230;
+					var context = canvas.getContext('2d');
+					audioContext.decodeAudioData(buffer, 
+                    function(currentBuffer) {
+                        var leftChannel = currentBuffer.getChannelData(0);
+						var lineOpacity = canvasWidth / leftChannel.length  ;      
+						context.save();
+						context.fillStyle = '#222' ;
+						context.fillRect(0,0,canvasWidth,canvasHeight );
+						context.strokeStyle = 'rgb(101, 149, 147)';
+						context.globalCompositeOperation = 'lighter';
+						context.globalAlpha = 1;
+						for (var i=0; i<  leftChannel.length; i += 4410) {
+							var x = Math.floor ( canvasWidth * i / leftChannel.length ) ;
+							var y = leftChannel[i] * canvasHeight / 2 ;
+							context.beginPath();
+							context.moveTo( x  , canvasHeight/2 + y );
+							context.lineTo( x+1, canvasHeight/2 - y );
+							context.stroke();
+						}
+						context.restore();
+						template.css("background", "url("+canvas.toDataURL()+")");
+                    }, function(e){ console.log(e); });
 				}
 				reader.readAsArrayBuffer(file);
 			})(template, f);
@@ -84,6 +214,7 @@ function processFiles(files){
 			var hashReader = new FileReader();
 			hashReader.onload = function (e2) {
 				var hash = md5(e2.target.result);
+				if(allFiles.hasOwnProperty(hash)) return;
 				allFiles[hash] = file;
 				template.attr("data-id", hash);
 				template.find(".del").click(function(){
@@ -91,6 +222,7 @@ function processFiles(files){
 					delete allFiles[parent.attr("data-id")];
 					parent.remove();
 				});
+				$("#upload-area").append(template);
 			};
 			hashReader.readAsBinaryString(file);
 		})(template, f);
@@ -152,7 +284,7 @@ function uploadFiles(){
 			if (xhr instanceof window.XMLHttpRequest) {
 				xhr.upload.addEventListener("progress", function (evt) {
 					if (evt.lengthComputable) {
-						var percentComplete = evt.loaded * 98 / evt.total; // yes, IK 98% is hax and I should probably be setting sizes correctly...
+						var percentComplete = evt.loaded * 100 / evt.total;
 						$(".progress .bar").css("width", percentComplete+"%");
 					}
 				}, false);
@@ -162,7 +294,7 @@ function uploadFiles(){
 		success : function (data) {
 			$("#upload-button-container").fadeIn();
 			$("#upload-status p").text("Upload complete");
-			$(".progress .bar").css("width", "98%");
+			$(".progress .bar").css("width", "100%");
 			try {
 				var resp = JSON.parse(data);
 				console.log(resp);
@@ -180,6 +312,9 @@ function uploadFiles(){
 							$("[data-id="+hash+'] .status').text("Failed");
 						}
 						$("[data-id="+hash+'] .status').append("<br/>"+result.message);
+						$("[data-id="+hash+']').attr("data-url", result.image_url).attr("title", "Click to view your asset").click(function(){
+							window.open("/uploads/uploaded/" + $(this).attr("data-url"));
+						});
 					}
 				}
 			} catch (e) {
