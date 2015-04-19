@@ -9,6 +9,11 @@ function unique_id($l = 8) {
 header("Content-Type: text/json");
 $json = array("status"=>"error","message"=>"Unknown","debug"=>"","results"=>array());
 
+if(isset($_REQUEST['file_too_big'])){
+	$json['message'] = "Your uploads are too big! Upload only 8MB at a time.";
+	die(json_encode($json));
+}
+
 try {
 	connectDatabase();
 } catch(Exception $e){
@@ -17,39 +22,11 @@ try {
 	die(json_encode($json));
 }
 
-/*$hacks = FALSE;
-if(isset($_POST['verify1'])){
-	if($_POST['verify1'] != ""){
-		$hacks = TRUE;
-	}
-} else {
-	$hacks = TRUE;
-}
-if(isset($_POST['verify2'])){
-	if($_POST['verify2'] != "swag"){
-		$hacks = TRUE;
-	}
-} else {
-	$hacks = TRUE;
-}
-if(isset($_POST['token']) && isset($_SESSION['token'])){
-	if($_POST['token'] != $_SESSION['token']){
-		$hacks = TRUE;
-	}
-} else {
-	$hacks = TRUE;
-}
-if($hacks){
-	$json['message'] = "Sorry! An unknown error happened.";
-	die(json_encode($json));
-}*/
-
-// add more spam protection here
+// add spam protection here
 
 if(isset($_FILES['uploadedfile'])){
 	$basedir = "../uploads/uploaded/";
 	
-	// we don't want unwanted image test uploads in the repo, so make the images dir if it isn't already there
 	if (!file_exists($basedir)) {
 		mkdir($basedir, 0777, true);
 	}
@@ -66,24 +43,31 @@ if(isset($_FILES['uploadedfile'])){
 			if($type==FALSE || $type==0) $type = "Unknown (yet)";
 			$json['debug'] .= "Image type:$type\n";
 			$proceed = FALSE;
-			if($type == 1 || $type == 2 || $type == 3){
+			if($type == 1 || $type == 2 || $type == 3){ // check if the file is an image
 				$proceed = TRUE;
 				if($type==1) $ext=".gif";
 				if($type==2) $ext=".jpg";
 				if($type==3) $ext=".png";
 				// add more later
 			} else {
-				try {
-					$doc = @simplexml_load_file($tmpName);
-					if(is_object($doc) && $doc->getName() == "svg"){
-						$json['debug'] .= "Image type: SVG?\n";
-						$proceed = TRUE;
-						$ext=".svg";
-					} else throw new Exception("Not an SVG");
-				} catch(Exception $e){
-					$json['debug'] .= $e."\n";
-					$current_json['message'] = "Whoops! Our servers didn't recognize this image's format."; 
-					$current_json['hash'] = hash_file('md5', $tmpName);
+				if(json_decode(file_get_contents($_FILES['uploadedfile']['tmp_name'])) != null){
+					// is it a script?
+					$ext = ".json";
+					$proceed = TRUE;
+				} else {
+					try {
+						$doc = @simplexml_load_file($tmpName);
+						if(is_object($doc) && $doc->getName() == "svg"){
+							$json['debug'] .= "Image type: SVG?\n";
+							$proceed = TRUE;
+							$ext=".svg";
+						} else throw new Exception("Not an SVG");
+					} catch(Exception $e){
+						$json['debug'] .= $e."\n";
+						// validate audio files here <<<<<<<<<<
+						$current_json['message'] = "Whoops! Our servers didn't recognize this file's format."; 
+						$current_json['hash'] = hash_file('md5', $tmpName);
+					}
 				}
 			}
 			if($proceed){
@@ -91,7 +75,7 @@ if(isset($_FILES['uploadedfile'])){
 				$existing = imageExists($hash);
 				if(sizeof($existing) > 0){
 					$current_json['status'] = "success";
-					$current_json['message'] = "Your image has been uploaded before, so here's the original URL.";
+					$current_json['message'] = "Your file has been uploaded before, so here's the original URL.";
 					$current_json['image_url'] = $existing[0]['name'];
 					$current_json['hash'] = $hash;
 				} else {
@@ -104,7 +88,7 @@ if(isset($_FILES['uploadedfile'])){
 						try {
 							addImageRow($name.$ext, $hash, $logged_in_user, $logged_in_userid);
 							$current_json['status'] = "success";
-							$current_json['message'] = "Your image was uploaded successfully";
+							$current_json['message'] = "Your file was uploaded successfully";
 							$current_json['image_url'] = $name.$ext;
 							$current_json['hash'] = $hash;
 						} catch(Exception $e){
@@ -123,10 +107,10 @@ if(isset($_FILES['uploadedfile'])){
 	}
 	if(!$error){
 		$json['status'] = "success";
-		$json['message'] = "All images uploaded successfully.";
+		$json['message'] = "All files uploaded successfully.";
 	} else {
 		$json['status'] = "partial";
-		$json['message'] = "Some images not uploaded.";
+		$json['message'] = "Some files not uploaded.";
 	}
 } else $json['message'] = "Whoops! It seems your browser sent an incomplete request. Are you sure you're not hacking?";
 $json['var_dump'] = print_r($_FILES, true);
