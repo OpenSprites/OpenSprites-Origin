@@ -11,6 +11,7 @@ header('Cache-Control: no-cache, must-revalidate');
 header('Expires: Mon, 26 Jul 1997 05:00:00 GMT');
 header('Content-Type: application/json');
 
+/*
 function is_404($url) {
     $returned = get_headers('http://opensprites.gwiddle.co.uk/forums/?p=member/' . $url, 1)[0];
     return $returned == 'HTTP/1.1 404 Not Found';
@@ -78,5 +79,32 @@ if($raw === FALSE) {
     echo '"scratch_userid": ' . $scratch_userid . ', ';
     echo '"avatar": "' . $avatar . '"}';
 }
+*/
+
+$userid = 'false';
+if(isset($_GET['userid'])) {
+    $userid = $_GET['userid'];
+} else {
+    $userid = $_SESSION["userId"];
+}
+
+$raw = file_get_html("http://opensprites.gwiddle.co.uk/forums/?p=member/" . $userid);
+if($raw == FALSE) {
+    echo 'FALSE';
+    die();
+}
+
+$r = preg_replace('/\s+/', '', $raw->find('p#memberGroup', 0)->plaintext);
+
+if($raw->find('img.avatar', 0) !== null) {
+    // they have an uploaded avatar image
+    $avatar = 'http://opensprites.gwiddle.co.uk/' . $raw->find('img.avatar', 0)->src;
+} else {
+    // they have not uploaded an avatar image
+    $avatar = 'http://dev.opensprites.gwiddle.co.uk/assets/images/defaultfile.png';
+}
+
+$json = array('userid' => $userid, 'username' => $raw->find('h1#memberName', 0)->innertext, 'usertype' => $r, 'avatar' => $avatar);
+echo json_encode($json, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES | JSON_NUMERIC_CHECK);
 
 ?>
