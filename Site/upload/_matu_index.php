@@ -38,8 +38,8 @@
 
     <!-- footer -->
     <?php echo file_get_contents( '../footer.html'); ?>
-	<script type="text/javascript" src="/assets/js/md5.js" />
-	<script type="text/javascript" src="_matu_upload.js" />
+	<script type="text/javascript" src="/assets/js/md5.js"></script>
+	<script type="text/javascript" src="_matu_upload.js"></script>
 </body>
 
 </html>
