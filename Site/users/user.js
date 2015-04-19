@@ -18,8 +18,8 @@ function update() {
             jsonOld = result;
             processAjax(result);
         } else if(Object.size(result, true) === 0) {
-            $('.main-inner').html('');
-            $('.main-inner').append('<h1>Uploads (' + Object.size(result, true) + ')</h1>');
+            $('#collections .main-inner').html('');
+            $('#collections .main-inner').append('<h1>Uploads (' + Object.size(result, true) + ')</h1>');
         }
         
         setTimeout(update, updateInterval);
@@ -27,8 +27,8 @@ function update() {
 }
 
 function processAjax(json) {
-    $('.main-inner').html('');
-    $('.main-inner').append('<h1>Uploads (' + Object.size(json, true) + ')</h1>');
+    $('#collections .main-inner').html('');
+    $('#collections .main-inner').append('<h1>Uploads (' + Object.size(json, true) + ')</h1>');
     
     for(var i = Object.size(json, false); i > 0; i--) {
         if(jsonOld.hasOwnProperty(i) && typeof jsonOld[i].deleted === 'undefined') {

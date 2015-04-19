@@ -15,8 +15,7 @@
         $user_group = $html->find('p#memberGroup span', 0)->innertext;
         $user_banned = $user_group == 'Suspended';
 
-        if($user_group == "Moderator" or $user_group == "Administrator")
-        {
+        if($user_group == "Moderator" or $user_group == "Administrator") {
             $is_admin = true;
         }
 

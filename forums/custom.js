@@ -36,3 +36,5 @@ $('head').append('<link href="/forums/themes/' + theme.toLowerCase() + '.css' + 
 // channel stuff
 $('a[data-channel=all]').html('All Conversations');
 $('.channelListItem').remove();
+
+console.log('theming done');
