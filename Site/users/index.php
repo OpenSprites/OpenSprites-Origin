@@ -30,8 +30,8 @@ if($raw_json == 'FALSE') {
     <script>
         OpenSprites.view = {};
         OpenSprites.view.user = {};
-        OpenSprites.view.user.id = <? php echo json_encode($user['userid']); ?> ;
-        OpenSprites.view.user.name = <? php echo json_encode($user['username']); ?> ;
+        OpenSprites.view.user.id = <?php echo json_encode($user['userid']); ?> ;
+        OpenSprites.view.user.name = <?php echo json_encode($user['username']); ?> ;
     </script>
 
     <!-- Main wrapper -->
