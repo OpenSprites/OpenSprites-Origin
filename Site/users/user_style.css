@@ -153,7 +153,7 @@
     opacity: 0;
     background: rgba(0, 0, 0, 0.7);
     color: white;
-    transition: 400ms opacity;
+    transition: 150ms opacity;
 }
 
 #change-image:hover {
@@ -181,5 +181,5 @@
 }
 
 .file:hover img {
-    background: transparent
+    background: transparent;
 }
