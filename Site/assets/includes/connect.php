@@ -17,6 +17,10 @@
         {
             $is_admin = true;
         }
+
+        if($user_group == "Suspended"){
+            header( 'Location: http://dev.opensprites.gwiddle.co.uk/suspended.php' ) ;
+        }
     } else {
         $logged_in_userid = 0;
         $logged_in_user = 'not logged in';
