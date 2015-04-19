@@ -62,6 +62,20 @@
             <div id='report'>
                 Report
             </div>
+                <?php
+                if($is_admin == true){ ?>
+                <div id='adminban' onclick='window.location = "../adminban.php?username=<?php echo $username;?>";'>
+                    Ban (Admin)
+                </div>
+                    <?php }
+                ?>
+                <?php
+                if($is_admin == true){ ?>
+                    <div id='admindelete' onclick='window.location = "../admindelete.php?username=<?php echo $username;?>";'>
+                        Delete (Admin)
+                    </div>
+                <?php }
+                ?>
             <?php } else { ?>
             <div id='username'>
                 User not found!

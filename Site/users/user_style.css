@@ -54,6 +54,26 @@
     left: 150px;
 }
 
+#adminban {
+    font-style: italic;
+    font-size: 16px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    position: absolute;
+    bottom: 80px;
+}
+
+#admindelete {
+    font-style: italic;
+    font-size: 16px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    position: absolute;
+    bottom: 80px;
+    left: 150px;
+    margin-left: 30px;
+}
+
 #userjoined {
     position: absolute;
     font-size: 15px;
