@@ -1,11 +1,5 @@
-# redirect live/alpha/* to dev.opensprites.x10.mx/*
-RedirectMatch 301 ^/live/alpha/(.*)$ http://dev.opensprites.x10.mx/$1
-
-# custom 404 error page
-ErrorDocument 404 http://opensprites.x10.mx/404.html
-
 # no cache
-<FilesMatch "\.(css|js|php|html)$">
+<FilesMatch "\.(css|js|php|html|jpg|gif|png|jpeg|svg)$">
 FileETag None
 Header unset ETag
 Header set Cache-Control "max-age=0, no-cache, no-store, must-revalidate"
@@ -18,37 +12,3 @@ php_flag display_startup_errors on
 php_flag display_errors on
 php_flag html_errors on
 php_value error_reporting -1
-
-# Remove .php extension [currently disabled!]
-#<FilesMatch "\.(php)$">
-#RewriteEngine On
-#RewriteCond %{REQUEST_FILENAME} !-d
-#RewriteCond %{REQUEST_FILENAME}\.php -f
-#RewriteRule ^(.*)$ $1.php
-#</FilesMatch>
-
-# Load users/?username=username at users/username
-Options +FollowSymlinks -MultiViews
-RewriteEngine On
-RewriteBase /
-
-# Canonicalize /user/foo to /user/foo/
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule ^users/([^/]+)$ /users/$1/ [R=301,L]
-
-# Map /user/foo/ to foo's profile
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule ^users/([^/]+)/$ users/index.php?username=$1 [QSA]
-
-# Load register/?return=error at register/error
-# Canonicalize register/error to register/error/
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule ^users/([^/]+)$ /users/$1/ [R=301,L]
-
-# Map register/error to return $_GET['return'];
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule ^register/([^/]+)/$ register/index.php?return=$1 [QSA]
