@@ -1,12 +1,14 @@
 <?php
+require '../assets/includes/connect.php';
+require '../assets/includes/database.php';
+require_once '../assets/includes/html_dom_parser.php';
 
-require '../assets/includes/html_dom_parser.php';
-session_name("OpenSprites_Forum_session");
-session_start();
+// so many haxx just to invalidate the cache :P
 header('Access-Control-Allow-Origin: *');
 header("Access-Control-Allow-Headers: Origin, x-requested-with, content-type, accept");
 header('Cache-Control: no-cache, must-revalidate');
 header('Expires: Mon, 26 Jul 1997 05:00:00 GMT');
+
 header('Content-Type: application/json');
 
 $userid = 'false';
@@ -20,6 +22,35 @@ if($userid === 'false') {
     echo 'FALSE';
     die();
 }
+
+try {
+	connectDatabase();
+} catch(Exception $e){
+	die(json_encode(array(array("status"=>"error","message"=>"Cannot connect to database"))));
+}
+
+$raw = getImagesForUser($userid);
+
+$assets = array();
+
+for($i=0;$i<sizeof($raw);$i++){
+	$asset = $raw[$i];
+	$obj = array(
+		"name" => $asset['name'],
+		"location" => "/uploads/uploaded/" . $asset['name'],
+		"md5" => $asset['hash'],
+		"date" => $asset['date'],
+		"uploaded_by" => array(
+			"name" => $asset["user"],
+			"id" => $asset["userid"]
+		)
+	);
+	array_push($assets, $obj);
+}
+
+echo json_encode($assets, JSON_PRETTY_PRINT);
+
+/*
 
 error_reporting(0);
 $files = glob('../uploads/uploaded/' . $userid . '-*.*', GLOB_NOSORT);
@@ -39,6 +70,6 @@ for($i = 0; $i < count($read_files); $i++) {
 
 krsort($files_sorted, SORT_NUMERIC);
 
-echo json_encode($files_sorted, JSON_PRETTY_PRINT);
+echo json_encode($files_sorted, JSON_PRETTY_PRINT);*/
 
 ?>
