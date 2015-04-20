@@ -1,6 +1,7 @@
 <blogentry>
-    <blogheader>Hello, world! #1</blogheader>
+    <blogheader>Hello, world!</blogheader>
     <blogcontents>
-	Welcome to the all new OpenSprites Blog!
+        Hai. __markdown__
+        ```console.log("hello");```
 	</blogcontents>
 </blogentry>
