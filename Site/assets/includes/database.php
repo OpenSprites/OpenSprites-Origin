@@ -2,7 +2,6 @@
 $username = "opensprites";
 $password = "swagmaster123"; // change this :P
 $db_name  = "opensprites";
-$assets_table_name = "os_assets";
 
 $dbh;
 
@@ -11,12 +10,11 @@ function connectDatabase(){
 	global $username;
 	global $password;
 	global $db_name;
-	global $assets_table_name;
 	$conf = 'mysql:host=localhost;dbname='.$db_name.';charset=utf8';
 	$dbh = new PDO($conf, $username, $password);
 	$dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 	$dbh->setAttribute(PDO::ATTR_EMULATE_PREPARES, false);
-	if(!tableExists($assets_table_name)) createImagesTable();
+	if(!tableExists("uploaded")) createImagesTable();
 }
 
 function getDatabaseError(){
@@ -25,40 +23,27 @@ function getDatabaseError(){
 
 function getAllImages(){
 	global $dbh;
-	global $assets_table_name;
-	$stmt = $dbh->prepare("SELECT * FROM `$assets_table_name`");
+	$stmt = $dbh->prepare("SELECT * FROM `uploaded`");
 	$stmt->execute();
-	$res = $stmt->fetchAll(PDO::FETCH_ASSOC);
-	return $res;
-}
-
-function getImagesForUser($userId){
-	global $dbh;
-	global $assets_table_name;
-	$stmt = $dbh->prepare("SELECT * FROM `$assets_table_name` WHERE `userid`=? ORDER BY `date`");
-	$stmt->execute(array($userId));
 	$res = $stmt->fetchAll(PDO::FETCH_ASSOC);
 	return $res;
 }
 
 function createImagesTable(){
 	global $dbh;
-	global $assets_table_name;
 	$dbh->exec(
-		"CREATE TABLE `$assets_table_name` (
+		"CREATE TABLE `uploaded` (
 			`name` VARCHAR(20) NOT NULL,
 			`hash` VARCHAR(32) NOT NULL,
 			`user` VARCHAR(32) NOT NULL,
 			`userid` INT(11) NOT NULL,
-			`date` DATETIME NOT NULL,
-			UNIQUE KEY `asset_ix` (`name`, `hash`)
+			UNIQUE KEY `image_ix` (`name`, `hash`)
 		) ENGINE=InnoDB AUTO_INCREMENT=0 DEFAULT CHARSET=utf8;");
 }
 
 function imageExists($hash){
 	global $dbh;
-	global $assets_table_name;
-	$stmt = $dbh->prepare("SELECT * FROM `$assets_table_name` WHERE `hash`=?");
+	$stmt = $dbh->prepare("SELECT * FROM `uploaded` WHERE `hash`=?");
 	$stmt->execute(array($hash));
 	$res = $stmt->fetchAll(PDO::FETCH_ASSOC);
 	return $res;
@@ -66,8 +51,7 @@ function imageExists($hash){
 
 function addImageRow($name, $hash, $user, $userId){
 	global $dbh;
-	global $assets_table_name;
-	$stmt = $dbh->prepare("INSERT INTO `$assets_table_name` (`name`,`hash`,`user`,`userid`,`date`) VALUES(:name, :hash, :user, :userId, NOW())");
+	$stmt = $dbh->prepare("INSERT INTO `uploaded` (`name`,`hash`,`user`,`userid`) VALUES(:name, :hash, :user, :userId)");
 	$stmt->execute(array(":name"=>$name, ":hash"=>$hash, ":user"=>$user, ":userId"=>$userId));
 }
 

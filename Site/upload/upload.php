@@ -1,124 +1,68 @@
 <?php
-require_once("../assets/includes/connect.php");
-require_once("../assets/includes/database.php");
 
-function unique_id($l = 8) {
-    return substr(md5(uniqid(mt_rand(), true)), 0, $l);
+require "../assets/includes/connect.php";
+
+if($logged_in_user == 'not logged in' or $user_banned) {
+    header('Location: /');
+    die;
 }
 
-header("Content-Type: text/json");
-$json = array("status"=>"error","message"=>"Unknown","debug"=>"","results"=>array());
-
-if(isset($_REQUEST['file_too_big'])){
-	$json['message'] = "Your uploads are too big! Upload only 8MB at a time.";
-	die(json_encode($json));
+if((!empty($_FILES["uploaded_file"])) and ($_FILES['uploaded_file']['error'] == 0)) {
+    // something is wrong with the uploaded file (i.e. it is empty)
+    header('Location: /upload/?method=local&error=empty');
+    die;
 }
 
-try {
-	connectDatabase();
-} catch(Exception $e){
-	$json['debug'] = print_r($e, TRUE);
-	$json['message'] = "Whoops! There was a server-side database error.";
-	die(json_encode($json));
+$filename = basename($_FILES['uploadedfile']['name']);
+$ext = substr($filename, strrpos($filename, '.') + 1);
+$target_path = "../uploads/uploaded/" . $logged_in_userid . "-" . $filename;
+$target_path = substr($target_path, 20);
+
+$filetype = 'bad';
+if($ext == 'jpg' or $ext == 'gif' or $ext == 'png' or $ext == 'jpeg' or $ext == 'svg') {
+    $filetype = 'image';
 }
 
-
-if(!isset($_REQUEST['token']) || $_REQUEST['token'] != $_COOKIE['upload_session_id']){
-	$json['message'] = "Whoops! There was an unknown server-side error.";
-	die(json_encode($json));
+if($ext == 'sprite2') {
+    $filetype = 'sprite';
 }
 
-// add spam protection here
+if($ext == 'wav' or $ext == 'mp3') {
+    $filetype = 'sound';
+}
 
-if(isset($_FILES['uploadedfile'])){
-	$basedir = "../uploads/uploaded/";
-	
-	if (!file_exists($basedir)) {
-		mkdir($basedir, 0777, true);
-	}
-	
-	$error = FALSE;
-	
-	foreach($_FILES['uploadedfile']['tmp_name'] as $i => $tmpName){
-		$current_json = array("status"=>"error","message"=>"Unknown","image_url"=>"N/A","hash"=>"");
-		if($_FILES['uploadedfile']['error'][$i] != 0){
-			$current_json['message'] = "Sorry! Our servers encountered an error with your upload request. Make sure each individual file is less than 2MB (error code ".$_FILES['uploadedfile']['error'][$i].")";
-		} else {
-			$ext = ".wut";
-			$type = exif_imagetype($tmpName);
-			if($type==FALSE || $type==0) $type = "Unknown (yet)";
-			$json['debug'] .= "Image type:$type\n";
-			$proceed = FALSE;
-			if($type == 1 || $type == 2 || $type == 3){ // check if the file is an image
-				$proceed = TRUE;
-				if($type==1) $ext=".gif";
-				if($type==2) $ext=".jpg";
-				if($type==3) $ext=".png";
-				// add more later
-			} else {
-				if(json_decode(file_get_contents($tmpName)) != null){
-					// is it a script?
-					$ext = ".json";
-					$proceed = TRUE;
-				} else {
-					try {
-						$doc = @simplexml_load_file($tmpName);
-						if(is_object($doc) && $doc->getName() == "svg"){
-							$json['debug'] .= "Image type: SVG?\n";
-							$proceed = TRUE;
-							$ext=".svg";
-						} else throw new Exception("Not an SVG");
-					} catch(Exception $e){
-						$json['debug'] .= "Assuming audio file";
-						// validate audio files here <<<<<<<<<<
-						$proceed = TRUE;
-						$ext = ".mp3";
-					}
-				}
-			}
-			if($proceed){
-				$hash = hash_file('md5', $tmpName);
-				$existing = imageExists($hash);
-				if(sizeof($existing) > 0){
-					$current_json['status'] = "success";
-					$current_json['message'] = "Your file has been uploaded before, so here's the original URL.";
-					$current_json['image_url'] = $existing[0]['name'];
-					$current_json['hash'] = $hash;
-				} else {
-					$name = "";
-					do {
-						$name = unique_id(16);
-					} while(file_exists($basedir.$name.$ext));
-					$json['debug'] .= $name."\n";
-					if (move_uploaded_file($tmpName, $basedir.$name.$ext)) {
-						try {
-							addImageRow($name.$ext, $hash, $logged_in_user, $logged_in_userid);
-							$current_json['status'] = "success";
-							$current_json['message'] = "Your file was uploaded successfully";
-							$current_json['image_url'] = $name.$ext;
-							$current_json['hash'] = $hash;
-						} catch(Exception $e){
-							$json['debug'] .= "\n".$e;
-							$current_json['message'] = "Whoops! There was a server-side database error.";
-							$current_json['hash'] = $hash;
-						}
-					} else {
-						$current_json['message'] = "Sorry! A server side error prevented us from uploading your file. Try again later.";
-						$current_json['hash'] = $hash;
-					}
-				}
-			}
-		}
-		$json['results'][$i] = $current_json;
-	}
-	if(!$error){
-		$json['status'] = "success";
-		$json['message'] = "All files uploaded successfully.";
-	} else {
-		$json['status'] = "partial";
-		$json['message'] = "Some files not uploaded.";
-	}
-} else $json['message'] = "Whoops! It seems your browser sent an incomplete request. Are you sure you're not hacking?";
-$json['var_dump'] = print_r($_FILES, true);
-echo json_encode($json);
+if($filetype == 'bad') {
+    // filetype isn't valid
+    header('Location: /upload/?method=local&error=bad');
+    die;
+}
+
+// find the biggest numbered file (aka the newest)
+$files = [];
+foreach(glob('../uploads/uploaded/' . $logged_in_userid . '-*.*') as $thefile) {
+    array_push($files, substr($thefile, 20));
+}
+if($files == []) {
+    $great_file = $logged_in_userid . '-0';
+} else {
+    sort($files, SORT_NUMERIC);
+    $great_file = reset($files);
+}
+
+// add 1 the that file
+$filename_to_upload = $logged_in_userid . '-' . strval(intval(substr($great_file, strlen($logged_in_userid) + 1)) + 1) . '.' . $ext;
+
+// upload file!
+$filename_b4_upload = $filename_to_upload;
+$filename_to_upload = '../uploads/uploaded/' . $filename_to_upload;
+move_uploaded_file($_FILES['uploadedfile']['tmp_name'], $filename_to_upload);
+
+// create json file which has the details of the uploaded file in it
+$jsoncontents = array('name' => $filename_b4_upload, 'uploaded_by' => array('name' => $logged_in_user, 'id' => intval($logged_in_userid)), 'original_filename' => $filename, 'type' => $filetype, 'custom_name' => $_POST['name']);
+
+file_put_contents($filename_to_upload . '.json', json_encode($jsoncontents));
+
+// redirect to the "profile page" of the file
+header('Location: /uploads/' . $filename_b4_upload);
+
 ?>
