@@ -13,13 +13,13 @@ var updateInterval = 10000;
 var jsonOld = [];
 
 function update() {
-    $.getJSON('/site-api/stuff.php?userid=' + OpenSprites.view.user.id + '&_=' + new Date, function(result) {
+    $.getJSON(OpenSprites.domain + '/site-api/stuff.php?userid=' + OpenSprites.view.user.id + '&_=' + new Date, function(result) {
         if(JSON.stringify(result) !== JSON.stringify(jsonOld)) {
             jsonOld = result;
             processAjax(result);
         } else if(Object.size(result, true) === 0) {
             $('#collections .main-inner').html('');
-            $('#collections .main-inner').append('<h1>Uploads (' + Object.size(result, true) + ')</h1>');
+            $('#collections .main-inner').append('<h1>Uploads (None)</h1>');
         }
         
         setTimeout(update, updateInterval);
@@ -28,20 +28,12 @@ function update() {
 
 function processAjax(json) {
     $('#collections .main-inner').html('');
-    $('#collections .main-inner').append('<h1>Uploads (' + Object.size(json, true) + ')</h1>');
+    $('#collections .main-inner').append('<h1>Uploads (' + json.length + ')</h1>');
     
-    for(var i = Object.size(json, false); i > 0; i--) {
-        if(jsonOld.hasOwnProperty(i) && typeof jsonOld[i].deleted === 'undefined') {
-            var html = '<a href="../../uploads/' + json[i].name + '" class="file">';
-
-            if(json[i].type === 'image')
-                html += '<img src="../../uploads/uploaded/' + json[i].name + '">';
-            else
-                html += '<img src="../../assets/images/defaultfile.png">';
-
-            html += '</a>';
-            $('.main-inner').append(html);
-        }
+    for(var i = 0;i<json.length;i++) {
+		var html = $("<div>").addClass("file").addClass(json[i].type).attr("data-name", json[i].name).attr("data-utime", json[i].upload_time);
+		if(json[i].type == "image") html.css("background-image", "url("+OpenSprites.domain + json[i].url+")");
+        $('#collections .main-inner').append(html);
     }
 }
 

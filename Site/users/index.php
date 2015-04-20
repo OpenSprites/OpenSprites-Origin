@@ -19,9 +19,7 @@
         echo file_get_contents('../Header.html'); //Imports the metadata and information that will go in the <head> of every page
     ?>
     
-    <link href='http://<?php
-        echo $_SERVER['SERVER_NAME']; // Imports styling
-    ?>/users/user_style.css' rel='stylesheet' type='text/css'>
+    <link href='/users/user_style.css' rel='stylesheet' type='text/css'>
 </head>
 <body>
     <?php
@@ -31,15 +29,11 @@
     <?php if($user_exist) {?>
     
     <script>
+		var OpenSprites = OpenSprites || {};
         OpenSprites.view = {};
         OpenSprites.view.user = {};
-<<<<<<< HEAD
         OpenSprites.view.user.id = <?php echo json_encode($user['userid']); ?>;
         OpenSprites.view.user.name = <?php echo json_encode($user['username']); ?>;
-=======
-        OpenSprites.view.user.id = <?php echo json_encode($user['userid']); ?> ;
-        OpenSprites.view.user.name = <?php echo json_encode($user['username']); ?> ;
->>>>>>> origin/master
     </script>
     
     <!-- Main wrapper -->
@@ -128,7 +122,7 @@
     <?php }?>
     
     <div id='img-modal'>
-        <iframe scrolling="no" src="upload-avatar.php"></iframe>
+        <!-- TO DO: <iframe scrolling="no" src="upload-avatar.php"></iframe> -->
     </div>
     
     <script>
