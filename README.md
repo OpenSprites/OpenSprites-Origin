@@ -7,14 +7,25 @@ For more information, please visit the <a href="http://scratch.mit.edu/discuss/t
 ## [The-Cheese-Eater](https://github.com/The-Cheese-Eater)
 ![GitHub Logo](https://avatars0.githubusercontent.com/u/9347154?v=3&s=100)
 
-The-Cheese-Eater, your localsysadmin! He mostly manages hosting, forums, organisation and accounts.
+The-Cheese-Eater, your local sysadmin! He mostly manages hosting, forums, organisation and accounts.
 * Doing whatever sysadmins do
 * Supervising
 * Task delegating
 * Keeper of the FTP keys
 * Moderation
+* Documentation/things that involve writing/blog posts
 * HTML
 * CSS
+
+## [jbayfield](https://github.com/jbayfield)
+![GitHub Logo](https://avatars2.githubusercontent.com/u/10786277?v=3&s=400)
+
+jbayfield is an OpenSprites administrator and developer.
+* Web host administration
+* Atlassian services
+* PHP / server-side
+* Moderation
+* Advice
 
 ## [Firedrake969](https://github.com/Firedrake969)
 ![GitHub Logo](https://avatars3.githubusercontent.com/u/8008245?v=3&s=320)
