@@ -35,7 +35,7 @@ connectDatabase();
 $query = "SELECT * FROM `" . getAssetsTableName() . "`";
 $params = array();
 if($type != "all"){
-	$query .= "WHERE `asset_type`=?";
+	$query .= "WHERE `assetType`=?";
 	array_push($params, $type);
 }
 
