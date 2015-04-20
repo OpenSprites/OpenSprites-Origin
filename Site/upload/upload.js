@@ -275,7 +275,7 @@ function uploadFiles(){
 	$("#upload-status p").text("Uploading...");
 	
 	$.ajax({
-		url : "_matu_upload.php",
+		url : "upload.php",
 		type : 'POST',
 		data : formData,
 		async : true,
