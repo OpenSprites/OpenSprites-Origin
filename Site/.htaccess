@@ -24,5 +24,5 @@ RewriteRule ^uploads/([^/]+)$ uploads/index.php?file=$1 [QSA]
 
 # upload is 3 big
 RewriteCond %{REQUEST_METHOD} =POST
-RewriteCond %{HTTP:Content-Length}%{CONTENT_LENGTH} >8388608
+RewriteCond %{HTTP:Content-Length}%{CONTENT_LENGTH} >25000000
 RewriteRule .* /upload/_matu_upload.php?file_too_big=1 [R,NC]

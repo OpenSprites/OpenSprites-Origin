@@ -20,7 +20,7 @@ header("Content-Type: text/json");
 $json = array("status"=>"error","message"=>"Unknown","debug"=>"","results"=>array());
 
 if(isset($_REQUEST['file_too_big'])){
-	$json['message'] = "Your uploads are too big! Upload only 8MB at a time.";
+	$json['message'] = "Your uploads are too big! Upload only 50MB at a time.";
 	die(json_encode($json));
 }
 
