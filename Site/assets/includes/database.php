@@ -1,7 +1,7 @@
 <?php
-$username = "opensprites";
+$username = "OpenSprites_user";
 $password = "swagmaster123"; // change this :P
-$db_name  = "opensprites";
+$db_name  = "OpenSprites_assets";
 $assets_table_name = "os_assets";
 
 $dbh;
@@ -46,12 +46,14 @@ function createImagesTable(){
 	global $assets_table_name;
 	$dbh->exec(
 		"CREATE TABLE `$assets_table_name` (
-			`name` VARCHAR(20) NOT NULL,
+			`name` VARCHAR(32) NOT NULL,
 			`hash` VARCHAR(32) NOT NULL,
 			`user` VARCHAR(32) NOT NULL,
 			`userid` INT(11) NOT NULL,
+			`assetType` VARCHAR(16) NOT NULL,
+			`customName` VARCHAR(32) NOT NULL,
 			`date` DATETIME NOT NULL,
-			UNIQUE KEY `asset_ix` (`name`, `hash`)
+			PRIMARY KEY `asset_ix` (`name`, `customName`, `userid`)
 		) ENGINE=InnoDB AUTO_INCREMENT=0 DEFAULT CHARSET=utf8;");
 }
 
@@ -64,11 +66,12 @@ function imageExists($hash){
 	return $res;
 }
 
-function addImageRow($name, $hash, $user, $userId){
+function addImageRow($name, $hash, $user, $userId, $assetType, $customName){
 	global $dbh;
 	global $assets_table_name;
-	$stmt = $dbh->prepare("INSERT INTO `$assets_table_name` (`name`,`hash`,`user`,`userid`,`date`) VALUES(:name, :hash, :user, :userId, NOW())");
-	$stmt->execute(array(":name"=>$name, ":hash"=>$hash, ":user"=>$user, ":userId"=>$userId));
+	$stmt = $dbh->prepare("INSERT INTO `$assets_table_name` (`name`,`hash`,`user`,`userid`,`assetType`,`customName`,`date`)"
+		." VALUES(:name, :hash, :user, :userId, :assetType, :customName, NOW())");
+	$stmt->execute(array(":name"=>$name, ":hash"=>$hash, ":user"=>$user, ":userId"=>$userId, ":assetType"=>$assetType,":customName"=>$customName));
 }
 
 function tableExists($id){

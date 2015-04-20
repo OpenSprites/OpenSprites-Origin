@@ -6,6 +6,16 @@ function unique_id($l = 8) {
     return substr(md5(uniqid(mt_rand(), true)), 0, $l);
 }
 
+function rstrpos ($haystack, $needle, $offset){
+    $size = strlen ($haystack);
+    $pos = strpos (strrev($haystack), $needle, $size - $offset);
+    
+    if ($pos === false)
+        return false;
+    
+    return $size - $pos;
+}
+
 header("Content-Type: text/json");
 $json = array("status"=>"error","message"=>"Unknown","debug"=>"","results"=>array());
 
@@ -41,6 +51,7 @@ if(isset($_FILES['uploadedfile'])){
 	
 	foreach($_FILES['uploadedfile']['tmp_name'] as $i => $tmpName){
 		$current_json = array("status"=>"error","message"=>"Unknown","image_url"=>"N/A","hash"=>"");
+		$assetType = "unknown";
 		if($_FILES['uploadedfile']['error'][$i] != 0){
 			$current_json['message'] = "Sorry! Our servers encountered an error with your upload request. Make sure each individual file is less than 2MB (error code ".$_FILES['uploadedfile']['error'][$i].")";
 		} else {
@@ -54,11 +65,13 @@ if(isset($_FILES['uploadedfile'])){
 				if($type==1) $ext=".gif";
 				if($type==2) $ext=".jpg";
 				if($type==3) $ext=".png";
+				$assetType = "image";
 				// add more later
 			} else {
 				if(json_decode(file_get_contents($tmpName)) != null){
 					// is it a script?
 					$ext = ".json";
+					$assetType = "script";
 					$proceed = TRUE;
 				} else {
 					try {
@@ -67,9 +80,11 @@ if(isset($_FILES['uploadedfile'])){
 							$json['debug'] .= "Image type: SVG?\n";
 							$proceed = TRUE;
 							$ext=".svg";
+							$assetType = "image";
 						} else throw new Exception("Not an SVG");
 					} catch(Exception $e){
 						$json['debug'] .= "Assuming audio file";
+						$assetType = "sound";
 						// validate audio files here <<<<<<<<<<
 						$proceed = TRUE;
 						$ext = ".mp3";
@@ -77,12 +92,25 @@ if(isset($_FILES['uploadedfile'])){
 				}
 			}
 			if($proceed){
+				$fileName = $_FILES['uploadedfile']['name'][$i];
+				$pos = rstrpos($fileName, ".", 0);
+				if($pos === FALSE) $pos = strlen($fileName);
+				$customName = substr($fileName, 0, $pos);
+				if(strpos($customName, "blob") === 0){
+					$customName = "os-file-" . unique_id(8);
+				}
+			
 				$hash = hash_file('md5', $tmpName);
 				$existing = imageExists($hash);
 				if(sizeof($existing) > 0){
+					$name = $existing[0]['name'];
+					$userid0 = $existing[0]['userid'];
+					$hash0 = $existing[0]['hash'];
+					if($hash !== $hash0 && $logged_in_userid !== $userid0) // prevent duplicate files from the same person
+						addImageRow($name.$ext, $hash, $logged_in_user, $logged_in_userid, $assetType, $customName);
 					$current_json['status'] = "success";
 					$current_json['message'] = "Your file has been uploaded before, so here's the original URL.";
-					$current_json['image_url'] = $existing[0]['name'];
+					$current_json['image_url'] = $name;
 					$current_json['hash'] = $hash;
 				} else {
 					$name = "";
@@ -92,7 +120,7 @@ if(isset($_FILES['uploadedfile'])){
 					$json['debug'] .= $name."\n";
 					if (move_uploaded_file($tmpName, $basedir.$name.$ext)) {
 						try {
-							addImageRow($name.$ext, $hash, $logged_in_user, $logged_in_userid);
+							addImageRow($name.$ext, $hash, $logged_in_user, $logged_in_userid, $assetType, $customName);
 							$current_json['status'] = "success";
 							$current_json['message'] = "Your file was uploaded successfully";
 							$current_json['image_url'] = $name.$ext;

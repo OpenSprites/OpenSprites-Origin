@@ -229,9 +229,9 @@ function processFiles(files){
 	}
 	
 	if(addedFiles != totalFiles){
-		$("#upload-status p").text("Added "+addedFiles+" files; "+(totalFiles - addedFiles)+" files unrecognized.");
+		$("#upload-status p").text("Some files unrecognized.");
 	} else {
-		$("#upload-status p").text("Added "+addedFiles+" files.");
+		$("#upload-status p").text("Added files.");
 	}
 }
 
@@ -320,13 +320,13 @@ function uploadFiles(){
 			} catch (e) {
 				console.log(e);
 				console.log(data);
-				$("#upload-status p").text("Sorry! There was a problem receiving a response from our servers.");
+				$("#upload-status p").text("Something bad happened and our servers sent back a bad response. Contact us if this continues.");
 			}
 		},
 		error : function (jqXHR, textStatus, errorThrown) {
 			$("#upload_overlay").fadeOut();
 			console.log(jqXHR, textStatus, errorThrown);
-			$("#upload-status p").text("Sorry! Something bad happened and your image wasn't uploaded.");
+			$("#upload-status p").text("Sorry! Something bad happened and your image wasn't uploaded. Check your internet connection.");
 		},
 		cache : false,
 		contentType : false,
