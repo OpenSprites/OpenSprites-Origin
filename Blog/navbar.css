@@ -1,0 +1,69 @@
+#login-popup {
+    position: absolute;
+    top: 50px;
+    padding: 10px;
+    color: white;
+    background-color: #659593;
+    border-radius: 10px;
+    z-index: -1;
+    box-shadow: 0 1px 1px #ccc;
+}
+
+#login-popup span {
+    margin: 3px;
+}
+
+#login-popup input[type='submit'] {
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+    margin-bottom: 9px;
+    border-radius: 3px;
+    border: 1px solid #ccc;
+    padding: 6px;
+    float: left;
+}
+
+#login-popup input[type='text'],
+#login-popup input[type='password'] {
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+    height: 18px;
+    margin-bottom: 9px;
+    border-radius: 3px;
+    border: 1px solid #ccc;
+    padding: 3px;
+}
+
+.arrow {
+    position: absolute;
+    left: 165px;
+    top: -10px;
+    width: 0;
+    height: 0;
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    border-bottom: 15px solid #659593;
+}
+
+#login-popup input {
+    display: block;
+    margin: 3px;
+}
+
+#login-popup input[type='submit'] {
+    float: right;
+}
+
+.logo-name {
+    float: left;
+    margin-top: 9px;
+    margin-right: 5px;
+    font-weight: bold;
+    color: white;
+    font-size: 15px
+}
+
+.navbar-upload .upload-icon {
+    vertical-align: middle;
+    float: left;
+    margin-top: 10px;
+    margin-right: 0.5em;
+}
