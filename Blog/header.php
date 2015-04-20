@@ -3,6 +3,8 @@
 <?php /* Important things; don't remove or change. */ ?>
 <meta coding="utf-8">
 <link rel="stylesheet" href="themes/global.css">
+<link rel="stylesheet" href="hightlight.css">
+<script src="highlight.min.js"></script>
 <script src="blogload.js" type="text/javascript"></script>
 <script src="jquery-1.10.2.min.js" type="text/javascript"></script>
 <script src="marked/marked.min.js" type="text/javascript"></script>
