@@ -35,20 +35,20 @@ connectDatabase();
 $query = "SELECT * FROM `" . getAssetsTableName() . "`";
 $params = array();
 if($type != "all"){
-	$query .= "WHERE `assetType`=?";
+	$query .= " WHERE `assetType`=?";
 	array_push($params, $type);
 }
 
 if($sort == "popularity"){
 	// implement
 } else if($sort == "popularity"){
-	$query .= "ORDER BY `customName`";
+	$query .= " ORDER BY `customName`";
 } else if($sort == "alphabetical"){
-	$query .= "ORDER BY `customName`";
+	$query .= " ORDER BY `customName`";
 } else if($sort == "newest"){
-	$query .= "ORDER BY `date` DESC";
+	$query .= " ORDER BY `date` DESC";
 } else if($sort == "oldest"){
-	$query .= "ORDER BY `date`";
+	$query .= " ORDER BY `date`";
 }
 
 $query .= " LIMIT ?";
