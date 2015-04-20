@@ -502,7 +502,6 @@ select {
 	font-size: 12px;
 	background-color: #E3F4F2;
 	border: none;
-	-webkit-appearance: none;
 	color: #659593;
 	border-radius:5px;
 	-moz-border-radius:5px;
@@ -586,4 +585,44 @@ a:visited {
 
 .btn.yellow:hover {
     background-color: #f4ca1f !important;
+}
+
+.toggleset {
+	display: inline-block;
+}
+
+.toggleset button {
+	color: #fff;
+    background-color: #659593;
+    padding: 5px;
+    text-decoration: none;
+    transition: all 0.2s;
+	border: 1px inset #659593;
+}
+
+.toggleset button:first-child {
+	border-top-left-radius: 1em;
+	border-bottom-left-radius: 1em;
+	margin-left: 1em;
+}
+
+.toggleset button:last-child {
+	border-top-right-radius: 1em;
+	border-bottom-right-radius: 1em;
+	margin-right: 1em;
+}
+
+.toggleset button.selected {
+	background-color: #fc9c35;
+	border: 1px outset #659593;
+}
+
+.toggleset button:hover {
+    background-color: #fc9c35;
+    text-decoration: none;
+}
+
+.toggleset button:active {
+	border: 1px outset #659593;
+	box-shadow: inset 2px 2px 5px gray;
 }

@@ -23,6 +23,20 @@ function getDatabaseError(){
 	return $dbh->errorInfo();
 }
 
+function getAssetsTableName(){
+	global $assets_table_name;
+	return $assets_table_name;
+}
+
+function imagesQuery($query, $parameters){
+	global $dbh;
+	global $assets_table_name;
+	$stmt = $dbh->prepare($query);
+	$stmt->execute($parameters);
+	$res = $stmt->fetchAll(PDO::FETCH_ASSOC);
+	return $res;
+}
+
 function getAllImages(){
 	global $dbh;
 	global $assets_table_name;

@@ -40,53 +40,43 @@
                 <h2>Welcome!</h2>
                 <p>Welcome to OpenSprites, the free, open-source site that allows <a href='//scratch.mit.edu'>Scratch</a> users to share their own scripts, sprites and project media!</p>
             </div>
-            <div id="top-sprites">
+            <div id="top-assets">
                 <div class="box">
-                    <h1>Top Sprites</h1>
+                    <h1>Top Assets</h1>
                     <div class="box-content">
-                        <p>Sort by:
-                            <select id="sortby">
-                                <option>Popularity (downloads)</option>
-                                <option>Ratings</option>
-                                <option>A-Z</option>
-                                <option>Newest</option>
-                                <option>Oldest</option>
-                            </select>
-                        </p>
+                        <div class="sortby toggleset">Sort by: </div>
+						<div class="types toggleset">Types: </div>
+						<br/>
                         PHP guys, get in here!
                     </div>
                 </div>
             </div>
-            <div id="top-scripts">
+
+            <div id="feat-assets">
                 <div class="box">
-                    <h1>Top Scripts</h1>
+                    <h1>Featured Assets</h1>
                     <div class="box-content">
-                        <p>Sort by:
-                            <select id="sortby">
-                                <option>Popularity (downloads)</option>
-                                <option>Ratings</option>
-                                <option>A-Z</option>
-                                <option>Newest</option>
-                                <option>Oldest</option>
-                            </select>
-                        </p>
+                        <div class="sortby toggleset">Sort by: </div>
+						<div class="types toggleset">Types: </div>
+						<br/>
                         PHP guys, get in here!
                     </div>
                 </div>
             </div>
-            <div id="feat-sprites">
+			
+			<div id="top-collections">
                 <div class="box">
-                    <h1>Featured Sprites</h1>
+                    <h1>Top Collections</h1>
                     <div class="box-content">
-                        <p>Sort by:
-                            <select id="sortby">
-                                <option>Popularity (downloads)</option>
-                                <option>Ratings</option>
-                                <option>A-Z</option>
-                                <option>Newest</option>
-                                <option>Oldest</option>
-                            </select>
-                        </p>
+                        PHP guys, get in here!
+                    </div>
+                </div>
+            </div>
+			
+			<div id="feat-collections">
+                <div class="box">
+                    <h1>Featured Collections</h1>
+                    <div class="box-content">
                         PHP guys, get in here!
                     </div>
                 </div>
@@ -108,5 +98,52 @@
     
     <!-- footer -->
     <?php echo file_get_contents('footer.html'); ?>
+	<script>
+		var orderBy = {
+			popularity: "Popularity (downloads)",
+			alphabetical: "A-Z",
+			newest: "Newest",
+			oldest: "Oldest"
+		};
+		var types = {
+			all: "All",
+			images: "Costumes",
+			sounds: "Sounds",
+			scripts: "Scripts"
+		};
+		$(".sortby").each(function(){
+			var listing = $(this).parent();
+			for(key in orderBy){
+				var button = $("<button>").attr("data-for", key).click(
+					(function(listing){
+						return function(){
+							// do something with listing and data-type
+						};
+					})(listing));
+				button.text(orderBy[key]);
+				if(key == "popularity") button.addClass("selected");
+				$(this).append(button);
+			}
+		});
+		$(".types").each(function(){
+			var listing = $(this).parent();
+			for(key in types){
+				var button = $("<button>").attr("data-for", key).click(
+					(function(listing){
+						return function(){
+							// do something with listing and data-type
+						};
+					})(listing));
+				button.text(types[key]);
+				if(key == "all") button.addClass("selected");
+				$(this).append(button);
+			}
+		});
+		
+		$(".toggleset button").click(function(){
+			$(this).parent().find("button").removeClass("selected");
+			$(this).addClass("selected");
+		});
+	</script>
 </body>
 </html>
