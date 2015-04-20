@@ -286,6 +286,11 @@ function uploadFiles(){
 					if (evt.lengthComputable) {
 						var percentComplete = evt.loaded * 100 / evt.total;
 						$(".progress .bar").css("width", percentComplete+"%");
+						if(percentComplete > 99){
+							$("#upload-status p").text("Processing uploads...");
+						} else {
+							$("#upload-status p").text("Uploading ("+percentComplete+"%)");
+						}
 					}
 				}, false);
 			}

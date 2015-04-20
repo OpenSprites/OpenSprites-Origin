@@ -30,20 +30,18 @@
 	top: 0px;
 	right: 0px;
 	border-radius: 5em;
+	border-top-left-radius: 0;
+	overflow: hidden;
 	font-size: 2em;
 	border: 2px solid rgb(101, 149, 147);
 	cursor: pointer;
 }
 
 #select-button {
-	border-bottom: 2px solid rgb(101, 149, 147);
-	border-top-right-radius: 5em;
-	border-top-left-radius: 5em;
+	border-right: 2px solid rgb(101, 149, 147);
 }
 
 #upload-button {
-	border-bottom-right-radius: 5em;
-	border-bottom-left-radius: 5em;
 	position: relative;
 }
 
@@ -52,6 +50,7 @@
 	transition: background 0.2s;
 	padding-left: 1em;
 	padding-right: 1em;
+	display: inline;
 }
 
 #upload-button:hover, #select-button:hover {
@@ -72,6 +71,7 @@
 #upload-status p {
 	padding-left: 2em;
 	text-align: left;
+	padding-top: 2em;
 }
 
 #uploadbtn {
@@ -115,6 +115,7 @@
 	padding: 0.5em;
 	overflow: hidden;
 	transition: all 0.2s;
+	color: white;
 }
 
 .progress {
