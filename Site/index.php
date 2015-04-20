@@ -107,9 +107,9 @@
 		};
 		var types = {
 			all: "All",
-			images: "Costumes",
-			sounds: "Sounds",
-			scripts: "Scripts"
+			image: "Costumes",
+			sound: "Sounds",
+			script: "Scripts"
 		};
 		$(".sortby").each(function(){
 			var listing = $(this).parent();

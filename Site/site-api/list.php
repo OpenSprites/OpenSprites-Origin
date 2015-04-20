@@ -8,7 +8,7 @@ $max = 10;
 $type = "all";
 $sort = "popularity";
 
-$types = ["all", "images", "scripts", "sounds"];
+$types = ["all", "image", "script", "sound"];
 $sorts = ["popularity", "alphabetical", "newest", "oldest"];
 
 if(isset($_GET['max'])){
