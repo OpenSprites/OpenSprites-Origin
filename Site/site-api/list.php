@@ -68,6 +68,6 @@ for($i=0;$i<sizeof($raw);$i++){
 	);
 	array_push($response, $obj);
 }
-echo json_encode($response, JSON_PRETTY_PRINT);
+echo json_encode($response, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES);
 
 ?>
