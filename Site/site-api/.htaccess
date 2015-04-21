@@ -1,1 +1,1 @@
-Header add "Access-Control-Allow-Origin" "http://osdev.aputurk.tk"
+Header add "Access-Control-Allow-Origin" "*"
