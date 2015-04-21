@@ -45,7 +45,7 @@ GET /site-api/list.php?max=?&sort=?&type=?
 A JSON array of [asset objects](#the-asset-object)
 
 ## user.php ##
-Returns the [user object](#the-asset-object) of a given userid
+Returns the [user object](#the-user-object) of a given userid
 ### Request format ###
 ```http
 GET /site-api/user.php?userid=?
