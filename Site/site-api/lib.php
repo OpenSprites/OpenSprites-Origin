@@ -1,3 +1,4 @@
+<?php
 function getAssetList($raw){
   $assets = array();
   for($i=0;$i<sizeof($raw);$i++){
@@ -16,3 +17,4 @@ function getAssetList($raw){
 	  array_push($assets, $obj);
   }
 }
+?>
