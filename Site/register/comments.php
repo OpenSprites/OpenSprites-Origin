@@ -5,8 +5,8 @@ $project_comments = file_get_html('http://scratch.mit.edu/site-api/comments/proj
 $comments = $project_comments -> find('.comment .info');
 $is_good_reg = false;
 foreach ($comments as $comment) {
-	$creator = $comment -> find('name .a');
-	$content = $comment -> find('.content');
+	$creator = $comment -> find('name .a') -> plaintext;
+	$content = $comment -> find('.content') -> plaintext;
 	echo $creator . ' : ' . $logged_in_user;
 	echo $content . '<br>';
 	if ($creator == $logged_in_user && $content == $_GET['key']) {
