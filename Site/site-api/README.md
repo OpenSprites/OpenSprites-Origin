@@ -44,6 +44,18 @@ GET /site-api/list.php?max=?&sort=?&type=?
 ### Response format ###
 A JSON array of [asset objects](#the-asset-object)
 
+## asset.php ##
+Returns an [asset object](#the-asset-object) with the given hash and owner, if one exists
+### Request format ###
+```http
+GET /site-api/asset.php?userid=?&hash=?
+```
+- userid: The id of the owner of the asset
+- hash: The md5 hash of the asset
+
+### Response format ###
+An [asset object](#the-asset-object)
+
 ## user.php ##
 Returns the [user object](#the-user-object) of a given userid
 ### Request format ###
