@@ -40,9 +40,7 @@ if($type != "all"){
 }
 
 if($sort == "popularity"){
-	// implement
-} else if($sort == "popularity"){
-	$query .= " ORDER BY `customName`";
+	$query .= " ORDER BY `downloadCount`";
 } else if($sort == "alphabetical"){
 	$query .= " ORDER BY `customName`";
 } else if($sort == "newest"){
