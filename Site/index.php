@@ -45,9 +45,8 @@
                     <h1>Top Assets</h1>
                     <div class="box-content">
                         <div class="sortby toggleset">Sort by: </div>
-						<div class="types toggleset">Types: </div>
-						<br/>
-                        <div id="top-assets-list">Loading...</div>
+			<div class="types toggleset">Types: </div><br/>
+                        <div id="top-assets-list" class='assets-list' data-sort='popularity' data-type='all'>Loading...</div>
                     </div>
                 </div>
             </div>
@@ -57,8 +56,7 @@
                     <h1>Featured Assets</h1>
                     <div class="box-content">
                         <div class="sortby toggleset">Sort by: </div>
-						<div class="types toggleset">Types: </div>
-						<br/>
+			<div class="types toggleset">Types: </div><br/>
                         PHP guys, get in here!
                     </div>
                 </div>
@@ -99,10 +97,13 @@
     <!-- footer -->
     <?php echo file_get_contents('footer.html'); ?>
 	<script>
-		$.get("/site-api/list.php?sort=popularity&max=10&type=all", function(data){
-			var model = OpenSprites.models.AssetList(data);
-			$("#top-assets-list").html(model.html());
-		});
+		function loadAssetList(elem, sort, max, type){
+			$.get(OpenSprites.domain + "/site-api/list.php?sort="+sort+"&max="+max+"type="+type, function(data){
+				var model = OpenSprites.models.AssetList(data);
+				elem.html(model.html());
+			});
+		}
+		loadAssetList("#top-assets-list", "popularity", 7, "all");
 	
 		var orderBy = {
 			popularity: "Popularity (downloads this week)",
@@ -117,14 +118,15 @@
 			script: "Scripts"
 		};
 		$(".sortby").each(function(){
-			var listing = $(this).parent();
+			var listing = $(this).parent().find('.assets-list');
 			for(key in orderBy){
 				var button = $("<button>").attr("data-for", key).click(
-					(function(listing){
+					(function(listing, key){
 						return function(){
-							// do something with listing and data-type
+							listing.attr("data-sort", key);
+							loadAssetList(listing, key, 7, listing.attr);
 						};
-					})(listing));
+					})(listing, key));
 				button.text(orderBy[key]);
 				if(key == "popularity") button.addClass("selected");
 				$(this).append(button);
@@ -134,11 +136,12 @@
 			var listing = $(this).parent();
 			for(key in types){
 				var button = $("<button>").attr("data-for", key).click(
-					(function(listing){
+					(function(listing, key){
 						return function(){
-							// do something with listing and data-type
+							listing.attr("data-type", key);
+							loadAssetList(listing, listing.attr("data-sort"), 7, key);
 						};
-					})(listing));
+					})(listing, key));
 				button.text(types[key]);
 				if(key == "all") button.addClass("selected");
 				$(this).append(button);
