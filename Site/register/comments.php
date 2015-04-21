@@ -13,6 +13,6 @@ foreach ($comments as $comment) {
 	}
 }
 
-print_r($is_good_reg);
+echo json_encode($is_good_reg);
 
 ?>
