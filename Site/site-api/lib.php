@@ -20,5 +20,11 @@ function getAssetList($raw){
 	  );
 	  array_push($assets, $obj);
   }
+  return $assets;
 }
+
+header("Access-Control-Allow-Origin: *");
+header("Cache-Control: no-cache, must-revalidate");
+header("Expires: Mon, 26 Jul 1997 05:00:00 GMT");
+header("Content-Type: application/json");
 ?>

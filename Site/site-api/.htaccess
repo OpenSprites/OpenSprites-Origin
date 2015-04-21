@@ -1,4 +1,0 @@
-Header add "Access-Control-Allow-Origin" "*"
-Header add "Cache-Control" "no-cache, must-revalidate"
-Header add "Expires" "Mon, 26 Jul 1997 05:00:00 GMT"
-Header add "Content-Type" "application/json"

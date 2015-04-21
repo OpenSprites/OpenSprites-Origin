@@ -1,7 +1,7 @@
 <?php
 require '../assets/includes/connect.php';
 require '../assets/includes/database.php';
-header("Content-Type: application/json");
+require 'lib.php';
 
 $max = 10;
 $type = "all";

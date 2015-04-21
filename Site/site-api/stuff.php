@@ -4,8 +4,6 @@ require '../assets/includes/database.php';
 require_once '../assets/includes/html_dom_parser.php';
 require 'lib.php';
 
-header('Content-Type: application/json');
-
 $userid = 'false';
 if(isset($_GET['userid'])) {
     $userid = $_GET['userid'];

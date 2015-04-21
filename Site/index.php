@@ -98,6 +98,7 @@
     <?php echo file_get_contents('footer.html'); ?>
 	<script>
 		function loadAssetList(elem, sort, max, type){
+			elem = $(elem);
 			$.get(OpenSprites.domain + "/site-api/list.php?sort="+sort+"&max="+max+"type="+type, function(data){
 				var model = OpenSprites.models.AssetList(data);
 				elem.html(model.html());

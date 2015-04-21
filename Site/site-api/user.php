@@ -1,9 +1,11 @@
 <?php
 
 require '../assets/includes/html_dom_parser.php';
+require 'lib.php';
 
 session_name("OpenSprites_Forum_session");
 session_start();
+
 
 /*
 function is_404($url) {
