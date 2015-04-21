@@ -8,17 +8,10 @@
 ?>
 
 <footer id="footer">
-    $COPYRIGHT$ 2015 - $THISYEAR$ <a href="$AUTHORLINK$">$AUTHORNAME$</a>
-    (used <a href="https://github.com/chjj/marked">marked</a> by chjj)
+	<a href="http://dev.opensprites.gwiddle.co.uk/about/">About Us</a> - <a href="mailto:cheese.eater@mail.com">Contact Us</a> - <a href="http://dev.opensprites.gwiddle.co.uk/tos/">Terms of Service</a> - <a href="http://dev.opensprites.gwiddle.co.uk/privacy/">Privacy</a>
+	<br><br>
+	OpenSprites is a resources site developed by the<a href="https://github.com/OpenSprites/OpenSprites/blob/master/README.md"> OpenSprites team</a>.<br>
+	We are not endorsed or affiliated with the Scratch Team.<br>
+	Unless where otherwise stated, this site is licensed under a MIT license 2015.<br>
+	Scratch is a project of the Lifelong Kindergarten Group at the MIT Media Lab.<br>
 </footer>
-
-<script>
-    var footer = document.getElementById("footer");
-    function replace_data(elem, replace_find, replace_with) {
-        elem.innerHTML = elem.innerHTML.replace(replace_find, replace_with);
-    }
-    replace_data(footer, "$COPYRIGHT$", "&#169;");
-    replace_data(footer, "$THISYEAR$", new Date().getFullYear());
-    replace_data(footer, "$AUTHORNAME$", <?php echo "\"".$AUTHOR_NAME."\""; ?>);
-    replace_data(footer, "$AUTHORLINK$", <?php echo "\"".$AUTHOR_LINK."\""; ?>);
-</script>

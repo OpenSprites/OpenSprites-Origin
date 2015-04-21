@@ -1,15 +1,21 @@
 @import url("footer.css");
 @import url("sidebar.css");
+@import url("");
 
 #entries {
-    position: absolute;
-    left:     150px;
-    top:      35px;
-    width:    calc(100% - 170px);
+    width: 940px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin: auto;
+    margin-top: 50px;
+}
+
+::selection {
+    background-color: #659593;
+    color: white;
 }
 
 .entry {
-    background-color: #DED;
     padding:          10px;
     margin-bottom:    20px;
     margin-top:       20px;
@@ -21,15 +27,110 @@
     border-radius:    3px;
 }
 
-.entry a {
-    text-decoration: none;
-    color:           #00F;
-}
-
 .entry a:hover {
     text-decoration: underline;
 }
 
 .entry hr {
     border: thin outset #CCC;
+}
+
+a {
+    color: #659593;
+    text-decoration: none;
+}
+
+h1 {
+    margin-top: 0;
+}
+
+.header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	height: 35px;
+	padding: 0 10px;
+	background-color: #659593;
+	z-index: 200;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	-o-user-select: none;
+	user-select: none;
+}
+
+a.scratch{	
+	float: left;
+	display: block;
+	width: 150px;
+	height: 35px;
+	background: url("http://dev.opensprites.gwiddle.co.uk/assets/images/os-logotype.svg") left center no-repeat;
+	background-size:150px 35px;
+	text-indent: -99999em;
+	padding: 0 2px;
+	transition: 250ms background-color;
+}
+
+a.scratch:hover {
+	background-color: #476866;
+}
+
+.header ul,
+.footer ul {
+	padding: 0;
+	margin: 0;
+	list-style-type: none;
+}
+.header {
+	font-size: 15px;
+}
+.header .right {
+	float: right;
+}
+.header li {
+	float: left;
+}
+.header li a,
+.header li span {
+	display: block;
+	padding: 0px 15px;
+	line-height: 35px;
+	text-decoration: none !important;
+	cursor: pointer;
+	transition: 250ms background-color;
+}
+
+.header li a,
+.header li a:active,
+.header li span{
+	color: #fff;
+}
+.header li a:hover,
+.header li span:hover,
+#userfcttoggle.open {
+	background-color: #476866;
+}
+
+.header .container {
+    width: 940px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin: auto;
+}
+
+.entry-header {
+    margin: 0;
+}
+
+.entry-contents {
+    margin-bottom: -40px;
+}
+
+h1 {
+    color: grey;
+}
+
+h1.entry-header a {
+    color: #333333;
 }

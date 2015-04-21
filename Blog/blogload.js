@@ -17,17 +17,26 @@ function blog_load_html(entry, callback) {
         contents = get_contents($contents);
         callback(""
             +"<div class='entry'>"
-            +"<h1 class='entry-header'><a href='viewpost.php?post="+entry+"'>"+header+"</a>"+"<span style='float:right;margin-right:20px;'>#"+entry+"</span></h1>"
-            +"<p class='entry-contents'>"+contents+"</p>"
+            +"<h1 class='entry-header'><a name='"+entry+"' href='#"+entry+"'>"+header+"</a>"+"<span style='float:right;margin-right:20px;'>#"+entry+"</span></h1>"
+            +"<pre class='entry-contents'>"+contents+"</pre>"
             +"</div>");
     });
 }
 
 function get_contents(xml) {
-    window.xml = xml;
-
-    var res = marked($(xml).text());
-    return marked($(res).find('code').text().trim());
+    var res = $(xml).text().split('\n');
+    var incode = false;
+    $.each(res, function(i) {
+        if(!incode)
+            res[i] = res[i].trim();
+        else
+            res[i] = res[i].substr(8);
+        if(res[i].replace(/ /g, '') === '```')
+            incode = !incode;
+    });
+    res = res.join('\n');
+    res = marked(res);
+    return res;
     
     /*
     // Remove any tags from the XML inputted and turn in to a markdown string.

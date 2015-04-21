@@ -1,7 +1,14 @@
 <blogentry>
     <blogheader>Hello, world!</blogheader>
     <blogcontents>
-        Hai. __markdown__
-        ```console.log("hello");```
+        Here's some [js](http://dev.opensprites.gwiddle.co.uk).
+        ```
+        console.log("hello");
+        if(!this.metbefore)
+            return 'Hello!';
+        else
+            return 'Oh, hey ' + this.name + '.';
+        ```
+        Yay!
 	</blogcontents>
 </blogentry>

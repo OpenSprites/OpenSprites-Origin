@@ -1,11 +1,7 @@
-@import url("http://fonts.googleapis.com/css?family=Libre+Baskerville|Droid+Serif");
+@import url("http://fonts.googleapis.com/css?family=Open+Sans:300,400|Source+Code+Pro");
 
-body {
-    font-family: 'Libre Baskerville', 'Droid Serif';
-}
-
-code {
-    font-family: Monaco, Courier, monospace;
+* {
+    font-family: 'Open Sans', 'Helvetica Neue', Helvetica, sans-serif;
 }
 
 h1.entry-header a {
@@ -31,4 +27,17 @@ h1.entry-header a {
 
 #entries {
     height: 100%;
+}
+
+code, code span {
+    border-radius: 3px;
+    font-family: 'Source Code Pro', monospace;
+}
+
+pre, code, p, .entry-contents h1, .entry-contents h2, .entry-contents h3, .entry-contents h4, .entry-contents h5 {
+    margin: 0;
+}
+
+code {
+    margin-top: -20px;
 }

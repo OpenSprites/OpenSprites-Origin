@@ -2,6 +2,7 @@
 
 <?php /* Important things; don't remove or change. */ ?>
 <meta coding="utf-8">
+<link rel="icon" type="image/png" href="http://dev.opensprites.gwiddle.co.uk/favicon.ico">
 <link rel="stylesheet" href="themes/global.css">
 <link rel="stylesheet" href="hightlight.css">
 <script src="highlight.min.js"></script>
@@ -20,29 +21,5 @@
     $SITE_KEYWORDS  = "OS, OpenSprites, OpenSpites Team, OS Team, Blog";
 
 ?>
-
-<?php /* Style option. */
-echo '<link rel="stylesheet" href="themes/oslight/global.css">'
-
-/*
-Themes:
-    beigedark
-    beigelight
-    blue
-    osdark
-    oslight
-    red
-*/
-?>
-
-<?php /* Side bar option. Pick one, leave the rest commented. */
-echo '<link rel="stylesheet" href="themes/sidebarasnavbar.css">'
-/*
-Sidebars:
-    asnavbar
-    left
-    right
-
-If using the OpenSprites theme be sure to use asnavbar!
-*/
-?>
+<link rel="stylesheet" href="themes/sidebarasnavbar.css">
+<link rel="stylesheet" href="themes/oslight/global.css">
