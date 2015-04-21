@@ -124,7 +124,7 @@
 					(function(listing, key){
 						return function(){
 							listing.attr("data-sort", key);
-							loadAssetList(listing, key, 7, listing.attr);
+							loadAssetList(listing, key, 7, listing.attr("data-type"));
 						};
 					})(listing, key));
 				button.text(orderBy[key]);
