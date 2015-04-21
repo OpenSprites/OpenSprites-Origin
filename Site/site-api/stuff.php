@@ -4,12 +4,6 @@ require '../assets/includes/database.php';
 require_once '../assets/includes/html_dom_parser.php';
 require 'lib.php';
 
-// so many haxx just to invalidate the cache :P
-header('Access-Control-Allow-Origin: *');
-header("Access-Control-Allow-Headers: Origin, x-requested-with, content-type, accept");
-header('Cache-Control: no-cache, must-revalidate');
-header('Expires: Mon, 26 Jul 1997 05:00:00 GMT');
-
 header('Content-Type: application/json');
 
 $userid = 'false';
