@@ -12,7 +12,11 @@ function getAssetList($raw){
 	  	"uploaded_by" => array(
 	  		"name" => $asset["user"],
 	  		"id" => $asset["userid"]
-	  	)
+	  	),
+		"downloads" => array(
+			"this_week" => $asset['downloadsThisWeek'],
+			"total" => $asset['downloadCount']
+		)
 	  );
 	  array_push($assets, $obj);
   }

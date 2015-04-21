@@ -19,6 +19,9 @@ All responses are in JSON, unless otherwise noted. Bullet points usually indicat
  - md5 (string): The MD5 hash of the asset
  - upload_time (string): The date and time the asset was uploaded
  - uploaded_by (object): A [truncated user object](#the-truncated-user-object) belonged to the uploader
+ - downloads (object):
+     - this_week (int): The number of downloads this week for this asset
+	 - total (int): The total number of downloads for this asset
  
 ## stuff.php ##
 Returns an array of [asset objects](#the-asset-object) belonging to the specified user
