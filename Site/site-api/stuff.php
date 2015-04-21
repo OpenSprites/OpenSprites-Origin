@@ -2,6 +2,7 @@
 require '../assets/includes/connect.php';
 require '../assets/includes/database.php';
 require_once '../assets/includes/html_dom_parser.php';
+require 'lib.php';
 
 // so many haxx just to invalidate the cache :P
 header('Access-Control-Allow-Origin: *');
@@ -31,23 +32,7 @@ try {
 
 $raw = getImagesForUser($userid);
 
-$assets = array();
-
-for($i=0;$i<sizeof($raw);$i++){
-	$asset = $raw[$i];
-	$obj = array(
-		"name" => $asset['customName'],
-		"type" => $asset['assetType'],
-		"url" => "/uploads/uploaded/" . $asset['name'],
-		"md5" => $asset['hash'],
-		"upload_time" => $asset['date'],
-		"uploaded_by" => array(
-			"name" => $asset["user"],
-			"id" => $asset["userid"]
-		)
-	);
-	array_push($assets, $obj);
-}
+$assets = getAssetList($raw);
 
 echo json_encode($assets, JSON_PRETTY_PRINT);
 
