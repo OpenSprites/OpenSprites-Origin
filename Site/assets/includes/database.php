@@ -37,6 +37,13 @@ function imagesQuery($query, $parameters){
 	return $res;
 }
 
+function imagesQuery0($query, $parameters){ // couldn't think of a better name, sorry
+	global $dbh;
+	global $assets_table_name;
+	$stmt = $dbh->prepare($query);
+	$stmt->execute($parameters);
+}
+
 function getAllImages(){
 	global $dbh;
 	global $assets_table_name;
