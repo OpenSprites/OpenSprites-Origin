@@ -7,7 +7,7 @@ For more information, please visit the <a href="http://scratch.mit.edu/discuss/t
 ## [The-Cheese-Eater](https://github.com/The-Cheese-Eater)
 ![GitHub Logo](https://avatars0.githubusercontent.com/u/9347154?s=100)
 
-[active]
+[very active]
 The-Cheese-Eater, your local sysadmin! He mostly manages hosting, forums, organisation and accounts.
 * Doing whatever sysadmins do
 * Supervising
