@@ -5,12 +5,6 @@ require '../assets/includes/html_dom_parser.php';
 session_name("OpenSprites_Forum_session");
 session_start();
 
-header('Access-Control-Allow-Origin: *');
-header("Access-Control-Allow-Headers: Origin, x-requested-with, content-type, accept");
-header('Cache-Control: no-cache, must-revalidate');
-header('Expires: Mon, 26 Jul 1997 05:00:00 GMT');
-header('Content-Type: application/json');
-
 /*
 function is_404($url) {
     $returned = get_headers('http://opensprites.gwiddle.co.uk/forums/?p=member/' . $url, 1)[0];
