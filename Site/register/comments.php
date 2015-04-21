@@ -8,9 +8,11 @@ foreach ($comments as $comment) {
 	$creator = trim($comment -> find('.name', 0) -> plaintext);
 	$content = trim($comment -> find('.content', 0) -> plaintext);
 	if ($creator == $logged_in_user && $content == $_GET['key']) {
-		echo 'yey';
 		$is_good_reg = true;
 		break;
+	} else {
+		echo $creator == $logged_in_user;
+		echo $content == $_GET['key'];
 	}
 }
 
