@@ -13,6 +13,7 @@ foreach ($comments as $comment) {
 	}
 }
 
+echo '<h1>Comments Test</h1><br>';
 print_r($is_good_reg);
 
 ?>
