@@ -1,6 +1,6 @@
 <div class="header">
     <div class="container">
-        <a class="scratch" href="/"></a>
+        <a class="scratch" href="http://dev.opensprites.gwiddle.co.uk"></a>
 
         <ul class="left">
             <li>
