@@ -12,8 +12,7 @@
         $logged_in_userid = $_SESSION["userId"];
         $html = file_get_html('http://opensprites.gwiddle.co.uk/forums/?p=member/' . $logged_in_userid);
         $logged_in_user = $html->find('h1#memberName', 0)->innertext;
-        $user_group = "FIX ME"; //$html->find('p#memberGroup span', 0)->innertext;
-		                        // commented code gives a "Trying to get property of non-object" error
+        $user_group = $html->find('p#memberGroup', 0)->plaintext;
         $user_banned = $user_group == 'Suspended';
 
         if($user_group == "Moderator" or $user_group == "Administrator") {
