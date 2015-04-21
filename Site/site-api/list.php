@@ -3,7 +3,6 @@ require '../assets/includes/connect.php';
 require '../assets/includes/database.php';
 header("Content-Type: application/json");
 
-$response = array();
 $max = 10;
 $type = "all";
 $sort = "popularity";
@@ -53,21 +52,8 @@ $query .= " LIMIT ?";
 array_push($params, $max);
 $raw = imagesQuery($query, $params);
 
-for($i=0;$i<sizeof($raw);$i++){
-	$asset = $raw[$i];
-	$obj = array(
-		"name" => $asset['customName'],
-		"type" => $asset['assetType'],
-		"url" => "/uploads/uploaded/" . $asset['name'],
-		"md5" => $asset['hash'],
-		"upload_time" => $asset['date'],
-		"uploaded_by" => array(
-			"name" => $asset["user"],
-			"id" => $asset["userid"]
-		)
-	);
-	array_push($response, $obj);
-}
+$response = getAssetList($raw);
+
 echo json_encode($response, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES);
 
 ?>
