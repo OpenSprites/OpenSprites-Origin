@@ -6,6 +6,7 @@ For more information, please visit the <a href="http://scratch.mit.edu/discuss/t
 
 ## [The-Cheese-Eater](https://github.com/The-Cheese-Eater)
 ![GitHub Logo](https://avatars0.githubusercontent.com/u/9347154?s=100)
+
 [active]
 The-Cheese-Eater, your local sysadmin! He mostly manages hosting, forums, organisation and accounts.
 * Doing whatever sysadmins do
@@ -19,6 +20,7 @@ The-Cheese-Eater, your local sysadmin! He mostly manages hosting, forums, organi
 
 ## [jbayfield](https://github.com/jbayfield)
 ![GitHub Logo](https://avatars2.githubusercontent.com/u/10786277?s=100)
+
 [very active]
 jbayfield is an OpenSprites administrator and developer.
 * Web host administration
@@ -29,6 +31,7 @@ jbayfield is an OpenSprites administrator and developer.
 
 ## [Firedrake969](https://github.com/Firedrake969)
 ![GitHub Logo](https://avatars3.githubusercontent.com/u/8008245?s=100)
+
 [active]
 Firedrake969 is one of the lead developers of OS. He is also one of the main overseers of the project.
 * HTML
@@ -39,6 +42,7 @@ Firedrake969 is one of the lead developers of OS. He is also one of the main ove
 
 ## [MegaApuTurkUltra](https://github.com/MegaApuTurkUltra)
 ![GitHub Logo](https://avatars0.githubusercontent.com/u/8547938?s=100)
+
 [very active]
 MegaApuTurkUltra is a sample text
 * HTML
@@ -49,6 +53,7 @@ MegaApuTurkUltra is a sample text
 
 ## [GrannyCookies](https://github.com/GrannyCookies)
 ![GitHub Logo](https://avatars0.githubusercontent.com/u/9429556?s=100)
+
 [very active]
 GrannyCookies is one of the most active devs on the OS team and helps administrate and moderate the site/forums.
 He hax0red the forums and styled it to look neat with the rest of the site, as he did with the blog.
@@ -60,6 +65,7 @@ He hax0red the forums and styled it to look neat with the rest of the site, as h
 
 ## [andrewjcole](https://github.com/andrewjcole)
 ![GitHub Logo](https://avatars1.githubusercontent.com/u/10202163?s=100)
+
 [active]
 andrewjcole is a dev on the OS team. 
 * HTML
@@ -68,6 +74,7 @@ andrewjcole is a dev on the OS team.
 
 ## [109C](https://github.com/109C)
 ![GitHub Logo](https://avatars1.githubusercontent.com/u/9680886?s=100)
+
 [inactive]
 109C is a dev on the OS team.
 * HTML
@@ -76,6 +83,8 @@ andrewjcole is a dev on the OS team.
 * PHP
 
 ## [zappy1333](https://github.com/zappy1333)
+
+[inactive]
 zappy1333 is a dev on the OS team.
 [inactive]
 * HTML
@@ -85,6 +94,7 @@ zappy1333 is a dev on the OS team.
 
 ## [liam4](https://github.com/liam4)
 ![Github Logo](https://avatars3.githubusercontent.com/u/9948030?s=100)
+
 [active]
 liam4 is a tester / bug reporter / feature suggester on the OS team. He designed the blog.
 * Idea creating
@@ -92,6 +102,7 @@ liam4 is a tester / bug reporter / feature suggester on the OS team. He designed
 
 ## [Rumanti](https://github.com/Rumanti)
 ![Github logo](https://avatars1.githubusercontent.com/u/10893362?s=100)
+
 [active]
 Rumanti is a dev on the OS team.
 * HTML
@@ -99,6 +110,7 @@ Rumanti is a dev on the OS team.
 
 ## [DM5555](https://github.com/DM5555)
 ![Github logo](https://avatars2.githubusercontent.com/u/9368136?s=100)
+
 [inactive]
 DM5555 is a dev on the OS team.
 * HTML
@@ -108,6 +120,7 @@ DM5555 is a dev on the OS team.
 
 ## [pilppe](https://github.com/pilppe)
 ![GitHub Logo](https://avatars2.githubusercontent.com/u/8099538?s=100)
+
 [active]
 pilppe is a dev on the OS team. 
 * HTML
