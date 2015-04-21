@@ -5,9 +5,9 @@ This policy forms an agreement between the end-user (You, User, Your), and OpenS
 
 #####Disclaimers
 • OpenSprites welcomes people of all ages, races, ethnicities, religions, sexual orientations, and gender identities.
-• OpenSprites cannot and does not guarentee reliabilty, uptime, bug fixes, stability, security, or service.
+• OpenSprites cannot and does not guarantee reliability, uptime, bug fixes, stability, security, or service.
 • OpenSprites reserves the right to terminate Your use of the site without prior notice.
 • Any content uploaded is open sourced immediately from upload.
-• Code uploaded by developers is licensed under the MIT licese, and belongs to the OpenSprites Team as a collective.
+• Code uploaded by developers is licensed under the MIT license, and belongs to the OpenSprites Team as a collective.
 
 INCOMPLETE POLICY - INVALID AND VOID
