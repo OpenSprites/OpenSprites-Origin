@@ -8,13 +8,17 @@ All responses are in JSON, unless otherwise noted. Bullet points usually indicat
 - usertype (string): The group the user is in (Moderator, Member, etc)
 - avatar (string): The URL of the user's uploaded avatar. If it doesn't exist, it will be the default user icon.
 
+### The truncated user object ###
+- name (string): The username of the user
+- id (int): The user ID of the user
+
 ### The asset object ###
  - name (string): The name set for the asset
  - type (string): One of "image" "sound" or "script"
  - url (string): The direct link to the asset
  - md5 (string): The MD5 hash of the asset
  - upload_time (string): The date and time the asset was uploaded
- - uploaded_by (object): A [user object](#the-user-object) for the uploader
+ - uploaded_by (object): A [truncated user object](#the-truncated-user-object) belonged to the uploader
  
 ## stuff.php ##
 Returns an array of [asset objects](#the-asset-object) belonging to the specified user
