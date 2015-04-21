@@ -69,7 +69,7 @@ function processArchive(file){
 			template.find(".status").text("Ready to upload");
 			
 			totalSize += asBinary.length;
-			if(totalSize > 8388608){
+			if(totalSize > 50000000){
 				$("#upload-status p").text("Some files were not added. Keep total file size below 8MB.");
 				return;
 			}
@@ -134,7 +134,7 @@ function processFiles(files){
 	}
 	for (var i = 0, f; f = files[i]; i++) {
 		totalSize += f.size;
-		if(totalSize > 8388608){
+		if(totalSize > 50000000){
 			$("#upload-status p").text("Some files were not added. Keep total file size below 8MB.");
 			return;
 		}
