@@ -13,6 +13,6 @@ foreach ($comments as $comment) {
 	}
 }
 
-echo $is_good_reg;
+print_r($is_good_reg);
 
 ?>
