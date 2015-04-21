@@ -7,8 +7,8 @@ $is_good_reg = false;
 foreach ($comments as $comment) {
 	$creator = $comment -> find('name', 0) -> plaintext;
 	$content = $comment -> find('.content', 0) -> plaintext;
-	echo $creator . ' : ' . $logged_in_user;
-	echo $content . '<br>';
+	echo $creator . ' : ' . $logged_in_user . '<br>';
+	echo $content . '<br>&nbsp;<br>';
 	if ($creator == $logged_in_user && $content == $_GET['key']) {
 		$is_good_reg = true;
 		break;
