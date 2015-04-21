@@ -5,7 +5,7 @@ For more information, please visit the <a href="http://scratch.mit.edu/discuss/t
 # The OpenSprites team:
 
 ## [The-Cheese-Eater](https://github.com/The-Cheese-Eater)
-![GitHub Logo](https://avatars0.githubusercontent.com/u/9347154?v=3&s=100)
+![GitHub Logo](https://avatars0.githubusercontent.com/u/9347154?s=100)
 
 The-Cheese-Eater, your local sysadmin! He mostly manages hosting, forums, organisation and accounts.
 * Doing whatever sysadmins do
@@ -18,7 +18,7 @@ The-Cheese-Eater, your local sysadmin! He mostly manages hosting, forums, organi
 * CSS
 
 ## [jbayfield](https://github.com/jbayfield)
-![GitHub Logo](https://avatars2.githubusercontent.com/u/10786277?v=3&s=400)
+![GitHub Logo](https://avatars2.githubusercontent.com/u/10786277?s=100)
 
 jbayfield is an OpenSprites administrator and developer.
 * Web host administration
@@ -28,7 +28,7 @@ jbayfield is an OpenSprites administrator and developer.
 * Advice
 
 ## [Firedrake969](https://github.com/Firedrake969)
-![GitHub Logo](https://avatars3.githubusercontent.com/u/8008245?v=3&s=320)
+![GitHub Logo](https://avatars3.githubusercontent.com/u/8008245?s=100)
 
 Firedrake969 is one of the lead developers of OS. He is also one of the main overseers of the project.
 * HTML
@@ -39,7 +39,7 @@ Firedrake969 is one of the lead developers of OS. He is also one of the main ove
 * Annoying [GrannyCookies](https://github.com/GrannyCookies)
 
 ## [MegaApuTurkUltra](https://github.com/MegaApuTurkUltra)
-![GitHub Logo](https://avatars0.githubusercontent.com/u/8547938?v=3&s=100)
+![GitHub Logo](https://avatars0.githubusercontent.com/u/8547938?s=100)
 
 MegaApuTurkUltra is a sample text
 * HTML
@@ -51,7 +51,7 @@ MegaApuTurkUltra is a sample text
 
 
 ## [GrannyCookies](https://github.com/GrannyCookies)
-![GitHub Logo](https://avatars0.githubusercontent.com/u/9429556?v=3&s=110)
+![GitHub Logo](https://avatars0.githubusercontent.com/u/9429556?s=100)
 
 GrannyCookies is one of the most active devs on the OS team and helps administrate and moderate the site.
 * HTML
@@ -63,14 +63,14 @@ GrannyCookies is one of the most active devs on the OS team and helps administra
 * Administration and moderation
 
 ## [andrewjcole](https://github.com/andrewjcole)
-![GitHub Logo](https://avatars1.githubusercontent.com/u/10202163?v=3&s=100)
+![GitHub Logo](https://avatars1.githubusercontent.com/u/10202163?s=100)
 andrewjcole is a dev on the OS team. 
 * HTML
 * CSS
 * A tiny bit of PHP
 
 ## [109C](https://github.com/109C)
-![GitHub Logo](https://avatars1.githubusercontent.com/u/9680886?v=3&s=400)
+![GitHub Logo](https://avatars1.githubusercontent.com/u/9680886?s=100)
 109C is a dev on the OS team.
 * HTML
 * CSS
@@ -86,21 +86,21 @@ zappy1333 is a dev on the OS team.
 * PHP
 
 ## [liam4](https://github.com/liam4)
-![Github Logo](https://avatars3.githubusercontent.com/u/9948030?v=3&s=110)
+![Github Logo](https://avatars3.githubusercontent.com/u/9948030?s=100)
 
 liam4 is a tester / bug reporter / feature suggester on the OS team. He designed the blog.
 * Idea creating
 * Bug reporting
 
 ## [Rumanti](https://github.com/Rumanti)
-![Github logo](https://avatars1.githubusercontent.com/u/10893362?v=3&s=400)
+![Github logo](https://avatars1.githubusercontent.com/u/10893362?s=100)
 
 Rumanti is a dev on the OS team.
 * HTML
 * CSS
 
 ## [DM5555](https://github.com/DM5555)
-![Github logo](https://avatars2.githubusercontent.com/u/9368136?v=3&s=130)
+![Github logo](https://avatars2.githubusercontent.com/u/9368136?s=100)
 
 DM5555 is a dev on the OS team.
 * HTML
@@ -109,7 +109,7 @@ DM5555 is a dev on the OS team.
 * PHP(If necessary)
 
 ## [pilppe](https://github.com/pilppe)
-![GitHub Logo](https://avatars2.githubusercontent.com/u/8099538?v=3&s=460)
+![GitHub Logo](https://avatars2.githubusercontent.com/u/8099538?s=100)
 
 pilppe is a dev on the OS team. 
 * HTML
