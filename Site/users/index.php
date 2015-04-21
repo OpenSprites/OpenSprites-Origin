@@ -121,10 +121,6 @@
     </div>
     <?php }?>
     
-    <div id='img-modal'>
-        <!-- TO DO: <iframe scrolling="no" src="upload-avatar.php"></iframe> -->
-    </div>
-    
     <script>
         $('#change-image').click(function() {
             // display modal for changing profile pic
