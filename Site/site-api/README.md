@@ -3,8 +3,10 @@ All responses are in JSON, unless otherwise noted. Bullet points usually indicat
 
 ## Response Objects ##
 ### The user object ###
-- name (string): The username of the user
-- id (int): The user ID of the user
+- username (string): The username of the user
+- userid (int): The user ID of the user
+- usertype (string): The group the user is in (Moderator, Member, etc)
+- avatar (string): The URL of the user's uploaded avatar. If it doesn't exist, it will be the default user icon.
 
 ### The asset object ###
  - name (string): The name set for the asset
@@ -39,4 +41,12 @@ GET /site-api/list.php?max=?&sort=?&type=?
 A JSON array of [asset objects](#the-asset-object)
 
 ## user.php ##
-No documentation yet
+Returns the [user object](#the-asset-object) of a given userid
+### Request format ###
+```http
+GET /site-api/user.php?userid=?
+```
+- userid: The userid of a user
+
+### Response format ###
+A JSON [user object](#the-user-object)
