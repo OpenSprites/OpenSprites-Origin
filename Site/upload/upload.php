@@ -19,6 +19,11 @@ function rstrpos ($haystack, $needle, $offset){
 header("Content-Type: text/json");
 $json = array("status"=>"error","message"=>"Unknown","debug"=>"","results"=>array());
 
+$customNames = array();
+if(isset($_REQUEST['customNames'])){
+	$customNames = json_decode($_REQUEST['customNames'], true);
+}
+
 if(isset($_REQUEST['file_too_big'])){
 	$json['message'] = "Your uploads are too big! Upload only 50MB at a time.";
 	die(json_encode($json));
@@ -101,6 +106,11 @@ if(isset($_FILES['uploadedfile'])){
 				}
 			
 				$hash = hash_file('md5', $tmpName);
+				
+				if(isset($customNames[$hash])){
+					$customName = $customNames[$hash];
+				}
+				
 				$existing = imageExists($hash);
 				if(sizeof($existing) > 0){
 					$name = $existing[0]['name'];

@@ -11,5 +11,5 @@ if(php_sapi_name() != 'cli'){ // let's not have anyone hacking this. Make sure i
 include "../assets/includes/database.php";
 
 connectDatabase();
-imagesQuery0("UPDATE `" . getAssetsTableName() . "` SET `downloadCount`=?", array(0));
+imagesQuery0("UPDATE `" . getAssetsTableName() . "` SET `downloadsThisWeek`=?", array(0));
 ?>
