@@ -47,7 +47,7 @@
                         <div class="sortby toggleset">Sort by: </div>
 						<div class="types toggleset">Types: </div>
 						<br/>
-                        PHP guys, get in here!
+                        <div id="top-assets-list">Loading...</div>
                     </div>
                 </div>
             </div>
@@ -99,8 +99,13 @@
     <!-- footer -->
     <?php echo file_get_contents('footer.html'); ?>
 	<script>
+		$.get("/site-api/list.php?sort=popularity&max=10&type=all", function(data){
+			var model = OpenSprites.models.AssetList(data);
+			$("#top-assets-list").html(model.html());
+		});
+	
 		var orderBy = {
-			popularity: "Popularity (downloads)",
+			popularity: "Popularity (downloads this week)",
 			alphabetical: "A-Z",
 			newest: "Newest",
 			oldest: "Oldest"
