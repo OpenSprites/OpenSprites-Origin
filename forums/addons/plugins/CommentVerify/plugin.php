@@ -1,5 +1,7 @@
 <?php
-// Copyright 2015 Tristan van Bokkem
+
+// generate a random number 8 chars long - used as key
+$tkey = 0;
 
 if (!defined("IN_ESOTALK")) exit;
 
@@ -35,8 +37,10 @@ class ETPlugin_CommentVerify extends ETPlugin {
 	// Hook into the join function to include the Scratch form.
 	public function handler_userController_initJoin($controller, $form)
 	{
+        $tkey = mt_rand(8, 8);
+        
         // Add the Scratch section.
-        $form->addSection("Scratch", 'Please verify your Scratch username');
+        $form->addSection("Scratch", 'Verify your Scratch account');
 
         // Add the Scratch field.
         $form->addField("Scratch", "Scratch", array($this, "renderScratchField"), array($this, "processScratchField"));
@@ -49,18 +53,18 @@ class ETPlugin_CommentVerify extends ETPlugin {
 	    	return "
             <div style='width: 302px;'>
                 <strong>Step One: </strong>Go to <a href='https://scratch.mit.edu/projects/47606468/' target='_BLANK'>this project.</a><br>
-                <strong>Step Two: </strong>Comment this: \"" . 'test_os_register' . "\".
+                <strong>Step Two: </strong>Comment this: \"" . $tkey . "\".
+                <strong>Step Three: </strong>You're done!
             </div>".$form->getError("Scratch");
 	}
 
 	function processScratchField($form, $key, &$data)
 	{
         // process stuff
-        $resp = file_get_contents('http://dev.opensprites.gwiddle.co.uk/register/comments.php?user=' . $data["username"] . '&key=test_os_register');
+        $resp = file_get_contents('http://dev.opensprites.gwiddle.co.uk/register/comments.php?user=' . $data["username"] . '&key=' . $tkey);
         
-		// If no valid words are entered, show them an error.
 		if($resp == 'false') {
-			$form->error("Scratch", 'We couldn\'t find that comment...' . '<br>' . 'Error: ' . $resp . ', ' . $data["username"]);
+			$form->error("Scratch", 'We couldn\'t find the comment.');
 		}
 	}
 
