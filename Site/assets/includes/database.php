@@ -4,7 +4,60 @@ $password = "swagmaster123"; // change this :P
 $db_name  = "OpenSprites_assets";
 $assets_table_name = "os_assets";
 
+$forum_username = "OpenSprites_os";
+$forum_password = "ZfgKxh24PP";
+$forum_db_name = "OpenSprites_os";
+$forum_member_table = "et_member";
+$forum_group_table = "et_group";
+$forum_group_member_table = "et_member_group";
+
 $dbh;
+$forum_dbh;
+
+function connectForumDatabase(){
+	global $forum_dbh;
+	global $forum_username;
+	global $forum_password;
+	global $forum_db_name;
+	$conf = 'mysql:host=localhost;dbname='.$forum_db_name.';charset=utf8';
+	$forum_dbh = new PDO($conf, $forum_username, $forum_password);
+	$forum_dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+	$forum_dbh->setAttribute(PDO::ATTR_EMULATE_PREPARES, false);
+}
+
+function forumQuery($query, $parameters){
+	global $forum_dbh;
+	$stmt = $forum_dbh->prepare($query);
+	$stmt->execute($parameters);
+	$res = $stmt->fetchAll(PDO::FETCH_ASSOC);
+	return $res;
+}
+
+function getUserInfo($userid){
+	global $forum_member_table;
+	global $forum_group_table;
+	global $forum_group_member_table;
+	$res = forumQuery("SELECT * FROM `$forum_member_table` WHERE `memberId`=?", array($userid));
+	if(sizeof($res) == 0) return FALSE;
+	
+	// the order by here is so we can avoid having to look through the entire array and access by groupId - 1
+	$groupRes = forumQuery("SELECT * FROM `$forum_group_table` ORDER BY `groupId`", array());
+	$memberGroupRes = forumQuery("SELECT * FROM `$forum_group_member_table` WHERE `memberId`=?", array($userid));
+	$groups = array();
+	for($i=0;$i<sizeof($memberGroupRes);$i++){
+		$groupId = $memberGroupRes[$i]['groupId'];
+		$groupName = $groupRes[intval($groupId) - 1]['name'];
+		array_push($groups, $groupName);
+	}
+	
+	$userInfo = array(
+		"userid" => $userid,
+		"username" => $res[0]['username'],
+		"usertype" => $res[0]['account'],
+		"groups" => $groups
+	);
+	return $userInfo;
+}
 
 function connectDatabase(){
 	global $dbh;

@@ -1,6 +1,4 @@
 <?php
-require '../assets/includes/connect.php';
-require '../assets/includes/database.php';
 require_once '../assets/includes/html_dom_parser.php';
 require 'lib.php';
 

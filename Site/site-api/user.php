@@ -1,13 +1,5 @@
 <?php
-
-require '../assets/includes/html_dom_parser.php';
-require 'lib.php';
-
-session_name("OpenSprites_Forum_session");
-session_start();
-
-
-/*
+/* OLD CODE
 function is_404($url) {
     $returned = get_headers('http://opensprites.gwiddle.co.uk/forums/?p=member/' . $url, 1)[0];
     return $returned == 'HTTP/1.1 404 Not Found';
@@ -75,15 +67,7 @@ if($raw === FALSE) {
     echo '"scratch_userid": ' . $scratch_userid . ', ';
     echo '"avatar": "' . $avatar . '"}';
 }
-*/
-
-$userid = 'false';
-if(isset($_GET['userid'])) {
-    $userid = $_GET['userid'];
-} else {
-    $userid = $_SESSION["userId"];
-}
-
+///////////////////////// NEWER OLD CODE
 $raw = file_get_html("http://opensprites.gwiddle.co.uk/forums/?p=member/" . $userid);
 if($raw == FALSE) {
     echo 'FALSE';
@@ -100,7 +84,22 @@ if($raw->find('img.avatar', 0) !== null) {
     $avatar = 'http://dev.opensprites.gwiddle.co.uk/assets/images/defaultfile.png';
 }
 
-$json = array('userid' => $userid, 'username' => $raw->find('h1#memberName', 0)->innertext, 'usertype' => $r, 'avatar' => $avatar);
-echo json_encode($json, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES | JSON_NUMERIC_CHECK);
+$json = array('userid' => $userid, 'username' => $raw->find('h1#memberName', 0)->innertext, 'usertype' => $r, 'avatar' => $avatar);*/
+
+////////////////// ACTUAL CODE (pretty short with database.php, right?)
+require 'lib.php'; // lib has all the headers and other requires we need already
+
+$userid = 'false';
+if(isset($_GET['userid'])) {
+    $userid = $_GET['userid'];
+} else {
+    $userid = $_SESSION["userId"];
+}
+
+connectForumDatabase();
+$userInfo2 = getUserInfo(intval($userid));
+$userInfo2['avatar'] = "http://dev.opensprites.gwiddle.co.uk/forums/uploads/avatars/" . $userid . ".png";
+
+echo json_encode($userInfo2, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES | JSON_NUMERIC_CHECK);
 
 ?>

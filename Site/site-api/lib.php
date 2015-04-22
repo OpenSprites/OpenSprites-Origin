@@ -1,4 +1,6 @@
 <?php
+require '../assets/includes/connect.php';
+
 function getAssetList($raw){
   $assets = array();
   for($i=0;$i<sizeof($raw);$i++){
