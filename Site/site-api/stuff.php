@@ -1,5 +1,4 @@
 <?php
-require_once '../assets/includes/html_dom_parser.php';
 require 'lib.php';
 
 $userid = 'false';
