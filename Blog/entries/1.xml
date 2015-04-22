@@ -1,14 +1,8 @@
 <blogentry>
-    <blogheader>Hello, world!</blogheader>
+    <blogheader>Welcome!</blogheader>
     <blogcontents>
-        Here's some [js](http://dev.opensprites.gwiddle.co.uk).
-        ```
-        console.log("hello");
-        if(!this.metbefore)
-            return 'Hello!';
-        else
-            return 'Oh, hey ' + this.name + '.';
-        ```
-        Yay!
+		Welcome to the all-new OpenSprites Blog developed and maintained by the team! On this blog, we'll be updating you with the new features, fixes and planned features. Members of the team will also be encouraged to make posts on the blog. Be sure to bookmark the blog and keep up with the latest info!
+		
+		**cheeseeater**
 	</blogcontents>
 </blogentry>
