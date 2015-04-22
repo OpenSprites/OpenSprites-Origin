@@ -1,10 +1,10 @@
 <?php
-    require "../assets/includes/connect.php"; //Connect - includes session_start(); require "../assets/includes/avatar.php";
-    
-    /*if($logged_in_user == 'not logged in' or $user_banned) {
-        header('Location: /');
-        die;
-    }*/
+	require "../assets/includes/connect.php"; //Connect - includes session_start(); require "../assets/includes/avatar.php";
+	
+	if($logged_in_user == 'not logged in' or $user_banned) {
+		header('Location: /');
+		die;
+	}
 	
 	function unique_id($l = 8) {
 		return substr(md5(uniqid(mt_rand(), true)), 0, $l);

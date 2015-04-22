@@ -2,6 +2,11 @@
 require_once("../assets/includes/connect.php");
 require_once("../assets/includes/database.php");
 
+if($logged_in_user == 'not logged in' or $user_banned) {
+    header('Location: /');
+    die;
+}
+
 function unique_id($l = 8) {
     return substr(md5(uniqid(mt_rand(), true)), 0, $l);
 }
