@@ -1,0 +1,14 @@
+/* Copyright 2014 Tristan van Bokkem */
+
+.recaptchatable .recaptcha_image_cell {background-color:transparent!important}
+.recaptchatable, #recaptcha_area tr, #recaptcha_area td, #recaptcha_area th {padding:0!important}
+#recaptcha_logo, .recaptcha_only_if_privacy, #recaptcha_switch_audio_btn, #recaptcha_whatsthis_btn, #recaptcha_reload_btn{display:none!important}
+table.recaptchatable {border:none !important;padding:0!important}
+.recaptchatable #recaptcha_image{border:1px solid #CCC!important}
+table#recaptcha_table #recaptcha_image {margin:0!important}
+#recaptcha_table td:nth-child(2) {padding:10px 100% 7px 7px!important}
+#recaptcha_image_cell {width:auto!important}
+.recaptcha_image_cell center {text-align:left!important}
+#recaptcha_response_field {border:1px solid #CCC!important;width:260px!important;font-size:inherit!important}
+#recaptcha_image, #recaptcha_image img { width:270px!important;cursor:pointer}
+.recaptcha_input_area {margin-left:-7px;}
