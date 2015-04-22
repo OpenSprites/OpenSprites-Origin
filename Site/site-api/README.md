@@ -5,8 +5,9 @@ All responses are in JSON, unless otherwise noted. Bullet points usually indicat
 ### The user object ###
 - username (string): The username of the user
 - userid (int): The user ID of the user
-- usertype (string): The group the user is in (Moderator, Member, etc)
+- usertype (string): The account type, one of "member", "administrator", or "suspended"
 - avatar (string): The URL of the user's uploaded avatar. If it doesn't exist, it will be the default user icon.
+- groups (array): An array of groups the user belongs to.
 
 ### The truncated user object ###
 - name (string): The username of the user
