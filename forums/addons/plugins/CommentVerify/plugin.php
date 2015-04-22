@@ -1,8 +1,5 @@
 <?php
 
-// generate a random number 8 chars long - used as key
-$tkey = 0;
-
 if (!defined("IN_ESOTALK")) exit;
 
 ET::$pluginInfo["CommentVerify"] = array(
@@ -37,8 +34,6 @@ class ETPlugin_CommentVerify extends ETPlugin {
 	// Hook into the join function to include the Scratch form.
 	public function handler_userController_initJoin($controller, $form)
 	{
-        // 8 long key
-        $GLOBALS['tkey'] = mt_rand(1000000, 99999999);
         
         // Add the Scratch section.
         $form->addSection("Scratch", 'Verify Scratch account');
@@ -54,7 +49,7 @@ class ETPlugin_CommentVerify extends ETPlugin {
 	    	return "
             <div style='width: 302px;'>
                 <strong>Step One: </strong>Go to <a href='https://scratch.mit.edu/projects/47606468/' target='_BLANK'>this project.</a><br>
-                <strong>Step Two: </strong>Comment this: <i>\"" . $GLOBALS['tkey'] . "\"</i>.<br>
+                <strong>Step Two: </strong>Comment this: <i>\"" . $_SESSION['token'] . "\"</i>.<br>
                 <strong>Step Three: </strong>You're done!
             </div>".$form->getError("Scratch");
 	}
@@ -62,7 +57,8 @@ class ETPlugin_CommentVerify extends ETPlugin {
 	function processScratchField($form, $key, &$data)
 	{
         // process stuff
-        $resp = file_get_contents('http://dev.opensprites.gwiddle.co.uk/register/comments.php?user=' . $data["username"] . '&key=' . $GLOBALS['tkey']);
+        $url = 'http://dev.opensprites.gwiddle.co.uk/register/comments.php?user=' . $data["username"] . '&key=' . $_SESSION['token'];
+        $resp = file_get_contents($url);
         
 		if($resp == 'false') {
 			$form->error("Scratch", 'We couldn\'t find the comment.');
