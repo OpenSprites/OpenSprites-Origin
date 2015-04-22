@@ -134,7 +134,7 @@
 			}
 		});
 		$(".types").each(function(){
-			var listing = $(this).parent();
+			var listing = $(this).parent().find('.assets-list');
 			for(key in types){
 				var button = $("<button>").attr("data-for", key).click(
 					(function(listing, key){
