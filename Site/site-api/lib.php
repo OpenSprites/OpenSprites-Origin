@@ -7,6 +7,7 @@ function getAssetList($raw){
 	  	"name" => $asset['customName'],
 	  	"type" => $asset['assetType'],
 	  	"url" => "/uploads/uploaded/" . $asset['name'],
+	  	"filename" =>  $asset['name'],
 	  	"md5" => $asset['hash'],
 	  	"upload_time" => $asset['date'],
 	  	"uploaded_by" => array(
