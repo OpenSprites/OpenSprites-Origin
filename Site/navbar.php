@@ -13,19 +13,19 @@
 
         <ul class="left">
             <li>
-                <a href="/sprites">Sprites</a>
+                <a href="/media">Media</a>
             </li>
             <li>
                 <a href="/scripts">Scripts</a>
             </li>
             <li>
-                <a href="/media">Media</a>
+                <a href="/collections">Collections</a>
             </li>
             <li>
-                <a href="http://blog.opensprites.gwiddle.co.uk">Blog</a>
+                <a href="//blog.opensprites.gwiddle.co.uk">Blog</a>
             </li>
             <li class="last">
-                <a href="http://opensprites.gwiddle.co.uk/forums/">Forums</a>
+                <a href="//opensprites.gwiddle.co.uk/forums/">Forums</a>
             </li>
         </ul>
 
@@ -46,7 +46,7 @@
                     <?php echo $logged_in_user; ?>
                 </a>
             </li>
-            <li class="last" onclick="window.location = 'http://dev.opensprites.gwiddle.co.uk/logout.php?return=/';"><span>Log Out</span>
+            <li class="last" onclick="window.location = '/logout.php?return=<?php echo $_SERVER['REQUEST_URI']; ?>';"><span>Log Out</span>
             </li>
             <?php } ?>
         </ul>
