@@ -1,6 +1,6 @@
 # Includes documentation #
 ## database.php ##
-### Variables (absolutely do not to use outside of database.ph[) ###
+### Variables (absolutely do not to use outside of database.php) ###
  - $username: The username to the assets database
  - $password: The password to the assets database
  - $db_name: The name of the assets database
@@ -12,9 +12,7 @@
  - getDatabaseError():array: Returns the last PDO error, if any. See the [PDO documentation](http://php.net/manual/en/pdo.errorinfo.php) for more info
  - getAssetsTableName():string: Returns the name of the assets table. Use this rather than the actual variable.
  - imagesQuery($query:string, $parameters:array):array: Returns an associative array of PDO results for the given string and parameters
-   - Example: ```php
-imagesQuery("SELECT * FROM `".getAssetsTableName()."` WHERE `userid`=? AND `hash`=?", array($userid_you_want, $hash_you_want))
-```
+   - Example: ```imagesQuery("SELECT * FROM `".getAssetsTableName()."` WHERE `userid`=? AND `hash`=?", array($userid_you_want, $hash_you_want))```
    - TODO: Rename this to something more descriptive
  - imagesQuery0($query:string, $parameters:array):void: like imagesQuery(), but does not expect a result.
    - TODO: Rename this to something more descriptive
