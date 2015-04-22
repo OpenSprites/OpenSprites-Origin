@@ -47,8 +47,9 @@ class ETPlugin_CommentVerify extends ETPlugin {
 		// Format the reCAPTCHA form with some JavaScript and HTML
 		// retrieved from the Google reCAPTCHA library.
 	    	return "
-            <div style='width: 302px; height: 352px;'>
-                <strong>Step One: </strong>Go to <a href='' traget>this project</a>
+            <div style='width: 302px;'>
+                <strong>Step One: </strong>Go to <a href='https://scratch.mit.edu/projects/47606468/' target='_BLANK'>this project.</a><br>
+                <strong>Step Two: </strong>Comment this: \"" . 'test_os_register' . "\".
             </div>".$form->getError("Scratch");
 	}
 
@@ -59,7 +60,7 @@ class ETPlugin_CommentVerify extends ETPlugin {
         
 		// If no valid words are entered, show them an error.
 		if($resp == 'false') {
-			$form->error("scratch", 'We couldn\'t find a comment verifying your Scratch vaccount :(' . '<br>' . 'Error: ' . $resp . ', ' . $data["username"]);
+			$form->error("Scratch", 'We couldn\'t find that comment...' . '<br>' . 'Error: ' . $resp . ', ' . $data["username"]);
 		}
 	}
 
