@@ -98,7 +98,7 @@ if(isset($_GET['userid'])) {
 
 connectForumDatabase();
 $userInfo2 = getUserInfo(intval($userid));
-$userInfo2['avatar'] = "http://dev.opensprites.gwiddle.co.uk/forums/uploads/avatars/" . $userid . ".png";
+$userInfo2['avatar'] = "http://opensprites.gwiddle.co.uk/forums/uploads/avatars/" . $userid . ".png";
 
 echo json_encode($userInfo2, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES | JSON_NUMERIC_CHECK);
 
