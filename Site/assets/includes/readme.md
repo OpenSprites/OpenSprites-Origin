@@ -6,6 +6,13 @@
  - $db_name: The name of the assets database
  - $assets_table_name: The name of the assets table in the assets database
  - $dbh: The database handle
+ - $forum_username: The username to the forums database
+ - $forum_password: The password to the forums database
+ - $forum_db_name: The name of the forums database
+ - $forum_dbh: The forums database handle
+ - $forum_member_table: The name of the table listing forum members
+ - $forum_group_table: The name of the table listing forum groups
+ - $forum_group_member_table: The name of the table mapping members to groups
 
 ### Functions ###
  - connectDatabase():void: Connects to the assets database and initializes $dbh
@@ -23,14 +30,19 @@
  - imageExists($hash:string):boolean: Checks if an asset already exists in the database, returns true if so, false otherwise.
  - addImageRow($fileName:string, $hash:string, $user:string, $userId:int, $assetType:string, $customName:string):void: Creates a row in the assets table with the given details. $fileName is the actual filename in /uploads/uploaded/, $customName is the display name. $assetType is one of "image" "sound" or "script"
  - tableExists($name:string):boolean: Checks for the given table in the database, returns true if it exists, false otherwise. Used internally to create the assets table if it does not exist.
+ - connectForumDatabase():void: Connects to the esotalk database
+ - forumQuery($query:string, $params:array):array: Like imagesQuery, except runs on the forum database
+ - getUserInfo($userid:string):array: Retrieves info about a user, with the given id. Return array is formatted slightly. Contents of the return array:
+   - userid:int: The id of the user
+   - username:string: The username of the user
+   - usertype:string: One of "member" "administrator" or "suspended"
+   - groups:array: A non-associative array of the groups the user is in, ie "Moderator" or "OpenSprites Developer"
 
 ## connect.php ##
 ### Automatic actions ###
-Connects the esotalk session and sets global variables
- - $is_admin:string: If the user is an administrator
+Connects the esotalk session and sets global variables.
+ - $is_admin:boolean: If the user is an administrator
  - $logged_in_userid:int: The userid of the logged in user, or 0 if not logged in
  - $logged_in_user:string: The username of the logged in user, or "not logged in" if not logged in
- - $user_group:string: The group the user is in, if any
+ - $user_group:string: The account type of the user, one of "member" "administrator" or "suspended"
  - $user_banned:boolean: True if the user is suspended, false otherwise
-
-MATU is adding more swag to connect.php atm
