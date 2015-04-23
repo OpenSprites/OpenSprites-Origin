@@ -30,7 +30,7 @@
     
     <script>
 	var OpenSprites = OpenSprites || {};
-        OpenSprites.view = <?php echo json_encode($user); ?>;
+        OpenSprites.view = {user: <?php echo json_encode($user); ?>};
         OpenSprites.view.user.id = <?php echo json_encode($user['userid']); ?>;
         OpenSprites.view.user.name = <?php echo json_encode($user['username']); ?>;
     </script>
