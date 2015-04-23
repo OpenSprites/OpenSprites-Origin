@@ -79,8 +79,10 @@ window.onload = function() {
     $('#theme-select').val(localStorage['os-theme']);
     
     // channel stuff
-    $('a[data-channel=all]').html('All Conversations');
-    $('.channelListItem').remove();
+    $('.channelListItem, a[data-channel=all]').remove();
+    
+    // new topic
+    $('#channels').prepend('<li class="selected" onclick="window.location = \'/forums/?p=conversation/start\';"><a href="/forums/?p=conversation/start" title="Create a new topic!" class="newtopic channel" data-channel="newtopic" style="position: relative; left: 1px;">New Topic</a></li>');
     
     // close white screen of death
     $('body').css('display', 'block !important');

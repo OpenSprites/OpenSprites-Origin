@@ -54,7 +54,13 @@
 	max-width: 480px !important;
 }
 
-/* channel colors - background should be half the border-color */
+/* channel colors */
+.newtopic {
+	color: black !important;
+	border-color: rgba(234, 234, 234, 1) !important;
+	background: rgba(234, 234, 234, 1) !important;
+}
+
 a.channel.channel[data-channel=questions-and-issues] {
 	color: white !important;
 	border-color: rgba(250, 40, 40, 1) !important;
@@ -120,7 +126,7 @@ blockquote {
 }
 
 #conversationsFilter .channels {
-	padding-left: 94px !important;
+	padding-left: 0 !important;
 }
 
 /* mobile device support */
