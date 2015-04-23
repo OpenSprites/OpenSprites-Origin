@@ -653,6 +653,7 @@ a:visited {
 	display: block;
 	position: absolute;
 	bottom: 0px;
+	width: 100%;
 }
 
 .file:hover::after {
