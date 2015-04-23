@@ -95,11 +95,11 @@
     <!-- footer -->
     <?php echo file_get_contents('footer.html'); ?>
 	<script>
+		var topAssetsListModel = OpenSprites.models.AssetList($("#top-assets-list"));
 		function loadAssetList(elem, sort, max, type){
 			elem = $(elem);
 			$.get(OpenSprites.domain + "/site-api/list.php?sort="+sort+"&max="+max+"&type="+type, function(data){
-				var model = OpenSprites.models.AssetList(data);
-				elem.html(model.html());
+				topAssetsListModel.loadJson(data);
 			});
 		}
 		loadAssetList("#top-assets-list", "popularity", 15, "all");
