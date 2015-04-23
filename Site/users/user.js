@@ -11,6 +11,7 @@ Object.size = function(obj, t) {
 
 var updateInterval = 10000;
 var jsonOld = [];
+var model = OpenSprites.models.AssetList($("#collections .main-inner .content"));
 
 function update() {
     $.getJSON(OpenSprites.domain + '/site-api/stuff.php?userid=' + OpenSprites.view.user.id + '&_=' + new Date, function(result) {
@@ -18,8 +19,7 @@ function update() {
             jsonOld = result;
             processAjax(result);
         } else if(Object.size(result, true) === 0) {
-            $('#collections .main-inner').html('');
-            $('#collections .main-inner').append('<h1>Uploads (None)</h1>');
+            $('#collections .main-inner .heading').text("Uploads (None)");
         }
         
         setTimeout(update, updateInterval);
@@ -27,11 +27,8 @@ function update() {
 }
 
 function processAjax(json) {
-    $('#collections .main-inner').html('');
-    $('#collections .main-inner').append('<h1>Uploads (' + json.length + ')</h1>');
-    
-    var model = OpenSprites.models.AssetList(json);
-    $('#collections .main-inner').append(model.html());
+    $('#collections .main-inner .heading').text('Uploads (' + json.length + ')');
+    model.loadJson(json);
 }
 
 update();
