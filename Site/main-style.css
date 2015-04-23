@@ -674,3 +674,36 @@ a:visited {
 .file.collection {
 	background: url(/assets/images/defaultcollection.png);
 }
+
+.assets-list {
+    white-space: nowrap;
+    width: auto;
+    overflow-x: auto;
+    padding-left: 1em;
+    padding-right: 1em;
+}
+
+.assets-list::-webkit-scrollbar {
+    width: 12px;
+}
+ 
+.assets-list::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+    border-radius: 10px;
+}
+ 
+.assets-list::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
+	background: rgb(101, 149, 147);
+}
+
+.box-content {
+    padding-left: 0;
+    padding-right: 0;
+	padding-bottom: 0;
+}
+
+.sortby.toggleset {
+    padding-left: 1em;
+}

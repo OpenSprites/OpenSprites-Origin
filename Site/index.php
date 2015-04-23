@@ -44,8 +44,7 @@
                 <div class="box">
                     <h1>Top Assets</h1>
                     <div class="box-content">
-                        <div class="sortby toggleset">Sort by: </div>
-			<div class="types toggleset">Types: </div><br/>
+                        <div class="sortby toggleset">Sort by: </div><div class="types toggleset">Types: </div><br/>
                         <div id="top-assets-list" class='assets-list' data-sort='popularity' data-type='all'>Loading...</div>
                     </div>
                 </div>
@@ -55,8 +54,7 @@
                 <div class="box">
                     <h1>Featured Assets</h1>
                     <div class="box-content">
-                        <div class="sortby toggleset">Sort by: </div>
-			<div class="types toggleset">Types: </div><br/>
+                        <div class="sortby toggleset">Sort by: </div><div class="types toggleset">Types: </div><br/>
                         PHP guys, get in here!
                     </div>
                 </div>
@@ -104,10 +102,10 @@
 				elem.html(model.html());
 			});
 		}
-		loadAssetList("#top-assets-list", "popularity", 7, "all");
+		loadAssetList("#top-assets-list", "popularity", 15, "all");
 	
 		var orderBy = {
-			popularity: "Popularity (downloads this week)",
+			popularity: "Popularity",
 			alphabetical: "A-Z",
 			newest: "Newest",
 			oldest: "Oldest"
@@ -125,7 +123,7 @@
 					(function(listing, key){
 						return function(){
 							listing.attr("data-sort", key);
-							loadAssetList(listing, key, 7, listing.attr("data-type"));
+							loadAssetList(listing, key, 15, listing.attr("data-type"));
 						};
 					})(listing, key));
 				button.text(orderBy[key]);
@@ -140,7 +138,7 @@
 					(function(listing, key){
 						return function(){
 							listing.attr("data-type", key);
-							loadAssetList(listing, listing.attr("data-sort"), 7, key);
+							loadAssetList(listing, listing.attr("data-sort"), 15, key);
 						};
 					})(listing, key));
 				button.text(types[key]);
