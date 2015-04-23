@@ -64,28 +64,27 @@ OpenSprites.models.SortableAssetList = function(_target){
 		script: "Scripts"
 	};
 	
-	baseHtml.find(".sortby").each(function(){
-		for(key in orderBy){
-			var button = $("<button>").attr("data-for", key).click(function(){
-				listing.attr("data-sort", key);
-				loadAssetList(key, 15, listing.attr("data-type"));
-			});
-			button.text(orderBy[key]);
-			if(key == "popularity") button.addClass("selected");
-			$(this).append(button);
-		}
-	});
-	baseHtml.find(".types").each(function(){
-		for(key in types){
-			var button = $("<button>").attr("data-for", key).click(function(){
-				listing.attr("data-type", key);
-				loadAssetList(listing.attr("data-sort"), 15, key);
-			});
-			button.text(types[key]);
-			if(key == "all") button.addClass("selected");
-			$(this).append(button);
-		}
-	});
+	var sortButtons = baseHtml.find(".sortby");
+	for(key in orderBy){
+		var button = $("<button>").attr("data-for", key).click(function(){
+			listing.attr("data-sort", key);
+			loadAssetList(key, 15, listing.attr("data-type"));
+		});
+		button.text(orderBy[key]);
+		if(key == "popularity") button.addClass("selected");
+		sortButtons.append(button);
+	}
+	var typesButtons = baseHtml.find(".types");
+	for(key in types){
+		var button = $("<button>").attr("data-for", key).click(function(){
+			listing.attr("data-type", key);
+			loadAssetList(listing.attr("data-sort"), 15, key);
+		});
+		button.text(types[key]);
+		if(key == "all") button.addClass("selected");
+		typesButtons.append(button);
+	}
+	console.log(listing, sortButtons, typesButtons);
 	baseHtml.find(".toggleset button").click(function(){
 		$(this).parent().find("button").removeClass("selected");
 		$(this).addClass("selected");
