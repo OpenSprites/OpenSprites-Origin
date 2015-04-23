@@ -147,7 +147,7 @@
 	text-align: center;
 }
 
-#script-select-dialog {
+#script-select-dialog, #error-dialog {
 	background: white;
 	color: black;
 	position: fixed;
@@ -159,6 +159,10 @@
 	border-radius: 1em;
 	display: none;
 	z-index: 99999;
+}
+
+#error-dialog {
+	text-align: center;
 }
 
 .modal-bg {

@@ -537,6 +537,16 @@ function uploadFiles(){
 				var resp = JSON.parse(data);
 				console.log(resp);
 				$("#upload-status p").text(data.status);
+				
+				if(resp.status == "sanic"){
+					$("#error-dialog").html(resp.include_html);
+					$("#error-dialog").find("p").append($("<a>").attr("href","javascript:void(0)").text("Got it").click(function(){
+						$("#error-dialog").fadeOut();
+					}));
+					$("#error-dialog").fadeIn();
+					return;
+				}
+				
 				for (var i = 0; i < resp.results.length; i++) {
 					var result = resp.results[i];
 					var hash = result.hash;

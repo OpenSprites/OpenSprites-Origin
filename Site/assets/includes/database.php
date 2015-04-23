@@ -3,6 +3,7 @@ $username = "OpenSprites_user";
 $password = "swagmaster123"; // change this :P
 $db_name  = "OpenSprites_assets";
 $assets_table_name = "os_assets";
+$user_upload_table_name = "os_user_upload";
 
 $forum_username = "OpenSprites_os";
 $forum_password = "ZfgKxh24PP";
@@ -65,11 +66,13 @@ function connectDatabase(){
 	global $password;
 	global $db_name;
 	global $assets_table_name;
+	global $user_upload_table_name;
 	$conf = 'mysql:host=localhost;dbname='.$db_name.';charset=utf8';
 	$dbh = new PDO($conf, $username, $password);
 	$dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 	$dbh->setAttribute(PDO::ATTR_EMULATE_PREPARES, false);
 	if(!tableExists($assets_table_name)) createImagesTable();
+	if(!tableExists($user_upload_table_name)) createUserUploadTable();
 }
 
 function getDatabaseError(){
@@ -131,6 +134,52 @@ function createImagesTable(){
 			`downloadsThisWeek` INT(11) NOT NULL DEFAULT 0,
 			PRIMARY KEY `asset_ix` (`name`, `customName`, `userid`)
 		) ENGINE=InnoDB AUTO_INCREMENT=0 DEFAULT CHARSET=utf8;");
+}
+
+function createUserUploadTable(){
+	global $dbh;
+	global $user_upload_table_name;
+	$dbh->exec(
+		"CREATE TABLE `$user_upload_table_name` (
+			`userid` INT(11) NOT NULL,
+			`bytesUploaded` INT(11) NOT NULL,
+			`lastUploadTime` DATETIME NOT NULL,
+			PRIMARY KEY `user_ix` (`userid`)
+		) ENGINE=InnoDB AUTO_INCREMENT=0 DEFAULT CHARSET=utf8;");
+}
+
+function isUserAbleToUpload($userid, $post_size){
+	global $dbh;
+	global $user_upload_table_name;
+	$stmt = $dbh->prepare("SELECT * FROM `$user_upload_table_name` WHERE `userid`=?");
+	$stmt->execute(array($userid));
+	$res = $stmt->fetchAll(PDO::FETCH_ASSOC);
+	if(sizeof($res) == 0){
+		$stmt2 = $dbh->prepare("INSERT INTO `$user_upload_table_name` (`userid`,`bytesUploaded`,`lastUploadTime`)"
+			. " VALUES(:userid, :postSize, NOW())");
+		$stmt2->execute(array(":userid"=>$userid, ":postSize" => $post_size));
+		return TRUE;
+	} else {
+		$lastDate = $res[0]['lastUploadTime'];
+		
+		$stmt2 = $dbh->prepare("SELECT UNIX_TIMESTAMP(?) as timestamp");
+		$stmt2->execute(array($lastDate));
+		$res2 = $stmt2->fetchAll(PDO::FETCH_ASSOC);
+		$lastDate = $res2[0]['timestamp'];
+		
+		$uploadSize = $res[0]['bytesUploaded'];
+		
+		$bytes_per_sec = 1024 * 1024 * 10 / 60; // 10MB / min
+		$val1 = time() - $lastDate;
+		$val2 = $uploadSize / $bytes_per_sec;
+		if($val1 > $val2){
+			$stmt3 = $dbh->prepare("UPDATE `$user_upload_table_name` SET `lastUploadTime`=NOW(), `bytesUploaded`=:bytes WHERE `userid`=:userid");
+			$stmt3->execute(array(":bytes" => $post_size, ":userid" => $userid));
+			return TRUE;
+		} else {
+			return $val2 - $val1; // no spam pls
+		}
+	}
 }
 
 function imageExists($hash){

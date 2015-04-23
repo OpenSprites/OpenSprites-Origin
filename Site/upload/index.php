@@ -1,9 +1,11 @@
 <?php
 	require "../assets/includes/connect.php"; //Connect - includes session_start(); require "../assets/includes/avatar.php";
 	
-	if($logged_in_user == 'not logged in' or $user_banned) {
-		header('Location: /');
-		die;
+	if($_SERVER['HTTP_HOST'] != "localhost:13379"){ // MATU's testing
+		if($logged_in_user == 'not logged in' or $user_banned) {
+			header('Location: /');
+			die;
+		}
 	}
 	
 	function unique_id($l = 8) {
@@ -72,7 +74,9 @@
 					<button class='dialog-button primary-button ok'>OK</button>
 				</div>
 			</div>
-			
+			<div id="error-dialog">
+				
+			</div>
         </div>
     </div>
 

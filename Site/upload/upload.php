@@ -2,11 +2,6 @@
 require_once("../assets/includes/connect.php");
 require_once("../assets/includes/database.php");
 
-if($logged_in_user == 'not logged in' or $user_banned) {
-    header('Location: /');
-    die;
-}
-
 function unique_id($l = 8) {
     return substr(md5(uniqid(mt_rand(), true)), 0, $l);
 }
@@ -22,11 +17,26 @@ function rstrpos ($haystack, $needle, $offset){
 }
 
 header("Content-Type: text/json");
-$json = array("status"=>"error","message"=>"Unknown","debug"=>"","results"=>array());
+$json = array("status"=>"error","message"=>"Unknown","debug"=>"","results"=>array(),"errors"=>array());
+
+function handle_error($errno, $errstr, $errfile, $errline, $errcontext){
+	global $json;
+	array_push($json, array($errno, $errstr, $errfile, $errline, $errcontext));
+}
+
+//error_reporting(0);
+//set_error_handler(handle_error);
 
 $customNames = array();
 if(isset($_REQUEST['customNames'])){
 	$customNames = json_decode($_REQUEST['customNames'], true);
+}
+
+if($_SERVER['HTTP_HOST'] != "localhost:13379"){ // MATU's testing
+	if($logged_in_user == 'not logged in' or $user_banned) {
+		$json['message'] = "Not logged in!";
+		die(json_encode($json));
+	}
 }
 
 if(isset($_REQUEST['file_too_big'])){
@@ -58,6 +68,21 @@ if(isset($_FILES['uploadedfile'])){
 	}
 	
 	$error = FALSE;
+	$totalSize = 0;
+	foreach($_FILES['uploadedfile']['tmp_name'] as $i => $tmpName){
+		if($_FILES['uploadedfile']['error'][$i] === 0){
+			$totalSize += filesize($tmpName);
+		}
+	}
+	
+	$isAble = isUserAbleToUpload($logged_in_userid, $totalSize);
+	if($isAble !== TRUE){
+		$isAble = round($isAble);
+		$json['status'] = "sanic";
+		$json['message'] = "You're uploading too fast! Wait $isAble seconds before uploading again.";
+		$json['include_html'] = "<h1>Gotta NOT go fast!</h1><img src='/assets/images/sanic.png' /><br/><p>" . $json['message'] . "<br/></p>";
+		die(json_encode($json));
+	}
 	
 	foreach($_FILES['uploadedfile']['tmp_name'] as $i => $tmpName){
 		$current_json = array("status"=>"error","message"=>"Unknown","image_url"=>"N/A","hash"=>"");
