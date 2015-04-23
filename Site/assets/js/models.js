@@ -42,7 +42,7 @@ OpenSprites.models.SortableAssetList = function(_target){
 	var baseHtml = $('<div class="sortby toggleset">Sort by: </div><div class="types toggleset">Types: </div><br/>'+
                         '<div class="assets-list" data-sort="popularity" data-type="all">Loading...</div>');
 	_target.html('').append(baseHtml);
-	var listing = baseHtml.find(".assets-list");
+	var listing = baseHtml.eq(3);
 	var subModel = OpenSprites.models.AssetList(listing);
 	function loadAssetList(sort, max, type){
 		$.get(OpenSprites.domain + "/site-api/list.php?sort="+sort+"&max="+max+"&type="+type, function(data){
@@ -64,7 +64,7 @@ OpenSprites.models.SortableAssetList = function(_target){
 		script: "Scripts"
 	};
 	
-	var sortButtons = baseHtml.find(".sortby");
+	var sortButtons = baseHtml.eq(0);
 	for(key in orderBy){
 		var button = $("<button>").attr("data-for", key).click(function(){
 			listing.attr("data-sort", key);
@@ -74,8 +74,7 @@ OpenSprites.models.SortableAssetList = function(_target){
 		if(key == "popularity") button.addClass("selected");
 		sortButtons.append(button);
 	}
-	var typesButtons = baseHtml.find(".types");
-	for(key in types){
+	var typesButtons = baseHtml.eq(1);
 		var button = $("<button>").attr("data-for", key).click(function(){
 			listing.attr("data-type", key);
 			loadAssetList(listing.attr("data-sort"), 15, key);
@@ -84,7 +83,6 @@ OpenSprites.models.SortableAssetList = function(_target){
 		if(key == "all") button.addClass("selected");
 		typesButtons.append(button);
 	}
-	console.log(listing, sortButtons, typesButtons);
 	baseHtml.find(".toggleset button").click(function(){
 		$(this).parent().find("button").removeClass("selected");
 		$(this).addClass("selected");
