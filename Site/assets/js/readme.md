@@ -39,7 +39,7 @@ Like an asset list, except it also adds buttons to sort the data. Makes JSON req
 ```html
 <div id='my-sortable-asset-list'></div>
 <script>
-var modelOpenSprites.models.SortableAssetList($("#my-sortable-asset-list"));
+var model = OpenSprites.models.SortableAssetList($("#my-sortable-asset-list"));
 // that's it!
 </script>
 ```
