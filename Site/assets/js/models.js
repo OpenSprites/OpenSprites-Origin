@@ -27,10 +27,7 @@ OpenSprites.models.AssetList = function(_target){
 OpenSprites.models.SortableAssetList = function(_target){
 	var modelObj = OpenSprites.models.BaseModel(_target);
 	
-	var baseHtml = $('<div class="sortby toggleset">Sort by: </div><div class="types toggleset">Types: </div><br/>'+
-                        '<div class="assets-list" data-sort="popularity" data-type="all">Loading...</div>');
-	_target.html('').append(baseHtml);
-	var listing = baseHtml.eq(3);
+	var listing = $('<div class="assets-list" data-sort="popularity" data-type="all">Loading...</div>);
 	var subModel = OpenSprites.models.AssetList(listing);
 	function loadAssetList(sort, max, type){
 		$.get(OpenSprites.domain + "/site-api/list.php?sort="+sort+"&max="+max+"&type="+type, function(data){
@@ -52,31 +49,33 @@ OpenSprites.models.SortableAssetList = function(_target){
 		script: "Scripts"
 	};
 	
-	var sortButtons = baseHtml.eq(0);
-	for(key in orderBy){
-		var button = $("<button>").attr("data-for", key).click(function(){
-			listing.attr("data-sort", key);
-			loadAssetList(key, 15, listing.attr("data-type"));
-		});
-		button.text(orderBy[key]);
-		if(key == "popularity") button.addClass("selected");
-		sortButtons.append(button);
-	}
-	var typesByttons = baseHtml.eq(1);
-	for(key in types){
-		var button = $("<button>").attr("data-for", key).click(function(){
-			listing.attr("data-type", key);
-			loadAssetList(listing.attr("data-sort"), 15, key);
-		});
-		button.text(types[key]);
-		if(key == "all") button.addClass("selected");
-		typesButtons.append(button);
-	}
 	var buttonSetClick = function(){
 		$(this).parent().find("button").removeClass("selected");
 		$(this).addClass("selected");
 	};
-	sortButtons.find("button").click(buttonSetClick);
-	typesButtons.find("button").click(buttonSetClick);
+	
+	var sortButtons = $('<div class="sortby toggleset">Sort by: </div>');
+	for(key in orderBy){
+		var button = $("<button>").attr("data-for", key).click(function(){
+			listing.attr("data-sort", key);
+			loadAssetList(key, 15, listing.attr("data-type"));
+		}).click(buttonSetClick);
+		button.text(orderBy[key]);
+		if(key == "popularity") button.addClass("selected");
+		sortButtons.append(button);
+	}
+	var typesByttons = $('<div class="types toggleset">Types: </div>');
+	for(key in types){
+		var button = $("<button>").attr("data-for", key).click(function(){
+			listing.attr("data-type", key);
+			loadAssetList(listing.attr("data-sort"), 15, key);
+		}).click(buttonSetClick);
+		button.text(types[key]);
+		if(key == "all") button.addClass("selected");
+		typesButtons.append(button);
+	}
+	
+	_target.html('').append(sortButtons).append(typesButtons).append("<br/>").append(listing);
+	
 	return modelObj;
 };
