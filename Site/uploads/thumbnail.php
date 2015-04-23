@@ -27,7 +27,7 @@ if(strpos($file, "..") !== FALSE
     || strpos($file, "\\") !== FALSE) die("Param missing"); // prevent hax
 $file = "uploaded/" . $file;
 if(!file_exists($file)) die("404");
-$ending = strtolower( pathinfo( $filename, PATHINFO_EXTENSION ));
+$ending = strtolower( pathinfo( $file, PATHINFO_EXTENSION ));
 
 if($ending == "wut" || $ending == "svg"){
   die(file_get_contents($file));
