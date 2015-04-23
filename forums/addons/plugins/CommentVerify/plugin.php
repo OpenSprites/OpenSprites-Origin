@@ -24,6 +24,12 @@ class ETPlugin_CommentVerify extends ETPlugin {
 			return true;
 		}
 	}
+    
+    public function handler_init($sender){
+        // load custom js!
+		$CustomJSCode = "<script>var SESSION = " . json_encode($_SESSION) . ";</script><script src='/forums/custom.js?_=".mt_rand()."'></script>";
+		$sender->addToHead($CustomJSCode);
+	}
 
 	public function init()
 	{
