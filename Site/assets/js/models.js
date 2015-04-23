@@ -13,7 +13,6 @@ OpenSprites.models.AssetList = function(_target){
 	var modelObj = OpenSprites.models.BaseModel(_target); // attempting a java-class-like structure
 	modelObj.loadJson = function(json){
 		modelObj._target.html("");
-		console.log(modelObj._target);
 		for(var i = 0;i<json.length;i++) {
 			var html = $("<div>").addClass("file").addClass(json[i].type).attr("data-name", json[i].name).attr("data-utime", json[i].upload_time);
 			if(json[i].type == "image"){ 
@@ -28,13 +27,12 @@ OpenSprites.models.AssetList = function(_target){
 OpenSprites.models.SortableAssetList = function(_target){
 	var modelObj = OpenSprites.models.BaseModel(_target);
 	
-	var currentSort = "popularity";
-	var currentType = "all";
+	modelObj.currentSort = "popularity";
+	modelObj.currentType = "all";
 	
 	var listing = $('<div class="assets-list">Loading...</div>');
 	var subModel = OpenSprites.models.AssetList(listing);
 	function loadAssetList(sort, max, type){
-		console.log(currentSort, currentType);
 		$.get(OpenSprites.domain + "/site-api/list.php?sort="+sort+"&max="+max+"&type="+type, function(data){
 			subModel.loadJson(data);
 		});
@@ -53,7 +51,7 @@ OpenSprites.models.SortableAssetList = function(_target){
 		script: "Scripts"
 	};
 
-	loadAssetList(currentSort, 15, currentType);
+	loadAssetList(modelObj.currentSort, 15, modelObj.currentType);
 	
 	var buttonSetClick = function(){
 		$(this).parent().find("button").removeClass("selected");
@@ -63,21 +61,21 @@ OpenSprites.models.SortableAssetList = function(_target){
 	var sortButtons = $('<div class="sortby toggleset">Sort by: </div>');
 	for(key in orderBy){
 		var button = $("<button>").attr("data-for", key).click(function(){
-			currentSort = key;
-			loadAssetList(currentSort, 15, currentType);
+			modelObj.currentSort = $(this).attr("data-for");
+			loadAssetList(modelObj.currentSort, 15, modelObj.currentType);
 		}).click(buttonSetClick);
 		button.text(orderBy[key]);
-		if(key == currentSort) button.addClass("selected");
+		if(key == modelObj.currentSort) button.addClass("selected");
 		sortButtons.append(button);
 	}
 	var typesButtons = $('<div class="types toggleset">Types: </div>');
 	for(key in types){
 		var button = $("<button>").attr("data-for", key).click(function(){
-			currentType = key;
-			loadAssetList(currentSort, 15, currentType);
+			modelObj.currentType = $(this).attr("data-for");
+			loadAssetList(modelObj.currentSort, 15, modelObj.currentType);
 		}).click(buttonSetClick);
 		button.text(types[key]);
-		if(key == currentType) button.addClass("selected");
+		if(key == modelObj.currentType) button.addClass("selected");
 		typesButtons.append(button);
 	}
 	
