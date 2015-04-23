@@ -13,6 +13,7 @@ OpenSprites.models.AssetList = function(_target){
 	var modelObj = OpenSprites.models.BaseModel(_target); // attempting a java-class-like structure
 	modelObj.loadJson = function(json){
 		modelObj._target.html("");
+		console.log(modelObj._target);
 		for(var i = 0;i<json.length;i++) {
 			var html = $("<div>").addClass("file").addClass(json[i].type).attr("data-name", json[i].name).attr("data-utime", json[i].upload_time);
 			if(json[i].type == "image"){ 
