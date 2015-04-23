@@ -21,8 +21,8 @@ OpenSprites.models.BaseModel = function(_target){
 	return modelObj;
 };
 
-OpenSprites.models.AssetList = function(){
-	var modelObj = OpenSprites.models.BaseModel(); // attempting a java-class-like structure
+OpenSprites.models.AssetList = function(_target){
+	var modelObj = OpenSprites.models.BaseModel(_target); // attempting a java-class-like structure
 	modelObj.loadJson = function(json){
 		modelObj._target.html("");
 		for(var i = 0;i<json.length;i++) {
