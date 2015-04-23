@@ -35,3 +35,62 @@ OpenSprites.models.AssetList = function(_target){
 	};
 	return modelObj;
 };
+
+OpenSprites.models.SortableAssetList = function(_target){
+	var modelObj = OpenSprites.models.BaseModel(_target);
+	
+	var baseHtml = $('<div class="sortby toggleset">Sort by: </div><div class="types toggleset">Types: </div><br/>'+
+                        '<div class="assets-list" data-sort="popularity" data-type="all">Loading...</div>');
+	_target.html('').append(baseHtml);
+	var listing = baseHtml.find(".assets-list");
+	var subModel = OpenSprites.models.AssetsList(listing);
+	function loadAssetList(elem, sort, max, type){
+		elem = $(elem);
+		$.get(OpenSprites.domain + "/site-api/list.php?sort="+sort+"&max="+max+"&type="+type, function(data){
+			subModel.loadJson(data);
+		});
+	}
+	loadAssetList("popularity", 15, "all");
+	
+	var orderBy = {
+		popularity: "Popularity",
+		alphabetical: "A-Z",
+		newest: "Newest",
+		oldest: "Oldest"
+	};
+	var types = {
+		all: "All",
+		image: "Costumes",
+		sound: "Sounds",
+		script: "Scripts"
+	};
+	
+	baseHtml.find(".sortby").each(function(){
+		for(key in orderBy){
+			var button = $("<button>").attr("data-for", key).click(function(){
+				listing.attr("data-sort", key);
+				loadAssetList(key, 15, listing.attr("data-type"));
+			});
+			button.text(orderBy[key]);
+			if(key == "popularity") button.addClass("selected");
+			$(this).append(button);
+		}
+	});
+	baseHtml.find(".types").each(function(){
+		for(key in types){
+			var button = $("<button>").attr("data-for", key).click(function(){
+				listing.attr("data-type", key);
+				loadAssetList(listing.attr("data-sort"), 15, key);
+			});
+			button.text(types[key]);
+			if(key == "all") button.addClass("selected");
+			$(this).append(button);
+		}
+	});
+	baseHtml.find(".toggleset button").click(function(){
+		$(this).parent().find("button").removeClass("selected");
+		$(this).addClass("selected");
+	});
+	return modelObj;
+};
+}
