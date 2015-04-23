@@ -93,4 +93,3 @@ OpenSprites.models.SortableAssetList = function(_target){
 	});
 	return modelObj;
 };
-}
