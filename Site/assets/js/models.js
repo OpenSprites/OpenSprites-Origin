@@ -28,14 +28,13 @@ OpenSprites.models.AssetList = function(_target){
 OpenSprites.models.SortableAssetList = function(_target){
 	var modelObj = OpenSprites.models.BaseModel(_target);
 	
-	var listing = $('<div class="assets-list" data-sort="popularity" data-type="all">Loading...</div>');
+	var listing = $('<div class="assets-list">Loading...</div>');
 	var subModel = OpenSprites.models.AssetList(listing);
 	function loadAssetList(sort, max, type){
 		$.get(OpenSprites.domain + "/site-api/list.php?sort="+sort+"&max="+max+"&type="+type, function(data){
 			subModel.loadJson(data);
 		});
 	}
-	loadAssetList("popularity", 15, "all");
 	
 	var orderBy = {
 		popularity: "Popularity",
@@ -50,6 +49,10 @@ OpenSprites.models.SortableAssetList = function(_target){
 		script: "Scripts"
 	};
 	
+	var currentSort = "popularity";
+	var currentType = "all";
+	loadAssetList(currentSort, 15, currentType);
+	
 	var buttonSetClick = function(){
 		$(this).parent().find("button").removeClass("selected");
 		$(this).addClass("selected");
@@ -58,21 +61,21 @@ OpenSprites.models.SortableAssetList = function(_target){
 	var sortButtons = $('<div class="sortby toggleset">Sort by: </div>');
 	for(key in orderBy){
 		var button = $("<button>").attr("data-for", key).click(function(){
-			listing.attr("data-sort", key);
-			loadAssetList(key, 15, listing.attr("data-type"));
+			currentSort = key;
+			loadAssetList(currentSort, 15, currentType);
 		}).click(buttonSetClick);
 		button.text(orderBy[key]);
-		if(key == "popularity") button.addClass("selected");
+		if(key == currentSort) button.addClass("selected");
 		sortButtons.append(button);
 	}
 	var typesButtons = $('<div class="types toggleset">Types: </div>');
 	for(key in types){
 		var button = $("<button>").attr("data-for", key).click(function(){
-			listing.attr("data-type", key);
-			loadAssetList(listing.attr("data-sort"), 15, key);
+			currentType = key;
+			loadAssetList(currentSort, 15, currentType);
 		}).click(buttonSetClick);
 		button.text(types[key]);
-		if(key == "all") button.addClass("selected");
+		if(key == currentType) button.addClass("selected");
 		typesButtons.append(button);
 	}
 	
