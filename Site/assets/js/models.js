@@ -14,7 +14,7 @@ OpenSprites.models = {};
 
 OpenSprites.models.BaseModel = function(_target){
 	var modelObj = {};
-	modeObj._target = _target;
+	modelObj._target = _target;
 	modelObj.loadJson = function(json){
 		
 	};
