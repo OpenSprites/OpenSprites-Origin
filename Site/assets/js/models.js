@@ -17,13 +17,13 @@ OpenSprites.models.AssetList = function(_target){
 			var html = $("<div>").addClass("file").addClass(json[i].type).attr("data-name", json[i].name).attr("data-utime", json[i].upload_time);
 			if(json[i].type == "image"){ 
 				html.css("background-image", "url(/assets/images/loading-circle.gif)");
-				(function(html){
+				(function(html, json){
 					var img = new Image();
 					img.onload = function(){
 						html.css("background-image", "url("+OpenSprites.domain + json[i].url+")");
 					}
 					img.src = OpenSprites.domain + json[i].url;
-				})(html);
+				})(html, json);
 			}
         		modelObj._target.append(html);
 		}
