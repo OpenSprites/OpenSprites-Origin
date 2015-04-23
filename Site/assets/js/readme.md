@@ -14,7 +14,7 @@ Shows a scrollable horizontal list of assets
  - target:jQuery: The HTML element to put the asset list in
 
 ### Methods ###
- - updateJson(json:object|array):void: Call this to populate the asset list
+ - updateJson(json:array):void: Call this to populate the asset list. The parameter needs to be an array of asset objects (see site-api docs)
 
 ### Example ###
 ```html
@@ -27,8 +27,11 @@ $.get("my-api-endpoint", function(data){
 </script>
 ```
 
+### On pages ###
+ - The user page (user/index.php)
+
 ## SortableAssetList(target) ##
-Like an asset list, except it also adds buttons to sort the data. Makes JSON requests by itself, no need to call updateJson
+Like an asset list, except it also adds buttons to sort the data. Makes JSON requests by itself, no need to call updateJson. Uses AssetList internally.
 ### Constructor ###
  - target:jQuery: The HTML element to put the sortable asset list in
 
@@ -40,3 +43,6 @@ var modelOpenSprites.models.SortableAssetList($("#my-sortable-asset-list"));
 // that's it!
 </script>
 ```
+
+### On pages ###
+ - The front page (index.php)
