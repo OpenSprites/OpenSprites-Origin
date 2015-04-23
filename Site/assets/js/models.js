@@ -65,7 +65,7 @@ OpenSprites.models.SortableAssetList = function(_target){
 		if(key == "popularity") button.addClass("selected");
 		sortButtons.append(button);
 	}
-	var typesByttons = $('<div class="types toggleset">Types: </div>');
+	var typesButtons = $('<div class="types toggleset">Types: </div>');
 	for(key in types){
 		var button = $("<button>").attr("data-for", key).click(function(){
 			listing.attr("data-type", key);
