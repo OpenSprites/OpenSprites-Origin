@@ -557,8 +557,10 @@ function uploadFiles(){
 							$("[data-id="+hash+'] .del').remove();
 							$("[data-id="+hash+'] .status').text("Uploaded!");
 							$("[data-id="+hash+'] .customName').replaceWith($("<span>").text($("[data-id="+hash+'] .customName').val()));
+							$("[data-id="+hash+']').removeClass("error");
 						} else {
 							$("[data-id="+hash+'] .status').text("Failed");
+							$("[data-id="+hash+']').addClass("error");
 						}
 						$("[data-id="+hash+'] .status').append("<br/>"+result.message);
 						$("[data-id="+hash+']').attr("data-url", result.image_url).attr("title", "Click to view your asset").click(function(){

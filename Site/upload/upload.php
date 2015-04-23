@@ -118,11 +118,22 @@ if(isset($_FILES['uploadedfile'])){
 							$assetType = "image";
 						} else throw new Exception("Not an SVG");
 					} catch(Exception $e){
-						$json['debug'] .= "Assuming audio file";
-						$assetType = "sound";
-						// validate audio files here <<<<<<<<<<
-						$proceed = TRUE;
-						$ext = ".mp3";
+						// I'd rather not resort to finfo haxx, but I guess this is the only way to verify audio
+						$info = finfo_open(FILEINFO_MIME_TYPE);
+						$finfo_type = finfo_file($info, $tmpName);
+						finfo_close($info);
+						if($finfo_type == "audio/x-wav"){
+							$assetType = "sound";
+							$ext = ".wav";
+							$proceed = TRUE;
+						} else if($finfo_type == "audio/mpeg"){
+							$assetType = "sound";
+							$ext = ".mp3";
+							$proceed = TRUE;
+						} else {
+							$current_json['message'] = "Whoops! Our servers didn't recognize this file's format."; 
+							$current_json['hash'] = hash_file('md5', $tmpName);
+						}
 					}
 				}
 			}

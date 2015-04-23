@@ -133,6 +133,10 @@
 	color: white;
 }
 
+.upload-image.error p {
+	background: rgba(100, 0, 0, 0.5);
+}
+
 .progress {
 	width: 98%;
 	height: 1em;
