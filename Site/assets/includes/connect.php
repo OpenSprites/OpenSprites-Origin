@@ -31,7 +31,7 @@
 		$logged_in_user = $userInfo['username'];
 		$user_group = $userInfo['usertype'];
 		$user_banned = $user_group == 'suspended';
-		$user_admin = $user_group == 'administrator' || in_array($userInfo['groups'], "Moderator");
+		$user_admin = $user_group == 'administrator' || in_array("Moderator", $userInfo['groups']);
     } else {
         $logged_in_userid = 0;
         $user = 'not logged in';
