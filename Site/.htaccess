@@ -20,11 +20,11 @@ RewriteRule ^users/([^/]+)/$ users/index.php?id=$1 [QSA]
 # file pages
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule ^get/([^/]+)/([^/]+)$ /get/$1/$2/ [R=301,L]
+RewriteRule ^get/([^/]+)/([^/]+)$ /asset/$1/$2/ [R=301,L]
 
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule ^get/([^/]+)/([^/]+)/$ get/index.php?userid=$1&hash=$2 [QSA]
+RewriteRule ^get/([^/]+)/([^/]+)/$ asset/index.php?userid=$1&hash=$2 [QSA]
 
 # upload is 3 big
 RewriteCond %{REQUEST_METHOD} =POST
