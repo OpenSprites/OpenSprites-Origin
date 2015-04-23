@@ -28,9 +28,13 @@ OpenSprites.models.AssetList = function(_target){
 OpenSprites.models.SortableAssetList = function(_target){
 	var modelObj = OpenSprites.models.BaseModel(_target);
 	
+	var currentSort = "popularity";
+	var currentType = "all";
+	
 	var listing = $('<div class="assets-list">Loading...</div>');
 	var subModel = OpenSprites.models.AssetList(listing);
 	function loadAssetList(sort, max, type){
+		console.log(currentSort, currentType);
 		$.get(OpenSprites.domain + "/site-api/list.php?sort="+sort+"&max="+max+"&type="+type, function(data){
 			subModel.loadJson(data);
 		});
@@ -48,9 +52,7 @@ OpenSprites.models.SortableAssetList = function(_target){
 		sound: "Sounds",
 		script: "Scripts"
 	};
-	
-	var currentSort = "popularity";
-	var currentType = "all";
+
 	loadAssetList(currentSort, 15, currentType);
 	
 	var buttonSetClick = function(){
