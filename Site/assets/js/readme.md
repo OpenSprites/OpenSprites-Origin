@@ -21,6 +21,7 @@ var model = OpenSprites.models.AssetList($("#my-asset-list"));
 $.get("my-api-endpoint", function(data){
   model.updateJson(data);
 });
+</script>
 ```
 ## SortableAssetList(target) ##
 Like an asset list, except it also adds buttons to sort the data. Makes JSON requests by itself, no need to call updateJson
@@ -32,4 +33,5 @@ Like an asset list, except it also adds buttons to sort the data. Makes JSON req
 <script>
 var modelOpenSprites.models.SortableAssetList($("#my-sortable-asset-list"));
 // that's it!
+</script>
 ```
