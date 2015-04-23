@@ -44,8 +44,7 @@ OpenSprites.models.SortableAssetList = function(_target){
 	_target.html('').append(baseHtml);
 	var listing = baseHtml.find(".assets-list");
 	var subModel = OpenSprites.models.AssetList(listing);
-	function loadAssetList(elem, sort, max, type){
-		elem = $(elem);
+	function loadAssetList(sort, max, type){
 		$.get(OpenSprites.domain + "/site-api/list.php?sort="+sort+"&max="+max+"&type="+type, function(data){
 			subModel.loadJson(data);
 		});
