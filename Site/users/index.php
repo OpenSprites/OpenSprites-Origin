@@ -50,7 +50,7 @@
             </div>
             <div id='description'>
                 <?php
-                    echo $user['usertype'];
+                    echo ucwords($user['usertype']);
                 ?>
             </div>
             <div id='follow'>
