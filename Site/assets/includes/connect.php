@@ -24,6 +24,7 @@
             header( 'Location: http://dev.opensprites.gwiddle.co.uk/suspended.php' ) ;
         }*/
 		
+		error_reporting(0);
 		connectForumDatabase();
 		$userInfo = getUserInfo(intval($_SESSION["userId"]));
 		$logged_in_userid = $userInfo['userid'];
