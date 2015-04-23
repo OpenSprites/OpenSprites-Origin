@@ -1,17 +1,5 @@
 OpenSprites.models = {};
 
-/*OpenSprites.models.AssetList = function(json){
-	var model = $("<div>");
-	for(var i = 0;i<json.length;i++) {
-		var html = $("<div>").addClass("file").addClass(json[i].type).attr("data-name", json[i].name).attr("data-utime", json[i].upload_time);
-		if(json[i].type == "image"){ 
-			html.css("background-image", "url("+OpenSprites.domain + json[i].url+")");
-		}
-        model.append(html);
-    }
-	return model;
-};*/
-
 OpenSprites.models.BaseModel = function(_target){
 	var modelObj = {};
 	modelObj._target = _target;
@@ -74,7 +62,8 @@ OpenSprites.models.SortableAssetList = function(_target){
 		if(key == "popularity") button.addClass("selected");
 		sortButtons.append(button);
 	}
-	var typesButtons = baseHtml.eq(1);
+	var typesByttons = baseHtml.eq(1);
+	for(key in types){
 		var button = $("<button>").attr("data-for", key).click(function(){
 			listing.attr("data-type", key);
 			loadAssetList(listing.attr("data-sort"), 15, key);
@@ -83,9 +72,11 @@ OpenSprites.models.SortableAssetList = function(_target){
 		if(key == "all") button.addClass("selected");
 		typesButtons.append(button);
 	}
-	baseHtml.find(".toggleset button").click(function(){
+	var buttonSetClick = function(){
 		$(this).parent().find("button").removeClass("selected");
 		$(this).addClass("selected");
-	});
+	};
+	sortButtons.find("button").click(buttonSetClick);
+	typesButtons.find("button").click(buttonSetClick);
 	return modelObj;
 };
