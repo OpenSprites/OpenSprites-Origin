@@ -43,9 +43,8 @@
             <div id="top-assets">
                 <div class="box">
                     <h1>Top Assets</h1>
-                    <div class="box-content">
-                        <div class="sortby toggleset">Sort by: </div><div class="types toggleset">Types: </div><br/>
-                        <div id="top-assets-list" class='assets-list' data-sort='popularity' data-type='all'>Loading...</div>
+                    <div class="box-content" id="top-assets-list">
+                        
                     </div>
                 </div>
             </div>
@@ -95,62 +94,7 @@
     <!-- footer -->
     <?php echo file_get_contents('footer.html'); ?>
 	<script>
-		var topAssetsListModel = OpenSprites.models.AssetList($("#top-assets-list"));
-		function loadAssetList(elem, sort, max, type){
-			elem = $(elem);
-			$.get(OpenSprites.domain + "/site-api/list.php?sort="+sort+"&max="+max+"&type="+type, function(data){
-				topAssetsListModel.loadJson(data);
-			});
-		}
-		loadAssetList("#top-assets-list", "popularity", 15, "all");
-	
-		var orderBy = {
-			popularity: "Popularity",
-			alphabetical: "A-Z",
-			newest: "Newest",
-			oldest: "Oldest"
-		};
-		var types = {
-			all: "All",
-			image: "Costumes",
-			sound: "Sounds",
-			script: "Scripts"
-		};
-		$(".sortby").each(function(){
-			var listing = $(this).parent().find('.assets-list');
-			for(key in orderBy){
-				var button = $("<button>").attr("data-for", key).click(
-					(function(listing, key){
-						return function(){
-							listing.attr("data-sort", key);
-							loadAssetList(listing, key, 15, listing.attr("data-type"));
-						};
-					})(listing, key));
-				button.text(orderBy[key]);
-				if(key == "popularity") button.addClass("selected");
-				$(this).append(button);
-			}
-		});
-		$(".types").each(function(){
-			var listing = $(this).parent().find('.assets-list');
-			for(key in types){
-				var button = $("<button>").attr("data-for", key).click(
-					(function(listing, key){
-						return function(){
-							listing.attr("data-type", key);
-							loadAssetList(listing, listing.attr("data-sort"), 15, key);
-						};
-					})(listing, key));
-				button.text(types[key]);
-				if(key == "all") button.addClass("selected");
-				$(this).append(button);
-			}
-		});
-		
-		$(".toggleset button").click(function(){
-			$(this).parent().find("button").removeClass("selected");
-			$(this).addClass("selected");
-		});
+		var model = OpenSprites.models.SortableAssetList($("#top-assets-list"));
 	</script>
 </body>
 </html>
