@@ -102,7 +102,8 @@
     
     <div class="container main" id="collections">
         <div class="main-inner">
-            <h1 class='loading-ajax'>Loading...</h1>
+            <h1 class='heading'>Loading...</h1>
+            <div class='content'></div>
             <script src='../user.js'></script>
         </div>
     </div>
