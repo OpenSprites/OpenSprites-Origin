@@ -25,7 +25,7 @@
 		"filename" =>  $raw['name'],
 		"md5" => $raw['hash'],
 	  	"upload_time" => $raw['date'],
-	  	"uploaded_by" => raw(
+	  	"uploaded_by" => array(
 	  		"name" => $raw["user"],
 	  		"id" => $raw["userid"]
 	  	),
