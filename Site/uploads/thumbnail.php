@@ -33,6 +33,10 @@ if($ending == "wut" || $ending == "svg"){
   die(file_get_contents($file));
 }
 
+function my_autoloader($class) {
+	include '../assets/includes/waveform/' . $class . '.php';
+}
+
 if($ending == "png" || $ending == "jpg" || $ending == "jpeg" || $ending == "gif"){
 	$source_image = imagecreatefromfile($file);
 	$width = imagesx($source_image);
@@ -49,9 +53,7 @@ if($ending == "png" || $ending == "jpg" || $ending == "jpeg" || $ending == "gif"
 	header("Content-Type: image/png");
 	if($ending == "wav"){
 		spl_autoload_extensions(".php");
-		spl_autoload_register(function ($class) {
-			include '../assets/includes/waveform/' . $class . '.php';
-		});
+		spl_autoload_register(my_autoloader);
 		
 		use BoyHagemann\Waveform\Waveform;
 		use BoyHagemann\Waveform\Generator;
