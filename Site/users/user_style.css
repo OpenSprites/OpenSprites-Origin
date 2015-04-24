@@ -59,13 +59,14 @@
     left: 150px;
 }
 
-#adminban {
+#adminban, #adminunban {
     font-style: italic;
     font-size: 16px;
     margin-bottom: 10px;
     cursor: pointer;
     position: absolute;
     bottom: 80px;
+	text-decoration: underline;
 }
 
 #admindelete {

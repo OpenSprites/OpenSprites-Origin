@@ -66,7 +66,7 @@
 						<div id='adminban'>Suspend (Admin)</div>
                 <?php
 						} else if($user['usertype'] == 'suspended'){ ?>
-						<div id='adminban'>Unsuspend (Admin)</div>
+						<div id='adminunban'>Unsuspend (Admin)</div>
 				<?php
 						}
 					} ?>
