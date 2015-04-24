@@ -100,6 +100,15 @@ connectForumDatabase();
 $userInfo2 = getUserInfo(intval($userid));
 $userInfo2['avatar'] = "http://opensprites.gwiddle.co.uk/forums/uploads/avatars/" . $userid . ".png";
 
+$handle = curl_init($userInfo2['avatar']);
+curl_setopt($handle,  CURLOPT_RETURNTRANSFER, TRUE);
+$response = curl_exec($handle);
+$httpCode = curl_getinfo($handle, CURLINFO_HTTP_CODE);
+if($httpCode == 404) {
+    $userInfo2['avatar'] = "//dev.opensprites.gwiddle.co.uk/assets/images/defaultfile.png";
+}
+curl_close($handle);
+
 echo json_encode($userInfo2, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES | JSON_NUMERIC_CHECK);
 
 ?>
