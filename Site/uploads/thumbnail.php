@@ -81,9 +81,10 @@ if($ending == "png" || $ending == "jpg" || $ending == "jpeg" || $ending == "gif"
 		$newfile = "{$tmpname}.wav";
 		
 		unlink("{$tmpname}_o.mp3");
+		unlink("{$tmpname}.mp3");
 		
 		$waveform =  Waveform::fromFilename($newfile);
-		$waveform->setMaximized(FALSE);
+		$waveform->setMaximized(TRUE);
 		$png = new Generator\Png;
 		$png->setFilename("thumb-cache/" . $filename . ".png");
 		$waveform->setGenerator($png)
