@@ -66,32 +66,32 @@
                 <a href='/users/<?php echo $obj->uploaded_by->id; ?>/'>By <?php echo $obj->uploaded_by->name; ?></a>
             </div>
             <div id='follow'>
-                <a href="/uploads/download.php?id=<?php echo obj->uploaded_by->id; ?>&file=<?php echo obj['md5']; ?>" target="_blank"><?php echo 'Download this ' . $obj->type; ?></a>
+                <a href="/uploads/download.php?id=<?php echo $obj->uploaded_by->id; ?>&file=<?php echo $obj['md5']; ?>" target="_blank"><?php echo 'Download this ' . $obj->type; ?></a>
             </div>
-            <?php if($logged_in_userid == $file->uploaded_by->id) { ?>
+            <?php if($logged_in_userid == $obj->uploaded_by->id) { ?>
             <div id='report'>
-                <a class="file_delete" href="/uploads/delete.php?file=<?php echo obj['md5']; ?>">Delete</a>
+                <a class="file_delete" href="/uploads/delete.php?file=<?php echo $obj['md5']; ?>">Delete</a>
             </div>
             <?php } else {
                 if ($is_admin == true) { ?>
                     <div id='report'>
-                        <a class="file_delete" href="/uploads/admindelete.php?id=<?php echo obj->uploaded_by->id; ?>&file=<?php echo obj['md5']; ?>">Delete (Admin)</a>
+                        <a class="file_delete" href="/uploads/admindelete.php?id=<?php echo $obj->uploaded_by->id; ?>&file=<?php echo $obj['md5']; ?>">Delete (Admin)</a>
                     </div>
                 <?php }
             }?>
 
         </div>
         <div id="user-pane-left">
-            <?php if($file->type == 'image') { ?>
-            <img class="user-avatar x100" src="<?php echo $file->url; ?>">
+            <?php if($obj->type == 'image') { ?>
+            <img class="user-avatar x100" src="<?php echo $obj->url; ?>">
             <?php } ?>
         </div>
     </div></div>
 
     <div class="container main" id="collections">
         <div class="main-inner">
-            <?php if($file->type == 'sound') { ?>
-            <audio style="width: 100%;" controls loop preload='metadata' src='<?php echo json_encode($file->url); ?>';></audio>
+            <?php if($obj->type == 'sound') { ?>
+            <audio style="width: 100%;" controls loop preload='metadata' src='<?php echo json_encode($obj->url); ?>';></audio>
             <?php } ?>
         </div>
     </div>
