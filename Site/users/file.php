@@ -2,7 +2,7 @@
     require "../assets/includes/connect.php";  //Connect - includes session_start();
     $file = json_decode(file_get_contents('../site-api/asset.php?userid=' . $_GET['id'] . '&hash=' . $_GET['file']));
     if(count($file) == 0) {
-        header('Location: /');
+        //header('Location: /');
     }
 ?>
 <!DOCTYPE html>
