@@ -217,11 +217,11 @@ function processArchive(file){
 			if(zipObj.dir) continue;
 			totalFiles++;
 			var type = "unknown";
-			if(f.name.endsWith(".jpg") || f.name.endsWith(".jpeg") || f.name.endsWith(".png") || f.name.endsWith(".gif") || f.name.endsWith(".svg")){
+			if(f.name.toLowerCase().endsWith(".jpg") || f.name.toLowerCase().endsWith(".jpeg") || f.name.toLowerCase().endsWith(".png") || f.name.toLowerCase().endsWith(".gif") || f.name.toLowerCase().endsWith(".svg")){
 				type = "image";
-			} else if(f.name.endsWith(".wav") || f.name.endsWith(".mp3")){
+			} else if(f.name.toLowerCase().endsWith(".wav") || f.name.toLowerCase().endsWith(".mp3")){
 				type = "audio";
-			} else if(f.name.endsWith(".json")){
+			} else if(f.name.toLowerCase().endsWith(".json")){
 				type = "script";
 			}
 			
@@ -253,8 +253,8 @@ function processArchive(file){
 			
 			if(type =="image"){
 				var type2 = "jpeg";
-				if(f.name.endsWith("svg")) type2 = "svg";
-				else if(f.name.endsWith("png")) type2 = "png";
+				if(f.name.toLowerCase().endsWith("svg")) type2 = "svg";
+				else if(f.name.toLowerCase().endsWith("png")) type2 = "png";
 				template.css("background", "url(data:image/"+type2+";base64,"+btoa(asBinary)+")");
 			}
 		
@@ -326,16 +326,16 @@ function processFiles(files){
 		var template = newTemplate();
 		
 		var type = "unknown";
-		if(f.name.endsWith(".jpg") || f.name.endsWith(".jpeg") || f.name.endsWith(".png") || f.name.endsWith(".gif") || f.name.endsWith(".svg")){
+		if(f.name.toLowerCase().endsWith(".jpg") || f.name.toLowerCase().endsWith(".jpeg") || f.name.toLowerCase().endsWith(".png") || f.name.toLowerCase().endsWith(".gif") || f.name.toLowerCase().endsWith(".svg")){
 			type = "image";
-		} else if(f.name.endsWith(".wav") || f.name.endsWith(".mp3")){
+		} else if(f.name.toLowerCase().endsWith(".wav") || f.name.toLowerCase().endsWith(".mp3")){
 			type = "audio";
-		} else if(f.name.endsWith(".sb2") || f.name.endsWith(".sprite2") || f.name.endsWith(".zip")){
+		} else if(f.name.toLowerCase().endsWith(".sb2") || f.name.toLowerCase().endsWith(".sprite2") || f.name.toLowerCase().endsWith(".zip")){
 			totalFiles--;
 			totalArchives++;
 			processArchive(f);
 			continue;
-		} else if(f.name.endsWith(".json")){
+		} else if(f.name.toLowerCase().endsWith(".json")){
 			type = "script";
 		}
 		
