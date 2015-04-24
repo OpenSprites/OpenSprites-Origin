@@ -1,28 +1,23 @@
 <?php
 require "../assets/includes/connect.php";
-$con = mysqli_connect("localhost","user","pass","db");
 
-// Check connection
-if (mysqli_connect_errno())
-{
-    die("Failed to connect to MySQL: " . mysqli_connect_error());
+if(!$is_admin){
+	include '../403.php';
+	die();
 }
 
-$username = mysqli_real_escape_string($con, $_GET["username"]);
+connectDatabase();
 
-if($is_admin == false) {
-    echo '403 - Permission Denied';
-    die();
-}
+if(!isset($_GET['username']) || !isset($_GET['type'])) die("Missing params");
 
-$query = mysqli_query($con, "SELECT * FROM et_member WHERE username='$username'");
-$numrows = mysqli_num_rows($query);
-
-if($numrows == 0){
-    die("Failed: No such user!");
+if($_GET['type'] == "ban"){
+	setSuspendedStatus($_GET['username'], TRUE);
 } else {
-    mysqli_query($con, "UPDATE et_member SET account='suspended' WHERE username='$username'");
-    header('Location: /');
+	if($_GET['type'] == "unban"){
+		setSuspendedStatus($_GET['username'], FALSE);	
+	} else {
+		die("Welp, idk what to do.");
+	}
 }
-
+echo "Success";
 ?>

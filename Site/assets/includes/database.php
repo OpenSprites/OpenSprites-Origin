@@ -34,6 +34,17 @@ function forumQuery($query, $parameters){
 	return $res;
 }
 
+function setSuspendedStatus($username, $is_suspended){
+	global $forum_dbh;
+	global $forum_member_table;
+	
+	$type = "suspended";
+	if(!$is_suspended) $type = "member";
+	
+	$stmt = $forum_dbh->prepare("UPDATE `$forum_member_table` SET account=? WHERE username=?");
+	$stmt->execute(array($type, $username));
+}
+
 function getUserInfo($userid){
 	global $forum_member_table;
 	global $forum_group_table;
