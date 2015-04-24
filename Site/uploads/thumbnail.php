@@ -32,15 +32,23 @@ $ending = strtolower( pathinfo( $file, PATHINFO_EXTENSION ));
 if($ending == "wut" || $ending == "svg"){
   die(file_get_contents($file));
 }
-$source_image = imagecreatefromfile($file);
-$width = imagesx($source_image);
-$height = imagesy($source_image);
-$desired_width = 200;
-$desired_height = floor($height * ($desired_width / $width));
-$virtual_image = imagecreatetruecolor($desired_width, $desired_height);
-imagecopyresampled($virtual_image, $source_image, 0, 0, 0, 0, $desired_width, $desired_height, $width, $height);
-header("Content-Type: image/jpeg");
-imagejpeg($virtual_image, NULL, 95);
-imagedestroy($virtual_image);
-imagedestroy($source_image);
+
+if($ending == "png" || $ending == "jpg" || $ending == "jpeg" || $ending == "gif"){
+	$source_image = imagecreatefromfile($file);
+	$width = imagesx($source_image);
+	$height = imagesy($source_image);
+	$desired_width = 200;
+	$desired_height = floor($height * ($desired_width / $width));
+	$virtual_image = imagecreatetruecolor($desired_width, $desired_height);
+	imagecopyresampled($virtual_image, $source_image, 0, 0, 0, 0, $desired_width, $desired_height, $width, $height);
+	header("Content-Type: image/jpeg");
+	imagejpeg($virtual_image, NULL, 95);
+	imagedestroy($virtual_image);
+	imagedestroy($source_image);
+} else if($ending == "wav" || $ending == "mp3"){
+	header("Content-Type: image/png");
+	if($ending == "wav"){
+		include '../assets/lib/waveform/generate_wav_waveform.php';
+	}
+}
 ?>
