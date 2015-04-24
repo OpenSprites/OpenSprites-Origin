@@ -3,7 +3,7 @@
     top: 0;
     left: 0;
     width: 100%;
-    height: 335px;
+    height: 400px;
     color: white;
     background-color: rgba(21, 21, 21, 0.7);
     text-align: center;
@@ -98,4 +98,12 @@
 
 .loading-ajax {
     text-align: center;
+}
+
+.img-preview {
+	margin-top: 70px;
+    width: 200px !important;
+    height: 200px !important;
+    min-height: 200px !important;
+    padding-right: 80px;
 }

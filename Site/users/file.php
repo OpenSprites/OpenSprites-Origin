@@ -56,12 +56,12 @@
     
     <!-- Main wrapper -->
     <div id='dark-overlay'><div id='overlay-inner'>
-        <div id="user-pane-right">
-            <div id='username'>
+		    <div id='username'>
                 <?php
                     echo $obj['name'];
                 ?>
             </div>
+        <div id="user-pane-right">
             <div id='description'>
                 <strong>By:</strong> <a href='/users/<?php echo $obj['uploaded_by']['id']; ?>/'><?php echo $obj['uploaded_by']['name']; ?></a><br/>
 				<strong>Uploaded on:</strong> <?php echo $obj['upload_time']; ?><br/>
@@ -85,7 +85,7 @@
         </div>
         <div id="user-pane-left">
             <?php if($obj['type'] == 'image') { ?>
-            <img class="user-avatar x100" src="<?php echo $obj['url']; ?>">
+            <img class="img-preview" src="<?php echo $obj['url']; ?>">
             <?php } ?>
         </div>
     </div></div>
