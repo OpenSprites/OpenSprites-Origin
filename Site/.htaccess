@@ -22,6 +22,10 @@ RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule ^users/([^/]+)/([^/]+)/$ users/file.php?id=$1&file=$2 [QSA]
 
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^users/([^/]+)/([^/]+)$ users/file.php?id=$1&file=$2 [QSA]
+
 # upload is 3 big
 RewriteCond %{REQUEST_METHOD} =POST
 RewriteCond %{HTTP:Content-Length}%{CONTENT_LENGTH} >50000000
