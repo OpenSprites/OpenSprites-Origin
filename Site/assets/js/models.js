@@ -9,16 +9,49 @@ OpenSprites.models.BaseModel = function(_target){
 	return modelObj;
 };
 
+OpenSprites.data = {};
+OpenSprites.data.scratchblocks2css = "";
+$.get("/assets/lib/scratchblocks2/scratchblocks2.css", function(data){
+	OpenSprites.data.scratchblocks2css = data;
+});
+
 OpenSprites.models.AssetList = function(_target){
 	var modelObj = OpenSprites.models.BaseModel(_target); // attempting a java-class-like structure
 	modelObj.loadJson = function(json){
 		modelObj._target.html("");
 		for(var i = 0;i<json.length;i++) {
 			var html = $("<div>").addClass("file").addClass(json[i].type).attr("data-name", json[i].name).attr("data-utime", json[i].upload_time).attr('onclick', 'window.location="'+OpenSprites.domain+'/users/'+json[i].uploaded_by.id+'/'+json[i].md5+'/";');
-			if(json[i].type == "image" || json[i].type == "sound"){ 
-				html.css("background-image", "url("+OpenSprites.domain + "/uploads/thumbnail.php?file=" + json[i].filename + ")");
+			if(json[i].type == "image"){ 
+				html.attr("style", "background:url("+OpenSprites.domain + "/uploads/thumbnail.php?file=" + json[i].filename + ");background-position: center;");
+			} else if(json[i].type == "sound"){
+				html.attr("style", "background:url("+OpenSprites.domain + "/uploads/thumbnail.php?file=" + json[i].filename + ") #191919;background-position: center;");
+			} else if (json[i].type == "script"){
+				(function(html, url){
+					$.get(url, function(data){
+						var json = [0, 0, data];
+						var scratchblocks = gen.generate(json);
+						var preClass = "blocks" + Math.round(Math.random() * 100000000);
+						var pre = $("<pre>").addClass(preClass).css("display", "none").html(scratchblocks).appendTo(html);
+						scratchblocks2.parse("pre." + preClass);
+						
+						var data = '<svg xmlns="http://www.w3.org/2000/svg" width="500" height="1000">' +
+								'<foreignObject width="100%" height="100%">' +
+								'<div xmlns="http://www.w3.org/1999/xhtml" style="font-size: 40px;height:100%;">' +
+									pre.html() +
+									"<style type='text/css'>\n" +
+										OpenSprites.data.scratchblocks2css +
+									"\n</style>" +
+								'</div>' +
+								'</foreignObject>' +
+							'</svg>';
+						var DOMURL = window.URL || window.webkitURL || window;
+						var svg = new Blob([data], {type: 'image/svg+xml;charset=utf-8'});
+						var url = DOMURL.createObjectURL(svg);
+						html.attr("style", "background: url("+url+") white;background-size:cover !important;");
+					});
+				})(html, json[i].url);
 			}
-        		modelObj._target.append(html);
+        	modelObj._target.append(html);
 		}
 	};
 	return modelObj;

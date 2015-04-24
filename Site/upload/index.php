@@ -26,8 +26,6 @@
     <!--Imports styling-->
     <link href='upload.css' rel='stylesheet' type='text/css' />
 	
-	<link href='/assets/lib/scratchblocks2/scratchblocks2.css' rel='stylesheet' type='text/css' />
-	
 	<script type="text/javascript">
 		window.uploadCsrfToken = "<?php echo $sessionId; ?>";
 	</script>
@@ -84,8 +82,6 @@
     <?php echo file_get_contents( '../footer.html'); ?>
 	<script type="text/javascript" src="/assets/js/md5.js"></script>
 	<script type="text/javascript" src="/assets/js/jszip.min.js"></script>
-	<script type="text/javascript" src="/assets/lib/scratchblocks2/scratchblocks2.js"></script>
-	<script type="text/javascript" src="/assets/lib/scratchblocks2/generator.js"></script>
 	<script type="text/javascript" src="upload.js"></script>
 </body>
 
