@@ -91,7 +91,7 @@
     <div class="container main" id="collections">
         <div class="main-inner">
             <?php if($obj['type'] == 'sound') { ?>
-            <audio style="width: 100%;" controls loop preload='metadata' src='<?php echo $obj['url'] ?>';></audio>
+            <audio style="width: 100%;" controls preload='metadata' src='<?php echo $obj['url'] ?>';></audio>
             <?php } ?>
         </div>
     </div>

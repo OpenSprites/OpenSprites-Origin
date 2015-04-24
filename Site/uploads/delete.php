@@ -18,7 +18,7 @@
 	
 	$file_url = 'uploaded/'.$asset[0]['name'];
 	
-	imagesQuery0("DELETE FROM `".getAssetsTableName()."` WHERE `userid`=? AND `hash`=?", array($id, $hash));
+	imagesQuery0("DELETE FROM `".getAssetsTableName()."` WHERE `userid`=? AND `hash`=?", array($id, $file));
 	
 	$res = imagesQuery("SELECT * FROM `".getAssetsTableName()."` WHERE `hash`=?", array($file));
 	if(sizeof($res) == 0){

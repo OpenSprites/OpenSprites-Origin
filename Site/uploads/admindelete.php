@@ -24,11 +24,11 @@
 	
 	$file_url = 'uploaded/'.$asset[0]['name'];
 	
-	imagesQuery0("DELETE FROM `".getAssetsTableName()."` WHERE `userid`=? AND `hash`=?", array($id, $hash));
+	imagesQuery0("DELETE FROM `".getAssetsTableName()."` WHERE `userid`=? AND `hash`=?", array($id, $file));
 	
 	if(isset($_GET['unlink']) && $_GET['unlink'] == "force_unlink"){
 		// used in extreme cases when we need to delete the file completely. This should probably never be needed
-		imagesQuery0("DELETE FROM `".getAssetsTableName()."` WHERE `hash`=?", array($hash));
+		imagesQuery0("DELETE FROM `".getAssetsTableName()."` WHERE `hash`=?", array($file));
 		unlink($file_url);
 	} else {
 		// if no one else has the file, delete it

@@ -199,7 +199,7 @@ function imageExists($userid, $hash){
 	return $res;
 }
 
-function incrementDownload($hash, $userid){
+function incrementDownload($userid, $hash){
 	global $dbh;
 	global $assets_table_name;
 	$stmt = $dbh->prepare("UPDATE `$assets_table_name` SET `downloadCount`=`downloadCount` + 1, `downloadsThisWeek`=`downloadsThisWeek` + 1 WHERE `userid`=? AND `hash`=?");
