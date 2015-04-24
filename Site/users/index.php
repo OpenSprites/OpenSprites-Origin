@@ -54,20 +54,20 @@
                 ?>
             </div>
             <div id='follow'>
-                View Scratch Page
+                <a href="https://scratch.mit.edu/users/<?php echo $username; ?>" target="blank">View Scratch Page</a>
             </div>
             <div id='report'>
                 Report
             </div>
                 <?php
-                if($is_admin == true and $username !== $logged_in_user and $user['usertype'] == 'Member') { ?>
+                if($is_admin == true and $username !== $logged_in_user and $user['usertype'] == 'member') { ?>
                 <div id='adminban'>
                     Ban (Admin)
                 </div>
                     <?php }
                 ?>
                 <?php
-                if($is_admin == true and $username !== $logged_in_user and $user['usertype'] == 'Member'){ ?>
+                if($is_admin == true and $username !== $logged_in_user and $user['usertype'] == 'member'){ ?>
                     <div id='admindelete'>
                         Delete (Admin)
                     </div>
@@ -126,21 +126,13 @@
             // display modal for changing profile pic
             $('#img-modal').fadeIn(200);
         });
-        
-        $('#follow').click(function() {
-            window.location = "https://scratch.mit.edu/users/<?php echo $username; ?>";
-        });
-
-        $('#report').click(function() {
-            alert('todo');
-        });
-
+		
+		//////////// TODO: ajax-ify. Also fix server scripts
         $('#adminban').click(function() {
             if(confirm('Are you SURE you want to ban ' + OpenSprites.view.user.name + '?')) {
                 window.location = "../adminban.php?username=" + OpenSprites.view.user.name;
             }
         });
-
         $('#admindelete').click(function() {
             if(confirm('Are you SURE you want to pernamently DELETE ' + OpenSprites.view.user.name + '!?')) {
                 window.location = "../admindelete.php?username=" + OpenSprites.view.user.name;
