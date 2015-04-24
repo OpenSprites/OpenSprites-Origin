@@ -5,10 +5,10 @@
 	    addon, which fixes the *white page of death* bug.
 	    ```
 	    public function handler_init($sender){
-        // load custom js!
-            $CustomJSCode = "<script>var SESSION = " . json_encode($_SESSION) . ";</script><script src='/forums/custom.js?_=".mt_rand()."'></script>";
-            $sender->addToHead($CustomJSCode);
-        }
+	    // load custom js!
+	    	$CustomJSCode = "<script>var SESSION = " . json_encode($_SESSION) . ";</script><script src='/forums/custom.js?_=".mt_rand()."'></script>";
+	    	$sender->addToHead($CustomJSCode);
+	    }
 	    ```
         **GrannyCookies**
 	</blogcontents>
