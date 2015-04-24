@@ -63,7 +63,9 @@
                 ?>
             </div>
             <div id='description'>
-                <a href='/users/<?php echo $obj['uploaded_by']['id']; ?>/'>By <?php echo $obj['uploaded_by']['name']; ?></a>
+                <strong>By:</strong> <a href='/users/<?php echo $obj['uploaded_by']['id']; ?>/'><?php echo $obj['uploaded_by']['name']; ?></a><br/>
+				<strong>Uploaded on:</strong> <?php echo $obj['upload_time']; ?><br/>
+				<strong>Downloads:</strong> <?php echo $obj['downloads']['this_week']; ?> this week; <?php echo $obj['downloads']['total']; ?> total<br/>
             </div>
             <div id='follow'>
                 <a href="/uploads/download.php?id=<?php echo $obj['uploaded_by']['id']; ?>&file=<?php echo $obj['md5']; ?>" target="_blank"><?php echo 'Download this ' . $obj['type']; ?></a>
