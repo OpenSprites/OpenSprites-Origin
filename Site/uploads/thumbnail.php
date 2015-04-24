@@ -1,13 +1,15 @@
 <?php
 
-function my_autoloader($class) {
+/*function my_autoloader($class) {
 	include '../assets/lib/waveform/' . str_replace("\\", "/", $class) . '.php';
 }
 
 spl_autoload_extensions(".php");
 spl_autoload_register("my_autoloader");
 use BoyHagemann\Waveform\Waveform;
-use BoyHagemann\Waveform\Generator;
+use BoyHagemann\Waveform\Generator;*/
+
+include '../assets/lib/waveform/php-waveform-png.php';
 
 function imagecreatefromfile( $filename ) {
     switch ( strtolower( pathinfo( $filename, PATHINFO_EXTENSION ))) {
@@ -49,6 +51,14 @@ if(file_exists("thumb-cache/" . $filename . ".png")){
 	die(file_get_contents("thumb-cache/" . $filename . ".png"));
 }
 
+function outputWaveform($path){
+	global $filename;
+	$img = renderWaveform($path);
+	imagepng($img, "thumb-cache/" . $filename . ".png");
+	imagepng($img);
+	imagedestroy($img);
+}
+
 if($ending == "png" || $ending == "jpg" || $ending == "jpeg" || $ending == "gif"){
 	$source_image = imagecreatefromfile($file);
 	$width = imagesx($source_image);
@@ -65,15 +75,7 @@ if($ending == "png" || $ending == "jpg" || $ending == "jpeg" || $ending == "gif"
 } else if($ending == "wav" || $ending == "mp3"){
 	header("Content-Type: image/png");
 	if($ending == "wav"){
-		$waveform =  Waveform::fromFilename($file);
-		$png = new Generator\Png;
-		$png->setFilename("thumb-cache/" . $filename . ".png");
-		$waveform->setGenerator($png)
-			->setWidth(200)
-			->setHeight(200);
-		$waveform->generate();
-		
-		die(file_get_contents("thumb-cache/" . $filename . ".png"));
+		outputWaveform($file);
 	} else if($ending == "mp3"){
 		$tmpname = substr(md5(time()), 0, 10);
 		copy($file, "{$tmpname}_o.mp3");
@@ -83,16 +85,9 @@ if($ending == "png" || $ending == "jpg" || $ending == "jpeg" || $ending == "gif"
 		unlink("{$tmpname}_o.mp3");
 		unlink("{$tmpname}.mp3");
 		
-		$waveform =  Waveform::fromFilename($newfile);
-		$waveform->setMaximized(TRUE);
-		$png = new Generator\Png;
-		$png->setFilename("thumb-cache/" . $filename . ".png");
-		$waveform->setGenerator($png)
-			->setWidth(200)
-			->setHeight(200);
-		$waveform->generate();
+		outputWaveform($newfile);
+		
 		unlink("{$tmpname}.wav");
-		die(file_get_contents("thumb-cache/" . $filename . ".png"));
 	}
 }
 ?>

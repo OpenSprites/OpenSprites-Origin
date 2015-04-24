@@ -27,29 +27,7 @@
      hexdec(substr($input, 4, 2))
     );
   }   
-  function renderMp3Waveform($filename){
-    $tmpname = substr(md5(time()), 0, 10);
-    
-    // copy from temp upload directory to current
-    copy($filename, "{$tmpname}_o.mp3");
-   
-	// array of wavs that need to be processed
-    $wavs_to_process = array();
-    
-    /**
-     * convert mp3 to wav using lame decoder
-     * First, resample the original mp3 using as mono (-m m), 16 bit (-b 16), and 8 KHz (--resample 8)
-     * Secondly, convert that resampled mp3 into a wav
-     * We don't necessarily need high quality audio to produce a waveform, doing this process reduces the WAV
-     * to it's simplest form and makes processing significantly faster
-     */
-    exec("lame {$tmpname}_o.mp3 -m m -S -f -b 16 --resample 8 {$tmpname}.mp3 && lame -S --decode {$tmpname}.mp3 {$tmpname}.wav");
-    $wavs_to_process[] = "{$tmpname}.wav";
-    
-    // delete temporary files
-    unlink("{$tmpname}_o.mp3");
-    unlink("{$tmpname}.mp3");
-    
+  function renderWaveform($filename){    
     // get user vars from form
     $width = DEFAULT_WIDTH;
     $height = DEFAULT_HEIGHT;
@@ -62,11 +40,10 @@
     // generate foreground color
     list($r, $g, $b) = html2rgb($foreground);
     
-    // process each wav individually
-    for($wav = 1; $wav <= sizeof($wavs_to_process); $wav++) {
- 
-      $filename = $wavs_to_process[$wav - 1];
-    
+	
+	  $wav = 1;
+	  
+	  
       /**
        * Below as posted by "zvoneM" on
        * http://forums.devshed.com/php-development-5/reading-16-bit-wav-file-318740.html
@@ -109,7 +86,7 @@
         // create original image width based on amount of detail
 				// each waveform to be processed with be $height high, but will be condensed
 				// and resized later (if specified)
-        $img = imagecreatetruecolor($data_size / DETAIL, $height * sizeof($wavs_to_process));
+        $img = imagecreatetruecolor($data_size / DETAIL, $height);
         
         // fill background of image
         if ($background == "") {
@@ -119,7 +96,7 @@
           imagefill($img, 0, 0, $transparentColor);
         } else {
           list($br, $bg, $bb) = html2rgb($background);
-          imagefilledrectangle($img, 0, 0, (int) ($data_size / DETAIL), $height * sizeof($wavs_to_process), imagecolorallocate($img, $br, $bg, $bb));
+          imagefilledrectangle($img, 0, 0, (int) ($data_size / DETAIL), $height, imagecolorallocate($img, $br, $bg, $bb));
         }
       }
 
@@ -179,11 +156,6 @@
       
       // close and cleanup
       fclose($handle);
-
-      // delete the processed wav file
-      unlink($filename);
-      
-    }
   
     // want it resized?
     if ($width) {
