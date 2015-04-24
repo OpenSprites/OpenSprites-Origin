@@ -26,7 +26,7 @@
         include "../navbar.php"; // Imports navigation bar
     ?>
     
-    <?php if($user_exist) {?>
+    <?php if($user_exist && ($raw_json['usertype'] != "suspended" || $is_admin)) {?>
     
     <script>
 	var OpenSprites = OpenSprites || {};
@@ -60,19 +60,19 @@
                 Report
             </div>
                 <?php
-                if($is_admin == true and $username !== $logged_in_user and $user['usertype'] == 'member') { ?>
-                <div id='adminban'>
-                    Ban (Admin)
-                </div>
-                    <?php }
-                ?>
+					if($is_admin == true and $username !== $logged_in_user) {
+						if($user['usertype'] == 'member'){
+				?>
+						<div id='adminban'>Suspend (Admin)</div>
                 <?php
-                if($is_admin == true and $username !== $logged_in_user and $user['usertype'] == 'member'){ ?>
-                    <div id='admindelete'>
-                        Delete (Admin)
-                    </div>
-                <?php }
-                ?>
+						} else if($user['usertype'] == 'suspended'){ ?>
+						<div id='adminban'>Unsuspend (Admin)</div>
+				<?php
+						}
+					} ?>
+				
+				
+				
             <?php } else { ?>
             <div id='username'>
                 User not found!
@@ -129,15 +129,24 @@
 		
 		//////////// TODO: ajax-ify. Also fix server scripts
         $('#adminban').click(function() {
-            if(confirm('Are you SURE you want to ban ' + OpenSprites.view.user.name + '?')) {
-                window.location = "../adminban.php?username=" + OpenSprites.view.user.name;
+            if(confirm('Are you SURE you want to suspend ' + OpenSprites.view.user.name + '?')) {
+                window.location = "/users/adminban.php?type=ban&username=" + OpenSprites.view.user.name;
             }
         });
-        $('#admindelete').click(function() {
+		
+		$('#adminunban').click(function() {
+            if(confirm('Are you SURE you want to un-suspend ' + OpenSprites.view.user.name + '?')) {
+                window.location = "/users/adminban.php?type=unban&username=" + OpenSprites.view.user.name;
+            }
+        });
+		
+		
+		// let's only suspend, not delete
+        /*$('#admindelete').click(function() {
             if(confirm('Are you SURE you want to pernamently DELETE ' + OpenSprites.view.user.name + '!?')) {
-                window.location = "../admindelete.php?username=" + OpenSprites.view.user.name;
+                window.location = "/users/admindelete.php?username=" + OpenSprites.view.user.name;
             }
-        });
+        });*/
     </script>
     
     <!-- footer -->

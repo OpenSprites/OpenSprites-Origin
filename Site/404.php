@@ -1,5 +1,5 @@
 <?php
-    require $_SERVER['DOCUMENT_ROOT']."/assets/includes/connect.php";  //Connect - includes session_start();
+    require_once $_SERVER['DOCUMENT_ROOT']."/assets/includes/connect.php";  //Connect - includes session_start();
 ?>
 <!DOCTYPE html>
 <html>

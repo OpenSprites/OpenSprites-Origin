@@ -182,13 +182,20 @@ function isUserAbleToUpload($userid, $post_size){
 	}
 }
 
-function imageExists($hash){
+function imageExists($hash, $userid){
 	global $dbh;
 	global $assets_table_name;
-	$stmt = $dbh->prepare("SELECT * FROM `$assets_table_name` WHERE `hash`=?");
-	$stmt->execute(array($hash));
+	$stmt = $dbh->prepare("SELECT * FROM `$assets_table_name` WHERE `userid`=? AND `hash`=?");
+	$stmt->execute(array($userid, $hash));
 	$res = $stmt->fetchAll(PDO::FETCH_ASSOC);
 	return $res;
+}
+
+function incrementDownload($hash, $userid){
+	global $dbh;
+	global $assets_table_name;
+	$stmt = $dbh->prepare("UPDATE `$assets_table_name` SET `downloadCount`=`downloadCount` + 1, `downloadsThisWeek`=`downloadsThisWeek` + 1 WHERE `userid`=? AND `hash`=?");
+	$stmt->execute(array($userid, $hash));
 }
 
 function addImageRow($name, $hash, $user, $userId, $assetType, $customName){
