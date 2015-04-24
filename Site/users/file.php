@@ -1,8 +1,8 @@
 <?php
     require "../assets/includes/connect.php";  //Connect - includes session_start();
-    $file = json_decode(file_get_contents('uploaded/' . $_GET['file'] . '.json'));
-    if(isset($file->deleted) or !file_exists('uploaded/' . $_GET['file'] . '.json')) {
-        header('Location: ../404');
+    $file = json_decode(file_get_contents('../site-api/asset.php?userid=' . $_GET['id'] . '&hash=' . $_GET['file']));
+    if(count($file) == 0) {
+        header('Location: /');
     }
 ?>
 <!DOCTYPE html>
@@ -31,10 +31,10 @@
         <div id="user-pane-right">
             <div id='username'>
                 <?php
-                    if(!isset($file->custom_name)) {
-                        $file->custom_name = 'untitled';
+                    if(!isset($file->name)) {
+                        $file->name = 'untitled';
                     }
-                    echo $file->custom_name;
+                    echo $file->name;
                 ?>
             </div>
             <div id='description' onclick="window.location = '../users/<?php echo $file->uploaded_by->id; ?>';">
@@ -66,7 +66,7 @@
     <div class="container main" id="collections">
         <div class="main-inner">
             <?php if($file->type == 'sound') { ?>
-            <audio style="width: 100%;" controls loop preload='metadata' src='uploaded/<?php echo $file->name; ?>';></audio>
+            <audio style="width: 100%;" controls loop preload='metadata' src='<?php echo json_encode($file->url); ?>';></audio>
             <?php } ?>
         </div>
     </div>
