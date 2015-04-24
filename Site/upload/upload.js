@@ -564,7 +564,7 @@ function uploadFiles(){
 						}
 						$("[data-id="+hash+'] .status').append("<br/>"+result.message);
 						$("[data-id="+hash+']').attr("data-url", result.image_url).attr("title", "Click to view your asset").click(function(){
-							window.open("/uploads/uploaded/" + $(this).attr("data-url"));
+							window.open("/user/" + OpenSprites.user.id + "/" + hash + "/");
 						});
 					}
 				}
