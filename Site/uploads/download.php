@@ -17,11 +17,17 @@ if($filename == NULL){
 }
 
 incrementDownload($id, $file);
-$file_url = '/uploads/uploaded/'.$asset[0]['name'];
+$file_url = 'uploaded/'.$asset[0]['name'];
 $ext = pathinfo($file_url, PATHINFO_EXTENSION);
 
 header('Content-Type: application/octet-stream');
 header("Content-Transfer-Encoding: Binary");
+header('Content-Description: File Transfer');
+header('Expires: 0');
+header('Cache-Control: must-revalidate');
+header('Pragma: public');
+header('Content-Length: ' . filesize($file_url));
+
 header("Content-disposition: attachment; filename=\"" . $asset[0]['customName'] . '.' . $ext . "\"");
 
 readfile($file_url);
