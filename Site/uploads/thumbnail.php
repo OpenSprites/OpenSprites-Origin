@@ -48,7 +48,18 @@ if($ending == "png" || $ending == "jpg" || $ending == "jpeg" || $ending == "gif"
 } else if($ending == "wav" || $ending == "mp3"){
 	header("Content-Type: image/png");
 	if($ending == "wav"){
-		include '../assets/lib/waveform/generate_wav_waveform.php';
+		spl_autoload_extensions(".php");
+		spl_autoload_register(function ($class) {
+			include '../assets/includes/waveform/' . $class . '.php';
+		});
+		
+		use BoyHagemann\Waveform\Waveform;
+		use BoyHagemann\Waveform\Generator;
+		$waveform =  Waveform::fromFilename($file);
+		$waveform->setGenerator(new Generator\Png)
+			->setWidth(200)
+			->setHeight(200);
+		echo $waveform->generate();
 	}
 }
 ?>
