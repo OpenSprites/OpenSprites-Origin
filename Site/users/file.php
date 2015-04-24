@@ -42,7 +42,7 @@
         echo file_get_contents('../Header.html'); //Imports the metadata and information that will go in the <head> of every page
     ?>
     
-    <link href='//uploads/style.css' rel='stylesheet' type='text/css'>
+    <link href='/uploads/style.css' rel='stylesheet' type='text/css'>
 </head>
 <body>
     <?php
