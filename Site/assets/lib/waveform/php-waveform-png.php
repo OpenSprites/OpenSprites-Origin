@@ -1,16 +1,10 @@
 <?php
-  
-  ini_set("max_execution_time", "30000");
-  
-  // how much detail we want. Larger number means less detail
-  // (basically, how many bytes/frames to skip processing)
-  // the lower the number means longer processing time
   define("DETAIL", 5);
   
-  define("DEFAULT_WIDTH", 500);
-  define("DEFAULT_HEIGHT", 100);
-  define("DEFAULT_FOREGROUND", "#FF0000");
-  define("DEFAULT_BACKGROUND", "#FFFFFF");
+  define("DEFAULT_WIDTH", 200);
+  define("DEFAULT_HEIGHT", 200);
+  define("DEFAULT_FOREGROUND", "#FFFFFF");
+  define("DEFAULT_BACKGROUND", "#191919");
   
   /**
    * GENERAL FUNCTIONS
@@ -33,23 +27,13 @@
      hexdec(substr($input, 4, 2))
     );
   }   
-  
-  if (isset($_FILES["mp3"])) {
-  
-    /**
-     * PROCESS THE FILE
-     */
-  
-    // temporary file name
+  function renderMp3Waveform($filename){
     $tmpname = substr(md5(time()), 0, 10);
     
     // copy from temp upload directory to current
-    copy($_FILES["mp3"]["tmp_name"], "{$tmpname}_o.mp3");
-    
-		// support for stereo waveform?
-    $stereo = isset($_POST["stereo"]) && $_POST["stereo"] == "on" ? true : false;
+    copy($filename, "{$tmpname}_o.mp3");
    
-		// array of wavs that need to be processed
+	// array of wavs that need to be processed
     $wavs_to_process = array();
     
     /**
@@ -59,28 +43,19 @@
      * We don't necessarily need high quality audio to produce a waveform, doing this process reduces the WAV
      * to it's simplest form and makes processing significantly faster
      */
-    if ($stereo) {
-			// scale right channel down (a scale of 0 does not work)
-      exec("lame {$tmpname}_o.mp3 --scale-r 0.1 -m m -S -f -b 16 --resample 8 {$tmpname}.mp3 && lame -S --decode {$tmpname}.mp3 {$tmpname}_l.wav");
-			// same as above, left channel
-      exec("lame {$tmpname}_o.mp3 --scale-l 0.1 -m m -S -f -b 16 --resample 8 {$tmpname}.mp3 && lame -S --decode {$tmpname}.mp3 {$tmpname}_r.wav");
-      $wavs_to_process[] = "{$tmpname}_l.wav";
-      $wavs_to_process[] = "{$tmpname}_r.wav";
-    } else {
-      exec("lame {$tmpname}_o.mp3 -m m -S -f -b 16 --resample 8 {$tmpname}.mp3 && lame -S --decode {$tmpname}.mp3 {$tmpname}.wav");
-      $wavs_to_process[] = "{$tmpname}.wav";
-    }
+    exec("lame {$tmpname}_o.mp3 -m m -S -f -b 16 --resample 8 {$tmpname}.mp3 && lame -S --decode {$tmpname}.mp3 {$tmpname}.wav");
+    $wavs_to_process[] = "{$tmpname}.wav";
     
     // delete temporary files
     unlink("{$tmpname}_o.mp3");
     unlink("{$tmpname}.mp3");
     
     // get user vars from form
-    $width = isset($_POST["width"]) ? (int) $_POST["width"] : DEFAULT_WIDTH;
-    $height = isset($_POST["height"]) ? (int) $_POST["height"] : DEFAULT_HEIGHT;
-    $foreground = isset($_POST["foreground"]) ? $_POST["foreground"] : DEFAULT_FOREGROUND;
-    $background = isset($_POST["background"]) ? $_POST["background"] : DEFAULT_BACKGROUND;
-    $draw_flat = isset($_POST["flat"]) && $_POST["flat"] == "on" ? true : false;
+    $width = DEFAULT_WIDTH;
+    $height = DEFAULT_HEIGHT;
+    $foreground = DEFAULT_FOREGROUND;
+    $background = DEFAULT_BACKGROUND;
+    $draw_flat = false;
 
     $img = false;
 
@@ -209,8 +184,6 @@
       unlink($filename);
       
     }
-    
-    header("Content-Type: image/png");
   
     // want it resized?
     if ($width) {
@@ -221,43 +194,10 @@
       imagealphablending($rimg, false);
       // copy to resized
       imagecopyresampled($rimg, $img, 0, 0, 0, 0, $width, $height, imagesx($img), imagesy($img));
-      imagepng($rimg);
-      imagedestroy($rimg);
+	  imagedestroy($img);
+      return $rimg;
     } else {
-      imagepng($img);
+      return $img;
     }
-    
-    imagedestroy($img);
-    
-  } else {
-    
+}
 ?>
-
-  <form method="post" action="<?php print $_SERVER["REQUEST_URI"]; ?>" enctype="multipart/form-data">
-  
-  <p>MP3 File:<br />
-    <input type="file" name="mp3" /></p>
-    
-  <p>Image Width:<br />
-    <input type="text" name="width" value="<?php print DEFAULT_WIDTH; ?>" /></p>
-    
-  <p>Image Height:<br />
-    <input type="text" name="height" value="<?php print DEFAULT_HEIGHT; ?>" /></p>
-    
-  <p>Foreground Color: <small>(HEX/HTML color code)</small><br />
-    <input type="text" name="foreground" value="<?php print DEFAULT_FOREGROUND; ?>" /></p>
-    
-  <p>Background Color: (Leave blank for transparent background) <small>(HEX/HTML color code)</small><br />
-    <input type="text" name="background" value="<?php print DEFAULT_BACKGROUND; ?>" /></p>
-    
-  <p>Draw flat-line? <input type="checkbox" name="flat" /></p>
-  
-  <p>Stereo waveform? <input type="checkbox" name="stereo" /></p>
-    
-  <p><input type="submit" value="Generate Waveform" /></p>
-  
-  </form>
-
-<?php
-  
-  }    

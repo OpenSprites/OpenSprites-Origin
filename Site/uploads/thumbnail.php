@@ -35,12 +35,18 @@ $file = $_GET['file'];
 if(strpos($file, "..") !== FALSE
     || strpos($file, "/") !== FALSE
     || strpos($file, "\\") !== FALSE) die("Param missing"); // prevent hax
+$filename = $file;
 $file = "uploaded/" . $file;
 if(!file_exists($file)) die("404");
 $ending = strtolower( pathinfo( $file, PATHINFO_EXTENSION ));
 
 if($ending == "wut" || $ending == "svg"){
   die(file_get_contents($file));
+}
+
+if(file_exists("thumb-cache/" . $filename . ".png")){
+	header("Content-Type: image/png");
+	die(file_get_contents("thumb-cache/" . $filename . ".png"));
 }
 
 if($ending == "png" || $ending == "jpg" || $ending == "jpeg" || $ending == "gif"){
@@ -51,18 +57,40 @@ if($ending == "png" || $ending == "jpg" || $ending == "jpeg" || $ending == "gif"
 	$desired_height = floor($height * ($desired_width / $width));
 	$virtual_image = imagecreatetruecolor($desired_width, $desired_height);
 	imagecopyresampled($virtual_image, $source_image, 0, 0, 0, 0, $desired_width, $desired_height, $width, $height);
-	header("Content-Type: image/jpeg");
-	imagejpeg($virtual_image, NULL, 95);
+	header("Content-Type: image/png");
+	imagepng($virtual_image);
+	imagepng($virtual_image, "thumb-cache/" . $filename . ".png");
 	imagedestroy($virtual_image);
 	imagedestroy($source_image);
 } else if($ending == "wav" || $ending == "mp3"){
 	header("Content-Type: image/png");
 	if($ending == "wav"){
 		$waveform =  Waveform::fromFilename($file);
-		$waveform->setGenerator(new Generator\Png)
+		$png = new Generator\Png;
+		$png->setFilename("thumb-cache/" . $filename . ".png");
+		$waveform->setGenerator($png)
 			->setWidth(200)
 			->setHeight(200);
-		echo $waveform->generate();
+		$waveform->generate();
+		
+		die(file_get_contents("thumb-cache/" . $filename . ".png"));
+	} else if($ending == "mp3"){
+		$tmpname = substr(md5(time()), 0, 10);
+		copy($file, "{$tmpname}_o.mp3");
+		exec("lame {$tmpname}_o.mp3 -m m -S -f -b 16 --resample 8 {$tmpname}.mp3 && lame -S --decode {$tmpname}.mp3 {$tmpname}.wav");
+		$newfile = "{$tmpname}.wav";
+		
+		unlink("{$tmpname}_o.mp3");
+		
+		$waveform =  Waveform::fromFilename($newfile);
+		$png = new Generator\Png;
+		$png->setFilename("thumb-cache/" . $filename . ".png");
+		$waveform->setGenerator($png)
+			->setWidth(200)
+			->setHeight(200);
+		$waveform->generate();
+		unlink("{$tmpname}.wav");
+		die(file_get_contents("thumb-cache/" . $filename . ".png"));
 	}
 }
 ?>
