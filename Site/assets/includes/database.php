@@ -137,9 +137,11 @@ function createImagesTable(){
 			`userid` INT(11) NOT NULL,
 			`assetType` VARCHAR(16) NOT NULL,
 			`customName` VARCHAR(32) NOT NULL,
+			`description` VARCHAR(500) NOT NULL DEFAULT 'No description provided',
 			`date` DATETIME NOT NULL,
 			`downloadCount` INT(11) NOT NULL DEFAULT 0,
 			`downloadsThisWeek` INT(11) NOT NULL DEFAULT 0,
+			`isFeatured` INT(11) NOT NULL DEFAULT 0,
 			PRIMARY KEY `asset_ix` (`name`, `customName`, `userid`)
 		) ENGINE=InnoDB AUTO_INCREMENT=0 DEFAULT CHARSET=utf8;");
 }
