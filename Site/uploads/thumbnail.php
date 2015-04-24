@@ -1,11 +1,11 @@
 <?php
 
 function my_autoloader($class) {
-	include '../assets/includes/waveform/' . $class . '.php';
+	include '../assets/lib/waveform/' . $class . '.php';
 }
 
 spl_autoload_extensions(".php");
-spl_autoload_register(my_autoloader);
+spl_autoload_register("my_autoloader");
 use BoyHagemann\Waveform\Waveform;
 use BoyHagemann\Waveform\Generator;
 
