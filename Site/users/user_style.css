@@ -34,7 +34,7 @@
     margin-top: 10px;
 }
 
-#follow, #follow a {
+#follow {
     font-style: italic;
     font-size: 16px;
     margin-bottom: 10px;
@@ -48,7 +48,7 @@
     text-decoration: none !important;
 }
 
-#report, #report a {
+#report {
     font-style: italic;
     font-size: 16px;
     margin-left: 30px;
