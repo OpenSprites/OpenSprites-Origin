@@ -1,7 +1,7 @@
 <?php
 
 function my_autoloader($class) {
-	include '../assets/lib/waveform/' . $class . '.php';
+	include '../assets/lib/waveform/' . str_replace("\\", "/", $class) . '.php';
 }
 
 spl_autoload_extensions(".php");
