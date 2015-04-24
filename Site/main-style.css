@@ -686,13 +686,13 @@ a:visited {
     background-repeat: no-repeat !important;
     position: relative;
     border: 3px solid rgb(101, 149, 147);
-    border-radius: 1em;
+    border-radius: 5px;
     overflow: hidden;
     cursor: pointer;
 }
 
 .file::after {
-    border-radius: 1em;
+    border-radius: 5px;
     content: attr(data-name);
     padding: 0.5em;
     word-wrap: ellipsis;
