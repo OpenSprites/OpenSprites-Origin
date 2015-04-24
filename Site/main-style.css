@@ -682,20 +682,18 @@ a:visited {
     display: inline-table;
     transition: box-shadow 0.2s;
     background: url(/assets/images/defaultfile.png);
-    background-size: contain !important;
+    background-size: cover !important;
     background-repeat: no-repeat !important;
     position: relative;
     border: 3px solid rgb(101, 149, 147);
-    border-radius: 5px;
     overflow: hidden;
     cursor: pointer;
 }
 
 .file::after {
-    border-radius: 5px;
     content: attr(data-name);
-    padding: 0.5em;
-    word-wrap: ellipsis;
+    padding: 5px;
+    text-overflow: ellipsis;
     font-size: 24px;
     line-height: 150px;
     text-align: center;
