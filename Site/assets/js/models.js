@@ -14,7 +14,7 @@ OpenSprites.models.AssetList = function(_target){
 	modelObj.loadJson = function(json){
 		modelObj._target.html("");
 		for(var i = 0;i<json.length;i++) {
-			var html = $("<div>").addClass("file").addClass(json[i].type).attr("data-name", json[i].name).attr("data-utime", json[i].upload_time);
+			var html = $("<div>").addClass("file").addClass(json[i].type).attr("data-name", json[i].name).attr("data-utime", json[i].upload_time).attr('onclick', 'window.location="'+OpenSprites.domain+'/users/'+json[i].uploaded_by.id+'/'+json[i].md5+'/";');
 			if(json[i].type == "image"){ 
 				html.css("background-image", "url("+OpenSprites.domain + "/uploads/thumbnail.php?file=" + json[i].filename + ")");
 			}
