@@ -190,7 +190,7 @@ function isUserAbleToUpload($userid, $post_size){
 	}
 }
 
-function imageExists($hash, $userid){
+function imageExists($userid, $hash){
 	global $dbh;
 	global $assets_table_name;
 	$stmt = $dbh->prepare("SELECT * FROM `$assets_table_name` WHERE `userid`=? AND `hash`=?");
