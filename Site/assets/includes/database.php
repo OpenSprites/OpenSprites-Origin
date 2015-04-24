@@ -120,7 +120,7 @@ function getAllImages(){
 function getImagesForUser($userId){
 	global $dbh;
 	global $assets_table_name;
-	$stmt = $dbh->prepare("SELECT * FROM `$assets_table_name` WHERE `userid`=? ORDER BY `date`");
+	$stmt = $dbh->prepare("SELECT * FROM `$assets_table_name` WHERE `userid`=? ORDER BY `date` DESC");
 	$stmt->execute(array($userId));
 	$res = $stmt->fetchAll(PDO::FETCH_ASSOC);
 	return $res;
