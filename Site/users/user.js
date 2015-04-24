@@ -28,7 +28,7 @@ function update() {
 
 function processAjax(json) {
     $('#collections .main-inner .heading').text('Uploads (' + json.length + ')');
-    $('#collections .main-inner').append(OpenSprites.models.AssetList(json));
+    model.loadJson(json);
 }
 
 update();
