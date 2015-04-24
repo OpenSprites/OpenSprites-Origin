@@ -641,6 +641,7 @@ a:visited {
 	border: 3px solid rgb(101, 149, 147);
 	border-radius: 1em;
 	overflow: hidden;
+	cursor: pointer;
 }
 
 .file::after {
