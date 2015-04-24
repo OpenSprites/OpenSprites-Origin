@@ -13,14 +13,14 @@
 
 #username {
     margin-top: 70px;
-    margin-left: 305px;
     font-size: 48px;
     background: none !important;
 }
 
 #description {
     font-size: 24px;
-    margin-top: 150px;
+    margin-top: 10px;
+    cursor: pointer;
 }
 
 #follow {
@@ -67,7 +67,6 @@
     text-align: right;
     line-height: 335px;
     padding-right: 0;
-    top: 0;
 }
 
 #overlay-inner {
@@ -82,7 +81,6 @@
     width: 470px;
     height: 335px;
     text-align: left;
-    top: 0;
 }
 
 .main-inner {
@@ -100,24 +98,4 @@
 
 .loading-ajax {
     text-align: center;
-}
-
-/* files */
-.file {
-    width: 100px;
-    height: 100px;
-    margin-right: 20px;
-    margin-top: 20px;
-    display: inline-table;
-}
-
-.file img {
-    width: 100px;
-    height: 100px;
-    background: rgba(0, 0, 0, 0.2);
-    transition: background 250ms;
-}
-
-.file:hover img {
-    background: transparent
 }
