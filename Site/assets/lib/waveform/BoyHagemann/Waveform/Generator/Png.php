@@ -192,7 +192,7 @@ class Png implements GeneratorInterface
             imageline($image, $position, $y, $position, $y + $value, $color);
         }
                 
-        imageantialias($image, true);
+        // imageantialias($image, true);
         imagepng($image, $this->getFilename());    
         imagedestroy($image);
     }
