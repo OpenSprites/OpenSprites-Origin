@@ -15,7 +15,7 @@
 	use BoyHagemann\Waveform\Generator;
 	$waveform =  Waveform::fromFilename($file);
 	$waveform->setGenerator(new Generator\Png)
-		->setWidh(960)
-		->setHeight(400);
+		->setWidh(200)
+		->setHeight(200);
 	echo $waveform->generate();
 ?>
