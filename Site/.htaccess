@@ -15,7 +15,7 @@ RewriteRule ^users/([^/]+)$ /users/$1/$2/ [R=301,L]
 
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule ^users/([^/]+)/$ users/index.php?id=$1&file=$2 [QSA]
+RewriteRule ^users/([^/]+)/$ users/file.php?id=$1&file=$2 [QSA]
 
 # file pages
 
