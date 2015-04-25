@@ -13,7 +13,7 @@ if(!$is_admin) {
         OpenSprites Admin
     </title>
     <link href="http://fonts.googleapis.com/css?family=Open+Sans:300,400" rel="stylesheet" type="text/css">
-    <link href="admin.css" rel="stylesheet" type="text/css">
+    <link href="style.css" rel="stylesheet" type="text/css">
 </head>
 <body>
     <div id='container'>
