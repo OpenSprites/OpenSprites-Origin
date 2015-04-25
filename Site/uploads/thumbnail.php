@@ -53,10 +53,28 @@ if(file_exists("thumb-cache/" . $filename . ".png")){
 
 function outputWaveform($path){
 	global $filename;
+	
+	$lockfile = 'thumb-cache/EXIST';
+	$lock = fopen($lockfile, 'a');
+	if ($lock === false) {
+		die(file_get_contents("../assets/images/defaultsound.png"));
+	}
+	// lock, make sure there's only one audio render at a time
+	$ret = flock($lock, LOCK_EX);
+	if ($ret === false) {
+		die(file_get_contents("../assets/images/defaultsound.png"));
+	}
+	// critical section
 	$img = renderWaveform($path);
 	imagepng($img, "thumb-cache/" . $filename . ".png");
 	imagepng($img);
 	imagedestroy($img);
+	// end critical section
+	$ret = flock($lock, LOCK_UN);
+	if ($ret === false) {
+		// ignore
+	}
+	fclose($lock);
 }
 
 if($ending == "png" || $ending == "jpg" || $ending == "jpeg" || $ending == "gif"){

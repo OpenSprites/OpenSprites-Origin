@@ -23,6 +23,10 @@ if(!$is_admin) {
         View all the uploads of a user and click to delete them.<br>
         <input type='number' inputmode='numeric' id='bulkdelete' value='0' min='0' placeholder='userid'>
         <a id='bulkdelete' href='bulkdelete.php?id=0' data='bulkdelete.php?id='>Go</a>
+		
+		<h3>Purge Thumbnail Cache</h3>
+        Deletes all cached thumbnail files, forces a re-render on load. WARNING: Very dangerous! Audio thumbnails could get corrupted if generated at the same time.<br>
+        <a id='purgethumbcache' href='../uploads/purge-thumb-cache.php'>Go</a>
     </div>
     
     <script>
