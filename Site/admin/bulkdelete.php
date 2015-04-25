@@ -8,12 +8,12 @@ if(!$is_admin) {
 }
 
 // bulk delete
-$json = json_decode(file_get_contents('../site-api/stuff.php?userid=' . $_GET['id']), true);
+$json = json_decode(file_get_contents('../site-api/stuff.php?userid=' . $_GET['id']));
 ?>
 
 <head>
     <title>
-        OpenSprites Admin | Bulk Delete
+        OpenSprites Admin - Bulk Delete
     </title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
     <link href="http://fonts.googleapis.com/css?family=Open+Sans:300,400" rel="stylesheet" type="text/css">
@@ -21,7 +21,7 @@ $json = json_decode(file_get_contents('../site-api/stuff.php?userid=' . $_GET['i
 </head>
 <body>
     <div id='container'>
-        <h1>Admin | Bulk Delete</h1>
+        <h1>Admin - Bulk Delete</h1>
         Click to delete a file- forever. Be careful!<br>
         <?php
         print_r($json);
