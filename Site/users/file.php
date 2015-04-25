@@ -88,7 +88,17 @@
 
         </div>
         <div id="user-pane-left">
-		<img class="img-preview" src="/uploads/thumbnail.php?file=<?php echo $obj['filename']; ?>">
+			<?php if($obj['type'] != "script"){ ?>
+				<img class="img-preview" src="/uploads/thumbnail.php?file=<?php echo $obj['filename']; ?>">
+			<?php } else { ?>
+				<div class="img-preview"></div>
+				<script>
+					var model = OpenSprites.models.ScriptPreview($(".img-preview"));
+					$.get(OpenSprites.view.file.url, function(data){
+						model.loadJson(data);
+					});
+				</script>
+			<?php } ?>
         </div>
     </div></div>
 
