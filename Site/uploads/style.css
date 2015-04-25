@@ -85,11 +85,10 @@
 }
 
 .user-avatar.x100 {
-    margin-top: 70px;
-    width: 200px !important;
-    height: 200px !important;
-    min-height: 200px !important;
-    padding-right: 80px;
+	width: 200px !important;
+	height: 150px !important;
+    border: 3px solid rgb(101, 149, 147);
+    margin-right: 80px;
 }
 
 .loading-ajax {
