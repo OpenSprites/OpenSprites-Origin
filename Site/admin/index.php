@@ -21,7 +21,7 @@ if(!$is_admin) {
         <h1>Admin</h1>
         <h3>Bulk Delete</h3>
         View all the uploads of a user and click to delete them.<br>
-        <input type='number' inputmode='numeric' id='bulkdelete' val='0'><br>
+        <input type='number' inputmode='numeric' id='bulkdelete' value='0' min='0' placeholder='userid'><br>
         <a id='bulkdelete'>Go</a>
     </div>
     
