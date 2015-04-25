@@ -89,10 +89,10 @@ a.scratch:hover {
 .header li span {
     display: block;
     padding: 0px 15px;
-    line-height: 35px;
     text-decoration: none !important;
     cursor: pointer;
     transition: 250ms background-color;
+	width: initial;
 }
 
 .header li a,
