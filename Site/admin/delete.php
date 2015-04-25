@@ -38,5 +38,7 @@
 			unlink($file_url);
 		}
 	}
+	
+	header('Location: ' . $_GET['return']);
 
 ?>
