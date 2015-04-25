@@ -24,7 +24,11 @@ $json = json_decode(file_get_contents('http://dev.opensprites.gwiddle.co.uk/site
         <h1>Admin - Bulk Delete</h1>
         Click to delete a file- forever. Be careful!<br>
         <?php
-        print_r($json);
+        
+        foreach($json as $i) {
+            echo $i['name'] . '<br>';
+        }
+        
         ?>
     </div>
 </body>
