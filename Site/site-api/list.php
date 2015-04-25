@@ -37,7 +37,7 @@ if($type != "all"){
 }
 
 if($sort == "popularity"){
-	$query .= " ORDER BY `downloadCount` DESC";
+	$query .= " ORDER BY `downloadsThisWeek` DESC";
 } else if($sort == "alphabetical"){
 	$query .= " ORDER BY `customName`";
 } else if($sort == "newest"){
