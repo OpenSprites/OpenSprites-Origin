@@ -88,6 +88,19 @@ if($ending == "png" || $ending == "jpg" || $ending == "jpeg" || $ending == "gif"
 		outputWaveform($newfile);
 		
 		unlink("{$tmpname}.wav");
+	} else if($ending == 'json') {
+		$source_image = imagecreatefromfile('http://dev.opensprites.gwiddle.co.uk/assets/images/defaultscript.png');
+		$width = imagesx($source_image);
+		$height = imagesy($source_image);
+		$desired_width = 200;
+		$desired_height = floor($height * ($desired_width / $width));
+		$virtual_image = imagecreatetruecolor($desired_width, $desired_height);
+		imagecopyresampled($virtual_image, $source_image, 0, 0, 0, 0, $desired_width, $desired_height, $width, $height);
+		header("Content-Type: image/png");
+		imagepng($virtual_image);
+		imagepng($virtual_image, "thumb-cache/" . $filename . ".png");
+		imagedestroy($virtual_image);
+		imagedestroy($source_image);
 	}
 }
 ?>
