@@ -4,8 +4,9 @@
     // get username
     error_reporting(0);
     $raw_json = file_get_contents("http://dev.opensprites.gwiddle.co.uk/site-api/user.php?userid=" . $_GET['id']);
-    if($raw_json == 'FALSE') {
-        $user_exist = false;
+    if(!isset(json_decode($raw_json, true)['userid'])) {
+        include '../404.php';
+        die();
     } else {
         $user_exist = true;
         $user = json_decode($raw_json, true);
