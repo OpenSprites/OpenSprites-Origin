@@ -1,21 +1,30 @@
 <?php
-    require $_SERVER['DOCUMENT_ROOT']."/assets/includes/connect.php";  //Connect - includes session_start();
+    require "../assets/includes/connect.php";  //Connect - includes session_start();
     if($logged_in_user !== 'not logged in') {
         header('Location: /');
     }
+	
+	if(!isset($_GET['redir'])){
+		// try to prevent the stupid login bug
+		unset($_SESSION["userId"]);
+		session_unset();
+		session_destroy();
+		header("Location: /login/?redir=true");
+		die();
+	}
 ?>
 <!DOCTYPE html>
 <html>
 <head>
     <!--Imports the metadata and information that will go in the <head> of every page-->
-    <?php include $_SERVER['DOCUMENT_ROOT'].'/Header.html'; ?>
+    <?php include '../Header.html'; ?>
 </head>
 <body>
     <!--Imports site-wide main styling-->
     <link href='/main-style.css' rel='stylesheet' type='text/css'>
     
     <!--Imports navigation bar-->
-    <?php include $_SERVER['DOCUMENT_ROOT']."/navbar.php"; ?>
+    <?php include "../navbar.php"; ?>
     
     <!-- Main wrapper -->
     <div class="container main" style="height:500px;">
