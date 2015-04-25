@@ -8,4 +8,16 @@ if(!$is_admin) {
 }
 ?>
 
-you are an admin
+<head>
+    <title>
+        OpenSprites Admin
+    </title>
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:300,400" rel="stylesheet" type="text/css">
+    <link href="admin.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+    <div id='container'>
+        <h1>Admin</h1>
+        <h3>Bulk Delete</h3>
+    </div>
+</body>
