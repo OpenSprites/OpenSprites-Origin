@@ -21,13 +21,13 @@ if(!$is_admin) {
         <h1>Admin</h1>
         <h3>Bulk Delete</h3>
         View all the uploads of a user and click to delete them.<br>
-        <input type='number' inputmode='numeric' id='bulkdelete' value='0' min='0' placeholder='userid'><br>
-        <a id='bulkdelete'>Go</a>
+        <input type='number' inputmode='numeric' id='bulkdelete' value='0' min='0' placeholder='userid'>
+        <a id='bulkdelete' href='bulkdelete.php?id=0' data='bulkdelete.php?id='>Go</a>
     </div>
     
     <script>
         $('input').change(function() {
-            $('a#' + $(this).attr('id')).attr('href', $(this).val());
+            $('a#' + $(this).attr('id')).attr('href', $('a#' + $(this).attr('id')).attr('data') + $(this).val());
         });
     </script>
 </body>
