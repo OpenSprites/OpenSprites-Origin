@@ -93,6 +93,7 @@ a.scratch:hover {
     cursor: pointer;
     transition: 250ms background-color;
 	width: initial;
+	line-height: 35px;
 }
 
 .header li a,
