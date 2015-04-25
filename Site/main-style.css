@@ -221,6 +221,7 @@ nav.box li a {
 a {
     color: #659593;
     text-decoration: none;
+    width: 100%;
 }
 
 a.new {
