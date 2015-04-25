@@ -67,7 +67,7 @@
 				<strong>Uploaded on:</strong> <?php
 				sscanf($obj['upload_time'], "%u-%u-%u %u:%u:%u", $year, $month, $day, $hour, $min, $sec);
 				$month = date('F', mktime(0, 0, 0, $month, 10));
-				echo $month.' '.$year;
+				echo $day.' '.$month.' '.$year;
 				?><br/>
 				<strong>Downloads:</strong> <?php echo $obj['downloads']['this_week']; ?> this week; <?php echo $obj['downloads']['total']; ?> total<br/>
             </div>
