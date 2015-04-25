@@ -26,7 +26,7 @@ $json = json_decode(file_get_contents('http://dev.opensprites.gwiddle.co.uk/site
         <?php
         
         foreach($json as $i) {
-            echo '<a href="delete.php?id='.$_GET['id'].'&file='.$i['md5'].'">'$i['name'].'</a><br>';
+            echo '<a href="delete.php?id='.$_GET['id'].'&file='.$i['md5'].'&return='.$_SERVER["REQUEST_URI"].'">'$i['name'].'</a><br>';
         }
         
         ?>
