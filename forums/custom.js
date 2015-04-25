@@ -84,8 +84,13 @@ window.onload = function() {
     // new topic
     $('#channels').prepend('<li class="selected" onclick="window.location = \'/forums/?p=conversation/start\';"><a href="/forums/?p=conversation/start" title="Create a new topic!" class="newtopic channel" data-channel="newtopic" style="position: relative; left: 1px;">New Topic</a></li>');
     
+    // settings and admin btns
+    $('li.item-markListedAsRead').append('<li><a href="/forums/?p=settings"> Settings</a></li><li><a href="/forums/?p=admin"> Admin</a></li>');
+    
     // close white screen of death
     $('body').css('display', 'block !important');
 }
 
-console.log('theming done');
+window.setInterval(function() {
+    document.title = 'OpenSprites Forum';
+}, 1000);
