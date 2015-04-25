@@ -88,11 +88,7 @@
 
         </div>
         <div id="user-pane-left">
-            <?php if($obj['type'] == 'image') { ?>
-				<img class="img-preview" src="<?php echo $obj['url']; ?>">
-            <?php } else if($obj['type'] == 'sound') {?>
-				 <img class="img-preview" src="/uploads/thumbnail.php?file=<?php echo $obj['filename']; ?>">
-			<?php } ?>
+		<img class="img-preview" src="/uploads/thumbnail.php?file=<?php echo $obj['filename']; ?>">
         </div>
     </div></div>
 
