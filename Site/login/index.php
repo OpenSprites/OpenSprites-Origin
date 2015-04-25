@@ -4,11 +4,17 @@
         header('Location: /');
     }
 	
+	// try to prevent the stupid login bug
 	if(!isset($_GET['redir'])){
-		// try to prevent the stupid login bug
+		// destroy session
 		unset($_SESSION["userId"]);
 		session_unset();
 		session_destroy();
+		
+		// unset session cookie
+		setcookie("OpenSprites_Forum_session", "", time() - 3600);
+		
+		// mark that the session has been destroyed
 		header("Location: /login/?redir=true");
 		die();
 	}
