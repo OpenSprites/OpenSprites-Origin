@@ -65,7 +65,7 @@
             <div id='description'>
                 <strong>By:</strong> <a href='/users/<?php echo $obj['uploaded_by']['id']; ?>/'><?php echo $obj['uploaded_by']['name']; ?></a><br/>
 				<strong>Uploaded on:</strong> <?php
-				sscanf($obj['upload_time'];, "%u-%u-%u %u:%u:%u", $year, $month, $day, $hour, $min, $sec);
+				sscanf($obj['upload_time'], "%u-%u-%u %u:%u:%u", $year, $month, $day, $hour, $min, $sec);
 				$month = date('F', mktime(0, 0, 0, $month, 10));
 				echo $month.' '.$year;
 				?><br/>
