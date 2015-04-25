@@ -84,7 +84,7 @@
     transition: height 500ms;
 }
 
-#img-preview {
+.img-preview {
 	width: 200px !important;
 	height: 150px !important;
     border: 3px solid rgb(101, 149, 147);
