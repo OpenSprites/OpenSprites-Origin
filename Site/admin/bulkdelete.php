@@ -22,11 +22,11 @@ $json = json_decode(file_get_contents('http://dev.opensprites.gwiddle.co.uk/site
 <body>
     <div id='container'>
         <h1>Admin - Bulk Delete</h1>
-        Click to delete a file- forever. Be careful!<br>
+        Click to delete a file- forever. Be careful!<br>&nbsp;<br>
         <?php
         
         foreach($json as $i) {
-            echo $i['name'] . '<br>';
+            echo '<a href="delete.php?id='.$_GET['id'].'&file='.$i['md5'].'">'$i['name'].'</a><br>';
         }
         
         ?>
