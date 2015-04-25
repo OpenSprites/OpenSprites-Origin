@@ -20,3 +20,8 @@ body {
 h1 {
   font-size: 64px;
 }
+
+h3 {
+  border-bottom: white 1px solid;
+  margin-bottom: 5px;
+}
