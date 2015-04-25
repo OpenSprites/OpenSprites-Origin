@@ -64,7 +64,11 @@
         <div id="user-pane-right">
             <div id='description'>
                 <strong>By:</strong> <a href='/users/<?php echo $obj['uploaded_by']['id']; ?>/'><?php echo $obj['uploaded_by']['name']; ?></a><br/>
-				<strong>Uploaded on:</strong> <?php echo $obj['upload_time']; ?><br/>
+				<strong>Uploaded on:</strong> <?php
+				sscanf($obj['upload_time'];, "%u-%u-%u %u:%u:%u", $year, $month, $day, $hour, $min, $sec);
+				$month = date('F', mktime(0, 0, 0, $month, 10));
+				echo $month.' '.$year;
+				?><br/>
 				<strong>Downloads:</strong> <?php echo $obj['downloads']['this_week']; ?> this week; <?php echo $obj['downloads']['total']; ?> total<br/>
             </div>
             <div id='follow'>
