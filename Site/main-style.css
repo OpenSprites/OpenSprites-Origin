@@ -681,7 +681,7 @@ a:visited {
     margin-right: 20px;
     margin-top: 20px;
     display: inline-table;
-    transition: box-shadow 0.2s;
+    transition: all 0.2s;
     background: url(/assets/images/defaultfile.png);
     background-size: cover !important;
     background-repeat: no-repeat !important;
@@ -696,23 +696,27 @@ a:visited {
     white-space: nowrap;
     text-overflow: ellipsis;
     font-size: 24px;
-    line-height: 200px;
+    line-height: 30px;
     text-align: center;
     background: black;
     color: white;
     transition: all 250ms;
-    opacity: 0.3;
+    opacity: 0.5;
     position: absolute;
     left: 0;
     right: 0;
     bottom: 0;
     width: 200px;
-    height: 200px;
+    height: 30px;
     overflow: hidden;
 }
 
 .file:hover::after {
-    opacity: 0.8;
+    opacity: 0.9;
+	height: 200px;
+	line-height: 200px;
+	white-space: nowrap;
+    text-overflow: ellipsis;
 }
 
 .file:hover::after {

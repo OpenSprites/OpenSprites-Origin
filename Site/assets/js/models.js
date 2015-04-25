@@ -49,7 +49,7 @@ OpenSprites.models.AssetList = function(_target){
 		for(var i = 0;i<json.length;i++) {
 			var html = $("<div>").addClass("file").addClass(json[i].type).attr("data-name", json[i].name).attr("data-utime", json[i].upload_time).attr('onclick', 'window.location="'+OpenSprites.domain+'/users/'+json[i].uploaded_by.id+'/'+json[i].md5+'/";');
 			if(json[i].type == "image"){ 
-				html.attr("style", "background:url("+OpenSprites.domain + "/uploads/thumbnail.php?file=" + json[i].filename + ");background-position: center;");
+				html.attr("style", "background:url("+OpenSprites.domain + "/uploads/thumbnail.php?file=" + json[i].filename + ");background-position: center;background-size:contain !important;");
 			} else if(json[i].type == "sound"){
 				html.attr("style", "background:url("+OpenSprites.domain + "/uploads/thumbnail.php?file=" + json[i].filename + ") #191919;background-position: center;");
 			} else if (json[i].type == "script"){
