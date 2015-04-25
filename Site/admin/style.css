@@ -1,0 +1,12 @@
+body {
+  font-family: 'Open Sans', sans-serif;
+  background: #659593;
+  color: white;
+  margin: 0;
+  padding: 0;
+}
+
+#container {
+  width: 900px;
+  margin: auto;
+}
