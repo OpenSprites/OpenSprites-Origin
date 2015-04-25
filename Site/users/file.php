@@ -89,7 +89,7 @@
         </div>
         <div id="user-pane-left">
 			<?php if($obj['type'] != "script"){ ?>
-				<img class="img-preview" src="/uploads/thumbnail.php?file=<?php echo $obj['filename']; ?>">
+				<img style="width: 200px !important;height: 150px !important;" class="img-preview" src="/uploads/thumbnail.php?file=<?php echo $obj['filename']; ?>">
 			<?php } else { ?>
 				<div class="img-preview"></div>
 				<script>
