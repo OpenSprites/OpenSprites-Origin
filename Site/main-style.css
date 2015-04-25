@@ -689,10 +689,11 @@ a:visited {
     border: 3px solid rgb(101, 149, 147);
     overflow: hidden;
     cursor: pointer;
+	border-radius: 10px;
 }
 
 .file::after {
-    content: attr(data-name);
+   	content: attr(data-name);
     white-space: nowrap;
     text-overflow: ellipsis;
     font-size: 24px;
@@ -712,11 +713,14 @@ a:visited {
 }
 
 .file:hover::after {
+	font-size: 14px;
+	content: attr(data-name) '\A \A by: ' attr(data-uploader);
     opacity: 0.9;
 	height: 200px;
-	line-height: 200px;
-	white-space: nowrap;
-    text-overflow: ellipsis;
+	line-height: initial;
+	white-space: pre;
+    text-overflow: initial;
+	padding-top: 30%;
 }
 
 .file:hover::after {
