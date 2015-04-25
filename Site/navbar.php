@@ -36,7 +36,7 @@
                 <a href="/upload/"><img class='upload-icon' src='/assets/images/upload.png' /> Upload</a>
             </li>
             <?php } if($logged_in_user == 'not logged in') { ?>
-            <li><a href="/register/">Sign Up</a>
+            <li><a href="/register/" style="width:initial;">Sign Up</a>
             </li>
             <li class="last" id='login' onclick="window.location = '/login/';"><span>Log In</span>
             </li>
