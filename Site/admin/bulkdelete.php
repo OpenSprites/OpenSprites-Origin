@@ -24,7 +24,7 @@ $json = json_decode(file_get_contents('../site-api/stuff.php?userid=' . $_GET['i
         <h1>Admin - Bulk Delete</h1>
         Click to delete a file- forever. Be careful!<br>
         <?php
-        print_r($json);
+        echo json_encode($json);
         ?>
     </div>
 </body>
