@@ -9,8 +9,14 @@ body {
 #container {
   width: 900px;
   margin: auto;
+  padding-top: 10px;
 }
 
 * {
   font-weight: normal !important;
+  margin-bottom: 0;
+}
+
+h1 {
+  font-size: 64px;
 }
