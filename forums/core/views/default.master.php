@@ -13,7 +13,6 @@ if (!defined("IN_ESOTALK")) exit;
 <!DOCTYPE html>
 <html>
 <head>
-<link rel=StyleSheet href="http://opensprites.gwiddle.co.uk/forums/footer.css" TYPE="text/css">
 <base target="_top">
 <meta charset='<?php echo T("charset", "utf-8"); ?>'>
 <title><?php echo sanitizeHTML($data["pageTitle"]); ?></title>
