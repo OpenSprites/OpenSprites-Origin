@@ -64,8 +64,6 @@
     text-align: right;
     line-height: 220px;
     padding-right: 0;
-	border-top: 1px solid rgb(101, 149, 147);
-	border-bottom: 1px solid rgb(101, 149, 147);
 }
 
 #overlay-inner {
@@ -80,8 +78,6 @@
     width: 470px;
     height: 220px;
     text-align: left;
-	border-top: 1px solid rgb(101, 149, 147);
-	border-bottom: 1px solid rgb(101, 149, 147);
 }
 
 .main-inner {
