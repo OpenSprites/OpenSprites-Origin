@@ -37,10 +37,7 @@
     </script>
     
     <!-- Main wrapper -->
-    <?php
-        // background-image is a blurred avatar image
-        echo "<div id='background-img' style='background-image:url(\"/uploads/avatar_blur.php?userid=" . $_GET['id'] . "\");'></div>";
-    ?>
+    <canvas id='background-img'></canvas>
     <div id='dark-overlay'><div id='overlay-inner'>
         <div id="user-pane-right">
             <?php if($user_exist) { ?>
@@ -83,7 +80,7 @@
         <div id="user-pane-left">
             <?php
                 if($user_exist) {
-                    echo '<img class="user-avatar x100" src="' . $user['avatar'] . '">';
+                    echo '<img id="source-avatar" class="user-avatar x100" src="' . $user['avatar'] . '">';
                     if($username == $logged_in_user) {
                         echo '<div id="change-image">Change...</div>';
                     }
@@ -104,7 +101,6 @@
         <div class="main-inner">
             <h1 class='heading'>Loading...</h1>
             <div class='content'></div>
-            <script src='../user.js'></script>
         </div>
     </div>
     <?php } ?>
@@ -149,6 +145,9 @@
             }
         });*/
     </script>
+	<script src='/assets/lib/stackblur/stackblur.js'></script>
+	<script src='../user.js'></script>
+	
     
     <!-- footer -->
     <?php echo file_get_contents('../footer.html'); ?>

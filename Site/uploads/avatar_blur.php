@@ -19,7 +19,7 @@ if($httpCode == 404) {
 }
 curl_close($handle);
 
-$source = imagecreatefromstring("http://opensprites.gwiddle.co.uk/forums/uploads/avatars/" . $userid . ".png");
+$source = imagecreatefromstring($response);
 $width = imagesx($source);
 $height = imagesy($source);
 $desired_width = 1920;
