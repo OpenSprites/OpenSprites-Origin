@@ -39,7 +39,7 @@
     <!-- Main wrapper -->
     <?php
         // background-image is a blurred avatar image
-        echo "<div id='background-img' style='background-image:url(\"" . $user['avatar'] . "\");'></div>";
+        echo "<div id='background-img' style='background-image:url(\"/uploads/avatar_blur.php?userid=" . $_GET['id'] . "\");'></div>";
     ?>
     <div id='dark-overlay'><div id='overlay-inner'>
         <div id="user-pane-right">

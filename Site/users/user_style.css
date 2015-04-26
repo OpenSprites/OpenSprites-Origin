@@ -15,9 +15,6 @@
     top: 0;
     position: fixed;
     z-index: -100;
-    -webkit-filter: blur(10px);
-    -moz-filter: blur(10px);
-    filter: blur(10px);
     width: 100%;
     height: 100%;
     background-size: cover;
