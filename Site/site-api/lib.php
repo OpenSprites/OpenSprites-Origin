@@ -19,7 +19,8 @@ function getAssetList($raw){
 		"downloads" => array(
 			"this_week" => intval($asset['downloadsThisWeek']),
 			"total" => intval($asset['downloadCount'])
-		)
+		),
+		"description" => $asset['description']
 	  );
 	  array_push($assets, $obj);
   }

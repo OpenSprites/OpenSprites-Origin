@@ -32,7 +32,8 @@
 		"downloads" => array(
 			"this_week" => intval($raw['downloadsThisWeek']),
 			"total" => intval($raw['downloadCount'])
-		)
+		),
+		"description" => $raw['description']
 	);
 ?>
 <!DOCTYPE html>
@@ -69,7 +70,7 @@
 				$month = date('F', mktime(0, 0, 0, $month, 10));
 				echo $day.' '.$month.' '.$year;
 				?><br/>
-				<strong>Downloads:</strong> <?php echo $obj['downloads']['this_week']; ?> this week; <?php echo $obj['downloads']['total']; ?> total<br/>
+				<strong>Downloads:</strong> <?php echo $obj['downloads']['this_week']; ?> this week; <?php echo $obj['downloads']['total']; ?> total<hr/>
             </div>
             <div id='follow'>
                 <a href="/uploads/download.php?id=<?php echo $obj['uploaded_by']['id']; ?>&file=<?php echo $obj['md5']; ?>" target="_blank"><?php echo 'Download this ' . $obj['type']; ?></a>
@@ -105,8 +106,10 @@
     <div class="container main" id="collections">
         <div class="main-inner">
             <?php if($obj['type'] == 'sound') { ?>
-            <audio style="width: 100%;" controls preload='metadata' src='<?php echo $obj['url'] ?>';></audio>
+            <audio style="width: 100%;" controls preload='metadata' src='<?php echo $obj['url'] ?>';></audio><br/>
             <?php } ?>
+			<h1>Description</h1>
+			<p class='desc'><?php echo $obj['description']; ?></p>
         </div>
     </div>
 	
