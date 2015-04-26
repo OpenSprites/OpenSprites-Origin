@@ -11,6 +11,11 @@
 <body>
 	<!--Imports site-wide main styling-->
 	<link href='../main-style.css' rel='stylesheet' type='text/css'>
+	<style>
+		a {
+			width: initial !important;
+		}
+	</style>
 	
 	<?php
 		include "../navbar.php"; // Imports navigation bar
