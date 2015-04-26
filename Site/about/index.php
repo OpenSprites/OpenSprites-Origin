@@ -19,6 +19,9 @@
 			width: 100px;
 			height: 100px;
 		}
+		img[src='https://avatars1.githubusercontent.com/u/9680886?s=100']{
+			image-rendering: pixelated;
+		}
 	</style>
 	
 	<?php
