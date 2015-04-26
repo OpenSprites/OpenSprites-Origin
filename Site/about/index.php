@@ -12,7 +12,7 @@
 	<!--Imports site-wide main styling-->
 	<link href='../main-style.css' rel='stylesheet' type='text/css'>
 	<style>
-		a {
+		.main-inner a {
 			width: initial !important;
 		}
 		img[alt='GitHub Logo'] {
