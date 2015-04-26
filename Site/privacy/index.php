@@ -38,7 +38,7 @@
 		</div>
 		<script src="/assets/lib/markdown-js/markdown.min.js"></script>
 		<script>
-			var privacy = <?php echo json_encode(file_get_contents("https://raw.githubusercontent.com/OpenSprites/OpenSprites/master/PRIVACY.md")); ?>;
+			var privacy = <?php echo json_encode(file_get_contents("https://raw.githubusercontent.com/OpenSprites/OpenSprites/master/PRIVACY.md?_" . time())); ?>;
 			var content = $(".main-inner");
 			content.html(markdown.toHTML(privacy));
 		</script>

@@ -32,7 +32,7 @@
 		</div>
 		<script src="/assets/lib/markdown-js/markdown.min.js"></script>
 		<script>
-			var about = <?php echo json_encode(file_get_contents("https://raw.githubusercontent.com/OpenSprites/OpenSprites/master/README.md")); ?>;
+			var about = <?php echo json_encode(file_get_contents("https://raw.githubusercontent.com/OpenSprites/OpenSprites/master/README.md?_" . time())); ?>;
 			var content = $(".main-inner");
 			content.html(markdown.toHTML(about));
 		</script>
