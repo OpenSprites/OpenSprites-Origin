@@ -13,21 +13,28 @@
         <a class="scratch" href="/"></a>
 
         <ul class="left">
-            <li>
-                <a href="/media">Media</a>
-            </li>
-            <li>
-                <a href="/scripts">Scripts</a>
-            </li>
-            <li>
-                <a href="/collections">Collections</a>
-            </li>
-            <li>
+			<li id="browse-li">
+				<a href="javascript:void(0)" id="navbar-browse">Browse</a>
+				<ul class='navbar-dropdown'>
+				    <li>
+						<a href="/media">Media</a>
+					</li>
+					<li>
+						<a href="/scripts">Scripts</a>
+					</li>
+					<li>
+						<a href="/collections">Collections</a>
+					</li>
+				</ul>
+			<li>
                 <a href="//blog.opensprites.gwiddle.co.uk">Blog</a>
             </li>
             <li class="last">
                 <a href="//opensprites.gwiddle.co.uk/forums/">Forums</a>
             </li>
+			<li class='search'>
+				<input type='text' placeholder='Search' />
+			</li>
         </ul>
 
         <ul class="right">
@@ -43,7 +50,8 @@
             <?php } else { ?>
             <!-- display login info/username/etc -->
             <li>
-                <a style="padding: 0; padding-left: 10px; padding-right: 10px;" href="/users/<?php echo $logged_in_userid . '/'; ?>">
+                <a class='logged-in-user' style = 'padding: 0;padding-left: 10px;padding-right: 10px;max-width: 150px;text-overflow: ellipsis;overflow: hidden;'
+						href="/users/<?php echo $logged_in_userid . '/'; ?>">
                     <?php echo $logged_in_user; ?>
                 </a>
             </li>
