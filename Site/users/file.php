@@ -46,6 +46,9 @@
     <link href='/uploads/style.css' rel='stylesheet' type='text/css'>
 </head>
 <body>
+<a href="#_" class="lightbox" id="img1">
+    <img src="../uploads/uploaded/<?php echo $obj['md5']; ?>">
+</a>
     <?php
         include "../navbar.php"; // Imports navigation bar
     ?>
@@ -92,7 +95,9 @@
 			<?php if($obj['type'] != "script"){ ?>
 				<img class="img-preview" src="/uploads/thumbnail.php?file=<?php echo $obj['filename']; ?>">
 			<?php } else { ?>
-				<div class="img-preview"></div>
+		        <a href="#img1">
+                        	<img class="img-preview" src="/uploads/thumbnail.php?file=<?php echo $obj['filename']; ?>">
+                        </a></div>
 				<script>
 					var model = OpenSprites.models.ScriptPreview($(".img-preview"));
 					$.get(OpenSprites.view.file.url, function(data){
