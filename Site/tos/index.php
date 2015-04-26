@@ -32,6 +32,7 @@
     <!-- Main wrapper -->
     <div class="container main">
         <div class="main-inner">
+			<p>Loading document...</p>
 		</div>
 		<script src="/assets/lib/markdown-js/markdown.min.js"></script>
 		<script>
