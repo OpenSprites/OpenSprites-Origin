@@ -1,4 +1,4 @@
-###Community Guidelines
+###OpenSprites Guidelines
 In order to keep OpenSprites safe and friendly for everyone, we ask you to follow our Community Guidelines. Our Guidelines are based around the Scratch Community 
 Guidelines, which also apply on OpenSprites.
 
