@@ -127,10 +127,10 @@ function stackBlurCanvasRGBA( canvas, top_x, top_y, width, height, radius )
             // so it might be okay to remove the whole try/catch block and just use
             // imageData = context.getImageData( top_x, top_y, width, height );
             try {
-                netscape.security.PrivilegeManager.enablePrivilege("UniversalBrowserRead");
+                // netscape.security.PrivilegeManager.enablePrivilege("UniversalBrowserRead");
                 imageData = context.getImageData( top_x, top_y, width, height );
             } catch(e) {
-                alert("Cannot access local image");
+                // alert("Cannot access local image");
                 throw new Error("unable to access local image data: " + e);
                 return;
             }

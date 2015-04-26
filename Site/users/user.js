@@ -90,13 +90,18 @@ function drawImageProp(ctx, img, x, y, w, h, offsetX, offsetY) {
     ctx.drawImage(img, cx, cy, cw, ch,  x, y, w, h);
 }
 
-var canvasId = "background-img";
-var canvas = document.getElementById(canvasId);
-var context = canvas.getContext("2d");
+function drawBg(){
+	var canvasId = "background-img";
+	var canvas = document.getElementById(canvasId);
+	var context = canvas.getContext("2d");
 
-var img = new Image();
-img.onload = function() {
-	drawImageProp(context, img);
-	stackBlurCanvasRGB(canvas, 0, 0, canvas.width, canvas.height, 30);
+	var img = new Image();
+	img.onload = function() {
+		drawImageProp(context, img);
+		stackBlurCanvasRGB(canvas, 0, 0, canvas.width, canvas.height, 10);
+	}
+	img.src = "/uploads/avatar_blur.php?userid=" + OpenSprites.view.user.id;
 }
-img.src = $("#source-avatar").attr("src");
+
+drawBg();
+$(window).resize(drawBg);
