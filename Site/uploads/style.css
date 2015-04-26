@@ -93,8 +93,8 @@
     max-width: 200px; 
     border: 3px solid rgb(101, 149, 147); 
     margin-right: 80px;
-	vertical-align: middle;
-	box-sizing: border-box;
+    vertical-align: middle;
+    box-sizing: border-box;
 }
 
 .loading-ajax {
@@ -120,6 +120,9 @@
 	max-width: 90%;
 	max-height: 80%;
 	margin-top: 2%;
+	position: relative;
+        top: 50%;
+        transform: translateY(-50%);
 }
 
 .lightbox:target {
