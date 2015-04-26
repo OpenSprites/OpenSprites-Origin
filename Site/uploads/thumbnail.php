@@ -81,15 +81,22 @@ if($ending == "png" || $ending == "jpg" || $ending == "jpeg" || $ending == "gif"
 	$source_image = imagecreatefromfile($file);
 	$width = imagesx($source_image);
 	$height = imagesy($source_image);
-	$desired_width = 200;
-	$desired_height = floor($height * ($desired_width / $width));
-	$virtual_image = imagecreatetruecolor($desired_width, $desired_height);
-	imagecopyresampled($virtual_image, $source_image, 0, 0, 0, 0, $desired_width, $desired_height, $width, $height);
-	header("Content-Type: image/png");
-	imagepng($virtual_image);
-	imagepng($virtual_image, "thumb-cache/" . $filename . ".png");
-	imagedestroy($virtual_image);
-	imagedestroy($source_image);
+	if($width > 200 || $height > 200){
+		$desired_width = 200;
+		$desired_height = floor($height * ($desired_width / $width));
+		$virtual_image = imagecreatetruecolor($desired_width, $desired_height);
+		imagecopyresampled($virtual_image, $source_image, 0, 0, 0, 0, $desired_width, $desired_height, $width, $height);
+		header("Content-Type: image/png");
+		imagepng($virtual_image);
+		imagepng($virtual_image, "thumb-cache/" . $filename . ".png");
+		imagedestroy($virtual_image);
+		imagedestroy($source_image);
+	} else {
+		header("Content-Type: image/png");
+		imagepng($source_image);
+		imagepng($source_image, "thumb-cache/" . $filename . ".png");
+		imagedestroy($source_image);
+	}
 } else if($ending == "wav" || $ending == "mp3"){
 	header("Content-Type: image/png");
 	if($ending == "wav"){

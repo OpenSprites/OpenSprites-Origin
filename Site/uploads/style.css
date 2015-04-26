@@ -60,10 +60,12 @@
     position: absolute;
     margin-right: 470px;
     width: 470px;
-    height: 335px;
+    height: 220px;
     text-align: right;
-    line-height: 335px;
+    line-height: 220px;
     padding-right: 0;
+	border-top: 1px solid rgb(101, 149, 147);
+	border-bottom: 1px solid rgb(101, 149, 147);
 }
 
 #overlay-inner {
@@ -76,8 +78,10 @@
     position: absolute;
     margin-left: 470px;
     width: 470px;
-    height: 335px;
+    height: 220px;
     text-align: left;
+	border-top: 1px solid rgb(101, 149, 147);
+	border-bottom: 1px solid rgb(101, 149, 147);
 }
 
 .main-inner {
@@ -86,11 +90,11 @@
 }
 
 .img-preview {
-    width: 100% !important; 
-    max-width: 150px; 
-    height: auto !important; 
+    max-width: 200px; 
     border: 3px solid rgb(101, 149, 147); 
     margin-right: 80px;
+	vertical-align: middle;
+	box-sizing: border-box;
 }
 
 .loading-ajax {
