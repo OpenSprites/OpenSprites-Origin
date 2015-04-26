@@ -46,10 +46,12 @@
     <link href='/uploads/style.css' rel='stylesheet' type='text/css'>
 </head>
 <body>
+	<?php if($obj['type'] == "image"){ ?>
 	<a href="#_" class="lightbox" id="img1">
 		<img src="<?php echo $obj['url']; ?>">
 	</a>
     <?php
+		}
         include "../navbar.php"; // Imports navigation bar
     ?>
     
