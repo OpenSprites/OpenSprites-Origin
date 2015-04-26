@@ -97,6 +97,6 @@ var context = canvas.getContext("2d");
 var img = new Image();
 img.onload = function() {
 	drawImageProp(ctx, img);
-	stackBlurCanvasRGB(canvas, 0, 0, cw, ch 30);
+	stackBlurCanvasRGB(canvas, 0, 0, canvas.width, canvas.height, 30);
 }
 img.src = $("#source-avatar").attr("src");
