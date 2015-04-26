@@ -14,6 +14,6 @@ Guidelines, which also apply on OpenSprites.
 
 * Help keep the site friendly. If you think somebody's media or comment is mean, insulting, too violent, or otherwise inappropriate, click “Report” to let us know about it.
 
-* We welcome people of all ages, races, ethnicities, religions, sexual orientations, and gender identities.
+* We welcome people of all ages, races, ethnicities, religions, sexual orientations, and gender identities. Bullying, harrasment, stalking or using our services to target users is not tolerated under circumstance.
 
 If you break any of our Community Guidelines, the OpenSprites staff will take appropriate action. If you see anybody break these Guidelines, press "Report" and we will deal with the problem.
