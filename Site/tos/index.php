@@ -35,7 +35,7 @@
 		</div>
 		<script src="/assets/lib/markdown-js/markdown.min.js"></script>
 		<script>
-			var tos = <?php echo json_encode(file_get_contents("https://raw.githubusercontent.com/OpenSprites/OpenSprites/master/ToS.md")); ?>
+			var tos = <?php echo json_encode(file_get_contents("https://raw.githubusercontent.com/OpenSprites/OpenSprites/master/ToS.md")); ?>;
 			var content = $(".main-inner");
 			content.html(markdown.toHTML(tos));
 		</script>
