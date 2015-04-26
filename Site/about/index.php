@@ -16,8 +16,8 @@
 			width: initial !important;
 		}
 		img[alt='GitHub Logo'] {
-			width: 100%;
-			height: 100%;
+			width: 100px;
+			height: 100px;
 		}
 	</style>
 	
