@@ -32,17 +32,13 @@
     <!-- Main wrapper -->
     <div class="container main">
         <div class="main-inner">
-            <h1 id="opensprites-heading">Terms Of Service</h1>
-            <p>Someone insert something here. The basic ideas we want are.
-				<ul>
-					<li>No hacking</li>
-					<li>No DDOS or anything</li>
-					<li>We can revoke your access to OS at any time for any reason</li>
-					<li>Etc.</li>
-				</ul>
-			</p>     
-            <p style='font-size: 0.8em;padding-bottom:20px'>TOS revision one. Originally written by MegaApuTurkUltra on June 13, 2015. Most recent edits by MegaApuTurkUltra on June 13, 2015 This policy is subject to change without prior notice.</p>
-        </div>
+		</div>
+		<script src="/assets/lib/markdown-js/markdown.min.js"></script>
+		<script>
+			var tos = <?php echo json_encode(file_get_contents("https://raw.githubusercontent.com/OpenSprites/OpenSprites/master/ToS.md")); ?>
+			var content = $(".main-inner");
+			content.html(markdown.toHTML(tos));
+		</script>
     </div>
     
     <!-- footer -->
