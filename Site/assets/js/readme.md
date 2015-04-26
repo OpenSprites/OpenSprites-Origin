@@ -46,3 +46,11 @@ var model = OpenSprites.models.SortableAssetList($("#my-sortable-asset-list"));
 
 ### On pages ###
  - The front page (index.php)
+
+## ScriptPreview(target) ##
+Shows a scratchblocks2 preview of a script as a background image on the given target
+### Constructor ###
+ - target:jQuery: The HTML element to put this model in
+
+### Methods ###
+ - updateJson(json:array):void: Load the specified script into scratchblocks2 and show its preview.

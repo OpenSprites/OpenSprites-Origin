@@ -23,6 +23,7 @@ All responses are in JSON, unless otherwise noted. Bullet points usually indicat
  - downloads (object):
      - this_week (int): The number of downloads this week for this asset
 	 - total (int): The total number of downloads for this asset
+ - description (string): The uploader's description of the asset
  
 ## stuff.php ##
 Returns an array of [asset objects](#the-asset-object) belonging to the specified user
