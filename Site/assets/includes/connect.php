@@ -24,7 +24,7 @@
 		return FALSE;
 	}
 	
-	if(attemptLogoutBugFix(){
+	if(attemptLogoutBugFix()){
 		header("Location: " . $_SERVER['REQUEST_URI']);
 		die();
 	}
