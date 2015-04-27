@@ -152,7 +152,7 @@ if(isset($_FILES['uploadedfile'])){
 					$customName = $customNames[$hash];
 				}
 				
-				$existing = imageExists($hash);
+				$existing = imageExists($logged_in_userid, $hash);
 				if(sizeof($existing) > 0){
 					$name = $existing[0]['name'];
 					$userid0 = $existing[0]['userid'];
