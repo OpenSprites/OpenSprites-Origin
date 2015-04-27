@@ -11,8 +11,10 @@
 		session_unset();
 		session_destroy();
 		
-		// unset session cookie
+		// unset session cookie, try to unset dups if possible
 		setcookie("OpenSprites_Forum_session", "", time() - 3600);
+		setcookie("OpenSprites_Forum_session", "", time() - 3600, "/");
+		setcookie("OpenSprites_Forum_session", "", time() - 3600, "/", ".opensprites.gwiddle.co.uk");
 		
 		// mark that the session has been destroyed
 		header("Location: /login/?redir=true");
