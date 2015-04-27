@@ -2,7 +2,7 @@
     require 'html_dom_parser.php';
 	require_once 'database.php';
 	
-	function attemptLogoutBugFix(){
+	/*function attemptLogoutBugFix(){
 		$cookies = explode("; ", getallheaders()['Cookie']);
 		$duplicate_search = "OpenSprites_Forum_session";
 		$found = FALSE;
@@ -27,7 +27,7 @@
 	if(attemptLogoutBugFix()){
 		header("Location: " . $_SERVER['REQUEST_URI']);
 		die();
-	}
+	}*/
 
     session_name("OpenSprites_Forum_session");
     session_set_cookie_params(0, '/', '.opensprites.gwiddle.co.uk');
