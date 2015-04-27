@@ -98,7 +98,7 @@
         <div class="main-inner">
             <h1>About Me</h1>
             <p>
-				<?php echo $user['about']; ?>
+				<?php echo nl2br(htmlspecialchars($user['about'])); ?>
 			</p>
         </div>
     </div>
