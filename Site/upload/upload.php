@@ -1,6 +1,7 @@
 <?php
 require_once("../assets/includes/connect.php");
 require_once("../assets/includes/database.php");
+require_once("../assets/includes/validate.php");
 
 function unique_id($l = 8) {
     return substr(md5(uniqid(mt_rand(), true)), 0, $l);
@@ -142,6 +143,7 @@ if(isset($_FILES['uploadedfile'])){
 				$pos = rstrpos($fileName, ".", 0);
 				if($pos === FALSE) $pos = strlen($fileName);
 				$customName = substr($fileName, 0, $pos);
+				
 				if(strpos($customName, "blob") === 0){
 					$customName = "os-file-" . unique_id(8);
 				}
@@ -150,6 +152,10 @@ if(isset($_FILES['uploadedfile'])){
 				
 				if(isset($customNames[$hash])){
 					$customName = $customNames[$hash];
+				}
+				// a simple check, no warning given. Warnings will be given on edits however
+				if(hasBadWords($customName)){
+					$customName = "os-file-" . unique_id(8);
 				}
 				
 				$existing = imageExists($logged_in_userid, $hash);
