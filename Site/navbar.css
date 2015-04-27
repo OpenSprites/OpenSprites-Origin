@@ -96,6 +96,8 @@ ul.navbar-dropdown {
 	border-bottom-right-radius: 10px;
 	border-bottom-left-radius: 10px;
 	overflow: hidden;
+	border: 2px solid white;
+	border-top: 2px solid transparent;;
 }
 
 ul.navbar-dropdown li {
@@ -120,7 +122,7 @@ ul.navbar-dropdown li {
 .header .search input {
 	border-radius: 1em;
 	border: 1px solid gray;
-	padding-left: 1.5em;
+	padding-left: 22px;
 	background-image: url(/assets/images/search.png);
 	background-repeat: no-repeat;
 	background-size: contain;
