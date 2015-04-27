@@ -51,31 +51,36 @@
                     echo ucwords($user['usertype']);
                 ?>
 				<br/>
-				<?php
-					echo $user['location'];
-				?>
+				<div id="location">
+					<?php
+						echo $user['location'];
+					?>
+				</div>
             </div>
-            <div id='follow'>
-                <a href="https://scratch.mit.edu/users/<?php echo $username; ?>" target="blank">View Scratch Page</a>
-            </div>
-            <div id='report'>
-                Report
-            </div>
-                <?php
-					if($is_admin == true and $username !== $logged_in_user) {
+			<div id="actions-container">
+				<div id='follow'>
+					<a href="https://scratch.mit.edu/users/<?php echo $username; ?>" target="blank">View Scratch Page</a>
+				</div>
+				<div id='report'>
+					Report
+				</div>
+					<?php
+						if($is_admin == true and $username !== $logged_in_user) {
 						if($user['usertype'] == 'member'){
-				?>
-						<div id='adminban'>Suspend (Admin)</div>
-                <?php
-						} else if($user['usertype'] == 'suspended'){ ?>
-						<div id='adminunban'>Unsuspend (Admin)</div>
-				<?php
-						}
-					} ?>
-				
-				
-				
-            <?php } else { ?>
+					?>
+							<div id='adminban'>Suspend (Admin)</div>
+					<?php
+							} else if($user['usertype'] == 'suspended'){ ?>
+							<div id='adminunban'>Unsuspend (Admin)</div>
+					<?php
+							}
+						} ?>
+					
+					<?php if($username == $logged_in_user){ ?>
+						<div id='settings'><a href="http://opensprites.gwiddle.co.uk/forums/?p=settings/general">Profile Settings</a></div>
+					<?php } ?>
+				</div>
+			<?php } else { ?>
             <div id='username'>
                 User not found!
             </div>
@@ -85,9 +90,9 @@
             <?php
                 if($user_exist) {
                     echo '<img id="source-avatar" class="user-avatar x100" src="' . $user['avatar'] . '">';
-                    if($username == $logged_in_user) {
+                    /*if($username == $logged_in_user) {
                         echo '<div id="change-image">Change...</div>';
-                    }
+                    }*/
                 }
             ?>
         </div>
@@ -106,7 +111,7 @@
     <div class="container main" id="collections">
         <div class="main-inner">
             <h1 class='heading'>Loading...</h1>
-            <div class='content'></div>
+            <div class='content assets-list'></div>
         </div>
     </div>
     <?php } ?>
