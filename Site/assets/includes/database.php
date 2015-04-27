@@ -93,6 +93,7 @@ function connectDatabase(){
 	global $db_name;
 	global $assets_table_name;
 	global $user_upload_table_name;
+	global $report_table_name;
 	$conf = 'mysql:host=localhost;dbname='.$db_name.';charset=utf8';
 	$dbh = new PDO($conf, $username, $password);
 	$dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
@@ -186,7 +187,8 @@ function createReportTable(){
 			`id` VARCHAR(50) NOT NULL,
 			`reporter` VARCHAR(32) NOT NULL,
 			`reason` VARCHAR(500) NOT NULL,
-			`reportTime` DATETIME NOT NULL
+			`reportTime` DATETIME NOT NULL,
+			PRIMARY KEY `report_ix` (`id`, `reporter`)
 		) ENGINE=InnoDB AUTO_INCREMENT=0 DEFAULT CHARSET=utf8;");
 }
 
@@ -209,7 +211,7 @@ function addReport($type, $id, $reporter, $reason){
 
 function getAllReports(){
 	global $report_table_name;
-	return imagesQuery("SELECT *  FROM `$report_table_name` ORDER BY `reportTime` DESC");
+	return imagesQuery("SELECT *  FROM `$report_table_name` ORDER BY `reportTime` DESC", array());
 }
 
 function isUserAbleToUpload($userid, $post_size){

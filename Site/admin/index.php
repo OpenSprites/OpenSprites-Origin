@@ -19,6 +19,10 @@ if(!$is_admin) {
 <body>
     <div id='container'>
         <h1>Admin</h1>
+		<h3>Reports</h3>
+        View reported users and assets<br>
+        <a id='reports' href='reports.php'>Go</a>
+		
         <h3>Bulk Delete</h3>
         View all the uploads of a user and click to delete them.<br>
         <input type='number' inputmode='numeric' id='bulkdelete' value='0' min='0' placeholder='userid'>
