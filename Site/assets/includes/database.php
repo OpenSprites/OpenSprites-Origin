@@ -4,6 +4,7 @@ $password = "swagmaster123"; // change this :P
 $db_name  = "OpenSprites_assets";
 $assets_table_name = "os_assets";
 $user_upload_table_name = "os_user_upload";
+$report_table_name = "os_reports";
 
 $forum_username = "OpenSprites_os";
 $forum_password = "ZfgKxh24PP";
@@ -98,6 +99,7 @@ function connectDatabase(){
 	$dbh->setAttribute(PDO::ATTR_EMULATE_PREPARES, false);
 	if(!tableExists($assets_table_name)) createImagesTable();
 	if(!tableExists($user_upload_table_name)) createUserUploadTable();
+        if(!tableExists($report_table_name)) createReportTable();
 }
 
 function getDatabaseError(){
@@ -172,6 +174,19 @@ function createUserUploadTable(){
 			`bytesUploaded` INT(11) NOT NULL,
 			`lastUploadTime` DATETIME NOT NULL,
 			PRIMARY KEY `user_ix` (`userid`)
+		) ENGINE=InnoDB AUTO_INCREMENT=0 DEFAULT CHARSET=utf8;");
+}
+
+function createReportTable(){
+	global $dbh;
+	global $report_table_name;
+	$dbh->exec(
+		"CREATE TABLE `$report_table_name` (
+			`type` INT(11) NOT NULL,
+			`id` VARCHAR(32) NOT NULL,
+			`reporter` VARCHAR(32) NOT NULL,
+                        `reason` VARCHAR(500) NOT NULL,
+                        `reportTime` DATETIME NOT NULL
 		) ENGINE=InnoDB AUTO_INCREMENT=0 DEFAULT CHARSET=utf8;");
 }
 
