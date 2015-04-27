@@ -50,6 +50,10 @@
                 <?php
                     echo ucwords($user['usertype']);
                 ?>
+				<br/>
+				<?php
+					echo $user['location'];
+				?>
             </div>
             <div id='follow'>
                 <a href="https://scratch.mit.edu/users/<?php echo $username; ?>" target="blank">View Scratch Page</a>
@@ -93,7 +97,9 @@
     <div class="container main" id="about">
         <div class="main-inner">
             <h1>About Me</h1>
-            Todo.
+            <p>
+				<?php echo $user['about']; ?>
+			</p>
         </div>
     </div>
     

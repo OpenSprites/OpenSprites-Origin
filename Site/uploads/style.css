@@ -87,6 +87,7 @@
 
 .img-preview {
     max-width: 200px; 
+	max-height: 200px;
     border: 3px solid rgb(101, 149, 147); 
     margin-right: 80px;
     vertical-align: middle;

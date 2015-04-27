@@ -11,6 +11,7 @@ $forum_db_name = "OpenSprites_os";
 $forum_member_table = "et_member";
 $forum_group_table = "et_group";
 $forum_group_member_table = "et_member_group";
+$forum_profile_data_table = "et_profile_data";
 
 $dbh;
 $forum_dbh;
@@ -59,11 +60,22 @@ function getUserInfo($userid){
 		array_push($groups, $groupName);
 	}
 	
+	// look up profile fields
+	$about = "No about section given";
+	$location = "No location set";
+	$profileRes = forumQuery("SELECT * FROM `$forum_profile_data_table` WHERE `memberId`=?", array($userid));
+	for($j=0;$j<sizeof($profileRes);$j++){
+		if($profileRes[$j]['fieldId'] == 1) $about = $profileRes[$j]['data'];
+		if($profileRes[$j]['fieldId'] == 2) $location = $profileRes[$j]['data'];
+	}
+	
 	$userInfo = array(
 		"userid" => $userid,
 		"username" => $res[0]['username'],
 		"usertype" => $res[0]['account'],
-		"groups" => $groups
+		"groups" => $groups,
+		"about" => $about,
+		"location" => $location
 	);
 	return $userInfo;
 }

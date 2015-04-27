@@ -8,6 +8,8 @@ All responses are in JSON, unless otherwise noted. Bullet points usually indicat
 - usertype (string): The account type, one of "member", "administrator", or "suspended"
 - avatar (string): The URL of the user's uploaded avatar. If it doesn't exist, it will be the default user icon.
 - groups (array): An array of groups the user belongs to.
+- about (string): A description the user set for their profile, or "No about section given" if not set
+- location (string): The location set by the user, or "No location set" if not set
 
 ### The truncated user object ###
 - name (string): The username of the user
