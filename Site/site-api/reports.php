@@ -1,12 +1,11 @@
 <?php
-// DUMMY CODE
 require 'lib.php';
-?>
 
-[
-  {
-    on: 'users/4/',
-    userid: '1',
-    user: 'cheeseeater'
-  }
-]
+if(!$is_admin){
+	include "../403.php";
+	die();
+}
+connectDatabase();
+
+echo json_encode(getAllReports());
+?>

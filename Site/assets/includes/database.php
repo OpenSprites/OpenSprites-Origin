@@ -183,11 +183,33 @@ function createReportTable(){
 	$dbh->exec(
 		"CREATE TABLE `$report_table_name` (
 			`type` INT(11) NOT NULL,
-			`id` VARCHAR(32) NOT NULL,
+			`id` VARCHAR(50) NOT NULL,
 			`reporter` VARCHAR(32) NOT NULL,
-                        `reason` VARCHAR(500) NOT NULL,
-                        `reportTime` DATETIME NOT NULL
+			`reason` VARCHAR(500) NOT NULL,
+			`reportTime` DATETIME NOT NULL
 		) ENGINE=InnoDB AUTO_INCREMENT=0 DEFAULT CHARSET=utf8;");
+}
+
+function addReport($type, $id, $reporter, $reason){
+	global $report_table_name;
+	imagesQuery0("INSERT INTO `$report_table_name` (
+			`type`,
+			`id`,
+			`reporter`,
+			`reason`,
+			`reportTime`
+		) VALUES(:type, :id, :reporter, :reason, NOW())", array(
+			":type" => $type,
+			":id" => $id,
+			":reporter" => $reporter,
+			":reason" => $reason
+		)
+	);
+}
+
+function getAllReports(){
+	global $report_table_name;
+	return imagesQuery("SELECT *  FROM `$report_table_name` ORDER BY `reportTime` DESC");
 }
 
 function isUserAbleToUpload($userid, $post_size){
