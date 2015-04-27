@@ -1,6 +1,33 @@
 <?php
     require 'html_dom_parser.php';
 	require_once 'database.php';
+	
+	function attemptLogoutBugFix(){
+		$cookies = explode("; ", getallheaders()['Cookie']);
+		$duplicate_search = "OpenSprites_Forum_session";
+		$found = FALSE;
+		foreach($cookies as $key=>$value){
+			$cookie = explode("=", $value);
+			$name = $cookie[0];
+			$value = $cookie[1];
+			if($name == $duplicate_search){
+				if($found){
+					setcookie($name, "", time() - 3600);
+					setcookie($name, "", time() - 3600, "/");
+					setcookie($name, "", time() - 3600, "/", ".opensprites.gwiddle.co.uk");
+					return TRUE;
+				} else {
+					$found = TRUE;
+				}
+			}
+		}
+		return FALSE;
+	}
+	
+	if(attemptLogoutBugFix(){
+		header("Location: " . $_SERVER['REQUEST_URI']);
+		die();
+	}
 
     session_name("OpenSprites_Forum_session");
     session_set_cookie_params(0, '/', '.' . $_SERVER['HTTP_HOST']);
