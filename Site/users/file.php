@@ -104,10 +104,9 @@
 					</script>
 				</a>
 			<?php } else { ?>
-				<div class="img-preview previewdiv"></div>
+				<div class="img-preview"></div>
 				<script>
 					OpenSprites.etc = {};
-					OpenSprites.etc.bgSrc = OpenSprites.view.file.url;
 					var model = OpenSprites.models.ScriptPreview($(".img-preview"));
 					$.get(OpenSprites.view.file.url, function(data){
 						model.loadJson(data);
@@ -198,7 +197,9 @@
 				drawImageProp(context, img);
 				stackBlurCanvasRGB(canvas, 0, 0, canvas.width, canvas.height, 10);
 			}
-			img.src = OpenSprites.etc.bgSrc;
+			if(typeof OpenSprites.etc.bgSrc !== 'undefined'){
+				img.src = OpenSprites.etc.bgSrc;
+			}
 		}
 		
 		drawBg();

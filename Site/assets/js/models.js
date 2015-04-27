@@ -37,6 +37,7 @@ OpenSprites.models.ScriptPreview = function(_target){
 		var DOMURL = window.URL || window.webkitURL || window;
 		var svg = new Blob([data], {type: 'image/svg+xml;charset=utf-8'});
 		var url = DOMURL.createObjectURL(svg);
+		modelObj._url = url;
 		_target.attr("style", "background: url("+url+") white;background-size:cover !important; margin-left: auto;height:200px;");
 	};
 	return modelObj;
