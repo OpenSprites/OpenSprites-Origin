@@ -24,7 +24,6 @@
             header( 'Location: http://dev.opensprites.gwiddle.co.uk/suspended.php' ) ;
         }*/
 		
-		error_reporting(0);
 		connectForumDatabase();
 		$userInfo = getUserInfo(intval($_SESSION["userId"]));
 		$logged_in_userid = $userInfo['userid'];
@@ -32,6 +31,9 @@
 		$user_group = ucwords($userInfo['usertype']);
 		$user_banned = $user_group == 'Suspended';
 		$is_admin = $user_group == 'administrator' || in_array("Moderator", $userInfo['groups']);
+		if(!$is_admin){
+			error_reporting(0);
+		}
     } else {
         $logged_in_userid = 0;
         $user = 'not logged in';

@@ -47,6 +47,7 @@ function getUserInfo($userid){
 	global $forum_member_table;
 	global $forum_group_table;
 	global $forum_group_member_table;
+	global $forum_profile_data_table;
 	$res = forumQuery("SELECT * FROM `$forum_member_table` WHERE `memberId`=?", array($userid));
 	if(sizeof($res) == 0) return FALSE;
 	
@@ -65,8 +66,12 @@ function getUserInfo($userid){
 	$location = "No location set";
 	$profileRes = forumQuery("SELECT * FROM `$forum_profile_data_table` WHERE `memberId`=?", array($userid));
 	for($j=0;$j<sizeof($profileRes);$j++){
-		if($profileRes[$j]['fieldId'] == 1) $about = $profileRes[$j]['data'];
-		if($profileRes[$j]['fieldId'] == 2) $location = $profileRes[$j]['data'];
+		if($profileRes[$j]['fieldId'] == 1) {
+			$about = $profileRes[$j]['data'];
+		}
+		if($profileRes[$j]['fieldId'] == 2){
+			$location = $profileRes[$j]['data'];
+		}
 	}
 	
 	$userInfo = array(
