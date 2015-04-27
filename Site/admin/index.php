@@ -37,5 +37,12 @@ if(!$is_admin) {
         $('input').change(function() {
             $('a#' + $(this).attr('id')).attr('href', $('a#' + $(this).attr('id')).attr('data') + $(this).val());
         });
+		
+		$("#purgethumbcahce").click(function(e){
+			if(!confirm("Are you SURE you want to delete cached thumbnails! This will probably break them!")){
+				e.preventDefault();
+				return false;
+			}
+		});
     </script>
 </body>

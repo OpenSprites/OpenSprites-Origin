@@ -18,7 +18,7 @@ if(isset($_GET['action']) && isset($_GET['id']) && isset($_GET['reporter'])){
 		if(sizeof($res) == 0) die("Error");
 		$filename = $res[0]['name'];
 		unlink("../uploads/uploaded/" . $filename);
-		imagesQuery("DELETE FROM `" . getAssetsTableName() . "` WHERE `hash`=?", array($hash));
+		imagesQuery0("DELETE FROM `" . getAssetsTableName() . "` WHERE `hash`=?", array($hash));
 		
 		// todo: notify users that their files have been removed
 	} if($_GET['action'] == "suspend"){
@@ -120,15 +120,17 @@ if(isset($_GET['action']) && isset($_GET['id']) && isset($_GET['reporter'])){
 				(function(report, row){
 					row.find(".ignore").click(function(){
 						$.get("reports.php", {"action":"dismiss","id":report['id'],"reporter":report['reporter']}, function(data){
-							if(data == "Success") row.slideUp(700, function(){
+							if(data == "Success") row.fadeOut(700, function(){
 								row.remove();
 							});
+							console.log(data);
 						});
 					});
 					row.find(".delete").click(function(){
 						$.get("reports.php", {"action":"delete","id":report['id'],"reporter":report['reporter']}, function(data){
 							if(data == "Success") row.find(".delete").text("Deleted");
 							else row.find(".delete").text("Error");
+							console.log(data);
 						});
 					});
 					
@@ -137,7 +139,8 @@ if(isset($_GET['action']) && isset($_GET['id']) && isset($_GET['reporter'])){
 					row.find(".suspend").click(function(){
 						$.get("reports.php", {"action":"suspend","id":report['id'],"reporter":report['reporter']}, function(data){
 							if(data == "Success") row.find(".delete").text("Suspended");
-							else row.find(".delete").text("Error");
+							else row.find(".suspend").text("Error");
+							console.log(data);
 						});
 					});
 				})(report, row);
