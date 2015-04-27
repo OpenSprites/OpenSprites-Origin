@@ -5,6 +5,28 @@ if(!$is_admin) {
     include '../404.php';
     die();
 }
+
+connectDatabase();
+
+if(isset($_GET['action']) && isset($_GET['id']) && isset($_GET['reporter'])){
+	if($_GET['action'] == "dismiss"){
+		imagesQuery0("DELETE FROM `" . getReportsTableName() . "` WHERE `id`=? AND `reporter`=?", array($_GET['id'], $_GET['reporter']));
+	} else if($_GET['action'] == "delete"){
+		$userid = substr($_GET['id'], 0, strpos($_GET['id'], '/'));
+		$hash = substr($_GET['id'], strpos($_GET['id'], '/') + 1);
+		$res = imagesQuery("SELECT * FROM `" . getAssetsTableName() . "` WHERE `hash`=?", array($hash));
+		if(sizeof($res) == 0) die("Error");
+		$filename = $res[0]['name'];
+		unlink("../uploads/uploaded/" . $filename);
+		imagesQuery("DELETE FROM `" . getAssetsTableName() . "` WHERE `hash`=?", array($hash));
+		
+		// todo: notify users that their files have been removed
+	} if($_GET['action'] == "suspend"){
+		$userInfo = getUserInfo(intval($_GET['id']));
+		setAccountType($userInfo['username'], "suspended");
+	}
+	die("Success");
+}
 ?>
 
 <head>
@@ -83,7 +105,7 @@ if(!$is_admin) {
 					"<div class='cell reason'></div>" +
 					"<div class='cell time'></div>" +
 					"<div class='cell actions'>" +
-						"<a class='ignore' href='javascript:void(0);'>Ignore</a> " +
+						"<a class='ignore' href='javascript:void(0);'>Dismiss</a> " +
 						"<a class='delete' href='javascript:void(0);'>Delete asset</a> " +
 						"<a class='suspend' href='javascript:void(0);'>Suspend user</a></div>" +
 				"</div>");
@@ -97,13 +119,26 @@ if(!$is_admin) {
 				row.find(".time").text(report['reportTime']);
 				(function(report, row){
 					row.find(".ignore").click(function(){
-						// todo
+						$.get("reports.php", {"action":"dismiss","id":report['id'],"reporter":report['reporter']}, function(data){
+							if(data == "Success") row.slideUp(700, function(){
+								row.remove();
+							});
+						});
 					});
 					row.find(".delete").click(function(){
-						// todo
+						$.get("reports.php", {"action":"delete","id":report['id'],"reporter":report['reporter']}, function(data){
+							if(data == "Success") row.find(".delete").text("Deleted");
+							else row.find(".delete").text("Error");
+						});
 					});
+					
+					if(report['type'] == 0) row.find(".delete").hide();
+					
 					row.find(".suspend").click(function(){
-						// todo
+						$.get("reports.php", {"action":"suspend","id":report['id'],"reporter":report['reporter']}, function(data){
+							if(data == "Success") row.find(".delete").text("Suspended");
+							else row.find(".delete").text("Error");
+						});
 					});
 				})(report, row);
 				$(".reports-table").append(row);

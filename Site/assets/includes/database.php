@@ -112,6 +112,11 @@ function getAssetsTableName(){
 	return $assets_table_name;
 }
 
+function getReportsTableName(){
+	global $report_table_name;
+	return $report_table_name;
+}
+
 function imagesQuery($query, $parameters){
 	global $dbh;
 	global $assets_table_name;
