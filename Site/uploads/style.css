@@ -8,7 +8,7 @@
     background-color: rgba(21, 21, 21, 0.7);
     text-align: center;
     overflow: hidden;
-    z-index: -1;
+    z-index: 10;
 }
 
 #background-img {
@@ -78,6 +78,7 @@
     width: 980px;
     margin: auto;
     height: 100%;
+    z-index: 11;
 }
 
 #user-pane-right {
