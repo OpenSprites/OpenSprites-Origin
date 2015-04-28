@@ -65,12 +65,12 @@
     <div id='dark-overlay'><div id='overlay-inner'>
 		    <div id='username' class='asset-name'>
                 <?php
-                    echo $obj['name'];
+                    echo htmlspecialchars($obj['name']);
                 ?>
             </div>
         <div id="user-pane-right">
             <div id='description'>
-                <strong>By:</strong> <a href='/users/<?php echo $obj['uploaded_by']['id']; ?>/'><?php echo $obj['uploaded_by']['name']; ?></a><br/>
+                <strong>By:</strong> <a href='/users/<?php echo $obj['uploaded_by']['id']; ?>/'><?php echo htmlspecialchars($obj['uploaded_by']['name']); ?></a><br/>
 				<strong>Uploaded on:</strong> <?php
 				sscanf($obj['upload_time'], "%u-%u-%u %u:%u:%u", $year, $month, $day, $hour, $min, $sec);
 				$month = date('F', mktime(0, 0, 0, $month, 10));
@@ -125,7 +125,7 @@
             <audio style="width: 100%;" controls preload='metadata' src='<?php echo $obj['url'] ?>';></audio><br/>
             <?php } ?>
 			<h1>Description</h1>
-			<p class='desc'><?php echo $obj['description']; ?></p>
+			<p class='desc'><?php echo nl2br(htmlspecialchars($obj['description'])); ?></p>
         </div>
     </div>
 	<script src="/uploads/edit.js"></script>
