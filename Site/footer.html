@@ -1,5 +1,5 @@
 <div class="footer">
-	<a href="/about/">About Us</a> - <a href="mailto:team@opensprites.gwiddle.co.uk">Contact Us</a> - <a href="/tos/">Terms of Service</a> - <a href="/privacy/">Privacy</a> <span class='if(admin)'>- <a href="/admin/">Admin</a></span>
+	<a href="/about/">About Us</a> - <a href="mailto:team@opensprites.gwiddle.co.uk">Contact Us</a> - <a href="/tos/">Terms of Service</a> - <a href="/privacy/">Privacy</a> <span class='if_admin'>- <a href="/admin/">Admin</a></span>
 	<br/>
 	OpenSprites is a resources site developed by the <a href="https://github.com/OpenSprites/OpenSprites/blob/master/README.md">OpenSprites team</a>.<br>
 	We are not endorsed or affiliated with the Scratch Team.<br>
@@ -28,9 +28,9 @@
 	})();
 </script>
 <script>
-	/* special case "if()" html classes */
+	/* special case "if_" html classes */
 	if(OpenSprites.user.group == 'Administrator')
-		$('.if(admin)').show();
+		$('.if_admin').show();
 	else
-		$('.if(admin)').hide();
+		$('.if_admin').hide();
 </script>
