@@ -1,5 +1,5 @@
 <div class="footer">
-	<a href="/about/">About Us</a> - <a href="mailto:team@opensprites.gwiddle.co.uk">Contact Us</a> - <a href="/tos/">Terms of Service</a> - <a href="/privacy/">Privacy</a>
+	<a href="/about/">About Us</a> - <a href="mailto:team@opensprites.gwiddle.co.uk">Contact Us</a> - <a href="/tos/">Terms of Service</a> - <a href="/privacy/">Privacy</a> <span class='if(admin)'>- <a href="/admin/">Admin</a></span>
 	<br/>
 	OpenSprites is a resources site developed by the <a href="https://github.com/OpenSprites/OpenSprites/blob/master/README.md">OpenSprites team</a>.<br>
 	We are not endorsed or affiliated with the Scratch Team.<br>
@@ -16,7 +16,7 @@
 </div>
 <script src="/themes/theme.js"></script>
 <script>
-	(function(){ // let's not interfere with global vars
+	(function(){
 		var footer = function() {
 			$('.footer').css('height', (($('.footer').position().top - $(window).height()) * -1));
 			$('.footer').css('margin-top', '-1.5em');
@@ -26,4 +26,11 @@
 		for(var i=500;i<5000;i+=500) setTimeout(footer, i); // idk why document.ready and window.load aren't working...
 		$(window).resize(footer);
 	})();
+</script>
+<script>
+	/* special case "if()" html classes */
+	if(OpenSprites.user.group == 'Administrator')
+		$('.if(admin)').show();
+	else
+		$('.if(admin)').hide();
 </script>
