@@ -89,15 +89,12 @@
 
 ul.navbar-dropdown {
 	height: 0;
-	opacity: 0;
-	transition: all 0.5s;
+	transition: all 250ms;
 	list-style-type: none;
 	background-color: rgb(101, 149, 147);
 	border-bottom-right-radius: 10px;
 	border-bottom-left-radius: 10px;
 	overflow: hidden;
-	border: 2px solid white;
-	border-top: 2px solid transparent;;
 }
 
 ul.navbar-dropdown li {
@@ -110,8 +107,7 @@ ul.navbar-dropdown li {
 }
 
 #browse-li:hover ul {
-	height: initial;
-	opacity: 1;
+	height: 105px;
 }
 
 .header .search {
