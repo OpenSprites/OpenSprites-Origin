@@ -52,7 +52,7 @@ OpenSprites.models.AssetList = function(_target){
 				.attr("data-uploader", json[i].uploaded_by.name)
 				.attr('href', OpenSprites.domain+'/users/'+json[i].uploaded_by.id+'/'+json[i].md5+'/');
 			if(json[i].type == "image"){ 
-				html.attr("style", "background:url("+OpenSprites.domain + "/uploads/thumbnail.php?file=" + json[i].filename + ");background-position: center;background-size:contain !important;");
+				html.attr("style", "background:url("+OpenSprites.domain + "/uploads/thumbnail.php?file=" + json[i].filename + ");background-position: center;background-size:cover !important;");
 			} else if(json[i].type == "sound"){
 				html.attr("style", "background:url("+OpenSprites.domain + "/uploads/thumbnail.php?file=" + json[i].filename + ") #191919;background-position: center;");
 			} else if (json[i].type == "script"){
