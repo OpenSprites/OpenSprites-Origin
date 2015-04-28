@@ -19,6 +19,10 @@
     height: 100%;
 }
 
+#dark-overlay {
+    z-index: 10;
+}
+
 #username {
     margin-top: 70px;
     font-size: 48px;
