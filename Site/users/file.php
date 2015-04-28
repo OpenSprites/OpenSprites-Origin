@@ -63,7 +63,7 @@
     <!-- Main wrapper -->
 	<canvas id='background-img'></canvas>
     <div id='dark-overlay'><div id='overlay-inner'>
-		    <div id='username'>
+		    <div id='username' class='asset-name'>
                 <?php
                     echo $obj['name'];
                 ?>
@@ -82,17 +82,20 @@
                 <a href="/uploads/download.php?id=<?php echo $obj['uploaded_by']['id']; ?>&file=<?php echo $obj['md5']; ?>" target="_blank"><?php echo 'Download this ' . $obj['type']; ?></a>
             </div>
             <?php if($logged_in_userid == $obj['uploaded_by']['id']) { ?>
-            <div id='report'>
+            <div id='delete'>
                 <a class="file_delete" href="/uploads/delete.php?file=<?php echo $obj['md5']; ?>">Delete</a>
             </div>
             <?php } else {
                 if ($is_admin == true) { ?>
-                    <div id='report'>
+                    <div id='delete'>
                         <a class="file_delete" href="/uploads/admindelete.php?id=<?php echo $obj['uploaded_by']['id']; ?>&file=<?php echo $obj['md5']; ?>">Delete (Admin)</a>
                     </div>
                 <?php }
             }?>
-
+			
+			<?php if($logged_in_userid == $obj['uploaded_by']['id']) { ?>
+				<div id="rename"><a class="file_rename" href="javascript:void(0)">Edit title or description</a></div>
+			<?php } ?>
         </div>
         <div id="user-pane-left">
 			<?php if($obj['type'] != "script"){ ?>
@@ -125,7 +128,7 @@
 			<p class='desc'><?php echo $obj['description']; ?></p>
         </div>
     </div>
-	
+	<script src="/uploads/edit.js"></script>
 	<script src='/assets/lib/stackblur/stackblur.js'></script>
 	<script>
 		$(".file_delete").click(function(e){

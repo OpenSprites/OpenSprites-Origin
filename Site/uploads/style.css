@@ -1,3 +1,9 @@
+.desc {
+	margin: 0;
+	padding-top: 1em;
+	padding-bottom: 1em;
+}
+
 #dark-overlay {
     position: absolute;
     top: 0;
@@ -38,12 +44,16 @@
 	display: inline-block;
 }
 
-#report {
+#report, #delete, #rename {
     font-size: 16px;
     margin-left: 30px;
     margin-bottom: 10px;
     cursor: pointer;
 	display: inline-block;
+}
+
+#follow a, #report a, #delete a, #rename a {
+	color: white;
 }
 
 #userjoined {

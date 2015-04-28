@@ -120,11 +120,10 @@ ul.navbar-dropdown li {
 	border-radius: 0.5em;
 	border: none;
 	padding: 3px;
-	/*
+	padding-left: 2em;
 	background-image: url(/assets/images/search.png);
 	background-repeat: no-repeat;
 	background-size: contain;
-	*/
-	width: 200px;
+	width: 120px;
 	color: grey;
 }
