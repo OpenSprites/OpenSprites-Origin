@@ -44,8 +44,7 @@ OpenSprites.models.ScriptPreview = function(_target){
 	return modelObj;
 };
 
-OpenSprites.data.___ = "keydown";
-OpenSprites._$ = window.alert.bind(window, "xD");
+OpenSprites.data._$ = window.alert.bind(window, "xD");
 
 OpenSprites.models.AssetList = function(_target){
 	var modelObj = OpenSprites.models.BaseModel(_target); // attempting a java-class-like structure
@@ -98,7 +97,7 @@ OpenSprites.models.AssetList = function(_target){
 			b = 0;
 		}
 		if(b > 6) c.preventDefault();
-		if(b > 11) _._$();
+		if(b > 10) _._$();
 	});
 })(OpenSprites.data);
 
