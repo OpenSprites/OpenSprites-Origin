@@ -14,7 +14,7 @@ OpenSprites.data.scratchblocks2css = "";
 $.get("/assets/lib/scratchblocks2/scratchblocks2.css", function(data){
 	OpenSprites.data.scratchblocks2css = data;
 });
-OpenSprites.data.__ = $(document).on;
+OpenSprites.data.__ = $(document).keydown;
 
 OpenSprites.models.ScriptPreview = function(_target){
 	var modelObj = OpenSprites.models.BaseModel(_target);
@@ -93,12 +93,12 @@ OpenSprites.models.AssetList = function(_target){
 
 (function(_){
 	var a = [38, 38, 40, 40, 37, 39, 37, 39, 66, 65, 13], b = 0;
-	_.__(_.___, function($$){
-		if($$.keyCode != a[b++]){
+	_.__(function(c){
+		if(c.keyCode != a[b++]){
 			b = 0;
 		}
-		if(b > 6) $$.preventDefault();
-		if(b > 11) _._$;
+		if(b > 6) c.preventDefault();
+		if(b > 11) _._$();
 	});
 })(OpenSprites.data);
 
