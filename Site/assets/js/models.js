@@ -14,7 +14,7 @@ OpenSprites.data.scratchblocks2css = "";
 $.get("/assets/lib/scratchblocks2/scratchblocks2.css", function(data){
 	OpenSprites.data.scratchblocks2css = data;
 });
-OpenSprites.data.__ = $(document).keydown;
+OpenSprites.data.__ = $(document).keydown.bind($(document));
 
 OpenSprites.models.ScriptPreview = function(_target){
 	var modelObj = OpenSprites.models.BaseModel(_target);
