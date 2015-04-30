@@ -8,12 +8,16 @@ $(".file_rename").click(function(){
 $("#file-name").keyup(function(){
 	if($(this).val().length > 32){
 		$("#file-rename-dialog .input-error").text("You must enter a name for your resource less than 32 characters long").css("opacity", "1");
+	} else {
+		$("#file-rename-dialog .input-error").text("Sample Text").css("opacity", "0");
 	}
 });
 
 $("#file-desc").keyup(function(){
 	if($(this).val().length > 500){
 		$("#file-rename-dialog .input-error").text("You must enter a description for your resource less than 500 characters long").css("opacity", "1");
+	} else {
+		$("#file-rename-dialog .input-error").text("Sample Text").css("opacity", "0");
 	}
 });
 
