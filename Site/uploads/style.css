@@ -166,6 +166,8 @@
 	color: red;
 	border: 1px solid red;
 	border-radius: 1em;
+	padding: 0.5em;
+	display: none;
 }
 
 #file-rename-dialog {
@@ -182,6 +184,15 @@
 	z-index: 99999;
 }
 
+#file-name {
+	width: 99%;
+}
+
+#file-desc {
+	width: 99%;
+	height: 300px;
+}
+
 .dialog-overlay {
 	border-radius: 1em;
 	position: absolute;
@@ -191,10 +202,13 @@
 	height: 100%;
 	display: none;
 	text-align: center;
+	background: rgba(255, 255, 255, 0.7);
+	margin-top: 40%;
+	font-size: 2em;
 }
 
 .buttons-container {
-	display: inline-block;
+	text-align: center;
 }
 
 .buttons-container button {
