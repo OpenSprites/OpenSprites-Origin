@@ -12,6 +12,7 @@ This policy forms an agreement between the end-user (You, User, Your), and OpenS
  - By using our services, OpenSprites will accept no responsibility for loss, damage, errors or other circumstances.
 
 ### Prohibited Actions and Violations of Our Services ###
+ - Uploading copyrighted content or content the uploader has no permissions to use. We cannot be held responsible for the content posted to OpenSprites, however we do moderate the content to a great extent.
  - Attempting to or accessing private administration-related areas of OpenSprites (Including but not limited to: administrator control panels, FTP, databases, hosting accounts and configurations, any accounts related to OpenSprites.)
  - Disrupting the content or account profiles of other users.
  - Using software or bot-nets to gain unauthorised access to OpenSprites or to disrupt the OpenSprites service.
