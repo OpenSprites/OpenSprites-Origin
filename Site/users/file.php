@@ -95,6 +95,22 @@
 			
 			<?php if($logged_in_userid == $obj['uploaded_by']['id']) { ?>
 				<div id="rename"><a class="file_rename" href="javascript:void(0)">Edit title or description</a></div>
+				<div class="modal-bg"></div>
+				<div id="file-rename-dialog">
+					<div class="dialog-content">
+						<h1>Change the name or description of your asset</h1>
+						<p class='input-error'></p>
+						<input type="text" id="file-name" placeholder="Enter a descriptive name here" /><br/><br/>
+						<textarea id="file-desc" placeholder="Describe your media or script here"></textarea><br/>
+						<div class="buttons-container">
+							<button class='dialog-button cancel'>Cancel</button>
+							<button class='dialog-button primary-button ok'>OK</button>
+						</div>
+					</div>
+					<div class="dialog-overlay">
+						<p class="rename-status"></p>
+					</div>
+				</div>
 			<?php } ?>
         </div>
         <div id="user-pane-left">

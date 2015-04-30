@@ -14,6 +14,9 @@ $params = array();
 if(isset($_GET['title'])){
 	$query .= " `customName`=?";
 	$title = $_GET['title'];
+	if(hasBadWords($title)){
+		die(json_encode(array("status" => "error", "message" => "Our bad word filter found a problem with your title.")));
+	}
 	if(strlen($title) > 32) $title = substr($title, 0, 32);
 	array_push($params, $title);
 }
@@ -24,6 +27,11 @@ if(isset($_GET['description'])){
 	}
 	$query .= " `description`=?";
 	$desc = $_GET['description'];
+	
+	if(hasBadWords($desc)){
+		die(json_encode(array("status" => "error", "message" => "Our bad word filter found a problem with your description.")));
+	}
+	
 	if(strlen($desc) > 500) $desc = substr($desc, 0, 500);
 	array_push($params, $desc);
 }
@@ -36,8 +44,8 @@ try {
 	connectDatabase();
 	imagesQuery0($query, $params);
 } catch(Exception $e){
-	die(json_encode(array("status" => "error", "message" => "Database error")));
+	die(json_encode(array("status" => "error", "message" => "Database error.")));
 }
 
-echo json_encode(array("status" => "success", "message" => "Updated"));
+echo json_encode(array("status" => "success", "message" => "Updated", "title" => $_GET['title'], "description" => $_GET['description']));
 ?>
