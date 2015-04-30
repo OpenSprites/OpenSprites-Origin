@@ -1,4 +1,33 @@
-# Using models.js #
+# modal.js
+TODO: I'm not sure how to write documentation. *- GC*
+
+###Option One
+```js
+//                                      unique name, [contents,            submit,                                         text for buttons
+var myEpicModal = new OpenSprites.modal('EpicModal', '<h1>EpicModal</h1>', function(parentModal) {alert('You go away!');}, {submit: 'Go away!', cancel: 'Okay'});
+
+myEpicModal.show();
+```
+
+###Option Two
+```js
+var myMoreEpicModal = new OpenSprites.modal({
+    name: 'lickRequest',
+    content: '<h1>Lick me!</h1>',
+    submit: function(t) {
+        console.log(t);
+        $(t.content).html('<h1>Good job!</h1>');
+    },
+    buttons: {
+        submit: 'Licky licky!',
+        cancel: 'No way!'
+    }
+});
+
+myMoreEpicModal.show();
+```
+
+# models.js #
 All models are located in OpenSprites.model
 ## BaseModel(target) ##
 Empty base class, use this for creating new models
