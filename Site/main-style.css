@@ -807,7 +807,7 @@ a:visited {
 	opacity: 0;
 }
 
-#file-rename-dialog {
+.modal {
 	background: white;
 	color: black;
 	position: fixed;
@@ -831,7 +831,7 @@ a:visited {
 	resize: none;
 }
 
-.dialog-overlay {
+.modal-overlay {
 	border-radius: 1em;
 	position: absolute;
 	top: 0px;
