@@ -66,3 +66,7 @@ $("#file-rename-dialog .ok").click(function(){
 		$("#file-rename-dialog .input-error").text("Whoops! A problem prevented us from receiving a response from our servers.").css("opacity", "1");
 	});
 });
+
+$(".image-url").focus(function(){
+    this.select();
+});

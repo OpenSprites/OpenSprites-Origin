@@ -249,3 +249,8 @@
 	border: 1px outset #659593;
 	box-shadow: inset 2px 2px 5px gray;
 }
+
+.image-url {
+	font-size: 1.2em;
+	width: 100%;
+}

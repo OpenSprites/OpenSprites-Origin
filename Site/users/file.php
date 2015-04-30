@@ -138,10 +138,15 @@
     <div class="container main" id="collections">
         <div class="main-inner">
             <?php if($obj['type'] == 'sound') { ?>
-            <audio style="width: 100%;" controls preload='metadata' src='<?php echo $obj['url'] ?>';></audio><br/>
+				<audio style="width: 100%;" controls preload='metadata' src='<?php echo $obj['url'] ?>';></audio><br/><br/>
             <?php } ?>
 			<h1>Description</h1>
 			<p class='desc'><?php echo nl2br(htmlspecialchars($obj['description'])); ?></p>
+			<?php if($obj['type'] == 'image'){ ?>
+				<h2>Direct link</h2>
+				<p>Use this link to embed this image in forums or on websites.</p>
+				<input type="text" value="http://dev.opensprites.gwiddle.co.uk/uploads/uploaded/<?php echo urlencode($obj['filename']); ?>" class="image-url" />
+			<?php } ?>
         </div>
     </div>
 	<script src="/uploads/edit.js"></script>
