@@ -55,5 +55,5 @@ try {
 	die(json_encode(array("status" => "error", "message" => "Database error.")));
 }
 
-echo json_encode(array("status" => "success", "message" => "Updated", "title" => $_GET['title'], "description" => $_GET['description']));
+echo json_encode(array("status" => "success", "message" => "Updated", "title" => htmlspecialchars($_GET['title']), "description" => nl2br(htmlspecialchars($_GET['description']))));
 ?>

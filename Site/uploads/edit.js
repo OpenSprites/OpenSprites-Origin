@@ -56,9 +56,9 @@ $("#file-rename-dialog .ok").click(function(){
 		}
 		
 		OpenSprites.view.file.name = data.title;
-		$(".asset-name").text(data.title);
+		$(".asset-name").html(data.title);
 		OpenSprites.view.file.description = data.description;
-		$(".desc").text(data.description);
+		$(".desc").html(data.description);
 		
 		$(".modal-bg, #file-rename-dialog").fadeOut();
 	}).fail(function(){
