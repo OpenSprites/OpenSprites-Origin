@@ -167,7 +167,7 @@
 	border: 1px solid red;
 	border-radius: 1em;
 	padding: 0.5em;
-	display: none;
+	opacity: 0;
 }
 
 #file-rename-dialog {
@@ -203,8 +203,11 @@
 	display: none;
 	text-align: center;
 	background: rgba(255, 255, 255, 0.7);
-	margin-top: 40%;
 	font-size: 2em;
+}
+
+.rename-status {
+	padding-top: 40%;
 }
 
 .buttons-container {

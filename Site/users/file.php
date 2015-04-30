@@ -98,8 +98,8 @@
 				<div class="modal-bg"></div>
 				<div id="file-rename-dialog">
 					<div class="dialog-content">
-						<h1>Change the name or description of your asset</h1>
-						<p class='input-error'></p>
+						<h1>Change name or description</h1>
+						<p class='input-error'>Sample Text</p>
 						<input type="text" id="file-name" placeholder="Enter a descriptive name here" /><br/><br/>
 						<textarea id="file-desc" placeholder="Describe your media or script here"></textarea><br/>
 						<div class="buttons-container">
