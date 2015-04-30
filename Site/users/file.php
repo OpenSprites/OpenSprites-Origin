@@ -93,8 +93,8 @@
                 <?php }
             }?>
 			
-			<?php if($logged_in_userid == $obj['uploaded_by']['id']) { ?>
-				<div id="rename"><a class="file_rename" href="javascript:void(0)">Edit title or description</a></div>
+			<?php if($logged_in_userid == $obj['uploaded_by']['id'] || $is_admin) { ?>
+				<div id="rename"><a class="file_rename" href="javascript:void(0)">Edit title or description<?php if($is_admin){ echo " (Admin)"; } ?></a></div>
 				<div class="modal-bg"></div>
 				<div id="file-rename-dialog">
 					<div class="dialog-content">

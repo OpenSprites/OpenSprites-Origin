@@ -42,7 +42,8 @@ $("#file-rename-dialog .ok").click(function(){
 	
 	$("#file-rename-dialog .rename-status").text("Saving...").parent().fadeIn();
 	
-	$.get("/uploads/edit.php", {hash: OpenSprites.view.file.md5, title: name, description: desc}, function(data){
+	$.get("/uploads/edit.php", {hash: OpenSprites.view.file.md5, title: name, description: desc, userid: OpenSprites.view.file.uploaded_by.id}, function(data){
+		// userid is ignored unless you're an admin, in which case we need to know it
 		$("#file-rename-dialog .dialog-overlay").fadeOut();
 		if(typeof data != "object"){
 			$("#file-rename-dialog .input-error").text("Whoops! Our servers sent back a bad response. Try again later.").css("opacity", "1");

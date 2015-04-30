@@ -4,9 +4,10 @@ include '../assets/includes/connect.php';
 
 header("Content-Type: application/json");
 
-if(!isset($_GET['hash']) || $logged_in_userid == 0) {
+if(!isset($_GET['hash']) || ($logged_in_userid == 0 && !$is_admin)) { // provide ability for admins to edit
 	die(json_encode(array("status" => "error", "message" => "Missing params")));
 }
+
 $hash = $_GET['hash'];
 
 $query = "UPDATE `" . getAssetsTableName() . "` SET";
@@ -17,6 +18,8 @@ if(isset($_GET['title'])){
 	if(hasBadWords($title)){
 		die(json_encode(array("status" => "error", "message" => "Our bad word filter found a problem with your title.")));
 	}
+	
+	// screw hackers, don't bother giving fancy errors if client-side validation is bypassed
 	if(strlen($title) > 32) $title = substr($title, 0, 32);
 	array_push($params, $title);
 }
@@ -38,7 +41,12 @@ if(isset($_GET['description'])){
 
 $query .= " WHERE `userid`=? AND `hash`=?";
 
-array_push($params, $logged_in_userid, $hash);
+if($is_admin){
+	$userid = intval($_GET['userid']);
+	array_push($params, $userid, $hash);
+} else {
+	array_push($params, $logged_in_userid, $hash);
+}
 
 try {
 	connectDatabase();
