@@ -191,6 +191,7 @@
 #file-desc {
 	width: 99%;
 	height: 300px;
+	resize: none;
 }
 
 .dialog-overlay {

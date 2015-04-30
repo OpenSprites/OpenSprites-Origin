@@ -5,6 +5,19 @@ $(".file_rename").click(function(){
 	$(".modal-bg, #file-rename-dialog").fadeIn();
 });
 
+$("#file-name").keyup(function(){
+	if($(this).val().length > 32){
+		$("#file-rename-dialog .input-error").text("You must enter a name for your resource less than 32 characters long").css("opacity", "1");
+	}
+});
+
+$("#file-desc").keyup(function(){
+	if($(this).val().length > 500){
+		$("#file-rename-dialog .input-error").text("You must enter a description for your resource less than 500 characters long").css("opacity", "1");
+	}
+});
+
+
 $("#file-rename-dialog .cancel").click(function(){
 	$(".modal-bg, #file-rename-dialog").fadeOut();
 });
@@ -14,12 +27,12 @@ $("#file-rename-dialog .ok").click(function(){
 	var name = $("#file-name").val();
 	var desc = $("#file-desc").val();
 	if(name == null || name == "" || name.length > 32){
-		$("#file-rename-dialog .input-error").text("You must enter a name for your file less than 32 characters long").css("opacity", "1");
+		$("#file-rename-dialog .input-error").text("You must enter a name for your resource less than 32 characters long").css("opacity", "1");
 		return;
 	}
 	
 	if(desc == null || desc == "" || desc.length > 500){
-		$("#file-rename-dialog .input-error").text("You must enter a description for your file less than 500 characters long").css("opacity", "1");
+		$("#file-rename-dialog .input-error").text("You must enter a description for your resource less than 500 characters long").css("opacity", "1");
 		return;
 	}
 	
