@@ -1,4 +1,4 @@
-var OS = OpenSprites;
+
 
 (function () {
 
