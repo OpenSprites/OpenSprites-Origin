@@ -1,4 +1,6 @@
-(function () { //wrap everything for safety
+var OS = OpenSprites;
+
+(function () {
 
     var isShown = false;
 
