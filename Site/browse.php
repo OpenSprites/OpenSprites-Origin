@@ -1,8 +1,7 @@
 <?php
     require "assets/includes/connect.php";  //Connect - includes session_start();
 	
-	$type = "";
-	if(isset($GET['type'])) $type = $_GET['type'];
+	$mtype = $_GET['type'];
 	
 	$allowed_types = array("media", "script", "collections");
 	
@@ -11,12 +10,13 @@
 		"scripts" => "Browse Scratch scripts from OpenSprites users, and download them for your own projects.",
 		"collections" => "Collections are groups of media and scripts. Some collections are meant to be used as sprites out of the box, others may just be a way of grouping media and scripts that have something in common. You can find new and awesome collections from OpenSprites users here!");
 	
-	if(!in_array($type, $allowed_types)){
+	if(!in_array($mtype, $allowed_types)){
 		include "404.php";
 		die();
 	}
 	
-	$displayType = ucwords($type);
+	$displayType = ucwords($mtype);
+	if($displayType == "Script") $displayType = "Scripts";
 ?>
 <!DOCTYPE html>
 <html>
@@ -26,7 +26,8 @@
 </head>
 <body>
 	<script>
-		OpenSprites.view.browseType = <?php echo json_encode($type); ?>;
+		OpenSprites.view = OpenSprites.view || {};
+		OpenSprites.view.browseType = <?php echo json_encode($mtype); ?>;
 	</script>
 
     <!--Imports site-wide main styling-->
@@ -40,33 +41,33 @@
         <div class="main-inner">
             <div id="about">
                 <h2><?php echo $displayType; ?></h2>
-                <p><?php echo $descriptions[$type]; ?></p>
+                <p><?php echo $descriptions[$mtype]; ?></p>
 			</div>
 			
 			
             <div id="feat-assets">
                 <div class="box">
-                    <h1>Featured <?php echo $displayName; ?></h1>
-                    <div class="box-content" id="feat-assets-list">
-						<p style="text-align: center;">Loading content, hang tight.</p>
+                    <h1>Featured <?php echo $displayType; ?></h1>
+                    <div class="box-content assets-list" id="feat-assets-list">
+						<p style="text-align: center;">Loading content, hang tight.<br/></p>
                     </div>
                 </div>
             </div>
 			
             <div id="top-assets">
                 <div class="box">
-                    <h1>Popular <?php echo $displayName; ?> From the Past Week</h1>
-                    <div class="box-content" id="top-assets-list">
-                        <p style="text-align: center;">Loading content, hang tight.</p>
+                    <h1>Popular <?php echo $displayType; ?> From the Past Week</h1>
+                    <div class="box-content assets-list" id="top-assets-list">
+                        <p style="text-align: center;">Loading content, hang tight.<br/></p>
                     </div>
                 </div>
             </div>
 			
 			<div id="new-assets">
                 <div class="box">
-                    <h1>Newest <?php echo $displayName; ?></h1>
-                    <div class="box-content" id="new-assets-list">
-                        <p style="text-align: center;">Loading content, hang tight.</p>
+                    <h1>Newest <?php echo $displayType; ?></h1>
+                    <div class="box-content assets-list" id="new-assets-list">
+                        <p style="text-align: center;">Loading content, hang tight.<br/></p>
                     </div>
                 </div>
             </div>
