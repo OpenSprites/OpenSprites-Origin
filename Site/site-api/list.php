@@ -5,8 +5,8 @@ $max = 10;
 $type = "all";
 $sort = "popularity";
 
-$types = ["all", "image", "script", "sound"];
-$sorts = ["popularity", "alphabetical", "newest", "oldest"];
+$types = ["all", "image", "script", "sound", "media", "collections"];
+$sorts = ["popularity", "alphabetical", "newest", "oldest", "featured"];
 
 if(isset($_GET['max'])){
 	$max = intval($_GET['max']);
@@ -31,9 +31,22 @@ if(!in_array($sort, $sorts)){
 connectDatabase();
 $query = "SELECT * FROM `" . getAssetsTableName() . "`";
 $params = array();
-if($type != "all"){
+if($type == "all"){
+	if($sort == "featured"){
+		$query .= " WHERE `isFeatured`=?";
+		array_push($params, 1);
+	}
+} else if($type == "media") {
+	$query .= " WHERE (`assetType`=? OR `assetType`=?)";
+	array_push($params, "image", "sound");
+} else {
 	$query .= " WHERE `assetType`=?";
 	array_push($params, $type);
+}
+
+if($type != "all" && $sort == "featured"){
+	$query .= " AND `isFeatured`=?";
+	array_push($params, 1);
 }
 
 if($sort == "popularity"){
@@ -43,6 +56,8 @@ if($sort == "popularity"){
 } else if($sort == "newest"){
 	$query .= " ORDER BY `date` DESC";
 } else if($sort == "oldest"){
+	$query .= " ORDER BY `date`";
+} else if($sort == "featured"){
 	$query .= " ORDER BY `date`";
 }
 

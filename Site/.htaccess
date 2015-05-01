@@ -30,3 +30,28 @@ RewriteRule ^users/([^/]+)/([^/]+)$ users/file.php?id=$1&file=$2 [QSA]
 RewriteCond %{REQUEST_METHOD} =POST
 RewriteCond %{HTTP:Content-Length}%{CONTENT_LENGTH} >50000000
 RewriteRule .* /upload/_matu_upload.php?file_too_big=1 [R,NC]
+
+# media, scripts, and collections
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^media$ /media/ [R=301,L]
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^media/$ browse.php?type=media [QSA]
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^scripts$ /scripts/ [R=301,L]
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^scripts/$ browse.php?type=script [QSA]
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^collections$ /collections/ [R=301,L]
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^collections/$ browse.php?type=collections [QSA]
