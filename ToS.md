@@ -1,5 +1,3 @@
-# INCOMPLETE POLICY - INVALID AND VOID #
-
 ## OpenSprites Terms of Service ##
 This policy forms an agreement between the end-user (You, User, Your), and OpenSprites Organisation (Us, OpenSprites, Our). The OpenSprites Team reserves the right to terminate usage of the site to User who violates these Terms. The OpenSprites Team is the collective of administrators, moderators and developers that have been offically certified to be working for the Organisation. By continuing use of this site, you are agreeing to these Terms. If you do not agree with these Terms, discontinue use of the OpenSprites website.
 
@@ -28,5 +26,3 @@ This policy forms an agreement between the end-user (You, User, Your), and OpenS
 
 OpenSprites terms of service revision one. Originally written by cheeseeater on 04/21/2015. Most recent edits by MegaApuTurkUltra on 04/26/2015.  
 The OpenSprites Team reserves the right to change, modify, remove and add text to this document without prior notice. This policy is subject to change.
-
-# INCOMPLETE POLICY - INVALID AND VOID #
