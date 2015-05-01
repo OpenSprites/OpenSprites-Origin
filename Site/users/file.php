@@ -35,6 +35,12 @@
 		),
 		"description" => $raw['description']
 	);
+	
+	$userData = getUserInfo($raw["userid"]);
+	if($userData['usertype'] == "suspended"){
+		include "../404.php";
+		die();
+	}
 ?>
 <!DOCTYPE html>
 <html>

@@ -16,6 +16,12 @@ if($filename == NULL){
 	die;
 }
 
+$userData = getUserInfo($id);
+if($userData['usertype'] == "suspended"){
+	include "../404.php";
+	die();
+}
+
 incrementDownload($id, $file);
 $file_url = 'uploaded/'.$asset[0]['name'];
 $ext = pathinfo($file_url, PATHINFO_EXTENSION);
