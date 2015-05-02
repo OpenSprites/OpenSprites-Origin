@@ -179,6 +179,8 @@ function createUserUploadTable(){
 			`userid` INT(11) NOT NULL,
 			`bytesUploaded` INT(11) NOT NULL,
 			`lastUploadTime` DATETIME NOT NULL,
+			`ipAddr` VARCHAR(32) NOT NULL,
+			`userAgent` VARCHAR(300) NOT NULL,
 			PRIMARY KEY `user_ix` (`userid`)
 		) ENGINE=InnoDB AUTO_INCREMENT=0 DEFAULT CHARSET=utf8;");
 }
@@ -226,9 +228,9 @@ function isUserAbleToUpload($userid, $post_size){
 	$stmt->execute(array($userid));
 	$res = $stmt->fetchAll(PDO::FETCH_ASSOC);
 	if(sizeof($res) == 0){
-		$stmt2 = $dbh->prepare("INSERT INTO `$user_upload_table_name` (`userid`,`bytesUploaded`,`lastUploadTime`)"
-			. " VALUES(:userid, :postSize, NOW())");
-		$stmt2->execute(array(":userid"=>$userid, ":postSize" => $post_size));
+		$stmt2 = $dbh->prepare("INSERT INTO `$user_upload_table_name` (`userid`,`bytesUploaded`,`lastUploadTime`, `ipAddr`, `userAgent`)"
+			. " VALUES(:userid, :postSize, NOW(), :ip, :ua)");
+		$stmt2->execute(array(":userid"=>$userid, ":postSize" => $post_size, ":ip" => $_SERVER['REMOTE_ADDR'], ":ua" => $_SERVER['HTTP_USER_AGENT']));
 		return TRUE;
 	} else {
 		$lastDate = $res[0]['lastUploadTime'];
@@ -244,8 +246,8 @@ function isUserAbleToUpload($userid, $post_size){
 		$val1 = time() - $lastDate;
 		$val2 = $uploadSize / $bytes_per_sec;
 		if($val1 > $val2){
-			$stmt3 = $dbh->prepare("UPDATE `$user_upload_table_name` SET `lastUploadTime`=NOW(), `bytesUploaded`=:bytes WHERE `userid`=:userid");
-			$stmt3->execute(array(":bytes" => $post_size, ":userid" => $userid));
+			$stmt3 = $dbh->prepare("UPDATE `$user_upload_table_name` SET `lastUploadTime`=NOW(), `bytesUploaded`=:bytes, `ipAddr`=:ip, `userAgent`=:ua WHERE `userid`=:userid");
+			$stmt3->execute(array(":bytes" => $post_size, ":userid" => $userid, ":ip" => $_SERVER['REMOTE_ADDR'], ":ua" => $_SERVER['HTTP_USER_AGENT']));
 			return TRUE;
 		} else {
 			return $val2 - $val1; // no spam pls
