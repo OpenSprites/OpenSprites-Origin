@@ -20,19 +20,20 @@
         
         <?php if($logged_in_user == 'not logged in') { ?>
         <!-- Info for new visistors. -->
-            <div class="welcome">
-                <table>
-                 <tr>
-                 <td width="260">
-                  <img src="/assets/images/sharingcats.png" width="200" height="100" id="cats">
-                 </td>
-                 <td valign="top">
-                  <h2 class="welcome-title">Share your Scratch resources with the world!</h2>
-                  <p class="welcome-text">OpenSprites allows users to share their sprites, scripts, costumes and other Scratch-related resources for others to easily download and use.</p>
-                  <a href="register" class="btn">Create a free account</a>
-                 </td>
-                 </tr>
-                </table>
+		<div class="welcome">
+			<table>
+				<tr>
+					<td width="260">
+						<img src="/assets/images/sharingcats.png" width="200" height="100" id="cats">
+					</td>
+					<td valign="top">
+						<h2 class="welcome-title">Share your Scratch resources with the world!</h2>
+						<p class="welcome-text">OpenSprites allows users to share their sprites, scripts, costumes and other Scratch-related resources for others to easily download and use.</p>
+						<a href="/register" class="btn">Create a free account</a>
+						<a href="javascript:void(0)" class="btn" onclick="$('.welcome').slideUp()">Dismiss</a>
+					</td>
+				</tr>
+			</table>
         </div>
         <?php } ?>
 
