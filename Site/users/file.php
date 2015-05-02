@@ -152,6 +152,8 @@
 				<h2>Direct link</h2>
 				<p>Use this link to embed this image in forums or on websites.</p>
 				<input type="text" value="http://dev.opensprites.gwiddle.co.uk/uploads/uploaded/<?php echo urlencode($obj['filename']); ?>" class="image-url" />
+				<p>Copy and paste this BBCode to embed the image on forums such as the Scratch forums.</p>
+				<input type="text" value="[img]http://dev.opensprites.gwiddle.co.uk/uploads/uploaded/<?php echo urlencode($obj['filename']); ?>[/img]" class="image-url" />
 			<?php } ?>
         </div>
     </div>
