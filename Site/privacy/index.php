@@ -36,11 +36,11 @@
         <div class="main-inner">
 			<p>Loading document...</p>
 		</div>
-		<script src="/assets/lib/markdown-js/markdown.min.js"></script>
+		<script src="/assets/lib/marked/marked.js"></script>
 		<script>
 			var privacy = <?php echo json_encode(file_get_contents("https://raw.githubusercontent.com/OpenSprites/OpenSprites/master/PRIVACY.md?_" . time())); ?>;
 			var content = $(".main-inner");
-			content.html(markdown.toHTML(privacy));
+			content.html(marked(privacy));
 		</script>
     </div>
     
