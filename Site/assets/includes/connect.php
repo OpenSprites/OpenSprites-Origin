@@ -32,6 +32,9 @@
     session_name("OpenSprites_Forum_session");
     session_set_cookie_params(0, '/', '.opensprites.gwiddle.co.uk');
     session_start();
+	
+	connectForumDatabase();
+	connectDatabase();
     
     $is_admin = false;
     if(isset($_SESSION["userId"])) {
@@ -51,7 +54,6 @@
             header( 'Location: http://dev.opensprites.gwiddle.co.uk/suspended.php' ) ;
         }*/
 		
-		connectForumDatabase();
 		$userInfo = getUserInfo(intval($_SESSION["userId"]));
 		$logged_in_userid = $userInfo['userid'];
 		$logged_in_user = $userInfo['username'];
