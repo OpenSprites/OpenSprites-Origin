@@ -9,7 +9,7 @@
     @import url(http://fonts.googleapis.com/css?family=Open+Sans:300);
   
     span {
-	margin:0px;
+    margin:0px;
     display:inline-block;
     width:130px;
     white-space: nowrap;
