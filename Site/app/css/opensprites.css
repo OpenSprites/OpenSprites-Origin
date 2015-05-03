@@ -1,1 +1,75 @@
-/* Exists */
+/* TODO: Host fonts locally */
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300);
+
+* {
+	padding: 0px;
+	margin: 0px;
+}
+
+body {
+	font-family: 'Open Sans', sans-serif; 
+	font-weight: 400;
+	width: 100%;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-weight: 300;
+	border-bottom: 1px solid darkgray;
+}
+
+p {
+	color: #2D2D2D;
+	font-size: 15px;
+}
+
+.bar {
+	width: 100%;
+	padding: 4px 0px;
+	font-weight: 300;
+	background-color: #659593;
+	color: white;
+	text-align: center;
+	height: 30px;
+	line-height: 30px;
+	margin-bottom: 10px;
+}
+
+.box {
+	border-radius: 8px;
+	-webkit-border-radius: 8px;
+	-moz-border-radius: 8px;
+	border: 1px solid lightgray;
+	margin: 0px 10%;
+	padding: 10px;
+}
+
+input[type=text], input[type=password] {
+	-webkit-border-radius: 8px;
+	-moz-border-radius: 8px;
+	-webkit-border-radius: 8px;
+}
+
+
+
+#frameWrap {
+    position:relative;
+    border: none;
+		height: 100%;
+}
+
+#iframe1 {
+    margin:0;
+    padding:0;
+    border:0;
+}
+
+#loader1 {
+    position:absolute;
+    left:40%;
+    top:35%;
+    border-radius:20px;
+    padding:25px;
+    border:1px solid #777777;
+    background:#ffffff;
+    box-shadow:0px 0px 10px #777777;
+}
