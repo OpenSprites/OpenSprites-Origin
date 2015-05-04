@@ -40,7 +40,7 @@
 
             <div id="about">
                 <h2>Welcome!</h2>
-                <p>Welcome to OpenSprites, the free, open-source site that allows <a href='//scratch.mit.edu'>Scratch</a> users to share their own scripts, sprites and project media!</p>
+                <p>Welcome to OpenSprites, the free, open-source site that allows <a href='//scratch.mit.edu'>Scratch</a> users to share their own scripts, sprites and project media! Please note that the site is still in alpha stages, and may be buggy, incomplete or otherwise unworthy for intended use. Come back soon!</p>
             </div>
             <div id="top-assets">
                 <div class="box">
