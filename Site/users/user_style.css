@@ -28,6 +28,7 @@
 #description {
     font-size: 24px;
     margin-top: 10px;
+    border-radius: 3px;
 }
 
 #location {
@@ -76,6 +77,7 @@
     padding: 20px !important;
     margin-bottom: 80px;
     transition: height 500ms;
+    border-radius: 3px;
 }
 
 .container.main {
