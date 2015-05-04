@@ -102,6 +102,7 @@
 .main-inner {
     padding: 10px;
     transition: height 500ms;
+    border-radius: 4px;
 }
 
 .img-preview {
