@@ -84,6 +84,7 @@
     padding: 20px !important;
     margin-bottom: 80px;
     transition: height 500ms;
+    border-radius: 4px;
 }
 
 #user-pane-left {
@@ -155,5 +156,4 @@
 .content {
     white-space: nowrap;
     overflow-x: scroll;
-    border-radius: 4px;
 }
