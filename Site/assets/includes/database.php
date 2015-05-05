@@ -5,6 +5,8 @@ $db_name  = "OpenSprites_assets";
 $assets_table_name = "os_assets";
 $user_upload_table_name = "os_user_upload";
 $report_table_name = "os_reports";
+$collections_table_name = "os_collections";\
+$collection_asset_table_name = "os_collection_asset";
 
 $forum_username = "OpenSprites_os";
 $forum_password = "ZfgKxh24PP";
@@ -105,6 +107,8 @@ function connectDatabase(){
 	global $user_upload_table_name;
 	global $report_table_name;
 	global $database_connected;
+	global $collections_table_name;
+	global $collection_asset_table_name;
 	if($database_connected){
 		return;
 	}
@@ -115,6 +119,8 @@ function connectDatabase(){
 	if(!tableExists($assets_table_name)) createImagesTable();
 	if(!tableExists($user_upload_table_name)) createUserUploadTable();
 	if(!tableExists($report_table_name)) createReportTable();
+	if(!tableExists($collections_table_name)) createCollectionsTable();
+	if(!tableExists($collection_asset_table_name)) createCollectionAssetTable();
 	$database_connected = TRUE;
 }
 
@@ -212,6 +218,47 @@ function createReportTable(){
 			`reportTime` DATETIME NOT NULL,
 			PRIMARY KEY `report_ix` (`id`, `reporter`)
 		) ENGINE=InnoDB AUTO_INCREMENT=0 DEFAULT CHARSET=utf8;");
+}
+
+function createCollectionsTable(){
+	global $dbh;
+	global $collections_table_name;
+	$dbh->exec(
+		"CREATE TABLE `$collections_table_name` (
+			`id` VARCHAR(32) NOT NULL,
+			`user` VARCHAR(32) NOT NULL,
+			`userid` INT(11) NOT NULL,
+			`customName` VARCHAR(32) NOT NULL,
+			`description` VARCHAR(500) NOT NULL DEFAULT 'No description provided',
+			`date` DATETIME NOT NULL,
+			`downloadCount` INT(11) NOT NULL DEFAULT 0,
+			`downloadsThisWeek` INT(11) NOT NULL DEFAULT 0,
+			`isFeatured` INT(11) NOT NULL DEFAULT 0,
+			PRIMARY KEY `collections_ix` (`id`, `customName`, `userid`)
+		) ENGINE=InnoDB AUTO_INCREMENT=0 DEFAULT CHARSET=utf8;");
+}
+
+function createCollectionAssetTable(){
+	global $dbh;
+	global $collection_asset_table_name;
+	$dbh->exec(
+		"CREATE TABLE `$collection_asset_table_name` (
+			`userid` INT(11) NOT NULL,
+			`collectionid` VARCHAR(32) NOT NULL,
+			`assetuserid` INT(11) NOT NULL,
+			`assetid` VARCHAR(32) NOT NULL,
+			PRIMARY KEY `collection_asset_ix` (`userid`, `collectionid`)
+		) ENGINE=InnoDB AUTO_INCREMENT=0 DEFAULT CHARSET=utf8;");
+}
+
+function getCollectionTableName(){
+	global $collections_table_name;
+	return $collections_table_name;
+}
+
+function getCollectionAssetTableName(){
+	global $collection_asset_table_name;
+	return $collection_asset_table_name;
 }
 
 function addReport($type, $id, $reporter, $reason){

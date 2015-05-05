@@ -12,4 +12,6 @@ include "../assets/includes/database.php";
 
 connectDatabase();
 imagesQuery0("UPDATE `" . getAssetsTableName() . "` SET `downloadsThisWeek`=?", array(0));
+
+imagesQuery0("UPDATE `" . getCollectionTableName() . "` SET `downloadsThisWeek`=?", array(0));
 ?>
