@@ -832,7 +832,6 @@ a:visited {
 }
 
 .modal-overlay {
-	border-radius: 1em;
 	position: absolute;
 	top: 0px;
 	left: 0px;
@@ -840,8 +839,10 @@ a:visited {
 	height: 100%;
 	display: none;
 	text-align: center;
-	background: rgba(255, 255, 255, 0.7);
+	background: rgba(0, 0, 0, 0.7);
 	font-size: 2em;
+	cursor: default;
+	z-index: 999;
 }
 
 .rename-status {
