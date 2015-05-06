@@ -5,7 +5,7 @@
     $forum = forumQuery('SELECT * FROM ' . $forum_member_table, []);
     $assets = imagesQuery('SELECT * FROM ' . getAssetsTableName(), []);
     
-    $stat_users = count($raw);
+    $stat_users = count($forum);
 ?>
 <!DOCTYPE html>
 <html>
