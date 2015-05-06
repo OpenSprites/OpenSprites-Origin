@@ -20,18 +20,17 @@
         border: 0;
         margin: 0;
         padding: 0;
+        margin-top: -10px;
     }
     
     .stats li {
         list-style-type: none;
         font-size: 1.4923em;
         line-height: 1.1818em;
-        font-weight: 600;
         color: #1aa0d8;
     }
     
     .stats .value {
-        font-weight: 700;
         color: #F9A739;
     }
     </style>
@@ -43,9 +42,9 @@
         include $_SERVER['DOCUMENT_ROOT']."/navbar.php";
     ?>
     
-    <div class="container main" style="height:700px;">
+    <div class="container main" style="height:400px;">
         <div class="main-inner">
-            <h2>Statisics</h1>
+            <h1>Statistics</h1>
             <ul class="stats">
                 <li class="data"><span class="value"><?php echo 'todo'; ?></span> assets uploaded,</li>
                 <li class="data"><span class="value"><?php echo $stat_users; ?></span> users registered,</li>
