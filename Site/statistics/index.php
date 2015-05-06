@@ -6,6 +6,7 @@
     $assets = imagesQuery('SELECT * FROM ' . getAssetsTableName(), []);
     
     $stat_users = count($forum);
+    $stat_assets = count($assets);
 ?>
 <!DOCTYPE html>
 <html>
@@ -15,12 +16,16 @@
     ?>
     
     <style>
+    h2 {
+        width: 210px;
+        font-size: 24px;
+    }
+    
     .stats {
         margin: 0 0 1em 2em;
         border: 0;
         margin: 0;
         padding: 0;
-        margin-top: -10px;
     }
     
     .stats li {
@@ -44,9 +49,9 @@
     
     <div class="container main" style="height:400px;">
         <div class="main-inner">
-            <h1>Statistics</h1>
+            <h2>Statistics</h2>
             <ul class="stats">
-                <li class="data"><span class="value"><?php echo 'todo'; ?></span> assets uploaded,</li>
+                <li class="data"><span class="value"><?php echo $stat_assets; ?></span> assets uploaded,</li>
                 <li class="data"><span class="value"><?php echo $stat_users; ?></span> users registered,</li>
                 <li>…and growing!</li>
             </ul>
