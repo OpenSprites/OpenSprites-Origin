@@ -230,11 +230,11 @@
 		<div class="modal-content">
 			<h1>Edit title or description</h1>
 			<p class='input-error' style='display:none;'>Sample Text</p>
-			<input type="text" id="file-name" value="<?php echo htmlspecialchars($obj['name']); ?>"/><br/><br/>
-			<textarea id="file-desc" value="<?php echo htmlspecialchars($obj['description']); ?>"></textarea><br/>
+			<input type="text" id="file-name" maxlength='32' value="<?php echo htmlspecialchars($obj['name']); ?>"/><br/><br/>
+			<textarea id="file-desc" maxlength='500' value="<?php echo htmlspecialchars($obj['description']); ?>"></textarea><br/>
 			<div class="buttons-container">
-				<button class='dialog-button cancel'>Cancel</button>
-				<button class='dialog-button primary-button ok'>OK</button>
+				<button class='btn red'>Cancel</button>
+				<button class='btn blue'>OK</button>
 			</div>
 		</div>
 	</div>
