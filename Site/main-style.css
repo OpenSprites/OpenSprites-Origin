@@ -4,7 +4,7 @@
 
 * {
     font-weight: normal !important;
-    font: 13px 'Open Sans', 'Helvetica Neue', Helvetica, sans-serif;
+    font-family: 'Open Sans', 'Helvetica Neue', Helvetica, sans-serif;
 }
 
 #opensprites-heading {
@@ -858,4 +858,5 @@ a:visited {
 
 .btn {
 	border: none !important;
+	cursor: pointer;
 }
