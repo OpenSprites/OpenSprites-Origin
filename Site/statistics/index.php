@@ -3,7 +3,7 @@
     
     connectDatabase();
     $forum = forumQuery('SELECT * FROM ' . $forum_member_table, []);
-    $assets = imageQuery('SELECT * FROM ' . getAssetsTableName(), []);
+    $assets = imagesQuery('SELECT * FROM ' . getAssetsTableName(), []);
     
     $stat_users = count($raw);
 ?>
