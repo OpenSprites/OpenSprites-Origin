@@ -67,7 +67,11 @@
     </script>
     
     <!-- Main wrapper -->
+    <?php if($obj['type'] == 'sound') { ?>
+    <div id='background-img'></div>
+    <?php } else { ?>
 	<canvas id='background-img'></canvas>
+	<?php } ?>
     <div id='dark-overlay'><div id='overlay-inner'>
 		    <div id='username' class='asset-name'>
                 <?php
@@ -82,7 +86,7 @@
 				$month = date('F', mktime(0, 0, 0, $month, 10));
 				echo $day.' '.$month.' '.$year;
 				?><br/>
-				<strong>Downloads:</strong> <?php echo $obj['downloads']['this_week']; ?> this week; <?php echo $obj['downloads']['total']; ?> total<hr/>
+				<strong>Downloads:</strong> <?php echo $obj['downloads']['total']; ?><hr/>
             </div>
             <div id='follow'>
                 <a href="/uploads/download.php?id=<?php echo $obj['uploaded_by']['id']; ?>&file=<?php echo $obj['md5']; ?>" target="_blank"><?php echo 'Download this ' . $obj['type']; ?></a>
@@ -218,8 +222,10 @@
 			}
 		}
 		
+		<?php if($obj['type'] != 'sound') { ?>
 		drawBg();
 		$(window).resize(drawBg);
+		<?php } ?>
 	</script>
     
 	<?php if($logged_in_userid == $obj['uploaded_by']['id'] || $is_admin) { ?>
