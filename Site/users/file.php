@@ -100,23 +100,7 @@
             }?>
 			
 			<?php if($logged_in_userid == $obj['uploaded_by']['id'] || $is_admin) { ?>
-				<div id="rename"><a class="file_rename" href="javascript:void(0)">Edit title or description<?php if($is_admin){ echo " (Admin)"; } ?></a></div>
-				<div class="modal-bg"></div>
-				<div id="file-rename-dialog">
-					<div class="dialog-content">
-						<h1>Change name or description</h1>
-						<p class='input-error'>Sample Text</p>
-						<input type="text" id="file-name" placeholder="Enter a descriptive name here" /><br/><br/>
-						<textarea id="file-desc" placeholder="Describe your media or script here"></textarea><br/>
-						<div class="buttons-container">
-							<button class='dialog-button cancel'>Cancel</button>
-							<button class='dialog-button primary-button ok'>OK</button>
-						</div>
-					</div>
-					<div class="dialog-overlay">
-						<p class="rename-status"></p>
-					</div>
-				</div>
+				<div id="rename"><a class="file_rename" href="javascript:void(0)">Edit title or description<?php if($is_admin && $logged_in_userid !== $obj['uploaded_by']['id']){ echo " (Admin)"; } ?></a></div>
 			<?php } ?>
         </div>
         <div id="user-pane-left">
@@ -149,8 +133,8 @@
 			<h1>Description</h1>
 			<p class='desc'><?php echo nl2br(htmlspecialchars($obj['description'])); ?></p>
 			<?php if($obj['type'] == 'image'){ ?>
-				<h2>Direct link</h2>
-				<p>Use this link to embed this image in forums or on websites.</p>
+				<h2>Direct links</h2>
+				<p>Use this link to embed this image on websites.</p>
 				<input type="text" value="http://dev.opensprites.gwiddle.co.uk/uploads/uploaded/<?php echo urlencode($obj['filename']); ?>" class="image-url" />
 				<p>Copy and paste this BBCode to embed the image on forums such as the Scratch forums.</p>
 				<input type="text" value="[img]http://dev.opensprites.gwiddle.co.uk/uploads/uploaded/<?php echo urlencode($obj['filename']); ?>[/img]" class="image-url" />
@@ -237,6 +221,25 @@
 		drawBg();
 		$(window).resize(drawBg);
 	</script>
+    
+	<?php if($logged_in_userid == $obj['uploaded_by']['id'] || $is_admin) { ?>
+	
+	<!-- modal -->
+    <div class="modal-overlay"></div>
+    <div class="modal">
+		<div class="modal-content">
+			<h1>Edit title or description</h1>
+			<p class='input-error' style='display:none;'>Sample Text</p>
+			<input type="text" id="file-name" value="<?php echo htmlspecialchars($obj['name']); ?>"/><br/><br/>
+			<textarea id="file-desc" value="<?php echo htmlspecialchars($obj['description']); ?>"></textarea><br/>
+			<div class="buttons-container">
+				<button class='dialog-button cancel'>Cancel</button>
+				<button class='dialog-button primary-button ok'>OK</button>
+			</div>
+		</div>
+	</div>
+	
+	<?php } ?>
     
     <!-- footer -->
     <?php echo file_get_contents('../footer.html'); ?>
