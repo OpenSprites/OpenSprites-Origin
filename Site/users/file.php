@@ -141,7 +141,7 @@
 			<?php } ?>
         </div>
     </div>
-	<script src="/uploads/edit.js"></script>
+	
 	<script src='/assets/lib/stackblur/stackblur.js'></script>
 	<script>
 		$(".file_delete").click(function(e){
@@ -238,6 +238,8 @@
 			</div>
 		</div>
 	</div>
+	
+	<script src="/uploads/edit.js"></script>
 	
 	<?php } ?>
     
