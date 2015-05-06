@@ -647,7 +647,8 @@ a:visited {
     padding: 5px;
     text-decoration: none;
     transition: all 0.2s;
-    border: 1px inset #659593;
+    border: none;
+    cursor: pointer;
 }
 
 .toggleset button:first-child {
@@ -664,7 +665,6 @@ a:visited {
 
 .toggleset button.selected {
     background-color: #fc9c35;
-    border: 1px outset #659593;
 }
 
 .toggleset button:hover {
