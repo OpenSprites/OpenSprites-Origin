@@ -22,11 +22,11 @@ $("#file-desc").keyup(function(){
 });
 
 
-$(".modal .cancel").click(function(){
+$(".modal .btn.red").click(function(){
 	$(".modal-overlay, .modal").fadeOut();
 });
 
-$(".modal .ok").click(function(){
+$(".modal .btn.blue").click(function(){
 	$(".modal .input-error").text("Sample Text").css("opacity", "0");
 	var name = $("#file-name").val();
 	var desc = $("#file-desc").val();
