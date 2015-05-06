@@ -5,7 +5,7 @@ $db_name  = "OpenSprites_assets";
 $assets_table_name = "os_assets";
 $user_upload_table_name = "os_user_upload";
 $report_table_name = "os_reports";
-$collections_table_name = "os_collections";\
+$collections_table_name = "os_collections";
 $collection_asset_table_name = "os_collection_asset";
 
 $forum_username = "OpenSprites_os";
