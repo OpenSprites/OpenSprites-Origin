@@ -1,6 +1,6 @@
 <?php
     require "../assets/includes/connect.php";
-    
+        
     if(!$is_admin) {
         // user is not admin, display 404
         include '../404.php';
@@ -13,7 +13,7 @@
     header("Content-Type: application/json");
     
     connectDatabase();
-    forumQuery('SELECT * FROM ' . $forum_member_table);
+    $raw = forumQuery('SELECT * FROM ' . $forum_member_table, []);
     
-    echo json_encode($raw, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES);
+    var_dump($raw);
 ?>
