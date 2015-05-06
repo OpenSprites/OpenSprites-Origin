@@ -4,6 +4,7 @@
 
 * {
     font-weight: normal !important;
+    font: 13px 'Open Sans', 'Helvetica Neue', Helvetica, sans-serif;
 }
 
 #opensprites-heading {
@@ -851,39 +852,10 @@ a:visited {
 
 .buttons-container {
 	text-align: center;
+	position: absolute;
+	width: 100%;
 }
 
-.buttons-container button {
-	color: #fff;
-    background-color: #659593;
-    padding: 5px;
-    text-decoration: none;
-    transition: all 0.2s;
-	border: 1px inset #659593;
-}
-
-.buttons-container button:first-child {
-	border-top-left-radius: 1em;
-	border-bottom-left-radius: 1em;
-	margin-left: 1em;
-}
-
-.buttons-container button:last-child {
-	border-top-right-radius: 1em;
-	border-bottom-right-radius: 1em;
-	margin-right: 1em;
-}
-
-.buttons-container button.primary-button {
-	background-color: #1177EC;
-}
-
-.buttons-container button:hover {
-    background-color: #fc9c35;
-    text-decoration: none;
-}
-
-.buttons-container button:active {
-	border: 1px outset #659593;
-	box-shadow: inset 2px 2px 5px gray;
+.btn {
+	border: none !important;
 }
