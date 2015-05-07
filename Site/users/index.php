@@ -157,7 +157,6 @@
         });*/
     </script>
 	<script src='/assets/lib/stackblur/stackblur.js'></script>
-	<script src='../user.js'></script>
 	
 	<?php if($username==$logged_in_user) { ?>
 	<!-- modal -->
@@ -190,6 +189,8 @@
         });
     </script>
 	<?php } ?>
+	
+	<script src='../user.js'></script>
     
     <!-- footer -->
     <?php echo file_get_contents('../footer.html'); ?>
