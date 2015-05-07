@@ -56,22 +56,26 @@ function setAccountType($username, $type){
 	$stmt->execute(array($type, $username));
 }
 
-function setProfileSettings($userid, $json){
+function setProfileSettings($userid, $settings){
 	global $forum_dbh;
-	global $forum_member_table;
 	
-	$stmt = $forum_dbh->prepare("UPDATE `os_profile_settings` SET `json`=? WHERE `userid`=?");
-	$stmt->execute(array($json, $userid));
+	$res = forumQuery("SELECT * FROM `os_profile_settings` WHERE `userid`=?", array($userid));
+	if(sizeof($res) == 0){
+		$stmt = $forum_dbh->prepare("INSERT INTO `os_profile_settings` (`userid`, `bgcolor`) VALUES (:userid, :bgcolor)");
+		$stmt->execute(array(":userid" => $userid, ":bgcolor" => $settings['bgcolor']));
+	} else {
+		$stmt = $forum_dbh->prepare("UPDATE `os_profile_settings` SET `bgcolor`=:bgcolor WHERE `userid`=:userid");
+		$stmt->execute(array(":userid" => $userid, ":bgcolor" => $settings['bgcolor']));
+	}
 }
 
 function getProfileSettings($userid){
 	global $forum_dbh;
-	global $forum_member_table;
 	
-	$bgcolor = forumQuery("SELECT `bgcolor` FROM `os_profile_settings` WHERE `userid`=?", array($userid));
-	if(sizeof($bgcolor) == 0) return false;
+	$res = forumQuery("SELECT * FROM `os_profile_settings` WHERE `userid`=?", array($userid));
+	if(sizeof($res) == 0) return array("bgcolor" => "avatar");
 	
-	return array('bgcolor'=>$bgcolor);
+	return array('bgcolor' => $res['bgcolor']);
 }
 
 function getUserInfo($userid){
