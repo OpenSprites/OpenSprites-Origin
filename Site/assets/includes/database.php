@@ -75,7 +75,7 @@ function getProfileSettings($userid){
 	$res = forumQuery("SELECT * FROM `os_profile_settings` WHERE `userid`=?", array($userid));
 	if(sizeof($res) == 0) return array("bgcolor" => "avatar");
 	
-	return array('bgcolor' => $res['bgcolor']);
+	return array('bgcolor' => $res[0]['bgcolor']);
 }
 
 function getUserInfo($userid){
