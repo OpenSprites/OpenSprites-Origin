@@ -13,7 +13,8 @@
     header("Content-Type: application/json");
     
     connectDatabase();
-    $raw = imagesQuery('SELECT * FROM ' . getAssetsTableName(), []);
+    $raw = forumQuery('SELECT * FROM ' . $forum_member_table, []);
+    //$raw = imagesQuery('SELECT * FROM ' . getAssetsTableName(), []);
     
     var_dump($raw);
 ?>
