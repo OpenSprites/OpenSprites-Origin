@@ -143,6 +143,17 @@
 				<p>Copy and paste this BBCode to embed the image on forums such as the Scratch forums.</p>
 				<input type="text" value="[img]http://dev.opensprites.gwiddle.co.uk/uploads/uploaded/<?php echo urlencode($obj['filename']); ?>[/img]" class="image-url" />
 			<?php } ?>
+			<?php if($obj['type'] == 'script') { ?>
+        	    <h2>Script</h2>
+        	    <div id='script_preview'></div>
+        	    <script>
+        	        var model = OpenSprites.models.ScriptPreview($("#script_preview"));
+					$.get(OpenSprites.view.file.url, function(data) {
+					    console.log(model);
+						model.loadJson(data);
+					});
+        	    </script>
+        	<?php } ?>
         </div>
     </div>
 	
