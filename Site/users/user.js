@@ -110,9 +110,25 @@ $(window).resize(drawBg);
 
 /* fancy modal */
 $("#settings").click(function() {
+    $.get()
+    
 	$(".modal-overlay, .modal").fadeIn();
 });
 
 $('.modal .btn.red').click(function() {
 	$(".modal-overlay, .modal").fadeOut();
+});
+
+$('.modal input[name=bgcolor]').spectrum({
+    showButtons: false    
+});
+
+$('.modal input#bg').change(function() {
+    var val = $(".modal input#bg:checked").map(function() {return this.value;}).get().join(",");
+    console.log(val);
+    if(val) {
+        $('.modal #bg_true').hide();
+    } else {
+        $('.modal #bg_true').show();
+    }
 });
