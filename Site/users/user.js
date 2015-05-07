@@ -105,3 +105,12 @@ function drawBg(){
 
 drawBg();
 $(window).resize(drawBg);
+
+/* fancy modal */
+$("#settings").click(function() {
+	$(".modal-overlay, .modal").fadeIn();
+});
+
+$('.modal .btn.red').click(function() {
+	$(".modal-overlay, .modal").fadeOut();
+});
