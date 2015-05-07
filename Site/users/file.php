@@ -147,10 +147,11 @@
         	    <h2>Script</h2>
         	    <div id='script_preview'></div>
         	    <script>
-        	        var model = OpenSprites.models.ScriptPreview($("#script_preview"));
+        	        var scriptPrv = OpenSprites.models.ScriptPreview($("#script_preview"));
 					$.get(OpenSprites.view.file.url, function(data) {
-					    console.log(model);
-						model.loadJson(data);
+						scriptPrv.loadJson(data);
+						$("#script_preview").attr('style', 'background: white; padding: 10px; border-radius: 20px;');
+						$("#script_preview pre:first-child").css('display', 'block');
 					});
         	    </script>
         	<?php } ?>
