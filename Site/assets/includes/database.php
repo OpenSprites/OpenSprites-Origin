@@ -56,6 +56,24 @@ function setAccountType($username, $type){
 	$stmt->execute(array($type, $username));
 }
 
+function setProfileSettings($userid, $json){
+	global $forum_dbh;
+	global $forum_member_table;
+	
+	$stmt = $forum_dbh->prepare("UPDATE `os_profile_settings` SET `json`=? WHERE `userid`=?");
+	$stmt->execute(array($json, $userid));
+}
+
+function getProfileSettings($userid){
+	global $forum_dbh;
+	global $forum_member_table;
+	
+	$bgcolor = forumQuery("SELECT `bgcolor` FROM `os_profile_settings` WHERE `userid`=?", array($userid));
+	if(sizeof($bgcolor) == 0) return false;
+	
+	return array('bgcolor'=>$bgcolor);
+}
+
 function getUserInfo($userid){
 	global $forum_member_table;
 	global $forum_group_table;
