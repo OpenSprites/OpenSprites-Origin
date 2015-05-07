@@ -93,14 +93,16 @@ function drawImageProp(ctx, img, x, y, w, h, offsetX, offsetY) {
 function drawBg(){
 	var canvasId = "background-img";
 	var canvas = document.getElementById(canvasId);
-	var context = canvas.getContext("2d");
-
-	var img = new Image();
-	img.onload = function() {
-		drawImageProp(context, img);
-		stackBlurCanvasRGB(canvas, 0, 0, canvas.width, canvas.height, 10);
+	if(canvas !== null) {
+		var context = canvas.getContext("2d");
+	
+		var img = new Image();
+		img.onload = function() {
+			drawImageProp(context, img);
+			stackBlurCanvasRGB(canvas, 0, 0, canvas.width, canvas.height, 10);
+		}
+		img.src = "/uploads/avatar_blur.php?userid=" + OpenSprites.view.user.id;
 	}
-	img.src = "/uploads/avatar_blur.php?userid=" + OpenSprites.view.user.id;
 }
 
 drawBg();
