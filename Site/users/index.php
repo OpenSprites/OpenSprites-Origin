@@ -77,7 +77,7 @@
 						} ?>
 					
 					<?php if($username == $logged_in_user){ ?>
-						<div id='settings'><a href="http://opensprites.gwiddle.co.uk/forums/?p=settings/general">Profile Settings</a></div>
+						<div id='settings'><a>Profile Settings</a></div>
 					<?php } ?>
 				</div>
 			<?php } else { ?>
