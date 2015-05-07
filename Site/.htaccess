@@ -10,6 +10,9 @@ php_value error_reporting -1
 
 RewriteEngine On
 
+# shorthand for stuff
+Redirect /stats/ /statistics/
+
 # user pages
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
