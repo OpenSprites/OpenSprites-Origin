@@ -51,7 +51,7 @@
 					<div id="url-button">
 						From URL
 					</div>
-					<div id="upload-button">
+					<div id="upload-button" style="padding-right:2em">
 						Start upload
 					</div>
 					<input id='url-input' placeholder='Asset or Scratch URL here' />
