@@ -176,7 +176,7 @@
 	<!-- profile picture upload -->
 	<form id='avatar_upload' style="display:none;" enctype="multipart/form-data" action="http://opensprites.gwiddle.co.uk/user-avatar.php?id=<?php echo $logged_in_userid; ?>" method="POST">
         <input type="hidden" name="MAX_FILE_SIZE" value="8388608">
-        <input name="uploadedfile" type="file">
+        <input name="uploadedfile" type="file" accept="image/*">
         <input type="submit">
     </form>
     
