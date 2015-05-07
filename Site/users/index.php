@@ -21,6 +21,8 @@
     ?>
     
     <link href='/users/user_style.css' rel='stylesheet' type='text/css'>
+    <link href='/assets/js/spectrum/spectrum.css' rel='stylesheet' type='text/css'>
+    <script src='/assets/js/spectrum/spectrum.js'></script>
 </head>
 <body>
     <?php
@@ -159,11 +161,18 @@
 	<script src='/assets/lib/stackblur/stackblur.js'></script>
 	
 	<?php if($username==$logged_in_user) { ?>
+    
 	<!-- modal -->
     <div class="modal-overlay"></div>
     <div class="modal">
 		<div class="modal-content">
 			<h1>Profile Settings</h1>
+            
+            <h4>Profile Background</h4>
+            <p>You can set a color for your background on this profile page, or simply just use your avatar image.</p>
+            <input type="checkbox" id='bg'>Use my avatar image
+            <span id='bg_true'><input type="text" name="bgcolor" id="bgcolor" value="rgb(101, 149, 147)"></span>
+            
 			
 			<div class="buttons-container">
 				<button class='btn red'>Cancel</button>
@@ -171,6 +180,12 @@
 			</div>
 		</div>
 	</div>
+    
+    <script>
+        $('.modal input[name=bgcolor]').spectrum({
+            showButtons: false    
+        });
+    </script>
 	
 	<!-- profile picture upload -->
 	<form id='avatar_upload' style="display:none;" enctype="multipart/form-data" action="http://opensprites.gwiddle.co.uk/user-avatar.php?id=<?php echo $logged_in_userid; ?>" method="POST">
