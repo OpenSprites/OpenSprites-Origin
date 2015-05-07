@@ -110,25 +110,36 @@ $(window).resize(drawBg);
 
 /* fancy modal */
 $("#settings").click(function() {
-    $.get()
-    
-	$(".modal-overlay, .modal").fadeIn();
+    $.get('/users/edit.php', function(data) {
+        if(data == 'false') {
+            json = {
+                bgcolor: 'avatar'
+            };
+        } else {
+            json = JSON.parse(data);
+        }
+        
+        $('.modal input[name=bgcolor]').val(json.bgcolor == 'avatar' ? 'rgb(101, 149, 147)' : json.bgcolor);
+        $('.modal input#bg').val(json.bgcolor == 'avatar');
+        
+        $('.modal input[name=bgcolor]').spectrum({
+            showButtons: false    
+        });
+
+        $('.modal input#bg').change(function() {
+            var val = $(".modal input#bg:checked").map(function() {return this.value;}).get().join(",");
+            console.log(val);
+            if(val) {
+                $('.modal #bg_true').hide();
+            } else {
+                $('.modal #bg_true').show();
+            }
+        });
+        
+        $(".modal-overlay, .modal").fadeIn();
+    });
 });
 
 $('.modal .btn.red').click(function() {
 	$(".modal-overlay, .modal").fadeOut();
-});
-
-$('.modal input[name=bgcolor]').spectrum({
-    showButtons: false    
-});
-
-$('.modal input#bg').change(function() {
-    var val = $(".modal input#bg:checked").map(function() {return this.value;}).get().join(",");
-    console.log(val);
-    if(val) {
-        $('.modal #bg_true').hide();
-    } else {
-        $('.modal #bg_true').show();
-    }
 });
