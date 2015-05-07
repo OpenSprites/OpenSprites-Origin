@@ -90,9 +90,9 @@
             <?php
                 if($user_exist) {
                     echo '<img id="source-avatar" class="user-avatar x100" src="' . $user['avatar'] . '">';
-                    /*if($username == $logged_in_user) {
+                    if($username == $logged_in_user) {
                         echo '<div id="change-image">Change...</div>';
-                    }*/
+                    }
                 }
             ?>
         </div>
@@ -159,6 +159,37 @@
 	<script src='/assets/lib/stackblur/stackblur.js'></script>
 	<script src='../user.js'></script>
 	
+	<?php if($username==$logged_in_user) { ?>
+	<!-- modal -->
+    <div class="modal-overlay"></div>
+    <div class="modal">
+		<div class="modal-content">
+			<h1>Profile Settings</h1>
+			
+			<div class="buttons-container">
+				<button class='btn red'>Cancel</button>
+				<button class='btn blue'>OK</button>
+			</div>
+		</div>
+	</div>
+	
+	<!-- profile picture upload -->
+	<form id='avatar_upload' style="display:none;" enctype="multipart/form-data" action="http://opensprites.gwiddle.co.uk/user-avatar.php?id=<?php echo $logged_in_userid; ?>" method="POST">
+        <input type="hidden" name="MAX_FILE_SIZE" value="8388608">
+        <input name="uploadedfile" type="file">
+        <input type="submit">
+    </form>
+    
+    <script>
+        $('#change-image').click(function() {
+            $('#avatar_upload input[name=uploadedfile]').click();
+        });
+        
+        $('input[name=uploadedfile]').change(function() {
+            $('#avatar_upload').submit();
+        });
+    </script>
+	<?php } ?>
     
     <!-- footer -->
     <?php echo file_get_contents('../footer.html'); ?>
