@@ -111,12 +111,13 @@ $(window).resize(drawBg);
 /* fancy modal */
 $("#settings").click(function() {
     $.get('/users/edit.php', function(data) {
+        console.log(data);
         if(data == 'false') {
             json = {
                 bgcolor: 'avatar'
             };
         } else {
-            json = JSON.parse(data);
+            json = data;
         }
         
         $('.modal input[name=bgcolor]').val(json.bgcolor == 'avatar' ? 'rgb(101, 149, 147)' : json.bgcolor);
