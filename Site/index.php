@@ -17,10 +17,27 @@
     <!-- Main wrapper -->
     <div class="container main">
         <div class="main-inner">
+		
+		<div class="welcome info">
+			<table>
+				<tr>
+					<td width="260">
+						<!-- replace this image pl0x -->
+						<img src="/assets/images/sharingcats.png" width="200" height="100" id="cats">
+					</td>
+					<td valign="top">
+						<h2 class="welcome-title">OpenSprites is in development!
+							<a href="javascript:void(0)" class="btn" style="float:right;font-size:0.5em;" onclick="$('.welcome.info').slideUp()">Dismiss</a>
+						</h2>
+						<p class="welcome-text">The OpenSprites Team is still in the process of creating this site. This means that OpenSprites may not yet have all the stuff you want, and it may also have bugs, so be careful! Stay tuned for more updates on our <a href="http://blog.opensprites.gwiddle.co.uk/">blog</a>!</p>
+					</td>
+				</tr>
+			</table>
+        </div>
         
         <?php if($logged_in_user == 'not logged in') { ?>
         <!-- Info for new visistors. -->
-		<div class="welcome">
+		<div class="welcome signup">
 			<table>
 				<tr>
 					<td width="260">
@@ -28,7 +45,7 @@
 					</td>
 					<td valign="top">
 						<h2 class="welcome-title">Share your Scratch resources with the world!
-							<a href="javascript:void(0)" class="btn" style="float:right;font-size:0.5em;" onclick="$('.welcome').slideUp()">Dismiss</a>
+							<a href="javascript:void(0)" class="btn" style="float:right;font-size:0.5em;" onclick="$('.welcome.signup').slideUp()">Dismiss</a>
 						</h2>
 						<p class="welcome-text">OpenSprites allows users to share their sprites, scripts, costumes and other Scratch-related resources for others to easily download and use.</p>
 						<a href="/register" class="btn">Create a free account</a>
