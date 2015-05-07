@@ -33,7 +33,7 @@
 					</td>
 				</tr>
 			</table>
-        </div>
+        </div><br/><br/>
         
         <?php if($logged_in_user == 'not logged in') { ?>
         <!-- Info for new visistors. -->
