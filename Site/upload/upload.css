@@ -1,13 +1,15 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:300,400);
+
 #upload-area {
 	min-height: 500px;
 	margin: 1em;
-	border: 5px dashed rgb(101, 149, 147);
-	border-radius: 5em;
+	border-radius: 3em;
 	position: relative;
 	padding: 5em;
 	overflow-y: auto;
 	overflow-x: hidden;
 	padding-top: 10em;
+	background-color: rgb(231, 255, 254);
 }
 
 #upload-area::after {
@@ -17,8 +19,9 @@
 .upload-message {
 	margin-top: 100px;
 	text-align: center;
-	font-style: italic;
 	font-size: 5em;
+	font-weight: 300 !important;
+	color: #4C7776;
 }
 
 .upload-message.error {
@@ -32,13 +35,14 @@
 	border-radius: 5em;
 	border-top-left-radius: 0;
 	overflow: hidden;
-	font-size: 2em;
-	border: 2px solid rgb(101, 149, 147);
+	border: 0px;
 	cursor: pointer;
+	color: white;
+	font-size: 20px;
 }
 
 #select-button, #url-button, #upload-button {
-	border-right: 2px solid rgb(101, 149, 147);
+	border-right: 0px;
 }
 
 #upload-button, #url-button {
