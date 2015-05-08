@@ -29,6 +29,6 @@ $upload_to = 'forums/uploads/avatars/'.$_GET['id'].'.'.$ext;
 move_uploaded_file($_FILES['uploadedfile']['tmp_name'], $upload_to);
 
 // redirect to the profile page of the user
-header('Location: http://dev.opensprites.gwiddle.co.uk/users/' . $_GET['id'] . '/');
+header('Location: http://opensprites.gwiddle.co.uk/users/' . $_GET['id'] . '/');
 
 ?>

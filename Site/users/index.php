@@ -3,7 +3,7 @@
     
     // get username
     error_reporting(0);
-    $raw_json = file_get_contents("http://dev.opensprites.gwiddle.co.uk/site-api/user.php?userid=" . $_GET['id']);
+    $raw_json = file_get_contents("http://opensprites.gwiddle.co.uk/site-api/user.php?userid=" . $_GET['id']);
     if(!isset(json_decode($raw_json, true)['userid'])) {
         include '../404.php';
         die();

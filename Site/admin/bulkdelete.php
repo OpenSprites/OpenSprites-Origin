@@ -8,7 +8,7 @@ if(!$is_admin) {
 }
 
 // bulk delete
-$json = json_decode(file_get_contents('http://dev.opensprites.gwiddle.co.uk/site-api/stuff.php?userid=' . $_GET['id']), true);
+$json = json_decode(file_get_contents('http://opensprites.gwiddle.co.uk/site-api/stuff.php?userid=' . $_GET['id']), true);
 ?>
 
 <head>

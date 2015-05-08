@@ -38,7 +38,7 @@
     
     $is_admin = false;
     if(isset($_SESSION["userId"])) {
-        /*$user = json_decode(file_get_contents('http://dev.opensprites.gwiddle.co.uk/site-api/user.php'));
+        /*$user = json_decode(file_get_contents('http://opensprites.gwiddle.co.uk/site-api/user.php'));
         
         $logged_in_userid = $_SESSION["userId"];
         $html = file_get_html('http://opensprites.gwiddle.co.uk/forums/?p=member/' . $logged_in_userid);
@@ -51,7 +51,7 @@
         }
 
         if($user_group == "Suspended"){
-            header( 'Location: http://dev.opensprites.gwiddle.co.uk/suspended.php' ) ;
+            header( 'Location: http://opensprites.gwiddle.co.uk/suspended.php' ) ;
         }*/
 		
 		$userInfo = getUserInfo(intval($_SESSION["userId"]));

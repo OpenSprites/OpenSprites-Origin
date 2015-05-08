@@ -18,16 +18,16 @@ window.onload = function() {
     var navbar = '';
     navbar += '<div class="header">';
     navbar += '    <div class="container">';
-    navbar += '        <a class="scratch" href="//dev.opensprites.gwiddle.co.uk"></a>';
+    navbar += '        <a class="scratch" href="//opensprites.gwiddle.co.uk"></a>';
     navbar += '        <ul class="left">';
     navbar += '            <li>';
-    navbar += '                <a href="//dev.opensprites.gwiddle.co.uk/media">Media</a>';
+    navbar += '                <a href="//opensprites.gwiddle.co.uk/media">Media</a>';
     navbar += '            </li>';
     navbar += '            <li>';
-    navbar += '                <a href="//dev.opensprites.gwiddle.co.uk/scripts">Scripts</a>';
+    navbar += '                <a href="//opensprites.gwiddle.co.uk/scripts">Scripts</a>';
     navbar += '            </li>';
     navbar += '            <li>';
-    navbar += '                <a href="//dev.opensprites.gwiddle.co.uk/collections">Collections</a>';
+    navbar += '                <a href="//opensprites.gwiddle.co.uk/collections">Collections</a>';
     navbar += '            </li>';
     navbar += '            <li>';
     navbar += '                <a href="//blog.opensprites.gwiddle.co.uk">Blog</a>';
@@ -39,17 +39,17 @@ window.onload = function() {
     navbar += '        <ul class="right">';
     if(SESSION.userId) {
     navbar += '            <li class=\'navbar-upload\'>';
-    navbar += '                <a href="//dev.opensprites.gwiddle.co.uk/upload/"><img class=\'upload-icon\' src=\'//dev.opensprites.gwiddle.co.uk/assets/images/upload.png\' /> Upload</a>';
+    navbar += '                <a href="//opensprites.gwiddle.co.uk/upload/"><img class=\'upload-icon\' src=\'//opensprites.gwiddle.co.uk/assets/images/upload.png\' /> Upload</a>';
     navbar += '            </li>';
     // display log info/username/etc
     navbar += '            <li>';
-    navbar += '                <a style="padding: 0; padding-left: 10px; padding-right: 10px;" href="//dev.opensprites.gwiddle.co.uk/users/'+SESSION.userId+'">';
+    navbar += '                <a style="padding: 0; padding-left: 10px; padding-right: 10px;" href="//opensprites.gwiddle.co.uk/users/'+SESSION.userId+'">';
     navbar += $('.item-user a').text();
     navbar += '                </a>';
     navbar += '            </li>';
-    navbar += '            <li class="last" onclick="window.location = \'//dev.opensprites.gwiddle.co.uk/logout.php?return=http://opensprites.gwiddle.co.uk/forums/\';"><span>Log Out</span></li>'
+    navbar += '            <li class="last" onclick="window.location = \'//opensprites.gwiddle.co.uk/logout.php?return=http://opensprites.gwiddle.co.uk/forums/\';"><span>Log Out</span></li>'
     } else {
-    navbar += '            <li><a href="//dev.opensprites.gwiddle.co.uk/register/">Sign Up</a></li>';
+    navbar += '            <li><a href="//opensprites.gwiddle.co.uk/register/">Sign Up</a></li>';
     navbar += '            <li class="last" id=\'login\' onclick="window.location = \'/forums/?p=user/login&amp;return=conversations\';"><span>Log In</span></li>';
     }
     navbar += '        </ul></div></div>';
@@ -57,11 +57,11 @@ window.onload = function() {
     $('body').append(navbar);
     
     // back to the main site link on navbar
-    $('#forumTitle').before('<a id="back-to-the-main-site" style="position:absolute;top:40px;color:white;" href="http://dev.opensprites.gwiddle.co.uk/">Back to the main site</a>');
+    $('#forumTitle').before('<a id="back-to-the-main-site" style="position:absolute;top:40px;color:white;" href="http://opensprites.gwiddle.co.uk/">Back to the main site</a>');
     $('#forumTitle').attr('style', 'padding-top:10px;padding-bottom:20px;');
 
     // logout fix
-    $('.item-logout a').attr('href', 'http://dev.opensprites.gwiddle.co.uk/logout.php?return=http://opensprites.gwiddle.co.uk/forums/?p=conversations');
+    $('.item-logout a').attr('href', 'http://opensprites.gwiddle.co.uk/logout.php?return=http://opensprites.gwiddle.co.uk/forums/?p=conversations');
 
     // themes
     $('#ftr-content .menu').append('<li id="theme"></li>');

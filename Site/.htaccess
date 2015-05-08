@@ -15,8 +15,8 @@ Redirect /stats /statistics/
 Redirect /stats/ /statistics/
 
 # remove www
-RewriteCond %{HTTP_HOST} ^www.dev.opensprites.gwiddle.co.uk$ [NC]
-RewriteRule ^(.*)$ http://dev.opensprites.gwiddle.co.uk/$1 [R=301,L]
+RewriteCond %{HTTP_HOST} ^www.opensprites.gwiddle.co.uk$ [NC]
+RewriteRule ^(.*)$ http://opensprites.gwiddle.co.uk/$1 [R=301,L]
 
 # user pages
 RewriteCond %{REQUEST_FILENAME} !-f

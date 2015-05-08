@@ -81,7 +81,7 @@ if($raw->find('img.avatar', 0) !== null) {
     $avatar = 'http://opensprites.gwiddle.co.uk/' . $raw->find('img.avatar', 0)->src;
 } else {
     // they have not uploaded an avatar image
-    $avatar = 'http://dev.opensprites.gwiddle.co.uk/assets/images/defaultfile.png';
+    $avatar = 'http://opensprites.gwiddle.co.uk/assets/images/defaultfile.png';
 }
 
 $json = array('userid' => $userid, 'username' => $raw->find('h1#memberName', 0)->innertext, 'usertype' => $r, 'avatar' => $avatar);*/
@@ -105,7 +105,7 @@ curl_setopt($handle,  CURLOPT_RETURNTRANSFER, TRUE);
 $response = curl_exec($handle);
 $httpCode = curl_getinfo($handle, CURLINFO_HTTP_CODE);
 if($httpCode == 404) {
-    $userInfo2['avatar'] = "//dev.opensprites.gwiddle.co.uk/assets/images/defaultfile.png";
+    $userInfo2['avatar'] = "//opensprites.gwiddle.co.uk/assets/images/defaultfile.png";
 }
 curl_close($handle);
 
