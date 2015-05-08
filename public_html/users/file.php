@@ -286,11 +286,11 @@
 		var desc = <?php echo json_encode($obj['description']); ?>;
 		
 		function warnGoingAway(where){
-			$(".modal.leaving .btn.blue").off();
+			$(".modal.leaving .btn.red").off();
 			$(".leaving-url").text(where);
 			$(".modal-overlay, .modal.leaving").fadeIn();
 			(function(where){
-				$(".modal.leaving .btn.blue").on("click", function(){
+				$(".modal.leaving .btn.red").on("click", function(){
 					window.open(where);
 					$(".modal-overlay, .modal.leaving").fadeOut();
 				});

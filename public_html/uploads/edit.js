@@ -75,6 +75,6 @@ $(".image-url").focus(function(){
 });
 
 
-$(".modal.leaving .btn.red").click(function(){
+$(".modal.leaving .btn.blue").click(function(){
 	$(".modal-overlay, .modal.leaving").fadeOut();
 });
