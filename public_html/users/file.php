@@ -120,7 +120,7 @@
 				<a href="#img1">
 					<img class="img-preview" src="/uploads/thumbnail.php?file=<?php echo $obj['filename']; ?>">
 					<script>
-						OpenSprites.etc = {};
+						OpenSprites.etc = OpenSprites.etc || {};
 						OpenSprites.etc.bgSrc = "/uploads/thumbnail.php?file=" + <?php echo json_encode($obj['filename']); ?>;
 					</script>
 				</a>
