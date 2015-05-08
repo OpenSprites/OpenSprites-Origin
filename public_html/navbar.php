@@ -3,7 +3,6 @@
     var loggedInUser = "deprecated: Use 'OpenSprites.user.name'";
     var loggedInUserId = "deprecated: Use 'OpenSprites.user.id'";
 
-    // let's try to merge to using proper JS technique. Remember, we want this code to be maintainable.
     var OpenSprites = OpenSprites || {};
     OpenSprites.$SESSION = <?php echo json_encode($_SESSION); ?>;
     OpenSprites.user = <?php echo json_encode(array("name"=>$logged_in_user, "id"=>$logged_in_userid, "group"=>$user_group, "banned"=>$user_banned)); ?>;
@@ -27,10 +26,10 @@
 					</li>
 				</ul>
 			<li>
-                <a href="//blog.opensprites.gwiddle.co.uk">Blog</a>
+                <a href="/blog">Blog</a>
             </li>
             <li class="last">
-                <a href="//opensprites.gwiddle.co.uk/forums/">Forums</a>
+                <a href="/forums">Forums</a>
             </li>
 			<li class='search'>
 				<input type='text' placeholder='Search' />
