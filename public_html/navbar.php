@@ -50,7 +50,7 @@
             <!-- display login info/username/etc -->
             <li>
                 <a class='logged-in-user' style = 'padding: 0;padding-left: 10px;padding-right: 10px;max-width: 150px;text-overflow: ellipsis;overflow: hidden;'
-						href="/users/<?php echo $logged_in_userid . '/'; ?>">
+						href="/users/<?php echo $logged_in_user . '/'; ?>">
                     <?php echo $logged_in_user; ?>
                 </a>
             </li>
