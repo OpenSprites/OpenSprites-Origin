@@ -79,11 +79,7 @@
     </script>
     
     <!-- Main wrapper -->
-    <?php if($obj['type'] == 'sound') { ?>
-    <div id='background-img'></div>
-    <?php } else { ?>
 	<canvas id='background-img'></canvas>
-	<?php } ?>
     <div id='dark-overlay'><div id='overlay-inner'>
 		    <div id='username' class='asset-name'>
                 <?php
@@ -246,10 +242,8 @@
 			}
 		}
 		
-		<?php if($obj['type'] != 'sound') { ?>
 		drawBg();
 		$(window).resize(drawBg);
-		<?php } ?>
 	</script>
     
 	<?php if($logged_in_userid == $obj['uploaded_by']['id'] || $is_admin) { ?>
