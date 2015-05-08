@@ -8,7 +8,12 @@ if(!isset($_GET['userid'])) {
     $id = $_GET['userid'];
 }
 
-if($id == 0) {
+// only allow numbers
+$chars = "0123456789";
+$pattern = "/[^".preg_quote($chars, "/")."]/";
+$id = preg_replace($pattern, "", $id);
+
+if($id == 0 || $id == '') {
 	die('false');
 }
 
