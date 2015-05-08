@@ -35,7 +35,7 @@ if (!HTMLCanvasElement.prototype.toBlob) {
 
 Object.defineProperty(HTMLCanvasElement.prototype, 'toBinStr', {
 	value: function (type, quality) {
-		var binStr = atob( this.toDataURL(type, quality).split(',')[1] ),
+		var binStr = atob( this.toDataURL(type, quality).split(',')[1] );
 		return binStr;
 	}
 });
