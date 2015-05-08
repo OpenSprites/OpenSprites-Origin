@@ -1,17 +1,20 @@
 <?php
     require "../assets/includes/connect.php";
     
+    error_reporting(0);
+    
     if(is_numeric($_GET['id'])) {
     	$id = $_GET['id'];
     } else {
     	connectForumDatabase();
-    	$id = forumQuery("SELECT * FROM `$forum_member_table` WHERE `username`=?", array($_GET['id']))[0]['memberId'];
-    	die($id);
-    	
-    	header('Location: /users/'.$id.'/');
+    	try {
+    		$id = forumQuery("SELECT * FROM `$forum_member_table` WHERE `username`=?", array($_GET['id']))[0]['memberId'];
+    	} catch(e) {
+    		include '../404.php';
+        	die();
+    	}
     }
     
-    error_reporting(0);
     $raw_json = file_get_contents("http://opensprites.gwiddle.co.uk/site-api/user.php?userid=" . $id);
     if(!isset(json_decode($raw_json, true)['userid'])) {
         include '../404.php';
