@@ -9,7 +9,7 @@
     	connectForumDatabase();
     	try {
     		$id = forumQuery("SELECT * FROM `$forum_member_table` WHERE `username`=?", array($_GET['id']))[0]['memberId'];
-    	} catch(e) {
+    	} catch(Exception $e) {
     		include '../404.php';
         	die();
     	}
