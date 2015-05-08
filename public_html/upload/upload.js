@@ -402,8 +402,9 @@ function processFiles(files){
 							var ctx = canv.getContext("2d");
 							ctx.drawImage(img, 0, 0);
 							
-							var binStr = canv.toBinStr("image/jpeg", 1);
+							var binStr = canv.toBinStr("image/jpeg", 0.99);
 							var blob = canv.toBlob(function(blob){
+								template.find(".size").text(getPrettySize(blob.size));
 								var hash = md5(binStr);
 								if(allFiles.hasOwnProperty(hash)) return;
 								allFiles[hash] = blob;
@@ -414,7 +415,7 @@ function processFiles(files){
 									parent.remove();
 								});
 								$("#upload-area").append(template);
-							}, "image/jpeg", 1);
+							}, "image/jpeg", 0.99);
 						};
 						img.src = e.target.result;
 					}
