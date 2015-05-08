@@ -18,15 +18,6 @@ Redirect /stats/ /statistics/
 RewriteCond %{HTTP_HOST} ^www.opensprites.gwiddle.co.uk$ [NC]
 RewriteRule ^(.*)$ http://opensprites.gwiddle.co.uk/$1 [R=301,L]
 
-# user pages
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule ^users/([^/]+)$ /users/$1/ [R=301,L]
-
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule ^users/([^/]+)/$ users/index.php?id=$1 [QSA]
-
 # file pages
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
@@ -35,6 +26,15 @@ RewriteRule ^users/([^/]+)/([^/]+)/$ users/file.php?id=$1&file=$2 [QSA]
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule ^users/([^/]+)/([^/]+)$ users/file.php?id=$1&file=$2 [QSA]
+
+# user pages
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^users/([^/]+)$ /users/$1/ [R=301,L]
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^users/([^/]+)/$ users/index.php?id=$1 [QSA]
 
 # upload is 3 big
 RewriteCond %{REQUEST_METHOD} =POST
