@@ -77,3 +77,7 @@ select {
 #select-button, #upload-button, #url-button {
 	background: rgba(61, 61, 61, 0.5) !important;
 }
+
+#select-button:hover, #upload-button:hover, #url-button:hover {
+  background-color: gray !important;
+}
