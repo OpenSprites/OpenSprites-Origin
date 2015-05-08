@@ -6,6 +6,7 @@
     } else {
     	connectForumDatabase();
     	$id = forumQuery("SELECT * FROM `$forum_group_member_table` WHERE `username`=?", array($_GET['username'])[0]['memberId'];
+    	header('Location: /users/'.$id.'/');
     }
     
     error_reporting(0);
