@@ -5,7 +5,7 @@
     	$id = $_GET['id'];
     } else {
     	connectForumDatabase();
-    	$id = forumQuery("SELECT * FROM `$forum_group_member_table` WHERE `username`=?", array($_GET['id']))[0]['memberId'];
+    	$id = forumQuery("SELECT * FROM `$forum_member_table` WHERE `username`=?", array($_GET['id']))[0]['memberId'];
     	die($id);
     	
     	header('Location: /users/'.$id.'/');
