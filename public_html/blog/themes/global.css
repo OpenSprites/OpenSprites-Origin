@@ -27,6 +27,7 @@ h1.entry-header a {
 
 #entries {
     height: 100%;
+    padding-bottom: 88px;
 }
 
 code, code span {
