@@ -1,9 +1,15 @@
 <?php
-    require "../assets/includes/connect.php";  //Connect - includes session_start();
+    require "../assets/includes/connect.php";
     
-    // get username
+    if(is_numeric($_GET['id'])) {
+    	$id = $_GET['id'];
+    } else {
+    	connectForumDatabase();
+    	$id = forumQuery("SELECT * FROM `$forum_group_member_table` WHERE `username`=?", array($_GET['username'])[0]['memberId'];
+    }
+    
     error_reporting(0);
-    $raw_json = file_get_contents("http://opensprites.gwiddle.co.uk/site-api/user.php?userid=" . $_GET['id']);
+    $raw_json = file_get_contents("http://opensprites.gwiddle.co.uk/site-api/user.php?userid=" . $id);
     if(!isset(json_decode($raw_json, true)['userid'])) {
         include '../404.php';
         die();
