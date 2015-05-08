@@ -4,7 +4,19 @@
 	connectDatabase();
 	$id = -1;
 	$file = "";
-	if(isset($_GET['id'])) $id = intval($_GET['id']);
+	if(isset($_GET['id'])) {
+		if(is_numeric($_GET['id'])) {
+	    	$id = intval($_GET['id']);
+	    } else {
+	    	connectForumDatabase();
+	    	try {
+	    		$id = intval(forumQuery("SELECT * FROM `$forum_member_table` WHERE `username`=?", array($_GET['id']))[0]['memberId']);
+	    	} catch(Exception $e) {
+	    		include '../404.php';
+	        	die();
+	    	}
+	    }
+	}
 	if(isset($_GET['file'])) $file = $_GET['file'];
 	
 	$asset = imageExists($id, $file);
