@@ -302,6 +302,7 @@
 			$(".desc").html(marked(desc, {sanitize: true}));
 			
 			$(".desc a").each(function(){
+				$(this).attr("target", "_blank");
 				if($(this).attr("href").toLowerCase().startsWith("javascript")){
 					$(this).attr("href", "https://www.youtube.com/watch?v=oHg5SJYRHA0"); // haha get rekt :P
 				}
