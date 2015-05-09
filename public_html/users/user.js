@@ -108,40 +108,27 @@ function drawBg(){
 
 drawBg();
 
-/* fancy modal */
+$('.modal.edit-profile input#bg').change(function() {
+	var val = $(".modal.edit-profile input#bg").is(":checked");
+	if(val) {
+		$('.modal.edit-profile #bg_true').hide();
+	} else {
+		$('.modal.edit-profile #bg_true').show();
+	}
+});
+		
 $("#settings").click(function() {
-    $.get('/users/edit.php', function(data) {
-        if(data == 'false') {
-            json = {
-                bgcolor: 'avatar'
-            };
-        } else {
-            json = data;
-        }
-        
-        $('.modal.edit-profile input[name=bgcolor]').val(json.bgcolor == 'avatar' ? 'rgb(101, 149, 147)' : json.bgcolor);
-        
-        if(json.bgcolor == 'avatar') $('.modal.edit-profile #bg_true').hide();
-        
-        $('.modal.edit-profile input[name=bgcolor]').spectrum({
-            showButtons: false,
-            showInput: true,
-            preferredFormat: "rgb"
-        });
-        
-        $('.modal.edit-profile input#bg').val(json.bgcolor == 'avatar');
-
-        $('.modal.edit-profile input#bg').change(function() {
-            var val = $(".modal.edit-profile input#bg:checked").map(function() {return this.value;}).get().join(",");
-            if(val) {
-                $('.modal.edit-profile #bg_true').hide();
-            } else {
-                $('.modal.edit-profile #bg_true').show();
-            }
-        });
-        
-        $(".modal-overlay, .modal.edit-profile").fadeIn();
-    });
+	$("#aboutme").val(OpenSprites.view.user.profile.about);
+	$("#location").val(OpenSprites.view.user.profile.location);
+	if(OpenSprites.view.user.profile.bgcolor == "avatar"){
+		$("#bg").prop("checked", true);
+		$('.modal.edit-profile #bg_true').hide();
+	} else {
+		$("#bgcolor").val(OpenSprites.view.user.profile.bgcolor);
+		$("#bg").prop("checked", false);
+		$('.modal.edit-profile #bg_true').show();
+	}
+	$(".modal-overlay, .modal.edit-profile").fadeIn();
 });
 
 $('.modal.edit-profile .btn.red').click(function() {
@@ -149,13 +136,22 @@ $('.modal.edit-profile .btn.red').click(function() {
 });
 
 $('.modal.edit-profile .btn.blue').click(function() {
+	$(".model.edit-profile .error").text("");
     var bg =  $('.modal.edit-profile input[name=bgcolor]').val();
-    if($(".modal.edit-profile input#bg:checked").map(function() {return this.value;}).get().join(",") == 'on') {
+    if($(".modal.edit-profile input#bg").is(":checked")) {
         bg = 'avatar';
     }
     
-    var aboutme = $('.modal.edit-profile #aboutme').val().replace(/\n/g, '/n').replace(/#/g, '$hashtag$').replace(/&/g, '$and$');
+    var aboutme = $('.modal.edit-profile #aboutme').val();
     var location = $('.modal.edit-profile #location').val();
-    var href = '/users/edit.php?bgcolor='+bg+'&aboutme='+aboutme+'&location='+location;
-    window.location = href;
+    $.post("/users/edit.php", {userid: OpenSprites.user.id, aboutme: aboutme, location: location, bgcolor: bg}, function(data){
+		if(typeof data == "object"){
+			OpenSprites.view.user.profile = data;
+			$(".modal-overlay, .modal.edit-profile").fadeOut();
+		} else {
+			$(".model.edit-profile .error").text(data);
+		}
+	}).fail(function(){
+		$(".model.edit-profile .error").text("Sorry, we were unable to update your profile. Try again later.");
+	});
 });

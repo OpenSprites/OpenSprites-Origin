@@ -61,8 +61,8 @@ function setProfileSettings($userid, $settings){
 	
 	$res = forumQuery("SELECT * FROM `os_profile_settings` WHERE `userid`=?", array($userid));
 	if(sizeof($res) == 0){
-		$stmt = $forum_dbh->prepare("INSERT INTO `os_profile_settings` (`userid`, `bgcolor`, `aboutme`) VALUES (:userid, :bgcolor, :aboutme)");
-		$stmt->execute(array(":userid" => $userid, ":bgcolor" => $settings['bgcolor'], ":aboutme" => $settings));
+		$stmt = $forum_dbh->prepare("INSERT INTO `os_profile_settings` (`userid`, `bgcolor`) VALUES (:userid, :bgcolor,)");
+		$stmt->execute(array(":userid" => $userid, ":bgcolor" => $settings['bgcolor']));
 	} else {
 		$stmt = $forum_dbh->prepare("UPDATE `os_profile_settings` SET `bgcolor`=:bgcolor WHERE `userid`=:userid");
 		$stmt->execute(array(":userid" => $userid, ":bgcolor" => $settings['bgcolor']));
@@ -73,7 +73,7 @@ function getProfileSettings($userid){
 	global $forum_dbh;
 	
 	$res = forumQuery("SELECT * FROM `os_profile_settings` WHERE `userid`=?", array($userid));
-	if(sizeof($res) == 0) return false;
+	if(sizeof($res) == 0) return array("bgcolor" => "avatar");
 	
 	return $res[0];
 }

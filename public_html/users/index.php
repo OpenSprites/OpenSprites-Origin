@@ -37,6 +37,8 @@
 
         return $inp; 
     }
+	
+	$profileSettings = getProfileSettings($user['userid']);
 ?>
 <!DOCTYPE html>
 <html>
@@ -62,12 +64,15 @@
         OpenSprites.view = {user: <?php echo json_encode($user); ?>};
         OpenSprites.view.user.id = <?php echo json_encode($user['userid']); ?>;
         OpenSprites.view.user.name = <?php echo json_encode($user['username']); ?>;
+		OpenSprites.view.user.profile = {};
+		OpenSprites.view.user.profile.about = <?php echo json_encode($profiledata['about']); ?>
+		OpenSprites.view.user.profile.location = <?php echo json_encode($profiledata['location']); ?>
+		OpenSprites.view.user.profile.bgcolor = <?php echo json_encode($profileSettings['bgcolor']); ?>
     </script>
     
     <!-- Main wrapper -->
     <?php
-    $editdata = file_get_contents('http://opensprites.gwiddle.co.uk/users/edit.php?userid='.$id);
-    if($editdata == 'false' || $editdata == 'avatar' || json_decode($editdata)->bgcolor == 'avatar') {
+	if($profileSettings['bgcolor'] == "avatar"){
     ?>
     <canvas id='background-img'></canvas>
     <?php } else { ?>
@@ -183,7 +188,7 @@
             }
         });
 		
-		var desc = <?php echo json_encode(unescape($user['about'])); ?>.replace(/&#13;/g, '\n');
+		var desc = <?php echo json_encode($user['about']); ?>;
 		
 		function warnGoingAway(where){
 			$(".modal.leaving .btn.blue").off();
@@ -204,8 +209,8 @@
 		
 		function parseDesc(desc){
 			//sad that we have to disallow HTML, but I can't find a good way to sanitize it DX
-            var xx = marked(desc, {sanitize: true}).replace(/\n/g, '<br>');
-            xx = xx.substr(0, xx.length-1);
+            var xx = marked(desc, {sanitize: true});
+			// Instead of hax we should teach people to use 2 newlines
 			$(".desc").html(xx);
 			
 			$(".desc a").each(function(){
@@ -237,16 +242,16 @@
     <div class="modal edit-profile">
 		<div class="modal-content">
 			<h1>Profile Settings</h1>
-            
+            <p class="error"></p>
             <p><i>Profile Background</i><br>You can set a color for your background on this profile page, or simply just use your avatar image.</p>
             <input type="checkbox" id='bg'>Use my avatar image<br>
             <span id='bg_true'><input type="text" name="bgcolor" id="bgcolor" value="rgb(101, 149, 147)"></span><br>
             
             <p><i>About Me</i><br>Write something about yourself that doesn't have your phone number, address, or anything else that is against the <a href='/tos/'>Terms Of Service</a>. Supports <a href='https://help.github.com/articles/github-flavored-markdown/'>Markdown</a>.</p>
-            <textarea id='aboutme' maxlength='500'><?php echo str_replace('\n', '&#13;', unescape($profiledata['about'])); ?></textarea><br>
+            <textarea id='aboutme' maxlength='500'>Loading...</textarea><br>
             
-            <p><i>Location</i><br>If you want to let people know which country you live in, you can tell them. Be warned- don't give away your exact location!</p>
-            <input type='text' id='location' maxlength='30' value='<?php echo htmlspecialchars(unescape($profiledata['location'])); ?>'><br>
+            <p><i>Location</i><br>If you want to let people know which country you live in, you can tell them. Be warned - don't give away your exact location!</p>
+            <input type='text' id='location' maxlength='30' value='Loading...'><br>
      
 			<div class="buttons-container">
 				<button class='btn red'>Cancel</button>

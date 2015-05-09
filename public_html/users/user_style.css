@@ -2,6 +2,13 @@
 	font-weight: bold !important;
 }
 
+.modal.edit-profile .modal-content {
+	height: 90%;
+	overflow-x: hidden;
+	overflow-y: auto;
+	padding-right: 0.3em;
+}
+
 #dark-overlay {
     position: absolute;
     top: 0;
