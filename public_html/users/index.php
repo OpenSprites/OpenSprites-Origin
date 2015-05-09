@@ -76,7 +76,7 @@
     ?>
     <canvas id='background-img'></canvas>
     <?php } else { ?>
-    <div id='background-img' style='background:<?php echo json_decode($editdata)->bgcolor; ?>;'></div>
+    <div id='background-img' style='background:<?php echo $profileSettings['bgcolor'];?>;'></div>
     <?php } ?>
     <div id='dark-overlay'><div id='overlay-inner'>
         <div id="user-pane-right">
