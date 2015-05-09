@@ -128,11 +128,8 @@ $("#settings").click(function() {
             showInput: true,
             preferredFormat: "rgb"
         });
-        $('.modal.edit-profile input#bg').val(json.bgcolor == 'avatar');
         
-        $('.modal.edit-profile input[name=bgcolor]').spectrum({
-            showButtons: false    
-        });
+        $('.modal.edit-profile input#bg').val(json.bgcolor == 'avatar');
 
         $('.modal.edit-profile input#bg').change(function() {
             var val = $(".modal.edit-profile input#bg:checked").map(function() {return this.value;}).get().join(",");

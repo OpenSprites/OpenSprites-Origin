@@ -262,7 +262,7 @@
 			<p class='input-error' style='display:none;'>Sample Text</p>
 			<input type="text" id="file-name" maxlength='32' value="<?php echo htmlspecialchars($obj['name']); ?>"/><br/><br/>
 			<textarea id="file-desc" maxlength='500' value="<?php echo htmlspecialchars($obj['description']); ?>"></textarea><br/>
-			<p>Descriptions support <acronym title="A simple text-formatting system">markdown</acronym>. Click <a href="http://markdowntutorial.com/" target="_blank">here</a> to learn more about markdown.</p>
+			<p>Descriptions support <acronym title="A simple text-formatting system">Markdown</acronym>. Click <a href="http://markdowntutorial.com/" target="_blank">here</a> to learn more about Markdown.</p>
 			<div class="buttons-container">
 				<button class='btn red'>Cancel</button>
 				<button class='btn blue'>OK</button>
