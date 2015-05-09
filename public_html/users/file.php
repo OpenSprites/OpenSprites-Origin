@@ -151,9 +151,9 @@
 			<?php if($obj['type'] == 'image'){ ?>
 				<h2>Direct links</h2>
 				<p>Use this link to embed this image on websites.</p>
-				<input type="text" value="http://opensprites.gwiddle.co.uk/uploads/uploaded/<?php echo urlencode($obj['filename']); ?>" class="image-url" />
+				<input type="text" value="http://opensprites.gwiddle.co.uk/uploads/uploaded/<?php echo urlencode($obj['filename']); ?>" class="image-url" onfocus="$(this).select();" />
 				<p>Copy and paste this BBCode to embed the image on forums such as the Scratch forums.</p>
-				<input type="text" value="[img]http://opensprites.gwiddle.co.uk/uploads/uploaded/<?php echo urlencode($obj['filename']); ?>[/img]" class="image-url" />
+				<input type="text" value="[img]http://opensprites.gwiddle.co.uk/uploads/uploaded/<?php echo urlencode($obj['filename']); ?>[/img]" class="image-url" onfocus="$(this).select();" />
 			<?php } ?>
 			<?php if($obj['type'] == 'script') { ?>
         	    <h2>Script</h2>

@@ -67,11 +67,6 @@ $(".modal.edit-asset .btn.blue").click(function(){
 	});
 });
 
-$(".image-url").focus(function(){
-    this.select();
-});
-
-
 $(".modal.leaving .btn.blue").click(function(){
 	$(".modal-overlay, .modal.leaving").fadeOut();
 });
