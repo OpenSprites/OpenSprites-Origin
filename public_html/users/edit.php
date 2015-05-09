@@ -47,7 +47,7 @@ $about = $_POST['about'];
 if(strlen($about) > 500) $about = substr($about, 0, 500); // don't bother with an error message
 $aRes = forumQuery("SELECT * FROM `et_profile_data` WHERE `memberId`=? AND `fieldId`=?", array($id, 1));
 if(sizeof($aRes) == 0){
-	forumQuery0("INSERT INTO `et_profile_data` (`data`, `memberId`, `fieldId`) VALUES (?, ?, ?)", array($location, $id, 1);
+	forumQuery0("INSERT INTO `et_profile_data` (`data`, `memberId`, `fieldId`) VALUES (?, ?, ?)", array($location, $id, 1));
 } else {
 	forumQuery0("UPDATE `et_profile_data` SET `data`=? WHERE `memberId`=? AND `fieldId`=?", array($location, $id, 1));
 }
