@@ -119,11 +119,16 @@ ul.navbar-dropdown li {
 .header .search input {
 	border-radius: 0.5em;
 	border: none;
-	padding: 3px;
-	padding-left: 1.6em;
-	background-image: url(/assets/images/search.png);
+	/* padding: 3px; */
+	padding-left: 0.4em;
+	/* background-image: url(/assets/images/search.png); */
 	background-repeat: no-repeat;
 	background-size: contain;
-	width: 120px;
+	width: 150px;
 	color: grey;
+	line-height: 12px;
+	font-size: 14px;
+	font-family: sans-serif !important;
+	height: 22px;
+	margin-top: 6px;
 }

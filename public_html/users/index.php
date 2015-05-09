@@ -240,7 +240,7 @@
 	<!-- modal -->
     <div class="modal-overlay"></div>
     <div class="modal edit-profile">
-		<div class="modal-content">
+		<div class="modal-content" style="font-size:12px">
 			<h1>Profile Settings</h1>
             <p class="error"></p>
             <p><i>Profile Background</i><br>You can set a color for your background on this profile page, or simply just use your avatar image.</p>

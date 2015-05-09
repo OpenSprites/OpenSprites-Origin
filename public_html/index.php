@@ -8,8 +8,6 @@
     <?php include 'Header.html'; ?>
 </head>
 <body>
-    <!--Imports site-wide main styling-->
-    <link href='main-style.css' rel='stylesheet' type='text/css'>
     
     <!--Imports navigation bar-->
     <?php include "navbar.php"; ?>
@@ -32,7 +30,7 @@
 					</td>
 				</tr>
 			</table>
-        </div><br/><br/>
+        </div>
         
         <?php if($logged_in_user == 'not logged in') { ?>
         <!-- Info for new visistors. -->
