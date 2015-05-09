@@ -317,7 +317,7 @@
     
     <?php if($obj['type'] == "sound"){ ?>
     <!-- background colors! -->
-    <script src="/users/please.js"></script>
+    <script src="/assets/lib/please/please.js"></script>
     <script>
         $('#overlay-img').css('background', Please.make_color());
         setInterval(function() {
