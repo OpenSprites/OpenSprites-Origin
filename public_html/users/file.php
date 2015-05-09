@@ -82,7 +82,7 @@
     <?php if($obj['type'] != 'sound') { ?>
 	<canvas id='background-img'></canvas>
     <?php } else { ?>
-    <div id='background-img'></div>
+    <div id='background-img' style='transition: background 500ms;'></div>
     <?php } ?>
     <div id='dark-overlay'><div id='overlay-inner'>
 		    <div id='username' class='asset-name'>
@@ -235,15 +235,17 @@
 		function drawBg(){
 			var canvasId = "background-img";
 			var canvas = document.getElementById(canvasId);
-			var context = canvas.getContext("2d");
-			var img = new Image();
-			img.onload = function() {
-				drawImageProp(context, img);
-				stackBlurCanvasRGB(canvas, 0, 0, canvas.width, canvas.height, 10);
-			}
-			if(typeof OpenSprites.etc.bgSrc !== 'undefined'){
-				img.src = OpenSprites.etc.bgSrc;
-			}
+            try {
+                var context = canvas.getContext("2d");
+                var img = new Image();
+                img.onload = function() {
+                    drawImageProp(context, img);
+                    stackBlurCanvasRGB(canvas, 0, 0, canvas.width, canvas.height, 10);
+                }
+                if(typeof OpenSprites.etc.bgSrc !== 'undefined'){
+                    img.src = OpenSprites.etc.bgSrc;
+                }
+            } catch(e) {}
 		}
 		
 		drawBg();
@@ -284,48 +286,6 @@
 		</div>
 	</div>
 	
-	<script src="/assets/lib/marked/marked.js"></script>
-	
-	<script>
-		var desc = <?php echo json_encode($obj['description']); ?>;
-		
-		function warnGoingAway(where){
-			$(".modal.leaving .btn.red").off();
-			$(".leaving-url").text(where);
-			$(".modal-overlay, .modal.leaving").fadeIn();
-			(function(where){
-				$(".modal.leaving .btn.red").on("click", function(){
-					window.open(where);
-					$(".modal-overlay, .modal.leaving").fadeOut();
-				});
-			})(where);
-		}
-		
-		function parseDesc(desc){
-			//                             \/ sad that we have to disallow HTML, but I can't find a good way to sanitize it DX
-			$(".desc").html(marked(desc, {sanitize: true}));
-			
-			$(".desc a").each(function(){
-				$(this).attr("target", "_blank");
-				if($(this).attr("href").toLowerCase().startsWith("javascript")){
-					$(this).attr("href", "https://www.youtube.com/watch?v=oHg5SJYRHA0"); // haha get rekt :P
-				}
-			});
-			
-			$(".desc a").click(function(e){
-				var rawLink = $(this).get(0);
-				var hostName = rawLink.hostname;
-				if(!OpenSprites.etc.isHostSafe(hostName)){
-					warnGoingAway($(this).attr("href"));
-					e.preventDefault();
-					return false;
-				}
-			});
-		}
-		
-		parseDesc(desc);
-	</script>
-	
 	<script src="/uploads/edit.js"></script>
 	
 	<?php } ?>
@@ -357,6 +317,18 @@
 		
 		parseDesc(desc);
     </script>
+    
+    <?php if($obj['type'] == "sound"){ ?>
+    <!-- background colors! -->
+    <script src="/users/please.js"></script>
+    <script>
+        $('#background-img').css('background', Please.make_color());
+        setInterval(function() {
+            if(!document.getElementsByTagName('audio')[0].paused)
+                $('#background-img').css('background', Please.make_color());
+        }, 1000);
+    </script>
+    <?php } ?>
     
     <!-- footer -->
     <?php echo file_get_contents('../footer.html'); ?>

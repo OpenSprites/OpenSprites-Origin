@@ -26,10 +26,7 @@ $(".modal.edit-asset .btn.red").click(function(){
 	$(".modal-overlay, .modal.edit-asset").fadeOut();
 });
 
-console.log('debug');
 $(".modal.edit-asset .btn.blue").click(function(){
-	console.log(this);
-	
 	$(".modal.edit-asset .input-error").text("Sample Text").css("opacity", "0");
 	var name = $("#file-name").val();
 	var desc = $("#file-desc").val();
