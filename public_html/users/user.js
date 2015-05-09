@@ -168,7 +168,7 @@ $('.modal.edit-profile .btn.blue').click(function() {
 			} else {
 				$("#background-img").fadeOut(700, function(){
 					$(this).remove();
-					$("body").prepend($("<div id='background-img' style='background-color:" + data[bgcolor] + ";'></div>"));
+					$("body").prepend($("<div id='background-img' style='background-color:" + data['bgcolor'] + ";'></div>"));
 					$("#background-img").fadeIn();
 				});
 			}
