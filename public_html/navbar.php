@@ -8,6 +8,15 @@
     OpenSprites.user = <?php echo json_encode(array("name"=>$logged_in_user, "id"=>$logged_in_userid, "group"=>$user_group, "banned"=>$user_banned)); ?>;
 </script>
 <div class="header">
+
+<!-- MOBILE HEADER -->	
+<div class="mobile-nav" style="display:none;width:100%;">
+	<center>
+		<a href="/"><img src="http://opensprites.gwiddle.co.uk/assets/images/os-logotype.svg" style="width: 150px;height: 35px;"></a>
+		<a style="color:white;float:right;text-decoration:none;margin-top:5px;margin-right:10px;cursor:pointer" class="menu">☰</a>
+	</center>
+</div>
+
     <div class="container">
         <a class="scratch" href="/"></a>
 
