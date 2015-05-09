@@ -130,8 +130,6 @@ a.scratch:hover {
     margin: auto;
     padding-left: 20px;
     padding-right: 20px;
-    background-color: rgba(0, 0, 0, 0.5); 
-    color: rgb(244, 244, 244);
 }
 
 .main-inner {
@@ -863,4 +861,10 @@ a:visited {
 .btn {
 	border: none !important;
 	cursor: pointer;
+}
+
+#collections {
+	background-color: rgba(0, 0, 0, 0.5); 
+	color: rgb(244, 244, 244);
+}
 }
