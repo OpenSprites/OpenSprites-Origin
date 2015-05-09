@@ -185,7 +185,13 @@ $('.modal.edit-profile .btn.blue').click(function() {
 
 var mdHints = OpenSprites.models.MdHints($('#aboutme'));
 
-$("#change-image input[type=file]").change(function(){
+$("#change-image input[type=file]").change(function(e){
+	var MAX_SIZE = 8388608;
+	if(e.originalEvent.target.files[0].size > MAX_SIZE){
+		alert("That file is too big! Try a file under 8MB");
+		return;
+	}
+
 	$("#cropper-container > img").cropper("destroy");
 	$("#progress-container").text("");
 	$("#cropper-container").text("Loading image...");
@@ -206,7 +212,7 @@ $("#change-image input[type=file]").change(function(){
 				}
 			});
 		}
-		reader.readAsDataURL(file);
+		reader.readAsDataURL(e.originalEvent.target.files[0]);
 	});
 });
 
