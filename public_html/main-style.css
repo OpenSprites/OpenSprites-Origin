@@ -4,7 +4,8 @@
 
 * {
     font-weight: normal !important;
-    font-family: 'Open Sans', 'Helvetica Neue', Helvetica, sans-serif;
+	font-family: 'Palanquin', sans-serif;
+	line-height: 1.5;
 }
 
 #opensprites-heading {
@@ -16,7 +17,7 @@
 }
 
 body {
-    font: 13px 'Open Sans', 'Helvetica Neue', Helvetica, sans-serif;
+	font-family: 'Palanquin', sans-serif;
     font-weight: 400;
     margin: 0;
     background-color: white;
