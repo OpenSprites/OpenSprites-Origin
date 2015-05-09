@@ -167,10 +167,10 @@ OpenSprites.models.MdHints = function(_target){
 	_target.parent().addClass("md-hint");
 	
 	_target.keyup(function(){
-		$(this).removeClass("show-hint");
+		$(this).parent().removeClass("show-hint");
 		var content = $(this).val();
 		if(content.match(/[^\n ]\n[^\n]/) !== null){
-			$(this).addClass("show-hint").attr("data-hint", "To make a new line in markdown, you either need to end a line with two spaces, or add two new lines.");
+			$(this).parent().parent().addClass("show-hint").attr("data-hint", "To make a new line in markdown, you either need to end a line with two spaces, or add two new lines.");
 		}
 	});
 	return modelObj;
