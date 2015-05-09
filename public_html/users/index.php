@@ -130,9 +130,16 @@
             <?php
                 if($user_exist) {
                     echo '<img id="source-avatar" class="user-avatar x100" src="' . $user['avatar'] . '">';
-                    if($username == $logged_in_user) {
-                        echo '<div id="change-image">Change...</div>';
-                    }
+                    if($username == $logged_in_user) { ?>
+                        <div id="change-image"><span id="change-text">Change...</span>
+							<!-- profile picture upload -->
+							<form id='avatar_upload' style="display:none;" enctype="multipart/form-data">
+								<input type="hidden" name="MAX_FILE_SIZE" value="8388608">
+								<input name="uploadedfile" type="file" class="fill" accept="image/*">
+								<input type="submit">
+							</form>
+						</div>
+                    <?php }
                 }
             ?>
         </div>
@@ -170,11 +177,6 @@
     <?php }?>
     <script src="/assets/lib/marked/marked.js"></script>
     <script>
-        $('#change-image').click(function() {
-            // display modal for changing profile pic
-            $('#img-modal').fadeIn(200);
-        });
-		
 		//////////// TODO: ajax-ify. Also fix server scripts
         $('#adminban').click(function() {
             if(confirm('Are you SURE you want to suspend ' + OpenSprites.view.user.name + '?')) {
@@ -243,6 +245,12 @@
 		<div class="modal-content">
 			<h1>Profile Settings</h1>
             <p class="error"></p>
+			
+			<p>
+				<i>Profile Picture / Avatar</i><br/>
+				To set or change your avatar, hover over the avatar and click "Change..."
+			</p>
+			
             <p><i>Profile Background</i><br>You can set a color for your background on this profile page, or simply just use your avatar image.</p>
             <input type="checkbox" id='bg'>Use my avatar image<br>
             <span id='bg_true'><input type="text" name="bgcolor" id="bgcolor" value="rgb(101, 149, 147)"></span><br>
@@ -291,23 +299,6 @@
 			</div>
 		</div>
 	</div>
-    
-	<!-- profile picture upload -->
-	<form id='avatar_upload' style="display:none;" enctype="multipart/form-data" action="http://opensprites.gwiddle.co.uk/user-avatar.php?id=<?php echo $logged_in_userid; ?>" method="POST">
-        <input type="hidden" name="MAX_FILE_SIZE" value="8388608">
-        <input name="uploadedfile" type="file" accept="image/*">
-        <input type="submit">
-    </form>
-    
-    <script>
-        $('#change-image').click(function() {
-            $('#avatar_upload input[name=uploadedfile]').click();
-        });
-        
-        $('input[name=uploadedfile]').change(function() {
-            $('#avatar_upload').submit();
-        });
-    </script>
 	<?php } ?>
 	
 	<script src='../user.js'></script>

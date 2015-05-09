@@ -157,10 +157,21 @@
     background: rgba(0, 0, 0, 0.7);
     color: white;
     transition: 400ms opacity;
+	
+	overflow: hidden;
 }
 
 #change-image:hover {
     opacity: 1;
+}
+
+#change-image .fill {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	height: 100%;
+	opacity: 0;
+	z-index: 10;
 }
 
 .loading-ajax {

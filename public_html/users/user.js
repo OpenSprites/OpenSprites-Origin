@@ -184,3 +184,7 @@ $('.modal.edit-profile .btn.blue').click(function() {
 });
 
 var mdHints = OpenSprites.models.MdHints($('#aboutme'));
+
+$("#change-image input[type=file]").change(function(){
+	// todo: ajax this
+});
