@@ -79,7 +79,11 @@
     </script>
     
     <!-- Main wrapper -->
+    <?php if($obj['type'] != 'sound') { ?>
 	<canvas id='background-img'></canvas>
+    <?php } else { ?>
+    <div id='background-img'></div>
+    <?php } ?>
     <div id='dark-overlay'><div id='overlay-inner'>
 		    <div id='username' class='asset-name'>
                 <?php
@@ -143,11 +147,7 @@
 				<audio style="width: 100%;" controls preload='metadata' src='<?php echo $obj['url'] ?>';></audio><br/><br/>
             <?php } ?>
 			<h1>Description</h1>
-<<<<<<< HEAD
 			<p class='desc'></p>
-=======
-			<p class='desc'>Formatting description...</p>
->>>>>>> origin/master
 			<?php if($obj['type'] == 'image'){ ?>
 				<h2>Direct links</h2>
 				<p>Use this link to embed this image on websites.</p>
