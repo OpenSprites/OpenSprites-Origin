@@ -247,7 +247,7 @@
             <input type="checkbox" id='bg'>Use my avatar image<br>
             <span id='bg_true'><input type="text" name="bgcolor" id="bgcolor" value="rgb(101, 149, 147)"></span><br>
             
-            <p><i>About Me</i><br>Write something about yourself that doesn't have your phone number, address, or anything else that is against the <a href='/tos/'>Terms Of Service</a>. Supports <a href='https://help.github.com/articles/github-flavored-markdown/'>Markdown</a>.</p>
+            <p><i>About Me</i><br>Write something about yourself! Make sure it doesn't have your phone number, address, or anything else that is against the <a href='/tos/'>Terms Of Service</a>. About sections support <a href='https://help.github.com/articles/github-flavored-markdown/'>Markdown</a>.</p>
             <textarea id='aboutme' maxlength='500'>Loading...</textarea><br>
             
             <p><i>Location</i><br>If you want to let people know which country you live in, you can tell them. Be warned - don't give away your exact location!</p>
