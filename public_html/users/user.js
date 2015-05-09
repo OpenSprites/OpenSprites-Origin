@@ -159,12 +159,18 @@ $('.modal.edit-profile .btn.blue').click(function() {
 			$("#location").text(data['location']);
 			
 			if(data['bgcolor'] == "avatar"){
-				$("#background-img").remove();
-				$("body").prepend($("<canvas id='background-img'></canvas>"));
-				drawBg();
+				$("#background-img").fadeOut(700, function(){
+					$(this).remove();
+					$("body").prepend($("<canvas id='background-img' style='display:none'></canvas>"));
+					drawBg();
+					$("#background-img").fadeIn();
+				});
 			} else {
-				$("#background-img").remove();
-				$("body").prepend($("<div id='background-img' style='background-color:" + data[bgcolor] + ";'></div>"));
+				$("#background-img").fadeOut(700, function(){
+					$(this).remove();
+					$("body").prepend($("<div id='background-img' style='background-color:" + data[bgcolor] + ";'></div>"));
+					$("#background-img").fadeIn();
+				});
 			}
 			
 			$(".modal-overlay, .modal.edit-profile").fadeOut();

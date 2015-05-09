@@ -70,3 +70,5 @@ $(".modal.edit-asset .btn.blue").click(function(){
 $(".modal.leaving .btn.blue").click(function(){
 	$(".modal-overlay, .modal.leaving").fadeOut();
 });
+
+var mdHints = OpenSprites.models.MdHints($("#file-desc"));
