@@ -1,3 +1,7 @@
+.leaving-url {
+	font-weight: bold !important;
+}
+
 #dark-overlay {
     position: absolute;
     top: 0;

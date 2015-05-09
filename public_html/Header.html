@@ -39,4 +39,21 @@
 	var OpenSprites = OpenSprites || {};
 	var OS = OpenSprites;
 	OpenSprites.domain = "//opensprites.gwiddle.co.uk";
+	
+	OpenSprites.etc = OpenSprites.etc || {};
+	OpenSprites.etc.safeHosts = [
+		"opensprites.gwiddle.co.uk",
+		"dev.opensprites.gwiddle.co.uk",
+		"blog.opensprites.gwiddle.co.uk",
+		"scratch.mit.edu",
+		"cdn.scratch.mit.edu",
+		"cdn2.scratch.mit.edu",
+		"projects.scratch.mit.edu",
+		"cdn.projects.scratch.mit.edu",
+		"assets.scratch.mit.edu",
+		"cdn.assets.scratch.mit.edu"
+	];
+	OpenSprites.etc.isHostSafe = function(host){
+		return OpenSprites.etc.safeHosts.indexOf(host) > -1;
+	};
 </script>

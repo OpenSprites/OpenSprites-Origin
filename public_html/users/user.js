@@ -120,6 +120,7 @@ $("#settings").click(function() {
         }
         
         $('.modal.edit-profile input[name=bgcolor]').val(json.bgcolor == 'avatar' ? 'rgb(101, 149, 147)' : json.bgcolor);
+<<<<<<< HEAD
         $('.modal.edit-profile input#bg').attr('checked', json.bgcolor == 'avatar');
         
         if(json.bgcolor == 'avatar') $('.modal.edit-profile #bg_true').hide();
@@ -128,10 +129,20 @@ $("#settings").click(function() {
             showButtons: false,
             showInput: true,
             preferredFormat: "rgb"
+=======
+        $('.modal.edit-profile input#bg').val(json.bgcolor == 'avatar');
+        
+        $('.modal.edit-profile input[name=bgcolor]').spectrum({
+            showButtons: false    
+>>>>>>> origin/master
         });
 
         $('.modal.edit-profile input#bg').change(function() {
             var val = $(".modal.edit-profile input#bg:checked").map(function() {return this.value;}).get().join(",");
+<<<<<<< HEAD
+=======
+            console.log(val);
+>>>>>>> origin/master
             if(val) {
                 $('.modal.edit-profile #bg_true').hide();
             } else {
@@ -139,11 +150,16 @@ $("#settings").click(function() {
             }
         });
         
+<<<<<<< HEAD
         $(".modal.edit-profile-overlay, .modal.edit-profile").fadeIn();
+=======
+        $(".modal-overlay, .modal.edit-profile").fadeIn();
+>>>>>>> origin/master
     });
 });
 
 $('.modal.edit-profile .btn.red').click(function() {
+<<<<<<< HEAD
 	$(".modal.edit-profile-overlay, .modal.edit-profile").fadeOut();
 });
 
@@ -157,4 +173,7 @@ $('.modal.edit-profile .btn.blue').click(function() {
     var location = $('.modal.edit-profile #location').val();
     var href = '/users/edit.php?bgcolor='+bg+'&aboutme='+aboutme+'&location='+location;
     window.location = href;
+=======
+	$(".modal-overlay, .modal.edit-profile").fadeOut();
+>>>>>>> origin/master
 });

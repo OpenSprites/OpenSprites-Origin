@@ -59,5 +59,25 @@ select {
 }
 
 #upload-method-select img.method:hover {
-    box-shadow: 5px 5px 10px black !important;
+	box-shadow: 5px 5px 10px black !important;
+}
+
+#upload-area {
+	background-color: rgb(76, 76, 76) !important;
+}
+
+.upload-message {
+	color: #2A2A2A !important;
+}
+
+#upload-status {
+	background: rgba(150, 150, 150, 0.5) !important;
+}
+
+#select-button, #upload-button, #url-button {
+	background: rgba(61, 61, 61, 0.5) !important;
+}
+
+#select-button:hover, #upload-button:hover, #url-button:hover {
+  background-color: gray !important;
 }

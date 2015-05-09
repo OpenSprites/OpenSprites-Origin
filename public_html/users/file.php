@@ -79,11 +79,7 @@
     </script>
     
     <!-- Main wrapper -->
-    <?php if($obj['type'] == 'sound') { ?>
-    <div id='background-img'></div>
-    <?php } else { ?>
 	<canvas id='background-img'></canvas>
-	<?php } ?>
     <div id='dark-overlay'><div id='overlay-inner'>
 		    <div id='username' class='asset-name'>
                 <?php
@@ -124,7 +120,7 @@
 				<a href="#img1">
 					<img class="img-preview" src="/uploads/thumbnail.php?file=<?php echo $obj['filename']; ?>">
 					<script>
-						OpenSprites.etc = {};
+						OpenSprites.etc = OpenSprites.etc || {};
 						OpenSprites.etc.bgSrc = "/uploads/thumbnail.php?file=" + <?php echo json_encode($obj['filename']); ?>;
 					</script>
 				</a>
@@ -147,7 +143,11 @@
 				<audio style="width: 100%;" controls preload='metadata' src='<?php echo $obj['url'] ?>';></audio><br/><br/>
             <?php } ?>
 			<h1>Description</h1>
+<<<<<<< HEAD
 			<p class='desc'></p>
+=======
+			<p class='desc'>Formatting description...</p>
+>>>>>>> origin/master
 			<?php if($obj['type'] == 'image'){ ?>
 				<h2>Direct links</h2>
 				<p>Use this link to embed this image on websites.</p>
@@ -246,28 +246,85 @@
 			}
 		}
 		
-		<?php if($obj['type'] != 'sound') { ?>
 		drawBg();
 		$(window).resize(drawBg);
-		<?php } ?>
 	</script>
     
 	<?php if($logged_in_userid == $obj['uploaded_by']['id'] || $is_admin) { ?>
 	
 	<!-- modal -->
     <div class="modal-overlay"></div>
-    <div class="modal">
+    <div class="modal edit-asset">
 		<div class="modal-content">
 			<h1>Edit title or description</h1>
 			<p class='input-error' style='display:none;'>Sample Text</p>
 			<input type="text" id="file-name" maxlength='32' value="<?php echo htmlspecialchars($obj['name']); ?>"/><br/><br/>
 			<textarea id="file-desc" maxlength='500' value="<?php echo htmlspecialchars($obj['description']); ?>"></textarea><br/>
+			<p>Descriptions support <acronym title="A simple text-formatting system">markdown</acronym>. Click <a href="http://markdowntutorial.com/" target="_blank">here</a> to learn more about markdown.</p>
 			<div class="buttons-container">
 				<button class='btn red'>Cancel</button>
 				<button class='btn blue'>OK</button>
 			</div>
 		</div>
 	</div>
+	
+	<div class="modal leaving">
+		<div class="modal-content">
+			<h1>You are leaving OpenSprites!</h1>
+			<p class="leaving-desc">
+				[Insert some swaggy visual here]<br/><br/>
+				This resource description is taking you to <span class="leaving-url"></span><br/><br/>
+				Sites that aren't OpenSprites have the potential to be dangerous, or could have unwanted content.<br/><br/>
+				Proceed only if you recognize the site or understand the risk involved.
+			</p>
+			<div class="buttons-container">
+				<button class='btn blue'>Stay here!</button>
+				<button class='btn red'>Proceed</button>
+			</div>
+		</div>
+	</div>
+	
+	<script src="/assets/lib/marked/marked.js"></script>
+	
+	<script>
+		var desc = <?php echo json_encode($obj['description']); ?>;
+		
+		function warnGoingAway(where){
+			$(".modal.leaving .btn.red").off();
+			$(".leaving-url").text(where);
+			$(".modal-overlay, .modal.leaving").fadeIn();
+			(function(where){
+				$(".modal.leaving .btn.red").on("click", function(){
+					window.open(where);
+					$(".modal-overlay, .modal.leaving").fadeOut();
+				});
+			})(where);
+		}
+		
+		function parseDesc(desc){
+			//                             \/ sad that we have to disallow HTML, but I can't find a good way to sanitize it DX
+			$(".desc").html(marked(desc, {sanitize: true}));
+			
+			$(".desc a").each(function(){
+				$(this).attr("target", "_blank");
+				if($(this).attr("href").toLowerCase().startsWith("javascript")){
+					$(this).attr("href", "https://www.youtube.com/watch?v=oHg5SJYRHA0"); // haha get rekt :P
+				}
+			});
+			
+			$(".desc a").click(function(e){
+				var rawLink = $(this).get(0);
+				var hostName = rawLink.hostname;
+				if(!OpenSprites.etc.isHostSafe(hostName)){
+					warnGoingAway($(this).attr("href"));
+					e.preventDefault();
+					return false;
+				}
+			});
+		}
+		
+		parseDesc(desc);
+	</script>
 	
 	<script src="/uploads/edit.js"></script>
 	

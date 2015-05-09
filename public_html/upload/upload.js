@@ -18,6 +18,28 @@
     });
 }(jQuery));
 
+
+if (!HTMLCanvasElement.prototype.toBlob) {
+	Object.defineProperty(HTMLCanvasElement.prototype, 'toBlob', {
+		value: function (callback, type, quality) {
+			var binStr = atob( this.toDataURL(type, quality).split(',')[1] ),
+			len = binStr.length,
+			arr = new Uint8Array(len);
+			for (var i=0; i<len; i++ ) {
+				arr[i] = binStr.charCodeAt(i);
+			}
+			callback( new Blob( [arr], {type: type || 'image/png'} ) );
+		}
+	});
+}
+
+Object.defineProperty(HTMLCanvasElement.prototype, 'toBinStr', {
+	value: function (type, quality) {
+		var binStr = atob( this.toDataURL(type, quality).split(',')[1] );
+		return binStr;
+	}
+});
+
 ///////////////////////////////////// Script chooser GUI
 function newScript(){
 	var scriptCont =  $("<div class='script-container'><label>Select this script: </label><input type='checkbox' /><br/><pre class='blocks'></pre></div>");
@@ -358,11 +380,45 @@ function processFiles(files){
 		template.find(".size").text(getPrettySize(f.size));
 		template.find(".status").text("Ready to upload");
 		
+		var type2 = "";
+		
 		if(type =="image"){
+			type2 = "jpeg";
+			if(f.name.toLowerCase().endsWith("svg")) type2 = "svg";
+			else if(f.name.toLowerCase().endsWith("png")) type2 = "png";
+			else if(f.name.toLowerCase().endsWith("gif")) type2 = "gif";
+			
 			(function(template, file){ // wrap it so we can continue processing asynchronously without screwing with the stack
 				var reader = new FileReader();
 				reader.onload = function(e) {
 					template.css("background", "url("+e.target.result+")");
+					
+					if(type2 == "jpeg"){
+						var img = new Image(); // strip metadata for privacy
+						img.onload = function(){
+							var canv = document.createElement("canvas");
+							canv.width = img.naturalWidth;
+							canv.height = img.naturalHeight;
+							var ctx = canv.getContext("2d");
+							ctx.drawImage(img, 0, 0);
+							
+							var binStr = canv.toBinStr("image/jpeg", 0.99);
+							var blob = canv.toBlob(function(blob){
+								template.find(".size").text(getPrettySize(blob.size));
+								var hash = md5(binStr);
+								if(allFiles.hasOwnProperty(hash)) return;
+								allFiles[hash] = blob;
+								template.attr("data-id", hash);
+								template.find(".del").click(function(){
+									var parent = $(this).parent().parent();
+									delete allFiles[parent.attr("data-id")];
+									parent.remove();
+								});
+								$("#upload-area").append(template);
+							}, "image/jpeg", 0.99);
+						};
+						img.src = e.target.result;
+					}
 				}
 				reader.readAsDataURL(file);
 			})(template, f);
@@ -406,23 +462,24 @@ function processFiles(files){
 				reader.readAsArrayBuffer(file);
 			})(template, f);
 		}
-		
-		(function(template, file){
-			var hashReader = new FileReader();
-			hashReader.onload = function (e2) {
-				var hash = md5(e2.target.result);
-				if(allFiles.hasOwnProperty(hash)) return;
-				allFiles[hash] = file;
-				template.attr("data-id", hash);
-				template.find(".del").click(function(){
-					var parent = $(this).parent().parent();
-					delete allFiles[parent.attr("data-id")];
-					parent.remove();
-				});
-				$("#upload-area").append(template);
-			};
-			hashReader.readAsBinaryString(file);
-		})(template, f);
+		if(type2 != "jpeg"){
+			(function(template, file){
+				var hashReader = new FileReader();
+				hashReader.onload = function (e2) {
+					var hash = md5(e2.target.result);
+					if(allFiles.hasOwnProperty(hash)) return;
+					allFiles[hash] = file;
+					template.attr("data-id", hash);
+					template.find(".del").click(function(){
+						var parent = $(this).parent().parent();
+						delete allFiles[parent.attr("data-id")];
+						parent.remove();
+					});
+					$("#upload-area").append(template);
+				};
+				hashReader.readAsBinaryString(file);
+			})(template, f);
+		}
 	}
 	
 	if(addedFiles != totalFiles){

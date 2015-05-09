@@ -649,6 +649,8 @@ a:visited {
     transition: all 0.2s;
     border: none;
     cursor: pointer;
+	box-sizing: border-box;
+	border: 1px inset transparent; /* prevent "earthquake" :P */
 }
 
 .toggleset button:first-child {
@@ -833,7 +835,7 @@ a:visited {
 }
 
 .modal-overlay {
-	position: absolute;
+	position: fixed;
 	top: 0px;
 	left: 0px;
 	width: 100%;
