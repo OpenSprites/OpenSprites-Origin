@@ -101,12 +101,11 @@ function drawBg(){
 			stackBlurCanvasRGB(canvas, 0, 0, canvas.width, canvas.height, 10);
 		}
 		img.src = "/uploads/avatar_blur.php?userid=" + OpenSprites.view.user.id;
-        
-        $(window).resize(drawBg);
 	} catch(e) {}
 }
 
 drawBg();
+$(window).resize(drawBg);
 
 $('.modal.edit-profile input#bg').change(function() {
 	var val = $(".modal.edit-profile input#bg").is(":checked");
@@ -156,6 +155,18 @@ $('.modal.edit-profile .btn.blue').click(function() {
 		thisBtn.text("OK").removeAttr("disabled");
 		if(typeof data == "object"){
 			OpenSprites.view.user.profile = data;
+			parseDesc(data['about']);
+			$("#location").text(data['location']);
+			
+			if(data['bgcolor'] == "avatar"){
+				$("#background-img").remove();
+				$("body").prepend($("<canvas id='background-img'></canvas>"));
+				drawBg();
+			} else {
+				$("#background-img").remove();
+				$("body").prepend($("<div id='background-img' style='background-color:" + data[bgcolor] + ";'></div>"));
+			}
+			
 			$(".modal-overlay, .modal.edit-profile").fadeOut();
 		} else {
 			$(".modal.edit-profile .error").text("Error: " + data);
