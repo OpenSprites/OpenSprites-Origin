@@ -119,7 +119,7 @@ $('.modal.edit-profile input#bg').change(function() {
 		
 $("#settings").click(function() {
 	$("#aboutme").val(OpenSprites.view.user.profile.about);
-	$("#location").val(OpenSprites.view.user.profile.location);
+	$("#text-location").val(OpenSprites.view.user.profile.location);
 	if(OpenSprites.view.user.profile.bgcolor == "avatar"){
 		$("#bg").prop("checked", true);
 		$('.modal.edit-profile #bg_true').hide();
@@ -142,8 +142,8 @@ $('.modal.edit-profile .btn.blue').click(function() {
         bg = 'avatar';
     }
     
-    var aboutme = $('.modal.edit-profile #aboutme').val();
-    var location = $('.modal.edit-profile #location').val();
+    var aboutme = $('#aboutme').val();
+    var location = $('#text-location').val();
     $.post("/users/edit.php", {userid: OpenSprites.user.id, aboutme: aboutme, location: location, bgcolor: bg}, function(data){
 		if(typeof data == "object"){
 			OpenSprites.view.user.profile = data;
