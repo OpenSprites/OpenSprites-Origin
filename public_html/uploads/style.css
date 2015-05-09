@@ -163,5 +163,7 @@
 .image-url {
 	font-size: 1.2em;
 	width: 100%;
-	padding:2px;
+	padding: 5px;
+	border: none;
+	border-radius: 10px;
 }
