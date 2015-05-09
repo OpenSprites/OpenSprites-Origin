@@ -22,14 +22,13 @@
 			<table>
 				<tr>
 					<td width="260">
-						<!-- replace this image pl0x -->
-						<img src="/assets/images/sharingcats.png" width="200" height="100" id="cats">
+						<img src="/assets/images/indev.png" width="200" height="100" id="cats">
 					</td>
 					<td valign="top">
 						<h2 class="welcome-title">OpenSprites is in development!
 							<a href="javascript:void(0)" class="btn" style="float:right;font-size:0.5em;" onclick="$('.welcome.info').slideUp()">Dismiss</a>
 						</h2>
-						<p class="welcome-text">The OpenSprites Team is still in the process of creating this site. This means that OpenSprites may not yet have all the stuff you want, and it may also have bugs, so be careful! Stay tuned for more updates on our <a href="http://blog.opensprites.gwiddle.co.uk/" style="color:white;text-decoration:underline">blog</a>!</p>
+						<p class="welcome-text">The OpenSprites Team is still in the process of creating this site. This means that OpenSprites may not yet have all the stuff you want, and it may also have bugs, so be careful!<br>Stay tuned for more updates on our <a href="/blog" style="color:white;text-decoration:underline">blog</a>!</p>
 					</td>
 				</tr>
 			</table>
