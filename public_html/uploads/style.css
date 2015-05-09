@@ -20,13 +20,24 @@
     z-index: 10;
 }
 
-#background-img {
+#background-img{
     top: 0;
     position: fixed;
     z-index: -100;
     width: 100%;
     height: 100%;
     background: rgb(101, 149, 147);
+}
+
+#overlay-img {
+	top: 0;
+    position: fixed;
+    z-index: -99;
+    width: 100%;
+    height: 100%;
+	background: rgb(101, 149, 147);
+	opacity: 0.5
+	transition: background 0.5s;
 }
 
 #username {

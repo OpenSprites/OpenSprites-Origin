@@ -79,10 +79,9 @@
     </script>
     
     <!-- Main wrapper -->
-    <?php if($obj['type'] != 'sound') { ?>
 	<canvas id='background-img'></canvas>
-    <?php } else { ?>
-    <div id='background-img' style='transition: background 500ms;'></div>
+    <?php if($obj['type'] == 'sound') { ?>
+	<div id='overlay-img'></div>
     <?php } ?>
     <div id='dark-overlay'><div id='overlay-inner'>
 		    <div id='username' class='asset-name'>
@@ -320,10 +319,10 @@
     <!-- background colors! -->
     <script src="/users/please.js"></script>
     <script>
-        $('#background-img').css('background', Please.make_color());
+        $('#overlay-img').css('background', Please.make_color());
         setInterval(function() {
             if(!document.getElementsByTagName('audio')[0].paused)
-                $('#background-img').css('background', Please.make_color());
+                $('#overlay-img').css('background', Please.make_color());
         }, 1000);
     </script>
     <?php } ?>
