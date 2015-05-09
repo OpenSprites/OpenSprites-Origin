@@ -50,7 +50,7 @@
     <link href='/users/user_style.css' rel='stylesheet' type='text/css'>
     <link href='/assets/js/spectrum/spectrum.css' rel='stylesheet' type='text/css'>
     <script src='/assets/js/spectrum/spectrum.js'></script>
-    <style>textarea {resize: none; width: 99%; height: 150px;} #location {width: 99%;} .buttons-container {bottom: 15px;}</style>
+    <style>textarea {resize: none; width: 99%; height: 250px;} #location {width: 99%;} .buttons-container {bottom: 15px;}</style>
 </head>
 <body>
     <?php
@@ -133,10 +133,9 @@
                     if($username == $logged_in_user) { ?>
                         <div id="change-image"><span id="change-text">Change...</span>
 							<!-- profile picture upload -->
-							<form id='avatar_upload' style="display:none;" enctype="multipart/form-data">
-								<input type="hidden" name="MAX_FILE_SIZE" value="8388608">
+							<form id='avatar_upload' enctype="multipart/form-data">
+								<input type="hidden" style="display:none;" name="MAX_FILE_SIZE" value="8388608">
 								<input name="uploadedfile" type="file" class="fill" accept="image/*">
-								<input type="submit">
 							</form>
 						</div>
                     <?php }
