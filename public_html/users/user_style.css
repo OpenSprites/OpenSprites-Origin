@@ -76,7 +76,6 @@
     padding: 20px !important;
     margin-bottom: 80px;
     transition: height 500ms;
-    border-radius: 4px;
 }
 
 .container.main {
@@ -84,7 +83,7 @@
     padding: 20px !important;
     margin-bottom: 80px;
     transition: height 500ms;
-    border-radius: 4px;
+    border-radius: 20px;
 }
 
 #user-pane-left {

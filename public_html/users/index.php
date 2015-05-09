@@ -32,7 +32,7 @@
             return array_map(__METHOD__, $inp); 
 
         if(!empty($inp) && is_string($inp)) { 
-            return str_replace(array('\\\\', '\\0', '/n', '\\r', "\\'", '\\"', '\\Z'), array('\\', "\0", "\n", "\r", "'", '"', "\x1a"), $inp); 
+            return str_replace(array('\\\\', '\\0', '/n', '\\r', "\\'", '\\"', '\\Z', '$hashtag$'), array('\\', "\0", "&#13;", "\r", "'", '"', "\x1a", '#'), $inp); 
         } 
 
         return $inp; 
@@ -137,8 +137,8 @@
     <div class="container main" id="about">
         <div class="main-inner">
             <h1>About Me</h1>
-            <p>
-				<?php echo nl2br(unescape(htmlspecialchars($user['about']))); ?>
+            <p class='about-section desc'>
+				Loading...
 			</p>
         </div>
     </div>
@@ -164,6 +164,8 @@
     </div>
     <?php }?>
     
+    <script src='/assets/lib/marked/marked.js'></script>
+    
     <script>
         $('#change-image').click(function() {
             // display modal for changing profile pic
@@ -183,13 +185,50 @@
             }
         });
 		
+		var desc = <?php echo json_encode(unescape($user['about'])); ?>.replace(/&#13;/g, '\n');
 		
-		// let's only suspend, not delete
-        /*$('#admindelete').click(function() {
-            if(confirm('Are you SURE you want to pernamently DELETE ' + OpenSprites.view.user.name + '!?')) {
-                window.location = "/users/admindelete.php?username=" + OpenSprites.view.user.name;
-            }
-        });*/
+		function warnGoingAway(where){
+			$(".modal.leaving .btn.blue").off();
+			$(".modal.leaving .btn.blue").on("click", function(){
+				$(".modal-overlay, .modal.leaving").fadeOut();
+			});
+		
+			$(".modal.leaving .btn.red").off();
+			$(".leaving-url").text(where);
+			$(".modal-overlay, .modal.leaving").fadeIn();
+			(function(where){
+				$(".modal.leaving .btn.red").on("click", function(){
+					window.open(where);
+					$(".modal-overlay, .modal.leaving").fadeOut();
+				});
+			})(where);
+		}
+		
+		function parseDesc(desc){
+			//sad that we have to disallow HTML, but I can't find a good way to sanitize it DX
+            var xx = marked(desc, {sanitize: true}).replace(/\n/g, '<br>');
+            xx = xx.substr(0, xx.length-1);
+			$(".desc").html(xx);
+			
+			$(".desc a").each(function(){
+				$(this).attr("target", "_blank");
+				if($(this).attr("href").toLowerCase().startsWith("javascript")){
+					$(this).attr("href", "https://www.youtube.com/watch?v=oHg5SJYRHA0"); // haha get rekt :P
+				}
+			});
+			
+			$(".desc a").click(function(e){
+				var rawLink = $(this).get(0);
+				var hostName = rawLink.hostname;
+				if(!OpenSprites.etc.isHostSafe(hostName)){
+					warnGoingAway($(this).attr("href"));
+					e.preventDefault();
+					return false;
+				}
+			});
+		}
+		
+		parseDesc(desc);
     </script>
 	<script src='/assets/lib/stackblur/stackblur.js'></script>
 	
@@ -197,7 +236,7 @@
     
 	<!-- modal -->
     <div class="modal-overlay"></div>
-    <div class="modal">
+    <div class="modal edit-profile">
 		<div class="modal-content">
 			<h1>Profile Settings</h1>
             
@@ -205,8 +244,8 @@
             <input type="checkbox" id='bg'>Use my avatar image<br>
             <span id='bg_true'><input type="text" name="bgcolor" id="bgcolor" value="rgb(101, 149, 147)"></span><br>
             
-            <p><i>About Me</i><br>Write something about yourself that doesn't have your phone number, address, or anything else that is against the <a href='/tos/'>Terms Of Service</a>.</p>
-            <textarea id='aboutme' maxlength='500'><?php echo htmlspecialchars($profiledata['about']); ?></textarea><br>
+            <p><i>About Me</i><br>Write something about yourself that doesn't have your phone number, address, or anything else that is against the <a href='/tos/'>Terms Of Service</a>. Supports <a href='https://help.github.com/articles/github-flavored-markdown/'>Markdown</a>.</p>
+            <textarea id='aboutme' maxlength='500'><?php echo str_replace('\n', '&#13;', unescape($profiledata['about'])); ?></textarea><br>
             
             <p><i>Location</i><br>If you want to let people know which country you live in, you can tell them. Be warned- don't give away your exact location!</p>
             <input type='text' id='location' maxlength='30' value='<?php echo htmlspecialchars(unescape($profiledata['location'])); ?>'><br>
@@ -214,6 +253,22 @@
 			<div class="buttons-container">
 				<button class='btn red'>Cancel</button>
 				<button class='btn blue'>OK</button>
+			</div>
+		</div>
+	</div>
+    
+    <div class="modal leaving">
+		<div class="modal-content">
+			<h1>You are leaving OpenSprites!</h1>
+			<p class="leaving-desc">
+				[Insert some swaggy visual here]<br/><br/>
+				This about section is taking you to <span class="leaving-url"></span><br/><br/>
+				Sites that aren't OpenSprites have the potential to be dangerous, or could have unwanted content.<br/><br/>
+				Proceed only if you recognize the site or understand the risk involved.
+			</p>
+			<div class="buttons-container">
+				<button class='btn blue'>Stay here!</button>
+				<button class='btn red'>Proceed</button>
 			</div>
 		</div>
 	</div>
