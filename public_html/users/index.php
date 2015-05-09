@@ -116,7 +116,7 @@
     <div class="container main" id="about">
         <div class="main-inner">
             <h1>About Me</h1>
-            <p class='about-section'>
+            <p class='about-section desc'>
 				Formatting about section...
 			</p>
         </div>
