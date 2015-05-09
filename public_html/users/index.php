@@ -318,6 +318,9 @@
 			</div>
 		</div>
 	</div>
+	
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/cropper/0.9.1/cropper.min.js"></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/cropper/0.9.1/cropper.min.css" />
 	<?php } ?>
 	
 	<script src='../user.js'></script>

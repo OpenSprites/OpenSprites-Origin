@@ -186,5 +186,30 @@ $('.modal.edit-profile .btn.blue').click(function() {
 var mdHints = OpenSprites.models.MdHints($('#aboutme'));
 
 $("#change-image input[type=file]").change(function(){
-	// todo: ajax this
+	$("#cropper-container > img").cropper("destroy");
+	$("#progress-container").text("");
+	$("#cropper-container").text("Loading image...");
+	$(".modal-overlay, .modal.cropavatar").fadeIn(700, function(){
+		if(!window.Blob || !window.File || !window.FormData){
+			$("#cropper-container").text("Whoops! Your browser doesn't support what we need to crop your avatar. Upgrade to the latest Firefox/Firefox-derivative or Chrome/Chromium/Opera.");
+			return;
+		}
+		
+		var reader = new FileReader();
+		reader.onload = function(e) {
+			var img = $("<img>").attr("src", e.target.result);
+			$("#cropper-container").html("").append(img);
+			img.cropper({
+				aspectRatio: 1,
+				crop: function(data) {
+					console.log(data);
+				}
+			});
+		}
+		reader.readAsDataURL(file);
+	});
+});
+
+$(".modal.cropavatar .btn.red").click(function(){
+	$(".modal-overlay, .modal.cropavatar").fadeOut();
 });
