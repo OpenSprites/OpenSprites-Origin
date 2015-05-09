@@ -65,9 +65,9 @@
         OpenSprites.view.user.id = <?php echo json_encode($user['userid']); ?>;
         OpenSprites.view.user.name = <?php echo json_encode($user['username']); ?>;
 		OpenSprites.view.user.profile = {};
-		OpenSprites.view.user.profile.about = <?php echo json_encode($profiledata['about']); ?>
-		OpenSprites.view.user.profile.location = <?php echo json_encode($profiledata['location']); ?>
-		OpenSprites.view.user.profile.bgcolor = <?php echo json_encode($profileSettings['bgcolor']); ?>
+		OpenSprites.view.user.profile.about = <?php echo json_encode($profiledata['about']); ?>;
+		OpenSprites.view.user.profile.location = <?php echo json_encode($profiledata['location']); ?>;
+		OpenSprites.view.user.profile.bgcolor = <?php echo json_encode($profileSettings['bgcolor']); ?>;
     </script>
     
     <!-- Main wrapper -->
