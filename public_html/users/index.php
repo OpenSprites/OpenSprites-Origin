@@ -304,6 +304,20 @@
 			</div>
 		</div>
 	</div>
+	
+	<div class="modal cropavatar">
+		<div class="modal-content">
+			<h1>Crop your avatar</h1>
+			<div id="cropper-container"></div>
+			<div class="buttons-container">
+				<button class='btn red'>Cancel</button>
+				<button class='btn blue'>Set Avatar</button>
+			</div>
+			<div class="progress-container">
+				
+			</div>
+		</div>
+	</div>
 	<?php } ?>
 	
 	<script src='../user.js'></script>
