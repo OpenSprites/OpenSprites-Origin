@@ -269,7 +269,7 @@
 			<h1>You are leaving OpenSprites!</h1>
 			<p class="leaving-desc">
 				[Insert some swaggy visual here]<br/><br/>
-				This resource description is taking you to <span class="leaving-url"></span><br/>
+				This resource description is taking you to <span class="leaving-url"></span><br/><br/>
 				Sites that aren't OpenSprites have the potential to be dangerous, or could have unwanted content.<br/><br/>
 				Proceed only if you recognize the site or understand the risk involved.
 			</p>
