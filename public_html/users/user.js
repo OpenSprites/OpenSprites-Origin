@@ -152,7 +152,7 @@ $('.modal.edit-profile .btn.blue').click(function() {
     
     var aboutme = $('#aboutme').val();
     var location = $('#text-location').val();
-    $.post("/users/edit.php", {userid: OpenSprites.user.id, aboutme: aboutme, location: location, bgcolor: bg}, function(data){
+    $.post("/users/edit.php", {userid: OpenSprites.user.id, about: aboutme, location: location, bgcolor: bg}, function(data){
 		thisBtn.text("OK").removeAttr("disabled");
 		if(typeof data == "object"){
 			OpenSprites.view.user.profile = data;
@@ -161,6 +161,9 @@ $('.modal.edit-profile .btn.blue').click(function() {
 			$(".modal.edit-profile .error").text("Error: " + data);
 		}
 	}).fail(function(){
+		thisBtn.text("OK").removeAttr("disabled");
 		$(".modal.edit-profile .error").text("Sorry, we were unable to update your profile. Try again later.");
 	});
 });
+
+var mdHints = OpenSprites.models.MdHints($('#aboutme'));

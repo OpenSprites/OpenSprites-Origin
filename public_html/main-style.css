@@ -870,3 +870,17 @@ a:visited {
 	color: rgb(244, 244, 244);
 }
 
+.md-hint {
+	position: relative;
+}
+
+.md-hint.show-hint::after{
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    content: attr(data-hint);
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 0.2em;
+    font-size: 0.8em;
+}

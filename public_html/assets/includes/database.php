@@ -48,6 +48,12 @@ function forumQuery($query, $parameters){
 	return $res;
 }
 
+function forumQuery0($query, $parameters){
+	global $forum_dbh;
+	$stmt = $forum_dbh->prepare($query);
+	$stmt->execute($parameters);
+}
+
 function setAccountType($username, $type){
 	global $forum_dbh;
 	global $forum_member_table;
@@ -61,7 +67,7 @@ function setProfileSettings($userid, $settings){
 	
 	$res = forumQuery("SELECT * FROM `os_profile_settings` WHERE `userid`=?", array($userid));
 	if(sizeof($res) == 0){
-		$stmt = $forum_dbh->prepare("INSERT INTO `os_profile_settings` (`userid`, `bgcolor`) VALUES (:userid, :bgcolor,)");
+		$stmt = $forum_dbh->prepare("INSERT INTO `os_profile_settings` (`userid`, `bgcolor`) VALUES (:userid, :bgcolor)");
 		$stmt->execute(array(":userid" => $userid, ":bgcolor" => $settings['bgcolor']));
 	} else {
 		$stmt = $forum_dbh->prepare("UPDATE `os_profile_settings` SET `bgcolor`=:bgcolor WHERE `userid`=:userid");
