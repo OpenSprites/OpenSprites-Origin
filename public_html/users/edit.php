@@ -28,7 +28,6 @@ $bgcolor = preg_replace("/\\s*/", "", $bgcolor); // strip whitespace
 
 $bgreg1 = "/rgb\([0-9]+,[0-9]+,[0-9]+\)/i";   // format: rgb(n, n, n)
 $bgreg2 = "/(#[0-9a-f]{6})|(#[0-9a-f]{3})/i"; // format: #hhh or #hhhhhh
-$bgreg3 = "/hsv\([0-9]+,[0-9]+%,[0-9]+%\)/i";    // format: hsv(n, n%, n%)
 if(preg_match($bgreg1, $bgcolor) !== 1 && preg_match($bgreg2, $bgcolor) !== 1){
 	$bgcolor = "avatar"; // don't bother with an error message, we don't tolerate haxx :P
 }

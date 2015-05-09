@@ -144,7 +144,7 @@ $('.modal.edit-profile .btn.blue').click(function() {
 	var thisBtn = $(this);
 	thisBtn.text("Loading...").attr("disabled", "disabled");
 	$(".modal.edit-profile .error").text("");
-    var bg =  $('.modal.edit-profile input[name=bgcolor]').val();
+    var bg = $("#bgcolor").spectrum("get").toRgbString();
     if($(".modal.edit-profile input#bg").is(":checked")) {
         bg = 'avatar';
     }
