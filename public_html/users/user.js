@@ -123,8 +123,14 @@ $("#settings").click(function() {
 	if(OpenSprites.view.user.profile.bgcolor == "avatar"){
 		$("#bg").prop("checked", true);
 		$('.modal.edit-profile #bg_true').hide();
+		$("#bgcolor").spectrum({
+			color: "rgb(101, 149, 147)"
+		});
 	} else {
 		$("#bgcolor").val(OpenSprites.view.user.profile.bgcolor);
+		$("#bgcolor").spectrum({
+			color: OpenSprites.view.user.profile.bgcolor
+		});
 		$("#bg").prop("checked", false);
 		$('.modal.edit-profile #bg_true').show();
 	}
