@@ -24,6 +24,19 @@
         $user = json_decode($raw_json, true);
         $username = $user['username'];
     }
+
+    $profiledata = getUserInfo(intval($id));
+
+    function unescape($inp) { 
+        if(is_array($inp)) 
+            return array_map(__METHOD__, $inp); 
+
+        if(!empty($inp) && is_string($inp)) { 
+            return str_replace(array('\\\\', '\\0', '/n', '\\r', "\\'", '\\"', '\\Z'), array('\\', "\0", "\n", "\r", "'", '"', "\x1a"), $inp); 
+        } 
+
+        return $inp; 
+    }
 ?>
 <!DOCTYPE html>
 <html>
@@ -35,6 +48,7 @@
     <link href='/users/user_style.css' rel='stylesheet' type='text/css'>
     <link href='/assets/js/spectrum/spectrum.css' rel='stylesheet' type='text/css'>
     <script src='/assets/js/spectrum/spectrum.js'></script>
+    <style>textarea {resize: none; width: 99%; height: 90px;} #location {width: 99%;} .buttons-container {bottom: 15px;}</style>
 </head>
 <body>
     <?php
@@ -51,7 +65,14 @@
     </script>
     
     <!-- Main wrapper -->
+    <?php
+    $editdata = file_get_contents('http://opensprites.gwiddle.co.uk/users/edit.php?userid='.$id);
+    if($editdata == 'false' || $editdata == 'avatar' || json_decode($editdata)->bgcolor == 'avatar') {
+    ?>
     <canvas id='background-img'></canvas>
+    <?php } else { ?>
+    <div id='background-img' style='background:<?php echo json_decode($editdata)->bgcolor; ?>;'></div>
+    <?php } ?>
     <div id='dark-overlay'><div id='overlay-inner'>
         <div id="user-pane-right">
             <?php if($user_exist) { ?>
@@ -117,7 +138,7 @@
         <div class="main-inner">
             <h1>About Me</h1>
             <p>
-				<?php echo nl2br(htmlspecialchars($user['about'])); ?>
+				<?php echo nl2br(unescape(htmlspecialchars($user['about']))); ?>
 			</p>
         </div>
     </div>
@@ -182,8 +203,14 @@
             
             <p><i>Profile Background</i><br>You can set a color for your background on this profile page, or simply just use your avatar image.</p>
             <input type="checkbox" id='bg'>Use my avatar image<br>
-            <span id='bg_true'><input type="text" name="bgcolor" id="bgcolor" value="rgb(101, 149, 147)"></span>
+            <span id='bg_true'><input type="text" name="bgcolor" id="bgcolor" value="rgb(101, 149, 147)"></span><br>
             
+            <p><i>About Me</i><br>Write something about yourself that doesn't have your phone number, address, or anything else that is against the <a href='/tos/'>Terms Of Service</a>.</p>
+            <textarea id='aboutme' maxlength='500'><?php echo htmlspecialchars($profiledata['about']); ?></textarea><br>
+            
+            <p><i>Location</i><br>If you want to let people know which country you live in, you can tell them. Be warned- don't give away your exact location!</p>
+            <input type='text' id='location' maxlength='30' value='<?php echo htmlspecialchars(unescape($profiledata['location'])); ?>'><br>
+     
 			<div class="buttons-container">
 				<button class='btn red'>Cancel</button>
 				<button class='btn blue'>OK</button>

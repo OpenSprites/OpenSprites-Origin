@@ -105,7 +105,7 @@ curl_setopt($handle,  CURLOPT_RETURNTRANSFER, TRUE);
 $response = curl_exec($handle);
 $httpCode = curl_getinfo($handle, CURLINFO_HTTP_CODE);
 if($httpCode == 404) {
-    $userInfo2['avatar'] = "//opensprites.gwiddle.co.uk/assets/images/defaultfile.png";
+    $userInfo2['avatar'] = "//opensprites.gwiddle.co.uk/assets/images/defaultuser.png";
 }
 curl_close($handle);
 
