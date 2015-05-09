@@ -21,7 +21,7 @@ if(!isset($_POST['bgcolor']) || !isset($_POST['about']) || !isset($_POST['locati
 	die('Missing parameters!');
 }
 
-//header("Content-Type: application/json");
+header("Content-Type: application/json");
 
 $bgcolor = $_POST['bgcolor'];
 $bgcolor = preg_replace("/\\s*/", "", $bgcolor); // strip whitespace
