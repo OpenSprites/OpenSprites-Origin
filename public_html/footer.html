@@ -1,4 +1,4 @@
-<div class="footer">
+<div class="footer" style='display:none;'>
 	<a href="/about/">About Us</a> - <a href="mailto:team@opensprites.gwiddle.co.uk">Contact Us</a> - <a href="/tos/">Terms of Service</a> - <a href="/privacy/">Privacy</a> <span class='if_admin'>- <a href="/admin/">Admin</a></span>
 	<br/>
 	OpenSprites is a resources site developed by the <a href="/tos/">OpenSprites Team</a>.<br>
@@ -20,10 +20,11 @@
 		var footer = function() {
 			$('.footer').css('height', (($('.footer').position().top - $(window).height()) * -1));
 			$('.footer').css('margin-top', '-1.5em');
+			$('.footer').show();
 		};
 		$(document).ready(footer);
 		$(window).load(footer);
-		for(var i=500;i<5000;i+=500) setTimeout(footer, i); // idk why document.ready and window.load aren't working...
+		for(var i=500;i<5000;i+=500) setTimeout(footer, i);
 		$(window).resize(footer);
 	})();
 </script>
