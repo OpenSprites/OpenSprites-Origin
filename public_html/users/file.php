@@ -147,7 +147,7 @@
 				<audio style="width: 100%;" controls preload='metadata' src='<?php echo $obj['url'] ?>';></audio><br/><br/>
             <?php } ?>
 			<h1>Description</h1>
-			<p class='desc'><?php echo nl2br(htmlspecialchars($obj['description'])); ?></p>
+			<p class='desc'></p>
 			<?php if($obj['type'] == 'image'){ ?>
 				<h2>Direct links</h2>
 				<p>Use this link to embed this image on websites.</p>
@@ -272,6 +272,34 @@
 	<script src="/uploads/edit.js"></script>
 	
 	<?php } ?>
+    
+    <script src='/assets/lib/marked/marked.js'></script>
+    <script>
+        var desc = <?php echo json_encode(htmlspecialchars($obj['description'])); ?>;
+        function parseDesc(desc){
+			//                             \/ sad that we have to disallow HTML, but I can't find a good way to sanitize it DX
+			$(".desc").html(marked(desc, {sanitize: true}));
+			
+			$(".desc a").each(function(){
+				$(this).attr("target", "_blank");
+				if($(this).attr("href").toLowerCase().startsWith("javascript")){
+					$(this).attr("href", "https://www.youtube.com/watch?v=oHg5SJYRHA0"); // haha get rekt :P
+				}
+			});
+			
+			$(".desc a").click(function(e){
+				var rawLink = $(this).get(0);
+				var hostName = rawLink.hostname;
+				if(!OpenSprites.etc.isHostSafe(hostName)){
+					warnGoingAway($(this).attr("href"));
+					e.preventDefault();
+					return false;
+				}
+			});
+		}
+		
+		parseDesc(desc);
+    </script>
     
     <!-- footer -->
     <?php echo file_get_contents('../footer.html'); ?>

@@ -91,27 +91,26 @@ function drawImageProp(ctx, img, x, y, w, h, offsetX, offsetY) {
 }
 
 function drawBg(){
-	var canvasId = "background-img";
-	var canvas = document.getElementById(canvasId);
-	if(canvas !== null) {
+	var canvas = document.getElementsByTagName('canvas');
+	try {
+        canvas = canvas[0];
 		var context = canvas.getContext("2d");
-	
 		var img = new Image();
 		img.onload = function() {
 			drawImageProp(context, img);
 			stackBlurCanvasRGB(canvas, 0, 0, canvas.width, canvas.height, 10);
 		}
 		img.src = "/uploads/avatar_blur.php?userid=" + OpenSprites.view.user.id;
-	}
+        
+        $(window).resize(drawBg);
+	} catch(e) {}
 }
 
 drawBg();
-$(window).resize(drawBg);
 
 /* fancy modal */
 $("#settings").click(function() {
     $.get('/users/edit.php', function(data) {
-        console.log(data);
         if(data == 'false') {
             json = {
                 bgcolor: 'avatar'
@@ -120,27 +119,42 @@ $("#settings").click(function() {
             json = data;
         }
         
-        $('.modal input[name=bgcolor]').val(json.bgcolor == 'avatar' ? 'rgb(101, 149, 147)' : json.bgcolor);
-        $('.modal input#bg').val(json.bgcolor == 'avatar');
+        $('.modal.edit-profile input[name=bgcolor]').val(json.bgcolor == 'avatar' ? 'rgb(101, 149, 147)' : json.bgcolor);
+        $('.modal.edit-profile input#bg').attr('checked', json.bgcolor == 'avatar');
         
-        $('.modal input[name=bgcolor]').spectrum({
-            showButtons: false    
+        if(json.bgcolor == 'avatar') $('.modal.edit-profile #bg_true').hide();
+        
+        $('.modal.edit-profile input[name=bgcolor]').spectrum({
+            showButtons: false,
+            showInput: true,
+            preferredFormat: "rgb"
         });
 
-        $('.modal input#bg').change(function() {
-            var val = $(".modal input#bg:checked").map(function() {return this.value;}).get().join(",");
-            console.log(val);
+        $('.modal.edit-profile input#bg').change(function() {
+            var val = $(".modal.edit-profile input#bg:checked").map(function() {return this.value;}).get().join(",");
             if(val) {
-                $('.modal #bg_true').hide();
+                $('.modal.edit-profile #bg_true').hide();
             } else {
-                $('.modal #bg_true').show();
+                $('.modal.edit-profile #bg_true').show();
             }
         });
         
-        $(".modal-overlay, .modal").fadeIn();
+        $(".modal.edit-profile-overlay, .modal.edit-profile").fadeIn();
     });
 });
 
-$('.modal .btn.red').click(function() {
-	$(".modal-overlay, .modal").fadeOut();
+$('.modal.edit-profile .btn.red').click(function() {
+	$(".modal.edit-profile-overlay, .modal.edit-profile").fadeOut();
+});
+
+$('.modal.edit-profile .btn.blue').click(function() {
+    var bg =  $('.modal.edit-profile input[name=bgcolor]').val();
+    if($(".modal.edit-profile input#bg:checked").map(function() {return this.value;}).get().join(",") == 'on') {
+        bg = 'avatar';
+    }
+    
+    var aboutme = $('.modal.edit-profile #aboutme').val().replace(/\n/g, '/n').replace(/#/g, '$hashtag$').replace(/&/g, '$and$');
+    var location = $('.modal.edit-profile #location').val();
+    var href = '/users/edit.php?bgcolor='+bg+'&aboutme='+aboutme+'&location='+location;
+    window.location = href;
 });
