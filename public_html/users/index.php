@@ -164,13 +164,14 @@
             }
         });
 		
-		$(".modal.leaving .btn.blue").click(function(){
-			$(".modal-overlay, .modal.leaving").fadeOut();
-		});
-		
 		var desc = <?php echo json_encode($user['about']); ?>;
 		
 		function warnGoingAway(where){
+			$(".modal.leaving .btn.blue").off();
+			$(".modal.leaving .btn.blue").on("click", function(){
+				$(".modal-overlay, .modal.leaving").fadeOut();
+			});
+		
 			$(".modal.leaving .btn.red").off();
 			$(".leaving-url").text(where);
 			$(".modal-overlay, .modal.leaving").fadeIn();
