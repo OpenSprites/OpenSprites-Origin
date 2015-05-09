@@ -144,7 +144,7 @@ $('.modal.edit-profile .btn.red').click(function() {
 $('.modal.edit-profile .btn.blue').click(function() {
 	var thisBtn = $(this);
 	thisBtn.text("Loading...").attr("disabled", "disabled");
-	$(".model.edit-profile .error").text("");
+	$(".modal.edit-profile .error").text("");
     var bg =  $('.modal.edit-profile input[name=bgcolor]').val();
     if($(".modal.edit-profile input#bg").is(":checked")) {
         bg = 'avatar';
@@ -158,9 +158,9 @@ $('.modal.edit-profile .btn.blue').click(function() {
 			OpenSprites.view.user.profile = data;
 			$(".modal-overlay, .modal.edit-profile").fadeOut();
 		} else {
-			$(".model.edit-profile .error").text(data);
+			$(".modal.edit-profile .error").text("Error: " + data);
 		}
 	}).fail(function(){
-		$(".model.edit-profile .error").text("Sorry, we were unable to update your profile. Try again later.");
+		$(".modal.edit-profile .error").text("Sorry, we were unable to update your profile. Try again later.");
 	});
 });
