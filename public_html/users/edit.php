@@ -52,5 +52,5 @@ if(sizeof($aRes) == 0){
 	forumQuery0("UPDATE `et_profile_data` SET `data`=? WHERE `memberId`=? AND `fieldId`=?", array($about, $id, 1));
 }
 
-echo json_encode(array("about" => $about, "location" => "location", "bgcolor" => "bgcolor"));
+echo json_encode(array("about" => $about, "location" => $location, "bgcolor" => $bgcolor));
 ?>
