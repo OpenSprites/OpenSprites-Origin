@@ -9,6 +9,10 @@
 	padding-right: 0.3em;
 }
 
+#text-location {
+	width: 99%;
+}
+
 #dark-overlay {
     position: absolute;
     top: 0;
