@@ -127,9 +127,10 @@ a.scratch:hover {
 .container {
     max-width: 940px;
     margin: auto;
-    background-color: white;
     padding-left: 20px;
     padding-right: 20px;
+    background-color: rgba(0, 0, 0, 0.5); 
+    color: rgb(244, 244, 244);
 }
 
 .main-inner {
