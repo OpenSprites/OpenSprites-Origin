@@ -138,11 +138,7 @@
         <div class="main-inner">
             <h1>About Me</h1>
             <p class='about-section desc'>
-<<<<<<< HEAD
 				Loading...
-=======
-				Formatting about section...
->>>>>>> origin/master
 			</p>
         </div>
     </div>
@@ -167,14 +163,7 @@
         </div>
     </div>
     <?php }?>
-    
-<<<<<<< HEAD
-    <script src='/assets/lib/marked/marked.js'></script>
-    
-=======
-	<script src="/assets/lib/marked/marked.js"></script>
-	
->>>>>>> origin/master
+    <script src="/assets/lib/marked/marked.js"></script>
     <script>
         $('#change-image').click(function() {
             // display modal for changing profile pic
@@ -194,11 +183,7 @@
             }
         });
 		
-<<<<<<< HEAD
 		var desc = <?php echo json_encode(unescape($user['about'])); ?>.replace(/&#13;/g, '\n');
-=======
-		var desc = <?php echo json_encode($user['about']); ?>;
->>>>>>> origin/master
 		
 		function warnGoingAway(where){
 			$(".modal.leaving .btn.blue").off();
@@ -218,15 +203,10 @@
 		}
 		
 		function parseDesc(desc){
-<<<<<<< HEAD
 			//sad that we have to disallow HTML, but I can't find a good way to sanitize it DX
             var xx = marked(desc, {sanitize: true}).replace(/\n/g, '<br>');
             xx = xx.substr(0, xx.length-1);
 			$(".desc").html(xx);
-=======
-			//                             \/ sad that we have to disallow HTML, but I can't find a good way to sanitize it DX
-			$(".desc").html(marked(desc, {sanitize: true}));
->>>>>>> origin/master
 			
 			$(".desc a").each(function(){
 				$(this).attr("target", "_blank");
