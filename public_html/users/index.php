@@ -143,6 +143,8 @@
     </div>
     <?php }?>
     
+	<script src="/assets/lib/marked/marked.js"></script>
+	
     <script>
         $('#change-image').click(function() {
             // display modal for changing profile pic
