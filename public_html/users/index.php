@@ -116,8 +116,8 @@
     <div class="container main" id="about">
         <div class="main-inner">
             <h1>About Me</h1>
-            <p>
-				<?php echo nl2br(htmlspecialchars($user['about'])); ?>
+            <p class='about-section'>
+				Formatting about section...
 			</p>
         </div>
     </div>
@@ -162,13 +162,47 @@
             }
         });
 		
+		$(".modal.leaving .btn.blue").click(function(){
+			$(".modal-overlay, .modal.leaving").fadeOut();
+		});
 		
-		// let's only suspend, not delete
-        /*$('#admindelete').click(function() {
-            if(confirm('Are you SURE you want to pernamently DELETE ' + OpenSprites.view.user.name + '!?')) {
-                window.location = "/users/admindelete.php?username=" + OpenSprites.view.user.name;
-            }
-        });*/
+		var desc = <?php echo json_encode($user['about']); ?>;
+		
+		function warnGoingAway(where){
+			$(".modal.leaving .btn.red").off();
+			$(".leaving-url").text(where);
+			$(".modal-overlay, .modal.leaving").fadeIn();
+			(function(where){
+				$(".modal.leaving .btn.red").on("click", function(){
+					window.open(where);
+					$(".modal-overlay, .modal.leaving").fadeOut();
+				});
+			})(where);
+		}
+		
+		function parseDesc(desc){
+			//                             \/ sad that we have to disallow HTML, but I can't find a good way to sanitize it DX
+			$(".desc").html(marked(desc, {sanitize: true}));
+			
+			$(".desc a").each(function(){
+				$(this).attr("target", "_blank");
+				if($(this).attr("href").toLowerCase().startsWith("javascript")){
+					$(this).attr("href", "https://www.youtube.com/watch?v=oHg5SJYRHA0"); // haha get rekt :P
+				}
+			});
+			
+			$(".desc a").click(function(e){
+				var rawLink = $(this).get(0);
+				var hostName = rawLink.hostname;
+				if(!OpenSprites.etc.isHostSafe(hostName)){
+					warnGoingAway($(this).attr("href"));
+					e.preventDefault();
+					return false;
+				}
+			});
+		}
+		
+		parseDesc(desc);
     </script>
 	<script src='/assets/lib/stackblur/stackblur.js'></script>
 	
@@ -176,7 +210,7 @@
     
 	<!-- modal -->
     <div class="modal-overlay"></div>
-    <div class="modal">
+    <div class="modal edit-profile">
 		<div class="modal-content">
 			<h1>Profile Settings</h1>
             
@@ -187,6 +221,22 @@
 			<div class="buttons-container">
 				<button class='btn red'>Cancel</button>
 				<button class='btn blue'>OK</button>
+			</div>
+		</div>
+	</div>
+	
+	<div class="modal leaving">
+		<div class="modal-content">
+			<h1>You are leaving OpenSprites!</h1>
+			<p class="leaving-desc">
+				[Insert some swaggy visual here]<br/><br/>
+				This about section is taking you to <span class="leaving-url"></span><br/><br/>
+				Sites that aren't OpenSprites have the potential to be dangerous, or could have unwanted content.<br/><br/>
+				Proceed only if you recognize the site or understand the risk involved.
+			</p>
+			<div class="buttons-container">
+				<button class='btn blue'>Stay here!</button>
+				<button class='btn red'>Proceed</button>
 			</div>
 		</div>
 	</div>

@@ -120,27 +120,27 @@ $("#settings").click(function() {
             json = data;
         }
         
-        $('.modal input[name=bgcolor]').val(json.bgcolor == 'avatar' ? 'rgb(101, 149, 147)' : json.bgcolor);
-        $('.modal input#bg').val(json.bgcolor == 'avatar');
+        $('.modal.edit-profile input[name=bgcolor]').val(json.bgcolor == 'avatar' ? 'rgb(101, 149, 147)' : json.bgcolor);
+        $('.modal.edit-profile input#bg').val(json.bgcolor == 'avatar');
         
-        $('.modal input[name=bgcolor]').spectrum({
+        $('.modal.edit-profile input[name=bgcolor]').spectrum({
             showButtons: false    
         });
 
-        $('.modal input#bg').change(function() {
-            var val = $(".modal input#bg:checked").map(function() {return this.value;}).get().join(",");
+        $('.modal.edit-profile input#bg').change(function() {
+            var val = $(".modal.edit-profile input#bg:checked").map(function() {return this.value;}).get().join(",");
             console.log(val);
             if(val) {
-                $('.modal #bg_true').hide();
+                $('.modal.edit-profile #bg_true').hide();
             } else {
-                $('.modal #bg_true').show();
+                $('.modal.edit-profile #bg_true').show();
             }
         });
         
-        $(".modal-overlay, .modal").fadeIn();
+        $(".modal-overlay, .modal.edit-profile").fadeIn();
     });
 });
 
-$('.modal .btn.red').click(function() {
-	$(".modal-overlay, .modal").fadeOut();
+$('.modal.edit-profile .btn.red').click(function() {
+	$(".modal-overlay, .modal.edit-profile").fadeOut();
 });
