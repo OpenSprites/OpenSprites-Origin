@@ -170,7 +170,7 @@ OpenSprites.models.MdHints = function(_target){
 		$(this).parent().removeClass("show-hint");
 		var content = $(this).val();
 		if(content.match(/[^\n ]\n[^\n]/) !== null){
-			$(this).parent().parent().addClass("show-hint").attr("data-hint", "To make a new line in markdown, you either need to end a line with two spaces, or add two new lines.");
+			$(this).parent().addClass("show-hint").attr("data-hint", "To make a new line in markdown, you either need to end a line with two spaces, or add two new lines.");
 		}
 	});
 	return modelObj;
