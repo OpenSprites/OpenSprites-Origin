@@ -286,8 +286,6 @@
 		</div>
 	</div>
 	
-	<script src="/uploads/edit.js"></script>
-	
 	<?php } ?>
     
     <script src='/assets/lib/marked/marked.js'></script>
@@ -329,6 +327,8 @@
         }, 1000);
     </script>
     <?php } ?>
+	
+	<script src="/uploads/edit.js"></script>
     
     <!-- footer -->
     <?php echo file_get_contents('../footer.html'); ?>
