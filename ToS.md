@@ -20,7 +20,7 @@ This policy forms an agreement between the end-user (You, User, Your), and OpenS
    - Audio in the formats: MPEG-3, WAV
    - Scripts in the JSON format specified by MIT Scratch
  - OpenSprites has a young user-base; uploading content unsuitable for ALL ages in strictly prohibited and legal action may be taken against the offending user.
- - Sharing information that is or potentially could be (personally identifiable information)[http://en.wikipedia.org/wiki/Personally_identifiable_information] (PII), of any OpenSprites or MIT Scratch user, unless one of the following conditions is met:
+ - Sharing information that is or potentially could be [personally identifiable information](http://en.wikipedia.org/wiki/Personally_identifiable_information) (PII), of any OpenSprites or MIT Scratch user, unless one of the following conditions is met:
    - The PII describes the user sharing it, and the user fully understands the consequences involved.
    - The PII describes some other user, and the user has given explicit consent for others to share this PII.
  - Under European Union and United States law, the uploading of (but not limited to) Racial Aggravation or Hate Speech, Child Pornography and illegal downloads is legal violation and OpenSprites shall contact law enforcement if deemed management sees fit.
