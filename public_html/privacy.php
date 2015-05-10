@@ -17,7 +17,7 @@
 			// Imports navigation bar
 			include 'navbar.php';
 		?>
-        <div class="container main">
+        <div clas="container main">
             <div class="main-inner">
                 <div class="box" style="width:80%;margin-left:auto;margin-right:auto">
                     <h1 id="opensprites-heading">Privacy Policy</h1>
