@@ -4,7 +4,7 @@ header("Content-Type: application/json");
 
 $userid = 0;
 if(isset($_POST['userid'])){
-	$userid = intval($_GET['userid']);
+	$userid = intval($_POST['userid']);
 }
 
 if($userid == 0 || ($userid != $logged_in_userid && !$is_admin)){
