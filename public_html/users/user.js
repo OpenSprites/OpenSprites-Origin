@@ -138,7 +138,8 @@ $("#settings").click(function() {
 		$('.modal.edit-profile #bg_true').hide();
 		$("#bgcolor").spectrum({
 			color: "rgb(101, 149, 147)",
-			showInput: true
+			showInput: true,
+			clickoutFiresChange: true
 		});
 	} else {
 		$("#bgcolor").val(OpenSprites.view.user.profile.bgcolor);
