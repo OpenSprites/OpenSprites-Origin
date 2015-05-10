@@ -175,3 +175,72 @@ OpenSprites.models.MdHints = function(_target){
 	});
 	return modelObj;
 };
+
+OpenSprites.models.MdSection = function(_target){
+	var modelObj = OpenSprites.models.BaseModel(_target);
+	
+	var dialog;
+	if($(".modal.leaving").length == 0){
+		dialog = $('<div class="modal leaving">\
+			<div class="modal-content">\
+				<h1>You are leaving OpenSprites!</h1>\
+				<p class="leaving-desc">\
+					[Insert some swaggy visual here]<br/><br/>\
+					This about section is taking you to <span class="leaving-url"></span><br/><br/>\
+					Sites that aren\'t OpenSprites have the potential to be dangerous, or could have unwanted content.<br/><br/>\
+					Proceed only if you recognize the site or understand the risk involved.\
+				</p>\
+				<div class="buttons-container">\
+					<button class=\'btn blue\'>Stay here!</button>\
+					<button class=\'btn red\'>Proceed</button>\
+				</div>\
+			</div>\
+		</div>');
+		dialog.appendTo($(document.body));
+	} else {
+		dialog = $(".modal.leaving");
+	}
+	
+	modelObj.updateMarkdown = function (desc){
+		function warnGoingAway(where){
+			$(".modal.leaving .btn.blue").off();
+			$(".modal.leaving .btn.blue").on("click", function(){
+				$(".modal-overlay, .modal.leaving").fadeOut();
+			});
+		
+			$(".modal.leaving .btn.red").off();
+			$(".leaving-url").text(where);
+			$(".modal-overlay, .modal.leaving").fadeIn();
+			(function(where){
+				$(".modal.leaving .btn.red").on("click", function(){
+					window.open(where);
+					$(".modal-overlay, .modal.leaving").fadeOut();
+				});
+			})(where);
+		}
+		
+		//sad that we have to disallow HTML, but I can't find a good way to sanitize it DX
+        var xx = marked(desc, {sanitize: true});
+		// Instead of hax we should teach people to use 2 newlines
+		$(".desc").html(xx);
+		
+		$(".desc a").each(function(){
+			$(this).attr("target", "_blank");
+			if($(this).attr("href").toLowerCase().startsWith("javascript:")){
+				$(this).attr("href", "https://www.youtube.com/watch?v=oHg5SJYRHA0").attr("data-nowarn", "true"); // haha get rekt :P
+			}
+		});
+		
+		$(".desc a").click(function(e){
+			var rawLink = $(this).get(0);
+			var hostName = rawLink.hostname;
+			if(!OpenSprites.etc.isHostSafe(hostName) && !$(this).is("[data-nowarn]")){
+				warnGoingAway($(this).attr("href"));
+				e.preventDefault();
+				return false;
+			}
+		});
+	};
+	
+	return modelObj;
+};

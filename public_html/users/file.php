@@ -269,50 +269,14 @@
 		</div>
 	</div>
 	
-	<div class="modal leaving">
-		<div class="modal-content">
-			<h1>You are leaving OpenSprites!</h1>
-			<p class="leaving-desc">
-				[Insert some swaggy visual here]<br/><br/>
-				This resource description is taking you to <span class="leaving-url"></span><br/><br/>
-				Sites that aren't OpenSprites have the potential to be dangerous, or could have unwanted content.<br/><br/>
-				Proceed only if you recognize the site or understand the risk involved.
-			</p>
-			<div class="buttons-container">
-				<button class='btn blue'>Stay here!</button>
-				<button class='btn red'>Proceed</button>
-			</div>
-		</div>
-	</div>
-	
 	<?php } ?>
     
     <script src='/assets/lib/marked/marked.js'></script>
     <script>
-        var desc = <?php echo json_encode(htmlspecialchars($obj['description'])); ?>;
-        function parseDesc(desc){
-			//                             \/ sad that we have to disallow HTML, but I can't find a good way to sanitize it DX
-			$(".desc").html(marked(desc, {sanitize: true}));
-			
-			$(".desc a").each(function(){
-				$(this).attr("target", "_blank");
-				if($(this).attr("href").toLowerCase().startsWith("javascript")){
-					$(this).attr("href", "https://www.youtube.com/watch?v=oHg5SJYRHA0"); // haha get rekt :P
-				}
-			});
-			
-			$(".desc a").click(function(e){
-				var rawLink = $(this).get(0);
-				var hostName = rawLink.hostname;
-				if(!OpenSprites.etc.isHostSafe(hostName)){
-					warnGoingAway($(this).attr("href"));
-					e.preventDefault();
-					return false;
-				}
-			});
-		}
+        var desc = <?php echojson_encode(htmlspecialchars($obj['description'])); ?>;
 		
-		parseDesc(desc);
+		var descModel = OpenSprites.models.MdSection($(".about-section.desc"));
+		descModel.updateMarkdown(desc);
     </script>
     
     <?php if($obj['type'] == "sound"){ ?>

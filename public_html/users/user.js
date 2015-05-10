@@ -171,7 +171,7 @@ $('.modal.edit-profile .btn.blue').click(function() {
 		thisBtn.text("OK").removeAttr("disabled");
 		if(typeof data == "object"){
 			OpenSprites.view.user.profile = data;
-			parseDesc(data['about']);
+			aboutModel.updateMarkdown(data['about']);
 			$("#location").text(data['location']);
 			
 			if(data['bgcolor'] == "avatar"){

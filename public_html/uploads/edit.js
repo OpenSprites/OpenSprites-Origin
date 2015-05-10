@@ -58,7 +58,7 @@ $(".modal.edit-asset .btn.blue").click(function(){
 		OpenSprites.view.file.name = data.title;
 		$(".asset-name").html(data.title);
 		OpenSprites.view.file.description = data.description;
-		parseDesc(data.description);
+		descModel.updateMarkdown(data.description);
 		
 		$(".modal-overlay, .modal.edit-asset").fadeOut();
 	}).fail(function(){
