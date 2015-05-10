@@ -134,7 +134,7 @@ var sampleAudioStream = function() {
 		
 		var speed = 1000 / delta;
 		if(offsetX != 0 && offsetY != 0){
-			speed *= 1.3;
+			speed *= 5;
 		}
 		
 		p.x += p.dir.x * speed;
