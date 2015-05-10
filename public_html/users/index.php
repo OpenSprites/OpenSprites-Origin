@@ -83,7 +83,7 @@
             <?php if($user_exist) { ?>
             <div id='username'>
                 <?php
-                if($username==$logged_in_user) {echo 'You';} else {echo htmlspecialchars($username);}
+                if($username==$logged_in_user) {echo 'You';} else {echo htmlspecialchars($username) . " (#" . $user['userid'] . ")";}
                 ?>
             </div>
             <div id='description'>
