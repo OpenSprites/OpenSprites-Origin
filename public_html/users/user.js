@@ -264,6 +264,7 @@ $(".modal.cropavatar .btn.blue").click(function(){
 					} else {
 						$(".modal-overlay, .modal.cropavatar").fadeOut();
 						$(".user-avatar.x100").attr("src", "http://opensprites.gwiddle.co.uk/forums/uploads/avatars/"+OpenSprites.user.id+".png?_=" + Math.random());
+						drawBg();
 					}
 				} catch(e){
 					console.log(data);
