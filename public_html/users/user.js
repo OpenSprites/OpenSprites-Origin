@@ -228,6 +228,9 @@ $("#change-image input[type=file]").change(function(e){
 });
 
 $(".modal.cropavatar .btn.blue").click(function(){
+	var thisBtn = $(this);
+	thisBtn.text("Uploading...").attr("disabled", "disabled");
+	
 	var canvas = $("#cropper-container > img").cropper("getCroppedCanvas", {width: 200, height: 200, fillColor: "#000000"});
 	canvas.toBlob(function(blob){
 		var formData = new FormData();
@@ -254,6 +257,7 @@ $(".modal.cropavatar .btn.blue").click(function(){
 				return xhr;
 			},
 			success : function (data) {
+				thisBtn.text("Set Avatar").removeAttr("disabled");
 				try {
 					data = JSON.parse(data);
 					if(data.status != "success"){
@@ -269,6 +273,7 @@ $(".modal.cropavatar .btn.blue").click(function(){
 			},
 			error : function (jqXHR, textStatus, errorThrown) {
 				$(".progress-container").text("Whoops! We weren't able to upload your avatar. Try again later");
+				thisBtn.text("Set Avatar").removeAttr("disabled");
 			},
 			cache : false,
 			contentType : false,
