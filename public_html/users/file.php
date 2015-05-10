@@ -273,7 +273,7 @@
     
     <script src='/assets/lib/marked/marked.js'></script>
     <script>
-        var desc = <?php echojson_encode(htmlspecialchars($obj['description'])); ?>;
+        var desc = <?php echo json_encode(htmlspecialchars($obj['description'])); ?>;
 		
 		var descModel = OpenSprites.models.MdSection($(".about-section.desc"));
 		descModel.updateMarkdown(desc);
