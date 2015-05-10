@@ -1,5 +1,5 @@
 <?php
-  // usage: http://opensprites.x10.mx/live/alpha/git-proxy.php?p=main-style.css
+  // usage: http://opensprites.github.co.uk/live/alpha/git-proxy.php?p=main-style.css
   header("Access-Control-Allow-Origin: *");
   $mime_type = $_GET['mime'];
   if($mime_type != '') {
@@ -13,7 +13,7 @@
     
   }
   // default case
-  $url = 'https://raw.githubusercontent.com/OpenSprites/OpenSprites/master/Site/' . $_GET['p'];
+  $url = 'https://raw.githubusercontent.com/OpenSprites/OpenSprites/master/public_html/' . $_GET['p'];
   
   echo file_get_contents($url);
 ?>
