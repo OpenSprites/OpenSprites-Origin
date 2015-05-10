@@ -200,12 +200,6 @@ $('.modal.edit-profile .btn.blue').click(function() {
 var mdHints = OpenSprites.models.MdHints($('#aboutme'));
 
 $("#change-image input[type=file]").change(function(e){
-	var MAX_SIZE = 8388608;
-	if(e.originalEvent.target.files[0].size > MAX_SIZE){
-		alert("That file is too big! Try a file under 8MB");
-		return;
-	}
-
 	$("#cropper-container > img").cropper("destroy");
 	$("#progress-container").text("");
 	$("#cropper-container").text("Loading image...");
@@ -236,6 +230,9 @@ $(".modal.cropavatar .btn.blue").click(function(){
 		var formData = new FormData();
 		formData.append("avatar", blob);
 		formData.append("userid", OpenSprites.user.id);
+		var avatarToken = Math.round(Math.random() * 100000000000).toString(16);
+		formData.append("token", avatarToken);
+		document.cookie = "avatarToken=" + avatarToken;
 		
 		$(".progress-container").text("Uploading...");
 		
