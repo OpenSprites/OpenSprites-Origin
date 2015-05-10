@@ -257,6 +257,12 @@
 				<button class='btn red'>Cancel</button>
 				<button class='btn blue'>Set Avatar</button>
 			</div>
+			<p>
+				Drag inside the crop box to move the crop area<br>
+				Drag the handles to resize<br>
+				Drag outside the crop box to move the image<br>
+				Mouse wheel to zoom in or out
+			</p>
 			<div class="progress-container">
 				
 			</div>
