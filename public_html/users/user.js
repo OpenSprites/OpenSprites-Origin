@@ -9,6 +9,20 @@ Object.size = function(obj, t) {
     return size;
 };
 
+if (!HTMLCanvasElement.prototype.toBlob) {
+	Object.defineProperty(HTMLCanvasElement.prototype, 'toBlob', {
+		value: function (callback, type, quality) {
+			var binStr = atob( this.toDataURL(type, quality).split(',')[1] ),
+			len = binStr.length,
+			arr = new Uint8Array(len);
+			for (var i=0; i<len; i++ ) {
+				arr[i] = binStr.charCodeAt(i);
+			}
+			callback( new Blob( [arr], {type: type || 'image/png'} ) );
+		}
+	});
+}
+
 var updateInterval = 10000;
 var jsonOld = [];
 var model = OpenSprites.models.AssetList($("#collections .main-inner .content"));
@@ -206,14 +220,62 @@ $("#change-image input[type=file]").change(function(e){
 			var img = $("<img>").attr("src", e.target.result);
 			$("#cropper-container").html("").append(img);
 			img.cropper({
-				aspectRatio: 1,
-				crop: function(data) {
-					console.log(data);
-				}
+				aspectRatio: 1
 			});
 		}
 		reader.readAsDataURL(e.originalEvent.target.files[0]);
 	});
+});
+
+$(".modal.cropavatar .btn.blue").click(function(){
+	var canvas = $("#cropper-container > img").cropper("getCroppedCanvas", {width: 200, height: 200, fillColor: "#000000"});
+	canvas.toBlob(function(blob){
+		FormData formData = new FormData();
+		formData.append("avatar", blob);
+		formData.append("userid", OpenSprites.user.id);
+		
+		$("#progress-container").text("Uploading...");
+		
+		$.ajax({
+			url : "/users/user-avatar.php",
+			type : 'POST',
+			data : formData,
+			async : true,
+			xhr : function () {
+				var xhr = jQuery.ajaxSettings.xhr();
+				if (xhr instanceof window.XMLHttpRequest) {
+					xhr.upload.addEventListener("progress", function (evt) {
+						if (evt.lengthComputable) {
+							var percentComplete = Math.round(evt.loaded * 100 / evt.total);
+							$("#progress-container").text("Uploading avatar ("+percentComplete+"%)");
+						}
+					}, false);
+				}
+				return xhr;
+			},
+			success : function (data) {
+				try {
+					data = JSON.parse(data);
+					if(data.status != "success"){
+						$("#progress-container").text(data.message);
+					} else {
+						$(".modal-overlay, .modal.cropavatar").fadeOut();
+						$(".user-avatar.x100").attr("src", "http://opensprites.gwiddle.co.uk/forums/uploads/avatars/"+OpenSprites.user.id+".png");
+					}
+				} catch(e){
+					console.log(data);
+					$("#progress-container").text("Whoops! We weren't able to recieve a response from our servers. Try again later");
+				}
+			},
+			error : function (jqXHR, textStatus, errorThrown) {
+				$("#progress-container").text("Whoops! We weren't able to upload your avatar. Try again later");
+			},
+			cache : false,
+			contentType : false,
+			dataType : "text",
+			processData : false
+		});
+	}, "image/png");
 });
 
 $(".modal.cropavatar .btn.red").click(function(){
