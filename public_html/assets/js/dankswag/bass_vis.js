@@ -54,13 +54,13 @@ var lastShakeTime = new Date().getTime();
 var totalVol;
 
 var oldColor = {h: 0, s: 0, v: 0};
-var newColor = Please.make_color({format:'hsv'});
+var newColor = Please.make_color({format:'rgb'});
 var lastColorTime = new Date().getTime();
 var colorTransitionTime = 500;
 
 setInterval(function(){
 	oldColor = newColor;
-	newColor = Please.make_color({format:'hsv'});
+	newColor = Please.make_color({format:'rgb'});
 	lastColorTime = new Date().getTime();
 }, colorTransitionTime);
 
@@ -122,17 +122,12 @@ var sampleAudioStream = function() {
     ctx.stroke();
 	
 	var fillColor = {
-		h: oldColor.h + ((newColor.h - oldColor.h) * (new Date().getTime() - lastColorTime) / colorTransitionTime),
-		s: oldColor.s + ((newColor.s - oldColor.s) * (new Date().getTime() - lastColorTime) / colorTransitionTime),
-		v: oldColor.v + ((newColor.v - oldColor.v) * (new Date().getTime() - lastColorTime) / colorTransitionTime)
+		r: oldColor.r + ((newColor.r - oldColor.r) * (new Date().getTime() - lastColorTime) / colorTransitionTime),
+		g: oldColor.g + ((newColor.g - oldColor.g) * (new Date().getTime() - lastColorTime) / colorTransitionTime),
+		b: oldColor.b + ((newColor.b - oldColor.b) * (new Date().getTime() - lastColorTime) / colorTransitionTime)
 	};
 	
-	if(offsetX == 0 && offsetY == 0){
-	} else {
-		fillColor.s += 0.5;
-		if(fillColor.s > 1) fillColor.s = 1;
-	}
-	ctx.fillStyle = Please.HSV_to_HEX(fillColor);
+	ctx.fillStyle = Please.RGB_to_HEX(fillColor);
 	ctx.fill();
 	
 	var targetWidth = 180 * (canvas.height / 2) / 250;
