@@ -56,7 +56,7 @@ var totalVol;
 var oldColor = {r: 0, g: 0, b: 0};
 var newColor = Please.make_color({format:'rgb'});
 var lastColorTime = new Date().getTime();
-var colorTransitionTime = 500;
+var colorTransitionTime = 2000;
 
 setInterval(function(){
 	oldColor = newColor;
@@ -122,9 +122,9 @@ var sampleAudioStream = function() {
     ctx.stroke();
 	
 	var fillColor = {
-		r: oldColor.r + ((newColor.r - oldColor.r) * (new Date().getTime() - lastColorTime) / colorTransitionTime),
-		g: oldColor.g + ((newColor.g - oldColor.g) * (new Date().getTime() - lastColorTime) / colorTransitionTime),
-		b: oldColor.b + ((newColor.b - oldColor.b) * (new Date().getTime() - lastColorTime) / colorTransitionTime)
+		r: oldColor.r + ((newColor.r - oldColor.r) * Math.min((new Date().getTime() - lastColorTime) / (colorTransitionTime / 2), 1)),
+		g: oldColor.g + ((newColor.g - oldColor.g) * Math.min((new Date().getTime() - lastColorTime) / (colorTransitionTime / 2), 1)),
+		b: oldColor.b + ((newColor.b - oldColor.b) * Math.min((new Date().getTime() - lastColorTime) / (colorTransitionTime / 2), 1))
 	};
 	
 	ctx.fillStyle = Please.RGB_to_HEX(fillColor);
