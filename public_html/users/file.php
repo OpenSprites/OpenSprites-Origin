@@ -145,7 +145,6 @@
         <div class="main-inner">
             <?php if($obj['type'] == 'sound') { ?>
 				<audio style="width: 100%;" controls preload='metadata' src='<?php echo $obj['url'] ?>';></audio><br/><br/>
-				<script src="/assets/js/dankswag/bass_vis.js"></script>
             <?php } ?>
 			<h1>Description</h1>
 			<p class='desc'></p>
@@ -291,6 +290,7 @@
                 $('#overlay-img').css('background', Please.make_color());
         }, 1000);
     </script>
+	<script src="/assets/js/dankswag/bass_vis.js"></script>
     <?php } ?>
 	
 	<script src="/uploads/edit.js"></script>
