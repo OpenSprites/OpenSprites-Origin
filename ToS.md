@@ -1,5 +1,5 @@
 ## OpenSprites Terms of Service ##
-This policy forms an agreement between the end-user (You, User, Your), and OpenSprites Organisation (Us, OpenSprites, Our). The OpenSprites Team reserves the right to terminate usage of the site to User who violates these Terms. The OpenSprites Team is the collective of administrators, moderators and developers that have been offically certified to be working for the Organisation. By continuing use of this site, you are agreeing to these Terms. If you do not agree with these Terms, discontinue use of the OpenSprites website.
+This policy forms an agreement between the end-user (You, User, Your), and OpenSprites Organisation (Us, OpenSprites, Our). The OpenSprites Team reserves the right to terminate usage of the site to User who violates these Terms. The OpenSprites Team is the collective of administrators, moderators and developers that have been officially certified to be working for the Organisation. By continuing use of this site, you are agreeing to these Terms. If you do not agree with these Terms, discontinue use of the OpenSprites website.
 
 ### Disclaimers ###
  - OpenSprites welcomes people of all ages, races, ethnicities, religions, sexual orientations, and gender identities.
@@ -20,6 +20,9 @@ This policy forms an agreement between the end-user (You, User, Your), and OpenS
    - Audio in the formats: MPEG-3, WAV
    - Scripts in the JSON format specified by MIT Scratch
  - OpenSprites has a young user-base; uploading content unsuitable for ALL ages in strictly prohibited and legal action may be taken against the offending user.
+ - Sharing information that is or potentially could be (personally identifiable information)[http://en.wikipedia.org/wiki/Personally_identifiable_information] (PII), of any OpenSprites or MIT Scratch user, unless one of the following conditions is met:
+   - The PII describes the user sharing it, and the user fully understands the consequences involved.
+   - The PII describes some other user, and the user has given explicit consent for others to share this PII.
  - Under European Union and United States law, the uploading of (but not limited to) Racial Aggravation or Hate Speech, Child Pornography and illegal downloads is legal violation and OpenSprites shall contact law enforcement if deemed management sees fit.
  - We respect our web-host and it's users. Do not mass upload electronic content with the intention of disrupting the web-hosting service, or OpenSprites and it's users.
  - Bullying, harassment, stalking or any other form of malicious electronic communication towards ANY person is strictly prohibited. 
