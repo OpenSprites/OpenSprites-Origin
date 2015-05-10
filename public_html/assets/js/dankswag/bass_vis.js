@@ -39,6 +39,9 @@ var lastShakeTime = new Date().getTime();
 
 var totalVol;
 
+var osLogo = new Image();
+osLogo.src = "/assets/images/os-logotype.svg";
+
 var sampleAudioStream = function() {
     analyser.getByteFrequencyData(streamData);
 	totalVol = 0;
@@ -92,6 +95,12 @@ var sampleAudioStream = function() {
 		ctx.fillStyle = '#3bbfb9';
 	}
 	ctx.fill();
+	
+	var targetWidth = 100 * (canvas.height / 2) / 250;
+	var targetHeight = osLogo.naturalHeight * targetWidth / osLogo.naturalWidth;
+	var logoX = -(targetWidth / 2)+ offsetX + 250;
+	var logoY = -(targetHeight) / 2 + offsetY + 250;
+	ctx.drawImage(osLogo, 0, 0, osLogo.naturalWidth, osLogo.naturalHeight, logoX, logoY, targetWidth, targetHeight);
 };
 setInterval(sampleAudioStream, 20);
 }
