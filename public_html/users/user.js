@@ -232,7 +232,7 @@ $(".modal.cropavatar .btn.blue").click(function(){
 		formData.append("userid", OpenSprites.user.id);
 		var avatarToken = Math.round(Math.random() * 100000000000).toString(16);
 		formData.append("token", avatarToken);
-		document.cookie = "avatarToken=" + avatarToken;
+		document.cookie = "avatarToken=" + avatarToken"; path=/";
 		
 		$(".progress-container").text("Uploading...");
 		
