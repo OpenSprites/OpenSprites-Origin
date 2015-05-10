@@ -4,17 +4,20 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<!--Imports the metadata and information that will go in the <head> of every page-->
-		<?php include('Header.html'); ?>
+		<?php
+			// Imports the metadata and information that will go in the <head> of every page
+			include('Header.html');
+		?>
 	</head>
 	<body>
-		<!--Imports site-wide main styling-->
+		<!-- Imports site-wide main styling -->
 		<link href='main-style.css' rel='stylesheet' type='text/css'>
 	
-		<!--Imports navigation bar-->
-		<?php include 'navbar.php'; ?>
-        
-        <div clas="container main">
+		<?php
+			// Imports navigation bar
+			include 'navbar.php';
+		?>
+        <div class="container main">
             <div class="main-inner">
                 <div class="box" style="width:80%;margin-left:auto;margin-right:auto">
                     <h1 id="opensprites-heading">Privacy Policy</h1>
@@ -32,11 +35,8 @@
                         <h4>Cookies (short pieces of text which are stored on a user&#39s computer by their browser)</h4>
                         <p>To store information about account authentication, we use &#39cookies&#39. Cookies are short pieces of text which are stored on your computer by your browser. Cookies make sure we can store your logged-in state between page navigations.</p>
                         <b>
-                        <p> 
-                        Privacy policy revision one. Originally written by cheeseeater on 08/02/2015. Most recent edits by cheeseeater on 09/02/2015 This policy is subject to change without prior notice.
-                        </p>
+                        <p>Privacy policy revision one. Originally written by cheeseeater on 08/02/2015. Most recent edits by cheeseeater on 09/02/2015 This policy is subject to change without prior notice.</p>
                         </b>
-                        
                     </div>
                 </div>
             </div>
