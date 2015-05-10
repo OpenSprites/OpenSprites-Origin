@@ -2,6 +2,16 @@ function createVisualizer(){
 var player = $("audio").get(0);
 var canvas = $("#vis-canvas").get(0);
 
+player.onplay = function(){
+	$(canvas).fadeIn();
+};
+
+player.onpause = function(){
+	$(canvas).fadeOut();
+};
+
+$(canvas).fadeOut();
+
 function drawCurve(ctx, points){
 	ctx.moveTo(points[0].x, points[0].y);
 	for (i = 1; i < points.length - 2; i ++){
@@ -25,10 +35,14 @@ var ctx = canvas.getContext("2d");
 
 var analyser;
 var audioCtx = new (window.AudioContext || window.webkitAudioContext);
+
 analyser = audioCtx.createAnalyser();
 analyser.fftSize = 256 * 64;
+analyser.smoothingTimeConstant = 0.1; // we kinda need shaking to be immediate
+
 var source = audioCtx.createMediaElementSource(player);
-source.connect(analyser);
+
+source.connect(analyser);  // source > analyser > output
 analyser.connect(audioCtx.destination);
 
 streamData = new Uint8Array(128 * 64);
@@ -43,6 +57,12 @@ var osLogo = new Image();
 osLogo.src = "/assets/images/os-logotype.svg";
 
 var sampleAudioStream = function() {
+	if(player.paused){
+		ctx.clearRect(0, 0, canvas.width, canvas.height);
+		requestAnimationFrame(sampleAudioStream);
+		return;
+	}
+
     analyser.getByteFrequencyData(streamData);
 	totalVol = 0;
 	for (var i = 0; i < 80; i++) {
@@ -96,13 +116,16 @@ var sampleAudioStream = function() {
 	}
 	ctx.fill();
 	
-	var targetWidth = 100 * (canvas.height / 2) / 250;
+	var targetWidth = 180 * (canvas.height / 2) / 250;
 	var targetHeight = osLogo.naturalHeight * targetWidth / osLogo.naturalWidth;
-	var logoX = -(targetWidth / 2)+ offsetX + 250;
-	var logoY = -(targetHeight) / 2 + offsetY + 250;
+	var logoX = -(targetWidth / 2) + offsetX + (canvas.height / 2);
+	var logoY = -(targetHeight / 2) + offsetY + (canvas.height / 2);
 	ctx.drawImage(osLogo, 0, 0, osLogo.naturalWidth, osLogo.naturalHeight, logoX, logoY, targetWidth, targetHeight);
+	requestAnimationFrame(sampleAudioStream);
 };
-setInterval(sampleAudioStream, 20);
+
+requestAnimationFrame(sampleAudioStream);
+
 }
 
 if(!!window.AudioContext || !!window.webkitAudioContext) createVisualizer();
