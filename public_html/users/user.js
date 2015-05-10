@@ -263,7 +263,7 @@ $(".modal.cropavatar .btn.blue").click(function(){
 						$(".progress-container").text(data.message);
 					} else {
 						$(".modal-overlay, .modal.cropavatar").fadeOut();
-						$(".user-avatar.x100").attr("src", "/assets/images/defaultfile.png").attr("src", "http://opensprites.gwiddle.co.uk/forums/uploads/avatars/"+OpenSprites.user.id+".png");
+						$(".user-avatar.x100").attr("src", "http://opensprites.gwiddle.co.uk/forums/uploads/avatars/"+OpenSprites.user.id+".png?_=" + Math.random());
 					}
 				} catch(e){
 					console.log(data);
