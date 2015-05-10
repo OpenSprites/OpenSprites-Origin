@@ -53,7 +53,7 @@ var lastShakeTime = new Date().getTime();
 
 var totalVol;
 
-var oldColor = {h: 0, s: 0, v: 0};
+var oldColor = {r: 0, g: 0, b: 0};
 var newColor = Please.make_color({format:'rgb'});
 var lastColorTime = new Date().getTime();
 var colorTransitionTime = 500;
