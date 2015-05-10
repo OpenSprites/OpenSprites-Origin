@@ -234,7 +234,7 @@ $(".modal.cropavatar .btn.blue").click(function(){
 		formData.append("avatar", blob);
 		formData.append("userid", OpenSprites.user.id);
 		
-		$("#progress-container").text("Uploading...");
+		$(".progress-container").text("Uploading...");
 		
 		$.ajax({
 			url : "/users/user-avatar.php",
@@ -247,7 +247,7 @@ $(".modal.cropavatar .btn.blue").click(function(){
 					xhr.upload.addEventListener("progress", function (evt) {
 						if (evt.lengthComputable) {
 							var percentComplete = Math.round(evt.loaded * 100 / evt.total);
-							$("#progress-container").text("Uploading avatar ("+percentComplete+"%)");
+							$(".progress-container").text("Uploading avatar ("+percentComplete+"%)");
 						}
 					}, false);
 				}
@@ -257,18 +257,18 @@ $(".modal.cropavatar .btn.blue").click(function(){
 				try {
 					data = JSON.parse(data);
 					if(data.status != "success"){
-						$("#progress-container").text(data.message);
+						$(".progress-container").text(data.message);
 					} else {
 						$(".modal-overlay, .modal.cropavatar").fadeOut();
 						$(".user-avatar.x100").attr("src", "http://opensprites.gwiddle.co.uk/forums/uploads/avatars/"+OpenSprites.user.id+".png");
 					}
 				} catch(e){
 					console.log(data);
-					$("#progress-container").text("Whoops! We weren't able to recieve a response from our servers. Try again later");
+					$(".progress-container").text("Whoops! We weren't able to recieve a response from our servers. Try again later");
 				}
 			},
 			error : function (jqXHR, textStatus, errorThrown) {
-				$("#progress-container").text("Whoops! We weren't able to upload your avatar. Try again later");
+				$(".progress-container").text("Whoops! We weren't able to upload your avatar. Try again later");
 			},
 			cache : false,
 			contentType : false,
