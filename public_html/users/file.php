@@ -82,6 +82,7 @@
 	<canvas id='background-img'></canvas>
     <?php if($obj['type'] == 'sound') { ?>
 	<div id='overlay-img'></div>
+	<canvas id="vis-canvas"></canvas>
     <?php } ?>
     <div id='dark-overlay'><div id='overlay-inner'>
 		    <div id='username' class='asset-name'>
@@ -144,6 +145,7 @@
         <div class="main-inner">
             <?php if($obj['type'] == 'sound') { ?>
 				<audio style="width: 100%;" controls preload='metadata' src='<?php echo $obj['url'] ?>';></audio><br/><br/>
+				<script src="/assets/js/dankswag/bass_vis.js"></script>
             <?php } ?>
 			<h1>Description</h1>
 			<p class='desc'></p>

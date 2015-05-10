@@ -2,6 +2,13 @@
 	font-weight: bold !important;
 }
 
+#vis-canvas {
+	position: fixed;
+	z-index: -1;
+	top: 0px;
+	left: 0px;
+}
+
 .desc {
 	margin: 0;
 	padding: 0;
