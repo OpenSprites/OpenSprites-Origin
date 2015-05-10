@@ -132,7 +132,7 @@ var sampleAudioStream = function() {
 		fillColor.s += 0.5;
 		if(fillColor.s > 1) fillColor.s = 1;
 	}
-	ctx.fillStyle = Please.HSV_TO_HEX(fillColor);
+	ctx.fillStyle = Please.HSV_to_HEX(fillColor);
 	ctx.fill();
 	
 	var targetWidth = 180 * (canvas.height / 2) / 250;

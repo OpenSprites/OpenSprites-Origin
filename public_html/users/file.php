@@ -283,6 +283,7 @@
     <?php if($obj['type'] == "sound"){ ?>
     <!-- background colors! -->
     <script src="/assets/lib/please/please.js"></script>
+	<script src="/assets/js/dankswag/bass_vis.js"></script>
     <script>
         $('#overlay-img').css('background', Please.make_color());
         setInterval(function() {
@@ -290,7 +291,6 @@
                 $('#overlay-img').css('background', Please.make_color());
         }, 1000);
     </script>
-	<script src="/assets/js/dankswag/bass_vis.js"></script>
     <?php } ?>
 	
 	<script src="/uploads/edit.js"></script>
