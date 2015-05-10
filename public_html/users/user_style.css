@@ -13,6 +13,13 @@
 	width: 99%;
 }
 
+#cropper-container {
+	width: 200px;
+	height: 200px;
+	margin-right: auto;
+	margin-left: auto;
+}
+
 #dark-overlay {
     position: absolute;
     top: 0;
