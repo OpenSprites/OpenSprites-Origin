@@ -53,7 +53,7 @@
             <?php } if($logged_in_user == 'not logged in') { ?>
             <li><a href="/register/" style="width:initial;">Sign Up</a>
             </li>
-            <li class="last" id='login' onclick="window.location = '/login/';"><span>Log In</span>
+            <li class="last" id='login'><a href='/login/?return=<?php echo $_SERVER['REQUEST_URI']; ?>'>Log In</a>
             </li>
             <?php } else { ?>
             <!-- display login info/username/etc -->
@@ -63,7 +63,7 @@
                     <?php echo $logged_in_user; ?>
                 </a>
             </li>
-            <li class="last" onclick="window.location = '/logout.php?return=<?php echo $_SERVER['REQUEST_URI']; ?>';"><span>Log Out</span>
+            <li class="last"><a href="/logout.php?return=<?php echo $_SERVER['REQUEST_URI']; ?>">Log Out</a>
             </li>
             <?php } ?>
         </ul>
