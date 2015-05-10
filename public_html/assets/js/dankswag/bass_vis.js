@@ -132,7 +132,7 @@ var sampleAudioStream = function() {
 	for(var i=0;i<particles.length;i++){
 		var p = particles[i];
 		
-		var speed = 10000 / delta;
+		var speed = 1000 / delta;
 		if(offsetX != 0 && offsetY != 0){
 			speed *= 1.3;
 		}
@@ -150,6 +150,11 @@ var sampleAudioStream = function() {
 		var y = p.y * canvas.height / p.z;
 		var radius = 100 / p.z;
 		
+		if(Math.abs(x) > canvas.width / 2 || Math.abs(y) > canvas.height / 2 || radius < 0){
+			particles[i] = {x: 0, y: 0, z: 10, dir: randomDir()};
+			continue;
+		}
+		
 		var gradient = ctx.createRadialGradient(x + canvas.width / 2, y + canvas.height / 2, 0, x + canvas.width / 2, y + canvas.height / 2, radius);
 		gradient.addColorStop(0, "white");
 		gradient.addColorStop(0.3, "white");
@@ -160,10 +165,6 @@ var sampleAudioStream = function() {
 		ctx.arc(x + (canvas.width / 2), y + (canvas.height) / 2, radius, 0, Math.PI*2, true); 
 		ctx.closePath();
 		ctx.fill();
-		
-		if(Math.abs(x) > canvas.width / 2 || Math.abs(y) > canvas.height / 2){
-			particles[i] = {x: 0, y: 0, z: 10, dir: randomDir()};
-		}
 	}
 
     ctx.beginPath();
