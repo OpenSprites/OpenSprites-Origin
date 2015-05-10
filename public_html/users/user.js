@@ -203,7 +203,7 @@ var mdHints = OpenSprites.models.MdHints($('#aboutme'));
 
 $("#change-image input[type=file]").change(function(e){
 	$("#cropper-container > img").cropper("destroy");
-	$("#progress-container").text("");
+	$(".progress-container").text("");
 	$("#cropper-container").text("Loading image...");
 	$(".modal-overlay, .modal.cropavatar").fadeIn(700, function(){
 		if(!window.Blob || !window.File || !window.FormData){
