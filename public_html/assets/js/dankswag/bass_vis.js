@@ -90,6 +90,7 @@ var sampleAudioStream = function() {
 	
 	var timeNow = new Date().getTime();
 	var delta = timeNow - lastCalledTime;
+	lastCalledTime = timeNow;
 
     analyser.getByteFrequencyData(streamData);
 	totalVol = 0;
@@ -132,7 +133,7 @@ var sampleAudioStream = function() {
 	for(var i=0;i<particles.length;i++){
 		var p = particles[i];
 		
-		var speed = 1000 / delta;
+		var speed = 1 / delta;
 		if(offsetX != 0 && offsetY != 0){
 			speed *= 5;
 		}
