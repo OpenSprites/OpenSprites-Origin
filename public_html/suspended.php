@@ -1,5 +1,5 @@
 <?php
-    require "assets/includes/suspendedconnect.php";  //Connect - includes session_start();
+    require "assets/includes/suspendedconnect.php"; // Connect - includes session_start();
 ?>
 <html>
   <head>
@@ -7,7 +7,7 @@
   </head>
   <body>
   <?php include 'navbar.php'; ?>
-  <div class="container main">
+  <div clas="container main">
     <div class="main-inner">
       <div class="box" style="width:50%;margin-left:auto;margin-right:auto">
         <h1 id="opensprites-heading">Account Suspended</h1>
