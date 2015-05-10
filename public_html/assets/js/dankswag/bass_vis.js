@@ -58,7 +58,7 @@ osLogo.src = "/assets/images/os-logotype.svg";
 
 var sampleAudioStream = function() {
 	if(player.paused){
-		ctx.clearRect(0, 0, canvas.width, canvas.height);
+		// ctx.clearRect(0, 0, canvas.width, canvas.height);
 		requestAnimationFrame(sampleAudioStream);
 		return;
 	}
