@@ -55,14 +55,7 @@ var totalVol;
 
 var oldColor = {r: 0, g: 0, b: 0};
 var newColor = Please.make_color({format:'rgb'});
-var lastColorTime = new Date().getTime();
-var colorTransitionTime = 2000;
-
-setInterval(function(){
-	oldColor = newColor;
-	newColor = Please.make_color({format:'rgb'});
-	lastColorTime = new Date().getTime();
-}, colorTransitionTime);
+var colorTransitionTime = 0;
 
 var osLogo = new Image();
 osLogo.src = "/assets/images/os-logotype.svg";
@@ -91,6 +84,13 @@ var sampleAudioStream = function() {
 	var timeNow = new Date().getTime();
 	var delta = timeNow - lastCalledTime;
 	lastCalledTime = timeNow;
+	
+	colorTransitionTime += delta;
+	if(colorTransitionTime > 2000){
+		oldColor = newColor;
+		newColor = Please.make_color({format:'rgb'});
+		colorTransitionTime = 0;
+	}
 
     analyser.getByteFrequencyData(streamData);
 	totalVol = 0;
@@ -133,7 +133,7 @@ var sampleAudioStream = function() {
 	for(var i=0;i<particles.length;i++){
 		var p = particles[i];
 		
-		var speed = 1 / delta;
+		var speed = 1 / 20;
 		if(offsetX != 0 && offsetY != 0){
 			speed *= 5;
 		}
