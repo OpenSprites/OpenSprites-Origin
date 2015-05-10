@@ -83,18 +83,8 @@
             <?php if($user_exist) { ?>
             <div id='username'>
                 <?php
-                if($username==$logged_in_user) {
-                	echo 'You';
-                } else {
-                	echo htmlspecialchars($username);
-                }
+                if($username==$logged_in_user) {echo 'You';} else {echo htmlspecialchars($username);}
                 ?>
-                <div id='user-id'>
-                	<?php
-                		// Remove this if you want, I'm just testing right now. :3
-                		echo '&nbsp;(#' . $user['id'] . ')';
-                	?>
-                </div>
             </div>
             <div id='description'>
                 <?php
