@@ -40,6 +40,13 @@
     background: none !important;
 }
 
+/* Remove this if you want. It's for the User ID display. */
+#user-id {
+	margin-left: 25px;
+	opacity: 0.3;
+}
+#user-id:hover {opacity: 1.0;}
+
 #description {
     font-size: 24px;
     margin-top: 10px;
