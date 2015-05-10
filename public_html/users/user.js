@@ -230,7 +230,7 @@ $("#change-image input[type=file]").change(function(e){
 $(".modal.cropavatar .btn.blue").click(function(){
 	var canvas = $("#cropper-container > img").cropper("getCroppedCanvas", {width: 200, height: 200, fillColor: "#000000"});
 	canvas.toBlob(function(blob){
-		FormData formData = new FormData();
+		var formData = new FormData();
 		formData.append("avatar", blob);
 		formData.append("userid", OpenSprites.user.id);
 		
