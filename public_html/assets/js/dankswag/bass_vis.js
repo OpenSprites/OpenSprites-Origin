@@ -25,8 +25,8 @@ function drawCurve(ctx, points){
 var pts = [];
 
 function resizeVis(){
-	canvas.width = canvas.height = $(window).height();
-	$(canvas).css("left", (($(window).width() - $(window).height()) / 2) + "px");
+	canvas.width = $(window).width();
+	canvas.height = $(window).height();
 }
 resizeVis();
 $(window).resize(resizeVis);
@@ -67,12 +67,29 @@ setInterval(function(){
 var osLogo = new Image();
 osLogo.src = "/assets/images/os-logotype.svg";
 
+function randomDir(){
+	var dx = Math.random() - 0.5, dy = Math.random() - 0.5;
+	return {x: dx, y: dy};
+}
+
+var particles = [];
+
+	
+for(var i=0;i<100;i++){
+	particles.push({x: 0, y: 0, z: 10, dir: randomDir()});
+}
+
+var lastCalledTime = new Date().getTime();
+
 var sampleAudioStream = function() {
 	if(player.paused){
 		// ctx.clearRect(0, 0, canvas.width, canvas.height);
 		requestAnimationFrame(sampleAudioStream);
 		return;
 	}
+	
+	var timeNow = new Date().getTime();
+	var delta = timeNow - lastCalledTime;
 
     analyser.getByteFrequencyData(streamData);
 	totalVol = 0;
@@ -85,8 +102,8 @@ var sampleAudioStream = function() {
 	if(totalVol > shakeThreshold){
 		offsetX = Math.random() * 20 - 10;
 		offsetY = Math.random() * 20 - 10;
-		lastShakeTime = new Date().getTime();
-	} else if(new Date().getTime() - lastShakeTime < shakeDelay){
+		lastShakeTime = timeNow;
+	} else if(timeNow - lastShakeTime < shakeDelay){
 		offsetX = Math.random() * 20 - 10;
 		offsetY = Math.random() * 20 - 10;
 	}
@@ -97,7 +114,7 @@ var sampleAudioStream = function() {
 		
 		data = data * (canvas.height / 2) / 250;
         pts[i] = {
-			x: (data) * Math.cos(i * Math.PI * 2 / 160 - (Math.PI / 2)) + (canvas.height / 2) + offsetX,
+			x: (data) * Math.cos(i * Math.PI * 2 / 160 - (Math.PI / 2)) + (canvas.width / 2) + offsetX,
 			y: (data) * Math.sin(i * Math.PI * 2 / 160 - (Math.PI / 2)) + (canvas.height / 2) + offsetY
 		};
     }
@@ -107,32 +124,62 @@ var sampleAudioStream = function() {
 		if(data < 100) data = 100;
 		data = data * (canvas.height / 2) / 250;
         pts[i] = {
-			x: (data) * Math.cos(i * Math.PI * 2 / 160 - (Math.PI / 2)) + (canvas.height / 2) + offsetX,
+			x: (data) * Math.cos(i * Math.PI * 2 / 160 - (Math.PI / 2)) + (canvas.width / 2) + offsetX,
 			y: (data) * Math.sin(i * Math.PI * 2 / 160 - (Math.PI / 2)) + (canvas.height / 2) + offsetY
 		};
     }
+	
+	for(var i=0;i<particles.length;i++){
+		var p = particles[i];
+		
+		var speed = 10000 / delta;
+		if(offsetX != 0 && offsetY != 0){
+			speed *= 1.3;
+		}
+		
+		p.x += p.dir.x * speed;
+		p.y += p.dir.y * speed;
+		p.z -= speed;
+	}
     
     ctx.clearRect(0, 0, canvas.width, canvas.height);
+	
+	for(var i=0;i<particles.length;i++){
+		var p = particles[i];
+		var x = p.x * canvas.width / p.z;
+		var y = p.y * canvas.height / p.z;
+		var radius = 100 / p.z;
+		
+		var gradient = ctx.createRadialGradient(x + canvas.width / 2, y + canvas.height / 2, 0, x + canvas.width / 2, y + canvas.height / 2, radius);
+		gradient.addColorStop(0, "white");
+		gradient.addColorStop(0.3, "white");
+		gradient.addColorStop(1, "transparent");
+		ctx.fillStyle = gradient;
+		
+		ctx.beginPath();
+		ctx.arc(x + (canvas.width / 2), y + (canvas.height) / 2, radius, 0, Math.PI*2, true); 
+		ctx.closePath();
+		ctx.fill();
+		
+		if(Math.abs(x) > canvas.width / 2 || Math.abs(y) > canvas.height / 2){
+			particles[i] = {x: 0, y: 0, z: 10, dir: randomDir()};
+		}
+	}
 
     ctx.beginPath();
     drawCurve(ctx, pts);
     ctx.closePath();
     ctx.strokeStyle = '#6677cc';
+	ctx.fillStyle = "#6677cc";
     ctx.lineWidth = 3;
     ctx.stroke();
 	
-	var fillColor = {
-		r: oldColor.r + ((newColor.r - oldColor.r) * Math.min((new Date().getTime() - lastColorTime) / (colorTransitionTime / 2), 1)),
-		g: oldColor.g + ((newColor.g - oldColor.g) * Math.min((new Date().getTime() - lastColorTime) / (colorTransitionTime / 2), 1)),
-		b: oldColor.b + ((newColor.b - oldColor.b) * Math.min((new Date().getTime() - lastColorTime) / (colorTransitionTime / 2), 1))
-	};
-	
-	ctx.fillStyle = Please.RGB_to_HEX(fillColor);
+	ctx.fillStyle = Please.RGB_to_HEX(newColor);
 	ctx.fill();
 	
 	var targetWidth = 180 * (canvas.height / 2) / 250;
 	var targetHeight = osLogo.naturalHeight * targetWidth / osLogo.naturalWidth;
-	var logoX = -(targetWidth / 2) + offsetX + (canvas.height / 2);
+	var logoX = -(targetWidth / 2) + offsetX + (canvas.width / 2);
 	var logoY = -(targetHeight / 2) + offsetY + (canvas.height / 2);
 	ctx.drawImage(osLogo, 0, 0, osLogo.naturalWidth, osLogo.naturalHeight, logoX, logoY, targetWidth, targetHeight);
 	requestAnimationFrame(sampleAudioStream);
