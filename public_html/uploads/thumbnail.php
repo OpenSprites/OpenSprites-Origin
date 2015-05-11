@@ -50,9 +50,7 @@ if(file_exists("thumb-cache/" . $filename . ".png")){
 	die(file_get_contents("thumb-cache/" . $filename . ".png"));
 }
 
-function outputWaveform($path){
-	global $filename;
-	
+function generateWaveform($file, $tmpname){
 	$lockfile = 'thumb-cache/EXIST';
 	$lock = fopen($lockfile, 'a');
 	if ($lock === false) {
@@ -64,17 +62,31 @@ function outputWaveform($path){
 		die(file_get_contents("../assets/images/defaultsound.png"));
 	}
 	// critical section
-        include '../assets/lib/waveform/php-waveform-png.php';
-	$img = renderWaveform($path);
-	imagepng($img, "thumb-cache/" . $filename . ".png");
-	imagepng($img);
-	imagedestroy($img);
-	// end critical section
+                copy($file, "{$tmpname}_o.mp3");
+		exec("lame {$tmpname}_o.mp3 -m m -S -f -b 16 --resample 8 {$tmpname}.mp3 && lame -S --decode {$tmpname}.mp3 {$tmpname}.wav");
+		$newfile = "{$tmpname}.wav";
+		
+		unlink("{$tmpname}_o.mp3");
+		unlink("{$tmpname}.mp3");
+		
+		outputWaveform($newfile);
+		
+		unlink("{$tmpname}.wav");
+    	// end critical section
 	$ret = flock($lock, LOCK_UN);
 	if ($ret === false) {
 		// ignore
 	}
 	fclose($lock);
+}
+function outputWaveform($path){
+	global $filename;
+	
+        include '../assets/lib/waveform/php-waveform-png.php';
+	$img = renderWaveform($path);
+	imagepng($img, "thumb-cache/" . $filename . ".png");
+	imagepng($img);
+	imagedestroy($img);
 }
 
 if($ending == "png" || $ending == "jpg" || $ending == "jpeg" || $ending == "gif"){
@@ -103,16 +115,7 @@ if($ending == "png" || $ending == "jpg" || $ending == "jpeg" || $ending == "gif"
 		outputWaveform($file);
 	} else if($ending == "mp3"){
 		$tmpname = substr(md5(time()), 0, 10);
-		copy($file, "{$tmpname}_o.mp3");
-		exec("lame {$tmpname}_o.mp3 -m m -S -f -b 16 --resample 8 {$tmpname}.mp3 && lame -S --decode {$tmpname}.mp3 {$tmpname}.wav");
-		$newfile = "{$tmpname}.wav";
-		
-		unlink("{$tmpname}_o.mp3");
-		unlink("{$tmpname}.mp3");
-		
-		outputWaveform($newfile);
-		
-		unlink("{$tmpname}.wav");
+		generateWaveform($file, $tmpname);
 	}
 }
 ?>
