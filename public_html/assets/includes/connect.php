@@ -52,4 +52,7 @@
 		if(!$is_admin){
 			error_reporting(0);
 		}
+        if($user_group == "Suspended"){
+            header( 'Location: http://opensprites.gwiddle.co.uk/suspended.php' ) ;
+        }
     }
