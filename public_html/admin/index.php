@@ -19,7 +19,11 @@ if(!$is_admin) {
 <body>
     <div id='container'>
         <h1>Admin</h1>
-		<h3>Reports</h3>
+	<h3>Moderate</h3>
+        View all assets and moderate 'em.<br>
+        <a id='moderates' href='moderate.php'>View</a>
+        
+        <h3>Reports</h3>
         View reported users and assets<br>
         <a id='reports' href='reports.php'>Go</a>
 		
