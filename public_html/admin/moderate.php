@@ -40,11 +40,10 @@ if(isset($_GET['action']) && isset($_GET['id']) && isset($_GET['reporter'])){
         <h1>Admin - Moderate</h1>
         <div class='reports-table'>
 			<div class='row header'>
-				<div class='cell'>Target</div>
-				<div class='cell'>Reporter</div>
-				<div class='cell'>Reason</div>
-				<div class='cell'>Date/Time</div>
-				<div class='cell'>Actions</div>
+				<div class='cell'>Name</div>
+				<div class='cell'>Type</div>
+				<div class='cell'>View</div>
+				<div class='cell'>Delete</div>
 			</div>
 		</div>
     </div>
