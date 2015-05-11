@@ -79,29 +79,6 @@ andrewjcole is a dev on the OS team.
  - CSS
  - A tiny bit of PHP
 
-### [109C](https://github.com/109C) ###
-![GitHub Logo](https://avatars1.githubusercontent.com/u/9680886?s=100)
-
-[inactive]
-109C is a dev on the OS team.
-
- - HTML
- - CSS
- - JavaScript
- - PHP
-
-### [zappy1333](https://github.com/zappy1333) ###
-![GitHub Logo](https://avatars2.githubusercontent.com/u/10379486?s=100)
-
-[inactive]
-zappy1333 is a dev on the OS team.
-
-[inactive]
- - HTML
- - CSS
- - JavaScript
- - PHP
-
 ### [liam4](https://github.com/liam4) ###
 ![Github Logo](https://avatars3.githubusercontent.com/u/9948030?s=100)
 
