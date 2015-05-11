@@ -44,7 +44,7 @@
     height: 100%;
 	background: rgb(101, 149, 147);
 	opacity: 0.2;
-	/* transition: background 0.5s; <<< sorry, too much lag */
+	transition: background 250ms;
 }
 
 #username {

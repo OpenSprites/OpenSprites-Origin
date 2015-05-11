@@ -283,55 +283,37 @@
     <?php if($obj['type'] == "sound"){ ?>
     <!-- background colors! -->
     <script src="/assets/lib/please/please.js"></script>
-	<?php } if ($_GET['vis'] === "bars") { ?>
-	<script>
-		// TODO add this script into /asets/js/dankswag/ which
-		// I assume is our visualizers folder :P
-		// ~liam48D
-		
-		var player = $("audio").get(0);
-		var divs = [];
-		for(var i=0;i<80;i++){
-		    var div = $("<div>");
-		    div.attr("id", "d" + i).css({"display":"inline-block","width":"1.25%","background":"blue"}).addClass("bar");
-		
-		    $(":has(audio)").append(div);
-		        divs.push(div);
-		}
-		
-		var analyser;
-		var audioCtx = new (window.AudioContext || window.webkitAudioContext);
-		analyser = audioCtx.createAnalyser();
-		analyser.fftSize = 256 * 64;
-		var source = audioCtx.createMediaElementSource(player);
-		source.connect(analyser);
-		analyser.connect(audioCtx.destination);
-		
-		streamData = new Uint8Array(128 * 64);
-		volume = 0;
-		
-		var sampleAudioStream = function() {
-		    analyser.getByteFrequencyData(streamData);
-		    var total = 0;
-		    for (var i = 0; i < 80; i++) {
-		        total += streamData[i];
-		          divs[i].height(Math.pow(streamData[i], 2.72) / 20000);
-		    }
-		    volume = total;
-		};
-		setInterval(sampleAudioStream, 20);
-		player.play();
-	</script>
-    <script>
-        $('#overlay-img').css('background', Please.make_color());
-        setInterval(function() {
-            if(!document.getElementsByTagName('audio')[0].paused)
-                $('#overlay-img').css('background', Please.make_color());
-        }, 1000);
-    </script>
+	<?php } if (isset($_GET['vis']) && $_GET['vis'] === "bars") { ?>
+	<script src='/assets/js/dankswag/bars.js'></script>
     <?php } else { // use default visualizer ?>
-		<script src="/assets/js/dankswag/bass_vis.js"></script>
+    <script>$('#overlay-img').css('transition', 'none');</script>
+    <script src="/assets/js/dankswag/bass_vis.js"></script>
     <?php } ?>
+    <script>
+        var j = Please.make_color({format: 'hsv'});
+        var c = Please.make_scheme({
+            h: j.h,
+            s: j.s,
+            v: j.v
+        },
+        {
+            scheme_type: 'complement'
+        });
+        $('#overlay-img').css('background', c[0]);
+        setInterval(function() {
+            j = Please.make_color({format: 'hsv'});
+            c = Please.make_scheme({
+                h: j.h,
+                s: j.s,
+                v: j.v
+            },
+            {
+                scheme_type: 'complement'
+            });
+            if(!document.getElementsByTagName('audio')[0].paused)
+                $('#overlay-img').css('background', c[0]);
+        }, 2000);
+    </script>
 	
 	<script src="/uploads/edit.js"></script>
     
