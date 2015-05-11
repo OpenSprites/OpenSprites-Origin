@@ -135,6 +135,8 @@
 	overflow: hidden;
 	transition: all 0.2s;
 	color: white;
+	margin-top: 0;
+	padding-top: 0;
 }
 
 .upload-image.error p {
