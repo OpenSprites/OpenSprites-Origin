@@ -1,5 +1,7 @@
 <?php
 
+include '../assets/lib/waveform/php-waveform-png.php';
+
 /*function my_autoloader($class) {
 	include '../assets/lib/waveform/' . str_replace("\\", "/", $class) . '.php';
 }
@@ -51,17 +53,6 @@ if(file_exists("thumb-cache/" . $filename . ".png")){
 }
 
 function generateWaveform($file, $tmpname){
-	$lockfile = 'thumb-cache/EXIST';
-	$lock = fopen($lockfile, 'a');
-	if ($lock === false) {
-		die(file_get_contents("../assets/images/defaultsound.png"));
-	}
-	// lock, make sure there's only one audio render at a time
-	$ret = flock($lock, LOCK_EX);
-	if ($ret === false) {
-		die(file_get_contents("../assets/images/defaultsound.png"));
-	}
-	// critical section
                 copy($file, "{$tmpname}_o.mp3");
 		exec("lame {$tmpname}_o.mp3 -m m -S -f -b 16 --resample 8 {$tmpname}.mp3 && lame -S --decode {$tmpname}.mp3 {$tmpname}.wav");
 		$newfile = "{$tmpname}.wav";
@@ -72,17 +63,10 @@ function generateWaveform($file, $tmpname){
 		outputWaveform($newfile);
 		
 		unlink("{$tmpname}.wav");
-    	// end critical section
-	$ret = flock($lock, LOCK_UN);
-	if ($ret === false) {
-		// ignore
-	}
-	fclose($lock);
 }
 function outputWaveform($path){
 	global $filename;
 	
-        include '../assets/lib/waveform/php-waveform-png.php';
 	$img = renderWaveform($path);
 	imagepng($img, "thumb-cache/" . $filename . ".png");
 	imagepng($img);
@@ -111,11 +95,31 @@ if($ending == "png" || $ending == "jpg" || $ending == "jpeg" || $ending == "gif"
 	}
 } else if($ending == "wav" || $ending == "mp3"){
 	header("Content-Type: image/png");
+
+	$lockfile = 'thumb-cache/EXIST';
+	$lock = fopen($lockfile, 'a');
+	if ($lock === false) {
+		die(file_get_contents("../assets/images/defaultsound.png"));
+	}
+	// lock, make sure there's only one audio render at a time
+	$ret = flock($lock, LOCK_EX);
+	if ($ret === false) {
+		die(file_get_contents("../assets/images/defaultsound.png"));
+	}
+	// critical section
+
 	if($ending == "wav"){
 		outputWaveform($file);
 	} else if($ending == "mp3"){
 		$tmpname = substr(md5(time()), 0, 10);
 		generateWaveform($file, $tmpname);
 	}
+
+    	// end critical section
+	$ret = flock($lock, LOCK_UN);
+	if ($ret === false) {
+		// ignore
+	}
+	fclose($lock);
 }
 ?>
