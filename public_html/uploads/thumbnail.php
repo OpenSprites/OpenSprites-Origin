@@ -9,8 +9,6 @@ spl_autoload_register("my_autoloader");
 use BoyHagemann\Waveform\Waveform;
 use BoyHagemann\Waveform\Generator;*/
 
-include '../assets/lib/waveform/php-waveform-png.php';
-
 function imagecreatefromfile( $filename ) {
     switch ( strtolower( pathinfo( $filename, PATHINFO_EXTENSION ))) {
         case 'jpeg':
@@ -66,6 +64,7 @@ function outputWaveform($path){
 		die(file_get_contents("../assets/images/defaultsound.png"));
 	}
 	// critical section
+        include '../assets/lib/waveform/php-waveform-png.php';
 	$img = renderWaveform($path);
 	imagepng($img, "thumb-cache/" . $filename . ".png");
 	imagepng($img);
