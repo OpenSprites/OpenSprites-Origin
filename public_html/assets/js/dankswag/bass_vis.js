@@ -168,9 +168,9 @@ var sampleAudioStream = function() {
     ctx.beginPath();
     drawCurve(ctx, pts);
     ctx.closePath();
-    ctx.strokeStyle = '#6677cc';
+    ctx.strokeStyle = Please.RGB_to_HEX(newColor);
     ctx.fillStyle = "#6677cc";
-    ctx.lineWidth = 0;
+    ctx.lineWidth = 3;
     ctx.stroke();
 	
 	ctx.fillStyle = Please.RGB_to_HEX(newColor);
