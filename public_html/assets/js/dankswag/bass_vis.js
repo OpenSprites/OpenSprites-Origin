@@ -54,7 +54,7 @@ var lastShakeTime = new Date().getTime();
 var totalVol;
 
 var oldColor = {r: 0, g: 0, b: 0};
-var newColor = Please.HEX_to_RGB(c[1]);
+var newColor = {r: 0, g: 0, b: 0};
 var colorTransitionTime = 0;
 
 var osLogo = new Image();
