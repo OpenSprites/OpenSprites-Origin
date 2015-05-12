@@ -290,7 +290,7 @@
 		<!-- Circle visualizer -->
 		<script>$('#overlay-img').css('transition', 'none');</script>
 		<script src="/assets/js/dankswag/bass_vis.js"></script>
-		<?php } else if ( && $_GET['vis'] === "bars") { ?>
+		<?php } else if ($_GET['vis'] === "bars") { ?>
 		<!-- Bars -->
 		<script src='/assets/js/dankswag/bars.js'></script>
 		<?php } else { // none ?>
