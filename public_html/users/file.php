@@ -82,7 +82,7 @@
 	<?php if($obj['type'] == 'sound') { ?><?php } ?>
 	
     <?php if($obj['type'] == 'sound') { ?>
-        <div id='overlay-img'></div>
+        <div style='opacity:1;' id='overlay-img'></div>
     	<canvas style='display:none;' id='background-img'></canvas>
 	<canvas id="vis-canvas"></canvas>
     <?php } else { ?>
