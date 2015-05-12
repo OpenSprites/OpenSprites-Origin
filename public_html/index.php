@@ -19,14 +19,14 @@
 		<div class="welcome info">
 			<table>
 				<tr>
-					<td width="260">
-						<img src="/assets/images/indev.png" width="200" height="100" id="cats">
+					<td width="260" style='text-align: center;'>
+						<span class='symbol warning' style='color:rgb(70, 103, 101);font-size:109px;'></span>
 					</td>
 					<td valign="top">
-						<h2 class="welcome-title">OpenSwag is in development!
+						<h2 class="welcome-title">OpenSprites is in development!
 							<a href="javascript:void(0)" class="btn" style="float:right;font-size:0.5em;" onclick="$('.welcome.info').slideUp()">Dismiss</a>
 						</h2>
-						<p class="welcome-text">The OpenSampleText Team is still in the process of creating this site. This means that OpenSprites may not yet have all the stuff you want, and it may also have bugs, so be careful!<br>Stay tuned for more updates on our <a href="/blog" style="color:white;text-decoration:underline">blog</a>!</p>
+						<p class="welcome-text">The OpenSprites Team is still in the process of creating this site. This means that OpenSprites may not yet have all the stuff you want, and it may also have bugs, so be careful!<br>Stay tuned for more updates on our <a href="/blog" style="color:white;text-decoration:underline">blog</a>!</p>
 					</td>
 				</tr>
 			</table>
