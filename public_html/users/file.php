@@ -296,7 +296,6 @@
 		<?php } else { // none ?>
 		<!-- Y U no want visualizer??? -->
 		<?php } ?>
-	<?php } ?>
 	
     <script>
         var j = Please.make_color({format: 'hsv'});
@@ -336,13 +335,15 @@
 			});
 		}
     </script>
+    
+    <?php } ?>
 	
 	<script src="/uploads/edit.js"></script>
 	
 	<?php if($obj['type'] == 'script') { ?>
 	<script src='/assets/js/jszip.min.js'></script>
 	<script>
-		var input = <?php echo json_encode(file_get_contents($obj['url'])); ?>;
+		var input = '<?php echo file_get_contents('http://opensprites.gwiddle.co.uk'.$obj['url']); ?>';
 		var name = <?php echo json_encode($obj['name']); ?>
 	
 		$('#follow a').click(function() {
