@@ -2,13 +2,13 @@ function createVisualizer(){
 var player = $("audio").get(0);
 var canvas = $("#vis-canvas").get(0);
 
-player.onplay = function(){
+$(player).on("play", function(){
 	$(canvas).fadeIn();
-};
+});
 
-player.onpause = function(){
+$(player).on("pause", function(){
 	$(canvas).fadeOut();
-};
+});
 
 $(canvas).fadeOut();
 

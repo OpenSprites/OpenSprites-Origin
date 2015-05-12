@@ -1,4 +1,3 @@
-$('#overlay-img').css('opacity', '1');
 var player = $("audio").get(0);
 var divs = [];
 var c = Please.make_color({

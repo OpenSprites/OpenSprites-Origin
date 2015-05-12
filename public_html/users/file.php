@@ -79,12 +79,10 @@
     </script>
     
     <!-- Main wrapper -->
-	<?php if($obj['type'] == 'sound') { ?><?php } ?>
-	
     <?php if($obj['type'] == 'sound') { ?>
-        <div style='opacity:1;' id='overlay-img'></div>
-    	<canvas style='display:none;' id='background-img'></canvas>
-	<canvas id="vis-canvas"></canvas>
+        <div id='overlay-img'></div>
+    	<canvas id='background-img'></canvas>
+		<canvas id="vis-canvas"></canvas>
     <?php } else { ?>
         <div id='overlay-img'></div>
     	<canvas id='background-img'></canvas>
@@ -286,15 +284,18 @@
     </script>
     
     <?php if($obj['type'] == "sound"){ ?>
-    <!-- background colors! -->
-    <script src="/assets/lib/please/please.js"></script>
-	<?php } if (isset($_GET['vis']) && $_GET['vis'] === "bars") { ?>
+		<!-- background colors! -->
+		<script src="/assets/lib/please/please.js"></script>
+		<?php if(!isset($_GET['vis']) || $_GET['vis'] === "default"){ //default ?>
+		<!-- Circle visualizer -->
+		<script>$('#overlay-img').css('transition', 'none');</script>
+		<script src="/assets/js/dankswag/bass_vis.js"></script>
+		<?php } else if ( && $_GET['vis'] === "bars") { ?>
+		<!-- Bars -->
 		<script src='/assets/js/dankswag/bars.js'></script>
-    	<?php } else if (isset($_GET['vis']) && $_GET['vis'] === "none") {?>
-    	<?php } else { // use default visualizer ?>
-    		<script>$('#overlay-img').css('transition', 'none');</script>
-    		<script src="/assets/js/dankswag/bass_vis.js"></script>
-    	<?php } ?>
+		<?php } ?>
+	<?php } ?>
+	
     <script>
         var j = Please.make_color({format: 'hsv'});
         var c = Please.make_scheme({
@@ -319,6 +320,19 @@
             if(!document.getElementsByTagName('audio')[0].paused)
                 $('#overlay-img').css('background', c[0]);
         }, 2000);
+		
+		var audioPlayer = $("audio");
+		if(audioPlayer.length > 0){
+			$(audioPlayer).on("play", function(){
+				$("#overlay-img").fadeIn();
+				$("#background-img").fadeOut();
+			});
+
+			$(audioPlayer).on("pause", function(){
+				$("#overlay-img").fadeOut();
+				$("#background-img").fadeIn();
+			});
+		}
     </script>
 	
 	<script src="/uploads/edit.js"></script>
