@@ -37,8 +37,8 @@
 		<br/><br/><div class="welcome signup">
 			<table>
 				<tr>
-					<td width="260">
-						<img src="/assets/images/sharingcats.png" width="200" height="100" id="cats">
+					<td width="260" style='text-align: center;'>
+						<span class='symbol paperclip' style='color:rgb(70, 103, 101);font-size:109px;'></span>
 					</td>
 					<td valign="top">
 						<h2 class="welcome-title">Share your Scratch resources with the world!
