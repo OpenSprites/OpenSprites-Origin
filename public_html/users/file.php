@@ -17,7 +17,7 @@
 	    	}
 	    }
 	}
-	if(isset($_GET['file'])) $file = $_GET['file'];da
+	if(isset($_GET['file'])) $file = $_GET['file'];
 	
 	$asset = imageExists($id, $file);
 	$filename = NULL;
