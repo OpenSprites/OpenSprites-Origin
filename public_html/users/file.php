@@ -17,7 +17,7 @@
 	    	}
 	    }
 	}
-	if(isset($_GET['file'])) $file = $_GET['file'];da
+	if(isset($_GET['file'])) $file = $_GET['file'];
 	
 	$asset = imageExists($id, $file);
 	$filename = NULL;
@@ -293,6 +293,8 @@
 		<?php } else if ( && $_GET['vis'] === "bars") { ?>
 		<!-- Bars -->
 		<script src='/assets/js/dankswag/bars.js'></script>
+		<?php } else { // none ?>
+		<!-- Y U no want visualizer??? -->
 		<?php } ?>
 	<?php } ?>
 	
