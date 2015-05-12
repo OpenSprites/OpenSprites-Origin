@@ -79,10 +79,15 @@
     </script>
     
     <!-- Main wrapper -->
-	<?php if($obj['type'] == 'sound') { ?><div id='overlay-img'></div><?php } ?>
-	<canvas id='background-img'></canvas>
+	<?php if($obj['type'] == 'sound') { ?><?php } ?>
+	
     <?php if($obj['type'] == 'sound') { ?>
+        <div id='overlay-img'></div>
+    	<canvas style='display:none;' id='background-img'></canvas>
 	<canvas id="vis-canvas"></canvas>
+    <?php } else { ?>
+        <div id='overlay-img'></div>
+    	<canvas id='background-img'></canvas>
     <?php } ?>
     <div id='dark-overlay'><div id='overlay-inner'>
 		    <div id='username' class='asset-name'>
