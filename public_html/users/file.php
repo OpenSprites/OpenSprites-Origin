@@ -79,9 +79,9 @@
     </script>
     
     <!-- Main wrapper -->
+	<?php if($obj['type'] == 'sound') { ?><div id='overlay-img'></div><?php } ?>
 	<canvas id='background-img'></canvas>
     <?php if($obj['type'] == 'sound') { ?>
-	<div id='overlay-img'></div>
 	<canvas id="vis-canvas"></canvas>
     <?php } ?>
     <div id='dark-overlay'><div id='overlay-inner'>
