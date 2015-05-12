@@ -4,7 +4,7 @@ body {
 	display: inherit !important;
 }
 
-.welcome.info .symbol.warning {
+.info .symbol {
 	color: rgb(40, 40, 40) !important;
 }
 
