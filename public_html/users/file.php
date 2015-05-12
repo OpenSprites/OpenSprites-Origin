@@ -17,7 +17,7 @@
 	    	}
 	    }
 	}
-	if(isset($_GET['file'])) $file = $_GET['file'];
+	if(isset($_GET['file'])) $file = $_GET['file'];da
 	
 	$asset = imageExists($id, $file);
 	$filename = NULL;
@@ -289,11 +289,12 @@
     <!-- background colors! -->
     <script src="/assets/lib/please/please.js"></script>
 	<?php } if (isset($_GET['vis']) && $_GET['vis'] === "bars") { ?>
-	<script src='/assets/js/dankswag/bars.js'></script>
-    <?php } else { // use default visualizer ?>
-    <script>$('#overlay-img').css('transition', 'none');</script>
-    <script src="/assets/js/dankswag/bass_vis.js"></script>
-    <?php } ?>
+		<script src='/assets/js/dankswag/bars.js'></script>
+    	<?php } else if (isset($_GET['vis']) && $_GET['vis'] === "none") {?>
+    	<?php } else { // use default visualizer ?>
+    		<script>$('#overlay-img').css('transition', 'none');</script>
+    		<script src="/assets/js/dankswag/bass_vis.js"></script>
+    	<?php } ?>
     <script>
         var j = Please.make_color({format: 'hsv'});
         var c = Please.make_scheme({
