@@ -4,13 +4,16 @@ body {
 	display: inherit !important;
 }
 
+.welcome.info .symbol.warning {
+	color: rgb(40, 40, 40) !important;
+}
+
 .themebg {
 	background-color: #282828;
 }
 
 .container.main {
 	color: white !important;
-	background-color: #282828 !important;
 }
 
 h1.firstHeading, h2 {
