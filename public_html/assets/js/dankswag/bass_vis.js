@@ -54,7 +54,7 @@ var lastShakeTime = new Date().getTime();
 var totalVol;
 
 var oldColor = {r: 0, g: 0, b: 0};
-var newColor = Please.make_color({format:'rgb'});
+var newColor = Please.HEX_to_RGB(c[1]);
 var colorTransitionTime = 0;
 
 var osLogo = new Image();
@@ -85,12 +85,9 @@ var sampleAudioStream = function() {
 	var delta = timeNow - lastCalledTime;
 	lastCalledTime = timeNow;
 	
-	colorTransitionTime += delta;
-	if(colorTransitionTime > 2000){
-		oldColor = newColor;
-		newColor = Please.make_color({format:'rgb'});
-		colorTransitionTime = 0;
-	}
+	oldColor = newColor;
+	newColor = Please.HEX_to_RGB(c[1]);
+	colorTransitionTime = 0;
 
     analyser.getByteFrequencyData(streamData);
 	totalVol = 0;
