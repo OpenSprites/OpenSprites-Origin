@@ -1,0 +1,67 @@
+/* USAGE: <span class='symbol SYMBOLNAME'></span> */
+/* get symbolname from below.                     */
+
+@font-face {
+    font-family: 'SYMBOL';
+    src: url('pictos-web.eot');
+    src: local('☺'), url('WebSymbols-Regular.otf') format('opentype'), url('WebSymbols-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.symbol {
+    font-family: 'SYMBOL';
+}
+
+/* symbols */
+.symbol.portrait:after {content: 'a';}
+.symbol.landscape:after {content: 'b';}
+.symbol.speech:after {content: 'c';}
+.symbol.chat:after {content: 'd';}
+.symbol.chat-load:after {content: 'e';}
+.symbol.facebook:after {content: 'f';}
+.symbol.googleplus:after {content: 'g';}
+.symbol.back:after {content: 'h';}
+.symbol.back-double:after {content: 'i';}
+.symbol.arrow-right:after {content: 'j';}
+.symbol.t:after {content: 'k';}
+.symbol.linkedin:after {content: 'l';}
+.symbol.vine:after {content: 'm';}
+.symbol.list-arrow-right:after {content: 'n';}
+.symbol.list-arrow-left:after {content: 'o';}
+.symbol.list-bullet:after {content: 'p';}
+.symbol.list-number:after {content: 'q';}
+.symbol.wifi:after {content: 'r';}
+.symbol.skype:after {content: 's';}
+.symbol.twitter:after {content: 't';}
+.symbol.connection:after {content: 'u';}
+.symbol.b:after {content: 'v';}
+.symbol.unlocked:after {content: 'w';}
+.symbol.locked:after {content: 'x';}
+.symbol.youtube:after {content: 'y';}
+.symbol.tetris:after {content: 'z';}
+
+.symbol.paperclip:after {content: 'A';}
+.symbol.attachment:after {content: 'A';}
+.symbol.hotspot:after {content: 'B';}
+.symbol.cloud:after {content: 'C';}
+.symbol.desktop:after {content: 'D';}
+.symbol.folder:after {content: 'F';}
+.symbol.code:after {content: 'G';}
+.symbol.image:after {content: 'H';}
+.symbol.link:after {content: 'K';}
+.symbol.search:after {content: 'L';}
+.symbol.video:after {content: 'M';}
+.symbol.heart:after {content: 'N';}
+.symbol.heart-outline:after {content: 'O';}
+
+.symbol.clock:after {content: 'P';}
+.symbol.stickman:after {content: 'Q';}
+.symbol.star:after {content: 'R';}
+.symbol.settings:after {content: 'S';}
+.symbol.font:after {content: 'T';}
+.symbol.profile:after {content: 'U';}
+.symbol.reload:after {content: 'V';}
+.symbol.warning:after {content: 'W';}
+.symbol.poweron:after {content: 'X';}
+.symbol.box:after {content: 'Z';}
