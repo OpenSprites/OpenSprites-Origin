@@ -9,7 +9,7 @@ Disallow: /old/
 Disallow: /site-api/
 crawl-delay: 10
 
-User-agent: Baidu
+User-agent: Baiduspider
 Disallow: /
 
 User-agent: Yandex
