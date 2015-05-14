@@ -7,10 +7,22 @@ Disallow: /assets/
 Disallow: /themes/
 Disallow: /old/
 Disallow: /site-api/
+Disallow: /about/
+Disallow: /admin/
+Disallow: /app/
+Disallow: /cron/
+Disallow: /forums/
+Disallow: /img/
+Disallow: /privacy/
+Disallow: /register/
+Disallow: /register_old/
+Disallow: /statistics/
+Disallow: /tos/
+
 crawl-delay: 10
 
 User-agent: Baiduspider
 Disallow: /
 
-User-agent: Yandex
+User-agent: litefinder
 Disallow: /
