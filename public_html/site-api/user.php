@@ -98,14 +98,14 @@ if(isset($_GET['userid'])) {
 
 connectForumDatabase();
 $userInfo2 = getUserInfo(intval($userid));
-$userInfo2['avatar'] = "http://opensprites.gwiddle.co.uk/forums/uploads/avatars/" . $userid . ".png";
+$userInfo2['avatar'] = "http://opensprites.org/forums/uploads/avatars/" . $userid . ".png";
 
 $handle = curl_init($userInfo2['avatar']);
 curl_setopt($handle,  CURLOPT_RETURNTRANSFER, TRUE);
 $response = curl_exec($handle);
 $httpCode = curl_getinfo($handle, CURLINFO_HTTP_CODE);
 if($httpCode == 404) {
-    $userInfo2['avatar'] = "//opensprites.gwiddle.co.uk/assets/images/defaultuser.png";
+    $userInfo2['avatar'] = "//opensprites.org/assets/images/defaultuser.png";
 }
 curl_close($handle);
 
