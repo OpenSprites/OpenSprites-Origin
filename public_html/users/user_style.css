@@ -135,7 +135,7 @@
 #user-pane-right {
     position: absolute;
     margin-left: 470px;
-    width: 470px;
+    width: 100%;
     height: 335px;
     text-align: left;
 }
