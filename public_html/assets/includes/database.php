@@ -33,7 +33,7 @@ function connectForumDatabase(){
 	if($forum_database_connected){
 		return;
 	}
-	$conf = 'mysql:host=localhost;dbname='.$forum_db_name.';charset=utf8';
+	$conf = 'mysql:host=10.0.0.5;dbname='.$forum_db_name.';charset=utf8';
 	$forum_dbh = new PDO($conf, $forum_username, $forum_password);
 	$forum_dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 	$forum_dbh->setAttribute(PDO::ATTR_EMULATE_PREPARES, false);
@@ -140,7 +140,7 @@ function connectDatabase(){
 	if($database_connected){
 		return;
 	}
-	$conf = 'mysql:host=localhost;dbname='.$db_name.';charset=utf8';
+	$conf = 'mysql:host=10.0.0.5;dbname='.$db_name.';charset=utf8';
 	$dbh = new PDO($conf, $username, $password);
 	$dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 	$dbh->setAttribute(PDO::ATTR_EMULATE_PREPARES, false);
