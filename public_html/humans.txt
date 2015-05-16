@@ -1,4 +1,4 @@
-=== Developer Team ===
+///// OpenSprites Team \\\\\
 
 === Systems Administrators ===
     Username: cheeseeater
