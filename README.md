@@ -1,11 +1,11 @@
 # OpenSprites #
 Inspired by Scratch Resources, OpenSprites is a new sharing platform designed for Scratchers to upload their own content, as well as download other's content for free use in their projects. It is being developed open-source by a small group of collaborating Scratchers. The code is available on GitHub.
 
-For more information, please visit the [discussion thread](http://scratch.mit.edu/discuss/topic/85320/). The main website  is hosted [here](http://opensprites.gwiddle.co.uk/). (however, it is likely that we buy our own domain) For a bleeding edge version of the site that updates after each commit, see [OSDev](http://osdev.aputurk.tk/index.php). If you have any questions, don't hesitate to use our [forums](http://opensprites.gwiddle.co.uk/forums/). Thank you to cauzality who kindly made our logos and various graphical mockups!
+For more information, please visit the [discussion thread](http://scratch.mit.edu/discuss/topic/85320/). The main website  is hosted [here](http://opensprites.org/). (however, it is likely that we buy our own domain) For a bleeding edge version of the site that updates after each commit, see [OSDev](http://osdev.aputurk.tk/index.php). If you have any questions, don't hesitate to use our [forums](http://opensprites.org/forums/). Thank you to cauzality who kindly made our logos and various graphical mockups!
 
 ## The OpenSprites team: ##
 
-### [The-Cheese-Eater](http://opensprites.gwiddle.co.uk/users/1/) ###
+### [The-Cheese-Eater](http://opensprites.org/users/1/) ###
 ![GitHub Logo](https://avatars0.githubusercontent.com/u/9347154?s=100)
 
 [Very active]
@@ -32,7 +32,7 @@ jbayfield is an OpenSprites administrator and developer.
  - Moderation
  - Advice
 
-### [MegaApuTurkUltra](http://opensprites.gwiddle.co.uk/users/6/) ###
+### [MegaApuTurkUltra](http://opensprites.org/users/6/) ###
 ![GitHub Logo](https://avatars0.githubusercontent.com/u/8547938?s=100)
 
 [Very active]
@@ -56,7 +56,7 @@ Firedrake969 is one of the lead developers of OS. He is also one of the main ove
  - PHP
  - Administration
 
-### [GrannyCookies](http://opensprites.gwiddle.co.uk/users/4/) ###
+### [GrannyCookies](http://opensprites.org/users/4/) ###
 ![GitHub Logo](https://avatars0.githubusercontent.com/u/9429556?s=100)
 
 [Very active]
@@ -69,7 +69,7 @@ He hax0red the forums and styled it to look neat with the rest of the site, as h
  - PHP
  - Administration and moderation of site/forums
 
-### [andrewjcole](http://opensprites.gwiddle.co.uk/users/5/) ###
+### [andrewjcole](http://opensprites.org/users/5/) ###
 ![GitHub Logo](https://avatars1.githubusercontent.com/u/10202163?s=100)
 
 [Active]
@@ -88,7 +88,7 @@ liam4 is a tester / bug reporter / feature suggester on the OS team. He designed
  - Idea creating
  - Bug reporting
 
-### [Rumanti](http://opensprites.gwiddle.co.uk/users/14/) ###
+### [Rumanti](http://opensprites.org/users/14/) ###
 ![Github logo](https://avatars1.githubusercontent.com/u/10893362?s=100)
 
 [Active]
@@ -108,7 +108,7 @@ DM5555 is a dev on the OS team.
  - JavaScript
  - PHP(If necessary)
 
-### [pilppe](http://opensprites.gwiddle.co.uk/users/8/) ###
+### [pilppe](http://opensprites.org/users/8/) ###
 ![GitHub Logo](https://avatars2.githubusercontent.com/u/8099538?s=100)
 
 [Inactive]
