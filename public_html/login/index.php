@@ -14,7 +14,7 @@
 		// unset session cookie, try to unset dups if possible
 		setcookie("OpenSprites_Forum_session", "", time() - 3600);
 		setcookie("OpenSprites_Forum_session", "", time() - 3600, "/");
-		setcookie("OpenSprites_Forum_session", "", time() - 3600, "/", ".opensprites.gwiddle.co.uk");
+		setcookie("OpenSprites_Forum_session", "", time() - 3600, "/", ".opensprites.org");
 		
 		// mark that the session has been destroyed
 		header("Location: /login/?redir=true");
@@ -38,7 +38,7 @@
     <div class="container main" style="height:440px;">
         <div class="main-inner">
             <!-- <div style="position: absolute;left: 0;right: 0;height: 70px;" class="themebg"></div> -->
-            <iframe scrolling="no" src="http://opensprites.gwiddle.co.uk/forums/?p=user/login&return=http://opensprites.gwiddle.co.uk/&iframe=true" style="width: 100%; height: 300px;overflow: hidden;border: none;margin-top: -50px"></iframe>
+            <iframe scrolling="no" src="http://opensprites.gwiddle.org/forums/?p=user/login&return=http://opensprites.gwiddle.co.uk/&iframe=true" style="width: 100%; height: 300px;overflow: hidden;border: none;margin-top: -50px"></iframe>
         </div>
     </div>
     
