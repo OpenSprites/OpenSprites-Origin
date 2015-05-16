@@ -28,7 +28,7 @@
             for (var i = count; i > count - on_page_limit && i > 0; i--) {
                 entries += blog_load_html(i.toString(), function(r) {
                     $("#entries").append(r).append('<hr>');
-                    $('code').wrap('<pre>').each(function(i, block) {
+                    $('code').wrap('<div>').each(function(i, block) {
                         hljs.highlightBlock(block);
                     });
                 });
