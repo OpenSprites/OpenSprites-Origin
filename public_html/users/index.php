@@ -15,7 +15,7 @@
     	}
     }
     
-    $raw_json = file_get_contents("http://opensprites.gwiddle.co.uk/site-api/user.php?userid=" . $id);
+    $raw_json = file_get_contents("http://opensprites.org/site-api/user.php?userid=" . $id);
     if(!isset(json_decode($raw_json, true)['userid'])) {
         include '../404.php';
         die();
