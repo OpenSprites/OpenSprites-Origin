@@ -33,6 +33,7 @@
         </div>
         
         <!-- happy birthday liam4! (feel free to delete) -->
+        <br/><br/>
         <div class="welcome liam4bday">
 			<table>
 				<tr>
@@ -40,10 +41,10 @@
 						<span class='symbol chat' style='color:rgb(70, 103, 101);font-size:109px;'></span>
 					</td>
 					<td valign="top">
-						<h2 class="welcome-title">Happy Birthday to <a href='/users/liam48D/'>Liam48D</a>!
+						<h2 class="welcome-title">Happy Birthday to <a style='color:white !important;' href='/users/liam48D/'>Liam48D</a>!
 							<a href="javascript:void(0)" class="btn" style="float:right;font-size:0.5em;" onclick="$('.welcome.liam4bday').slideUp()">Dismiss</a>
 						</h2>
-						<p class="welcome-text">Today is <a href='/users/liam48D/'>Liam48D</a>'s birthday! Happy Birthday, Liam!</p>
+						<p class="welcome-text">Today is <a style='color:white !important;' href='/users/liam48D/'>Liam48D</a>'s birthday! Happy Birthday, Liam!</p>
 					</td>
 				</tr>
 			</table>
