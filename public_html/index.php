@@ -32,6 +32,23 @@
 			</table>
         </div>
         
+        <!-- happy birthday liam4! (feel free to delete) -->
+        <div class="welcome liam4bday">
+			<table>
+				<tr>
+					<td width="260" style='text-align: center;'>
+						<span class='symbol chat' style='color:rgb(70, 103, 101);font-size:109px;'></span>
+					</td>
+					<td valign="top">
+						<h2 class="welcome-title">Happy Birthday to <a href='/users/liam48D/'>Liam48D</a>!
+							<a href="javascript:void(0)" class="btn" style="float:right;font-size:0.5em;" onclick="$('.welcome.liam4bday').slideUp()">Dismiss</a>
+						</h2>
+						<p class="welcome-text">Today is <a href='/users/liam48D/'>Liam48D</a>'s birthday! Happy Birthday, Liam!</p>
+					</td>
+				</tr>
+			</table>
+        </div>
+        
         <?php if($logged_in_user == 'not logged in') { ?>
         <!-- Info for new visistors. -->
 		<br/><br/><div class="welcome signup">
