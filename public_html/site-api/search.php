@@ -95,7 +95,7 @@ $fulltext_search = join(" ", $keywords);
 $fulltext_search = getDbh()->quote($fulltext_search);
 
 //                                                         \/ see above
-$match_query .= "MATCH(`customName`,`description`) AGAINST($fulltext_search IN BOOLEAN MODE) ";
+$match_query = "MATCH(`customName`,`description`) AGAINST($fulltext_search IN BOOLEAN MODE) ";
 
 $sql_query = "SELECT *, $match_query as relevance FROM `os_assets` WHERE ";
 if($filter == "all"){
