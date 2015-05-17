@@ -48,6 +48,7 @@ for($i=0;$i<$size;$i++){
 				break;
 			}
 		}
+		if($j >= $size) $j = $size - 1;
 		if(is_valid_word(substr($words[$j], 0, strlen($words[$j]) - 1)) && substr($words[$j], strlen($words[$j]) - 1, 1) === "\""){
 			$quote .= " " . $words[$j];
 			array_push($keywords, $quote);
