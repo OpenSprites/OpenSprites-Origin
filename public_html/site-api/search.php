@@ -40,8 +40,8 @@ for($i=0;$i<$size;$i++){
 			}
 			$j++;
 			if($j >= $size - 1){
-				if(substr($words[$j], strlen($words[$j]) - 1, 1) !== "\""){
-					array_push($warning, "No closing quote on " . $words[$j]);
+				if(substr($words[sizeof($words) - 1], strlen($words[sizeof($words) - 1]) - 1, 1) !== "\""){
+					array_push($warning, "No closing quote on " . $words[sizeof($words) - 1]);
 				}
 				break;
 			}
