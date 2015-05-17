@@ -2,6 +2,8 @@
 require 'lib.php';
 
 function getNiceResultNumber($num){
+	if($num == 0) return "No results";
+	if($num == 1) return "1 result";
 	if($num < 1000) return $num . " results";
 	if($num < 1000000) return "About " . floor($num / 1000) . "K results";
 	return "About " . floor($num / 1000000) . "M results";
