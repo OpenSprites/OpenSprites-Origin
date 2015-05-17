@@ -9,7 +9,7 @@ For more information, please visit the [discussion thread](http://scratch.mit.ed
 ![GitHub Logo](https://avatars0.githubusercontent.com/u/9347154?s=100)
 
 [Very active]
-The-Cheese-Eater, your local sysadmin! He mostly manages hosting, forums, organisation and accounts.
+The-Cheese-Eater mostly manages hosting, forums, organisation, accounts and domain billing.
 
  - Doing whatever sysadmins do
  - Supervising
