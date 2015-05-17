@@ -18,18 +18,18 @@ window.onload = function() {
     var navbar = '';
     navbar += '<div class="header">';
     navbar += '    <div class="container">';
-    navbar += '        <a class="scratch" href="//opensprites.gwiddle.co.uk"></a>';
+    navbar += '        <a class="scratch" href="//opensprites.org"></a>';
     navbar += '    </div>'
     navbar += '</div>';
     
     $('body').append(navbar);
     
     // back to the main site link on navbar
-    $('#forumTitle').before('<a id="back-to-the-main-site" style="position:absolute;top:40px;color:white;" href="http://opensprites.gwiddle.co.uk/">Back to the main site</a>');
+    $('#forumTitle').before('<a id="back-to-the-main-site" style="position:absolute;top:40px;color:white;" href="http://opensprites.org/">Back to the main site</a>');
     $('#forumTitle').attr('style', 'padding-top:10px;padding-bottom:20px;');
 
     // logout fix
-    $('.item-logout a').attr('href', 'http://opensprites.gwiddle.co.uk/logout.php?return=http://opensprites.gwiddle.co.uk/forums/?p=conversations');
+    $('.item-logout a').attr('href', 'http://opensprites.org/logout.php?return=http://opensprites.org/forums/?p=conversations');
 
     // themes
     $('#ftr-content .menu').append('<li id="theme"></li>');

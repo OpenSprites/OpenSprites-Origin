@@ -14,7 +14,7 @@
 				if($found){
 					setcookie($name, "", time() - 3600);
 					setcookie($name, "", time() - 3600, "/");
-					setcookie($name, "", time() - 3600, "/", ".opensprites.gwiddle.co.uk");
+					setcookie($name, "", time() - 3600, "/", ".opensprites.org");
 					return TRUE;
 				} else {
 					$found = TRUE;
@@ -30,7 +30,7 @@
 	}*/
 
     session_name("OpenSprites_Forum_session");
-    session_set_cookie_params(0, '/', '.opensprites.gwiddle.co.uk');
+    session_set_cookie_params(0, '/', '.opensprites.org');
     session_start();
 	
 	connectForumDatabase();
@@ -53,6 +53,6 @@
 			error_reporting(0);
 		}
         if($user_group == "Suspended"){
-            header( 'Location: http://opensprites.gwiddle.co.uk/suspended.php' ) ;
+            header( 'Location: http://opensprites.org/suspended.php' ) ;
         }
     }

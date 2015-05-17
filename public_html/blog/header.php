@@ -2,7 +2,7 @@
 
 <?php /* Important things; don't remove or change. */ ?>
 <meta coding="utf-8">
-<link rel="icon" type="image/png" href="http://opensprites.gwiddle.co.uk/favicon.ico">
+<link rel="icon" type="image/png" href="http://opensprites.org/favicon.ico">
 <link rel="stylesheet" href="themes/global.css">
 <link rel="stylesheet" href="hightlight.css">
 <script src="highlight.min.js"></script>
@@ -17,7 +17,7 @@
 <?php
 
     $AUTHOR_NAME    = "The OpenSprites Team";
-    $AUTHOR_LINK    = "//opensprites.gwiddle.co.uk";
+    $AUTHOR_LINK    = "//opensprites.org";
     $SITE_KEYWORDS  = "OS, OpenSprites, OpenSpites Team, OS Team, Blog";
 
 ?>

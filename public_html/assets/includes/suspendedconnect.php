@@ -6,7 +6,7 @@ connectDatabase();
 connectForumDatabase();
 
 session_name("OpenSprites_Forum_session");
-session_set_cookie_params(0, '/', '.opensprites.gwiddle.co.uk');
+session_set_cookie_params(0, '/', '.opensprites.org');
 session_start();
 
 $logged_in_userid = 0;

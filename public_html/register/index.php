@@ -23,7 +23,7 @@
     <div class="container main" style="height:700px;">
         <div class="main-inner">
             <!--<div style="position: absolute;left: 0;right: 0;height: 70px;" class="themebg"></div>-->
-            <iframe scrolling="no" src="http://opensprites.gwiddle.co.uk/forums/?p=user/join&amp;return=http://opensprites.gwiddle.co.uk/&amp;iframe=true" style="width: 100%; height: 620px;overflow: hidden;border: none;margin-top:-80px;"></iframe>
+            <iframe scrolling="no" src="http://opensprites.org/forums/?p=user/join&amp;return=http://opensprites.org/&amp;iframe=true" style="width: 100%; height: 620px;overflow: hidden;border: none;margin-top:-80px;"></iframe>
         </div>
     </div>
     

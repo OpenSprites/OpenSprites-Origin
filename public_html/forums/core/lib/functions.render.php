@@ -75,9 +75,9 @@ if (!function_exists("memberURL")) {
 function memberURL($memberId, $username = "", $pane = "")
 {
 	//return "member/".($pane ? "$pane/" : "").$memberId.(($username = slug($username)) ? "-$username" : "");
-	//header( 'Location: http://opensprites.gwiddle.co.uk/users/' . $memberId) ;
+	//header( 'Location: http://opensprites.org/users/' . $memberId) ;
 	
-	return "http://opensprites.gwiddle.co.uk/users/" . $memberId;
+	return "http://opensprites.org/users/" . $memberId;
 }
 
 }

@@ -154,9 +154,9 @@
 			<?php if($obj['type'] == 'image'){ ?>
 				<h2>Direct links</h2>
 				<p>Use this link to embed this image on websites.</p>
-				<input type="text" value="http://opensprites.gwiddle.co.uk/uploads/uploaded/<?php echo urlencode($obj['filename']); ?>" class="image-url" onfocus="$(this).select();" />
+				<input type="text" value="http://opensprites.org/uploads/uploaded/<?php echo urlencode($obj['filename']); ?>" class="image-url" onfocus="$(this).select();" />
 				<p>Copy and paste this BBCode to embed the image on forums such as the Scratch forums.</p>
-				<input type="text" value="[img]http://opensprites.gwiddle.co.uk/uploads/uploaded/<?php echo urlencode($obj['filename']); ?>[/img]" class="image-url" onfocus="$(this).select();" />
+				<input type="text" value="[img]http://opensprites.org/uploads/uploaded/<?php echo urlencode($obj['filename']); ?>[/img]" class="image-url" onfocus="$(this).select();" />
 			<?php } ?>
 			<?php if($obj['type'] == 'script') { ?>
         	    <h2>Script</h2>
@@ -343,7 +343,7 @@
 	<?php if($obj['type'] == 'script') { ?>
 	<script src='/assets/js/jszip.min.js'></script>
 	<script>
-		var input = '<?php echo file_get_contents('http://opensprites.gwiddle.co.uk'.$obj['url']); ?>';
+		var input = '<?php echo file_get_contents('http://opensprites.org'.$obj['url']); ?>';
 		var name = <?php echo json_encode($obj['name']); ?>
 	
 		$('#follow a').click(function() {

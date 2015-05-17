@@ -66,7 +66,7 @@ if (!defined("IN_ESOTALK")) exit;
 
 <!-- FOOTER -->
 <div class="footer">
-	<a href="http://opensprites.gwiddle.co.uk/about/">About Us</a> - <a href="mailto:cheese.eater@mail.com">Contact Us</a> - <a href="http://opensprites.gwiddle.co.uk/tos/">Terms of Service</a> - <a href="http://opensprites.gwiddle.co.uk/privacy/">Privacy</a>
+	<a href="http://opensprites.org/about/">About Us</a> - <a href="mailto:cheese.eater@mail.com">Contact Us</a> - <a href="http://opensprites.org/tos/">Terms of Service</a> - <a href="http://opensprites.org/privacy/">Privacy</a>
 	<br>
 	OpenSprites is a resources site developed by the <a href="https://github.com/OpenSprites/OpenSprites/blob/master/README.md">OpenSprites team</a>.<br>
 	We are not endorsed or affiliated with the Scratch Team.<br>

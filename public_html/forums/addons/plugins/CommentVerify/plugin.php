@@ -63,7 +63,7 @@ class ETPlugin_CommentVerify extends ETPlugin {
 	function processScratchField($form, $key, &$data)
 	{
         // process stuff
-        $url = 'http://opensprites.gwiddle.co.uk/register/comments.php?user=' . $data["username"] . '&key=' . $_SESSION['token'];
+        $url = 'http://opensprites.org/register/comments.php?user=' . $data["username"] . '&key=' . $_SESSION['token'];
         $resp = file_get_contents($url);
         
 		if($resp == 'false') {

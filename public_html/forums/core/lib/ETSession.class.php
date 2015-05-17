@@ -53,7 +53,7 @@ public function __construct()
 	
 	// just to make sure
 	session_name("OpenSprites_Forum_session");
-    session_set_cookie_params(0, '/', '.opensprites.gwiddle.co.uk');
+    session_set_cookie_params(0, '/', '.opensprites.org');
     session_start();
     if (empty($_SESSION["token"])) $this->regenerateToken();
 
