@@ -1,4 +1,7 @@
 # OpenSprites #
+
+OSDev Staging: ![Build Status](http://opensprites.org:8111/app/rest/builds/buildType:OSDev_Stage/statusIcon "Build Status")
+
 Inspired by Scratch Resources, OpenSprites is a new sharing platform designed for Scratchers to upload their own content, as well as download other's content for free use in their projects. It is being developed open-source by a small group of collaborating Scratchers. The code is available on GitHub.
 
 For more information, please visit the [discussion thread](http://scratch.mit.edu/discuss/topic/85320/). The main website  is hosted [here](http://opensprites.org/). For a bleeding edge version of the site that updates after each commit, see [OSDev](http://osdev.opensprites.org). If you have any questions, don't hesitate to use our [forums](http://opensprites.org/forums/). Thank you to cauzality who kindly made our logos and various graphical mockups!
