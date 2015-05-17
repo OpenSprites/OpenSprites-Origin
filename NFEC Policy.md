@@ -1,4 +1,4 @@
-purchased  #What is NFE content?
+#What is NFE content?
 Not For Everyone Content (NFEC) is content that could potentially be pushing the OpenSprites Guidelines boundary. OpenSprites has a very strict set of regulations concerning what NFEC is and how accessible it is to other users. To clarify, Scratch allows the sharing of NFE projects.
 
 ###What does OpenSprites define NFEC as?
