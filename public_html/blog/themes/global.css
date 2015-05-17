@@ -8,6 +8,11 @@ h1.entry-header a {
     color: black;
 }
 
+ul {
+    line-height: 1px;
+    margin: 0;
+}
+
 .login-alert {
     z-index: 9999;
     width: calc(100% - 35px);

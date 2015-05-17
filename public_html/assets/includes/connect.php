@@ -1,5 +1,7 @@
 <?php
-    require 'html_dom_parser.php';
+    if(!isset($dont_load_htmldom)) {
+        require_once 'html_dom_parser.php';
+    }
 	require_once 'database.php';
 	
 	/*function attemptLogoutBugFix(){

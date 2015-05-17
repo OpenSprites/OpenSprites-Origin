@@ -15,7 +15,24 @@ if (!defined("IN_ESOTALK")) exit;
 <head>
 <base target="_top">
 <meta charset='<?php echo T("charset", "utf-8"); ?>'>
-<title><?php echo sanitizeHTML($data["pageTitle"]); ?></title>
+<title>OpenSprites Forums</title>
+<link href='/navbar.css' rel='stylesheet'>
+<style>
+    .header .search input {
+        padding: 1px !important;
+        padding-left: 0.4em !important;
+        padding-right: 0 !important;
+    }
+    
+    .footer {
+        margin-top: 2em !important;
+        height: 125px !important;
+    }
+    
+    #loadingOverlay-conversations {
+        display: none !important;
+    }
+</style>
 <?php echo $data["head"]; ?>
 </head>
 
@@ -30,49 +47,33 @@ if (!defined("IN_ESOTALK")) exit;
 <?php endforeach; ?>
 </div>
 
-<div id='wrapper'>
-
-<!-- HEADER -->
-<div id='hdr'>
-<div id='hdr-content'>
-
-<div id='hdr-inner'>
-
-<?php if ($data["backButton"]): ?>
-<a href='<?php echo $data["backButton"]["url"]; ?>' id='backButton' title='<?php echo T("Back to {$data["backButton"]["type"]}"); ?>'><i class="icon-chevron-left"></i></a>
-<?php endif; ?>
-
-<h1 id='forumTitle'><a href='<?php echo URL(""); ?>'><?php echo $data["forumTitle"]; ?></a></h1>
-
-<ul id='mainMenu' class='menu'>
-<?php if (!empty($data["mainMenuItems"])) echo $data["mainMenuItems"]; ?>
-</ul>
-
-<ul id='userMenu' class='menu'>
-<?php echo $data["userMenuItems"]; ?>
-<li><a href='<?php echo URL("conversation/start"); ?>' class='link-newConversation button'><?php echo T("New Conversation"); ?></a></li>
-</ul>
-
-</div>
-</div>
-</div>
+<!-- HEADER (sorry for the iframe, but database.php etc cannot be used!) 
+<iframe id="navbar" src="/nav.php" style="
+    width: 100%;
+    overflow: hidden;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    border: none;
+    height: auto;
+    background: transparent;
+    z-index: -100;
+" scrolling="no" seamless="seamless"></iframe>
+-->
+<?php require('../navbar.php'); ?>
+    
+<div id='wrapper' style='z-index:-1000;'>
 
 <!-- BODY -->
 <div id='body'>
-<div id='body-content'>
+<div id='body-content' style='z-index:999;'>
 <?php echo $data["content"]; ?>
 </div>
 </div>
 
 <!-- FOOTER -->
-<div class="footer">
-	<a href="http://opensprites.org/about/">About Us</a> - <a href="mailto:cheese.eater@mail.com">Contact Us</a> - <a href="http://opensprites.org/tos/">Terms of Service</a> - <a href="http://opensprites.org/privacy/">Privacy</a>
-	<br>
-	OpenSprites is a resources site developed by the <a href="https://github.com/OpenSprites/OpenSprites/blob/master/README.md">OpenSprites team</a>.<br>
-	We are not endorsed or affiliated with the Scratch Team.<br>
-	Unless where otherwise stated, this site is licensed under a MIT license 2015.<br>
-	Scratch is a project of the Lifelong Kindergarten Group at the MIT Media Lab.<br>
-</div>
+<?php require('../footer.html'); ?>
 <?php $this->trigger("pageEnd"); ?>
 
 </div>

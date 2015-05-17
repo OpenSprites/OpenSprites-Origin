@@ -43,6 +43,7 @@
  * All of the Defines for the classes below.
  * @author S.C. Chen <me578022@gmail.com>
  */
+try {
 define('HDOM_TYPE_ELEMENT', 1);
 define('HDOM_TYPE_COMMENT', 2);
 define('HDOM_TYPE_TEXT',	3);
@@ -1738,3 +1739,4 @@ class simple_html_dom
 	function getElementsByTagName($name, $idx=-1) {return $this->find($name, $idx);}
 	function loadFile() {$args = func_get_args();$this->load_file($args);}
 }
+} catch(Exception $e) {}

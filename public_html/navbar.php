@@ -17,7 +17,7 @@
 	</center>
 </div>
 
-    <div class="container">
+    <div class="container" style='pointer-events:all;'>
         <a class="scratch" href="/"></a>
 
         <ul class="left">

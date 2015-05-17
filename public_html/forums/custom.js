@@ -22,7 +22,7 @@ window.onload = function() {
     navbar += '    </div>'
     navbar += '</div>';
     
-    $('body').append(navbar);
+    //$('body').append(navbar);
     
     // back to the main site link on navbar
     $('#forumTitle').before('<a id="back-to-the-main-site" style="position:absolute;top:40px;color:white;" href="http://opensprites.org/">Back to the main site</a>');
