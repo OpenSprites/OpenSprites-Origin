@@ -52,7 +52,7 @@ if($filter == "all"){
 } else if($filter == "users"){
 	// welp, implement later
 } else if($filter == "resources"){
-	$sql_query .= "`assetType`='image' OR `assetType`='script' OR `assetType`='sound' ";
+	$sql_query .= "(`assetType`='image' OR `assetType`='script' OR `assetType`='sound') AND ";
 } else if($filter == "collections"){
 	// welp, implement later
 }
