@@ -1,8 +1,6 @@
 <?php
-
-    restore_include_path();
-    include("//navbar.php");
-    include("//footer.php");
-
+    include('../assets/includes/connect.php');
+    include("../navbar.php");
+    
 
 ?>
