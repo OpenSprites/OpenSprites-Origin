@@ -1,6 +1,6 @@
 # OpenSprites #
 
-OSDev Staging: ![Build Status](http://opensprites.org:8111/app/rest/builds/buildType:OSDev_Stage/statusIcon "Build Status")
+OSDev Staging: [See status at TeamCity](http://opensprites.org:8111/)
 
 Inspired by Scratch Resources, OpenSprites is a new sharing platform designed for Scratchers to upload their own content, as well as download other's content for free use in their projects. It is being developed open-source by a small group of collaborating Scratchers. The code is available on GitHub.
 
