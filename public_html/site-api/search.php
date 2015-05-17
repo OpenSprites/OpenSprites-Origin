@@ -39,7 +39,7 @@ for($i=0;$i<$size;$i++){
 				$warning = "Malformed query (not a valid word in quote)";
 			}
 			$j++;
-			if($j === $size - 1){
+			if($j >= $size - 1){
 				if(substr($words[$j], strlen($words[$j]) - 1, 1) !== "\""){
 					array_push($warning, "No closing quote on " . $words[$j]);
 				}
