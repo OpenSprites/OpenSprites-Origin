@@ -24,6 +24,16 @@ $forum_dbh;
 $database_connected = FALSE;
 $forum_database_connected = FALSE;
 
+function getDbh(){
+	global $dbh;
+	return $dbh;
+}
+
+function getForumDbh(){
+	global $forum_dbh;
+	return $forum_dbh;
+}
+
 function connectForumDatabase(){
 	global $forum_dbh;
 	global $forum_username;
