@@ -30,12 +30,13 @@ $("#search-buttonsets .toggleset button").click(function(){
 
 function createPageButton(content, page, selected, nth){
 	if(!nth){
-		$("<button>").addClass("page-button").text(content).attr("data-page", page).click(function(){
+		var button = $("<button>").addClass("page-button").text(content).attr("data-page", page).click(function(){
 			$(this).parent().find("button").removeClass("selected");
 			$(this).addClass("selected");
 			SearchParams.page = $(this).attr("data-page");
 			doSearch();
 		}).appendTo($(".pagination.toggleset"));
+		if(selected) button.addClass("selected");
 	} else {
 		$("<button>").addClass("page-button").text(content).click(function(){
 			$(this).parent().find("button").removeClass("selected");
@@ -52,6 +53,9 @@ function createPageButton(content, page, selected, nth){
 
 function setPages(currentPage, pages){
 	$(".pagination.toggleset button").remove();
+	
+	console.log(currentPage, pages);
+	
 	if(currentPage == 0){
 		createPageButton("1", 0, true, false);
 	} else if(currentPage == 1){
@@ -98,7 +102,7 @@ function doSearch(){
 			$(".search-results").removeClass("loading");
 			$(".search-header").text(data.message);
 			
-			setPages(SearchParams.page, Math.ceil(data.num_results/SearchParams.limit));
+			setPages(SearchParams.page, Math.ceil(data.num_results / SearchParams.limit));
 			
 			if(data.warning.length > 0){
 				for(var i=0;i<data.warning.length;i++){
