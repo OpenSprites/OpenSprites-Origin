@@ -112,8 +112,7 @@
 				var result = data.results[i];
 				var resultRow = $("<p>").addClass("result");
 				resultRow.append($("<a>").attr("href", "/users/" + result.uploaded_by.id + "/" + result.md5 + "/").text(result.name));
-				resultRow.append("<br/>");
-				resultRow.append("By ");
+				resultRow.append(" By ");
 				resultRow.append($("<a>").attr("href", "/users/" + result.uploaded_by.id).text(result.uploaded_by.name));
 				$(".search-popup .search-content").append(resultRow);
 			}

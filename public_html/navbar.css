@@ -146,8 +146,13 @@ ul.navbar-dropdown li {
 	border-bottom-right-radius: 1em;
 }
 
+.search-popup a {
+	color: #DCE7E7;
+}
+
 .search-popup .search-links {
 	text-align: center;
+	border-top: 1px solid #304746;
 }
 
 .search-popup .result {
