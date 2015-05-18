@@ -755,6 +755,7 @@ a:visited {
     white-space: nowrap;
     width: auto;
     overflow-x: auto;
+	overflow-y: hidden;
     padding-left: 1em;
     padding-right: 1em;
 }
