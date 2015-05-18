@@ -47,7 +47,7 @@
 					<p class="search-message"></p>
 					<div class="search-content"></div>
 					<p class='search-links'>
-						<a href="javascript:void(0);" class="all-results">See all results</a> | <a href="javascript:void(0);" class="advanced-search">Advanced Search</a> | <a href="/about/search/" target="_blank">Search Help</a>
+						<a href="javascript:void(0);" class="all-results search-link">See all results</a> | <a href="javascript:void(0);" class="advanced-search search-link">Advanced Search</a> | <a href="/about/search/" class="search-help search-link" target="_blank">Search Help</a>
 					</p>
 				</div>
 			</li>
@@ -111,9 +111,9 @@
 			for(var i = 0; i < Math.min(5, data.results.length); i++){
 				var result = data.results[i];
 				var resultRow = $("<p>").addClass("result");
-				resultRow.append($("<a>").attr("href", "/users/" + result.uploaded_by.id + "/" + result.md5 + "/").text(result.name));
+				resultRow.append($("<a>").addClass("search-link").attr("href", "/users/" + result.uploaded_by.id + "/" + result.md5 + "/").text(result.name));
 				resultRow.append(" By ");
-				resultRow.append($("<a>").attr("href", "/users/" + result.uploaded_by.id).text(result.uploaded_by.name));
+				resultRow.append($("<a>").addClass("search-link").attr("href", "/users/" + result.uploaded_by.id).text(result.uploaded_by.name));
 				$(".search-popup .search-content").append(resultRow);
 			}
 		});
