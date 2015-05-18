@@ -907,7 +907,7 @@ a:visited {
 
 .fold .fold-toggle {
 	background: #ccc;
-	box-shadow: inset 2px 2px 5px gray;
+	box-shadow: inset 2px 2px 3px white;
 	width: 100%;
 	text-align: center;
 	border: 1px solid gray;
