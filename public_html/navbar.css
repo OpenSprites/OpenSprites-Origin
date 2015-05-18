@@ -126,9 +126,18 @@ ul.navbar-dropdown li {
 	background-size: contain;
 	width: 150px;
 	color: grey;
-	line-height: 12px;
+	line-height: 22px;
 	font-size: 14px;
 	font-family: sans-serif !important;
 	height: 22px;
 	margin-top: 6px;
 }
+
+.search-popup {
+	display: none;
+	position: fixed;
+	top: 35px;
+	left: 20%;
+	width: 60%;
+}
+

@@ -24,7 +24,7 @@
 .symbol.back:after {content: 'h';}
 .symbol.back-double:after {content: 'i';}
 .symbol.arrow-right:after {content: 'j';}
-.symbol.t:after {content: 'k';}
+.symbol.twitter:after {content: 'k';}
 .symbol.linkedin:after {content: 'l';}
 .symbol.vine:after {content: 'm';}
 .symbol.list-arrow-right:after {content: 'n';}
@@ -35,7 +35,7 @@
 .symbol.skype:after {content: 's';}
 .symbol.twitter:after {content: 't';}
 .symbol.connection:after {content: 'u';}
-.symbol.b:after {content: 'v';}
+.symbol.b:after {content: 'v';} /* any idea what this logo is? */
 .symbol.unlocked:after {content: 'w';}
 .symbol.locked:after {content: 'x';}
 .symbol.youtube:after {content: 'y';}
@@ -47,14 +47,14 @@
 .symbol.cloud:after {content: 'C';}
 .symbol.desktop:after {content: 'D';}
 .symbol.folder:after {content: 'F';}
-.symbol.code:after {content: 'G';}
-.symbol.image:after {content: 'H';}
+.symbol.code:after {content: 'H';}
+.symbol.image:after {content: 'I';}
+.symbol.refresh-square {content: 'J';}
 .symbol.link:after {content: 'K';}
 .symbol.search:after {content: 'L';}
 .symbol.video:after {content: 'M';}
 .symbol.heart:after {content: 'N';}
 .symbol.heart-outline:after {content: 'O';}
-
 .symbol.clock:after {content: 'P';}
 .symbol.stickman:after {content: 'Q';}
 .symbol.star:after {content: 'R';}
@@ -65,3 +65,57 @@
 .symbol.warning:after {content: 'W';}
 .symbol.poweron:after {content: 'X';}
 .symbol.box:after {content: 'Z';}
+
+.symbol.benice:after {content: "#";}
+.symbol.resize:after {content: "%";}
+.symbol.resize-circle:after {content: "&";}
+.symbol.x:after {content: "'";}
+.symbol.left-arrow-circle:after {content:"(";}
+.symbol.right-arrow-circle:after {content: ")"}
+.symbol.refresh-circle:after {content: "*";}
+.symbol.plus-circle:after {content: "+";}
+.symbol.tag:after {content: ",";}
+.symbol.minus-circle:after {content: "-";}
+.symbol.check:after {content: ".";}
+.symbol.check-circle:after {content: "/";}
+.symbol.up-arrow-circle:after {content: ":";}
+.symbol.down-arrow-circle:after {content: ";";}
+.symbol.left-arrow:after {content: "<";}
+.symbol.right-arrow:after {content: ">";}
+.symbol.location:after {content: "?";}
+.symbol.mail:after {content: "@";}
+.symbol.up-arrow-small {content: "{";}
+.symbol-down-arrow-small {content: "}";}
+.symbol.data-transfer {content: "~";}
+
+
+.symbol.loading {
+    display: block;
+    width: 1em;
+    height: 1em;
+    overflow: hidden;
+    position: relative;
+}
+
+.symbol.loading::after {
+    font-family: 'SYMBOL';
+    content: "01234567";
+    position: relative;
+    left: 0px;
+	animation-name: loading-symbol;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+@keyframes loading-symbol {
+	0%     {left: 0px;}
+	12.5%  {left: -1em;}
+	25%    {left: -2em;}
+	37.5   {left: -3em;}
+	50%    {left: -4em;}
+	62.5%  {left: -5em;}
+	75%    {left: -6em;}
+	87.5%  {left: -7em;}
+	100%   {left: 0px;}
+}
