@@ -41,7 +41,7 @@
         });
         
         function mobileNavUpdate() {
-            if(window.innerWidth < 920) {
+            if(window.innerWidth < 1200) {
                 $('#mobilenav').find('*').off('click');
                 $('.container.main, .mobile-nav.mask').off('click');
                 
