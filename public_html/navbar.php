@@ -78,9 +78,10 @@
 <!-- Search -->
 <script>
 	var timeoutKey = -1;
-	$("#search-input").keyup(function(){
+	$("#search-input").keyup(function(e){
 		clearTimeout(timeoutKey);
-		timeoutKey = setTimeout(doSearch, 500);
+		if(e.which == 13) doSearch();
+		else timeoutKey = setTimeout(doSearch, 500);
 	});
 	$("#search-input").blur(function(){
 		$(".search-popup").slideUp();
