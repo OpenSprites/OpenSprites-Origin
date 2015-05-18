@@ -104,7 +104,7 @@
     left: 0px;
 	animation-name: loading-symbol;
     animation-duration: 1s;
-    animation-timing-function: linear;
+    animation-timing-function: step-end;
     animation-iteration-count: infinite;
 }
 
