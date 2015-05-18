@@ -42,6 +42,7 @@
             </li>
 			<li class='search'>
 				<input type='text' id="search-input" placeholder='Search' />
+				<div class="search-modal-overlay"></div>
 				<div class="search-popup">
 					<span class="symbol loading"></span>
 					<p class="search-message"></p>
@@ -86,8 +87,9 @@
 		if(e.which == 13) doSearch();
 		else timeoutKey = setTimeout(doSearch, 500);
 	});
-	$(".search-popup").focusout(function(){
+	$(".search-modal-overlay").click(function(){
 		$(".search-popup").slideUp();
+		$(".search-modal-overlay").hide();
 	});
 	$("#search-input").focus(function(){
 		doSearch();
@@ -96,6 +98,7 @@
 		var query = $("#search-input").val();
 		if(query == null || query == "" || typeof query == "undefined") return;
 		$(".search-popup").slideDown();
+		$(".search-modal-overlay").show();
 		$(".search-popup .search-content").html("");
 		$(".search-popup .search-message").html("");
 		$(".search-popup .symbol.loading").show();
