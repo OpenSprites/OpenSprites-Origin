@@ -894,12 +894,12 @@ a:visited {
 }
 
 .fold .fold-content {
-	transition: max-height 0.2s;
+	transition: max-height 0.5s;
 	overflow: hidden;
 }
 
 .fold.open .fold-content {
-	max-height: 9999999px;
+	max-height: 500px;
 }
 
 .fold.closed .fold-content {
