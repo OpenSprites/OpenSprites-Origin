@@ -75,6 +75,7 @@
 			</div>
 		</div>
 	</div>
+	<br/><br/>
 	
 	<script src="search.js"></script>
 	
