@@ -1,5 +1,5 @@
 @media screen and (max-width: 920px) {
-    .mobile-nav {
+    div.mobile-nav {
         display: block !important;
     }
     .header .container  {
@@ -14,7 +14,7 @@
         display: none;
     }
     
-    .select.mobile-nav:before {
+    select.mobile-nav:before {
         content: '☰';
     }
 }
