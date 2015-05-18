@@ -6,4 +6,8 @@ function hasBadWords($text){
 	global $bad_word_detector;
 	return preg_match($bad_word_detector, $text) === 1;
 }
+function replaceBadWords($text) {
+	global $bad_word_detector;
+	return preg_replace($bad_word_detector, '♥', $text);
+}
 ?>
