@@ -908,13 +908,14 @@ a:visited {
 
 .fold .fold-toggle {
 	background: #659593;
-	box-shadow: inset 2px 2px 3px white;
+	box-shadow: inset 2px 2px 3px #88AEAC;
 	width: 100%;
 	text-align: center;
 	border: 1px solid #88AEAC;
 	border-radius: 1em;
 	margin: 0;
 	cursor: pointer;
+	color: white;
 }
 
 .fold .fold-toggle:hover {
