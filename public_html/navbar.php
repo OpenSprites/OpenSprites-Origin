@@ -44,7 +44,7 @@
 				<input type='text' id="search-input" placeholder='Search' />
 				<div class="search-modal-overlay"></div>
 				<div class="search-popup">
-					<span class="symbol loading"></span>
+					<span class="symbol loading search-link"></span>
 					<p class="search-message"></p>
 					<div class="search-content"></div>
 					<p class='search-links'>
@@ -108,7 +108,7 @@
 			$(".search-popup .search-message").text(data.message + (data.results.length > 5 ? "total, showing 5" : ""));
 			if(data.warning.length > 0){
 				for(var i=0;i<data.warning.length;i++){
-					$(".search-popup .search-message").append("<br/>").append($("<span>").text(data.warning[i]));
+					$(".search-popup .search-message").append("<br/>").append($("<span>").addClass("search-link").text(data.warning[i]));
 				}
 			}
 			for(var i = 0; i < Math.min(5, data.results.length); i++){
