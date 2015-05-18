@@ -14,7 +14,7 @@
         display: none;
     }
     
-    .select.mobile-nav:after {
+    .select.mobile-nav:before {
         content: '☰';
     }
 }
