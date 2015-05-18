@@ -48,7 +48,7 @@
 					<p class="search-message"></p>
 					<div class="search-content"></div>
 					<p class='search-links'>
-						<a href="javascript:void(0);" class="all-results search-link">See all results</a> | <a href="javascript:void(0);" class="advanced-search search-link">Advanced Search</a> | <a href="/about/search/" class="search-help search-link" target="_blank">Search Help</a>
+						<a href="javascript:void(0);" class="all-results search-link">See all results</a> | <a href="/about/search/" class="search-help search-link" target="_blank">Search Help</a>
 					</p>
 				</div>
 			</li>
