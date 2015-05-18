@@ -26,6 +26,15 @@
 	border-top: 1px solid #659593;
 }
 
+.search-results .result {
+	border-bottom: 1px solid #659593;
+}
+
+
+.search-results .result:first-child {
+	border-top: 1px solid #659593;
+}
+
 .search-button {
 	display: block;
 	background: #659593;
