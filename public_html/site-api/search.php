@@ -35,11 +35,7 @@ for($i=0;$i<$size;$i++){
 		$j = $i + 1;
 		$quote = $word;
 		while(substr($words[$j], strlen($words[$j]) - 1, 1) !== "\""){
-			if(is_valid_word($words[$j])){
-				$quote .= " " . $words[$j];
-			} else {
-				$warning = "Malformed query (not a valid word in quote)";
-			}
+			$quote .= " " . $words[$j]; // allow any characters here
 			$j++;
 			if($j >= $size - 1){
 				if(substr($words[sizeof($words) - 1], strlen($words[sizeof($words) - 1]) - 1, 1) !== "\""){
