@@ -32,8 +32,7 @@
 			</table>
         </div>
         
-        <!-- happy birthday liam4! (feel free to delete) -->
-        <br/><br/>
+        <!-- happy birthday liam4! (feel free to delete) 
         <div class="welcome liam4bday">
 			<table>
 				<tr>
@@ -48,11 +47,11 @@
 					</td>
 				</tr>
 			</table>
-        </div>
+        </div>-->
         
         <?php if($logged_in_user == 'not logged in') { ?>
         <!-- Info for new visistors. -->
-		<br/><br/><div class="welcome signup">
+		<div class="welcome signup">
 			<table>
 				<tr>
 					<td width="260" style='text-align: center;'>
