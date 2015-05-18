@@ -69,4 +69,8 @@ RewriteRule ^collections/$ browse.php?type=collections [QSA]
 # search
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule ^search/([^/]+)/$ search/index.php?q=$1 [QSA]
+RewriteRule ^search/([^/]+)$ /search/$1/ [R=301,L]
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^users/([^/]+)/$ /search/index.php?q=$1 [R=301,L]
