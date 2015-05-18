@@ -9,4 +9,12 @@
         margin: 0px;
         padding: 0px;
     }
+    
+    .select.mobile-nav {
+        display: none;
+    }
+    
+    .select.mobile-nav:after {
+        content: '☰';
+    }
 }
