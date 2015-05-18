@@ -10,20 +10,72 @@
 <div class="header">
 
 <!-- MOBILE NAV -->
-<div class="mobile-nav" style="display:none;width:100%;">
+<div class="mobile-nav" id='mobilenav' style="display:none;width:100%;">
 	<center>
 		<a href="/"><img src="http://opensprites.org/assets/images/os-logotype.svg" style="width: 150px;height: 35px;"></a>
-		<select class='mobile-nav' style="float:right;margin-top:5px; margin-right:10px;" onchange="window.location.href=this.value">
-			<option class='mobile-nav' disabled selected>☰</option>
-			<option class='mobile-nav' value="/mobile/browse">Browse</option>
-			<option class='mobile-nav' value="/blog">Blog</option>
-			<option class='mobile-nav' value="/forums">Forums</option>
-			<option class='mobile-nav' value="/search">Search</option>
-			<option class='mobile-nav' value="/upload">Upload</option>
-			<option class='mobile-nav last' value="/mobile/userpanel">User Panel</option>
-		</select>
+		<button style="float:left;margin-top:0;font-size:21px;background:transparent;border:none;color:white;cursor:pointer;">☰</button>
+        <nav style='overflow-y: scroll;'>
+            <ul>
+                <li><a href="/" style='background: url("/assets/images/os-logotype.svg") center center no-repeat;height:100px;'></a></li>
+                <li><a href="/media">Media</a></li>
+                <li><a href="/scripts">Scripts</a></li>
+                <li><a href="/collections">Collections</a></li>
+                <li><a href="/blog">Blog</a></li>
+                <li><a href="/forums">Forums</a></li>
+                <li><a style="border-bottom: 1px dotted white;" href="/search">Search</a></li>
+                
+                <?php if($logged_in_user == 'not logged in') { ?>
+                <li><a href="/register">Sign Up</a></li>
+                <li><a href='/login/?return=<?php echo $_SERVER['REQUEST_URI']; ?>'>Log In</a></li>
+                <?php } else { ?>
+                <li><a href="/users/<?php echo $logged_in_user . '/'; ?>">You</a></li>
+                <li><a href="/logout.php?return=<?php echo $_SERVER['REQUEST_URI']; ?>">Log Out</a></li>
+                <?php } ?>
+            </ul>
+        </nav>
 	</center>
+    
+    <script>
+        $(window).on('resize', function() {
+            mobileNavUpdate();
+        });
+        
+        function mobileNavUpdate() {
+            if(window.innerWidth < 920) {
+                $('#mobilenav').find('*').off('click');
+                $('.container.main, .mobile-nav.mask').off('click');
+                
+                var mobileNav = false;
+                
+                $('#mobilenav button').on('click', function() {
+                    mobileNav = true;
+                    
+                    $('#mobilenav nav').width(300);
+                    $('.container.main, .header').css('margin-left', 300);
+                    $('.mobile-nav.mask').css('margin-left', 300);
+                    $('.mobile-nav.mask').css('opacity', 1);
+                    $('.mobile-nav.mask').css('pointer-events', 'all');
+                });
+                
+                $('.mobile-nav.mask').on('click', function() {
+                    $('#mobilenav nav').width(0);
+                    $('.container.main, .header, .mobile-nav.mask').css('margin-left', 0);
+                    $('.mobile-nav.mask').css('opacity', 0);
+                    $('.mobile-nav.mask').css('pointer-events', 'none');
+                });
+            } else {
+                $('#mobilenav').find('*').off('click');
+                $('.container.main, .mobile-nav.mask').off('click');
+                
+                $('#mobilenav nav').width(0);
+                $('.container.main, .header, .mobile-nav.mask').css('margin-left', 0);
+                $('.mobile-nav.mask').css('opacity', 0);
+                $('.mobile-nav.mask').css('pointer-events', 'none');
+            }
+        }
+    </script>
 </div>
+<div class='mobile-nav mask'></div>
 
     <div class="container" style='pointer-events:all;'>
         <a class="scratch" href="/"></a>
@@ -130,4 +182,6 @@
 			}
 		});
 	}
+    
+    mobileNavUpdate();
 </script>

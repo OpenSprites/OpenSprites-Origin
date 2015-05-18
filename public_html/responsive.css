@@ -1,29 +1,74 @@
-@media screen and (max-width: 920px) {
-    div.mobile-nav {
-        display: block !important;
+@media screen and (max-width: 920px), only screen and (max-device-width: 920px) {
+    body, html {
+        overflow-x: hidden;
     }
+    
+    #mobilenav {
+        display: block !important;
+        margin-left: 0;
+    }
+    
     .header .container  {
         display: none;
     }
+    
     .header  {
         margin: 0px;
         padding: 0px;
+        transition: margin-left 300ms;
     }
     
-    select.mobile-nav {
+    #mobilenav nav {
+        margin-left: -300px;
+        position: fixed;
+        z-index: 21;
+        background-color: #659593;
+        overflow: hidden;
+        transition: opacity 300ms;
+        top: 0;
+        opacity: 1;
+        width: 0;
+        height: 100%;
+        box-shadow: 5px 5px 60px rgba(0, 0, 0, 0.94);
+    }
+    
+    #mobilenav nav ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+    }
+    
+    #mobilenav nav li {
+        display: block;
+        text-align: center;
+        width: 100%;
+        height: 20%;
+    }
+    
+    #mobilenav nav a {
         color: white;
-        background: transparent;
-        -webkit-appearance: inherit;
-        width: 31px;
-        margin-top: 0px !important;
+        display: block;
+        padding: 10px;
         font-size: 18px;
     }
     
-    option.mobile-nav[disabled] {
-        display: none !important;
+    .mobile-nav.mask {
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 15;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.8);
+        opacity: 0;
+        transition: all 300ms;
+        pointer-events: none;
+        margin-left: 0;
     }
     
-    option.mobile-nav {
-        background: rgb(185, 207, 206);
+    .container.main {
+        margin-left: 0;
+        width: 90%;
+        transition: margin-left 300ms;
     }
 }
