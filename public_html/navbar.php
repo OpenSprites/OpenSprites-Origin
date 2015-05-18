@@ -97,6 +97,7 @@
 	function doSearch(){
 		var query = $("#search-input").val();
 		if(query == null || query == "" || typeof query == "undefined") return;
+		$('.all-results.search-link').attr('href', '/search/'+query);
 		$(".search-popup").slideDown();
 		$(".search-modal-overlay").show();
 		$(".search-popup .search-content").html("");
