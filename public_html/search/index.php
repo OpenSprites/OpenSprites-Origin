@@ -72,7 +72,6 @@
 		</div>
 		<div class='search-results'>
 			<h1 class='search-header'>Loading...</h1>
-			<p class='search-loading'><span class="symbol loading search-link"></span></p>
 			<div class='search-results-content'>
 				<p>
 					Loading...
