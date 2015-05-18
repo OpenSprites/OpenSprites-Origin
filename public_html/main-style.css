@@ -888,7 +888,10 @@ a:visited {
     font-size: 0.8em;
 }
 
-
+.fold {
+	border: 1px solid gray;
+	border-radius: 1em;
+}
 
 .fold .fold-content {
 	transition: height 0.2s;
@@ -904,9 +907,11 @@ a:visited {
 
 .fold .fold-toggle {
 	background: #ccc;
-	box-shadow: -3px -3px 5px gray;
+	box-shadow: inset -3px -3px 5px gray;
 	width: 100%;
 	text-align: center;
+	border: 1px solid gray;
+	border-radius: 1em;
 }
 
 .fold .fold-toggle .fold-arrow::after {
