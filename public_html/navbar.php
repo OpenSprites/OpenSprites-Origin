@@ -41,7 +41,7 @@
                 <a href="/forums">Forums</a>
             </li>
 			<li class='search'>
-				<input type='text' placeholder='Search' />
+				<input type='text' id="search-input" placeholder='Search' />
 			</li>
         </ul>
 
@@ -69,3 +69,46 @@
         </ul>
     </div>
 </div>
+<div class="search-popup">
+	<span class="symbol loading"></span>
+	<p class="search-message"></p>
+	<div class="search-content"></div>
+</div>
+
+<!-- Search -->
+<script>
+	var timeoutKey = -1;
+	$("#search-input").keyup(function(){
+		clearTimeout(timeoutKey);
+		timeoutKey = setTimeout(doSearch, 500);
+	});
+	$("#search-input").blur(function(){
+		$(".search-popup").slideUp();
+	});
+	function doSearch(){
+		var query = $("#search-input").val();
+		$(".search-popup").slideDown();
+		$(".search-popup .search-content").html("");
+		$(".search-popup .search-message").html("");
+		$(".search-popup .symbol.loading").show();
+		$.get("/site-api/search.php", {query: query}, function(data){
+			$(".search-popup .symbol.loading").hide();
+			$(".search-popup .search-content").html("");
+			$(".search-popup .search-message").text(data.message);
+			if(data.warning.length > 0){
+				for(var i=0;i<data.warning.length;i++){
+					$(".search-popup .search-message").append("<br/>").append($("<span>").text(data.warning[i]));
+				}
+			}
+			for(var i=0;i<data.results.length;i++){
+				var result = data.results[i];
+				var resultRow = $("<p>").addClass("result");
+				resultRow.append($("<a>").attr("href", "/users/" + result.uploaded_by.id + "/" + result.md5 + "/").text(result.name));
+				resultRow.append("<br/>");
+				resultRow.append("By ");
+				resultRow.append($("<a>").attr("href", "/users/" + result.uploaded_by.id).text(result.uploaded_by.name));
+				$(".search-popup .search-content").append(resultRow);
+			}
+		});
+	}
+</script>

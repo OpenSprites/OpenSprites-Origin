@@ -89,6 +89,7 @@
 .symbol.data-transfer {content: "~";}
 
 
+/* Stupid CSS3 doesn't support animating content, so I have to animate position instead :( */
 .symbol.loading {
     display: block;
     width: 1em;

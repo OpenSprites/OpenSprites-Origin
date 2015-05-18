@@ -139,5 +139,15 @@ ul.navbar-dropdown li {
 	top: 35px;
 	left: 20%;
 	width: 60%;
+	background: #466765;
 }
 
+.search-popup .result {
+	border-top: 1px solid #304746;
+	margin: 0;
+}
+
+.search-popop.symbol.loading {
+	margin-right: auto;
+	margin-left: auto;
+}
