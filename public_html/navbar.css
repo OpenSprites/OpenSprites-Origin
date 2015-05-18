@@ -146,18 +146,25 @@ ul.navbar-dropdown li {
 	border-bottom-right-radius: 1em;
 }
 
+.search-popup .search-message {
+	margin-top: 0;
+}
+
 .search-popup a {
 	color: #DCE7E7;
 }
 
 .search-popup .search-links {
 	text-align: center;
-	border-top: 1px solid #304746;
 }
 
 .search-popup .result {
 	border-top: 1px solid #304746;
 	margin: 0;
+}
+
+.search-popup .result:last-child {
+	border-bottom: 1px solid #304746;
 }
 
 .search-popop .symbol.loading {
