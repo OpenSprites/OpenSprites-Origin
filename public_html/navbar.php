@@ -94,7 +94,7 @@
 	});
 	function doSearch(){
 		var query = $("#search-input").val();
-		if(query == null || query == "" or typeof query == "undefined") return;
+		if(query == null || query == "" || typeof query == "undefined") return;
 		$(".search-popup").slideDown();
 		$(".search-popup .search-content").html("");
 		$(".search-popup .search-message").html("");
