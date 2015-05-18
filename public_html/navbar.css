@@ -160,7 +160,7 @@ ul.navbar-dropdown li {
 	margin: 0;
 }
 
-.search-popop.symbol.loading {
+.search-popop .symbol.loading {
 	margin-right: auto;
 	margin-left: auto;
 }
