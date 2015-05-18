@@ -13,7 +13,7 @@
 <div class="mobile-nav" style="display:none;width:100%;">
 	<center>
 		<a href="/"><img src="http://opensprites.org/assets/images/os-logotype.svg" style="width: 150px;height: 35px;"></a>
-		<select style="float:right;margin-top:5px; margin-right:10px;" onchange="window.location.href=this.value">
+		<select class='mobile-nav' style="float:right;margin-top:5px; margin-right:10px;" onchange="window.location.href=this.value">
 			<option class='mobile-nav'>-Navigation-</option>
 			<option class='mobile-nav' value="/mobile/browse">Browse</option>
 			<option class='mobile-nav' value="/blog">Blog</option>
