@@ -648,6 +648,7 @@ a:visited {
     color: #fff;
     background-color: #659593;
     padding: 5px;
+	margin: 0;
     text-decoration: none;
     transition: all 0.2s;
     border: none;
@@ -885,4 +886,37 @@ a:visited {
     color: white;
     padding: 0.2em;
     font-size: 0.8em;
+}
+
+
+
+.fold .fold-content {
+	transition: height 0.2s;
+}
+
+.fold.open .fold-content {
+	height: auto;
+}
+
+.fold.closed .fold-content {
+	height: 0px;
+}
+
+.fold .fold-toggle {
+	background: #ccc;
+	box-shadow: -3px -3px 5px gray;
+	width: 100%;
+	text-align: center;
+}
+
+.fold .fold-toggle .fold-arrow::after {
+	font-family: 'SYMBOL';
+}
+
+.fold.open .fold-toggle .fold-arrow::after {
+	content: "}";
+}
+
+.fold.closed .fold-toggle .fold-arrow::after {
+	content: "{";
 }

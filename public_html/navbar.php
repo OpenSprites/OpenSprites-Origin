@@ -111,10 +111,10 @@
 		$(".search-popup .search-content").html("");
 		$(".search-popup .search-message").html("");
 		$(".search-popup .symbol.loading").show();
-		$.get("/site-api/search.php", {query: query}, function(data){
+		$.get("/site-api/search.php", {query: query, limit: 5}, function(data){
 			$(".search-popup .symbol.loading").hide();
 			$(".search-popup .search-content").html("");
-			$(".search-popup .search-message").text(data.message + (data.results.length > 5 ? " total, showing top 5" : ""));
+			$(".search-popup .search-message").text(data.message + (data.num_results > 5 ? " total, showing top 5" : ""));
 			if(data.warning.length > 0){
 				for(var i=0;i<data.warning.length;i++){
 					$(".search-popup .search-message").append("<br/>").append($("<span>").addClass("search-link").text(data.warning[i]));
