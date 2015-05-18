@@ -34,9 +34,10 @@
 	text-align: center;
 	border: 1px solid #88AEAC;
 	border-radius: 1em;
-	margin: 0;
+	margin: 1em 0;
 	cursor: pointer;
 	color: white;
+	font-size: 1.5em;
 }
 
 .search-loading .symbol.loading {
