@@ -92,7 +92,7 @@
 .symbol.loading {
     display: block;
     width: 1em;
-    height: 1em;
+    height: 1.5em;
     overflow: hidden;
     position: relative;
 }
@@ -112,7 +112,7 @@
 	0%     {left: 0px;}
 	12.5%  {left: -1em;}
 	25%    {left: -2em;}
-	37.5   {left: -3em;}
+	37.5%  {left: -3em;}
 	50%    {left: -4em;}
 	62.5%  {left: -5em;}
 	75%    {left: -6em;}
