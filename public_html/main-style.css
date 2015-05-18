@@ -907,12 +907,13 @@ a:visited {
 
 .fold .fold-toggle {
 	background: #ccc;
-	box-shadow: inset -3px -3px 5px gray;
+	box-shadow: inset 2px 2px 5px gray;
 	width: 100%;
 	text-align: center;
 	border: 1px solid gray;
 	border-radius: 1em;
 	margin: 0;
+	cursor: pointer;
 }
 
 .fold .fold-toggle .fold-arrow::after {
