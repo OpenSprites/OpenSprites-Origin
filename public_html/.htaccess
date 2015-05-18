@@ -36,6 +36,11 @@ RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule ^users/([^/]+)/$ users/index.php?id=$1 [QSA]
 
+# search
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^search/([^/]+)/$ search/index.php?q=$1 [QSA]
+
 # upload is 3 big
 RewriteCond %{REQUEST_METHOD} =POST
 RewriteCond %{HTTP:Content-Length}%{CONTENT_LENGTH} >50000000
@@ -65,12 +70,3 @@ RewriteRule ^collections$ /collections/ [R=301,L]
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule ^collections/$ browse.php?type=collections [QSA]
-
-# search
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule ^search/([^/]+)$ /search/$1/ [R=301,L]
-
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule ^users/([^/]+)/$ /search/index.php?q=$1 [R=301,L]
