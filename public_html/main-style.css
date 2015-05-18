@@ -85,8 +85,8 @@ a.scratch:hover {
     float: left;
 }
 
-.header li a,
-.header li span {
+.header li a:not(.search-popup),
+.header li span:not(.search-popup) {
     display: block;
     padding: 0px 15px;
     text-decoration: none !important;
@@ -96,14 +96,14 @@ a.scratch:hover {
 	line-height: 35px;
 }
 
-.header li a,
-.header li a:active,
-.header li span {
+.header li a:not(.search-popup),
+.header li a:active:not(.search-popup),
+.header li span:not(.search-popup) {
     color: #fff;
 }
 
-.header li a:hover,
-.header li span:hover,
+.header li a:hover:not(.search-popup),
+.header li span:hover:not(.search-popup),
 #userfcttoggle.open {
     background-color: #476866;
 }
