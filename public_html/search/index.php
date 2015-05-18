@@ -61,7 +61,33 @@
 				<div class='advanced-search fold closed'>
 					<p class='fold-toggle'>Advanced search options <span class='fold-arrow'></span></p>
 					<div class='fold-content'>
-						Put swag here
+						<div id="advanced-options">
+							<h3>Search for...</h3>
+							<div class="advanced-section">
+								Some of these words: <input class="advanced-input some-words" type="text" /><br/>
+								<span class='advanced-help'>Search for results that contain one or more of these words. Results with more of these words will be ranked higher if sort is set to 'relevance.'</span>
+							</div>
+							
+							<div class="advanced-section">
+								All of these words: <input class="advanced-input all-words" type="text" /><br/>
+								<span class='advanced-help'>Search for only those results that have all of these words.</span>
+							</div>
+							
+							<div class="advanced-section">
+								None of these words: <input class="advanced-input no-words" type="text" /><br/>
+								<span class='advanced-help'>Exclude results that have these words</span>
+							</div>
+							
+							<div class="advanced-section">
+								<div class='duplicatable-container'>
+									<div class='duplicatable'>This phrase: <input class="advanced-input literal-words" type="text" />
+										<div class="buttons plus symbol plus-circle"></div>
+										<div class="buttons minus symbol minus-circle"></div>
+									</div>
+								</div>
+								<span class='advanced-help'>Include results that contain this specific phrase, exactly how it is entered.</span>
+							</div>
+						</div>
 					</div>
 				</div>
 				<button class='search-button'>Search!</button>

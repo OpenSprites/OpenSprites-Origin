@@ -61,3 +61,33 @@
 	opacity: 1;
 	transition: opacity 0.2s;
 }
+
+#advanced-options {
+	padding: 1em;
+}
+
+.advanced-input {
+	width: 50%;
+	transition: border 0.2s;
+	border: 1px solid black;
+	border-radius: 0.2em;
+}
+
+.advanced-input.error {
+	border: 1px solid red;
+}
+
+.advanced-help {
+	font-size: 0.8em;
+}
+
+.duplicatable .buttons::after {
+	color: #659593;
+	transition: all 0.2s;
+	font-size: 1.1em;
+	cursor: pointer;
+}
+
+.duplicatable .buttons:hover::after {
+	color: #8CB0AE;
+}
