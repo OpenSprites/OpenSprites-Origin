@@ -8,5 +8,16 @@
 }
 
 .sort.toggleset, .direction.toggleset, .place.toggleset, .filter.toggleset {
-	display: inline-block;
+	display: table-cell;
+}
+
+#search-buttonsets {
+	display: table;
+	border: 0;
+	border-spacing: 1em;
+    border-collapse: separate;
+}
+
+#search-buttonsets .search-button-row {
+	display: table-row;
 }

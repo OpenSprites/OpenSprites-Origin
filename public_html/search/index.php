@@ -31,27 +31,22 @@
 		<div class="main-inner">
 			<div id="search-bar">
 				<input id="search-bar-input" type="text" /><br/>
-				<div class="sort toggleset">Sort by: 
-					<button class='sort-relevance'>Relevance</button>
-					<button class='sort-popularity'>Popularity</button>
-					<button class='sort-date'>Date</button>
-					<button class='sort-alphabetical'>Alphabetical</button>
-				</div>
-				<div class="direction toggleset">Sort direction: 
-					<button class='dir-desc'>Descending</button>
-					<button class='dir-asc'>Ascending</button>
-				</div>
-				<br/>
-				<div class="place toggleset">Search in: 
-					<button class='place-both'>Both</button>
-					<button class='place-names'>Usernames/Titles</button>
-					<button class='place-descriptions'>Descriptions/About Sections</button>
-				</div>
-				<div class="filter toggleset">Filter by: 
-					<button class='filter-all'>All</button>
-					<button class='filter-users'>Users</button>
-					<button class='filter-resources'>Resources</button>
-					<button class='filter-collections'>Collections</button>
+				<div id="search-buttonsets">
+					<div class="search-button-row">
+						<div class="sort toggleset">Sort by: 
+							<button class='sort-relevance'>Relevance</button><button class='sort-popularity'>Popularity</button><button class='sort-date'>Date</button><button class='sort-alphabetical'>Alphabetical</button>
+						</div>
+						<div class="direction toggleset">Sort direction: <button class='dir-desc'>Descending</button><button class='dir-asc'>Ascending</button>
+						</div>
+					</div>
+					<div class="search-button-row">
+						<div class="place toggleset">Search in: 
+							<button class='place-both'>Both</button><button class='place-names'>Usernames/Titles</button><button class='place-descriptions'>Descriptions/About Sections</button>
+						</div>
+						<div class="filter toggleset">Filter by: 
+							<button class='filter-all'>All</button><button class='filter-users'>Users</button><button class='filter-resources'>Resources</button><button class=	'filter-collections'>Collections</button>
+						</div>
+					</div>
 				</div>
 				<div class='advanced-search fold closed'>
 					<p class='fold-toggle'>Advanced search options <span class='fold-arrow'></span></p>
