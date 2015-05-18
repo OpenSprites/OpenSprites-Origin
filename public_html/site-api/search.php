@@ -76,6 +76,8 @@ $limit = 20;
 if(isset($_GET['limit'])) $limit = intval($_GET['limit']);
 if(isset($_GET['page'])) $page = intval($_GET['page']);
 
+if($limit > 100) $limit = 100; // safety
+
 $offset = $page * $limit; // set offset based on page size
 
 if(isset($_GET['sort'])) $sort = $_GET['sort'];
