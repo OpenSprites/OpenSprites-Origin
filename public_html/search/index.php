@@ -69,7 +69,9 @@
 		<div class='search-results'>
 			<h1 class='search-header'>Loading...</h1>
 			<div class='search-results-content'>
-				
+				<p>
+					Sample Text
+				</p>
 			</div>
 		</div>
 	</div>

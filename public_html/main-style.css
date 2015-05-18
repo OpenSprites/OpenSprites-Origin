@@ -894,19 +894,20 @@ a:visited {
 }
 
 .fold .fold-content {
-	transition: height 0.2s;
+	transition: max-height 0.2s;
+	overflow: hidden;
 }
 
 .fold.open .fold-content {
-	height: auto;
+	max-height: 9999999px;
 }
 
 .fold.closed .fold-content {
-	height: 0px;
+	max-height: 0px;
 }
 
 .fold .fold-toggle {
-	background: #ccc;
+	background:  #659593;
 	box-shadow: inset 2px 2px 3px white;
 	width: 100%;
 	text-align: center;
