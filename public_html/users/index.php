@@ -1,5 +1,6 @@
 <?php
     require "../assets/includes/connect.php";
+    require "../assets/includes/validate.php";
     
     error_reporting(0);
     
@@ -189,7 +190,7 @@
             }
         });
 		
-		var desc = <?php echo json_encode($user['about']); ?>;
+		var desc = <?php echo json_encode(replaceBadWords($user['about'])); ?>;
 		
 		var aboutModel = OpenSprites.models.MdSection($(".about-section.desc"));
 		aboutModel.updateMarkdown(desc);
@@ -228,7 +229,7 @@
 			
 			<hr/>
 			
-            <p><i>About Me</i><br>Write something about yourself! Make sure it doesn't have your phone number, address, or anything else that is against the <a href='/tos/'>Terms Of Service</a>. About sections support <a href='https://help.github.com/articles/github-flavored-markdown/'>Markdown</a>.</p>
+            <p><i>About Me</i><br>Write something about yourself! Make sure it doesn't have your phone number, address, social links, or anything else that is against the <a href='/tos/'>Terms Of Service</a>. About sections support <a href='https://help.github.com/articles/github-flavored-markdown/'>Markdown</a>.</p>
             <textarea id='aboutme' maxlength='500'>Loading...</textarea><br>
 		</div>
 	</div>
@@ -239,7 +240,7 @@
 			<p class="leaving-desc">
 				[Insert some swaggy visual here]<br/><br/>
 				This about section is taking you to <span class="leaving-url"></span><br/><br/>
-				Sites that aren't OpenSprites have the potential to be dangerous, or could have unwanted content.<br/><br/>
+				Sites that aren't OpenSprites (or Scratch!) have the potential to be dangerous, or could have unwanted content.<br/><br/>
 				Proceed only if you recognize the site or understand the risk involved.
 			</p>
 			<div class="buttons-container">
