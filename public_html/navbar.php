@@ -9,18 +9,18 @@
 </script>
 <div class="header">
 
-<!-- MOBILE NAV -->	
+<!-- MOBILE NAV -->
 <div class="mobile-nav" style="display:none;width:100%;">
 	<center>
 		<a href="/"><img src="http://opensprites.org/assets/images/os-logotype.svg" style="width: 150px;height: 35px;"></a>
 		<select style="float:right;margin-top:5px; margin-right:10px;" onchange="window.location.href=this.value">
-			<option>-Navigation-</option>
-			<option value="/mobile/browse">Browse</option>
-			<option value="/blog">Blog</option>
-			<option value="/forums">Forums</option>
-			<option value="/search">Search</option>
-			<option value="/upload">Upload</option>
-			<option value="/mobile/userpanel">User Panel</option>
+			<option class='mobile-nav'>-Navigation-</option>
+			<option class='mobile-nav' value="/mobile/browse">Browse</option>
+			<option class='mobile-nav' value="/blog">Blog</option>
+			<option class='mobile-nav' value="/forums">Forums</option>
+			<option class='mobile-nav' value="/search">Search</option>
+			<option class='mobile-nav' value="/upload">Upload</option>
+			<option class='mobile-nav last' value="/mobile/userpanel">User Panel</option>
 		</select>
 	</center>
 </div>
