@@ -11,10 +11,19 @@
     }
     
     select.mobile-nav {
-        display: none;
+        color: white;
+        background: transparent;
+        -webkit-appearance: inherit;
+        width: 31px;
+        margin-top: 0px !important;
+        font-size: 18px;
     }
     
     option.mobile-nav[disabled] {
         display: none !important;
+    }
+    
+    option.mobile-nav {
+        background: rgb(185, 207, 206);
     }
 }
