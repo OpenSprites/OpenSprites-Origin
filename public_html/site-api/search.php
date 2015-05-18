@@ -151,5 +151,5 @@ $res = imagesQuery($sql_query, array($limit, $offset));
 
 $numresults = intval(imagesQuery("SELECT FOUND_ROWS()", array())[0]["FOUND_ROWS()"]); // mysql is awesome :P
 
-echo json_encode(array("num_results" => $numresults, "message" => getNiceResultNumber(sizeof($numresults)), "warning" => $warning, "results" => getAssetList($res)));
+echo json_encode(array("num_results" => $numresults, "message" => getNiceResultNumber($numresults), "warning" => $warning, "results" => getAssetList($res)));
 ?>
