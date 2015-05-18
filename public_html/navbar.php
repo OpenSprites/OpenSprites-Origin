@@ -42,6 +42,14 @@
             </li>
 			<li class='search'>
 				<input type='text' id="search-input" placeholder='Search' />
+				<div class="search-popup">
+					<span class="symbol loading"></span>
+					<p class="search-message"></p>
+					<div class="search-content"></div>
+					<p class='search-links'>
+						<a href="javascript:void(0);" class="all-results">See all results</a> | <a href="javascript:void(0);" class="advanced-search">Advanced Search</a> | <a href="/about/search/" target="_blank">Search Help</a>
+					</p>
+				</div>
 			</li>
         </ul>
 
@@ -69,14 +77,6 @@
         </ul>
     </div>
 </div>
-<div class="search-popup">
-	<span class="symbol loading"></span>
-	<p class="search-message"></p>
-	<div class="search-content"></div>
-	<p class='search-links'>
-		<a href="javascript:void(0);" class="all-results">See all results</a> | <a href="javascript:void(0);" class="advanced-search">Advanced Search</a> | <a href="/about/search/" target="_blank">Search Help</a>
-	</p>
-</div>
 
 <!-- Search -->
 <script>
@@ -86,7 +86,7 @@
 		if(e.which == 13) doSearch();
 		else timeoutKey = setTimeout(doSearch, 500);
 	});
-	$("#search-input").blur(function(){
+	$(".search").focusout(function(){
 		$(".search-popup").slideUp();
 	});
 	$("#search-input").focus(function(){
