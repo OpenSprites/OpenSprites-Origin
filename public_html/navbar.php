@@ -56,7 +56,7 @@
 					<p class="search-message"></p>
 					<div class="search-content"></div>
 					<p class='search-links'>
-						<a href="javascript:void(0);" class="all-results search-link">See all results</a> | <a href="/about/search/" class="search-help search-link" target="_blank">Search Help</a>
+						<a href="javascript:void(0);" class="all-results search-link">See all results + Search options</a> | <a href="/about/search/" class="search-help search-link" target="_blank">Search Help</a>
 					</p>
 				</div>
 			</li>
@@ -114,7 +114,7 @@
 		$.get("/site-api/search.php", {query: query}, function(data){
 			$(".search-popup .symbol.loading").hide();
 			$(".search-popup .search-content").html("");
-			$(".search-popup .search-message").text(data.message + (data.results.length > 5 ? " total, showing 5" : ""));
+			$(".search-popup .search-message").text(data.message + (data.results.length > 5 ? " total, showing top 5" : ""));
 			if(data.warning.length > 0){
 				for(var i=0;i<data.warning.length;i++){
 					$(".search-popup .search-message").append("<br/>").append($("<span>").addClass("search-link").text(data.warning[i]));

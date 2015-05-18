@@ -69,6 +69,13 @@ $dir = "desc";
 $place = "both";
 $filter = "all";
 
+$page = 0;
+$limit = 20;
+if(isset($_GET['limit'])) $limit = intval($_GET['limit']);
+if(isset($_GET['page'])) $page = intval($_GET['page']);
+
+$offset = $page * $limit; // set offset based on page size
+
 if(isset($_GET['sort'])) $sort = $_GET['sort'];
 if(isset($_GET['dir'])) $dir = $_GET['dir'];
 if(isset($_GET['place'])) $place = $_GET['place'];
@@ -105,7 +112,7 @@ if($place == "both"){
 }
 
 
-$sql_query = "SELECT *, $match_query as relevance FROM `os_assets` WHERE ";
+$sql_query = "SELECT SQL_CALC_FOUND_ROWS *, $match_query as relevance FROM `os_assets` WHERE ";
 if($filter == "all"){
 	// add collections and users
 } else if($filter == "users"){
@@ -134,7 +141,11 @@ if($dir == "desc"){
 	$sql_query .= "DESC ";
 }
 
-$res = imagesQuery($sql_query, array());
+$sql_query .= "LIMIT ? OFFSET ? ";
 
-echo json_encode(array("message" => getNiceResultNumber(sizeof($res)), "warning" => $warning, "results" => getAssetList($res)));
+$res = imagesQuery($sql_query, array($limit, $offset));
+
+$numresults = imagesQuery("SELECT FOUND_ROWS()", array())[0]; // mysql is awesome :P
+
+echo json_encode(array("num_results" => $numresults, "message" => getNiceResultNumber(sizeof($numresults)), "warning" => $warning, "results" => getAssetList($res)));
 ?>

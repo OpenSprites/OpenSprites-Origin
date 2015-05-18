@@ -36,10 +36,10 @@ RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule ^users/([^/]+)/$ users/index.php?id=$1 [QSA]
 
-# search
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule ^search?q=([^/]+)$ search/index.php?q=$1 [QSA]
+# search - let's not fool with fancy URLs, I don't think it looks nice for search
+# RewriteCond %{REQUEST_FILENAME} !-f
+# RewriteCond %{REQUEST_FILENAME} !-d
+# RewriteRule ^search?q=([^/]+)$ search/index.php?q=$1 [QSA]
 
 # upload is 3 big
 RewriteCond %{REQUEST_METHOD} =POST
