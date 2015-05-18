@@ -73,6 +73,9 @@
 	<span class="symbol loading"></span>
 	<p class="search-message"></p>
 	<div class="search-content"></div>
+	<p class='search-links'>
+		<a href="javascript:void(0);" class="all-results">See all results</a> | <a href="javascript:void(0);" class="advanced-search">Advanced Search</a> | <a href="/about/search/" target="_blank">Search Help</a>
+	</p>
 </div>
 
 <!-- Search -->
@@ -86,8 +89,12 @@
 	$("#search-input").blur(function(){
 		$(".search-popup").slideUp();
 	});
+	$("#search-input").focus(function(){
+		doSearch();
+	});
 	function doSearch(){
 		var query = $("#search-input").val();
+		if(query == null || query == "" or typeof query == "undefined") return;
 		$(".search-popup").slideDown();
 		$(".search-popup .search-content").html("");
 		$(".search-popup .search-message").html("");
@@ -101,7 +108,7 @@
 					$(".search-popup .search-message").append("<br/>").append($("<span>").text(data.warning[i]));
 				}
 			}
-			for(var i=0;i<data.results.length;i++){
+			for(var i = 0; i < Math.min(5, data.results.length); i++){
 				var result = data.results[i];
 				var resultRow = $("<p>").addClass("result");
 				resultRow.append($("<a>").attr("href", "/users/" + result.uploaded_by.id + "/" + result.md5 + "/").text(result.name));

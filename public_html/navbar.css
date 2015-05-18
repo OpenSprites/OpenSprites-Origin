@@ -140,6 +140,14 @@ ul.navbar-dropdown li {
 	left: 20%;
 	width: 60%;
 	background: #466765;
+	color: white;
+	padding: 1em;
+	border-bottom-left-radius: 1em;
+	border-bottom-right-radius: 1em;
+}
+
+.search-popup .search-links {
+	text-align: center;
 }
 
 .search-popup .result {
