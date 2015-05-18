@@ -86,7 +86,7 @@
 		if(e.which == 13) doSearch();
 		else timeoutKey = setTimeout(doSearch, 500);
 	});
-	$(".search").focusout(function(){
+	$(".search-popup").focusout(function(){
 		$(".search-popup").slideUp();
 	});
 	$("#search-input").focus(function(){
