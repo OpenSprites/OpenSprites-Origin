@@ -7,7 +7,7 @@
 	box-shadow: inset 0px 0px 3px gray;
 }
 
-.sort.toggleset, .direction.toggleset, .place.toggleset, .filter.toggleset {
+.sort.toggleset, .direction.toggleset, .place.toggleset, .filter.toggleset, .search-button-label {
 	display: table-cell;
 }
 
