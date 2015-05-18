@@ -34,13 +34,13 @@
 							Sort by:
 						</div>
 						<div class="sort toggleset">
-							<button class='sort-relevance selected'>Relevance</button><button class='sort-popularity'>Popularity</button><button class='sort-date'>Date</button><button class='sort-alphabetical'>Alphabetical</button>
+							<button class='sort-relevance selected' data-key="sort" data-value="relevance">Relevance</button><button class='sort-popularity' data-key="sort" data-value="popularity">Popularity</button><button class='sort-date' data-key="sort" data-value="date">Date</button><button class='sort-alphabetical' data-key="sort" data-value="alphabetical">Alphabetical</button>
 						</div>
 						<div class="search-button-label">
 							Sort direction:
 						</div>
 						<div class="direction toggleset">
-							<button class='dir-desc selected'>Descending</button><button class='dir-asc'>Ascending</button>
+							<button class='dir-desc selected' data-key="dir" data-value="desc">Descending</button><button class='dir-asc' data-key="dir" data-value="asc">Ascending</button>
 						</div>
 					</div>
 					<div class="search-button-row">
@@ -48,13 +48,13 @@
 							Search in:
 						</div>
 						<div class="place toggleset">
-							<button class='place-both selected'>Both</button><button class='place-names'>Usernames/Titles</button><button class='place-descriptions'>Descriptions/About Sections</button>
+							<button class='place-both selected' data-key="place" data-value="both">Both</button><button class='place-names' data-key="place" data-value="names">Usernames/Titles</button><button class='place-descriptions' data-key="place" data-value="descriptions">Descriptions/About Sections</button>
 						</div>
 						<div class="search-button-label">
 							Filter by:
 						</div>
 						<div class="filter toggleset">
-							<button class='filter-all selected'>All</button><button class='filter-users'>Users</button><button class='filter-resources'>Resources</button><button class=	'filter-collections'>Collections</button>
+							<button class='filter-all selected' data-key="filter" data-value="all">All</button><button class='filter-users' data-key="filter" data-value="users">Users</button><button class='filter-resources'  data-key="filter" data-value="resources">Resources</button><button class='filter-collections' data-key="filter" data-value="collections">Collections</button>
 						</div>
 					</div>
 				</div>
@@ -64,13 +64,18 @@
 						Put swag here
 					</div>
 				</div>
+				<button class='search-button'>Search!</button>
+				<div class="pagination toggleset">
+					
+				</div>
 			</div>
 		</div>
 		<div class='search-results'>
 			<h1 class='search-header'>Loading...</h1>
+			<p class='search-loading'><span class="symbol loading search-link"></span></p>
 			<div class='search-results-content'>
 				<p>
-					Sample Text
+					Loading...
 				</p>
 			</div>
 		</div>

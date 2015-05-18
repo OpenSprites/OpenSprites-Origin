@@ -4,4 +4,151 @@ $(".fold.advanced-search .fold-toggle").click(function(){
 	else fold.removeClass("closed").addClass("open");
 });
 
+
+var SearchParams = {
+	sort: "relevance",
+	dir: "desc",
+	place: "both",
+	filter: "all",
+	limit: 20,
+	page: 0,
+	query: OpenSprites.view.query
+};
+
+
 $("#search-input, #search-bar-input").val(OpenSprites.view.query);
+$("#search-input").attr("disabled", "disabled");
+
+$("#search-buttonsets .toggleset button").click(function(){
+	$(this).parent().find("button").removeClass("selected");
+	$(this).addClass("selected");
+	
+	SearchParams[$(this).attr("data-key")] = $(this).attr("data-value");
+	
+	doSearch();
+});
+
+function createPageButton(content, page, selected, nth){
+	if(!nth){
+		$("<button>").addClass("page-button").text(content).attr("data-page", page).click(function(){
+			$(this).parent().find("button").removeClass("selected");
+			$(this).addClass("selected");
+			SearchParams.page = $(this).attr("data-page");
+			doSearch();
+		}).appendTo($(".pagination.toggleset"));
+	} else {
+		$("<button>").addClass("page-button").text(content).click(function(){
+			$(this).parent().find("button").removeClass("selected");
+			$(this).addClass("selected");
+			
+			var page = prompt("Which page?", page);
+			if(page == null || page == "") return;
+			
+			SearchParams.page = parseInt(page);
+			doSearch();
+		}).appendTo($(".pagination.toggleset"));
+	}
+}
+
+function setPages(currentPage, pages){
+	$(".pagination.toggleset button").remove();
+	if(currentPage == 0){
+		createPageButton("1", 0, true, false);
+	} else if(currentPage == 1){
+		createPageButton("<", 0, false, false);
+		createPageButton("1", 0, false, false);
+		createPageButton("2", 1, true, false);
+	} else if(currentPage == 2){
+		createPageButton("<", 0, false, false);
+		createPageButton("1", 0, false, false);
+		createPageButton("2", 2, false, false);
+		createPageButton("3", 3, true, false);
+	} else {
+		createPageButton("<<", 0, false, false);
+		createPageButton("<", currentPage - 1, false, false);
+		createPageButton("" + (currentPage - 2 + 1), currentPage - 2, false, false);
+		createPageButton("" + (currentPage - 1 + 1), currentPage - 1, false, false);
+		createPageButton("" + (currentPage + 1), currentPage, true, false);
+	}
+	
+	if(currentPage == pages - 1) {
+	} else if(currentPage == pages - 2){
+		createPageButton("" + (currentPage + 1 + 1), currentPage + 1, false, false);
+		createPageButton(">", currentPage + 1, false, false);
+	} else {
+		createPageButton("" + (currentPage + 1 + 1), currentPage + 1, false, false);
+		createPageButton("" + (currentPage + 2 + 1), currentPage + 2, false, false);
+		createPageButton(">", currentPage + 1, false, false);
+		createPageButton(">>", pages - 1, false, false);
+	}
+	
+	createPageButton("Go to...", -1, false, true);
+}
+
+function doSearch(){
+		var query = $("#search-bar-input").val();
+		if(query == null || query == "" || typeof query == "undefined") return;
+		
+		SearchParams.query = query;
+		
+		$(".search-header").html("Loading...");
+		$(".search-results").addClass("loading");
+		$.get("/site-api/search.php", SearchParams, function(data){
+			$(".search-results-content").html("");
+			$(".search-results").removeClass("loading");
+			$(".search-header").text(data.message);
+			
+			setPages(SearchParams.page, Math.ceil(data.num_results/SearchParams.limit));
+			
+			if(data.warning.length > 0){
+				for(var i=0;i<data.warning.length;i++){
+					$(".search-popup .search-message").append("<br/>").append($("<span>").addClass("search-link").text(data.warning[i]));
+				}
+			}
+			for(var i = 0; i < data.results.length; i++){
+				var result = data.results[i];
+				var resultRow = $("<p>").addClass("result");
+				
+				if(result.type == "image" || result.type == "sound"){ 
+					$("<img />").addClass("search-preview").attr("href", "/uploads/thumbnail.php?file=" + result.filename).appendTo(resultRow);
+				} else if (result.type == "script"){
+					(function(html, url){
+						$.get(url, function(data){
+							var json = [0, 0, data];
+							var scratchblocks = gen.generate(json);
+							var preClass = "blocks" + Math.round(Math.random() * 100000000);
+							var pre = $("<pre>").addClass(preClass).css("display", "none").html(scratchblocks).appendTo(html);
+							scratchblocks2.parse("pre." + preClass);
+							var data = '<svg xmlns="http://www.w3.org/2000/svg" width="500" height="1000">' +
+									'<foreignObject width="100%" height="100%">' +
+									'<div xmlns="http://www.w3.org/1999/xhtml" style="font-size: 40px;height:100%;">' +
+										pre.html() +
+										"<style type='text/css'>\n" +
+											OpenSprites.data.scratchblocks2css +
+										"\n</style>" +
+									'</div>' +
+									'</foreignObject>' +
+								'</svg>';
+							var DOMURL = window.URL || window.webkitURL || window;
+							var svg = new Blob([data], {type: 'image/svg+xml;charset=utf-8'});
+							var url = DOMURL.createObjectURL(svg);
+							$("<div>").addClass("search-preview").attr("style", "background: url("+url+") white;background-size:cover !important;").appendTo(resultRow);
+						});
+					})(html, result.url);
+				}
+				
+				resultRow.append($("<a>").attr("href", "/users/" + result.uploaded_by.id + "/" + result.md5 + "/").text(result.name));
+				resultRow.append("<br/>By: ");
+				resultRow.append($("<a>").attr("href", "/users/" + result.uploaded_by.id).text(result.uploaded_by.name));
+				$(".search-results-content").append(resultRow);
+			}
+		}).fail(function(){
+			$(".search-results").removeClass("loading");
+			$(".search-results-content").html("Sorry about that. Try again later.");
+			$(".search-header").text("Search failed!");
+		});
+};
+
+$(".search-button").click(doSearch);
+
+doSearch();

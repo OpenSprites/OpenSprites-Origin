@@ -26,7 +26,30 @@ All responses are in JSON, unless otherwise noted. Bullet points usually indicat
      - this_week (int): The number of downloads this week for this asset
 	 - total (int): The total number of downloads for this asset
  - description (string): The uploader's description of the asset
- 
+
+## search.php ##
+Returns an array of asset or user objects for a given query.
+### Request format ###
+```http
+get /site-api/search.php?query=?
+```
+ - query (string): The search query, in MySQL boolean match form (+, -, *, and "" supported)
+ - sort (string): One of "relevance", "popularity", "date", "alphabetical" default "relevance"
+ - dir (string): Sort direction, either "asc" or "desc" default "desc"
+ - place (string): One of "both", "names", "descriptions" default "both"
+ - filter (string): One of "all", "users", "resources", "collections" default "all"
+ - limit (int): The maximum number of results to return, default 20
+ - page (int): The offset of the results is defined by `page * limit` so a page of 1 and a limit of 20 would show the second page in pages of 20 results. Default 0
+
+### Response format ###
+A JSON object
+ - message (string): A message, usually with the number of results
+ - num_results (int): The total amount of results (if not paginated)
+ - warning (array): An array of strings with syntax errors for the search query, if any
+     - *item* (string): A single query syntax warning
+ - results (array): An array of asset or user objects (asset objects only, currently) for the results
+     - *item* (string): A single asset or user object
+
 ## stuff.php ##
 Returns an array of [asset objects](#the-asset-object) belonging to the specified user
 ### Request format ###

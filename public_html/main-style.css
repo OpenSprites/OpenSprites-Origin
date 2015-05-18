@@ -894,16 +894,17 @@ a:visited {
 }
 
 .fold .fold-content {
-	transition: max-height 0.5s;
 	overflow: hidden;
 }
 
 .fold.open .fold-content {
 	max-height: 500px;
+	transition: max-height 0.25s ease-in;
 }
 
 .fold.closed .fold-content {
 	max-height: 0px;
+	transition: max-height 0.15s ease-out;
 }
 
 .fold .fold-toggle {

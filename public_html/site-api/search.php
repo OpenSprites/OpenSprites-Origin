@@ -31,6 +31,8 @@ for($i=0;$i<$size;$i++){
 		array_push($keywords, $word);
 	} else if(substr($word, strlen($word) - 1, 1) === "*" && is_valid_word(substr($word, 0, strlen($word) - 1))){
 		array_push($keywords, $word);
+	} else if(){
+		array_push($keywords, $word);
 	} else if(substr($word, 0, 1) === "\"" && is_valid_word(substr($word, 1, strlen($word) - 1))){
 		$j = $i + 1;
 		$quote = $word;

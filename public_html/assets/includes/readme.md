@@ -32,7 +32,7 @@
  - imageExists($hash:string):boolean: Checks if an asset already exists in the database, returns true if so, false otherwise.
  - addImageRow($fileName:string, $hash:string, $user:string, $userId:int, $assetType:string, $customName:string):void: Creates a row in the assets table with the given details. $fileName is the actual filename in /uploads/uploaded/, $customName is the display name. $assetType is one of "image" "sound" or "script"
  - tableExists($name:string):boolean: Checks for the given table in the database, returns true if it exists, false otherwise. Used internally to create the assets table if it does not exist.
- - isUserAbleToUpload($userid:int, $post_bytes:int):void: Checks if the user with the given id is able to upload the given size of files. Returns TRUE if allowed, and the number of seconds left before the user is able to upload if not allowed.
+ - isUserAbleToUpload($userid:int, $post_bytes:int):boolean: Checks if the user with the given id is able to upload the given size of files. Returns TRUE if allowed, and the number of seconds left before the user is able to upload if not allowed.
  - incrementDownload($userid:int, $hash:int):void: Increments the download count for the asset with the given hash and uploader id.
  - connectForumDatabase():void: Connects to the esotalk database
  - forumQuery($query:string, $params:array):array: Like imagesQuery, except runs on the forum database
@@ -48,6 +48,11 @@
    - $reporter: The username of the user who created the report
    - $reason: A string describing why the report was made. Limited to 500 chars
  - getAllReports():array: Retrieves all reports
+ - getDbh():resource: Returns the database handle for the assets database
+ - getForumDbh():resource: Returns the database handle for the forum database
+ - setProfileSettings($userid:int, $settings:array):void: Sets the given settings for the user
+ - getProfileSettings($userid:int):array: Gets the profile settings for a user
+ 
 
 ## connect.php ##
 ### Automatic actions ###

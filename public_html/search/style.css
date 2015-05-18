@@ -1,5 +1,5 @@
 #search-bar-input {
-	width: 100%;
+	width: 98%;
 	border-radius: 0.5em;
 	padding-right: 0.5em;
 	padding-left: 0.5em;
@@ -24,4 +24,43 @@
 
 .search-results {
 	border-top: 1px solid #659593;
+}
+
+.search-button {
+	display: block;
+	background: #659593;
+	box-shadow: inset 2px 2px 3px #88AEAC;
+	width: 100%;
+	text-align: center;
+	border: 1px solid #88AEAC;
+	border-radius: 1em;
+	margin: 0;
+	cursor: pointer;
+	color: white;
+}
+
+.search-loading .symbol.loading {
+	margin-right: auto;
+	margin-left: auto;
+}
+
+.search-loading {
+	margin: 0;
+}
+
+.search-preview {
+	max-width: 100px;
+	max-height: 100px;
+	background: #191919;
+	float: left;
+	margin-right: 1em;
+}
+
+.search-results.loading {
+	opacity: 0.5;
+}
+
+.search-results {
+	opacity: 1;
+	transition: opacity 0.2s;
 }
