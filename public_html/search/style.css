@@ -90,6 +90,10 @@
 	font-size: 0.8em;
 }
 
+.duplicatable .buttons {
+	display: inline-block;
+}
+
 .duplicatable .buttons::after {
 	color: #659593;
 	transition: all 0.2s;
@@ -99,4 +103,18 @@
 
 .duplicatable .buttons:hover::after {
 	color: #8CB0AE;
+}
+
+#advanced-options h3 {
+	margin-top: 0;
+}
+
+#advanced-options .advanced-section {
+	margin: 0.2em 0;
+	border-top: 1px solid #659593;
+}
+
+#advanced-options .advanced-section:last-child {
+	margin: 0.2em 0;
+	border-bottom: 1px solid #659593;
 }
