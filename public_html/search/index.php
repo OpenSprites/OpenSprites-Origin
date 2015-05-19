@@ -79,6 +79,16 @@
 							
 							<div class="advanced-section">
 								<div class='duplicatable-container'>
+									<div class='duplicatable'>Words starting with: <input class="advanced-input prefix-words" type="text" />
+										<div class="buttons plus symbol plus-circle"></div>
+										<div class="buttons minus symbol minus-circle"></div>
+									</div>
+								</div>
+								<span class='advanced-help'>Include results that contain words that start with this.</span>
+							</div>
+							
+							<div class="advanced-section">
+								<div class='duplicatable-container'>
 									<div class='duplicatable'>This phrase: <input class="advanced-input literal-words" type="text" />
 										<div class="buttons plus symbol plus-circle"></div>
 										<div class="buttons minus symbol minus-circle"></div>

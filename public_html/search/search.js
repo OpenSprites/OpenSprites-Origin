@@ -1,9 +1,11 @@
+// utility
 jQuery.extend({
   getQueryParameters : function(str) {
 	  return (str || document.location.search).replace(/(^\?)/,'').split("&").map(function(n){return n = n.split("="),this[n[0]] = n[1],this}.bind({}))[0];
   }
 });
 
+// advanced search expanding thingy
 $(".fold.advanced-search .fold-toggle").click(function(){
 	var fold = $(".fold.advanced-search");
 	
@@ -18,7 +20,7 @@ $(".fold.advanced-search .fold-toggle").click(function(){
 	else fold.removeClass("closed").addClass("open");
 });
 
-
+// define search parameters
 var SearchParams = {
 	sort: "relevance",
 	dir: "desc",
@@ -28,12 +30,70 @@ var SearchParams = {
 	page: 0,
 	query: OpenSprites.view.query
 };
-
 var totalPages = 0;
 
+// set inputs to match query string
 $("#search-input, #search-bar-input").val(OpenSprites.view.query);
 $("#search-input").attr("disabled", "disabled");
 
+// advanced search
+function buildQuery(){
+	var someOf = $(".advanced-input.some-words").val();
+	var allOf = $(".advanced-input.some-words").val();
+	var noneOf = $(".advanced-input.some-words").val();
+	
+	someOf = someOf.split(" ").map(function(item){
+		return item.replace(/[^a-zA-Z0-9]/g, "");
+	}).join(" ");
+	
+	allOf = "+" + allOf.split(" ").map(function(item){
+		return item.replace(/[^a-zA-Z0-9]/g, "");
+	}).join(" +");
+	
+	noneOf = "-" + noneOf.split(" ").map(function(item){
+		return item.replace(/[^a-zA-Z0-9]/g, "");
+	}).join(" -");
+	
+	var prefixWords = [];
+	$(".advanced-input.prefix-words").each(function(){
+		prefixWords.push($(this).val());
+	});
+	prefixWords = prefixWords.map(function(item){
+		return item.replace(/[^a-zA-Z0-9]/g, "");
+	}).join("* ") + "*";
+	
+	var literalWords = [];
+	$(".advanced-input.literal-words").each(function(){
+		literalWords.push("\"" + $(this).val().replace(/[^a-zA-Z0-9]/g, "") + "\"");
+	});
+	literalWords = literalWords.join(" ");
+	
+	return [someOf, allOf, noneOf, prefixWords, literalWords].join(" ");
+}
+
+function registerAdvancedSearchHandlers(){
+	$(".advanced-input").off().on("keyup", function(){
+		var query = buildQuery();
+		$("#search-input, #search-bar-input").val(query);
+	});
+	
+	$(".duplicatable .buttons.minus").off().on("click", function(){
+		if($(this).parent().parent().find(".duplicatable").length < 2) return;
+		$(this).parent().remove();
+	});
+	
+	$(".duplicatable .buttons.plus").off().on("click", function(){
+		var clone = $(this).parent().clone();
+		clone.find("input").val("");
+		clone.insertAfter($(this).parent());
+		
+		registerAdvancedSearchHandlers();
+	});
+}
+
+registerAdvancedSearchHandlers();
+
+// parameters
 $("#search-buttonsets .toggleset button").click(function(){
 	$(this).parent().find("button").removeClass("selected");
 	$(this).addClass("selected");
@@ -44,6 +104,7 @@ $("#search-buttonsets .toggleset button").click(function(){
 	doSearch();
 });
 
+// pagination
 function createPageButton(content, page, selected, nth){
 	if(!nth){
 		var button = $("<button>").addClass("page-button").text(content).attr("data-page", page).click(function(){
@@ -113,6 +174,7 @@ function setPages(currentPage, pages){
 	createPageButton("Go to...", -1, false, true);
 }
 
+// actually perform search
 function doSearch(){
 		var query = $("#search-bar-input").val();
 		if(query == null || query == "" || typeof query == "undefined") return;
@@ -185,6 +247,7 @@ function doSearch(){
 		});
 };
 
+// HTML5 swag
 if(history.pushState){
 	window.onpopstate = function(e){
 		var params = $.getQueryParameters();
@@ -207,6 +270,7 @@ if(history.pushState){
 	history.replaceState({query:OpenSprites.view.query}, '', '/search/?q=' + encodeURIComponent(OpenSprites.view.query));
 }
 
+// register search event handlers
 $(".search-button").click(function(){
 	SearchParams.page = 0;
 	doSearch();
@@ -219,4 +283,5 @@ $("#search-bar-input").keyup(function(e){
 	}
 });
 
+// on load, run the search immediately
 doSearch();
