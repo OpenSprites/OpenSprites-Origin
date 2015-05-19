@@ -47,18 +47,6 @@ MegaApuTurkUltra is a sample text, who mainly works on database and backend-rela
  - PHP / Server-side
  - OSDev Site Administator
 
-### [Firedrake969](https://github.com/Firedrake969) ###
-![GitHub Logo](https://avatars3.githubusercontent.com/u/8008245?s=100)
-
-[Active]
-Firedrake969 is one of the lead developers of OS. He is also one of the main overseers of the project.
-
- - HTML
- - CSS
- - JavaScript
- - PHP
- - Administration
-
 ### [GrannyCookies](http://opensprites.org/users/4/) ###
 ![GitHub Logo](https://avatars0.githubusercontent.com/u/9429556?s=100)
 
@@ -75,7 +63,7 @@ He hax0red the forums and styled it to look neat with the rest of the site, as h
 ### [andrewjcole](http://opensprites.org/users/5/) ###
 ![GitHub Logo](https://avatars1.githubusercontent.com/u/10202163?s=100)
 
-[Active]
+[Very Active]
 andrewjcole is a dev on the OS team. 
 
  - HTML
@@ -99,6 +87,18 @@ Rumanti is a dev on the OS team.
 
  - HTML
  - CSS
+
+### [Firedrake969](https://github.com/Firedrake969) ###
+![GitHub Logo](https://avatars3.githubusercontent.com/u/8008245?s=100)
+
+[Active]
+Firedrake969 is one of the lead developers of OS. He is also one of the main overseers of the project.
+
+ - HTML
+ - CSS
+ - JavaScript
+ - PHP
+ - Administration
 
 ### [DM5555](https://github.com/DM5555) ###
 ![Github logo](https://avatars2.githubusercontent.com/u/9368136?s=100)
