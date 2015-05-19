@@ -195,7 +195,7 @@ if(history.pushState){
 			$("#search-input, #search-bar-input").val(OpenSprites.view.query);
 		}
 	};
-	history.replaceState({query, OpenSprites.view.query}, '', '/search/?q=' + encodeURIComponent(OpenSprites.view.query));
+	history.replaceState({query:OpenSprites.view.query}, '', '/search/?q=' + encodeURIComponent(OpenSprites.view.query));
 }
 
 $(".search-button").click(function(){
