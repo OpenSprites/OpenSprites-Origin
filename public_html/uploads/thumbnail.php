@@ -34,6 +34,11 @@ function imagecreatefromfile( $filename ) {
 
 if(!isset($_GET['file'])) die("Param missing");
 $file = $_GET['file'];
+
+if($_SERVER['HTTP_HOST'] === "osdev.opensprites.org"){
+	die(file_get_contents("http://opensprites.org/uploads/thumbnail.php?file=" . urlencode($file)));
+}
+
 if(strpos($file, "..") !== FALSE
     || strpos($file, "/") !== FALSE
     || strpos($file, "\\") !== FALSE) die("Param missing"); // prevent hax
