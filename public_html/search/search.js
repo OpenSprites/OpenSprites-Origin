@@ -54,6 +54,8 @@ function createPageButton(content, page, selected, nth){
 function setPages(currentPage, pages){
 	$(".pagination.toggleset button").remove();
 	
+	if(currentPage == 0 && pages == 1) return;
+	
 	console.log(currentPage, pages);
 	
 	if(currentPage == 0){
@@ -116,12 +118,12 @@ function doSearch(){
 				if(result.type == "image" || result.type == "sound"){ 
 					$("<img />").addClass("search-preview").attr("href", "/uploads/thumbnail.php?file=" + result.filename).appendTo(resultRow);
 				} else if (result.type == "script"){
-					(function(html, url){
+					(function(url){
 						$.get(url, function(data){
 							var json = [0, 0, data];
 							var scratchblocks = gen.generate(json);
 							var preClass = "blocks" + Math.round(Math.random() * 100000000);
-							var pre = $("<pre>").addClass(preClass).css("display", "none").html(scratchblocks).appendTo(html);
+							var pre = $("<pre>").addClass(preClass).css("display", "none").html(scratchblocks).appendTo($("body"));
 							scratchblocks2.parse("pre." + preClass);
 							var data = '<svg xmlns="http://www.w3.org/2000/svg" width="500" height="1000">' +
 									'<foreignObject width="100%" height="100%">' +
@@ -137,8 +139,9 @@ function doSearch(){
 							var svg = new Blob([data], {type: 'image/svg+xml;charset=utf-8'});
 							var url = DOMURL.createObjectURL(svg);
 							$("<div>").addClass("search-preview").attr("style", "background: url("+url+") white;background-size:cover !important;").appendTo(resultRow);
+							pre.remove();
 						});
-					})(html, result.url);
+					})(result.url);
 				}
 				
 				resultRow.append($("<a>").attr("href", "/users/" + result.uploaded_by.id + "/" + result.md5 + "/").text(result.name));
