@@ -177,7 +177,12 @@ function setPages(currentPage, pages){
 // actually perform search
 function doSearch(){
 		var query = $("#search-bar-input").val();
-		if(query == null || query == "" || typeof query == "undefined") return;
+		if(query == null || query == "" || typeof query == "undefined"){
+			$(".search-results-content").html("Enter a search query.");
+			$(".search-results").removeClass("loading");
+			$(".search-header").text("No results");
+			return;
+		}
 		
 		if(history.pushState && arguments.length === 0){
 			history.pushState({query: query}, '', '/search/?q=' + encodeURIComponent(query));
