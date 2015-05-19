@@ -13,7 +13,7 @@
 	<link href='/main-style.css' rel='stylesheet' type='text/css'>
 	
 	<?php
-		include "../navbar.php"; // Imports navigation bar
+		include "../../navbar.php"; // Imports navigation bar
 	?>
 	
 	<!-- Main wrapper -->
