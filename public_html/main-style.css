@@ -614,6 +614,10 @@ a:visited {
     transition: 200ms all;
 }
 
+.btn.big {
+	font-size: 1.2em;
+}
+
 .btn:disabled {
 	background-color: gray;
 }
