@@ -110,7 +110,7 @@ function doSearch(){
 		var query = $("#search-bar-input").val();
 		if(query == null || query == "" || typeof query == "undefined") return;
 		
-		if(history.pushState && arguments.length > 0){
+		if(history.pushState && arguments.length === 0){
 			history.pushState({query: query}, '', '/search/?q=' + encodeURIComponent(query));
 		}
 		
