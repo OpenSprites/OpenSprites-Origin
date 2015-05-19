@@ -110,7 +110,7 @@ function doSearch(){
 		var query = $("#search-bar-input").val();
 		if(query == null || query == "" || typeof query == "undefined") return;
 		
-		if(history.pushState){
+		if(history.pushState && arguments.length > 0){
 			history.pushState({query: query}, '', '/search/?q=' + encodeURIComponent(query));
 		}
 		
@@ -187,14 +187,14 @@ if(history.pushState){
 			SearchParams.page = 0;
 			OpenSprites.view.query = query;
 			$("#search-input, #search-bar-input").val(OpenSprites.view.query);
-			doSearch();
+			doSearch(true);
 		} else if(params.hasOwnProperty("q")){
 			var query = params.q;
 			SearchParams.query = query;
 			SearchParams.page = 0;
 			OpenSprites.view.query = query;
 			$("#search-input, #search-bar-input").val(OpenSprites.view.query);
-			doSearch();
+			doSearch(true);
 		}
 	};
 	history.replaceState({query:OpenSprites.view.query}, '', '/search/?q=' + encodeURIComponent(OpenSprites.view.query));
