@@ -108,7 +108,7 @@
 					<p class="search-message"></p>
 					<div class="search-content"></div>
 					<p class="search-links">
-						<a href="/search/?q=swag" class="all-results search-link"><button class="btn orange big">See all results + Search options</button></a> | <a href="/about/search/" class="search-help search-link" target="_blank"><button class="btn blue">Search Help</button></a>
+						<a href="/search/?q=swag" class="all-results search-link"><button class="btn orange big">See all results + Search options</button></a> <a href="/about/search/" class="search-help search-link" target="_blank"><button class="btn blue">Search Help</button></a>
 					</p>
 				</div>
 			</li>
