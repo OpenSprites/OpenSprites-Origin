@@ -4,6 +4,26 @@
 <!-- Define OpenSprites -->
 <script>
 	var OpenSprites = OpenSprites || {};
+	
+	OpenSprites.disableEasterEgg = function(){
+		localStorage.OSEasterEggDisable = "true";
+		console.log("Disabled :(");
+	};
+	if(!localStorage.hasOwnProperty("OSEasterEggDisable")){
+		console.log(
+			"   ____                      _____               _  __             \n" +
+			"  / __ \\ ____   ___   ____  / ___/ ____   _____ (_)/ /_ ___   _____\n" +
+			" / / / // __ \\ / _ \\ / __ \\ \\__ \\ / __ \\ / ___// // __// _ \\ / ___/\n" +
+			"/ /_/ // /_/ //  __// / / /___/ // /_/ // /   / // /_ /  __/(__  ) \n" +
+			"\\____// .___/ \\___//_/ /_//____// .___//_/   /_/ \\__/ \\___//____/  \n" +
+			"     /_/                       /_/                                 \n" +
+			"___________________________________________________________________\n" +
+			"Interested in helping us out? Shoot us a message on Scratch or via\n" +
+			"the contact us link!\n\n" +
+			"> OpenSprites.disableEasterEgg() to hide this easter egg.\n" +
+			"___________________________________________________________________");
+	}
+	
 </script>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="viewport" content="width=device-width" />
