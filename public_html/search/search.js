@@ -73,7 +73,7 @@ function buildQuery(){
 	prefixWords = prefixWords.map(function(item){
 		return item.replace(/[^a-zA-Z0-9]/g, "");
 	});
-	prefixWords = joinWords(prefixWords, "", "*");
+	prefixWords = joinTerms(prefixWords, "", "*");
 	
 	var literalWords = [];
 	$(".advanced-input.literal-words").each(function(){
