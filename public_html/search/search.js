@@ -37,6 +37,11 @@ $("#search-input, #search-bar-input").val(OpenSprites.view.query);
 $("#search-input").attr("disabled", "disabled");
 
 function joinTerms(terms, prefix, suffix){
+	var temp = [];
+	for(var i = 0; i < terms.length; i++){
+		if(terms[i] != null && terms[i] != "") temp.push(terms[i]);
+	}
+	terms = temp;
 	if(terms.length == 0) return "";
 	var joined = prefix + terms[0] + suffix;
 	for(var i = 1; i < terms.length; i++){
@@ -61,7 +66,7 @@ function buildQuery(){
 	});
 	allOf = joinTerms(allOf, "+", "");
 	
-	noneOf = "-" + noneOf.split(" ").map(function(item){
+	noneOf = noneOf.split(" ").map(function(item){
 		return item.replace(/[^a-zA-Z0-9]/g, "");
 	});
 	noneOf = joinTerms(noneOf, "-", "");
@@ -77,7 +82,8 @@ function buildQuery(){
 	
 	var literalWords = [];
 	$(".advanced-input.literal-words").each(function(){
-		literalWords.push("\"" + $(this).val().replace(/[^a-zA-Z0-9]/g, "") + "\"");
+		var val = $(this).val().replace(/[^a-zA-Z0-9]/g, "");
+		if(val !== "") literalWords.push("\"" + val + "\"");
 	});
 	literalWords = literalWords.join(" ");
 	
