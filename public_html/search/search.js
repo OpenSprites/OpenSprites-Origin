@@ -36,23 +36,35 @@ var totalPages = 0;
 $("#search-input, #search-bar-input").val(OpenSprites.view.query);
 $("#search-input").attr("disabled", "disabled");
 
+function joinTerms(terms, prefix, suffix){
+	if(terms.length == 0) return "";
+	var joined = prefix + terms[0] + suffix;
+	for(var i = 1; i < terms.length; i++){
+		joined += " " + prefix + terms[i] + suffix;
+	}
+	return joined;
+}
+
 // advanced search
 function buildQuery(){
 	var someOf = $(".advanced-input.some-words").val();
-	var allOf = $(".advanced-input.some-words").val();
-	var noneOf = $(".advanced-input.some-words").val();
+	var allOf = $(".advanced-input.all-words").val();
+	var noneOf = $(".advanced-input.no-words").val();
 	
 	someOf = someOf.split(" ").map(function(item){
 		return item.replace(/[^a-zA-Z0-9]/g, "");
-	}).join(" ");
+	});
+	someOf = joinTerms(someOf, "", "");
 	
-	allOf = "+" + allOf.split(" ").map(function(item){
+	allOf = allOf.split(" ").map(function(item){
 		return item.replace(/[^a-zA-Z0-9]/g, "");
-	}).join(" +");
+	});
+	allOf = joinTerms(allOf, "+", "");
 	
 	noneOf = "-" + noneOf.split(" ").map(function(item){
 		return item.replace(/[^a-zA-Z0-9]/g, "");
-	}).join(" -");
+	});
+	noneOf = joinTerms(noneOf, "-", "");
 	
 	var prefixWords = [];
 	$(".advanced-input.prefix-words").each(function(){
@@ -60,7 +72,8 @@ function buildQuery(){
 	});
 	prefixWords = prefixWords.map(function(item){
 		return item.replace(/[^a-zA-Z0-9]/g, "");
-	}).join("* ") + "*";
+	});
+	prefixWords = joinWords(prefixWords, "", "*");
 	
 	var literalWords = [];
 	$(".advanced-input.literal-words").each(function(){
