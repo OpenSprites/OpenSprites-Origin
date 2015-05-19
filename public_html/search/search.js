@@ -38,6 +38,7 @@ $("#search-buttonsets .toggleset button").click(function(){
 	$(this).addClass("selected");
 	
 	SearchParams[$(this).attr("data-key")] = $(this).attr("data-value");
+	SearchParams.page = 0;
 	
 	doSearch();
 });
@@ -191,7 +192,10 @@ if(history.pushState){
 $(".search-button").click(doSearch);
 
 $("#search-bar-input").keyup(function(e){
-	if(e.which == 13) doSearch();
+	if(e.which == 13){
+		SearchParams.page = 0;
+		doSearch();
+	}
 });
 
 doSearch();
