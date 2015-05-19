@@ -9,7 +9,7 @@ $(".fold.advanced-search .fold-toggle").click(function(){
 	
 	if(fold.hasClass("never-opened")){
 		if($("#search-bar-input").val() !== "" && $("#search-bar-input").val() !== null){
-			if(!confirm("Your current search will be cleared. Continue?")) return'
+			if(!confirm("Your current search will be cleared. Continue?")) return;
 		}
 		fold.removeClass("never-opened");
 	}
