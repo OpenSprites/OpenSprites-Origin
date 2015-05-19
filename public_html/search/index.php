@@ -11,7 +11,6 @@
 		OpenSprites.view = {};
 		OpenSprites.view.query = <?php
 			if(isset($_GET['q'])) echo json_encode($_GET['q']);
-			else if(isset($_GET['query'])) echo json_encode($_GET['query']);
 			else echo json_encode("");
 		?>;
 	</script>

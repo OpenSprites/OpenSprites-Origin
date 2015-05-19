@@ -1,3 +1,9 @@
+jQuery.extend({
+  getQueryParameters : function(str) {
+	  return (str || document.location.search).replace(/(^\?)/,'').split("&").map(function(n){return n = n.split("="),this[n[0]] = n[1],this}.bind({}))[0];
+  }
+});
+
 $(".fold.advanced-search .fold-toggle").click(function(){
 	var fold = $(".fold.advanced-search");
 	
@@ -103,7 +109,13 @@ function doSearch(){
 		var query = $("#search-bar-input").val();
 		if(query == null || query == "" || typeof query == "undefined") return;
 		
+		if(history.pushState){
+			history.pushState({}, '', '/search/?q=' + encodeURIComponent(query));
+		}
+		
 		SearchParams.query = query;
+		OpenSprites.view.query = query;
+		$("#search-input").val(OpenSprites.view.query);
 		
 		$(".search-header").html("Loading...");
 		$(".search-results").addClass("loading");
@@ -163,6 +175,18 @@ function doSearch(){
 			$(".search-header").text("Search failed!");
 		});
 };
+
+if(window.onpopstate){
+	window.onpopstate = function(){
+		var params = $.getQueryParameters();
+		if(params.hasOwnProperty("q")){
+			var query = params.q;
+			SearchParams.query = query;
+			OpenSprites.view.query = query;
+			$("#search-input, #search-bar-input").val(OpenSprites.view.query);
+		}
+	};
+}
 
 $(".search-button").click(doSearch);
 
