@@ -111,7 +111,7 @@ function doSearch(){
 		if(query == null || query == "" || typeof query == "undefined") return;
 		
 		if(history.pushState){
-			history.pushState({}, '', '/search/?q=' + encodeURIComponent(query));
+			history.pushState({query: query}, '', '/search/?q=' + encodeURIComponent(query));
 		}
 		
 		SearchParams.query = query;
@@ -181,7 +181,13 @@ function doSearch(){
 if(history.pushState){
 	window.onpopstate = function(){
 		var params = $.getQueryParameters();
-		if(params.hasOwnProperty("q")){
+		if(history.state != null && history.state.hasOwnProperty("query")){
+			var query = history.state.query;
+			SearchParams.query = query;
+			SearchParams.page = 0;
+			OpenSprites.view.query = query;
+			$("#search-input, #search-bar-input").val(OpenSprites.view.query);
+		} else if(params.hasOwnProperty("q")){
 			var query = params.q;
 			SearchParams.query = query;
 			SearchParams.page = 0;
@@ -189,6 +195,7 @@ if(history.pushState){
 			$("#search-input, #search-bar-input").val(OpenSprites.view.query);
 		}
 	};
+	history.replaceState({query, OpenSprites.view.query}, '', '/search/?q=' + encodeURIComponent(OpenSprites.view.query));
 }
 
 $(".search-button").click(function(){
