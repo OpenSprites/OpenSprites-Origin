@@ -229,7 +229,7 @@
 			
 			<hr/>
 			
-            <p><i>About Me</i><br>Write something about yourself! Make sure it doesn't have your phone number, address, social links, or anything else that is against the <a href='/tos/'>Terms Of Service</a>. About sections support <a href='https://help.github.com/articles/github-flavored-markdown/'>Markdown</a>.</p>
+            <p><i>About Me</i><br>Write something about yourself! Make sure it doesn't have your phone number, address, social links, or anything else that is against the <a href='/guidelines/'>Community Guidelines</a>. About sections support <a href='https://help.github.com/articles/github-flavored-markdown/'>Markdown</a>.</p>
             <textarea id='aboutme' maxlength='500'>Loading...</textarea><br>
 		</div>
 	</div>
