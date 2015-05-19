@@ -59,7 +59,7 @@ function createPageButton(content, page, selected, nth){
 			var page = prompt("Which page?", page);
 			if(page == null || page == "") return;
 			
-			SearchParams.page = parseInt(page);
+			SearchParams.page = parseInt(page) - 1;
 			doSearch();
 		}).appendTo($(".pagination.toggleset"));
 	}
