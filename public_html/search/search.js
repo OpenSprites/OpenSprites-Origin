@@ -1,5 +1,13 @@
 $(".fold.advanced-search .fold-toggle").click(function(){
 	var fold = $(".fold.advanced-search");
+	
+	if(fold.hasClass("never-opened")){
+		if($("#search-bar-input").val() !== "" && $("#search-bar-input").val() !== null){
+			if(!confirm("Your current search will be cleared. Continue?")) return'
+		}
+		fold.removeClass("never-opened");
+	}
+	
 	if(fold.hasClass("open")) fold.removeClass("open").addClass("closed");
 	else fold.removeClass("closed").addClass("open");
 });
@@ -157,5 +165,9 @@ function doSearch(){
 };
 
 $(".search-button").click(doSearch);
+
+$("#search-bar-input").keyup(function(e){
+	if(e.which == 13) doSearch();
+});
 
 doSearch();

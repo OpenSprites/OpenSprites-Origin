@@ -58,7 +58,7 @@
 						</div>
 					</div>
 				</div>
-				<div class='advanced-search fold closed'>
+				<div class='advanced-search fold closed never-opened'>
 					<p class='fold-toggle'>Advanced search options <span class='fold-arrow'></span></p>
 					<div class='fold-content'>
 						<div id="advanced-options">
