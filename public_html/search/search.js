@@ -121,6 +121,7 @@ function doSearch(){
 		$(".search-header").html("Loading...");
 		$(".search-results").addClass("loading");
 		$.get("/site-api/search.php", SearchParams, function(data){
+			console.log(data);
 			$(".search-results-content").html("");
 			$(".search-results").removeClass("loading");
 			$(".search-header").text(data.message);
