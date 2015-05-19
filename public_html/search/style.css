@@ -7,6 +7,15 @@
 	box-shadow: inset 0px 0px 3px gray;
 }
 
+#search-bar-input::-webkit-input-placeholder::after,
+#search-bar-input:-moz-placeholder::after,
+#search-bar-input::-moz-placeholder::after,
+#search-bar-input::-ms-input-placeholder::after {
+	content: " or use the advanced search";
+	font-size: 0.9em;
+	color: #ccc;
+}
+
 .sort.toggleset, .direction.toggleset, .place.toggleset, .filter.toggleset, .search-button-label {
 	display: table-cell;
 }

@@ -26,7 +26,7 @@
 	<div class="container main">
 		<div class="main-inner">
 			<div id="search-bar">
-				<input id="search-bar-input" type="text" /><br/>
+				<input id="search-bar-input" type="text" placeholder="Enter a search query" /><br/>
 				<div id="search-buttonsets">
 					<div class="search-button-row">
 						<div class="search-button-label">
