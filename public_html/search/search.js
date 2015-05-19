@@ -48,7 +48,7 @@ function createPageButton(content, page, selected, nth){
 		var button = $("<button>").addClass("page-button").text(content).attr("data-page", page).click(function(){
 			$(this).parent().find("button").removeClass("selected");
 			$(this).addClass("selected");
-			SearchParams.page = $(this).attr("data-page");
+			SearchParams.page = parseInt($(this).attr("data-page"));
 			doSearch();
 		}).appendTo($(".pagination.toggleset"));
 		if(selected) button.addClass("selected");
@@ -67,6 +67,8 @@ function createPageButton(content, page, selected, nth){
 }
 
 function setPages(currentPage, pages){
+    if(typeof currentPage === "string") currentPage = parseInt(currentPage);
+    if(typeof pages === "string") pages = parseInt(pages);
 	$(".pagination.toggleset button").remove();
 	
 	if(currentPage == 0 && pages == 1) return;
