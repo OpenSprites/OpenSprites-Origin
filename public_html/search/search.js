@@ -179,10 +179,10 @@ function doSearch(){
 };
 
 if(history.pushState){
-	window.onpopstate = function(){
+	window.onpopstate = function(e){
 		var params = $.getQueryParameters();
-		if(history.state != null && history.state.hasOwnProperty("query")){
-			var query = history.state.query;
+		if(e.state != null && e.state.hasOwnProperty("query")){
+			var query = e.state.query;
 			SearchParams.query = query;
 			SearchParams.page = 0;
 			OpenSprites.view.query = query;
