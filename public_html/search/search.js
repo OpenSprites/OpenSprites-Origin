@@ -29,6 +29,7 @@ var SearchParams = {
 	query: OpenSprites.view.query
 };
 
+var totalPages = 0;
 
 $("#search-input, #search-bar-input").val(OpenSprites.view.query);
 $("#search-input").attr("disabled", "disabled");
@@ -60,7 +61,10 @@ function createPageButton(content, page, selected, nth){
 			var page = prompt("Which page?", page);
 			if(page == null || page == "") return;
 			
-			SearchParams.page = parseInt(page) - 1;
+			page = parseInt(page) - 1;
+            if(page < 0) page = 0;
+            if(page > numPages - 1) page = numPages - 1;
+            SearchParams.page = page;
 			doSearch();
 		}).appendTo($(".pagination.toggleset"));
 	}
@@ -69,6 +73,7 @@ function createPageButton(content, page, selected, nth){
 function setPages(currentPage, pages){
     if(typeof currentPage === "string") currentPage = parseInt(currentPage);
     if(typeof pages === "string") pages = parseInt(pages);
+    numPages = pages;
 	$(".pagination.toggleset button").remove();
 	
 	if(currentPage == 0 && pages == 1) return;
