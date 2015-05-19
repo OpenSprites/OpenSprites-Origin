@@ -187,12 +187,14 @@ if(history.pushState){
 			SearchParams.page = 0;
 			OpenSprites.view.query = query;
 			$("#search-input, #search-bar-input").val(OpenSprites.view.query);
+			doSearch();
 		} else if(params.hasOwnProperty("q")){
 			var query = params.q;
 			SearchParams.query = query;
 			SearchParams.page = 0;
 			OpenSprites.view.query = query;
 			$("#search-input, #search-bar-input").val(OpenSprites.view.query);
+			doSearch();
 		}
 	};
 	history.replaceState({query:OpenSprites.view.query}, '', '/search/?q=' + encodeURIComponent(OpenSprites.view.query));
