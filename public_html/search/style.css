@@ -28,11 +28,9 @@
 
 .search-results .result {
 	border-bottom: 1px solid #659593;
-	overflow: auto;
-}
-
-.search-results .result:first-child {
 	border-top: 1px solid #659593;
+	padding: 0.5em 0;
+	overflow: auto;
 }
 
 .search-button {
