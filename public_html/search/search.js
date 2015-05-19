@@ -189,7 +189,10 @@ if(history.pushState){
 	};
 }
 
-$(".search-button").click(doSearch);
+$(".search-button").click(function(){
+	SearchParams.page = 0;
+	doSearch();
+});
 
 $("#search-bar-input").keyup(function(e){
 	if(e.which == 13){
