@@ -61,7 +61,7 @@
 					<p class='fold-toggle'>Advanced search options <span class='fold-arrow'></span></p>
 					<div class='fold-content'>
 						<div id="advanced-options">
-							<h3>Search for... (NON-FUNCTIONAL)</h3>
+							<h3>Search for:</h3>
 							<div class="advanced-section">
 								Some of these words: <input class="advanced-input some-words" type="text" /><br/>
 								<span class='advanced-help'>Search for results that contain one or more of these words. Results with more of these words will be ranked higher if sort is set to 'relevance.'</span>
