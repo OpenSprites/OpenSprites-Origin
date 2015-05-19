@@ -28,8 +28,8 @@
 
 .search-results .result {
 	border-bottom: 1px solid #659593;
+	overflow: auto;
 }
-
 
 .search-results .result:first-child {
 	border-top: 1px solid #659593;
@@ -57,6 +57,8 @@
 .search-preview {
 	max-width: 100px;
 	max-height: 100px;
+	min-height: 50px;
+	min-width: 50px;
 	background: #191919;
 	float: left;
 	margin-right: 1em;
