@@ -183,6 +183,7 @@ if(history.pushState){
 		if(params.hasOwnProperty("q")){
 			var query = params.q;
 			SearchParams.query = query;
+			SearchParams.page = 0;
 			OpenSprites.view.query = query;
 			$("#search-input, #search-bar-input").val(OpenSprites.view.query);
 		}
