@@ -47,6 +47,10 @@
 	font-size: 1.5em;
 }
 
+.search-button:hover {
+	background: #88AEAC;
+}
+
 .search-loading .symbol.loading {
 	margin-right: auto;
 	margin-left: auto;
