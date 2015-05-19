@@ -181,7 +181,7 @@ function doSearch(){
 if(history.pushState){
 	window.onpopstate = function(e){
 		var params = $.getQueryParameters();
-		if(e.state != null && e.state.hasOwnProperty("query")){
+		if(typeof e.state !== 'undefined' && e.state !== null && e.state.hasOwnProperty("query")){
 			var query = e.state.query;
 			SearchParams.query = query;
 			SearchParams.page = 0;
