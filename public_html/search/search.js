@@ -82,7 +82,7 @@ function buildQuery(){
 	
 	var literalWords = [];
 	$(".advanced-input.literal-words").each(function(){
-		var val = $(this).val().replace(/[^a-zA-Z0-9]/g, "");
+		var val = $(this).val().replace(/[^a-zA-Z0-9 ]/g, "");
 		if(val !== "") literalWords.push("\"" + val + "\"");
 	});
 	literalWords = literalWords.join(" ");
