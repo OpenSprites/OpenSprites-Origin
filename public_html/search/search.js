@@ -176,7 +176,7 @@ function doSearch(){
 		});
 };
 
-if(window.onpopstate){
+if(history.pushState){
 	window.onpopstate = function(){
 		var params = $.getQueryParameters();
 		if(params.hasOwnProperty("q")){
