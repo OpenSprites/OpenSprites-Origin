@@ -22,6 +22,7 @@ h1.firstHeading, h2 {
 
 .box > h1 {
 	border-top: none !important;
+	box-shadow: 0 0 2em #659593 !important;
 }
 
 .box {
