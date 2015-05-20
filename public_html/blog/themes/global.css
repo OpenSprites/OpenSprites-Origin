@@ -42,7 +42,7 @@ code, code span {
 
 pre, code, p, .entry-contents h1, .entry-contents h2, .entry-contents h3, .entry-contents h4, .entry-contents h5 {
     margin: 0;
-    word-wrap: break-word !important;
+    white-space: pre-wrap;
 }
 
 code {
