@@ -28,7 +28,10 @@ h1.firstHeading, h2 {
 	background: #595959 !important;
 	border: 1px solid #595959 !important;
 	border-top: none !important;
-	box-shadow: 0 0 2em #659593 !important;
+	-webkit-box-shadow: 0 2px 3px #659593 !important;
+    -moz-box-shadow: 0 2px 3px #659593 !important;
+    -o-box-shadow: 0 2px 3px #659593 !important;
+    box-shadow: 0 2px 3px #659593 !important;
 }
 
 .box-content {
