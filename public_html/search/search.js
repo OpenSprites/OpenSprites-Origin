@@ -262,6 +262,8 @@ function doSearch(){
 				resultRow.append($("<a>").attr("href", "/users/" + result.uploaded_by.id + "/" + result.md5 + "/").text(result.name));
 				resultRow.append("<br/>By: ");
 				resultRow.append($("<a>").attr("href", "/users/" + result.uploaded_by.id).text(result.uploaded_by.name));
+                resultRow.append("<br/>Uploaded on: " + result.upload_time);
+                resultRow.append("<br/>Downloads: " + result.downloads.total);
 				$(".search-results-content").append(resultRow);
 			}
 		}).fail(function(){
