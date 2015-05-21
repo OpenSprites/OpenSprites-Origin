@@ -88,3 +88,23 @@ select {
 #select-button:hover, #upload-button:hover, #url-button:hover {
   background-color: gray !important;
 }
+
+/* blog */
+div#entries div.entry h1.entry-header a {
+    color: rgb(205, 205, 205) !important;
+}
+
+div#entries div.entry pre.entry-contents {
+    background-color: #121111 !important;
+    color: white !important;
+    padding: 13px;
+    border-radius: 20px;
+}
+
+div#entries hr {
+    margin-top: 60px;
+}
+
+div#entries hr:last-child {
+    display: none;
+}
