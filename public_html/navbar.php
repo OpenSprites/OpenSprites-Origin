@@ -10,10 +10,9 @@
 <div class="header">
 
 <!-- MOBILE NAV -->
-<div class="mobile-nav" id='mobilenav' style="display:none;width:100%;">
-	<center>
-		<a href="/"><img src="http://opensprites.org/assets/images/os-logotype.svg" style="width: 150px;height: 35px;"></a>
-		<button style="float:left;margin-top:0;font-size:21px;background:transparent;border:none;color:white;cursor:pointer;">☰</button>
+<div class="mobile-nav" id='mobilenav' style="display:none;width:100%;text-align:center;">
+	<a href="/"><img src="http://opensprites.org/assets/images/os-logotype.svg" style="width: 150px;height: 35px;"></a>
+	<button style="float:left;margin-top:0;font-size:21px;background:transparent;border:none;color:white;cursor:pointer;">☰</button>
         <nav style='overflow-y: scroll;'>
             <ul>
                 <li><a href="/" style='background: url("/assets/images/os-logotype.svg") center center no-repeat;height:100px;'></a></li>
@@ -33,8 +32,6 @@
                 <?php } ?>
             </ul>
         </nav>
-	</center>
-    
     <script>
         $(window).on('resize', function() {
             mobileNavUpdate();
