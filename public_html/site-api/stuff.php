@@ -1,6 +1,14 @@
 <?php
+// Import the base Site API library for simplifying
+// all our PHP code.
 require 'lib.php';
 
+// Figure out the User ID. It is generally one of
+// three things:
+//  [1] false, meaning it isn't set in either the session data
+//	or the page URL ($_GET)
+//  [2] any username, from the page URL: $userid = $_GET['userid']
+//  [3] your username, from the session data: $userid = $_SESSION['userId']
 $userid = 'false';
 if(isset($_GET['userid'])) {
     $userid = $_GET['userid'];
@@ -8,21 +16,29 @@ if(isset($_GET['userid'])) {
     $userid = $_SESSION["userId"];
 }
 
+// In the case that it fits #1 ('false') we should echo out a quick
+// message ('false' is very informative I know right?) and end the
+// page.
 if($userid === 'false') {
     echo 'FALSE';
     die();
 }
 
+// Now we need to connect to the database. lib.php makes this very
+// easy, all we need to do is use the connectDatabase() function!
+// Just in case it causes an error, we'll show that too.
 try {
 	connectDatabase();
-} catch(Exception $e){
+} catch(Exception $e) {
 	die(json_encode(array(array("status"=>"error","message"=>"Cannot connect to database"))));
 }
 
+// More lib.php stuff. This just gets the assets uploaded.
 $raw = getImagesForUser($userid);
-
 $assets = getAssetList($raw);
 
+// Finally echo the JSON encoded value of $assets with pretty
+// print to satisfy your eyes, and we're done!
 echo json_encode($assets, JSON_PRETTY_PRINT);
 
 /*
