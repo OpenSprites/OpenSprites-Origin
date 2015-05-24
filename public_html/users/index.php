@@ -103,7 +103,7 @@
 					<a href="https://scratch.mit.edu/users/<?php echo urlencode($username); ?>" target="blank">View Scratch Page</a>
 				</div>
 				<div id='report'>
-					Report
+					Report User
 				</div>
 					<?php
 						if($is_admin == true and $username !== $logged_in_user) {
