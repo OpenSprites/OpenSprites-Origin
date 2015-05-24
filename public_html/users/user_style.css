@@ -210,3 +210,7 @@
 #report:hover{
 	background-color: orangered;
 }
+
+#report-area{
+	position:relative;
+}
