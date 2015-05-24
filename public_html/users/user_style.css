@@ -203,6 +203,10 @@
 	border-radius: 3px;
 	background-color: transparent;
 	padding: 7px;
+	transition: 250ms background-color;
+	-webkit-transition: 250ms background-color;
+	-o-transition: 250ms background-color;
+	-moz-transition: 250ms background-color;
 }
 
 #report:hover{
