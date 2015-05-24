@@ -198,3 +198,13 @@
     overflow-x: auto;
     overflow-y: hidden;
 }
+
+#report {
+	border-radius: 3px;
+	background-color: transparent;
+	padding: 7px;
+}
+
+#report:hover{
+	background-color: orangered;
+}
