@@ -144,10 +144,6 @@
             ?>
         </div>
     </div></div>
-	<div id="report-dialouge">
-		<p>Please only report the user if they are violating the </p><a id = "tos-link">Terms Of Service</a><p>. You have 500 characters remaining.</p><p>
-		<textarea id = "input-box" ></textarea>
-	</div>
 
     <?php if($user_exist) { ?>
     <div class="container main" id="about">
