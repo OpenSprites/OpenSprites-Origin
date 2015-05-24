@@ -127,7 +127,6 @@
 #overlay-inner {
     width: 980px;
     margin: auto;
-    height: 100%;
     z-index: 11;
 }
 
