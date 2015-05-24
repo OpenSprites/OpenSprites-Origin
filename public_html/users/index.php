@@ -143,6 +143,14 @@
                 }
             ?>
         </div>
+		<div id="report-area">
+		<form id = "report-box" method = "post">
+			<p>You have 500 characters left.<p>
+			<textarea id = "report-input"></textarea>
+			<submit id="submit-report"> Submit Report</submit>
+		</form>
+		</div>
+		
     </div></div>
 
     <?php if($user_exist) { ?>
