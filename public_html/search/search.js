@@ -87,7 +87,10 @@ function buildQuery(){
 	});
 	literalWords = literalWords.join(" ");
 	
-	return [someOf, allOf, noneOf, prefixWords, literalWords].join(" ");
+	return [someOf, allOf, noneOf, prefixWords, literalWords].reduce(function(prev, curr){
+		if(curr.trim() != "") return prev + " " + curr;
+		else return prev;
+	});
 }
 
 function registerAdvancedSearchHandlers(){

@@ -27,6 +27,7 @@
 		<div class="main-inner">
 			<div id="search-bar">
 				<input id="search-bar-input" type="text" placeholder="Enter a search query" /><br/>
+				<a href="/about/search/" target="_blank">Search Help</a><br/>
 				<div id="search-buttonsets">
 					<div class="search-button-row">
 						<div class="search-button-label">
