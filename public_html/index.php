@@ -32,25 +32,9 @@
 			</table>
         </div>
         
-        <!-- happy birthday liam4! (feel free to delete) 
-        <div class="welcome liam4bday">
-			<table>
-				<tr>
-					<td width="260" style='text-align: center;'>
-						<span class='symbol chat' style='color:rgb(70, 103, 101);font-size:109px;'></span>
-					</td>
-					<td valign="top">
-						<h2 class="welcome-title">Happy Birthday to <a style='color:white !important;' href='/users/liam48D/'>Liam48D</a>!
-							<a href="javascript:void(0)" class="btn" style="float:right;font-size:0.5em;" onclick="$('.welcome.liam4bday').slideUp()">Dismiss</a>
-						</h2>
-						<p class="welcome-text">Today is <a style='color:white !important;' href='/users/liam48D/'>Liam48D</a>'s birthday! Happy Birthday, Liam!</p>
-					</td>
-				</tr>
-			</table>
-        </div>-->
-        
+		<!-- We don't really need this any more because the site purpose is explained below.
         <?php if($logged_in_user == 'not logged in') { ?>
-        <!-- Info for new visistors. -->
+        <!-- Info for new visitors.
 		<div class="welcome signup">
 			<table>
 				<tr>
@@ -68,10 +52,11 @@
 			</table>
         </div>
         <?php } ?>
+		-->
 
             <div id="about">
                 <h2>Welcome!</h2>
-                <p>Welcome to OpenSprites, the free open-source site that allows <a href='//scratch.mit.edu'>Scratch</a> users to share their own creations, such as scripts, sprites, sounds, and costumes! Designed with kids in mind, we promote the idea of creating and sharing, and provides a kid-safe platform for this. So, what are you waiting for? Get creating and sharing!</p>
+                <p>Welcome to OpenSprites, the free open-source site that allows <a href='//scratch.mit.edu'>Scratch</a> users to share their own creations, such as scripts, sprites, sounds, and costumes! Designed with kids in mind, we promote the idea of creating and sharing, and provide a kid-safe platform for this. So, what are you waiting for? Get creating and sharing!</p>
             </div>
             <div id="top-assets">
                 <div class="box">
