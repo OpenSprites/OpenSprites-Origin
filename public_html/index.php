@@ -71,7 +71,7 @@
 
             <div id="about">
                 <h2>Welcome!</h2>
-                <p>Welcome to OpenSprites, the free, open-source site that allows <a href='//scratch.mit.edu'>Scratch</a> users to share their own scripts, sprites and project media! Please note that the site is still in alpha stages, and may be buggy, incomplete or otherwise unworthy for intended use. Come back soon!</p>
+                <p>Welcome to OpenSprites, the free open-source site that allows <a href='//scratch.mit.edu'>Scratch</a> users to share their own creations, such as scripts, sprites, sounds, and costumes! Designed with kids in mind, we promote the idea of creating and sharing, and provides a kid-safe platform for this. So, what are you waiting for? Get creating and sharing!</p>
             </div>
             <div id="top-assets">
                 <div class="box">
