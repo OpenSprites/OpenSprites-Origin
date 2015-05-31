@@ -60,7 +60,7 @@
             </div>
             <div id="top-assets">
                 <div class="box">
-                    <h1>Top Assets</h1>
+                    <h1>Top Media</h1>
                     <div class="box-content" id="top-assets-list">
                         
                     </div>
@@ -69,10 +69,9 @@
 
             <div id="feat-assets">
                 <div class="box">
-                    <h1>Featured Assets</h1>
-                    <div class="box-content">
-                        <div class="sortby toggleset">Sort by: </div><div class="types toggleset">Types: </div><br/>
-                        PHP guys, get in here!
+                    <h1>Featured Media</h1>
+                    <div class="box-content" id="top-assets-list">
+                        
                     </div>
                 </div>
             </div>
@@ -80,8 +79,8 @@
 			<div id="top-collections">
                 <div class="box">
                     <h1>Top Collections</h1>
-                    <div class="box-content">
-                        PHP guys, get in here!
+                    <div class="box-content" id="top-assets-list">
+                        
                     </div>
                 </div>
             </div>
@@ -89,8 +88,8 @@
 			<div id="feat-collections">
                 <div class="box">
                     <h1>Featured Collections</h1>
-                    <div class="box-content">
-                        PHP guys, get in here!
+                    <div class="box-content" id="top-assets-list">
+                        
                     </div>
                 </div>
             </div>
