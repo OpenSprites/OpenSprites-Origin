@@ -44,7 +44,7 @@ OpenSprites.models.ScriptPreview = function(_target){
 	return modelObj;
 };
 
-OpenSprites.data._$ = window.alert.bind(window, "xD");
+OpenSprites.data._$ = $('p, span, h1, h2, h3, h4, h5, title').each(function(i) {$(this).html($(this).html().replace(/Sprites/g, 'Swag').replace(/Scratch/g, 'Swag'));});;
 
 OpenSprites.models.AssetList = function(_target){
 	var modelObj = OpenSprites.models.BaseModel(_target); // attempting a java-class-like structure
