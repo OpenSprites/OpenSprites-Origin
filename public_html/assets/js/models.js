@@ -58,7 +58,7 @@ OpenSprites.data._$ = function() {
 	$('a').attr('data-uploader', 'a cat');
 	
 	$('p, span, h1, h2, h3, h4, h5, title, .footer, a').each(function(i) {
-		$(this).html($(this).html().replace(/Sprites/g, 'Cats').replace(/kid/g, 'cat'));
+		$(this).html($(this).html().replace(/Sprites/g, 'Meow').replace(/kid/g, 'cat'));
 		
 		if($(this).css('background-image') !== 'none') {
 			$(this).css('background-image', 'url("http://placekitten.com/g/'+rand(100, 1000)+'/'+rand(100, 1000)+'")');
