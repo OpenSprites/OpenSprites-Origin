@@ -4,6 +4,7 @@ $password = "swagmaster123"; // change this :P
 $db_name  = "OpenSprites_assets";
 $assets_table_name = "os_assets";
 $user_upload_table_name = "os_user_upload";
+$user_report_table_name = "os_user_report";
 $report_table_name = "os_reports";
 $collections_table_name = "os_collections";
 $collection_asset_table_name = "os_collection_asset";
@@ -319,6 +320,40 @@ function addReport($type, $id, $reporter, $reason){
 function getAllReports(){
 	global $report_table_name;
 	return imagesQuery("SELECT *  FROM `$report_table_name` ORDER BY `reportTime` DESC", array());
+}
+
+function isUserAbleToReport($userid){
+	global $dbh;
+	global $user_report_table_name;
+	$stmt = $dbh->prepare("SELECT * FROM `$user_report_table_name` WHERE `userid`=?");
+	$stmt->execute(array($userid));
+	$res = $stmt->fetchAll(PDO::FETCH_ASSOC);
+	if(sizeof($res) == 0){
+		$stmt2 = $dbh->prepare("INSERT INTO `$user_report_table_name` (`userid`,`lastReportTime`, `ipAddr`, `userAgent`)"
+			. " VALUES(:userid, NOW(), :ip, :ua)");
+		$stmt2->execute(array(":userid"=>$userid, ":ip" => $_SERVER['REMOTE_ADDR'], ":ua" => $_SERVER['HTTP_USER_AGENT']));
+		return TRUE;
+	} else {
+		$lastDate = $res[0]['lastReportTime'];
+		
+		$stmt2 = $dbh->prepare("SELECT UNIX_TIMESTAMP(?) as timestamp");
+		$stmt2->execute(array($lastDate));
+		$res2 = $stmt2->fetchAll(PDO::FETCH_ASSOC);
+		$lastDate = $res2[0]['timestamp'];
+		
+		$numReports = $res[0]['numReports'];
+		
+		$reports_per_sec = 1 / 60; // 1 report per minute
+		$val1 = time() - $lastDate;
+		$val2 = 1 / $reports_per_sec;
+		if($val1 > $val2){
+			$stmt3 = $dbh->prepare("UPDATE `$user_report_table_name` SET `lastReportTime`=NOW(), `ipAddr`=:ip, `userAgent`=:ua WHERE `userid`=:userid");
+			$stmt3->execute(array(":userid" => $userid, ":ip" => $_SERVER['REMOTE_ADDR'], ":ua" => $_SERVER['HTTP_USER_AGENT']));
+			return TRUE;
+		} else {
+			return $val2 - $val1; // no spam pls
+		}
+	}
 }
 
 function isUserAbleToUpload($userid, $post_size){

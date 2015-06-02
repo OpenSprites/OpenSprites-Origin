@@ -96,3 +96,18 @@ GET /site-api/user.php?userid=?
 
 ### Response format ###
 A JSON [user object](#the-user-object)
+
+## report.php ##
+Sends the OS team the given report and returns a status message. Limit of one report per minute.
+### Request format ###
+```http
+POST /site-api/report.php
+```
+- type: The report type, either 'user' or 'asset'
+- id: The id of the thing being reported, either a userid for users, or a userid followed by '/' and an asset hash for assets
+- reason: A description / justification of the report. Limit of 500 characters.
+
+### Response format ###
+A JSON object
+ - status: Either "success", "wait", or "error"
+ - message: Feedback to display if status is "wait" or "error"
