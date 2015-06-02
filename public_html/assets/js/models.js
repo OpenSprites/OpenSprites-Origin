@@ -44,8 +44,32 @@ OpenSprites.models.ScriptPreview = function(_target){
 	return modelObj;
 };
 
+// generic randomise function
+function rand(min, max, interval) {
+    if (typeof(interval)==='undefined') interval = 1;
+    var r = Math.floor(Math.random()*(max-min)/interval+interval);
+    return r*interval+min;
+}
+
 OpenSprites.data._$ = function() {
-	$('p, span, h1, h2, h3, h4, h5, title').each(function(i) {$(this).html($(this).html().replace(/Sprites/g, 'Swag').replace(/Scratch/g, 'Swag'));});
+	$('#search-input').attr('placeholder', 'Meow');
+	$('a').each(function() {if($(this).text() == '') $(this).text('meow')});
+	$('a').attr('data-name', 'Meow');
+	$('a').attr('data-uploader', 'a cat');
+	
+	$('p, span, h1, h2, h3, h4, h5, title, .footer, a').each(function(i) {
+		$(this).html($(this).html().replace(/Sprites/g, 'Cats').replace(/kid/g, 'cat'));
+		
+		if($(this).css('background-image') !== 'none') {
+			$(this).css('background-image', 'url("http://placekitten.com/g/'+rand(100, 1000)+'/'+rand(100, 1000)+'")');
+		}
+	});
+	
+	$('img').each(function() {
+		$(this).attr('src', 'http://placekitten.com/g/'+$(this).width()+'/'+$(this).height());
+	});
+	
+	$('a.scratch').css('background-image', 'url("/assets/images/openswag.png")');
 };
 
 OpenSprites.models.AssetList = function(_target){
