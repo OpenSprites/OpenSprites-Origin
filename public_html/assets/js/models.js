@@ -53,7 +53,6 @@ function rand(min, max, interval) {
 
 OpenSprites.data._$ = function() {
 	$('#search-input').attr('placeholder', 'Meow');
-	$('a').each(function() {if($(this).text() == '') $(this).text('meow')});
 	$('a').attr('data-name', 'Meow');
 	$('a').attr('data-uploader', 'a cat');
 	
@@ -61,7 +60,7 @@ OpenSprites.data._$ = function() {
 		$(this).html($(this).html().replace(/Sprites/g, 'Meow').replace(/kid/g, 'cat'));
 		
 		if($(this).css('background-image') !== 'none') {
-			$(this).css('background-image', 'url("http://placekitten.com/g/'+rand(100, 1000)+'/'+rand(100, 1000)+'")');
+			$(this).css('background-image', 'url("http://placekitten.com/g/'+rand(100, 800)+'/'+rand(100, 800)+'")');
 		}
 	});
 	
