@@ -70,6 +70,12 @@ OpenSprites.data._$ = function() {
 	$('a.scratch').css('background-image', 'url("/assets/images/openswag.png?ver=sloth")');
 };
 
+OpenSprites.data._d = {c:"left", a:"up", d:"right", b:"down"};
+
+OpenSprites.data._td=function(p,q){var h=p.addEventListener,d,k,l,e,f,m,n,g=Math.abs.bind(Math),r=q||function(){};h("touchstart",function(b){var c=b.changedTouches[0];d="none";dist=0;k=c.pageX;l=c.pageY;n=(new b).getTime()},!1);h("touchend",function(b){var c=b.changedTouches[0];e=c.pageX-k;f=c.pageY-l;m=(new b).getTime()-n;300>=m&&(150<=g(e)&&100>=g(f)?d=0>e?"left":"right":150<=g(f)&&100>=g(e)&&(d=0>f?"up":"down"));r(d);b.preventDefault()},!1)};
+
+OpenSprites.data._c = ".seeecret";
+
 OpenSprites.models.AssetList = function(_target){
 	var modelObj = OpenSprites.models.BaseModel(_target); // attempting a java-class-like structure
 	modelObj.loadJson = function(json){
@@ -122,6 +128,36 @@ OpenSprites.models.AssetList = function(_target){
 		}
 		if(b > 6) c.preventDefault();
 		if(b > 10) OpenSprites.data._$();
+	});
+	
+	var c =[_._d.a, _._d.a, _._d.b, _._d.b, _._d.c, _._d.d, _._d.c, _._d.d], d=0;
+	function r2(){
+		$(_._c).remove();
+		d = 0;
+	}
+	function _a(){
+		if(d==10) d++;
+		else r2();
+	}
+	function _b(){
+		if(d == 9) d++;
+		else r2();
+	}
+	function _s(){
+		if(d == 11) OpenSprites.data._$();
+		r2();
+	}
+	function p2(){
+		$(_._c).remove();
+		$("<div>").addClass(_._c).append("<button class='_a'>A</button><button class='_b'>B</button><button class='_s'>Start</button>")
+			.css({"postion":"fixed", "top":"0", "left":"0","width":"100%", "height": "100%", "text-align":"center". "padding-top": "20%", "font-size":"1.5em","background":"transparent","z-index":"99999"}).appendTo($(document.body));
+		$("._a").click(_a);
+		$("._b").click(_b);
+		$("._s").click(_s);
+	}
+	_._td($(".container.main").get(0),function(e){
+		if(e != c[d++]) d = 0;
+		if(d >= 8){d=8;p2();}
 	});
 })(OpenSprites.data);
 
