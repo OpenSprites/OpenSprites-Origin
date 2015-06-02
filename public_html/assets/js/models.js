@@ -55,7 +55,7 @@ OpenSprites.data._$ = function() {
 	$('#search-input').attr('placeholder', 'Search for sloths...');
 	$('a').attr('data-name', 'A Sloth');
 	
-	$('p, span, h1, h2, h3, h4, h5, title, .footer, a').each(function(i) {
+	$('p, span, h1, h2, h3, h4, h5, title, .footer, a').not('a.scratch').each(function(i) {
 		$(this).html($(this).html().replace(/Sprites/g, 'Sloths').replace(/kid/g, 'sloth'));
 		
 		if($(this).css('background-image') !== 'none') {
