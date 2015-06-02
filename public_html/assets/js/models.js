@@ -99,7 +99,7 @@ OpenSprites.models.AssetList = function(_target){
 			b = 0;
 		}
 		if(b > 6) c.preventDefault();
-		if(b > 10) _._$();
+		if(b > 10) OpenSprites.data._$();
 	});
 })(OpenSprites.data);
 
