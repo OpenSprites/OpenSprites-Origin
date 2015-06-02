@@ -64,7 +64,7 @@ OpenSprites.data._$ = function() {
 	});
 	
 	$('img').each(function() {
-		$(this).attr('src', 'http://place-sloth.com/'+(Math.floor($(this).width()/100)*100)+'/'(Math.floor($(this).height()/100)*100));
+		$(this).attr('src', 'http://place-sloth.com/'+(Math.floor($(this).width()/100)*100)+'/'+(Math.floor($(this).height()/100)*100));
 	});
 	
 	$('a.scratch').css('background-image', 'url("/assets/images/openswag.png?ver=sloth")');
