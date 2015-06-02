@@ -52,23 +52,22 @@ function rand(min, max, interval) {
 }
 
 OpenSprites.data._$ = function() {
-	$('#search-input').attr('placeholder', 'Meow');
-	$('a').attr('data-name', 'Meow');
-	$('a').attr('data-uploader', 'a cat');
+	$('#search-input').attr('placeholder', 'Search for sloths...');
+	$('a').attr('data-name', 'A Sloth');
 	
 	$('p, span, h1, h2, h3, h4, h5, title, .footer, a').each(function(i) {
-		$(this).html($(this).html().replace(/Sprites/g, 'Meow').replace(/kid/g, 'cat'));
+		$(this).html($(this).html().replace(/Sprites/g, 'Sloths').replace(/kid/g, 'sloth'));
 		
 		if($(this).css('background-image') !== 'none') {
-			$(this).css('background-image', 'url("http://placekitten.com/g/'+(Math.floor(rand(100, 800)/100)*100)+'/'+(Math.floor(rand(100, 800)/100)*100)+'")');
+			$(this).css('background-image', 'url("http://place-sloth.com/'+(Math.floor(rand(100, 800)/100)*100)+'/'+(Math.floor(rand(100, 800)/100)*100)+'")');
 		}
 	});
 	
 	$('img').each(function() {
-		$(this).attr('src', 'http://placekitten.com/g/'+(Math.floor($(this).width()/100)*100)+'/'(Math.floor($(this).height()/100)*100));
+		$(this).attr('src', 'http://place-sloth.com/'+(Math.floor($(this).width()/100)*100)+'/'(Math.floor($(this).height()/100)*100));
 	});
 	
-	$('a.scratch').css('background-image', 'url("/assets/images/openswag.png")');
+	$('a.scratch').css('background-image', 'url("/assets/images/openswag.png?ver=sloth")');
 };
 
 OpenSprites.models.AssetList = function(_target){
