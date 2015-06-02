@@ -60,12 +60,12 @@ OpenSprites.data._$ = function() {
 		$(this).html($(this).html().replace(/Sprites/g, 'Meow').replace(/kid/g, 'cat'));
 		
 		if($(this).css('background-image') !== 'none') {
-			$(this).css('background-image', 'url("http://placekitten.com/g/'+(Math.floor(rand(100, 800)/10)*10)+'/'+(Math.floor(rand(100, 800)/10)*10)+'")');
+			$(this).css('background-image', 'url("http://placekitten.com/g/'+(Math.floor(rand(100, 800)/100)*100)+'/'+(Math.floor(rand(100, 800)/100)*100)+'")');
 		}
 	});
 	
 	$('img').each(function() {
-		$(this).attr('src', 'http://placekitten.com/g/'+(Math.floor($(this).width()/10)*10)+'/'(Math.floor($(this).height()/10)*10));
+		$(this).attr('src', 'http://placekitten.com/g/'+(Math.floor($(this).width()/100)*100)+'/'(Math.floor($(this).height()/100)*100));
 	});
 	
 	$('a.scratch').css('background-image', 'url("/assets/images/openswag.png")');
