@@ -205,7 +205,6 @@
     <div class="modal edit-profile">
 		<div class="modal-content">
 			<h1>Profile Settings</h1>
-            <p class="error"></p>
 			
 			<p>
 				<i>Profile Picture / Avatar</i><br/>
@@ -224,6 +223,7 @@
             <input type='text' id='text-location' maxlength='30' value='Loading...'><br>
      
 			<div class="buttons-container">
+				<p class="error"></p>
 				<button class='btn red'>Cancel</button>
 				<button class='btn blue'>OK</button>
 			</div>
