@@ -262,7 +262,7 @@
     <div class="modal edit-asset">
 		<div class="modal-content">
 			<h1>Edit title or description</h1>
-			<p class='input-error' style='display:none;'>Sample Text</p>
+			<p class='input-error' style='opacity:0;'>Sample Text</p>
 			<input type="text" id="file-name" maxlength='32' value="<?php echo htmlspecialchars($obj['name']); ?>"/><br/><br/>
 			<textarea id="file-desc" maxlength='500' value="<?php echo htmlspecialchars($obj['description']); ?>"></textarea><br/>
 			<p>Descriptions support <acronym title="A simple text-formatting system">Markdown</acronym>. Click <a href="http://markdowntutorial.com/" target="_blank">here</a> to learn more about Markdown.</p>
