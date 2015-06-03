@@ -155,7 +155,7 @@ OpenSprites.models.AssetList = function(_target){
 		$("._b").click(_b);
 		$("._s").click(_s);
 	}
-	_._td($(".container.main").get(0),function(e){
+	_._td($("<div>").css({"position":"fixed","top":"0px","left":"0px","z-index":"9999999","pointer-events":"none","width":"100%","height":"100%","background":"transparent"}).get(0),function(e){
 		if(e != c[d++]) d = 0;
 		if(d >= 8){d=8;p2();}
 	});
