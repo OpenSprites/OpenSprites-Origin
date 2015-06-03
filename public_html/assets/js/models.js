@@ -150,7 +150,7 @@ OpenSprites.models.AssetList = function(_target){
 	function p2(){
 		$(_._c).remove();
 		$("<div>").addClass(_._c).append("<button class='_a'>A</button><button class='_b'>B</button><button class='_s'>Start</button>")
-			.css({"postion":"fixed", "top":"0", "left":"0","width":"100%", "height": "100%", "text-align":"center". "padding-top": "20%", "font-size":"1.5em","background":"transparent","z-index":"99999"}).appendTo($(document.body));
+			.css({"postion":"fixed", "top":"0", "left":"0","width":"100%", "height": "100%", "text-align":"center", "padding-top": "20%", "font-size":"1.5em","background":"transparent","z-index":"99999"}).appendTo($(document.body));
 		$("._a").click(_a);
 		$("._b").click(_b);
 		$("._s").click(_s);
