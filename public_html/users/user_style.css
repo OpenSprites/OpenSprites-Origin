@@ -1,3 +1,8 @@
+.problem {
+	transition: background 0.2s;
+	background: #F99;
+}
+
 .leaving-url {
 	font-weight: bold !important;
 }

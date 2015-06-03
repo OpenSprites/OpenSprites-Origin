@@ -157,6 +157,8 @@ $('.modal.edit-profile .btn.red').click(function() {
 });
 
 $('.modal.edit-profile .btn.blue').click(function() {
+	$(".problem").removeClass("problem");
+	
 	var thisBtn = $(this);
 	thisBtn.text("Loading...").attr("disabled", "disabled");
 	$(".modal.edit-profile .error").text("");
@@ -170,6 +172,13 @@ $('.modal.edit-profile .btn.blue').click(function() {
     $.post("/users/edit.php", {userid: OpenSprites.user.id, about: aboutme, location: location, bgcolor: bg}, function(data){
 		thisBtn.text("OK").removeAttr("disabled");
 		if(typeof data == "object"){
+			if(data.status != "success"){
+				$(".modal.edit-profile .error").text(data.message);
+				if(data.problem != "") $(data.problem).addClass("problem");
+				return;
+			}
+			
+			data = data.settings;
 			OpenSprites.view.user.profile = data;
 			aboutModel.updateMarkdown(data['about']);
 			$("#location").text(data['location']);
