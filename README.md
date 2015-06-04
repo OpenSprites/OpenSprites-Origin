@@ -14,7 +14,7 @@ For more information, please visit the [discussion thread](http://scratch.mit.ed
 [Very active]
 The-Cheese-Eater mainly manages hosting, forums, organisation, accounts and domain fees.
 
- - Doing whatever sysadmins do
+ - Project coordination
  - Supervising
  - Task delegating
  - Keeper of the FTP keys
