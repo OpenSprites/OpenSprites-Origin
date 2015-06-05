@@ -87,6 +87,7 @@ Rumanti is a dev on the OS team.
 
  - HTML
  - CSS
+ - JavaScript
 
 ### [Firedrake969](https://github.com/Firedrake969) ###
 ![GitHub Logo](https://avatars3.githubusercontent.com/u/8008245?s=100)
