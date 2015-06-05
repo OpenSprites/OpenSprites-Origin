@@ -6,7 +6,7 @@ Guidelines, which also apply on OpenSprites.
 
 * **Be constructive**. When commenting about others' media, say something you like about it and offer suggestions.
 
-* **Respect people's work**. Don't copy. Don't download somebody else's media and re-upload it as your own. Don't upload media that you didn't make unless it is open-source and you give proper credit.
+* **Respect people's work**. Don't copy. Don't download somebody else's media and re-upload it as your own. Don't upload media that you didn't make unless it is open-sourced and you give proper credit.
 
 * **Keep personal info private**. For safety reasons, don't use full names or post contact info like phone numbers or addresses.
 
