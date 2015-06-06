@@ -101,7 +101,7 @@
 				<?php 
 					$groups = getAllGroups();
 					$user_groups = getUserGroups($user['userid']);
-					if($is_admin === TRUE && $username !== $logged_in_user){
+					if($is_admin === TRUE){
 				?>
 					<div id="admin-group-container">
 								Set groups: <select id="admin-group" multiple>
