@@ -120,7 +120,7 @@
 										var groups = $("#admin-group").multipleSelect("getSelects");
 										var displayGroups = $("#admin-group").multipleSelect("getSelects", "text").join(", ");
 										if(displayGroups === "") displayGroups = "(none)";
-										if(!confirm("Change groups to " +  + "?")) return;
+										if(!confirm("Change groups to " + displayGroups + "?")) return;
 										groups = groups.map(function(item){
 											return parseInt(item);
 										});
