@@ -116,7 +116,7 @@
 								</select>
 								<button type='button' id='admin-set-group' class='btn'>Save</button>
 								<script type='text/javascript'>
-									$("#admin-group").multipleSelect({filter: true});
+									$("#admin-group").multipleSelect({position: 'top'});
 									$("#admin-set-group").click(function(){
 										var groups = $("#admin-group").multipleSelect("getSelects");
 										if(!confirm("Change groups to " + groups.join(", ") + "?")) return;
