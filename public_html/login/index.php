@@ -26,6 +26,6 @@
     </div>
     
     <!-- footer -->
-    <?php echo file_get_contents($_SERVER['DOCUMENT_ROOT'].'/footer.html'); ?>
+    <?php include "../footer.html"; ?>
 </body>
 </html>
