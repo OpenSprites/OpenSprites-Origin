@@ -89,7 +89,7 @@
                 if($username==$logged_in_user) {echo 'You';} else {echo htmlspecialchars($username) . " (#" . $user['userid'] . ")";}
                 ?>
             </div>
-            <div id='description'>
+			<div id='description'>
                 <?php
                     echo ucwords($user['usertype']);
                 ?>
@@ -99,29 +99,12 @@
 						echo htmlspecialchars($user['location']);
 					?>
 				</div>
-            </div>
-			<div id="actions-container">
-				<div id='follow'>
-					<a href="https://scratch.mit.edu/users/<?php echo urlencode($username); ?>" target="blank">View Scratch Page</a>
-				</div>
-				<div id='report'>
-					Report User
-				</div>
-					<?php
-						if($is_admin == true and $username !== $logged_in_user) {
-						if($user['usertype'] == 'member'){
-					?>
-							<div id='adminban'>Suspend (Admin)</div>
-					<?php
-							} else if($user['usertype'] == 'suspended'){ ?>
-							<div id='adminunban'>Unsuspend (Admin)</div>
-					<?php
-							} ?>
-							<div id="admin-group-container">
-								<?php
-									$groups = getAllGroups();
-									$user_groups = getUserGroups($user['userid']);
-								?>
+				<?php 
+					$groups = getAllGroups();
+					$user_groups = getUserGroups($user['userid']);
+					if($is_admin === TRUE && $username !== $logged_in_user){
+				?>
+					<div id="admin-group-container">
 								Set user group: <select id="admin-group" multiple>
 									<?php
 										foreach($groups as $groupId => $name){
@@ -150,6 +133,35 @@
 									});
 								</script>
 							</div>
+				<?php } else { ?>
+					<div id="group-container">
+						Groups: <?php 
+							for($i=0;$i<sizeof($user_groups);$i++){
+								echo $groups[$user_groups[$i]];
+								if($i < sizeof($user_groups) - 1) echo ", ";
+							}
+						?>
+					</div>
+				<?php } ?>
+            </div>
+			<div id="actions-container">
+				<div id='follow'>
+					<a href="https://scratch.mit.edu/users/<?php echo urlencode($username); ?>" target="blank">View Scratch Page</a>
+				</div>
+				<div id='report'>
+					Report User
+				</div>
+					<?php
+						if($is_admin == true and $username !== $logged_in_user) {
+						if($user['usertype'] == 'member'){
+					?>
+							<div id='adminban'>Suspend (Admin)</div>
+					<?php
+							} else if($user['usertype'] == 'suspended'){ ?>
+							<div id='adminunban'>Unsuspend (Admin)</div>
+					<?php
+							} ?>
+							
 					<?php } ?>
 					
 					<?php if($username == $logged_in_user){ ?>
