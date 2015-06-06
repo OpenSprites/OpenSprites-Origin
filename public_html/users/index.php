@@ -51,6 +51,8 @@
     <link href='/users/user_style.css' rel='stylesheet' type='text/css'>
     <link href='/assets/js/spectrum/spectrum.css' rel='stylesheet' type='text/css'>
     <script src='/assets/js/spectrum/spectrum.js'></script>
+	<script src='/assets/lib/multiple-select/jquery.multiple.select.js'></script>
+	<link rel='stylesheet' type='text/css' href='/assets/lib/multiple-select/multiple-select.css' />
     <style>textarea {resize: none; width: 99%; height: 250px;} #location {width: 99%;} .buttons-container {bottom: 15px;}</style>
 </head>
 <body>
@@ -114,8 +116,41 @@
 							} else if($user['usertype'] == 'suspended'){ ?>
 							<div id='adminunban'>Unsuspend (Admin)</div>
 					<?php
-							}
-						} ?>
+							} ?>
+							<div id="admin-group-container">
+								<?php
+									$groups = getAllGroups();
+									$user_groups = getUserGroups($user['userid']);
+								?>
+								Set user group: <select id="admin-group" multiple>
+									<?php
+										for($groupId => $name in $groups){
+											echo '<option value="' . $groupId . '" ';
+											if(in_array($groupId, $user_groups)) echo "selected";
+											echo ">" . $name . "</option>";
+										}
+									?>
+								</select>
+								<button type='button' id='admin-set-group' class='btn'>Save</button>
+								<script type='text/javascript'>
+									$("#admin-group").multipleSelect({filter: true});
+									$("#admin-set-group").click(function(){
+										var groups = $("#admin-group").multipleSelect("getSelects");
+										if(!confirm("Change groups to " + groups.join(", ") + "?")) return;
+										groups = groups.map(function(item){
+											return parseInt(item);
+										});
+										$.post("/users/admin-set-group.php", {userid: OpenSprites.view.user.id, groups: JSON.stringify(groups)}, function(data){
+											if(data.status === "success") alert("Success");
+											else alert("Error: " + data);
+										}).fail(function(){
+											alert("Failed to set groups!");
+											console.log(arguments);
+										});
+									});
+								</script>
+							</div>
+					<?php } ?>
 					
 					<?php if($username == $logged_in_user){ ?>
 						<div id='settings'><a>Profile Settings</a></div>

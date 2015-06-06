@@ -422,4 +422,30 @@ function tableExists($id){
 	}
 	return FALSE;
 }
+
+function getUserGroups($userid){
+	$user_groups0 = forumQuery("SELECT * FROM `et_member_group` WHERE `memberId`=?", array($userid));
+	$user_groups = array();
+	for($i=0; $i<sizeof($user_groups0); $i++){
+		array_push($user_groups, $user_groups0[$i]['groupId']);
+	}
+	return $user_groups;
+}
+
+function getAllGroups(){
+	$groups0 = forumQuery("SELECT * FROM `et_group`", array());
+	$groups = array();
+	for($i=0; $i<sizeof($groups0); $i++){
+		$groups[$groups0[$i]['groupId']] = $groups0[$i]['name'];
+	}
+	return $groups;
+}
+
+function setUserGroups($userid, $groups){
+	forumQuery0("DELETE FROM `et_member_group` WHERE `memberId`=?", array($userid));
+	for($i=0;$i<sizeof($groups);$i++){
+		$groupId = $groups[$i];
+		forumQuery0("INSERT INTO `et_member_group` (`memberId`,`groupId`) VALUES (?, ?)", array($userid, $groupId));
+	}
+}
 ?>

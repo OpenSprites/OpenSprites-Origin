@@ -53,8 +53,10 @@
  - setProfileSettings($userid:int, $settings:array):void: Sets the given settings for the user
  - getProfileSettings($userid:int):array: Gets the profile settings for a user
  - isUserAbleToReport($userid:int):mixed: Returns true if the user is able to send a report, or an integer if they need to wait that number of seconds.
+ - setUserGroups($userid:int, $groups:array):void: Sets the group IDs specified for the user with the ID specified.
+ - getUserGroups($userid:int):array: Returns an array of group IDs that the user belongs to
+ - getAllGroups():array: Returns an associative array of all groups in the form `groupId => groupName`
  
-
 ## connect.php ##
 ### Automatic actions ###
 Connects the esotalk session and sets global variables.
