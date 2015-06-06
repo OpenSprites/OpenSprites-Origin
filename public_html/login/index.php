@@ -21,7 +21,7 @@
     <div class="container main" style="height:440px;">
         <div class="main-inner">
             <!-- <div style="position: absolute;left: 0;right: 0;height: 70px;" class="themebg"></div> -->
-            <iframe scrolling="no" src="http://opensprites.org/forums/?p=user/login&return=http://opensprites.org/&iframe=true" style="width: 100%; height: 300px;overflow: hidden;border: none;margin-top: -50px"></iframe>
+            <iframe scrolling="no" src="http://opensprites.org/forums/?p=user/login&return=<?php echo urlencode(isset($_GET['return']) ? $_GET['return'] : '/'); ?>&iframe=true" style="width: 100%; height: 300px;overflow: hidden;border: none;margin-top: -50px"></iframe>
         </div>
     </div>
     
