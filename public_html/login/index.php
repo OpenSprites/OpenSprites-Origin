@@ -3,23 +3,6 @@
     if($logged_in_user !== 'not logged in') {
         header('Location: /');
     }
-	
-	// try to prevent the stupid login bug
-	if(!isset($_GET['redir'])){
-		// destroy session
-		unset($_SESSION["userId"]);
-		session_unset();
-		session_destroy();
-		
-		// unset session cookie, try to unset dups if possible
-		setcookie("OpenSprites_Forum_session", "", time() - 3600);
-		setcookie("OpenSprites_Forum_session", "", time() - 3600, "/");
-		setcookie("OpenSprites_Forum_session", "", time() - 3600, "/", ".opensprites.org");
-		
-		// mark that the session has been destroyed
-		header("Location: /login/?redir=true");
-		die();
-	}
 ?>
 <!DOCTYPE html>
 <html>
