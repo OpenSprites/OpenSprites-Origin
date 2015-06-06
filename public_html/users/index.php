@@ -124,7 +124,7 @@
 								?>
 								Set user group: <select id="admin-group" multiple>
 									<?php
-										for($groupId => $name in $groups){
+										foreach($groups as $groupId => $name){
 											echo '<option value="' . $groupId . '" ';
 											if(in_array($groupId, $user_groups)) echo "selected";
 											echo ">" . $name . "</option>";
