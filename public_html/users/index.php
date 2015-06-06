@@ -119,7 +119,7 @@
 									$("#admin-group").multipleSelect({position: 'top'});
 									$("#admin-set-group").click(function(){
 										var groups = $("#admin-group").multipleSelect("getSelects");
-										if(!confirm("Change groups to " + groups.join(", ") + "?")) return;
+										if(!confirm("Change groups to " + $("#admin-group").multipleSelect("getSelects", "text").join(", ") + "?")) return;
 										groups = groups.map(function(item){
 											return parseInt(item);
 										});
