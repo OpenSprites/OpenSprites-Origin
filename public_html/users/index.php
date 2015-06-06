@@ -105,7 +105,7 @@
 					if($is_admin === TRUE && $username !== $logged_in_user){
 				?>
 					<div id="admin-group-container">
-								Set user group: <select id="admin-group" multiple>
+								Set groups: <select id="admin-group" multiple>
 									<?php
 										foreach($groups as $groupId => $name){
 											echo '<option value="' . $groupId . '" ';
