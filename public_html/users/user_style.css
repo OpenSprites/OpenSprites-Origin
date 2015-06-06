@@ -217,3 +217,8 @@
 #report:hover{
 	background-color: orangered;
 }
+
+select#admin-group {
+	width: 250px;
+	min-width: 250px;
+}
