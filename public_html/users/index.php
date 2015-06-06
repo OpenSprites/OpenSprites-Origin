@@ -91,9 +91,8 @@
             </div>
 			<div id='description'>
                 <?php
-                    echo ucwords($user['usertype']);
+                    if($user['usertype'] !== "member") echo ucwords($user['usertype']) . "<br/>";
                 ?>
-				<br/>
 				<div id="location">
 					<?php
 						echo htmlspecialchars($user['location']);
@@ -119,7 +118,9 @@
 									$("#admin-group").multipleSelect({position: 'top'});
 									$("#admin-set-group").click(function(){
 										var groups = $("#admin-group").multipleSelect("getSelects");
-										if(!confirm("Change groups to " + $("#admin-group").multipleSelect("getSelects", "text").join(", ") + "?")) return;
+										var displayGroups = $("#admin-group").multipleSelect("getSelects", "text").join(", ");
+										if(displayGroups === "") displayGroups = "(none)";
+										if(!confirm("Change groups to " +  + "?")) return;
 										groups = groups.map(function(item){
 											return parseInt(item);
 										});
@@ -135,11 +136,12 @@
 							</div>
 				<?php } else { ?>
 					<div id="group-container">
-						Groups: <?php 
+						<?php 
 							for($i=0;$i<sizeof($user_groups);$i++){
 								echo $groups[$user_groups[$i]];
 								if($i < sizeof($user_groups) - 1) echo ", ";
 							}
+							if(sizeof($user_groups) === 0) echo "OpenSprites Member";
 						?>
 					</div>
 				<?php } ?>
