@@ -19,6 +19,7 @@ body {
     font-weight: 300;
     margin: 0;
     background-color: white;
+    color:#000; /* Not everything is #000, but you can rely on CSS specifity */
     /* wait for theme to load before showing the body */
     
     display: none;
