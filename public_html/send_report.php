@@ -83,6 +83,7 @@
 					}
 				});
 				$(".send-report").click(function(){
+					if(!confirm("Are you sure you want to send this report? Remember to read the instructions at the top of this page!")) return;
 					var reason = $("#report_details").val();
 					var type = OpenSprites.view.rtype;
 					var id = OpenSprites.view.rid;
