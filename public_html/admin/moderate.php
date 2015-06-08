@@ -38,12 +38,14 @@ if(isset($_POST['action']) && isset($_POST['id']) && isset($_POST['reporter'])){
 <body>
     <div id='container'>
         <h1>Admin - Moderate <button class='refresh'>Refresh</button></h1>
+        <p>NOTE: "DISMISS" IS PERMANENT. Be careful!</p>
         <div class='reports-table'>
 			<div class='row header'>
-				<div class='cell'>Name</div>
-				<div class='cell'>Type</div>
-				<div class='cell'>View</div>
-				<div class='cell'>Delete</div>
+				<div class='cell'>Target</div>
+				<div class='cell'>Reporter</div>
+				<div class='cell'>Reason</div>
+				<div class='cell'>Date/Time</div>
+				<div class='cell'>Actions</div>
 			</div>
 		</div>
     </div>
@@ -99,6 +101,9 @@ if(isset($_POST['action']) && isset($_POST['id']) && isset($_POST['reporter'])){
 		$.get("/site-api/reports.php", function(reports) {
 			var template = $("<div class='row'>" +
 					"<div class='cell report'><span class='desc'></span> <a target='_blank'>View</a></div>" +
+					"<div class='cell reporter'></div>" +
+					"<div class='cell reason'></div>" +
+					"<div class='cell time'></div>" +
 					"<div class='cell actions'>" +
 						"<a class='ignore' href='javascript:void(0);'>Dismiss</a> " +
 						"<a class='delete' href='javascript:void(0);'>Delete asset</a> " +
