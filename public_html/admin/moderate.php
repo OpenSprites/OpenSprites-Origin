@@ -6,12 +6,12 @@ if(!$is_admin) {
     die();
 }
 connectDatabase();
-if(isset($_GET['action']) && isset($_GET['id']) && isset($_GET['reporter'])){
-	if($_GET['action'] == "dismiss"){
-		imagesQuery0("DELETE FROM `" . getReportsTableName() . "` WHERE `id`=? AND `reporter`=?", array($_GET['id'], $_GET['reporter']));
-	} else if($_GET['action'] == "delete"){
-		$userid = substr($_GET['id'], 0, strpos($_GET['id'], '/'));
-		$hash = substr($_GET['id'], strpos($_GET['id'], '/') + 1);
+if(isset($_POST['action']) && isset($_POST['id']) && isset($_POST['reporter'])){
+	if($_POST['action'] == "dismiss"){
+		imagesQuery0("DELETE FROM `" . getReportsTableName() . "` WHERE `id`=? AND `reporter`=?", array($_POST['id'], $_POST['reporter']));
+	} else if($_POST['action'] == "delete"){
+		$userid = substr($_POST['id'], 0, strpos($_POST['id'], '/'));
+		$hash = substr($_POST['id'], strpos($_POST['id'], '/') + 1);
 		$res = imagesQuery("SELECT * FROM `" . getAssetsTableName() . "` WHERE `hash`=?", array($hash));
 		if(sizeof($res) == 0) die("Error");
 		$filename = $res[0]['name'];
@@ -19,8 +19,8 @@ if(isset($_GET['action']) && isset($_GET['id']) && isset($_GET['reporter'])){
 		imagesQuery0("DELETE FROM `" . getAssetsTableName() . "` WHERE `hash`=?", array($hash));
 		
 		// todo: notify users that their files have been removed
-	} if($_GET['action'] == "suspend"){
-		$userInfo = getUserInfo(intval($_GET['id']));
+	} if($_POST['action'] == "suspend"){
+		$userInfo = getUserInfo(intval($_POST['id']));
 		setAccountType($userInfo['username'], "suspended");
 	}
 	die("Success");
@@ -37,7 +37,7 @@ if(isset($_GET['action']) && isset($_GET['id']) && isset($_GET['reporter'])){
 </head>
 <body>
     <div id='container'>
-        <h1>Admin - Moderate</h1>
+        <h1>Admin - Moderate <button class='refresh'>Refresh</button></h1>
         <div class='reports-table'>
 			<div class='row header'>
 				<div class='cell'>Name</div>
@@ -95,7 +95,8 @@ if(isset($_GET['action']) && isset($_GET['id']) && isset($_GET['reporter'])){
 		}
 	</style>
 	<script>
-		$.get("/site-api/moderate.php", function(reports) {
+	function refresh(){
+		$.get("/site-api/reports.php", function(reports) {
 			var template = $("<div class='row'>" +
 					"<div class='cell report'><span class='desc'></span> <a target='_blank'>View</a></div>" +
 					"<div class='cell actions'>" +
@@ -113,7 +114,7 @@ if(isset($_GET['action']) && isset($_GET['id']) && isset($_GET['reporter'])){
 				row.find(".time").text(report['reportTime']);
 				(function(report, row){
 					row.find(".ignore").click(function(){
-						$.get("reports.php", {"action":"dismiss","id":report['id'],"reporter":report['reporter']}, function(data){
+						$.post("reports.php", {"action":"dismiss","id":report['id'],"reporter":report['reporter']}, function(data){
 							if(data == "Success") row.fadeOut(700, function(){
 								row.remove();
 							});
@@ -121,7 +122,7 @@ if(isset($_GET['action']) && isset($_GET['id']) && isset($_GET['reporter'])){
 						});
 					});
 					row.find(".delete").click(function(){
-						$.get("reports.php", {"action":"delete","id":report['id'],"reporter":report['reporter']}, function(data){
+						$.post("reports.php", {"action":"delete","id":report['id'],"reporter":report['reporter']}, function(data){
 							if(data == "Success") row.find(".delete").text("Deleted");
 							else row.find(".delete").text("Error");
 							console.log(data);
@@ -131,7 +132,7 @@ if(isset($_GET['action']) && isset($_GET['id']) && isset($_GET['reporter'])){
 					if(report['type'] == 0) row.find(".delete").hide();
 					
 					row.find(".suspend").click(function(){
-						$.get("reports.php", {"action":"suspend","id":report['id'],"reporter":report['reporter']}, function(data){
+						$.post("reports.php", {"action":"suspend","id":report['id'],"reporter":report['reporter']}, function(data){
 							if(data == "Success") row.find(".delete").text("Suspended");
 							else row.find(".suspend").text("Error");
 							console.log(data);
@@ -141,5 +142,8 @@ if(isset($_GET['action']) && isset($_GET['id']) && isset($_GET['reporter'])){
 				$(".reports-table").append(row);
 			}
 		});
+	}
+	refresh();
+	$(".refresh").click(refresh);
 	</script>
 </body>
