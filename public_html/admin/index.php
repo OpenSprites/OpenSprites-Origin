@@ -22,10 +22,6 @@ if(!$is_admin) {
 	<h3>Moderate</h3>
         View all assets and moderate 'em.<br>
         <a id='moderates' href='moderate.php'>View</a>
-        
-        <h3>Reports</h3>
-        View reported users and assets<br>
-        <a id='reports' href='reports.php'>Go</a>
 		
         <h3>Bulk Delete</h3>
         View all the uploads of a user and click to delete them.<br>
