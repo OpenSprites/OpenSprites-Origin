@@ -24,7 +24,7 @@
 			<form method="POST" id="report_form">
 				<?php if($logged_in_userid===0){ ?>
 				<p>Sorry, but you need to be logged in to send a report. If you don't want to log in, you can still <a href='mailto:support@opensprites.org'>send us an email</a> but it may take moderators longer to respond.</p>
-				<?php } else if(!isset($_GET['type']) !! !isset($_GET['id'])) { ?>
+				<?php } else if(!isset($_GET['type']) || !isset($_GET['id'])) { ?>
 				<p>Sorry, but we couldn't figure out what you wanted to report!</p>
 				<?php } else { 
 					$type = $_GET['type'];
