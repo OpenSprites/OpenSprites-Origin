@@ -34,7 +34,8 @@ if(strlen($reason) > 500) $reason = substr($reason, 0, 500);
 $isAble = isUserAbleToReport($logged_in_userid);
 if($isAble !== TRUE) die(json_encode(array("status" => "wait", "message"=>"Uh oh, you're reporting too fast! Please wait $isAble seconds")));
 
-addReport($type, $id, $reporter, $reason);
+$success = addReport($type, $id, $reporter, $reason);
 
-echo json_encode(array("status" => "success", "message"=>""));
+if($success) echo json_encode(array("status" => "success", "message"=>""));
+else echo json_encode(array("status" => "error", "message"=>"You've already reported that " . $_POST['type']));
 ?>
