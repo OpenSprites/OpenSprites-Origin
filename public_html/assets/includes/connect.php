@@ -48,6 +48,7 @@
 		$userInfo = getUserInfo(intval($_SESSION["userId"]));
 		$logged_in_userid = $userInfo['userid'];
 		$logged_in_user = $userInfo['username'];
+		$user = $logged_in_user;
 		$user_group = ucwords($userInfo['usertype']);
 		$user_banned = ($user_group == 'suspended');
 		$is_admin = $user_group === 'administrator' || in_array("Moderator", $userInfo['groups']);
