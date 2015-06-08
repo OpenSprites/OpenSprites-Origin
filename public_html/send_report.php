@@ -63,7 +63,7 @@
 				<script>
 					OpenSprites.view = <?php echo json_encode(array("rtype"=>$type,"rid"=>$id)); ?>;
 				</script>
-				<textarea id="report_details" placeholder="Enter a short and descriptive reason for your report." max="500"></textarea><br/>
+				<textarea id="report_details" placeholder="Enter a short and descriptive reason for your report." maxlength="500"></textarea><br/>
 				<span class='report_details_count'>500 characters left.</span><br/>
 				<button class='btn large send-report'>Send Report</button>
 				<?php }} ?>
