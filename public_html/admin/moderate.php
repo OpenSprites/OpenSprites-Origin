@@ -98,7 +98,9 @@ if(isset($_POST['action']) && isset($_POST['id']) && isset($_POST['reporter'])){
 	</style>
 	<script>
 	function refresh(){
+		$(".reports-table").html("...");
 		$.get("/site-api/reports.php", function(reports) {
+			$(".reports-table").html("");
 			var template = $("<div class='row'>" +
 					"<div class='cell report'><span class='desc'></span> <a target='_blank'>View</a></div>" +
 					"<div class='cell reporter'></div>" +
