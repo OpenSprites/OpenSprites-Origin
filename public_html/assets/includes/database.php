@@ -302,6 +302,8 @@ function getCollectionAssetTableName(){
 
 function addReport($type, $id, $reporter, $reason){
 	global $report_table_name;
+	// make sure we haven't already reported
+	if(sizeof(imagesQuery("SELECT * FROM `$report_table_name` WHERE `reporter`=? AND `id`=?", array($reporter, $id))) > 0) return FALSE;
 	imagesQuery0("INSERT INTO `$report_table_name` (
 			`type`,
 			`id`,
@@ -315,6 +317,7 @@ function addReport($type, $id, $reporter, $reason){
 			":reason" => $reason
 		)
 	);
+	return TRUE;
 }
 
 function getAllReports(){
@@ -340,8 +343,6 @@ function isUserAbleToReport($userid){
 		$stmt2->execute(array($lastDate));
 		$res2 = $stmt2->fetchAll(PDO::FETCH_ASSOC);
 		$lastDate = $res2[0]['timestamp'];
-		
-		$numReports = $res[0]['numReports'];
 		
 		$reports_per_sec = 1 / 60; // 1 report per minute
 		$val1 = time() - $lastDate;
