@@ -150,9 +150,11 @@
 				<div id='follow'>
 					<a href="https://scratch.mit.edu/users/<?php echo urlencode($username); ?>" target="blank">View Scratch Page</a>
 				</div>
-				<div id='report'>
+				<?php if($logged_in_userid != $id) { ?>
+				<a id='report' href="/send_report.php?type=user&id=<?php echo $id; ?>">
 					Report User
-				</div>
+				</a>
+				<?php } ?>
 					<?php
 						if($is_admin == true and $username !== $logged_in_user) {
 						if($user['usertype'] == 'member'){
@@ -319,43 +321,10 @@
 			</div>
 		</div>
 	</div>
-	
-    <script>
-        // go ahead, report yourself ._.
-        $('#report').hide();
-    </script>
     
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/cropper/0.9.1/cropper.min.js"></script>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/cropper/0.9.1/cropper.min.css" />
     <?php } else { ?>
-    
-    <div class="modal report-modal">
-		<div class="modal-content">
-			<h1>Report <?php echo $username; ?></h1>
-            <p class="error"></p>
-			
-			<p>
-                Think <?php echo $username; ?> has done something wrong? Tell us:
-			</p>
-            
-            <hr>
-            
-            <p>sample text</p>
-     
-			<div class="buttons-container">
-				<button class='btn red'>Cancel</button>
-				<button class='btn green'>Report <?php echo $username; ?></button>
-			</div>
-		</div>
-	</div>
-    
-    <script>
-        $('#report').click(function() {
-            $('.report-modal').fadeIn();
-        });
-        
-        // report modal
-    </script>
     
     <?php } ?>
 	
