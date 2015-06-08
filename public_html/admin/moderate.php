@@ -6,7 +6,9 @@ if(!$is_admin) {
     die();
 }
 connectDatabase();
-if(isset($_POST['action']) && isset($_POST['id']) && isset($_POST['reporter'])){
+if(isset($_POST['action']) 
+	&& isset($_POST['id'])
+	&& isset($_POST['reporter'])){
 	if($_POST['action'] == "dismiss"){
 		imagesQuery0("DELETE FROM `" . getReportsTableName() . "` WHERE `id`=? AND `reporter`=?", array($_POST['id'], $_POST['reporter']));
 	} else if($_POST['action'] == "delete"){
