@@ -106,6 +106,9 @@
             <div id='follow'>
                 <a <?php if($obj['type'] != 'script') { ?>href="/uploads/download.php?id=<?php echo $obj['uploaded_by']['id']; ?>&file=<?php echo $obj['md5']; ?>"<?php } ?> target="_blank"><?php echo 'Download this ' . $obj['type']; ?></a>
             </div>
+            <?php if(intval($obj['uploaded_by']['id']) != $logged_in_userid) { ?>
+            <a href="/send_report.php?type=asset&id=<?php echo $obj['uploaded_by']['id'] . "/" . $obj['md5']; ?>" id="report">Report</a>
+            <?php } ?>
             <?php if($logged_in_userid == $obj['uploaded_by']['id']) { ?>
             <div id='delete'>
                 <a class="file_delete" href="/uploads/delete.php?file=<?php echo $obj['md5']; ?>">Delete</a>
