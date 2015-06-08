@@ -15,6 +15,15 @@
 	<script>
 		OpenSprites.view = {rtype:"",rid:""};
 	</script>
+	<style>
+		#report_details {
+			margin: 0px;
+			width: 99%;
+			height: 200px;
+			resize: vertical;
+			border-radius: 0.3em;
+		}
+	</style>
 	
 	<!-- Main wrapper -->
 	<div class="container main">
@@ -62,13 +71,14 @@
 			<p class='report-load' style='display:none;'>Sending report...</p>
 			<p class='report-error' style='display:none;color:red;'></p>
 			<p class='report-sent' style='display:none;'>Your report was sent! A moderator will look at it as soon as possible.</p>
+			<br/><br/><br/><br/>
 			<script>
 				$("#report_details").keyup(function(){
 					var len = $(this).val().length;
 					if(len > 500) $(this).val($(this).val().substr(0, 500));
 					else {
 						var remaining = 500 - len;
-						var text = (remaining == 0 ? "No characters" : (remaining == 1 ? "One character" : remaining + "characters")) + " left.";
+						var text = (remaining == 0 ? "No characters" : (remaining == 1 ? "One character" : remaining + " characters")) + " left.";
 						$(".report_details_count").text(text);
 					}
 				});
