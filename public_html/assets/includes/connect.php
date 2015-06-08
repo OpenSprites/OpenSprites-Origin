@@ -50,11 +50,11 @@
 		$logged_in_user = $userInfo['username'];
 		$user_group = ucwords($userInfo['usertype']);
 		$user_banned = ($user_group == 'suspended');
-		$is_admin = $user_group == 'administrator' || in_array("Moderator", $userInfo['groups']);
+		$is_admin = $user_group === 'administrator' || in_array("Moderator", $userInfo['groups']);
 		if(!$is_admin){
 			error_reporting(0);
 		}
-        if($user_group == "Suspended"){
+        if($user_group === "suspended"){
             header( 'Location: http://opensprites.org/suspended.php' ) ;
         }
     }
