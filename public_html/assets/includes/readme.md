@@ -42,7 +42,7 @@
    - usertype:string: One of "member" "administrator" or "suspended"
    - groups:array: A non-associative array of the groups the user is in, ie "Moderator" or "OpenSprites Developer"
  - setAccountType($username:string, $type:string):void: Set the type of account for the given user. $type is one of "administrator", "member", or "suspended"
- - addReport($report_type:int, $report_id:string, $reporter:string, $reason:string):void: Add a report to the reports table.
+ - addReport($report_type:int, $report_id:string, $reporter:string, $reason:string):boolean: Add a report to the reports table. Returns true on success, or false if a report by the same user for the same thing already exists.
    - $report_type: Currently 0 for a user report and 1 for asset report
    - $report_id: If $report_type is 0, the user id. If $report_type is 1, the user id followed by a '/' and the asset hash
    - $reporter: The username of the user who created the report
