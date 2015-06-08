@@ -78,7 +78,7 @@ if(isset($_POST['action']) && isset($_POST['id']) && isset($_POST['reporter'])){
 			padding: 0.5em;
 		}
 		
-		.ignore, .delete, .suspend {
+		.ignore, .delete, .suspend, .refresh {
 			font-style: none;
 			font-size: 0.9em;
 			border: 1px solid white;
@@ -88,7 +88,7 @@ if(isset($_POST['action']) && isset($_POST['id']) && isset($_POST['reporter'])){
 			background: transparent;
 		}
 		
-		.ignore:hover, .delete:hover, .suspend:hover {
+		.ignore:hover, .delete:hover, .suspend:hover, .refresh:hover {
 			background: rgba(255, 255, 255, 0.3);
 		}
 		
