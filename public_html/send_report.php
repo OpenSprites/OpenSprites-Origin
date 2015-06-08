@@ -73,7 +73,7 @@
 			<p class='report-sent' style='display:none;'>Your report was sent! A moderator will look at it as soon as possible.</p>
 			<br/><br/><br/><br/>
 			<script>
-				$("#report_details").keyup(function(){
+				$("#report_details").on('keyup keydown keypress', function(){
 					var len = $(this).val().length;
 					if(len > 500) $(this).val($(this).val().substr(0, 500));
 					else {
