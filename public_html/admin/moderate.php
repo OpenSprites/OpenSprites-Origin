@@ -42,9 +42,8 @@ if(isset($_POST['action']) && isset($_POST['id']) && isset($_POST['reporter'])){
         <div class='reports-table'>
 			<div class='row header'>
 				<div class='cell'>Target</div>
-				<div class='cell'>Reporter</div>
+				<div class='cell'>Reporter/Time</div>
 				<div class='cell'>Reason</div>
-				<div class='cell'>Date/Time</div>
 				<div class='cell'>Actions</div>
 			</div>
 		</div>
@@ -54,7 +53,8 @@ if(isset($_POST['action']) && isset($_POST['id']) && isset($_POST['reporter'])){
 			font-weight: normal !important;
 		}
 		.cell.reason {
-			width: 100%;
+			word-wrap: break-word;
+			max-width: 500px;
 		}
 		.cell.time, .cell.actions, .cell.report {
 			white-space: nowrap;
@@ -105,7 +105,6 @@ if(isset($_POST['action']) && isset($_POST['id']) && isset($_POST['reporter'])){
 					"<div class='cell report'><span class='desc'></span> <a target='_blank'>View</a></div>" +
 					"<div class='cell reporter'></div>" +
 					"<div class='cell reason'></div>" +
-					"<div class='cell time'></div>" +
 					"<div class='cell actions'>" +
 						"<a class='ignore' href='javascript:void(0);'>Dismiss</a> " +
 						"<a class='delete' href='javascript:void(0);'>Delete asset</a> " +
@@ -116,9 +115,8 @@ if(isset($_POST['action']) && isset($_POST['id']) && isset($_POST['reporter'])){
 				var report = reports[i];
 				row.find(".report .desc").text((report['type'] == 1 ? "Asset: " : "User: ") + report['id']);
 				row.find(".report a").attr("href", "/users/" + report['id']);
-				row.find(".reporter").text(report['reporter']);
+				row.find(".reporter").text(report['reporter'] + " at " + report['reportTime']);
 				row.find(".reason").text(report['reason']);
-				row.find(".time").text(report['reportTime']);
 				(function(report, row){
 					row.find(".ignore").click(function(){
 						$.post("reports.php", {"action":"dismiss","id":report['id'],"reporter":report['reporter']}, function(data){
