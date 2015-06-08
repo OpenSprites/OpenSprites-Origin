@@ -43,7 +43,7 @@
 						if(preg_match("/^[a-f0-9]+$/", $id1) !== 1) $not_found = TRUE;
 						else if(sizeof(
 								imagesQuery("SELECT * FROM `os_assets` WHERE `userid`=? AND `hash`=?",
-								array($id0, $id1)) === 0)
+								array($id0, $id1))) === 0)
 							$not_found = TRUE;
 						$id = $id0 . "/" . $id1;
 					}
