@@ -1,6 +1,8 @@
 <?php
 require 'lib.php';
 
+if($logged_in_userid === 0 || $user_banned) die(json_encode(array("status" => "error", "message"=>"Not logged in")));
+
 if(!isset($_POST['type']) || !isset($_POST['id']) || !isset($_POST['reason'])) die(json_encode(array("status" => "error", "message"=>"Malformed request")));
 
 $type = -1;
