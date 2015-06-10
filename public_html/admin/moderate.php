@@ -121,7 +121,7 @@ if(isset($_POST['action'])
 				row.find(".reason").text(report['reason']);
 				(function(report, row){
 					row.find(".ignore").click(function(){
-						$.post("reports.php", {"action":"dismiss","id":report['id'],"reporter":report['reporter']}, function(data){
+						$.post("moderate.php", {"action":"dismiss","id":report['id'],"reporter":report['reporter']}, function(data){
 							if(data == "Success") row.fadeOut(700, function(){
 								row.remove();
 							});
@@ -129,7 +129,7 @@ if(isset($_POST['action'])
 						});
 					});
 					row.find(".delete").click(function(){
-						$.post("reports.php", {"action":"delete","id":report['id'],"reporter":report['reporter']}, function(data){
+						$.post("moderate.php", {"action":"delete","id":report['id'],"reporter":report['reporter']}, function(data){
 							if(data == "Success") row.find(".delete").text("Deleted");
 							else row.find(".delete").text("Error");
 							console.log(data);
@@ -139,7 +139,7 @@ if(isset($_POST['action'])
 					if(report['type'] == 0) row.find(".delete").hide();
 					
 					row.find(".suspend").click(function(){
-						$.post("reports.php", {"action":"suspend","id":report['id'],"reporter":report['reporter']}, function(data){
+						$.post("moderate.php", {"action":"suspend","id":report['id'],"reporter":report['reporter']}, function(data){
 							if(data == "Success") row.find(".delete").text("Suspended");
 							else row.find(".suspend").text("Error");
 							console.log(data);
