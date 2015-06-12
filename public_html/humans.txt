@@ -21,9 +21,11 @@ MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
 
 ///////// The OpenSprites Team \\\\\\\\\
 
-======= Systems Administrators ========
+======= Administration ========
     Username: cheeseeater
-    Contact: cheese.eater [at] mail.com
+    Contact: 
+    - cheese.eater [at] mail.com
+    - cheeseeater [at] opensprites.org
     From: England, United Kingdom
 
 ============= Developers ==============
