@@ -29,7 +29,7 @@
 	<div class="container main">
 		<div class="main-inner">
 			<h1>Send a Report</h1>
-			<p>Use the form below to report something that needs moderator attention. Do not report unless you really think it needs moderator attention or has violated our <a href='/guidelines/' target='_blank'>Community Guidlines</a> or <a href='/tos/' target='_blank'>Terms of Service</a>; unnecessary reports prevent moderators from addressing real issues. Please only report content that goes against our. <br/>Make sure to include a short and descriptive reason for your report, with additional links if required.</p>
+			<p>Use the form below to report something that needs moderator attention. Do not report unless you think something has violated our <a href='/guidelines/' target='_blank'>Community Guidlines</a> or <a href='/tos/' target='_blank'>Terms of Service</a>; unnecessary reports prevent moderators from addressing real issues. <br/>Make sure to include a short and descriptive reason for your report, with additional links if required.</p>
 			<form method="POST" id="report_form">
 				<?php if($logged_in_userid===0){ ?>
 				<p>Sorry, but you need to be logged in to send a report. If you don't want to log in, you can still <a href='mailto:support@opensprites.org'>send us an email</a> but it may take moderators longer to respond.</p>
