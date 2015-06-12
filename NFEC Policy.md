@@ -1,5 +1,5 @@
 #What is NFE content?
-Not For Everyone Content (NFEC) is content that could potentially be pushing the OpenSprites Guidelines boundary. OpenSprites has a very strict set of regulations concerning what NFEC is and how accessible it is to other users. To clarify, Scratch allows the sharing of Not For Everyone projects.
+Not For Everyone Content (NFEC) is content that could potentially be pushing the OpenSprites Guidelines boundary. OpenSprites has a strict set of regulations concerning what NFEC is and how accessible it is to other users. To clarify, Scratch allows the sharing of Not For Everyone projects.
 
 ###What does OpenSprites define NFEC as?
 * Content exhibiting blood with the limit of the size of a paper-cut or small scratch wound. **Must not** be a realistic cartoon or be a photograph.
@@ -11,5 +11,12 @@ Not For Everyone Content (NFEC) is content that could potentially be pushing the
 * Content explaining or referring to subjects or issues which children may not fully understand. Please be aware that some parents may wish to explain issues of this type to their children privately.
 
 * Content exhibiting verbal abuse.
+
+* Content depicting intoxication positively.
+
+###Access restrictions
+* NFEC listed content is disallowed from showing on the front page.
+* Staff are disallowed to link to NFEC content publically.
+* Post on the forums which link to NFEC content are disallowed.
 
 ####In Progress! Incomplete!
