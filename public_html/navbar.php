@@ -11,7 +11,7 @@
 
 <!-- MOBILE NAV -->
 <div class="mobile-nav" id='mobilenav' style="display:none;width:100%;text-align:center;">
-	<a href="/"><img src="http://opensprites.org/assets/images/os-logotype.svg" style="width: 150px;height: 35px;"></a>
+	<a href="/"><img src="http://opensprites.org/assets/images/os-logotype.svg" style="width: 150px;height: 35px;" alt="OpenSprites logo"></a>
 	<button style="float:left;margin-top:0;font-size:21px;background:transparent;border:none;color:white;cursor:pointer;">☰</button>
         <nav style='overflow-y: scroll;'>
             <ul>
