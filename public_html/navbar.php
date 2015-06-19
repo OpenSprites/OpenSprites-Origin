@@ -116,7 +116,7 @@
         <ul class="right">
             <?php if( $logged_in_user !=='not logged in' ) { ?>
             <li class='navbar-upload'>
-                <a href="/upload/"><img class='upload-icon' src='/assets/images/upload.png' /> Upload</a>
+                <a href="/upload/"><img class='upload-icon' src='/assets/images/upload.png' / alt="Upload image"> Upload</a>
             </li>
             <?php } if($logged_in_user == 'not logged in') { ?>
             <li><a href="/register/" style="width:initial;">Sign Up</a>
