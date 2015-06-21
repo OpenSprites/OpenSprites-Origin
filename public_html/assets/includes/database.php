@@ -1,6 +1,6 @@
 <?php
 $username = "OpenSprites_user";
-$password = "swagmaster123"; // change this :P
+$password = "";
 $db_name  = "OpenSprites_assets";
 $assets_table_name = "os_assets";
 $user_upload_table_name = "os_user_upload";
@@ -10,7 +10,7 @@ $collections_table_name = "os_collections";
 $collection_asset_table_name = "os_collection_asset";
 
 $forum_username = "OpenSprites_os";
-$forum_password = "ZfgKxh24PP";
+$forum_password = "";
 $forum_db_name = "OpenSprites_os";
 $forum_member_table = "et_member";
 $forum_group_table = "et_group";
