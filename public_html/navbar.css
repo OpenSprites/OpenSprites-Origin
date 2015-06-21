@@ -88,6 +88,7 @@ ul.navbar-dropdown {
 	border-bottom-right-radius: 10px;
 	border-bottom-left-radius: 10px;
 	overflow: hidden;
+	position: absolute;
 }
 
 ul.navbar-dropdown li {
