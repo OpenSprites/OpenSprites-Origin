@@ -155,11 +155,6 @@ function connectDatabase(){
 	$dbh = new PDO($conf, $username, $password);
 	$dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 	$dbh->setAttribute(PDO::ATTR_EMULATE_PREPARES, false);
-	if(!tableExists($assets_table_name)) createImagesTable();
-	if(!tableExists($user_upload_table_name)) createUserUploadTable();
-	if(!tableExists($report_table_name)) createReportTable();
-	if(!tableExists($collections_table_name)) createCollectionsTable();
-	if(!tableExists($collection_asset_table_name)) createCollectionAssetTable();
 	$database_connected = TRUE;
 }
 
@@ -209,85 +204,6 @@ function getImagesForUser($userId){
 	$stmt->execute(array($userId));
 	$res = $stmt->fetchAll(PDO::FETCH_ASSOC);
 	return $res;
-}
-
-function createImagesTable(){
-	global $dbh;
-	global $assets_table_name;
-	$dbh->exec(
-		"CREATE TABLE `$assets_table_name` (
-			`name` VARCHAR(32) NOT NULL,
-			`hash` VARCHAR(32) NOT NULL,
-			`user` VARCHAR(32) NOT NULL,
-			`userid` INT(11) NOT NULL,
-			`assetType` VARCHAR(16) NOT NULL,
-			`customName` VARCHAR(32) NOT NULL,
-			`description` VARCHAR(500) NOT NULL DEFAULT 'No description provided',
-			`date` DATETIME NOT NULL,
-			`downloadCount` INT(11) NOT NULL DEFAULT 0,
-			`downloadsThisWeek` INT(11) NOT NULL DEFAULT 0,
-			`isFeatured` INT(11) NOT NULL DEFAULT 0,
-			PRIMARY KEY `asset_ix` (`name`, `customName`, `userid`)
-		) ENGINE=InnoDB AUTO_INCREMENT=0 DEFAULT CHARSET=utf8;");
-}
-
-function createUserUploadTable(){
-	global $dbh;
-	global $user_upload_table_name;
-	$dbh->exec(
-		"CREATE TABLE `$user_upload_table_name` (
-			`userid` INT(11) NOT NULL,
-			`bytesUploaded` INT(11) NOT NULL,
-			`lastUploadTime` DATETIME NOT NULL,
-			`ipAddr` VARCHAR(32) NOT NULL,
-			`userAgent` VARCHAR(300) NOT NULL,
-			PRIMARY KEY `user_ix` (`userid`)
-		) ENGINE=InnoDB AUTO_INCREMENT=0 DEFAULT CHARSET=utf8;");
-}
-
-function createReportTable(){
-	global $dbh;
-	global $report_table_name;
-	$dbh->exec(
-		"CREATE TABLE `$report_table_name` (
-			`type` INT(11) NOT NULL,
-			`id` VARCHAR(50) NOT NULL,
-			`reporter` VARCHAR(32) NOT NULL,
-			`reason` VARCHAR(500) NOT NULL,
-			`reportTime` DATETIME NOT NULL,
-			PRIMARY KEY `report_ix` (`id`, `reporter`)
-		) ENGINE=InnoDB AUTO_INCREMENT=0 DEFAULT CHARSET=utf8;");
-}
-
-function createCollectionsTable(){
-	global $dbh;
-	global $collections_table_name;
-	$dbh->exec(
-		"CREATE TABLE `$collections_table_name` (
-			`id` VARCHAR(32) NOT NULL,
-			`user` VARCHAR(32) NOT NULL,
-			`userid` INT(11) NOT NULL,
-			`customName` VARCHAR(32) NOT NULL,
-			`description` VARCHAR(500) NOT NULL DEFAULT 'No description provided',
-			`date` DATETIME NOT NULL,
-			`downloadCount` INT(11) NOT NULL DEFAULT 0,
-			`downloadsThisWeek` INT(11) NOT NULL DEFAULT 0,
-			`isFeatured` INT(11) NOT NULL DEFAULT 0,
-			PRIMARY KEY `collections_ix` (`id`, `customName`, `userid`)
-		) ENGINE=InnoDB AUTO_INCREMENT=0 DEFAULT CHARSET=utf8;");
-}
-
-function createCollectionAssetTable(){
-	global $dbh;
-	global $collection_asset_table_name;
-	$dbh->exec(
-		"CREATE TABLE `$collection_asset_table_name` (
-			`userid` INT(11) NOT NULL,
-			`collectionid` VARCHAR(32) NOT NULL,
-			`assetuserid` INT(11) NOT NULL,
-			`assetid` VARCHAR(32) NOT NULL,
-			PRIMARY KEY `collection_asset_ix` (`userid`, `collectionid`)
-		) ENGINE=InnoDB AUTO_INCREMENT=0 DEFAULT CHARSET=utf8;");
 }
 
 function getCollectionTableName(){
