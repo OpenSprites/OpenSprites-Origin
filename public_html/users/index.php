@@ -99,6 +99,7 @@
 					?>
 				</div>
 				<?php 
+					error_reporting(-1);
 					$groups = getAllGroups();
 					$user_groups = getUserGroups($user['userid']);
 					if($is_admin === TRUE){
