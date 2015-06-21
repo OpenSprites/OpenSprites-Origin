@@ -605,7 +605,7 @@ function uploadFiles(){
 				
 				if(resp.status == "sanic"){
 					$("#error-dialog").html(resp.include_html);
-					$("#error-dialog").find("p").append($("<a>").attr("href","javascript:void(0)").text("Got it").click(function(){
+					$("#error-dialog").find("p").append($("<a>").addClass("btn").addClass("blue").attr("href","javascript:void(0)").text("Got it").click(function(){
 						$("#error-dialog").fadeOut();
 					}));
 					$("#error-dialog").fadeIn();

@@ -77,7 +77,7 @@ if(isset($_FILES['uploadedfile'])){
 		$isAble = round($isAble);
 		$json['status'] = "sanic";
 		$json['message'] = "You're uploading too fast! Wait $isAble seconds before uploading again.";
-		$json['include_html'] = "<h1>Gotta NOT go fast!</h1><img src='/assets/images/sanic.png' /><br/><p>" . $json['message'] . "<br/></p>";
+		$json['include_html'] = "<h1>Gotta NOT go fast!</h1><img src='/assets/images/sanic.png' style='height: 200px;' /><br/><p>" . $json['message'] . "<br/><br/></p>";
 		die(json_encode($json));
 	}
 	
