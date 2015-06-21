@@ -344,7 +344,7 @@ function processFiles(files){
 	for (var i = 0, f; f = files[i]; i++) {
 		totalSize += f.size;
 		if(totalSize > 50000000){
-			$("#upload-status p").text("Some files were not added. Keep total file size below 8MB.");
+			$("#upload-status p").text("Some files were not added. Keep total file size below 50MB.");
 			return;
 		}
 	
