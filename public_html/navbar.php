@@ -119,13 +119,13 @@
                 <a href="javascript:void(0)" id='navbar-new-button'><span class='symbol plus-circle'></span> New</a>
 				<ul class='navbar-dropdown'>
 				    <li>
-						<a href="/upload/"><span class='symbol up-arrow-circle'></span> Resource Upload</a>
+						<a href="/upload/"><span class='symbol up-arrow-circle new-dropdown-symbol'></span> Resource Upload</a>
 					</li>
 					<li>
-						<a href="javascript:alert('not implemented');"><span class='symbol folder'></span> Collection</a>
+						<a href="javascript:alert('not implemented');"><span class='symbol folder new-dropdown-symbol'></span> Collection</a>
 					</li>
 					<li>
-						<a href="javascript:alert('not implemented');"><span class='symbol chat'></span> Discussion Topic</a>
+						<a href="javascript:alert('not implemented');"><span class='symbol chat new-dropdown-symbol'></span> Discussion Topic</a>
 					</li>
 				</ul>
             </li>
