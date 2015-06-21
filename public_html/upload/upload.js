@@ -192,7 +192,6 @@ function newTemplate(){
 				<p>\
 					<label for='hidden-asset-" + randomId + "' title='Don't show this asset on my profile, and don't associate it with me.'>Hidden</label>\
 					<input type='checkbox' class='hide-asset' id='hidden-asset-" + randomId + "' />\
-					Filename: <span class='name'>Sample Text</span><br/>\
 					Name: <input type='text' class='customName' placeholder='Enter a name' /><br/>\
 					Type: <span class='type'></span><br/>\
 					Filetype: <span class='ftype'></span><br/>\
@@ -210,12 +209,12 @@ function getPrettySize(size){
 }
 
 function getPrettyName(name){
-	var ext = name.substring(name.lastIndexOf("."));
 	var fileName = name.substring(0, name.lastIndexOf("."));
-	if(fileName.length > 10) {
-		fileName = fileName.substring(0, 4)+"..."+fileName.substring(fileName.length - 3);
-	}
-	return fileName+ext;
+	fileName = fileName.replace(/[\-_\.]/g, " ").split(" ").map(function(item){
+		if(item.length == 0 || item.length == 1) return item;
+		return item.substring(0, 1).toUpperCase() + item.substring(1);
+	}).join(" ");
+	return fileName;
 }
 
 if (!(window.File && window.FileReader && window.FileList && window.Blob && window.FormData)) {
@@ -264,7 +263,7 @@ function processArchive(file){
 			var asArrayBuffer = f.asArrayBuffer();
 			
 			var template = newTemplate();
-			template.find(".name").text(getPrettyName(f.name));
+			template.find(".customName").text(getPrettyName(f.name));
 			template.find(".type").text("Local Upload");
 			template.find(".ftype").text(type+" from archive");
 			template.find(".size").text(getPrettySize(asBinary.length));
@@ -378,7 +377,7 @@ function processFiles(files){
 			continue;
 		}
 		
-		template.find(".name").text(getPrettyName(f.name));
+		template.find(".customName").text(getPrettyName(f.name));
 		template.find(".type").text("Local Upload");
 		template.find(".ftype").text(type);
 		template.find(".size").text(getPrettySize(f.size));
