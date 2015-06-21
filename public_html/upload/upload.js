@@ -187,9 +187,13 @@ $(".ok").click(function(){
 
 ///////////////////////////////////// File chooser GUI
 function newTemplate(){
+	var randomId = Math.random();
 	return $("<div class='upload-image'>\
-				<p>Filename: <span class='name'>Sample Text</span><br/>\
-					Name: <input class='customName' placeholder='Enter a name' /><br/>\
+				<p>\
+					<label for='hidden-asset-" + randomId + "' title='Don't show this asset on my profile, and don't associate it with me.'>Hidden</label>\
+					<input type='checkbox' class='hide-asset' id='hidden-asset-" + randomId + "' />\
+					Filename: <span class='name'>Sample Text</span><br/>\
+					Name: <input type='text' class='customName' placeholder='Enter a name' /><br/>\
 					Type: <span class='type'></span><br/>\
 					Filetype: <span class='ftype'></span><br/>\
 					Size: <span class='size'></span><br/>\
@@ -544,18 +548,23 @@ function uploadFiles(){
 	var totalFiles = 0;
 	var formData = new FormData();
 	var extraJson = {};
+	var hiddenAssets = [];
 	formData.append("token", window.uploadCsrfToken);
 	for(key in allFiles){
 		if(allFiles.hasOwnProperty(key)){
 			totalFiles++;
 			formData.append("uploadedfile[]", allFiles[key]);
-			var customNameInput = $("[data-id="+key+"]").find("input");
+			var customNameInput = $("[data-id="+key+"]").find(".customName");
 			if(customNameInput.val() != null && customNameInput.val() != ""){
 				extraJson[key] = customNameInput.val();
 			}
+			var isHidden = $("[data-id="+key+"]").find(".hide-asset").is(":checked");
+			if(isHidden) hiddenAssets.append(key);
 		}
 	}
 	formData.append("customNames", JSON.stringify(extraJson));
+	formData.append("hiddenAssets", JSON.stringify(hiddenAssets));
+	
 	if(totalFiles == 0){
 		return;
 	}

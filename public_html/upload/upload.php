@@ -33,11 +33,9 @@ if(isset($_REQUEST['customNames'])){
 	$customNames = json_decode($_REQUEST['customNames'], true);
 }
 
-if($_SERVER['HTTP_HOST'] != "localhost:13379"){ // MATU's testing
-	if($logged_in_user == 'not logged in' or $user_banned) {
-		$json['message'] = "Not logged in!";
-		die(json_encode($json));
-	}
+if($logged_in_userid == 0 or $user_banned) {
+	$json['message'] = "Not logged in!";
+	die(json_encode($json));
 }
 
 if(isset($_REQUEST['file_too_big'])){
@@ -55,11 +53,9 @@ try {
 
 
 if(!isset($_REQUEST['token']) || $_REQUEST['token'] != $_COOKIE['upload_session_id']){
-	$json['message'] = "Whoops! There was an unknown server-side error.";
+	$json['message'] = "Whoops! There was an unknown server-side error."; // stahp hacking us
 	die(json_encode($json));
 }
-
-// add spam protection here
 
 if(isset($_FILES['uploadedfile'])){
 	$basedir = "../uploads/uploaded/";
