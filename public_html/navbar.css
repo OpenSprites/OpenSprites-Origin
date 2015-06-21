@@ -61,18 +61,11 @@
     font-size: 15px
 }
 
-.navbar-upload .upload-icon {
-    vertical-align: middle;
-    float: left;
-    margin-top: 10px;
-    margin-right: 0.5em;
-}
-
-#navbar-browse {
+#navbar-browse, #navbar-new-button {
 	width: 80px;
 }
 
-#navbar-browse::after {
+#navbar-browse::after, #navbar-new-button::after {
 	content: " ";
 	display: block;
 	float: right;
@@ -102,11 +95,11 @@ ul.navbar-dropdown li {
 	float: none;
 }
 
-#browse-li:hover #navbar-browse {
+#browse-li:hover #navbar-browse, #os-new:hover #navbar-new-button {
 	background-color: #476866;
 }
 
-#browse-li:hover ul {
+#browse-li:hover ul, #os-new:hover ul {
 	height: 105px;
 }
 

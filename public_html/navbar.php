@@ -107,7 +107,7 @@
 					<p class="search-message"></p>
 					<div class="search-content"></div>
 					<p class="search-links">
-						<a href="/search/?q=swag" class="all-results search-link"><button class="btn orange big">See all results + Search options</button></a> <a href="/about/search/" class="search-help search-link" target="_blank"><button class="btn blue">Search Help</button></a>
+						<a href="/search/?q=sample+text" class="all-results search-link"><button class="btn orange big">See all results + Search options</button></a> <a href="/about/search/" class="search-help search-link" target="_blank"><button class="btn blue">Search Help</button></a>
 					</p>
 				</div>
 			</li>
@@ -115,8 +115,19 @@
 
         <ul class="right">
             <?php if( $logged_in_user !=='not logged in' ) { ?>
-            <li class='navbar-upload'>
-                <a href="/upload/"><img class='upload-icon' src='/assets/images/upload.png' / alt="Upload image"> Upload</a>
+            <li class='navbar-upload' id='os-new'>
+                <a href="javascript:void(0)" id='navbar-new-button'><span class='symbol plus-circle'></span> New</a>
+				<ul class='navbar-dropdown'>
+				    <li>
+						<a href="/upload/"><span class='symbol up-arrow-circle'></span> Resource Upload</a>
+					</li>
+					<li>
+						<a href="javascript:alert('not implemented');"><span class='symbol folder'></span> Collection</a>
+					</li>
+					<li>
+						<a href="javascript:alert('not implemented');"><span class='symbol chat'></span> Discussion Topic</a>
+					</li>
+				</ul>
             </li>
             <?php } if($logged_in_user == 'not logged in') { ?>
             <li><a href="/register/" style="width:initial;">Sign Up</a>
