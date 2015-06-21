@@ -61,6 +61,12 @@
     font-size: 15px
 }
 
+.new-dropdown-symbol {
+	display: inline-block;
+	width: 23px;
+	text-align: center;
+}
+
 #navbar-browse, #navbar-new-button {
 	width: 80px;
 }
