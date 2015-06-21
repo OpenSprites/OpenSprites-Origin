@@ -86,8 +86,8 @@ a.scratch:hover {
     float: left;
 }
 
-.header li a:not(.search-link),
-.header li span:not(.search-link) {
+.header li a:not(.search-link):not(.symbol),
+.header li span:not(.search-link):not(.symbol) {
     display: block;
     padding: 0px 15px;
     text-decoration: none !important;
