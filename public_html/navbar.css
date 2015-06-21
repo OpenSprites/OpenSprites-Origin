@@ -61,7 +61,7 @@
     font-size: 15px
 }
 
-#navbar-browse {
+#navbar-browse, #navbar-new-button {
 	width: 80px;
 }
 
@@ -88,6 +88,9 @@ ul.navbar-dropdown {
 	border-bottom-right-radius: 10px;
 	border-bottom-left-radius: 10px;
 	overflow: hidden;
+}
+
+#os-new ul.navbar-dropdown {
 	position: absolute;
 }
 
