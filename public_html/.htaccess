@@ -70,12 +70,3 @@ RewriteRule ^collections$ /collections/ [R=301,L]
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule ^collections/$ browse.php?type=collections [QSA]
-
-# collection pages
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule ^collections/([^/]+)/([^/]+)/$ collections/index.php?userid=$1&collectionid=$2 [QSA]
-
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule ^collections/([^/]+)/([^/]+)$ collections/index.php?userid=$1&collectionid=$2 [QSA]

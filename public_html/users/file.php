@@ -19,6 +19,15 @@
 	}
 	if(isset($_GET['file'])) $file = $_GET['file'];
 	
+	// is it a collection?
+	if(stripos($file, "collection/") === 0){
+		$uid = $id;
+		$cid = substr($file, 11);
+		require "collections.php";
+		die();
+	}
+	// otherwise, it's an asset
+	
 	$asset = imageExists($id, $file);
 	$filename = NULL;
 	if(sizeof($asset) > 0){
