@@ -43,6 +43,10 @@ h1.firstHeading, h2 {
 	background: #595959; !important;
 }
 
+.toggleset button:hover {
+	background: #8E8C8C; !important;
+}
+
 .toggleset button.selected {
 	background: #8E8C8C; !important;
 }
