@@ -39,6 +39,14 @@ h1.firstHeading, h2 {
 	border-top: none !important;
 }
 
+.toggleset button {
+	background: #595959; !important;
+}
+
+.toggleset button.selected {
+	background: #8E8C8C; !important;
+}
+
 .footer {
 	background-color: #151515 !important;
 	color: #E8E8E8 !important;
