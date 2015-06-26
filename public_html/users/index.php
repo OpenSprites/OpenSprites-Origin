@@ -147,8 +147,8 @@
 				<?php } ?>
             </div>
 			<div id="actions-container">
-				<div id='follow'>
         <div id='main-actions'> 
+				<div id='follow'>
 					<a href="https://scratch.mit.edu/users/<?php echo urlencode($username); ?>" target="blank">View Scratch Page</a>
 				</div>
 				<?php if($logged_in_userid != $id) { ?>
