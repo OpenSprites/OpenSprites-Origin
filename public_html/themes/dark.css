@@ -6,8 +6,8 @@ body {
 	display: inherit !important;
 }
 
-a {
-	color: #A2E3DF;
+.main-inner a { /* Exclude the navigation bar */
+	color: #A2E3DF !important;
 }
 
 /* main page */
