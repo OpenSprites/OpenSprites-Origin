@@ -120,7 +120,7 @@
 }
 
 #user-pane-left {
-    position: relative;
+    position: absolute;
     margin-right: 470px;
     width: 470px;
     height: 335px;
@@ -137,7 +137,7 @@
 }
 
 #user-pane-right {
-    position: relative;
+    position: absolute;
     margin-left: 470px;
     width: 100%;
     height: 335px;
