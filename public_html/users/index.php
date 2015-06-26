@@ -148,12 +148,14 @@
             </div>
 			<div id="actions-container">
 				<div id='follow'>
+        <div id='main-actions'> 
 					<a href="https://scratch.mit.edu/users/<?php echo urlencode($username); ?>" target="blank">View Scratch Page</a>
 				</div>
 				<?php if($logged_in_userid != $id) { ?>
 				<a id='report' href="/send_report.php?type=user&id=<?php echo $id; ?>">
 					Report User
 				</a>
+        </div>
 				<?php } ?>
 					<?php
 						if($is_admin == true and $username !== $logged_in_user) {
