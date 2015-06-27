@@ -12,8 +12,8 @@ function addCollection($user, $userId, $customName, $assets){
 		." VALUES(?, ?, ?, ?, NOW())", array($id, $user, $userId, $customName));
 	
 	for($i=0;$i<sizeof($assets);$i++){
-		imagesQuery0("INSERT INTO `" . getCollectionAssetTableName() "` (`userid`, `collectionid`, `assetuserid`, `assetid`)"
-			." VALUES(?, ?, ?, ?)", array($userId, $id, $assets[$i]['userid'], $assets[$i]['hash']));
+		imagesQuery0("INSERT INTO `" . getCollectionAssetTableName() . "` (`userid`, `collectionid`, `assetuserid`, `assetid`)"
+			. " VALUES(?, ?, ?, ?)", array($userId, $id, $assets[$i]['userid'], $assets[$i]['hash']));
 	}
 }
 

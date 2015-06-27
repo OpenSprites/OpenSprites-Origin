@@ -1,5 +1,5 @@
 <?php
-include '../assets/includes/connect.php';
+include_once '../assets/includes/connect.php';
 include '../assets/includes/collections.php';
 header("Content-Type: text/plain");
 
