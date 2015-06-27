@@ -20,7 +20,7 @@
 	if(isset($_GET['file'])) $file = $_GET['file'];
 	
 	// is it a collection?
-	if(stripos($file, "collection/") === 0){
+	if(stripos($file, "collection_") === 0){
 		$uid = $id;
 		$cid = substr($file, 11);
 		require "collections.php";
