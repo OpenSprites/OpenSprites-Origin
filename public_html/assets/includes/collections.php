@@ -28,7 +28,7 @@ function removeFromCollection($userId, $collectionId, $asset){
 }
 
 function getCollectionInfo($userId, $collectionId){
-	return imagesQuery("SELECT * FROM `" . getCollectionTableName() . "` WHERE `userid`=? AND `id`=?", array($userId, $collectionId));
+	return imagesQuery("SELECT * FROM `" . getCollectionTableName() . "` WHERE `userid`=? AND `id`=?", array($userId, $collectionId))[0];
 }
 
 function getAssetsInCollection($userId, $collectionId){

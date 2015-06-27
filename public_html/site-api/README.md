@@ -15,6 +15,17 @@ All responses are in JSON, unless otherwise noted. Bullet points usually indicat
 - name (string): The username of the user
 - id (int): The user ID of the user
 
+### The collection object ###
+ - name (string): The name set for the collection
+ - url (string): A URL to the collection page for the collection
+ - collection_id (string): A unique id for the collection used to identify it
+ - create_time (string): The date and time the collection was created
+ - created_by (object): A [truncated user object](#the-truncated-user-object) belonged to the creator
+ - downloads (object):
+     - this_week (int): The number of downloads this week for this collection
+	 - total (int): The total number of downloads for this collection
+ - description (string): The uploader's description of the collection
+
 ### The asset object ###
  - name (string): The name set for the asset
  - type (string): One of "image" "sound" or "script"
@@ -111,3 +122,17 @@ POST /site-api/report.php
 A JSON object
  - status: Either "success", "wait", or "error"
  - message: Feedback to display if status is "wait" or "error"
+
+## collection_get.php ##
+Gets info about a collection.
+### Request format ###
+```http
+GET /site-api/collection_get.php?userid=?&cid=?
+```
+- userid: The id of the user who owns the collection
+- cid: The id of the collection
+
+### Response format ###
+A JSON object
+ - info: A [collection object](#the-collection-object)
+ - assets: An array of [asset objects](#the-asset-object)
