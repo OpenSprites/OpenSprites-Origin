@@ -71,7 +71,7 @@
 	border-top: 1px solid white;
 }
 
-#actions-container div {
+#actions-container .main-action{
 	display: inline-block;
 	margin-right: 1em;
 	font-style: italic;
