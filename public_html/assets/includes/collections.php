@@ -32,7 +32,7 @@ function getCollectionInfo($userId, $collectionId){
 }
 
 function getAssetsInCollection($userId, $collectionId){
-	return imagesQuery("SELECT * FROM `" . getCollectionAssetsTableName() . "` WHERE `userid`=? AND `collectionid`=?", array($userId, $collectionId));
+	return imagesQuery("SELECT * FROM `" . getCollectionAssetTableName() . "` WHERE `userid`=? AND `collectionid`=?", array($userId, $collectionId));
 }
 
 ?>
