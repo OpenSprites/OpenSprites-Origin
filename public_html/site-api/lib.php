@@ -51,7 +51,7 @@ function getCollectionAssetList($uid, $cid){
 	$raw = getAssetsInCollection($uid, $cid);
 	$assets = array();
 	for($i=0;$i<sizeof($raw);$i++){
-		$asset = imagesQuery("SELECT * FROM `" . getAssetsTableName() . "` WHERE `userid`=? AND `hash`=?", array($raw[$i]['assetuserid'], $raw[$i]['assetid']));
+		$asset = imagesQuery("SELECT * FROM `" . getAssetsTableName() . "` WHERE `userid`=? AND `hash`=?", array($raw[$i]['assetuserid'], $raw[$i]['assetid']))[0];
 		array_push($assets, $asset);
 	}
 	return getAssetList($assets);
