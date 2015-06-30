@@ -1,6 +1,6 @@
 <?php
 include 'lib.php';
-include 'collections.php';
+include '../assets/includes/collections.php';
 
 $userid = 'false';
 $cid = 'false';
