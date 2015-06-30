@@ -1,6 +1,5 @@
 <?php
 include 'lib.php';
-include '../assets/includes/collections.php';
 
 $userid = 'false';
 $cid = 'false';
@@ -17,8 +16,8 @@ if($userid === 'false' || $cid === 'false') {
 	die(json_encode(array(array("status"=>"error","message"=>"Missing params"))));
 }
 
-$info = getCollection(getCollectionInfo($userid, $cid));
-$assets = getCollectionAssets(getAssetsInCollection($userid, $cid));
+$info = getCollection($userid, $cid));
+$assets = getCollectionAssetList($userid, $cid);
 
 echo json_encode(array("info" => $info, "assets" => $assets));
 ?>

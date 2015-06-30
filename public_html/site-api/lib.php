@@ -1,5 +1,6 @@
 <?php
 require '../assets/includes/connect.php';
+include '../assets/includes/collections.php';
 
 function getAssetList($raw){
   $assets = array();
@@ -27,7 +28,8 @@ function getAssetList($raw){
   return $assets;
 }
 
-function getCollection($raw){
+function getCollection($uid, $cid){
+	$raw = getCollectionInfo($uid, $cid);
 	return array(
 	  	"name" => $raw['customName'],
 	  	"url" => "/users/" . $raw['userid'] . "/collection_" . $raw['id'],
@@ -45,7 +47,8 @@ function getCollection($raw){
 	  );
 }
 
-function getCollectionAssetList($raw){
+function getCollectionAssetList($uid, $cid){
+	$raw = getAssetsInCollection($uid, $cid);
 	$assets = array();
 	for($i=0;$i<sizeof($raw);$i++){
 		$asset = imagesQuery("SELECT * FROM `" . getAssetsTableName() . "` WHERE `userid`=? AND `hash`=?", array($raw[$i]['assetuserid'], $raw[$i]['assetid']));
