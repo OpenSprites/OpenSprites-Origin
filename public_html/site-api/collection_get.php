@@ -13,7 +13,7 @@ if(isset($_GET['cid'])) {
 }
 
 if($userid === 'false' || $cid === 'false') {
-	die(json_encode(array(array("status"=>"error","message"=>"Missing params"))));
+	die(json_encode(array("status"=>"error","message"=>"Missing params")));
 }
 
 $info = getCollection($userid, $cid);

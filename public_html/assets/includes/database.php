@@ -307,6 +307,7 @@ function isUserAbleToUpload($userid, $post_size){
 	}
 }
 
+// TODO: find where this is used and switch to assetExists
 function imageExists($userid, $hash){
 	global $dbh;
 	global $assets_table_name;
@@ -314,6 +315,15 @@ function imageExists($userid, $hash){
 	$stmt->execute(array($userid, $hash));
 	$res = $stmt->fetchAll(PDO::FETCH_ASSOC);
 	return $res;
+}
+
+function assetExists($userid, $hash){
+	global $dbh;
+	global $assets_table_name;
+	$stmt = $dbh->prepare("SELECT * FROM `$assets_table_name` WHERE `userid`=? AND `hash`=?");
+	$stmt->execute(array($userid, $hash));
+	$res = $stmt->fetchAll(PDO::FETCH_ASSOC);
+	return sizeof($res) > 0;
 }
 
 function incrementDownload($userid, $hash){

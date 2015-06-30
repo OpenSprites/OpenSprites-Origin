@@ -38,6 +38,10 @@ All responses are in JSON, unless otherwise noted. Bullet points usually indicat
 	 - total (int): The total number of downloads for this asset
  - description (string): The uploader's description of the asset
 
+### The truncated asset object ###
+ - userid (int): The user ID of the asset owner
+ - hash (string): The MD5 hash of the asset
+
 ## search.php ##
 Returns an array of asset or user objects for a given query.
 ### Request format ###
@@ -136,3 +140,62 @@ GET /site-api/collection_get.php?userid=?&cid=?
 A JSON object
  - info: A [collection object](#the-collection-object)
  - assets: An array of [asset objects](#the-asset-object)
+
+## collection_create.php ##
+Creates a new collection. Requires a user to be logged in, and will assign the new collection to the logged in user.
+### Request format ###
+```http
+POST /site-api/collection_create.php
+```
+ - name: The name to set for the collection
+ - assets (optional): A string containing a JSON array of [truncated asset objects](#the-truncated-asset-object)
+
+### Response format ###
+A JSON object
+ - status: "success" if the operation succeeded, "error" otherwise
+ - message: A short message describing the status
+ - collection_id: The id string for the new collection (only in the response if the status is "success")
+
+## collection_edit.php ##
+Edits the title or description of a collection owned by the logged in user.
+### Request format ###
+```http
+POST /site-api/collection_edit.php
+```
+ - cid: The collection ID string
+ - name: The new name for the collection (limit 32 characters)
+ - description: The new description for the collection (limit 500 characters)
+
+### Response format ###
+A JSON object
+ - status: "success" if the operation succeeded, "error" otherwise
+ - message: A short message describing the status
+ - collection_info: The "info" part of the [collection object](#the-collection-object) which contains the updated info.
+
+## collection_add.php ##
+Adds assets to a collection owned by the logged in user.
+### Request format ###
+```http
+POST /site-api/collection_edit.php
+```
+ - cid: The collection ID string
+ - assets: A string containing a JSON array of [truncated asset objects](#the-truncated-asset-object)
+
+### Response format ###
+A JSON object
+ - status: "success" if the operation succeeded, "error" otherwise
+ - message: A short message describing the status
+
+## collection_remove.php ##
+Removes assets from a collection owned by the logged in user.
+### Request format ###
+```http
+POST /site-api/collection_edit.php
+```
+ - cid: The collection ID string
+ - assets: A string containing a JSON array of [truncated asset objects](#the-truncated-asset-object)
+
+### Response format ###
+A JSON object
+ - status: "success" if the operation succeeded, "error" otherwise
+ - message: A short message describing the status
