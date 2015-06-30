@@ -16,7 +16,7 @@ if($userid === 'false' || $cid === 'false') {
 	die(json_encode(array(array("status"=>"error","message"=>"Missing params"))));
 }
 
-$info = getCollection($userid, $cid));
+$info = getCollection($userid, $cid);
 $assets = getCollectionAssetList($userid, $cid);
 
 echo json_encode(array("info" => $info, "assets" => $assets));
