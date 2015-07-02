@@ -28,7 +28,7 @@
     <div class="container main" style="height:440px;">
         <div class="main-inner">
             <form enctype="multipart/form-data">
-				<div id="message"></div>
+				<p id="login-message"></p>
 				<input type="hidden" name="token" value="<?php echo $token; ?>">
 				<div class="sheetBody">
 					<div class="section">
@@ -68,18 +68,20 @@
 			$.post("/site-api/login.php", {token: OpenSprites.view.token, username: $("#os-user").val(), password: $("#os-pass").val()}, function(data){
 				console.log(data);
 				if(data.status == "success"){
+					console.log("Login success");
 					location.href = OpenSprites.view.return;
 				} else {
-					$("#message").text(data.message);
+					console.log(data.message, $("#login-message"));
+					$("#login-message").text(data.message);
 					if(data.hasOwnProperty("wait")){
 						allowed = false;
 						clearInterval(interval);
 						waitSecs = data.wait;
 						interval = setInterval(function(){
 							waitSecs--;
-							$("#message").text("Wrong username or password, wait " + waitSecs + " seconds before trying again");
+							$("#login-message").text("Wrong username or password, wait " + waitSecs + " seconds before trying again");
 							if(waitSecs <= 0){
-								$("#message").text("Wrong username or password");
+								$("#login-message").text("Wrong username or password");
 								allowed = true;
 								clearInterval(interval);
 							}
@@ -87,7 +89,7 @@
 					}
 				}
 			}).fail(function(){
-				$("#message").text("Whoops! We couldn't get a response from OpenSprites servers. Try again later.");
+				$("#login-message").text("Whoops! We couldn't get a response from OpenSprites servers. Try again later.");
 			});
 		});
 	</script>
