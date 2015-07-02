@@ -32,7 +32,6 @@ $userId = intval($userObj['memberId']);
 $hasher = new PasswordHash(8, FALSE);
 if(!$hasher->CheckPassword($password, $userObj['password'])){
 	// failed, deal with spamming
-	var_dump(file_get_contents("../assets/includes/database.php"));
 	$isAble = checkFailedLogin($userId);
 	if($isAble === TRUE){
 		die(json_encode(array("status"=>"error","code"=>"failed","message"=>"Wrong username or password")));
