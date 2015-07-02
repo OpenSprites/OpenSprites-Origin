@@ -4,7 +4,6 @@
     var loggedInUserId = "deprecated: Use 'OpenSprites.user.id'";
 
     var OpenSprites = OpenSprites || {};
-    OpenSprites.$SESSION = <?php echo json_encode($_SESSION); ?>;
     OpenSprites.user = <?php echo json_encode(array("name"=>$logged_in_user, "id"=>$logged_in_userid, "group"=>$user_group, "banned"=>$user_banned)); ?>;
 </script>
 <div class="header">

@@ -4,6 +4,12 @@
     }
 	require_once 'database.php';
 	
+	function et_regenerateToken(){
+		session_regenerate_id(true);
+		$_SESSION["token"] = substr(md5(uniqid(rand())), 0, 13);
+		$_SESSION["userAgent"] = md5($_SERVER["HTTP_USER_AGENT"]);
+	}
+	
 	/*function attemptLogoutBugFix(){
 		$cookies = explode("; ", getallheaders()['Cookie']);
 		$duplicate_search = "OpenSprites_Forum_session";
