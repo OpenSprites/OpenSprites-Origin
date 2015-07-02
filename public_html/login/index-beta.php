@@ -70,7 +70,7 @@
 					location.href = OpenSprites.view.return;
 				} else {
 					$("#message").text(data.message);
-					if(data.hasOwnProperty(wait)){
+					if(data.hasOwnProperty("wait")){
 						allowed = false;
 						clearInterval(interval);
 						waitSecs = data.wait;
