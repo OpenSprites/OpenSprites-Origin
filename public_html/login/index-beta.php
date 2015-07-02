@@ -15,6 +15,7 @@
     <?php include '../Header.html'; ?>
 	<script>
 		OpenSprites.view = <?php json_encode(array("return" => $return, "token" => $token)); ?>;
+	</script>
 </head>
 <body>
     <!--Imports site-wide main styling-->
