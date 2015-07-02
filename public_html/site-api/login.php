@@ -1,5 +1,5 @@
 <?php
-include '../assets/includes/connect.php';
+include 'lib.php';
 require_once "../assets/lib/phpass/PasswordHash.php";
 
 if($_SERVER['REQUEST_METHOD'] !== "POST"){

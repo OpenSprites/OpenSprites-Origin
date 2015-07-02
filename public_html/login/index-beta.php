@@ -66,12 +66,9 @@
 		$(".button.submit").click(function(){
 			if(!allowed) return;
 			$.post("/site-api/login.php", {token: OpenSprites.view.token, username: $("#os-user").val(), password: $("#os-pass").val()}, function(data){
-				console.log(data);
 				if(data.status == "success"){
-					console.log("Login success");
 					location.href = OpenSprites.view.return;
 				} else {
-					console.log(data.message, $("#login-message"));
 					$("#login-message").text(data.message);
 					if(data.hasOwnProperty("wait")){
 						allowed = false;
