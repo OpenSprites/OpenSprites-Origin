@@ -241,7 +241,7 @@ function getAllReports(){
 	return imagesQuery("SELECT *  FROM `$report_table_name` ORDER BY `reportTime` DESC", array());
 }
 
-function isFailedLoginAcceptable($userid){
+function checkFailedLogin($userid){
 	global $forum_dbh;
 	$stmt = $forum_dbh->prepare("SELECT * FROM `os_login_attempts` WHERE `userid`=?");
 	$stmt->execute(array($userid));
