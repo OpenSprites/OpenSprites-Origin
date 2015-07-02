@@ -63,7 +63,7 @@
 			location.href = OpenSprites.view.return;
 		});
 		
-		$(".button.login").click(function(){
+		$(".button.submit").click(function(){
 			if(!allowed) return;
 			$.post("/site-api/login.php", {token: OpenSprites.view.token, username: $("#os-user").val(), password: $("#os-pass").val()}, function(data){
 				if(data.status == "success"){
