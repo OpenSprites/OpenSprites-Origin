@@ -199,3 +199,41 @@ POST /site-api/collection_edit.php
 A JSON object
  - status: "success" if the operation succeeded, "error" otherwise
  - message: A short message describing the status
+
+## token.php ##
+Creates a CSRF token and returns it.
+### Request format ###
+```http
+GET /site-api/token.php
+```
+
+### Response format ###
+A JSON object
+ - token: The generated token
+
+## logout.php ##
+Logs the current user out. Subsequent logins should get a new CSRF token.
+### Request format ###
+```http
+GET /site-api/logout.php
+```
+
+### Response format ###
+Returns nothing.
+
+## login.php ##
+Logs in the specified user.
+### Request format ###
+```http
+POST /site-api/login.php
+```
+ - token: The CSRF token
+ - username: A username or email
+ - password: The password for the account
+
+### Response format ###
+A JSON object
+ - status: "success" if login was successful, or "error"
+ - code: A string identifying the type of login failure, if any
+ - wait: If specified, the client will be locked out for this number of seconds before another login attempt can be made
+ - message: A user-friendly message to display

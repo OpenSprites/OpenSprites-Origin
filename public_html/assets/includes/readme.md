@@ -56,6 +56,7 @@
  - setUserGroups($userid:int, $groups:array):void: Sets the group IDs specified for the user with the ID specified.
  - getUserGroups($userid:int):array: Returns an array of group IDs that the user belongs to
  - getAllGroups():array: Returns an associative array of all groups in the form `groupId => groupName`
+ - isFailedLoginAcceptable($userid:int):mixed: Returns TRUE if the client can immediately attempt login again after a failed attempt for the specified userid, or the number of seconds to wait if not.
  
 ## connect.php ##
 ### Automatic actions ###

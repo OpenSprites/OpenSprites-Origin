@@ -24,7 +24,7 @@
     <!-- Main wrapper -->
     <div class="container main" style="height:440px;">
         <div class="main-inner">
-            <form action="/forums/?p=user/login" method="post" enctype="multipart/form-data">
+            <form action="//opensprites.org/forums/?p=user/login" method="post" enctype="multipart/form-data">
 				<input type="hidden" name="return" value="<?php echo $return; ?>">
 				<input type="hidden" name="token" value="<?php echo $token; ?>">
 				<div class="sheetBody">

@@ -241,6 +241,41 @@ function getAllReports(){
 	return imagesQuery("SELECT *  FROM `$report_table_name` ORDER BY `reportTime` DESC", array());
 }
 
+function isFailedLoginAcceptable($userid){
+	global $forum_dbh;
+	$stmt = $forum_dbh->prepare("SELECT * FROM `os_login_attempts` WHERE `userid`=?");
+	$stmt->execute(array($userid));
+	$res = $stmt->fetchAll(PDO::FETCH_ASSOC);
+	if(sizeof($res) == 0){
+		$stmt2 = $forum_dbh->prepare("INSERT INTO `os_login_attempts` (`ipAddr`,`userAgent`, `lastLoginTime`, `loginAttempts`, `userid`)"
+			. " VALUES(:ip, :ua, NOW(), 1, :userid)");
+		$stmt2->execute(array(":userid"=>$userid, ":ip" => $_SERVER['REMOTE_ADDR'], ":ua" => $_SERVER['HTTP_USER_AGENT']));
+		return TRUE;
+	} else {
+		$lastDate = $res[0]['lastLoginTime'];
+		$numAttempts = $res[0]['loginAttempts'] + 1;
+		
+		$stmt4 = $forum_dbh->prepare("SELECT UNIX_TIMESTAMP(?) as timestamp");
+		$stmt4->execute(array($lastDate));
+		$res4 = $stmt4->fetchAll(PDO::FETCH_ASSOC);
+		$lastDate = $res4[0]['timestamp'];
+		
+		if($numAttempts < 5){
+			$stmt3 = $forum_dbh->prepare("UPDATE `os_login_attempts` SET `ipAddr`=:ip, `userAgent`=:ua, `lastLoginTime`=NOW(), `loginAttempts`=`loginAttempts`+1 WHERE `userid`=:userid");
+			$stmt3->execute(array(":userid"=>$userid, ":ip" => $_SERVER['REMOTE_ADDR'], ":ua" => $_SERVER['HTTP_USER_AGENT']));
+			return TRUE;
+		} else {
+			$val1 = time() - $lastDate;
+			if($val1 < 120){
+				return 120 - $val1;
+			}
+			$stmt3 = $forum_dbh->prepare("UPDATE `os_login_attempts` SET `ipAddr`=:ip, `userAgent`=:ua, `lastLoginTime`=NOW(), `loginAttempts`=0 WHERE `userid`=:userid");
+			$stmt3->execute(array(":userid"=>$userid, ":ip" => $_SERVER['REMOTE_ADDR'], ":ua" => $_SERVER['HTTP_USER_AGENT']));
+			return TRUE;
+		}
+	}
+}
+
 function isUserAbleToReport($userid){
 	global $dbh;
 	global $user_report_table_name;
