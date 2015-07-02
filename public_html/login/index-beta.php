@@ -14,7 +14,7 @@
     <!--Imports the metadata and information that will go in the <head> of every page-->
     <?php include '../Header.html'; ?>
 	<script>
-		OpenSprites.view = <?php json_encode(array("return" => $return, "token" => $token)); ?>;
+		OpenSprites.view = <?php echo json_encode(array("return" => $return, "token" => $token)); ?>;
 	</script>
 </head>
 <body>
