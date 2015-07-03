@@ -55,7 +55,7 @@ if(isset($_POST['action'])){
 		<form action="edit-mods.php" method="post">
 			<input type="hidden" name="action" value="add" />
 			<label for="new-mod-id">User id: </label><input type="number" id="new-mod-id" name="mod_id" /><br/>
-			<button type="submit" />
+			<button type="submit">Add</button>
 		</form>
 		
 		<h3>Current mods</h3>
