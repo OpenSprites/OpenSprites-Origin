@@ -73,6 +73,14 @@ function setAccountType($username, $type){
 	$stmt->execute(array($type, $username));
 }
 
+function setAccountTypeById($userid, $type){
+	global $forum_dbh;
+	global $forum_member_table;
+	
+	$stmt = $forum_dbh->prepare("UPDATE `$forum_member_table` SET `account`=? WHERE `memberId`=?");
+	$stmt->execute(array($type, $userid));
+}
+
 function setProfileSettings($userid, $settings){
 	global $forum_dbh;
 	
