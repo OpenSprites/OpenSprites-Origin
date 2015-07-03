@@ -11,6 +11,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<link href='/login/login_style.css' rel='stylesheet' type='text/css'>
     <!--Imports the metadata and information that will go in the <head> of every page-->
     <?php include '../Header.html'; ?>
 	<script>
