@@ -1,61 +1,69 @@
+################# Error Pages #################
 ErrorDocument 401 /401.php
 ErrorDocument 403 /403.php
 ErrorDocument 404 /404.php
 ErrorDocument 500 /500.php
 
+
+################## PHP Flags ##################
 php_flag display_startup_errors on
 php_flag display_errors on
 php_flag html_errors on
 php_value error_reporting -1
 
+
+################## Rewrites ###################
 RewriteEngine On
 
-# shorthands
+## shorthands ##
 Redirect /stats /statistics/
 Redirect /stats/ /statistics/
 
-# remove www
+## remove www ##
 RewriteCond %{HTTP_HOST} ^www.opensprites.org$ [NC]
 RewriteRule ^(.*)$ http://opensprites.org/$1 [R=301,L]
 
-# file pages
+
+#### Subpages of /users/ ####
+
+## file pages ##
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule ^users/([^/]+)/([^/]+)/$ users/file.php?id=$1&file=$2 [QSA]
+RewriteRule ^users/([^/]+)/([^/]+)/$ users/file.php?id=$1&file=$2 [QSA,L]
 
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule ^users/([^/]+)/([^/]+)$ users/file.php?id=$1&file=$2 [QSA]
+RewriteRule ^users/([^/]+)/([^/]+)$ users/file.php?id=$1&file=$2 [QSA,L]
 
-# collection pages
+## collection pages ##
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule ^users/([^/]+)/collection/([^/]+)/$ users/collections.php?uid=$1&cid=$2 [QSA]
+RewriteRule ^users/([^/]+)/collection/([^/]+)/$ users/collections.php?uid=$1&cid=$2 [QSA,L]
 
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule ^users/([^/]+)/collection/([^/]+)$ users/collections.php?uid=$1&cid=$2 [QSA]
+RewriteRule ^users/([^/]+)/collection/([^/]+)$ users/collections.php?uid=$1&cid=$2 [QSA,L]
 
-# user pages
+## user pages ##
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule ^users/([^/]+)$ /users/$1/ [R=301,L]
 
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule ^users/([^/]+)/$ users/index.php?id=$1 [QSA]
+RewriteRule ^users/([^/]+)/$ users/index.php?id=$1 [QSA,L]
 
-# search - let's not fool with fancy URLs, I don't think it looks nice for search
-# RewriteCond %{REQUEST_FILENAME} !-f
-# RewriteCond %{REQUEST_FILENAME} !-d
-# RewriteRule ^search?q=([^/]+)$ search/index.php?q=$1 [QSA]
 
-# upload is 3 big
+#### Uploads ####
+
 RewriteCond %{REQUEST_METHOD} =POST
 RewriteCond %{HTTP:Content-Length}%{CONTENT_LENGTH} >50000000
 RewriteRule .* upload/upload.php?file_too_big=1 [R,NC]
 
-# media, scripts, and collections
+
+#### Browse pages ####
+
+## Media ##
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule ^media$ /media/ [R=301,L]
@@ -64,6 +72,7 @@ RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule ^media/$ browse.php?type=media [QSA]
 
+## Scripts ##
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule ^scripts$ /scripts/ [R=301,L]
@@ -72,6 +81,7 @@ RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule ^scripts/$ browse.php?type=script [QSA]
 
+## Collections ##
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule ^collections$ /collections/ [R=301,L]
