@@ -13,7 +13,7 @@ if(!$is_admin) {
         OpenSprites Admin
     </title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-    <link href="http://fonts.googleapis.com/css?family=Open+Sans:300,400" rel="stylesheet" type="text/css">
+    <link href='http://fonts.googleapis.com/css?family=Palanquin' rel='stylesheet' type='text/css'>
     <link href="style.css" rel="stylesheet" type="text/css">
 </head>
 <body>
