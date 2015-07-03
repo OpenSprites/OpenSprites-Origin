@@ -19,9 +19,13 @@ if(!$is_admin) {
 <body>
     <div id='container'>
         <h1>Admin</h1>
-	<h3>Moderate</h3>
+		<h3>Moderate</h3>
         View all assets and moderate 'em.<br>
         <a id='moderates' href='moderate.php'>View</a>
+		
+		<h3>Add/remove OS moderators</h3>
+        Exactly what the title says<br>
+        <a id='moderates' href='edit-mods.php'>Go</a>
 		
         <h3>Bulk Delete</h3>
         View all the uploads of a user and click to delete them.<br>
