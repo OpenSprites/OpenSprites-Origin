@@ -11,19 +11,21 @@ $message ="";
 if(isset($_POST['action'])){
 	if($_POST['action'] == "add"){
 		$userid = intval($_POST['mod_id']);
+		$username = getUserInfo($userid)['username'];
 		$groups = getUserGroups($userid);
 		if(!in_array(1, $groups)) array_push($groups, 1);
-		setAccountTypeById($userid, "administrator");
+		setAccountType($username, "administrator");
 		setUserGroups($userid, $groups);
 		$message = "Moderator added";
 	} else if($_POST['action'] == "remove"){
 		$userid = intval($_POST['mod_id']);
+		$username = getUserInfo($userid)['username'];
 		$groups = getUserGroups($userid);
 		if(in_array(1, $groups)){
 			$key = array_search(1, $groups);
 			unset($groups[$key]);
 		}
-		setAccountTypeById($userid, "member");
+		setAccountType($username, "member");
 		setUserGroups($userid, $groups);
 		$message = "Moderator removed";
 	} else {
