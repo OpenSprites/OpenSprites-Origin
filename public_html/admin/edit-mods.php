@@ -62,9 +62,9 @@ if(isset($_POST['action'])){
 		<?php
 			$mods = forumQuery("SELECT * FROM `et_member` WHERE `account`=\"administrator\"", array());
 			$mods2 = forumQuery("SELECT * FROM `et_member_group` WHERE `groupId`=1", array());
-			outer:for($i=1;$i<sizeof($mods2);$i++){
+			for($i=1;$i<sizeof($mods2);$i++){
 				for($j=0;$j<sizeof($mods);$j++){
-					if($mods[$j]['memberId'] == $mods2[$i]['memberId']) continue outer;
+					if($mods[$j]['memberId'] == $mods2[$i]['memberId']) continue 2;
 				}
 				
 				$res = forumQuery("SELECT * FROM `et_member` WHERE `memberId`=?", array($mods2[$i]['memberId']))[0];
