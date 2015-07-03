@@ -65,12 +65,14 @@ function forumQuery0($query, $parameters){
 	$stmt->execute($parameters);
 }
 
-function setAccountType($username, $type){
+function setAccountType($user, $type){
 	global $forum_dbh;
 	global $forum_member_table;
+	$stmt = NULL;
+	if(is_int($user)) $stmt = $forum_dbh->prepare("UPDATE `$forum_member_table` SET `account`=? WHERE `memberId`=?");
+	else $stmt = $forum_dbh->prepare("UPDATE `$forum_member_table` SET `account`=? WHERE `username`=?");
 	
-	$stmt = $forum_dbh->prepare("UPDATE `$forum_member_table` SET `account`=? WHERE `username`=?");
-	$stmt->execute(array($type, $username));
+	$stmt->execute(array($type, $user));
 }
 
 function setProfileSettings($userid, $settings){
