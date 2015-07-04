@@ -19,21 +19,21 @@ if(!$is_admin) {
 <body>
     <div id='container'>
         <h1>Moderation Tools</h1>
-		<h3>Moderate</h3>
-        View all assets and moderate 'em.<br>
+		<h3>Reported Assets</h3>
+        View all flagged assets to dismiss invalid reports or delete offending content.<br>
         <a id='moderates' href='moderate.php'>View</a>
 		
 		<h3>Add/remove OS moderators</h3>
-        Exactly what the title says<br>
+        A tool to grant users moderator access. Not to be used without administration permission.<br>
         <a id='moderates' href='edit-mods.php'>Go</a>
 		
         <h3>Bulk Delete</h3>
-        View all the uploads of a user and click to delete them.<br>
+        View all the uploads of a user and delete select assets.<br>
         <input type='number' inputmode='numeric' id='bulkdelete' value='0' min='0' placeholder='userid'>
         <a id='bulkdelete' href='bulkdelete.php?id=0' data='bulkdelete.php?id='>Go</a>
 		
 		<h3>Purge Thumbnail Cache</h3>
-        Deletes all cached thumbnail files, forces a re-render on load. WARNING: Very dangerous! Audio thumbnails could get corrupted if generated at the same time.<br>
+        Deletes all cached thumbnail files, forces a re-render on load. WARNING: Very dangerous! Audio thumbnails could get corrupted if generated at the same time. Not to be used without administration permission.<br>
         <a id='purgethumbcache' href='../uploads/purge-thumb-cache.php'>Go</a>
 		
 		<h3>Useful Links</h3>
@@ -41,7 +41,7 @@ if(!$is_admin) {
 		<a href="https://opensprites.atlassian.net/wiki/display/OS/Developer+Agreement">Developer Agreement</a><br>
 		<a href="http://opensprites.org:9988/">Citadel Mail service</a><br>
 		<a href="https://opensprites.atlassian.net/wiki/display/KB/OpenSprites+KB"> OpenSprites Knowledge Base</a><br>
-		<a href="https://opensprites.atlassian.net/wiki/display/OS/Useful+URLs">Developer URLs</a>
+		<a href="https://opensprites.atlassian.net/wiki/display/OS/Useful+URLs">Developer URLs</a><br>
     </div>
     
     <script>
