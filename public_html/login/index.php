@@ -54,7 +54,7 @@
 		$("#login-form").on('submit', function(e){
 			e.preventDefault();
 			if(!allowed) return false;
-			$.post("/site-api/login.php", {token: OpenSprites.view.token, username: $("#os-user").val(), password: $("#os-pass").val()}, function(data){
+			$.post("/site-api/login.php", {token: OpenSprites.view.token, username: $("#username").val(), password: $("#password").val()}, function(data){
 				if(data.status == "success"){
 					location.href = OpenSprites.view.return;
 				} else {
