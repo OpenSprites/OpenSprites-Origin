@@ -18,7 +18,7 @@ if(!$is_admin) {
 </head>
 <body>
     <div id='container'>
-        <h1>Admin</h1>
+        <h1>Moderation Tools</h1>
 		<h3>Moderate</h3>
         View all assets and moderate 'em.<br>
         <a id='moderates' href='moderate.php'>View</a>
@@ -35,6 +35,13 @@ if(!$is_admin) {
 		<h3>Purge Thumbnail Cache</h3>
         Deletes all cached thumbnail files, forces a re-render on load. WARNING: Very dangerous! Audio thumbnails could get corrupted if generated at the same time.<br>
         <a id='purgethumbcache' href='../uploads/purge-thumb-cache.php'>Go</a>
+		
+		<h3>Useful Links</h3>
+		<a href="https://opensprites.atlassian.net/wiki/display/OS/Moderation+Situation+Resolution+Guide">Moderation Situation Resolution Guide</a>
+		<a href="https://opensprites.atlassian.net/wiki/display/OS/Developer+Agreement">Developer Agreement</a>
+		<a href="http://opensprites.org:9988/">Citadel Mail service</a>
+		<a href="https://opensprites.atlassian.net/wiki/display/KB/OpenSprites+KB"> OpenSprites Knowledge Base</a>
+		<a href="https://opensprites.atlassian.net/wiki/display/OS/Useful+URLs">Developer URLs</a>
     </div>
     
     <script>
