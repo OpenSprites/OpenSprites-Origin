@@ -1,9 +1,6 @@
 // helper functions
 Array.prototype.contains = function (needle) {
-	for (i in this) {
-		if (this[i] == needle) return true;
-	}
-	return false;
+	return this.indexOf(needle) > -1;
 }
 
 // when theme selection is changed
@@ -17,6 +14,7 @@ $('#theme-select').on('change', function() {
 var themes = ['Regular', 'Dark'];
 if(typeof localStorage['os-theme'] === 'undefined' || !themes.contains(localStorage['os-theme'])) {
 	localStorage['os-theme'] = 'Regular';
+	OpenSprites.theme = 'Regular';
 }
 
 // set selection to the saved theme

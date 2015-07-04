@@ -24,6 +24,9 @@
 			"___________________________________________________________________");
 	}
 	
+	OpenSprites.theme = "Regular";
+	if(typeof localStorage['os-theme'] !== 'undefined')
+		OpenSprites.theme = localStorage['os-theme'];
 </script>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="viewport" content="width=device-width" />
