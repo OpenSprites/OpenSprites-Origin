@@ -37,10 +37,10 @@ if(!$is_admin) {
         <a id='purgethumbcache' href='../uploads/purge-thumb-cache.php'>Go</a>
 		
 		<h3>Useful Links</h3>
-		<a href="https://opensprites.atlassian.net/wiki/display/OS/Moderation+Situation+Resolution+Guide">Moderation Situation Resolution Guide</a>
-		<a href="https://opensprites.atlassian.net/wiki/display/OS/Developer+Agreement">Developer Agreement</a>
-		<a href="http://opensprites.org:9988/">Citadel Mail service</a>
-		<a href="https://opensprites.atlassian.net/wiki/display/KB/OpenSprites+KB"> OpenSprites Knowledge Base</a>
+		<a href="https://opensprites.atlassian.net/wiki/display/OS/Moderation+Situation+Resolution+Guide">Moderation Situation Resolution Guide</a><br>
+		<a href="https://opensprites.atlassian.net/wiki/display/OS/Developer+Agreement">Developer Agreement</a><br>
+		<a href="http://opensprites.org:9988/">Citadel Mail service</a><br>
+		<a href="https://opensprites.atlassian.net/wiki/display/KB/OpenSprites+KB"> OpenSprites Knowledge Base</a><br>
 		<a href="https://opensprites.atlassian.net/wiki/display/OS/Useful+URLs">Developer URLs</a>
     </div>
     
