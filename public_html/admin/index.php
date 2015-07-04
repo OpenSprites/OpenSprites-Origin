@@ -9,9 +9,7 @@ if(!$is_admin) {
 ?>
 
 <head>
-    <title>
-        OpenSprites Admin
-    </title>
+    <title>Moderation Tools</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
     <link href='http://fonts.googleapis.com/css?family=Palanquin' rel='stylesheet' type='text/css'>
     <link href="style.css" rel="stylesheet" type="text/css">
@@ -50,7 +48,7 @@ if(!$is_admin) {
         });
 		
 		$("#purgethumbcahce").click(function(e){
-			if(!confirm("Are you SURE you want to delete cached thumbnails! This will probably break them!")){
+			if(!confirm("Do you have permission from administration to do this? Purging thumbnails may corrupt other thumbnails!")){
 				e.preventDefault();
 				return false;
 			}
