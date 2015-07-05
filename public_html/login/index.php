@@ -34,10 +34,10 @@
 				<div class="login-box">
 					<div class="sprite-login">Log In</div>
 					<div class="form-box">
-						<label for="username" class="sprite-username">Username <a class='small' href='/register'>Create Account</a></label>
-						<input type="text" class="login-field" id="username" autofocus />
-						<label for="password" class="sprite-password">Password <a class='small' href='/forums/?p=user/forgot'>Forgot Password?</a></label>
-						<input type="password" class="login-field" id="password" />
+						<label for="username" class="sprite-username">Username <a class='small' href='/register' tabindex='3'>Create Account</a></label>
+						<input type="text" class="login-field" id="username" tabindex='1' autofocus />
+						<label for="password" class="sprite-password">Password <a class='small' href='/forums/?p=user/forgot' tabindex='4'>Forgot Password?</a></label>
+						<input type="password" class="login-field" id="password" tabindex='2' />
 						<button type='submit' class="login-btn">Log in</button>
 					</div>
 				</div>
