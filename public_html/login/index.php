@@ -37,7 +37,7 @@
 						<label for="username" class="sprite-username">Username <a class='small' href='/register'>Create Account</a></label>
 						<input type="text" class="login-field" id="username" autofocus />
 						<label for="password" class="sprite-password">Password <a class='small' href='/forums/?p=user/forgot'>Forgot Password?</a></label>
-						<input type="text" class="login-field" id="password" />
+						<input type="password" class="login-field" id="password" />
 						<button type='submit' class="login-btn">Log in</button>
 					</div>
 				</div>
