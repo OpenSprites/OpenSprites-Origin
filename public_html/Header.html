@@ -5,11 +5,7 @@
 <script>
 	var OpenSprites = OpenSprites || {};
 	
-	OpenSprites.disableEasterEgg = function(){
-		localStorage.OSEasterEggDisable = "true";
-		console.log("Disabled :(");
-	};
-	if(!localStorage.hasOwnProperty("OSEasterEggDisable")){
+	OpenSprites.printMessage = function(){
 		console.log(
 			"   ____                      _____               _  __             \n" +
 			"  / __ \\ ____   ___   ____  / ___/ ____   _____ (_)/ /_ ___   _____\n" +
@@ -22,6 +18,21 @@
 			"the contact us link!\n\n" +
 			"> OpenSprites.disableEasterEgg() to hide this easter egg.\n" +
 			"___________________________________________________________________");
+	};
+	
+	OpenSprites.disableEasterEgg = function(){
+		localStorage.OSEasterEggDisable = "true";
+		console.log("Disabled :(");
+		console.log("OpenSprites.enableEasterEgg() to enable");
+	};
+	
+	OpenSprites.enableEasterEgg = function(){
+		localStorage.removeItem('OSEasterEggDisable');
+		OpenSprites.printMessage();
+	};
+	
+	if(!localStorage.hasOwnProperty("OSEasterEggDisable")){
+		OpenSprites.printMessage();
 	}
 	
 	OpenSprites.theme = "Regular";

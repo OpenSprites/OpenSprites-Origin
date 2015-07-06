@@ -124,7 +124,7 @@
 						<a href="javascript:alert('not implemented');"><span class='symbol folder new-dropdown-symbol'></span> Collection</a>
 					</li>
 					<li>
-						<a href="javascript:alert('not implemented');"><span class='symbol chat new-dropdown-symbol'></span> Discussion Topic</a>
+						<a href="/forums/?p=conversation/start"><span class='symbol chat new-dropdown-symbol'></span> Discussion Topic</a>
 					</li>
 				</ul>
             </li>
