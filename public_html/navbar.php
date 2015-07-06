@@ -121,7 +121,7 @@
 						<a href="/upload/"><span class='symbol up-arrow-circle new-dropdown-symbol'></span> Resource Upload</a>
 					</li>
 					<li>
-						<a href="/users/<?php echo $logged_in_userid; ?>/collection/create/" onclick="alert('Not implemented');"><span class='symbol folder new-dropdown-symbol'></span> Collection</a>
+						<a href="/users/<?php echo $logged_in_userid; ?>/collection/create/"><span class='symbol folder new-dropdown-symbol'></span> Collection</a>
 					</li>
 					<li>
 						<a href="/forums/?p=conversation/start"><span class='symbol chat new-dropdown-symbol'></span> Discussion Topic</a>
