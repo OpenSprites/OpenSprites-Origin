@@ -60,6 +60,15 @@ RewriteCond %{REQUEST_METHOD} =POST
 RewriteCond %{HTTP:Content-Length}%{CONTENT_LENGTH} >50000000
 RewriteRule .* upload/upload.php?file_too_big=1 [R,NC]
 
+## Collection creation ##
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^users/([^/]+)/collection/create/$ users/collections.php?uid=$1&action=create [QSA,L]
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^users/([^/]+)/collection/create$ users/collections.php?uid=$1&action=create [QSA,L]
 
 #### Browse pages ####
 
