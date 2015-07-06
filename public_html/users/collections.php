@@ -39,8 +39,8 @@ $assets = getAssetsInCollection($uid, $cid);
 	<!-- Main wrapper -->
 	<div class="container main">
 		<div class="main-inner">
-			<h1><?php echo ($is_creating ? "New Collection" : $info['customName'] . "(#" . $info['id'] . ")"); ?></h1>
-			<h2><?php echo ($uid === $logged_in_userid ? "You" : $username) . "(#" . $uid . ")"; ?></h2>
+			<h1><?php echo ($is_creating ? "New Collection" : $info['customName'] . " (#" . $info['id'] . ")"); ?></h1>
+			<h2><?php echo ($uid === $logged_in_userid ? "You" : $username) . " (#" . $uid . ")"; ?></h2>
 			<p>Include more stuff here</p>
 		</div>
 	</div>
