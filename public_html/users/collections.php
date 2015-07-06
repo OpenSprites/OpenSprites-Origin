@@ -54,10 +54,28 @@ if($is_creating){
 				<button type="submit">Create Collection</button>
 			</form>
 			<?php } else { ?>
-			TODO
+			<div id="collection-description">
+				Render markdown here
+			</div>
+				<?php if($uid == $logged_in_userid){ ?>
+				<div id="collection-actions">
+					<p class='label'>Actions:</p>
+					<button class="action" type="button" id="action-edit">Edit Details</button>
+					<button class="action" type="button" id="action-add">Add Assets</button>
+					<button class="action on-select" type="button" id="action-remove">Remove Selected Assets</button>
+					<button class="action" type="button" id="action-collab">Manage Collaborators</button>
+				</div>
+				<?php } ?>
+			<div id="collection-assets">
+				<div id="collection-search">
+					<input type="text" placeholder="Search in collection" />
+				</div>
+				Render asset list here
+			</div>
 			<?php } ?>
 		</div>
 	</div>
+	<br/><br/>
 	
 	<script src="/users/collections.js"></script>
 	
