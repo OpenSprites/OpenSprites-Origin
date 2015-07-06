@@ -79,8 +79,21 @@
 	OpenSprites.domain = "//opensprites.org";
 	
 	OpenSprites.etc = OpenSprites.etc || {};
+	
+	OpenSprites.danger = {};
+	OpenSprites.danger.disableSecurity = function(){
+		localStorage['osDisableSecurity'] = 'true';
+		console.log("Security disabled");
+		console.warn("OpenSprites will not warn you if you are going to potentially harmful sites!");
+	};
+	
+	OpenSprites.danger.enableSecurity = function(){
+		localStorage.removeItem("osDisableSecurity");
+		console.log("Security enabled");
+		console.info("OpenSprites will now warn you if you are going to potentially harmful sites");
+	};
+	
 	OpenSprites.etc.safeHosts = [
-		"opensprites.org",
 		"opensprites.org",
 		"dev.opensprites.org",
 		"blog.opensprites.org",
@@ -93,6 +106,7 @@
 		"cdn.assets.scratch.mit.edu"
 	];
 	OpenSprites.etc.isHostSafe = function(host){
+		if(typeof localStorage['osDisableSecurity'] !== "undefined" && localStorage['osDisableSecurity'] == "true") return true;
 		return OpenSprites.etc.safeHosts.indexOf(host) > -1;
 	};
 </script>
