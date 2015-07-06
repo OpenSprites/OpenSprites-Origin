@@ -23,7 +23,7 @@
                 <div style='width: 100%; height: 470px;'>&nbsp;</div>
                 <p style='position: absolute; margin: auto; top: 480px; left: 0; right: 0; width: 50%; text-align: center; font-size: 18px;'>We couldn't find the page you're looking for.<br>You may want to <a href='/'>go back to the main page</a>.<br/><br/>
 				</p>
-				<form action="/search.php" method="GET" style="text-align: center; margin-bottom: 2em;">
+				<form action="/search/" method="GET" style="text-align: center; margin-bottom: 2em;">
 					Search for: <input type="text" name="q" id="404-search" placeholder="Search" style="padding: 3px;border-top-left-radius: 10px;border-bottom-left-radius: 10px;"><button type="submit" class="btn" style="border-top-left-radius: 0;border-bottom-left-radius: 0;">Search</button>
 				</form>
 				<script>
