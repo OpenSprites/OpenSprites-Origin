@@ -73,7 +73,7 @@
   font-family: sans-serif;
 }
 
-.login-btn:hover {
+.login-btn:hover, .login-btn:focus {
   background-color: #659593;
   cursor: pointer;
 }
