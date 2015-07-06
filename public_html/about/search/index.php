@@ -75,6 +75,7 @@
 					<li><b>Words starting with</b> | <code>word*</code><br/>Searches for words starting with the given text. For example, <code>open*</code> would match both "open" and "opensprites"</li>
 					<li><b>This phrase</b> | <code>"some phrase"</code><br/>Searches for results that contain the given phrase as it is written. For example, <code>"apple banana"</code> would match "apple banana cantaloupe" but not "banana apple"</li>
 				</ul>
+				You can also combine these symbols. For example, <code>+apple -banana cantaloupe</code> matches "apple cantaloupe", and "apple", but not "apple banana" or "cantaloupe"
 			</p>
 			<h2>Need more help?</h2>
 			<p>You can post for help on the <a href="http://opensprites.org/forums/">forums</a> for a response from OpenSprites users, or send a ticket to our <a href="https://opensprites.atlassian.net/servicedesk/customer/portal/2" target="_blank">help desk</a> for a response from OpenSprites moderators.</p>
