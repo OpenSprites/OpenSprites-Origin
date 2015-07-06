@@ -33,6 +33,7 @@ if($is_creating){
 	<script>
 		OpenSprites.view = OpenSprites.view || {};
 		OpenSprites.view.isCreatingCollection = <?php echo json_encode($is_creating); ?>;
+	</script>
 </head>
 <body>
 	<link href='../main-style.css' rel='stylesheet' type='text/css'>
