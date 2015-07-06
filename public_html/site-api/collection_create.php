@@ -20,7 +20,7 @@ if(isset($_POST['assets'])){
 	$raw = json_decode($_POST['assets'], TRUE);
 	if($raw !== NULL && is_array($raw)){
 		for($i=0;$i<sizeof($raw);$i++){
-			if(isset($raw[$i]) && is_array($raw[$i) && isset($raw[$i]['userid']) && isset($raw[$i]['assetid'])){
+			if(isset($raw[$i]) && is_array($raw[$i]) && isset($raw[$i]['userid']) && isset($raw[$i]['assetid'])){
 				$uid = intval($raw[$i]['userid']);
 				$aid = $raw[$i]['assetid'];
 				if(assetExists($uid, $aid)){
