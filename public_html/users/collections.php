@@ -49,7 +49,7 @@ if($is_creating){
 			<?php if($is_creating){ ?>
 			<form id="create-collection">
 				<p class='status'></p>
-				<input type="text" name="name" id="collection-name" placeholder="Collection name" maxlen="32" /><br/>
+				<input type="text" name="name" id="collection-name" placeholder="Collection name" maxlength="32" /><br/>
 				<button type="submit">Create Collection</button>
 			</form>
 			<?php } else { ?>
