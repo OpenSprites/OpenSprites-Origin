@@ -17,7 +17,7 @@ if(isset($_GET['cid'])){
 	$cid = $_GET['cid'];
 }
 
-$is_creating = (isset($_GET['action']) && $_GET['action'] === "create") || $_GET['cid'] == "create";
+$is_creating = ((isset($_GET['action']) && $_GET['action'] === "create") || $_GET['cid'] == "create");
 if($is_creating){
 	$cid = NULL;
 } else {
@@ -32,7 +32,7 @@ if($is_creating){
 	?>
 	<script>
 		OpenSprites.view = OpenSprites.view || {};
-		OpenSprites.view.isCreatingCollection = <?php json_encode($is_creating); ?>;
+		OpenSprites.view.isCreatingCollection = <?php echo json_encode($is_creating); ?>;
 </head>
 <body>
 	<link href='../main-style.css' rel='stylesheet' type='text/css'>
