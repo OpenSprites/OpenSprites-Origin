@@ -56,7 +56,7 @@
 		$logged_in_user = $userInfo['username'];
 		$user = $logged_in_user;
 		$user_group = ucwords($userInfo['usertype']);
-		$user_type = $userinfo['usertype'];
+		$user_type = $userInfo['usertype'];
 		$user_banned = ($user_type == 'suspended');
 		if($user_group === 'administrator' || in_array("moderator", $userInfo['groups']) || in_array("Moderator", $userInfo['groups'])){
 			$is_admin = true;
