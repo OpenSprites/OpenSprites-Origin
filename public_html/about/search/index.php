@@ -69,11 +69,11 @@
 			<p><sub><sup>Note: Some advanced users may note that the following system is exactly how <code>MySQL boolean searches</code work.</sup></sub></p>
 			<p>The advanced search options are:
 				<ul>
-					<li><b>Some of these words</b> | <code>(no symbol)</code<br/>Searches for results that contain one or more of the words, and the "Relevance" sort will sort results by the number of matched words. To use this in the search bar, enter space-separated words as usual. This is the default search mode.</li>
-					<li><b>All of these words</b> | <code>+word</code<br/>Searches only for results that contain all of the given words. If a result does not contain one or more of the words, it is excluded. For example, <code>+world</code> would match "hello world" but not "hello opensprites"</li>
-					<li><b>None of these words</b> | <code>-word</code<br/>Searches only for results that do not contain any of the given words. If a result contains one, it is excluded. For example, <code>-hello</code> would match "opensprites is cool" but not "hello opensprites"</li>
-					<li><b>Words starting with</b> | <code>word*</code<br/>Searches for words starting with the given text. For example, <code>open*</code> would match both "open" and "opensprites"</li>
-					<li><b>This phrase</b> | <code>"some phrase"</code<br/>Searches for results that contain the given phrase as it is written. For example, <code>"apple banana"</code> would match "apple banana cantaloupe" but not "banana apple"</li>
+					<li><b>Some of these words</b> | <code>(no symbol)</code><br/>Searches for results that contain one or more of the words, and the "Relevance" sort will sort results by the number of matched words. To use this in the search bar, enter space-separated words as usual. This is the default search mode.</li>
+					<li><b>All of these words</b> | <code>+word</code><br/>Searches only for results that contain all of the given words. If a result does not contain one or more of the words, it is excluded. For example, <code>+world</code> would match "hello world" but not "hello opensprites"</li>
+					<li><b>None of these words</b> | <code>-word</code><br/>Searches only for results that do not contain any of the given words. If a result contains one, it is excluded. For example, <code>-hello</code> would match "opensprites is cool" but not "hello opensprites"</li>
+					<li><b>Words starting with</b> | <code>word*</code><br/>Searches for words starting with the given text. For example, <code>open*</code> would match both "open" and "opensprites"</li>
+					<li><b>This phrase</b> | <code>"some phrase"</code><br/>Searches for results that contain the given phrase as it is written. For example, <code>"apple banana"</code> would match "apple banana cantaloupe" but not "banana apple"</li>
 				</ul>
 			</p>
 			<h2>Need more help?</h2>
