@@ -59,7 +59,7 @@ if($is_creating){
 		</div>
 	</div>
 	
-	<script src="collections.js"></script>
+	<script src="/users/collections.js"></script>
 	
 	<!-- footer -->
 	<?php echo file_get_contents('../footer.html'); ?>
