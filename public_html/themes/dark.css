@@ -1,9 +1,14 @@
 /* add !important to everything that needs to be overwritten */
 
-/* global */
+/* global -> all pages */
 body {
 	background-color: #282828 !important;
 	display: inherit !important;
+}
+
+.footer {
+	background-color: #151515 !important;
+	color: #E8E8E8 !important;
 }
 
 /* brighter color for links ----> more friendly for dark theme */
@@ -14,7 +19,7 @@ body {
 	color: #A2E3DF !important;
 }
 
-/* main page */
+/* main page/similar */
 .welcome .symbol {
 	color: rgb(40, 40, 40) !important;
 }
@@ -29,6 +34,10 @@ body {
 
 h1.firstHeading, h2 {
 	border-bottom: solid 1px white !important;
+}
+
+#opensprites-heading {
+	color:#fff;
 }
 
 .box > h1 {
@@ -48,8 +57,10 @@ h1.firstHeading, h2 {
 .box-content {
 	background: #282828 !important;
 	border-top: none !important;
+	color:#fff;
 }
 
+/* the 'sort by' buttons */
 .toggleset button {
 	background: #595959; !important;
 }
@@ -60,11 +71,6 @@ h1.firstHeading, h2 {
 
 .toggleset button.selected {
 	background: #8E8C8C; !important;
-}
-
-.footer {
-	background-color: #151515 !important;
-	color: #E8E8E8 !important;
 }
 
 select {
@@ -98,12 +104,12 @@ select {
 	background-color: rgb(76, 76, 76) !important;
 }
 
-.upload-message {
-	color: #2A2A2A !important;
-}
-
 #upload-status {
 	background: rgba(150, 150, 150, 0.5) !important;
+}
+
+.upload-message {
+	color: #2A2A2A !important;
 }
 
 #select-button, #upload-button, #url-button {
