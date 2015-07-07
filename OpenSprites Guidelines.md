@@ -16,4 +16,4 @@ Guidelines, which also apply on OpenSprites.
 
 * We welcome people of all ages, races, ethnicities, religions, sexual orientations, and gender identities. Bullying, harrasment, stalking or using our services to target users is not tolerated under any circumstances.
 
-If you break any of our Community Guidelines, the OpenSprites staff will take appropriate action. If you see anybody break these Guidelines, press "Report" and we will deal with the problem.
+If you break any of our Community Guidelines, the OpenSprites staff will take appropriate action. If you see anybody break these Guidelines, press "**Report**" and we will deal with the problem.
