@@ -98,7 +98,7 @@ if(isset($_GET['userid'])) {
 
 connectForumDatabase();
 $userInfo2 = getUserInfo(intval($userid));
-$userInfo2['avatar'] = "http://opensprites.org/forums/uploads/avatars/" . $userid . ".png";
+$userInfo2['avatar'] = "http://opensprites.org/forums/uploads/avatars/" . $userid . ".png?_=" . time();
 
 $handle = curl_init($userInfo2['avatar']);
 curl_setopt($handle,  CURLOPT_RETURNTRANSFER, TRUE);

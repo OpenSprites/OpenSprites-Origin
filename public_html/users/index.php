@@ -34,7 +34,7 @@
 	
 	// check if avatar exists
 	// TODO: make this less hacky, maybe add a default avatar on account creation
-	$user['avatar'] = "http://opensprites.org/forums/uploads/avatars/" . $userid . ".png";
+	$user['avatar'] = "http://opensprites.org/forums/uploads/avatars/" . $user['userid'] . ".png?_=" . time();
 	$handle = curl_init($user['avatar']);
 	curl_setopt($handle,  CURLOPT_RETURNTRANSFER, TRUE);
 	$response = curl_exec($handle);
