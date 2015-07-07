@@ -24,6 +24,14 @@
         $username = $user['username'];
     }
 	
+	//          Let's not have people viewing potentially dangerous suspended profiles
+	// we don't want to have a system to delete users because we should accept appeals
+	// no matter how big the offence was. Suspending a user is basically deleting them
+	if($user['usertype'] == "suspended" && !$is_admin){
+		include '../404.php';
+        die();
+	}
+	
 	// check if avatar exists
 	// TODO: make this less hacky, maybe add a default avatar on account creation
 	$user['avatar'] = "http://opensprites.org/forums/uploads/avatars/" . $userid . ".png";
