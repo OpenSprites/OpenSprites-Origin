@@ -57,8 +57,14 @@ function getCollectionAssetList($uid, $cid){
 	return getAssetList($assets);
 }
 
-header("Access-Control-Allow-Origin: *");
-header("Cache-Control: no-cache, must-revalidate");
-header("Expires: Mon, 26 Jul 1997 05:00:00 GMT");
-header("Content-Type: application/json");
+function isOutputting(){
+	return (!defined('OS_LIB_INCLUDED'));
+}
+
+if(!defined('OS_LIB_INCLUDED')){
+	header("Access-Control-Allow-Origin: *");
+	header("Cache-Control: no-cache, must-revalidate");
+	header("Expires: Mon, 26 Jul 1997 05:00:00 GMT");
+	header("Content-Type: application/json");
+}
 ?>

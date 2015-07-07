@@ -7,7 +7,6 @@
     if(is_numeric($_GET['id'])) {
     	$id = $_GET['id'];
     } else {
-    	connectForumDatabase();
     	try {
     		$id = forumQuery("SELECT * FROM `$forum_member_table` WHERE `username`=?", array($_GET['id']))[0]['memberId'];
     	} catch(Exception $e) {
@@ -15,18 +14,28 @@
         	die();
     	}
     }
-    
-    $raw_json = file_get_contents("http://opensprites.org/site-api/user.php?userid=" . $id);
-    if(!isset(json_decode($raw_json, true)['userid'])) {
+	
+    $user = getUserInfo(intval($id));
+    if(!isset($user['userid'])) {
         include '../404.php';
         die();
     } else {
         $user_exist = true;
-        $user = json_decode($raw_json, true);
         $username = $user['username'];
     }
-
-    $profiledata = getUserInfo(intval($id));
+	
+	// check if avatar exists
+	// TODO: make this less hacky, maybe add a default avatar on account creation
+	$user['avatar'] = "http://opensprites.org/forums/uploads/avatars/" . $userid . ".png";
+	$handle = curl_init($user['avatar']);
+	curl_setopt($handle,  CURLOPT_RETURNTRANSFER, TRUE);
+	$response = curl_exec($handle);
+	$httpCode = curl_getinfo($handle, CURLINFO_HTTP_CODE);
+	if($httpCode == 404) {
+		$user['avatar'] = "//opensprites.org/assets/images/defaultuser.png";
+	}
+	curl_close($handle);
+	// --------------------
 
     function unescape($inp) { 
         if(is_array($inp)) 
@@ -68,8 +77,8 @@
         OpenSprites.view.user.id = <?php echo json_encode($user['userid']); ?>;
         OpenSprites.view.user.name = <?php echo json_encode($user['username']); ?>;
 		OpenSprites.view.user.profile = {};
-		OpenSprites.view.user.profile.about = <?php echo json_encode($profiledata['about']); ?>;
-		OpenSprites.view.user.profile.location = <?php echo json_encode($profiledata['location']); ?>;
+		OpenSprites.view.user.profile.about = <?php echo json_encode($user['about']); ?>;
+		OpenSprites.view.user.profile.location = <?php echo json_encode($user['location']); ?>;
 		OpenSprites.view.user.profile.bgcolor = <?php echo json_encode($profileSettings['bgcolor']); ?>;
     </script>
     
