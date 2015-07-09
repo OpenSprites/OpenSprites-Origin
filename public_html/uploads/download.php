@@ -109,6 +109,9 @@ if($asset['type'] == "script"){
 	$project['children'][0]['scripts'] = array(array(0, 0, getScript($file_url)));
 	
 	setProjectJson($zip, $project);
+	
+	header("Content-disposition: attachment; filename=\"" . $asset[0]['customName'] . ".sb2\"");
+	
 	closeAndPrint($zip, $tmp);
 } else if($ext == "gif") {
 	// todo: implement
