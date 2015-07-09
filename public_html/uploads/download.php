@@ -100,7 +100,7 @@ function getScript($filename){
 	return json_decode($jsonStr, TRUE);
 }
 
-if($asset['type'] == "script"){
+if($asset['assetType'] == "script"){
 	$tmp = newTempZip("../assets/sb2/default.sb2");
 	$zip = zipOpen($tmp);
 	
