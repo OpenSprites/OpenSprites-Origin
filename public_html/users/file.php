@@ -342,46 +342,6 @@
     <?php } ?>
 	
 	<script src="/uploads/edit.js"></script>
-	
-	<?php if($obj['type'] == 'script') { ?>
-	<script src='/assets/js/jszip.min.js'></script>
-	<script>
-		var input = '<?php echo file_get_contents('http://opensprites.org'.$obj['url']); ?>';
-		var name = <?php echo json_encode($obj['name']); ?>
-	
-		$('#follow a').click(function() {
-			var sprite = {
-				"objName": name,
-				"scripts": [[10, 10, JSON.parse(input)]],
-				"sounds": [],
-				"costumes": [{
-				"costumeName": "costume1",
-				"baseLayerID": 0,
-				"baseLayerMD5": "f9a1c175dbe2e5dee472858dd30d16bb.svg",
-				"bitmapResolution": 1,
-				"rotationCenterX": 47,
-				"rotationCenterY": 55
-			}],
-				"currentCostumeIndex": 0,
-				"scratchX": 0,
-				"scratchY": 0,
-				"scale": 1,
-				"direction": 90,
-				"rotationStyle": "normal",
-				"isDraggable": false,
-				"indexInLibrary": 100000,
-				"visible": true,
-				"spriteInfo": {}
-			};
-			
-			var zip = new JSZip();
-			zip.file("sprite.json", JSON.stringify(sprite));
-			zip.file("0.svg", '<?xml version="1.0" encoding="UTF-8" standalone="no"?> <!-- Created with Inkscape (http://www.inkscape.org/) --> <svg xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" width="120.71323" height="120.71323" id="svg5033" version="1.1" inkscape:version="0.48.4 r9939" sodipodi:docname="os-logo-3.svg"> <defs id="defs5035" /> <sodipodi:namedview id="base" pagecolor="#ffffff" bordercolor="#666666" borderopacity="1.0" inkscape:pageopacity="0.0" inkscape:pageshadow="2" inkscape:zoom="0.9899495" inkscape:cx="221.20706" inkscape:cy="45.666117" inkscape:document-units="px" inkscape:current-layer="g3023" showgrid="false" inkscape:window-width="1280" inkscape:window-height="1000" inkscape:window-x="0" inkscape:window-y="24" inkscape:window-maximized="1" fit-margin-top="0" fit-margin-left="0" fit-margin-right="0" fit-margin-bottom="0" /> <metadata id="metadata5038"> <rdf:RDF> <cc:Work rdf:about=""> <dc:format>image/svg+xml</dc:format> <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage" /> <dc:title></dc:title> </cc:Work> </rdf:RDF> </metadata> <g inkscape:label="Layer 1" inkscape:groupmode="layer" id="layer1" transform="translate(-341.53763,-221.84322)"> <g id="g5095"> <g id="g3023"> <rect style="fill:#659593;fill-opacity:1;stroke:none" id="rect7497" width="120.71323" height="120.71323" x="341.53763" y="221.84322" /> <g transform="matrix(1.7755226,0,0,1.7755226,-288.4612,-534.5169)" id="g5082"> <g inkscape:export-ydpi="90" inkscape:export-xdpi="90" inkscape:export-filename="/home/ryan/Pictures/open sprites/os3.png" style="fill:#ffffff" transform="translate(-998.81912,382.93647)" id="g9212"> <g style="fill:#ffffff" transform="matrix(2.7299333,0,0,2.7299333,-1820.3411,-7.0306086)" id="g9220"> <g style="fill:#ffffff" id="g9222" transform="matrix(0.62436546,0,0,0.62436546,438.48624,4.5611745)"> <path transform="matrix(0.31100482,0,0,0.31100482,720.87177,37.79203)" style="fill:#ffffff;fill-opacity:1;stroke:none" d="m 1495.8929,-10.941391 c 0,10.30602838 -8.3547,18.6607151 -18.6607,18.6607151 -10.3061,0 -18.6607,-8.35468672 -18.6607,-18.6607151 0,-10.306028 8.3546,-18.660715 18.6607,-18.660715 10.306,0 18.6607,8.354687 18.6607,18.660715 z" id="path9224" inkscape:connector-curvature="0" /> <path style="fill:#ffffff;fill-opacity:1;stroke:none" d="m 1180.1783,28.585651 5.9978,0 0,11.581086 -5.9978,0 z" id="rect9226" inkscape:connector-curvature="0" /> </g> <g style="fill:#ffffff" id="g9228" transform="matrix(-0.62436546,0,0,-0.62436546,1911.7385,57.037993)"> <path transform="matrix(0.31100482,0,0,0.31100482,720.87177,37.79203)" style="fill:#ffffff;fill-opacity:1;stroke:none" d="m 1495.8929,-10.941391 c 0,10.30602838 -8.3547,18.6607151 -18.6607,18.6607151 -10.3061,0 -18.6607,-8.35468672 -18.6607,-18.6607151 0,-10.306028 8.3546,-18.660715 18.6607,-18.660715 10.306,0 18.6607,8.354687 18.6607,18.660715 z" id="path9230" inkscape:connector-curvature="0" /> <path style="fill:#ffffff;fill-opacity:1;stroke:none" d="m 1180.1783,28.585651 5.9978,0 0,11.581086 -5.9978,0 z" id="rect9232" inkscape:connector-curvature="0" /> </g> </g> </g> </g> </g> </g> </g> </svg> ');
-			var content = zip.generate({type:"blob"});
-			saveAs(content, name+".sprite2");
-		});
-	</script>
-	<?php } ?>
     
     <!-- footer -->
     <?php echo file_get_contents('../footer.html'); ?>
