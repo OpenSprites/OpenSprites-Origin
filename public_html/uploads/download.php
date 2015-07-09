@@ -86,13 +86,12 @@ function addFile($zip, $filename, $localname){
 function closeAndPrint($zip, $tmpname){
 	$res = $zip->close();
 	if($res === FALSE) dieWith500();
-	$fp = fopen($tmpname, 'rb');
-	if($fp === FALSE) dieWith500();
 	
 	sendHeaders();
 	header("Content-Length: " . filesize($tmpname));
-	fpassthru($fp);
-	fclose($fp);
+	
+	readfile($tmpname);
+	
 	unlink($tmpname);
 }
 
