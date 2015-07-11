@@ -24,7 +24,7 @@ function deleteDir($dirPath) {
     rmdir($dirPath);
 }
 
-deleteDir("../uploads/uploaded/");
+var_dump(shell_exec("sudo rm -r ../uploads/uploaded/"));
 
 // - sites root
 // | - osdev.opensprites.org
@@ -36,6 +36,6 @@ deleteDir("../uploads/uploaded/");
 // |   | - uploads
 // |     | - uploaded
 
-var_dump(shell_exec("ln -s ../../../opensprites.org/public_html/uploads/uploaded ../uploads/uploaded"));
+var_dump(shell_exec("sudo ln -s ../../../opensprites.org/public_html/uploads/uploaded ../uploads/uploaded 2>&1"));
 
 ?>
