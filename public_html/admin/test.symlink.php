@@ -6,6 +6,10 @@ if(!$is_admin){
 
 header("Content-Type: text/plain");
 
+if($_SERVER['HTTP_HOST'] !== "osdev.opensprites.org"){
+	die("Wrong host");
+}
+
 function deleteDir($dirPath) {
     if (! is_dir($dirPath)) {
         throw new InvalidArgumentException("$dirPath must be a directory");
