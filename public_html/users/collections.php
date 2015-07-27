@@ -56,15 +56,15 @@ if($is_creating){
 			<?php } else { ?>
 			<div id="collection-description">
 				Render markdown here
-			</div>
+			</div><br/>
 				<?php if($uid == $logged_in_userid){ ?>
 				<div id="collection-actions">
-					<p class='label'>Actions:</p>
-					<button class="action" type="button" id="action-edit">Edit Details</button>
-					<button class="action" type="button" id="action-add">Add Assets</button>
-					<button class="action on-select" type="button" id="action-remove">Remove Selected Assets</button>
-					<button class="action" type="button" id="action-collab">Manage Collaborators</button>
-				</div>
+					<p class='label' style='float:left;margin-top:2px;margin-right:8px;'>Actions:</p>
+					<button class="action btn orange" type="button" id="action-edit">Edit Details</button>
+					<button class="action btn orange" type="button" id="action-add">Add Assets</button>
+					<button class="action on-select btn orange" type="button" id="action-remove">Remove Selected Assets</button>
+					<button class="action btn orange" type="button" id="action-collab">Manage Collaborators</button>
+				</div><br/>
 				<?php } ?>
 			<div id="collection-assets">
 				<div id="collection-search">
