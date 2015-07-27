@@ -1,3 +1,11 @@
+/* content -- to make finding & organizing stuff easier
+	1. global
+	2. main page/similar
+	3. uploads
+	4. blog
+	5. report form
+*/
+
 /* add !important to everything that needs to be overwritten */
 
 /* global -> all pages */
@@ -138,4 +146,11 @@ div#entries hr {
 
 div#entries hr:last-child {
     display: none;
+}
+
+/* report form */
+#report-details {
+	background-color:#232323;
+	color:#eee;
+}
 }
