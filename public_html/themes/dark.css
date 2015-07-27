@@ -149,8 +149,8 @@ div#entries hr:last-child {
 }
 
 /* report form */
-#report-details {
+#report_details {
 	background-color:#232323;
 	color:#eee;
 }
-}
+
