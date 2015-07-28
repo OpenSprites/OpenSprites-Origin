@@ -42,6 +42,7 @@ if($is_creating){
 		}
 		#id {
 			font-size:20px;
+			margin-top:-10px;
 		}
 	</style>
 </head>
@@ -55,8 +56,8 @@ if($is_creating){
 	<!-- Main wrapper -->
 	<div class="container main">
 		<div class="main-inner">
-			<h1><?php echo ($is_creating ? "New Collection" : $info['customName'] . " <span id='id'>(#" . $info['id'] . ")</span>"); ?></h1>
-			<h2><?php echo ($uid === $logged_in_userid ? "You" : $username) . " (#" . $uid . ")"; ?></h2>
+			<h1><?php echo ($is_creating ? "New Collection" : $info['customName'] . " <br><!--Is there a reason why we need this ID?--><div id='id'>(#" . $info['id'] . ")</div>"); ?></h1>
+			<!--<h2><?php //echo ($uid === $logged_in_userid ? "You" : $username) . " (#" . $uid . ")"; ?></h2>-->
 			<?php if($is_creating){ ?>
 			<form id="create-collection">
 				<p class='status'></p>
