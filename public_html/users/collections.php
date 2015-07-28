@@ -34,6 +34,16 @@ if($is_creating){
 		OpenSprites.view = OpenSprites.view || {};
 		OpenSprites.view.isCreatingCollection = <?php echo json_encode($is_creating); ?>;
 	</script>
+	<style>
+		h1 {
+			font-size:48px;
+			font-weight:300;
+			text-align:center;
+		}
+		#id {
+			font-size:20px;
+		}
+	</style>
 </head>
 <body>
 	<link href='../main-style.css' rel='stylesheet' type='text/css'>
@@ -45,7 +55,7 @@ if($is_creating){
 	<!-- Main wrapper -->
 	<div class="container main">
 		<div class="main-inner">
-			<h1><?php echo ($is_creating ? "New Collection" : $info['customName'] . " (#" . $info['id'] . ")"); ?></h1>
+			<h1><?php echo ($is_creating ? "New Collection" : $info['customName'] . " <span id='id'>(#" . $info['id'] . ")</span>"); ?></h1>
 			<h2><?php echo ($uid === $logged_in_userid ? "You" : $username) . " (#" . $uid . ")"; ?></h2>
 			<?php if($is_creating){ ?>
 			<form id="create-collection">
