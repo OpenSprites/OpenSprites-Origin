@@ -1,5 +1,6 @@
 <?php
-  $variable = file_get_contents('http://opensprites.org/site-api/user.php');
-  $decoded = json_decode($variable);
-  echo $decoded;
+  $json = file_get_contents('http://opensprites.org/site-api/user.php');
+  
+  $obj = json_decode($json);
+  echo $obj->{'username'}; 
 ?>
