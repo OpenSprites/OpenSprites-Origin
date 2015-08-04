@@ -92,8 +92,10 @@ require 'lib.php'; // lib has all the headers and other requires we need already
 $userid = 'false';
 if(isset($_GET['userid'])) {
     $userid = $_GET['userid'];
-} else {
+} else if(isset($_SESSION['userId'])) {
     $userid = $_SESSION["userId"];
+} else {
+    die("{}");
 }
 
 connectForumDatabase();
