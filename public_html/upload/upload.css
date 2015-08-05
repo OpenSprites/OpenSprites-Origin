@@ -22,6 +22,11 @@
 	font-size: 5em;
 	font-weight: 300 !important;
 	color: #4C7776;
+	-webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        -o-user-select: none;
+        user-select: none;
 }
 
 .upload-message.error {
