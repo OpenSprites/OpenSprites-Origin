@@ -71,7 +71,7 @@
 	border-top: 1px solid white;
 }
 
-#actions-container .main-action{
+#actions-container div {
 	display: inline-block;
 	margin-right: 1em;
 	font-style: italic;
@@ -144,13 +144,6 @@
     text-align: left;
 }
 
-#main-actions  {
-    margin-top: 0.5em;
-    padding: 0.5em;
-    border-radius: 20px;
-    background-color: rgba(0, 0, 0, 0.5)
-}
-
 .main-inner {
     padding: 10px;
     transition: height 500ms;
@@ -208,6 +201,20 @@
     white-space: nowrap;
     overflow-x: auto;
     overflow-y: hidden;
+}
+
+#report {
+	border-radius: 3px;
+	background-color: transparent;
+	padding: 7px;
+	transition: 250ms background-color;
+	-webkit-transition: 250ms background-color;
+	-o-transition: 250ms background-color;
+	-moz-transition: 250ms background-color;
+}
+
+#report:hover{
+	background-color: orangered;
 }
 
 select#admin-group {
