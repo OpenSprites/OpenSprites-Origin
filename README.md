@@ -79,6 +79,20 @@ liam4 is a tester / bug reporter / feature suggester on the OS team. He designed
  - Idea creating
  - Bug reporting
 
+### [Arinerron](http://opensprites.org/users/arinerron/) ###
+![GitHub Logo](https://avatars1.githubusercontent.com/u/3926753?v=3&s=460)
+
+[Very active]
+Arinerron mainly works on fixing bugs, and desktop applications for OpenSprites
+
+ - Bug fixing
+ - Making suggestions real
+ - OpenSprites Desktop Application development
+ - Android App development
+ - iPhone App development
+ - Bug reporting
+
+
 ### [Rumanti](http://opensprites.org/users/14/) ###
 ![Github logo](https://avatars1.githubusercontent.com/u/10893362?s=100)
 
