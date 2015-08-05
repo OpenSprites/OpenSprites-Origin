@@ -2,7 +2,7 @@
 In order to keep OpenSprites safe and friendly for everyone, we ask you to follow our Community Guidelines. Our Guidelines are based around the Scratch Community 
 Guidelines, which also apply on OpenSprites.
 
-* **Be respectful**. When sharing media or posting comments, remember that people of many different ages and backgrounds will see what you’ve shared.
+* **Be respectful**. When sharing media or posting comments, remember that people of many different ages and backgrounds will see what you’ve shared, so do not share innappropriate material.
 
 * **Be constructive**. When commenting about others' media, say something you like about it and offer suggestions.
 
