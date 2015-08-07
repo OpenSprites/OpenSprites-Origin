@@ -96,12 +96,13 @@ Arinerron mainly works on fixing bugs, and desktop applications for OpenSprites
 ### [Rumanti](http://opensprites.org/users/14/) ###
 ![Github logo](https://avatars1.githubusercontent.com/u/10893362?s=100)
 
-[Active]
-Rumanti is a dev on the OS team.
+[Very Active]
+Rumanti is a frontend developer on the OS team. You can blame her for readability and probably efficiency.
 
  - HTML
  - CSS
  - JavaScript
+ - Little PHP when necessary 
 
 ### [Firedrake969](https://github.com/Firedrake969) ###
 ![GitHub Logo](https://avatars3.githubusercontent.com/u/8008245?s=100)
