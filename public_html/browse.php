@@ -40,7 +40,7 @@
     <div class="container main">
         <div class="main-inner">
             <div id="about">
-                <h2><?php echo $displayType; ?></h2>
+                <h2 class="centered-heading"><?php echo $displayType; ?></h2>
                 <p><?php echo $descriptions[$mtype]; ?></p>
 			</div>
 			

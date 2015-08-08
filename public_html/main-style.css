@@ -197,6 +197,9 @@ article.box > h1 {
 h1.firstHeading,
 h2 {
     border-bottom: solid 1px black;
+}
+
+.centered-heading { 
     font-size:40px;
     text-align:center;
 }
