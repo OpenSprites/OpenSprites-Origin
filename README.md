@@ -38,8 +38,8 @@ jbayfield is an OpenSprites administrator and developer.
 ### [MegaApuTurkUltra](http://opensprites.org/users/6/) ###
 ![GitHub Logo](https://avatars0.githubusercontent.com/u/8547938?s=100)
 
-[Very active]
-MegaApuTurkUltra is a sample text, who is mostly responsible for OS not deciding to use text files or some other hacks to store asset details (ಠ_ಠ), for setting up the databases on OS, and for security on the backend.
+[Moderately active]
+MegaApuTurkUltra is a sample text, who is mostly responsible for OS not deciding to use text files or some other hacks to store asset details (ಠ_ಠ), for setting up the databases on OS, and for security on the backend. In constrast with most of the team, he considers himself good at PHP and MySQL while useless at frontend design.
 
  - HTML/CSS/JS/Frontend stuff to some extent
  - PHP/MySQL/Backend stuff
