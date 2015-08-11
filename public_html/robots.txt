@@ -26,5 +26,3 @@ Disallow: /
 
 User-agent: litefinder
 Disallow: /
-
-#test
