@@ -251,7 +251,7 @@ function checkFailedLogin($userid){
 	if(sizeof($res) == 0){
 		$stmt2 = $forum_dbh->prepare("INSERT INTO `os_login_attempts` (`ipAddr`,`userAgent`, `lastLoginTime`, `loginAttempts`, `userid`)"
 			. " VALUES(:ip, :ua, NOW(), 1, :userid)");
-		$stmt2->execute(array(":userid"=>$userid, ":ip" => $_SERVER['REMOTE_ADDR'], ":ua" => $_SERVER['HTTP_USER_AGENT']));
+		$stmt2->execute(array(":userid"=>$userid, ":ip" => $_SERVER['HTTP_CF_CONNECTING_IP'], ":ua" => $_SERVER['HTTP_USER_AGENT']));
 		return TRUE;
 	} else {
 		$lastDate = $res[0]['lastLoginTime'];
@@ -264,7 +264,7 @@ function checkFailedLogin($userid){
 		
 		if($numAttempts < 5){
 			$stmt3 = $forum_dbh->prepare("UPDATE `os_login_attempts` SET `ipAddr`=:ip, `userAgent`=:ua, `lastLoginTime`=NOW(), `loginAttempts`=`loginAttempts`+1 WHERE `userid`=:userid");
-			$stmt3->execute(array(":userid"=>$userid, ":ip" => $_SERVER['REMOTE_ADDR'], ":ua" => $_SERVER['HTTP_USER_AGENT']));
+			$stmt3->execute(array(":userid"=>$userid, ":ip" => $_SERVER['HTTP_CF_CONNECTING_IP'], ":ua" => $_SERVER['HTTP_USER_AGENT']));
 			return TRUE;
 		} else {
 			$val1 = time() - $lastDate;
@@ -272,7 +272,7 @@ function checkFailedLogin($userid){
 				return 120 - $val1;
 			}
 			$stmt3 = $forum_dbh->prepare("UPDATE `os_login_attempts` SET `ipAddr`=:ip, `userAgent`=:ua, `lastLoginTime`=NOW(), `loginAttempts`=0 WHERE `userid`=:userid");
-			$stmt3->execute(array(":userid"=>$userid, ":ip" => $_SERVER['REMOTE_ADDR'], ":ua" => $_SERVER['HTTP_USER_AGENT']));
+			$stmt3->execute(array(":userid"=>$userid, ":ip" => $_SERVER['HTTP_CF_CONNECTING_IP'], ":ua" => $_SERVER['HTTP_USER_AGENT']));
 			return TRUE;
 		}
 	}
@@ -287,7 +287,7 @@ function isUserAbleToReport($userid){
 	if(sizeof($res) == 0){
 		$stmt2 = $dbh->prepare("INSERT INTO `$user_report_table_name` (`userid`,`lastReportTime`, `ipAddr`, `userAgent`)"
 			. " VALUES(:userid, NOW(), :ip, :ua)");
-		$stmt2->execute(array(":userid"=>$userid, ":ip" => $_SERVER['REMOTE_ADDR'], ":ua" => $_SERVER['HTTP_USER_AGENT']));
+		$stmt2->execute(array(":userid"=>$userid, ":ip" => $_SERVER['HTTP_CF_CONNECTING_IP'], ":ua" => $_SERVER['HTTP_USER_AGENT']));
 		return TRUE;
 	} else {
 		$lastDate = $res[0]['lastReportTime'];
@@ -302,7 +302,7 @@ function isUserAbleToReport($userid){
 		$val2 = 1 / $reports_per_sec;
 		if($val1 > $val2){
 			$stmt3 = $dbh->prepare("UPDATE `$user_report_table_name` SET `lastReportTime`=NOW(), `ipAddr`=:ip, `userAgent`=:ua WHERE `userid`=:userid");
-			$stmt3->execute(array(":userid" => $userid, ":ip" => $_SERVER['REMOTE_ADDR'], ":ua" => $_SERVER['HTTP_USER_AGENT']));
+			$stmt3->execute(array(":userid" => $userid, ":ip" => $_SERVER['HTTP_CF_CONNECTING_IP'], ":ua" => $_SERVER['HTTP_USER_AGENT']));
 			return TRUE;
 		} else {
 			return $val2 - $val1; // no spam pls
@@ -319,7 +319,7 @@ function isUserAbleToUpload($userid, $post_size){
 	if(sizeof($res) == 0){
 		$stmt2 = $dbh->prepare("INSERT INTO `$user_upload_table_name` (`userid`,`bytesUploaded`,`lastUploadTime`, `ipAddr`, `userAgent`)"
 			. " VALUES(:userid, :postSize, NOW(), :ip, :ua)");
-		$stmt2->execute(array(":userid"=>$userid, ":postSize" => $post_size, ":ip" => $_SERVER['REMOTE_ADDR'], ":ua" => $_SERVER['HTTP_USER_AGENT']));
+		$stmt2->execute(array(":userid"=>$userid, ":postSize" => $post_size, ":ip" => $_SERVER['HTTP_CF_CONNECTING_IP'], ":ua" => $_SERVER['HTTP_USER_AGENT']));
 		return TRUE;
 	} else {
 		$lastDate = $res[0]['lastUploadTime'];
@@ -336,7 +336,7 @@ function isUserAbleToUpload($userid, $post_size){
 		$val2 = $uploadSize / $bytes_per_sec;
 		if($val1 > $val2){
 			$stmt3 = $dbh->prepare("UPDATE `$user_upload_table_name` SET `lastUploadTime`=NOW(), `bytesUploaded`=:bytes, `ipAddr`=:ip, `userAgent`=:ua WHERE `userid`=:userid");
-			$stmt3->execute(array(":bytes" => $post_size, ":userid" => $userid, ":ip" => $_SERVER['REMOTE_ADDR'], ":ua" => $_SERVER['HTTP_USER_AGENT']));
+			$stmt3->execute(array(":bytes" => $post_size, ":userid" => $userid, ":ip" => $_SERVER['HTTP_CF_CONNECTING_IP'], ":ua" => $_SERVER['HTTP_USER_AGENT']));
 			return TRUE;
 		} else {
 			return $val2 - $val1; // no spam pls
