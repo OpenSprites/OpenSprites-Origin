@@ -62,7 +62,7 @@ public function __construct()
 
     // Set the class properties to reference session variables.
     $this->token = &$_SESSION["token"];
-    $this->ip = $_SERVER["REMOTE_ADDR"];
+    $this->ip = $_SERVER["HTTP_CF_CONNECTING_IP"];
     $this->userId = &$_SESSION["userId"];
 
     // If a persistent login cookie is set, attempt to log in.
