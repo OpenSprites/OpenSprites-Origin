@@ -17,7 +17,7 @@
         <div class="main-inner">
 		<div class="welcome info">
 			<div class="symbol warning" style="color:rgb(70, 103, 101);font-size:109px;float:left;margin-right:70px;margin-left:70px;margin-top:-1px;"></div>
-			<h2 class="welcome-title">OpenSprites is in development!
+			<h2 class="welcome-title" style="padding-left:10px;">OpenSprites is in development!
 			<a href="javascript:void(0)" class="btn" style="float:right;font-size:0.5em;" onclick="$('.welcome.info').slideUp()">Dismiss</a>
 			</h2>
 			<p class="welcome-text" style="display:block;padding-left:10px;">The OpenSprites Team is still in the process of creating this site. This means that OpenSprites may not yet have all the stuff you want, and it may also have bugs, so be careful!<br>Stay tuned for more updates on our <a href="/blog" style="color:white;text-decoration:underline">blog</a>!</p>
