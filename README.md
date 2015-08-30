@@ -97,7 +97,7 @@ Arinerron mainly works on fixing bugs, and desktop applications for OpenSprites
 ![Github logo](https://avatars1.githubusercontent.com/u/10893362?s=100)
 
 [Very Active]
-Rumanti is a frontend developer on the OS team. You can blame her for readability and probably efficiency.
+Rumanti is a front-end developer on the OS team and the only one who does not lives in neither America nor Europe. Many of her commits involves improving readability, matching colors, and make things responsive whenever possible. 
 
  - HTML
  - CSS
