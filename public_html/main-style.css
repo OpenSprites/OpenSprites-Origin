@@ -266,12 +266,24 @@ a:active {
     width: 100%;
 }
 
-.footer ul li {
-    display: inline-block;
+.footer #footer-links {
+    display:inline-block;
+    width:150px;
+    padding:25px;
+    clear:both;
 }
 
-.footer ul a {
-    display: block;
+.footer #footer-about {
+    display:inline-block;
+    width:calc(100%-100px);
+    padding:25px;
+    clear:both;
+}
+
+.footer #footer-theme-toggler {
+    display:inline-block;
+    padding:25px;
+    clear:both;
 }
 
 .footer p {
