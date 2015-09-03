@@ -271,6 +271,7 @@ a:active {
     width:150px;
     padding:25px;
     clear:both;
+    text-align:left;
 }
 
 .footer #footer-about {
@@ -278,12 +279,15 @@ a:active {
     width:calc(100%-100px);
     padding:25px;
     clear:both;
+    text-align:left;
 }
 
 .footer #footer-theme-toggler {
     display:inline-block;
     padding:25px;
     clear:both;
+    text-align:center;
+    vertical-align:middle;
 }
 
 .footer p {
