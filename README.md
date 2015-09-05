@@ -47,8 +47,7 @@ MegaApuTurkUltra is a sample text, who is mostly responsible for OS not deciding
 ### [GrannyCookies](http://opensprites.org/users/4/) ###
 ![GitHub Logo](https://avatars0.githubusercontent.com/u/9429556?s=100)
 
-GrannyCookies is one of the most active devs on the OS team and helps administrate and moderate the site/forums.
-He hax0red the forums and styled it to look neat with the rest of the site, as he did with the blog.
+GrannyCookies mainly does frontend development and helps administrate and moderate the site/forums. He also edited the forum source code, styling it to fit in with the rest of the site.
 
  - HTML
  - CSS
