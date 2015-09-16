@@ -189,14 +189,19 @@
 					
 					<?php if($username == $logged_in_user){ ?>
 						<div id='settings'><a>Profile Settings</a></div>
-						</div>
 					<?php } ?>
+				</div>
 				</div>
 			<?php } else { ?>
             <div id='username'>
                 User not found!
             </div>
             <?php } ?>
+
+            <?php if($username == $logged_in_user){  //This is just a temporary fix ?>
+            	</div>
+			<?php } ?>
+			
         </div>
         <div id="user-pane-left">
             <?php
