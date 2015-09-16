@@ -601,7 +601,7 @@ li > a {
 
 .welcome {
     background-color: #659593;
-/*    padding: 10px; */
+    padding: 10px;
     border-radius: 20px;
     -moz-border-radius: 20px;
     -webkit-border-radius: 20px;
