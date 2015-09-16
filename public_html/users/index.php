@@ -201,14 +201,13 @@
         <div id="user-pane-left">
             <?php
                 if($user_exist) {
-                    echo '<img id="source-avatar" cla
-                    ss="user-avatar x100" src="' . $user['avatar'] . '"/>';
+                    echo '<img id="source-avatar" class="user-avatar x100" src="' . $user['avatar'] . '">';
                     if($username == $logged_in_user) { ?>
                         <div id="change-image"><span id="change-text">Change...</span>
 							<!-- profile picture upload -->
 							<form id='avatar_upload' enctype="multipart/form-data">
-								<input type="hidden" style="display:none;" name="MAX_FILE_SIZE" value="8388608"/>
-								<input name="uploadedfile" type="file" class="fill" accept="image/*"/>
+								<input type="hidden" style="display:none;" name="MAX_FILE_SIZE" value="8388608">
+								<input name="uploadedfile" type="file" class="fill" accept="image/*">
 							</form>
 						</div>
                     <?php }
