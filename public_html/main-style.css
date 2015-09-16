@@ -194,11 +194,12 @@ article.box > h1 {
     font-size: 22px;
 }
 
-h1.firstHeading,
+/*h1.firstHeading,
 h2 {
     border-bottom: solid 1px black;
 }
-
+The bottom line looks a bit boring?
+*/
 .centered-heading { 
     font-size:40px;
     text-align:center;
