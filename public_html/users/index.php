@@ -102,7 +102,8 @@
         <div id="user-pane-right">
             <?php if($user_exist) { ?>
             <div id='username'>
-                <?php
+                <
+				?php
                 if($username==$logged_in_user) {echo 'You';} else {echo htmlspecialchars($username) . " (#" . $user['userid'] . ")";}
                 ?>
             </div>
@@ -172,8 +173,8 @@
 				<a id='report' class='main-action' href="/send_report.php?type=user&id=<?php echo $id; ?>">
 					Report User
 				</a>
-        </div>
 				<?php } ?>
+        </div>
 					<?php
 						if($is_admin == true and $username !== $logged_in_user) {
 						if($user['usertype'] == 'member'){
@@ -284,13 +285,13 @@
 			<hr/>
 			
             <p><i>Profile Background</i><br>You can set a color for your background on this profile page, or simply just use your avatar image.</p>
-            <input type="checkbox" id='bg'>Use my avatar image<br>
-            <span id='bg_true'><input type="text" name="bgcolor" id="bgcolor" value="rgb(101, 149, 147)"></span><br>
+            <input type="checkbox" id='bg'/>Use my avatar image<br>
+            <span id='bg_true'><input type="text" name="bgcolor" id="bgcolor" value="rgb(101, 149, 147)"/></span><br>
             
 			<hr />
 			
             <p><i>Location</i><br>If you want to let people know which country you live in, you can tell them. Be warned - don't give away your exact location!</p>
-            <input type='text' id='text-location' maxlength='30' value='Loading...'><br>
+            <input type='text' id='text-location' maxlength='30' value='Loading...'/><br>
      
 			<div class="buttons-container">
 				<p class="error"></p>
