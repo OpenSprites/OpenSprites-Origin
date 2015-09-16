@@ -102,7 +102,8 @@
         <div id="user-pane-right">
             <?php if($user_exist) { ?>
             <div id='username'>
-                <?php
+                <
+				?php
                 if($username==$logged_in_user) {echo 'You';} else {echo htmlspecialchars($username) . " (#" . $user['userid'] . ")";}
                 ?>
             </div>
