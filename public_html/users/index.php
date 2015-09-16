@@ -201,7 +201,8 @@
         <div id="user-pane-left">
             <?php
                 if($user_exist) {
-                    echo '<img id="source-avatar" class="user-avatar x100" src="' . $user['avatar'] . '"/>';
+                    echo '<img id="source-avatar" cla
+                    ss="user-avatar x100" src="' . $user['avatar'] . '"/>';
                     if($username == $logged_in_user) { ?>
                         <div id="change-image"><span id="change-text">Change...</span>
 							<!-- profile picture upload -->
