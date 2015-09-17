@@ -203,10 +203,11 @@ The bottom line looks a bit boring?
 .centered-heading { 
     font-size:40px;
     text-align:center;
+	margin: 0px 0px 0px 0px;
 }
 
 .box-content {
-    background: #fff;
+    background: #000000;
     border-top: 1px solid #e0e0e0;
     position: relative;
     padding: 5px 20px 20px 20px;
@@ -557,13 +558,12 @@ ul#f-list {
     text-align: center;
 }
 
-/*h1 {
-    font-family: "ScratchFont";
+h1 {
+    /*font-family: "ScratchFont"; */
     
     margin-top: 5px;
     margin-bottom: 5px;
 }
-*/
 .box > h1 {
     font-family: Helvetica Neue, Helvetica, sans-serif;
 }
