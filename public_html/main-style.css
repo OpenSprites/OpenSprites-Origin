@@ -605,7 +605,7 @@ li > a {
     border-radius: 20px;
     -moz-border-radius: 20px;
     -webkit-border-radius: 20px;
-	margin-bottom: 2em;
+	margin-bottom: 0.5em;
 }
 
 #cats {
