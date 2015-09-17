@@ -189,8 +189,8 @@
 					
 					<?php if($username == $logged_in_user){ ?>
 						<div id='settings'><a>Profile Settings</a></div>
-						</div>
 					<?php } ?>
+					</div>
 				</div>
 			<?php } else { ?>
             <div id='username'>
