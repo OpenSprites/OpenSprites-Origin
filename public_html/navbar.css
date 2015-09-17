@@ -93,6 +93,7 @@ ul.navbar-dropdown {
 	background-color: rgb(101, 149, 147);
 	border-bottom-right-radius: 10px;
 	border-bottom-left-radius: 10px;
+	box-shadow:0 0 8px rgba(0, 0, 0, 0.5);
 	overflow: hidden;
 }
 
@@ -127,6 +128,7 @@ ul.navbar-dropdown li {
 	/* background-image: url(/assets/images/search.png); */
 	background-repeat: no-repeat;
 	background-size: contain;
+	box-shadow:0 0 5px rgba(0, 0, 0, 0.3);
 	width: 150px;
 	color: grey;
 	line-height: 22px;
