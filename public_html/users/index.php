@@ -210,13 +210,12 @@
 								<input name="uploadedfile" type="file" class="fill" accept="image/*">
 							</form>
 						</div>
-			</div>
                     <?php }
                 }
             ?>
         </div>
 		
-    </div>
+    </div></div>
 
     <?php if($user_exist) { ?>
     <div class="container main" id="about">
