@@ -1,3 +1,7 @@
+.header {
+    box-shadow:0 0 5px rgba(0, 0, 0, 0.3);
+}
+
 #login-popup {
     position: absolute;
     top: 50px;
@@ -128,7 +132,6 @@ ul.navbar-dropdown li {
 	/* background-image: url(/assets/images/search.png); */
 	background-repeat: no-repeat;
 	background-size: contain;
-	box-shadow:0 0 5px rgba(0, 0, 0, 0.3);
 	width: 150px;
 	color: grey;
 	line-height: 22px;
