@@ -63,7 +63,9 @@
                 <div class="box">
                     <h1>Featured Media</h1>
                     <div class="box-content" id="feat-assets-list">
-                        
+                        <script>
+							var model = OpenSprites.models.SortableAssetList($("#feat-assets-list"));
+						</script>
                     </div>
                 </div>
             </div>
