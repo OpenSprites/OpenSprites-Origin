@@ -62,8 +62,8 @@
             <div id="feat-assets">
                 <div class="box">
                     <h1>Featured Media</h1>
-                    <div class="box-content">
-                        -> Carousel goes here <-
+                    <div class="box-content" id="feat-assets-list">
+                        
                     </div>
                 </div>
             </div>
