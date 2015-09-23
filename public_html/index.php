@@ -74,7 +74,9 @@
                 <div class="box">
                     <h1>Top Collections</h1>
                     <div class="box-content">
-                        -> Carousel goes here <-
+                        <script>
+							var model = OpenSprites.models.SortableAssetList($("#feat-assets-list"));
+						</script>
                     </div>
                 </div>
             </div>
@@ -83,7 +85,9 @@
                 <div class="box">
                     <h1>Featured Collections</h1>
                     <div class="box-content">
-                         -> Carousel goes here <-
+                        <script>
+							var model = OpenSprites.models.SortableAssetList($("#feat-assets-list"));
+						</script>
                     </div>
                 </div>
             </div>
