@@ -290,7 +290,7 @@
             
 			<hr />
 			
-            <p><i>Location</i><br>If you want to let people know which country you live in, you can tell them. Be warned - don't give away your exact location!</p>
+            <p><i>Location</i><br>If you want to let people know which country you live in, you can tell them. Don't use addresses or towns.</p>
             <input type='text' id='text-location' maxlength='30' value='Loading...'><br>
      
 			<div class="buttons-container">
