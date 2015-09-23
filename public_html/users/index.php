@@ -172,8 +172,8 @@
 				<a id='report' class='main-action' href="/send_report.php?type=user&id=<?php echo $id; ?>">
 					Report User
 				</a>
-        </div>
 				<?php } ?>
+        </div>
 					<?php
 						if($is_admin == true and $username !== $logged_in_user) {
 						if($user['usertype'] == 'member'){
