@@ -73,9 +73,9 @@
 			<div id="top-collections">
                 <div class="box">
                     <h1>Top Collections</h1>
-                    <div class="box-content">
+                    <div class="box-content" id="top-collections">
                         <script>
-							var model = OpenSprites.models.SortableAssetList($("#feat-assets-list"));
+							var model = OpenSprites.models.SortableAssetList($("#top-collections"));
 						</script>
                     </div>
                 </div>
@@ -84,9 +84,9 @@
 			<div id="feat-collections">
                 <div class="box">
                     <h1>Featured Collections</h1>
-                    <div class="box-content">
+                    <div class="box-content" id="featured-collections">
                         <script>
-							var model = OpenSprites.models.SortableAssetList($("#feat-assets-list"));
+							var model = OpenSprites.models.SortableAssetList($("#featured-collections"));
 						</script>
                     </div>
                 </div>
