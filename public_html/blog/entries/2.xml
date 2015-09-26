@@ -1,18 +1,20 @@
 <blogentry>
     <blogheader>Updates</blogheader>
     <blogcontents>
-		Since the Winter holidays, the OpenSprites Team has been working hard to add new features, squash bugs, and get the basic site working.
-		Here is what we've done so far:
-			* Migrated over to Gwiddle for better performance, flexibility, and stability.
-			* Set up the EsoTalk forums running with our colour theme, along with our registration and user verification system.
-			* Set up our own secure upload system working using MySQL.
-			* Media 'profiles' display a link for users to directly link to uploaded images so they can use them in forums.
-			* Image preview thumbnails successfully render for sound, scripts and images.
-			* Fixed major bug with sessions after updates.
-			* We now have a fully working blog that uses markdown.
-			* We have enabled our OpenSprites guidelines, privacy policy, and terms of service.
-			
-		Stay tuned for more updates!
-		**cheeseeater**
-	</blogcontents>
+        Since the Winter holidays, the OpenSprites Team has been working hard to add new features, squash bugs, and get
+        the basic site working.
+        Here is what we've done so far:
+        * Migrated over to Gwiddle for better performance, flexibility, and stability.
+        * Set up the EsoTalk forums running with our colour theme, along with our registration and user verification
+        system.
+        * Set up our own secure upload system working using MySQL.
+        * Media 'profiles' display a link for users to directly link to uploaded images so they can use them in forums.
+        * Image preview thumbnails successfully render for sound, scripts and images.
+        * Fixed major bug with sessions after updates.
+        * We now have a fully working blog that uses markdown.
+        * We have enabled our OpenSprites guidelines, privacy policy, and terms of service.
+
+        Stay tuned for more updates!
+        **cheeseeater**
+    </blogcontents>
 </blogentry>

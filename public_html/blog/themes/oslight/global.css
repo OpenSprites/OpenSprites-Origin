@@ -16,15 +16,15 @@
 }
 
 .entry {
-    padding:          10px;
-    margin-bottom:    20px;
-    margin-top:       20px;
+    padding: 10px;
+    margin-bottom: 20px;
+    margin-top: 20px;
 }
 
 .entry pre {
     background-color: #FDFDFD;
-    padding:          3px;
-    border-radius:    3px;
+    padding: 3px;
+    border-radius: 3px;
 }
 
 .entry a:hover {
@@ -45,71 +45,76 @@ h1 {
 }
 
 .header {
-	position: fixed;
-	top: 0;
-	left: 0;
-	right: 0;
-	height: 35px;
-	padding: 0 10px;
-	background-color: #659593;
-	z-index: 200;
-	-webkit-user-select: none;
-	-moz-user-select: none;
-	-ms-user-select: none;
-	-o-user-select: none;
-	user-select: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 35px;
+    padding: 0 10px;
+    background-color: #659593;
+    z-index: 200;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;
 }
 
-a.scratch{	
-	float: left;
-	display: block;
-	width: 150px;
-	height: 35px;
-	background: url("http://opensprites.org/assets/images/os-logotype.svg") left center no-repeat;
-	background-size:150px 35px;
-	text-indent: -99999em;
-	padding: 0 2px;
-	transition: 250ms background-color;
+a.scratch {
+    float: left;
+    display: block;
+    width: 150px;
+    height: 35px;
+    background: url("http://opensprites.org/assets/images/os-logotype.svg") left center no-repeat;
+    background-size: 150px 35px;
+    text-indent: -99999em;
+    padding: 0 2px;
+    transition: 250ms background-color;
 }
 
 a.scratch:hover {
-	background-color: #476866;
+    background-color: #476866;
 }
 
 .header ul,
 .footer ul {
-	padding: 0;
-	margin: 0;
-	list-style-type: none;
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
 }
+
 .header {
-	font-size: 15px;
+    font-size: 15px;
 }
+
 .header .right {
-	float: right;
+    float: right;
 }
+
 .header li {
-	float: left;
+    float: left;
 }
+
 .header li a,
 .header li span {
-	display: block;
-	padding: 0px 15px;
-	line-height: 35px;
-	text-decoration: none !important;
-	cursor: pointer;
-	transition: 250ms background-color;
+    display: block;
+    padding: 0px 15px;
+    line-height: 35px;
+    text-decoration: none !important;
+    cursor: pointer;
+    transition: 250ms background-color;
 }
 
 .header li a,
 .header li a:active,
-.header li span{
-	color: #fff;
+.header li span {
+    color: #fff;
 }
+
 .header li a:hover,
 .header li span:hover,
 #userfcttoggle.open {
-	background-color: #476866;
+    background-color: #476866;
 }
 
 .header .container {

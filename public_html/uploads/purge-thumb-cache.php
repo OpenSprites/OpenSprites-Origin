@@ -1,5 +1,5 @@
 <?php
-include '../assets/includes/connect.php';
+require __DIR__."/../../includes/connect.php";
 if(!$is_admin){
 	die("403");
 }

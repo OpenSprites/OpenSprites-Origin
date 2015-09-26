@@ -24,11 +24,11 @@
 ?>
 
 <html>
-    <head>
-        <title>Oh noes!</title>
-        <meta coding="utf-8">
-    </head>
-    <body>
-        Whoops, you're reading this file the wrong way! Open this in your text editor!
-    </body>
+<head>
+    <title>Oh noes!</title>
+    <meta coding="utf-8">
+</head>
+<body>
+Whoops, you're reading this file the wrong way! Open this in your text editor!
+</body>
 </html>

@@ -1,5 +1,5 @@
 <?php
-    require "assets/includes/suspendedconnect.php"; // Connect - includes session_start();
+require __DIR__."/../includes/suspendedconnect.php";
 ?>
 <html>
   <head>

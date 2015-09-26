@@ -1,5 +1,5 @@
 <?php
-    require "../assets/includes/connect.php";  //Connect - includes session_start();
+require __DIR__."/../../includes/connect.php";  //Connect - includes session_start();
     if($logged_in_user !== 'not logged in') {
         header('Location: /');
     }

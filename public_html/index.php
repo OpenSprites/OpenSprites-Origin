@@ -1,5 +1,5 @@
 <?php
-    require "assets/includes/connect.php";  //Connect - includes session_start();
+require __DIR__."/../includes/connect.php";  //Connect - includes session_start();
 ?>
 <!DOCTYPE html>
 <html>
@@ -8,24 +8,31 @@
     <?php include 'Header.html'; ?>
 </head>
 <body>
-    
-    <!--Imports navigation bar-->
-    <?php include "navbar.php"; ?>
-    
-    <!-- Main wrapper -->
-    <div class="container main">
-        <div class="main-inner">
-		<div class="welcome info">
-			<div class="symbol warning" style="color:rgb(70, 103, 101);font-size:109px;float:left;margin-right:70px;margin-left:70px;margin-top:-1px;"></div>
-			<h2 class="welcome-title" style="padding-left:10px;">OpenSprites is in development!
-			<a href="javascript:void(0)" class="btn" style="float:right;font-size:0.5em;" onclick="$('.welcome.info').slideUp()">Dismiss</a>
-			</h2>
-			<p class="welcome-text" style="display:block;padding-left:10px;">The OpenSprites Team is still in the process of creating this site. This means that OpenSprites may not yet have all the stuff you want, and it may also have bugs, so be careful!<br>Stay tuned for more updates on our <a href="/blog" style="color:white;text-decoration:underline">blog</a>!</p>
-		</div>
+
+<!--Imports navigation bar-->
+<?php include "navbar.php"; ?>
+
+<!-- Main wrapper -->
+<div class="container main">
+    <div class="main-inner">
+        <div class="welcome info">
+            <div class="symbol warning"
+                 style="color:rgb(70, 103, 101);font-size:109px;float:left;margin-right:70px;margin-left:70px;margin-top:-1px;"></div>
+            <h2 class="welcome-title" style="padding-left:10px;">OpenSprites is in development!
+                <a href="javascript:void(0)" class="btn" style="float:right;font-size:0.5em;"
+                   onclick="$('.welcome.info').slideUp()">Dismiss</a>
+            </h2>
+
+            <p class="welcome-text" style="display:block;padding-left:10px;">The OpenSprites Team is still in the
+                process of creating this site. This means that OpenSprites may not yet have all the stuff you want, and
+                it may also have bugs, so be careful!<br>Stay tuned for more updates on our <a href="/blog"
+                                                                                               style="color:white;text-decoration:underline">blog</a>!
+            </p>
         </div>
-        
-		<!-- We don't really need this any more because the site purpose is explained below.
-        <?php if($logged_in_user == 'not logged in') { ?>
+    </div>
+
+    <!-- We don't really need this any more because the site purpose is explained below.
+        <?php if ($logged_in_user == 'not logged in') { ?>
         <!-- Info for new visitors.
 		<div class="welcome signup">
 			<table>
@@ -46,70 +53,78 @@
         <?php } ?>
 		-->
 
-            <div id="about">
-                <h2 class="centered-heading">Welcome!</h2>
-                <p>Welcome to OpenSprites, the free open-source site that allows <a href='//scratch.mit.edu'>Scratch</a> users to share their own creations, such as scripts, sprites, sounds, and costumes! Designed with kids in mind, we promote the idea of creating and sharing, and provide a kid-safe platform for this. So, what are you waiting for? Get creating and sharing!</p>
-            </div>
-            <div id="top-assets">
-                <div class="box">
-                    <h1>Top Media</h1>
-                    <div class="box-content" id="top-assets-list">
-                        
-                    </div>
-                </div>
-            </div>
+    <div id="about">
+        <h2 class="centered-heading">Welcome!</h2>
 
-            <div id="feat-assets">
-                <div class="box">
-                    <h1>Featured Media</h1>
-                    <div class="box-content" id="feat-assets-list">
-                        <script>
-							var model = OpenSprites.models.SortableAssetList($("#feat-assets-list"));
-						</script>
-                    </div>
-                </div>
+        <p>Welcome to OpenSprites, the free open-source site that allows <a href='//scratch.mit.edu'>Scratch</a> users
+            to share their own creations, such as scripts, sprites, sounds, and costumes! Designed with kids in mind, we
+            promote the idea of creating and sharing, and provide a kid-safe platform for this. So, what are you waiting
+            for? Get creating and sharing!</p>
+    </div>
+    <div id="top-assets">
+        <div class="box">
+            <h1>Top Media</h1>
+
+            <div class="box-content" id="top-assets-list">
+
             </div>
-			
-			<div id="top-collections">
-                <div class="box">
-                    <h1>Top Collections</h1>
-                    <div class="box-content" id="top-collections">
-                        <script>
-							var model = OpenSprites.models.SortableAssetList($("#top-collections"));
-						</script>
-                    </div>
-                </div>
+        </div>
+    </div>
+
+    <div id="feat-assets">
+        <div class="box">
+            <h1>Featured Media</h1>
+
+            <div class="box-content" id="feat-assets-list">
+                <script>
+                    var model = OpenSprites.models.SortableAssetList($("#feat-assets-list"));
+                </script>
             </div>
-			
-			<div id="feat-collections">
-                <div class="box">
-                    <h1>Featured Collections</h1>
-                    <div class="box-content" id="featured-collections">
-                        <script>
-							var model = OpenSprites.models.SortableAssetList($("#featured-collections"));
-						</script>
-                    </div>
+        </div>
+    </div>
+
+    <div id="top-collections">
+        <div class="box">
+            <h1>Top Collections</h1>
+
+            <div class="box-content" id="top-collections">
+                <script>
+                    var model = OpenSprites.models.SortableAssetList($("#top-collections"));
+                </script>
+            </div>
+        </div>
+    </div>
+
+    <div id="feat-collections">
+        <div class="box">
+            <h1>Featured Collections</h1>
+
+            <div class="box-content" id="featured-collections">
+                <script>
+                    var model = OpenSprites.models.SortableAssetList($("#featured-collections"));
+                </script>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+<!-- <div id="teams-favorite">
+       <div class="box">
+           <h1>Featured Scripts and Sprites</h1>
+               <div class="box-content">
+                    <p>The OS Team will choose two scripts and two sprites daily.
+                    </p>
+                    PHP guys, get in here!
                 </div>
             </div>
         </div>
     </div>
-    <!-- <div id="teams-favorite">
-           <div class="box">
-               <h1>Featured Scripts and Sprites</h1>
-                   <div class="box-content">
-                        <p>The OS Team will choose two scripts and two sprites daily.
-                        </p>
-                        PHP guys, get in here!
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div> -->
-    
-    <!-- footer -->
-    <?php echo file_get_contents('footer.html'); ?>
-	<script>
-		var model = OpenSprites.models.SortableAssetList($("#top-assets-list"));
-	</script>
+</div> -->
+
+<!-- footer -->
+<?php echo file_get_contents('footer.html'); ?>
+<script>
+    var model = OpenSprites.models.SortableAssetList($("#top-assets-list"));
+</script>
 </body>
 </html>

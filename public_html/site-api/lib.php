@@ -1,6 +1,6 @@
 <?php
-require '../assets/includes/connect.php';
-include '../assets/includes/collections.php';
+require __DIR__."/../../includes/connect.php";
+require __DIR__."/../../includes/collections.php";
 
 function getAssetList($raw){
   $assets = array();

@@ -1,6 +1,6 @@
 <?php
-include '../assets/includes/connect.php';
-include '../assets/includes/validate.php';
+require __DIR__."/../../includes/connect.php";
+require __DIR__."/../../includes/validate.php";
 
 header("Content-Type: application/json");
 
