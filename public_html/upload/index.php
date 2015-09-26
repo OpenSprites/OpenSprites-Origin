@@ -1,5 +1,5 @@
 <?php
-	require "../assets/includes/connect.php"; //Connect - includes session_start(); require "../assets/includes/avatar.php";
+require __DIR__."../../includes/connect.php"; //Connect - includes session_start(); require "../assets/includes/avatar.php";
 	
 	if($_SERVER['HTTP_HOST'] != "localhost:13379"){ // MATU's testing
 		if($logged_in_user == 'not logged in' or $user_banned) {

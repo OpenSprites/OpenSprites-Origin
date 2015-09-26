@@ -1,5 +1,5 @@
 <?php
-    require $_SERVER['DOCUMENT_ROOT']."/assets/includes/connect.php";
+    require __DIR__."../../includes/connect.php";
     
     connectDatabase();
     $forum = forumQuery('SELECT * FROM ' . $forum_member_table, []);
