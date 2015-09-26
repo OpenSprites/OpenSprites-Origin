@@ -1,6 +1,6 @@
 <?php
-require __DIR__."../../includes/connect.php";
-require __DIR__."../../includes/validate.php";
+require __DIR__."/../../includes/connect.php";
+require __DIR__."/../../includes/validate.php";
     
     error_reporting(0);
     

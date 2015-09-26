@@ -1,5 +1,5 @@
 <?php
-require __DIR__."../../includes/connect.php";
+require __DIR__."/../../includes/connect.php";
 $con = mysqli_connect("localhost","user","pass","db");
 
 // Check connection

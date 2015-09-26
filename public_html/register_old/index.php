@@ -1,6 +1,6 @@
 <?php
 
-require __DIR__."../../includes/connect.php";
+require __DIR__."/../../includes/connect.php";
   
   //connect to server and login check via cookie
   //require '../assets/includes/login_check.php';  //to be added later!

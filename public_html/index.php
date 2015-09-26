@@ -1,5 +1,5 @@
 <?php
-require __DIR__ . "../includes/connect.php";  //Connect - includes session_start();
+require __DIR__."/../includes/connect.php";  //Connect - includes session_start();
 ?>
 <!DOCTYPE html>
 <html>

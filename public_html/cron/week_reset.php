@@ -8,7 +8,7 @@ if(php_sapi_name() != 'cli'){ // let's not have anyone hacking this. Make sure i
 	die();
 }
 
-require __DIR__."../../includes/connect.php";
+require __DIR__."/../../includes/connect.php";
 
 connectDatabase();
 imagesQuery0("UPDATE `" . getAssetsTableName() . "` SET `downloadsThisWeek`=?", array(0));

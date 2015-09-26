@@ -1,5 +1,5 @@
 <?php
-require __DIR__."../../includes/connect.php";
+require __DIR__."/../../includes/connect.php";
 
 if(!$is_admin){
 	include '../403.php';

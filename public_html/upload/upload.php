@@ -1,6 +1,6 @@
 <?php
-require __DIR__."../../includes/connect.php";
-require __DIR__."../../includes/validate.php";
+require __DIR__."/../../includes/connect.php";
+require __DIR__."/../../includes/validate.php";
 
 function unique_id($l = 8) {
     return substr(md5(uniqid(mt_rand(), true)), 0, $l);

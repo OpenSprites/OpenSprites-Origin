@@ -1,5 +1,5 @@
 <?php
-require __DIR__."../includes/suspendedconnect.php";
+require __DIR__."/../includes/suspendedconnect.php";
 ?>
 <html>
   <head>

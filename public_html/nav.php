@@ -1,5 +1,5 @@
 <?php
-    require __DIR__."../includes/connect.php";
+    require __DIR__."/../includes/connect.php";
 ?>
 <!DOCTYPE html>
 <html>

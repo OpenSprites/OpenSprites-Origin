@@ -1,6 +1,6 @@
 <?php
-require __DIR__."../../includes/connect.php";
-require __DIR__."../../includes/collections.php";
+require __DIR__."/../../includes/connect.php";
+require __DIR__."/../../includes/collections.php";
 
 if(!isset($_GET['uid'])){
 	include '../404.php';
