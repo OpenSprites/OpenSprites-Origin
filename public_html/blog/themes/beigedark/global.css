@@ -3,26 +3,26 @@
 
 #entries {
     position: absolute;
-    left:     150px;
-    top:      0px;
-    width:    calc(100% - 150px);
+    left: 150px;
+    top: 0px;
+    width: calc(100% - 150px);
 }
 
 .entry {
     background-color: #EAEFB1;
-    padding:          10px;
-    margin-bottom:    20px;
-    margin-top:       20px;
+    padding: 10px;
+    margin-bottom: 20px;
+    margin-top: 20px;
 }
 
 .entry pre {
     background-color: #FDFDFD;
-    padding:          3px;
+    padding: 3px;
 }
 
 .entry a {
     text-decoration: none;
-    color:           #00F;
+    color: #00F;
 }
 
 .entry a:hover {

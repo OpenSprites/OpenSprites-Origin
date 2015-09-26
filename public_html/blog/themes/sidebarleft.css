@@ -1,10 +1,10 @@
 #sidebar {
-    width:       140px;
-    min-height:  100%;
-    position:    fixed;
-    left:        0;
-    top:         0;
-    padding:     5px;
+    width: 140px;
+    min-height: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    padding: 5px;
     font-family: monospace;
 }
 
@@ -14,5 +14,5 @@
 
 #entries {
     position: absolute;
-    left:     150px;
+    left: 150px;
 }

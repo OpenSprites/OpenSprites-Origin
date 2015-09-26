@@ -11,14 +11,14 @@
 <script src="marked/marked.min.js" type="text/javascript"></script>
 
 <?php /* About you */ ?>
-<meta name="author"      content="The OpenSprites Team">
+<meta name="author" content="The OpenSprites Team">
 <meta name="description" content="A group of pigeons working on OpenSprites.">
-<meta name="keywords"    content="OS, OpenSprites, OpenSpites Team, OS Team, Blog">
+<meta name="keywords" content="OS, OpenSprites, OpenSpites Team, OS Team, Blog">
 <?php
 
-    $AUTHOR_NAME    = "The OpenSprites Team";
-    $AUTHOR_LINK    = "//opensprites.org";
-    $SITE_KEYWORDS  = "OS, OpenSprites, OpenSpites Team, OS Team, Blog";
+$AUTHOR_NAME = "The OpenSprites Team";
+$AUTHOR_LINK = "//opensprites.org";
+$SITE_KEYWORDS = "OS, OpenSprites, OpenSpites Team, OS Team, Blog";
 
 ?>
 <link rel="stylesheet" href="themes/sidebarasnavbar.css">
