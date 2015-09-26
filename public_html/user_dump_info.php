@@ -1,5 +1,5 @@
 <?php
-require 'assets/includes/connect.php';
+require __DIR__."../includes/connect.php";
 header("Content-Type: text/plain");
 
 var_dump($userInfo);
