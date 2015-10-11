@@ -62,7 +62,7 @@
             </div>
 			
 			<div id="top-collections" class="box">
-                    <p>Top Collections</p>
+                    <h1>Top Collections</h1>
                     <div class="box-content" id="top-collections"></div>
             </div>
 			

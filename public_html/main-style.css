@@ -177,8 +177,8 @@ a.scratch:hover {
     margin: 0px 0px 20px;
 }
 
-.box > h1 {
-    margin: 0;
+.box h1 {
+    margin: 2em;
     padding: 7px 20px;
     position: relative;
     /*overflow: hidden;*/
