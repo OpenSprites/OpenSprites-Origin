@@ -178,7 +178,7 @@ a.scratch:hover {
 }
 
 .box h1 {
-    margin: 2em;
+    margin: 0em;
     padding: 7px 20px;
     position: relative;
     /*overflow: hidden;*/
@@ -190,10 +190,23 @@ a.scratch:hover {
     font-size: 16px;
 }
 
-article.box > h1 {
-    font-size: 22px;
+#top-collections h1{
+	margin: 0em;
+    padding: 7px 20px;
+    position: relative;
+    /*overflow: hidden;*/
+    
+    border-top: 1px solid #fff;
+    box-radius: 10px;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    font-size: 16px;
 }
 
+/*article.box > h1 {
+    font-size: 22px;
+}
+*/
 /*h1.firstHeading,
 h2 {
     border-bottom: solid 1px black;
