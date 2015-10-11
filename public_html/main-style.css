@@ -189,6 +189,10 @@ a.scratch:hover {
     font-size: 16px;
 }
 
+#feat-collections{
+	margin-bottom: 1em;
+}
+
 article.box > h1 {
     font-size: 22px;
 }
