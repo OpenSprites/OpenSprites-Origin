@@ -89,7 +89,7 @@
 						<a href="/scripts">Scripts</a>
 					</li>
 					<li>
-						<a href="/collections">Collections</a>
+						<a href="/collections-are-almost-here.txt">Collections</a>
 					</li>
 				</ul>
 			<li>
