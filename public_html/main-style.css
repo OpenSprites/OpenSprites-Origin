@@ -257,13 +257,13 @@ a:active {
 
 .footer {
     background-color: #ececec;
-    padding-top: 0.5em;
-    padding-bottom: 1em;
+    padding-top: 0.3em;
+    padding-bottom: 0.5em;
     color: #5f5f5f;
     text-align: center;
     margin-top: 20px;
     min-height: 150px;
-    height: 130px;
+    height: 120px;
     width: 100%;
 }
 
