@@ -50,7 +50,8 @@
                 <h2 class="centered-heading">Welcome!</h2>
                 <p>Welcome to OpenSprites, the free open-source site that allows <a href='//scratch.mit.edu'>Scratch</a> users to share their own creations, such as scripts, sprites, sounds, and costumes! Designed with kids in mind, we promote the idea of creating and sharing, and provide a kid-safe platform for this. So, what are you waiting for? Get creating and sharing!</p>
             </div>
-            <div id="top-assets" class="box">
+            
+			<div id="top-assets" class="box">
                     <h1>Top Media</h1>
                     <div class="box-content" id="top-assets-list"></div>
             </div>
@@ -61,7 +62,7 @@
             </div>
 			
 			<div id="top-collections" class="box">
-                    <h1>Top Collections</h1>
+                    <p>Top Collections</p>
                     <div class="box-content" id="top-collections"></div>
             </div>
 			
