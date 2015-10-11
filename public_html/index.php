@@ -66,9 +66,9 @@
                     <div class="box-content" id="featured-collections"></div>
             </div>
 					
-			<div id="top-collections" class="box">
-                    <h1>Top Collections</h1>
-					<div class="box-content" id="top-collections"></div>
+			<div id="popular-collections" class="box">
+                    <h1>Popular Collections</h1>
+					<div class="box-content" id="popular-collections"></div>
             </div>
     </div>
     <!-- <div id="teams-favorite">
@@ -88,7 +88,7 @@
     <?php echo file_get_contents('footer.html'); ?>
 	<script>
 		var model = OpenSprites.models.SortableAssetList($("#top-assets-list"));
-		var model = OpenSprites.models.SortableAssetList($("#featured-collections"));
+		var model = OpenSprites.models.SortableAssetList($("#popular-collections"));
 		var model = OpenSprites.models.SortableAssetList($("#top-collections"));
 		var model = OpenSprites.models.SortableAssetList($("#feat-assets-list"));
 	</script>
