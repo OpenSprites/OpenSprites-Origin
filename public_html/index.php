@@ -54,7 +54,6 @@
                 <div class="box">
                     <h1>Top Media</h1>
                     <div class="box-content" id="top-assets-list">
-                        
                     </div>
                 </div>
             </div>
@@ -63,9 +62,6 @@
                 <div class="box">
                     <h1>Featured Media</h1>
                     <div class="box-content" id="feat-assets-list">
-                        <script>
-							var model = OpenSprites.models.SortableAssetList($("#feat-assets-list"));
-						</script>
                     </div>
                 </div>
             </div>
@@ -74,9 +70,6 @@
                 <div class="box">
                     <h1>Top Collections</h1>
                     <div class="box-content" id="top-collections">
-                        <script>
-							var model = OpenSprites.models.SortableAssetList($("#top-collections"));
-						</script>
                     </div>
                 </div>
             </div>
@@ -85,13 +78,9 @@
                 <div class="box">
                     <h1>Featured Collections</h1>
                     <div class="box-content" id="featured-collections">
-                        <script>
-							var model = OpenSprites.models.SortableAssetList($("#featured-collections"));
-						</script>
                     </div>
                 </div>
             </div>
-        </div>
     </div>
     <!-- <div id="teams-favorite">
            <div class="box">
@@ -110,6 +99,9 @@
     <?php echo file_get_contents('footer.html'); ?>
 	<script>
 		var model = OpenSprites.models.SortableAssetList($("#top-assets-list"));
+		var model = OpenSprites.models.SortableAssetList($("#featured-collections"));
+		var model = OpenSprites.models.SortableAssetList($("#top-collections"));
+		var model = OpenSprites.models.SortableAssetList($("#feat-assets-list"));
 	</script>
 </body>
 </html>
