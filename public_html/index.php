@@ -61,14 +61,14 @@
                     <div class="box-content" id="feat-assets-list"></div>
             </div>
 			
-			<div id="top-collections" class="box">
-                    <h1>Top Collections</h1>
-                    <div class="box-content" id="top-collections"></div>
-            </div>
-			
 			<div id="feat-collections" class="box">
                     <h1>Featured Collections</h1>
                     <div class="box-content" id="featured-collections"></div>
+            </div>
+					
+			<div id="top-collections" class="box">
+                    <h1>Top Collections</h1>
+					<div class="box-content" id="top-collections"></div>
             </div>
     </div>
     <!-- <div id="teams-favorite">
