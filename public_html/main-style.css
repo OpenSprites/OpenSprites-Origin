@@ -175,6 +175,8 @@ a.scratch:hover {
     -o-box-shadow: 0 2px 3px rgba(34, 25, 25, 0.3);
     box-shadow: 0 2px 3px rgba(34, 25, 25, 0.3);
     margin: 0px 0px 20px;
+	padding-bottom: 20px;
+	padding-top: 20px;
 }
 
 .box > h1 {
