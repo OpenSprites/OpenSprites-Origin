@@ -7,8 +7,6 @@
         <?php include("header.php"); ?>
     </head>
     <body>
-        <!-- This is slightly inspired by andrewjcole's blog, those who haven't should
-        check it out at blog.opensprites.x10.mx/andrewjcole/ -->
         <?php include("includes.php"); ?>
         <div id="entries"></div>
         <?php include("../footer.html"); ?>

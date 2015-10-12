@@ -200,9 +200,14 @@ h2 {
 The bottom line looks a bit boring?
 */
 .centered-heading { 
-    font-size:40px;
-    text-align:center;
+    font-size: 40px;
+	font-family: Oxygen;
+    text-align: center;
 	margin: 0px 0px 0px 0px;
+}
+
+#about p {
+	15px;
 }
 
 .box-content {
