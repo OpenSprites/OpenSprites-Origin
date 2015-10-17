@@ -15,8 +15,24 @@
     color: #EDB959 !important;
 }
 .header {
-    background-color:#F9B332;
+    background-color:#F9B332 !important;
 }
 .assets-list::-webkit-scrollbar-thumb {
-    background: #EDB959;
+    background: #EDB959 !important;
+}
+a {
+    color: #EDB959 !important;
+}
+a:visited {
+    color: #EDB959 !important;
+}
+
+/*NAVBAR*/
+/*MOST BROWSERS, CHROME, IE, OPERA, SAFARI*/
+::selection {
+    background-color: #D09830 !important;
+}
+/*FIREFOX*/
+::-moz-selection {
+    background-color: #D09830 !important;
 }
