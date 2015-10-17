@@ -24,10 +24,19 @@ a {
     color: #EDB959;
 }
 a:visited {
-    color: #EDB959;
+    background-color: #EDB959 !important;
 }
 
 /*NAVBAR*/
+#browse-li:hover #navbar-browse, #os-new:hover #navbar-new-button {
+    background-color: #EDB959 !important;
+}
+ul.navbar-dropdown {
+    background-color: #EDB959 !important;
+}
+.search-popup {
+    background-color: #EDB959 !important;
+}
 /*MOST BROWSERS, CHROME, IE, OPERA, SAFARI*/
 ::selection {
     background-color: #D09830 !important;
