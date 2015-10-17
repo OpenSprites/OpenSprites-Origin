@@ -31,8 +31,10 @@ a:visited {
 /*MOST BROWSERS, CHROME, IE, OPERA, SAFARI*/
 ::selection {
     background-color: #D09830 !important;
+    color: white !important;
 }
 /*FIREFOX*/
 ::-moz-selection {
     background-color: #D09830 !important;
+    color: white !important;
 }
