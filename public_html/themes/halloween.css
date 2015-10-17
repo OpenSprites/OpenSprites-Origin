@@ -21,10 +21,10 @@
     background: #EDB959 !important;
 }
 a {
-    color: #EDB959 !important;
+    color: #EDB959;
 }
 a:visited {
-    color: #EDB959 !important;
+    color: #EDB959;
 }
 
 /*NAVBAR*/
@@ -33,16 +33,8 @@ a:visited {
     background-color: #D09830 !important;
     color: white !important;
 }
-::selection:visited {
-    background-color: #D09830 !important;
-    color: white !important;
-}
 /*FIREFOX*/
 ::-moz-selection {
-    background-color: #D09830 !important;
-    color: white !important;
-}
-::-moz-selection:visited {
     background-color: #D09830 !important;
     color: white !important;
 }
