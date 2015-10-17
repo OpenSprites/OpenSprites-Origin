@@ -23,4 +23,11 @@ $('#theme-select').val(localStorage['os-theme']);
 // set theme based on the theme selection
 var theme = $('#theme-select').val();
 $('head').append('<!-- theme = "' + theme + '" -->');
-$('head').append('<link href="/themes/' + theme.toLowerCase() + '.css" rel="stylesheet" type="text/css">');
+if (theme.toLowerCase() != "halloween") {
+	$('head').append('<link href="/themes/' + theme.toLowerCase() + '.css" rel="stylesheet" type="text/css">');
+}else if(theme.toLowerCase() == "halloween"){
+	$('head').append('<link href="/themes/' + "dark" + '.css" rel="stylesheet" type="text/css">');
+	$('head').append('<link href="/themes/' + "halloween" + '.css" rel="stylesheet" type="text/css">');
+}else{
+	$('head').append('<link href="/themes/' + "regular" + '.css" rel="stylesheet" type="text/css">');
+}
