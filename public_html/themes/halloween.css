@@ -14,3 +14,9 @@
 .footer a{
     color: #EDB959 !important;
 }
+.header {
+    background-color:#F9B332;
+}
+.assets-list::-webkit-scrollbar-thumb {
+    background: #EDB959;
+}
