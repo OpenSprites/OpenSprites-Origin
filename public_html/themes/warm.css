@@ -1,7 +1,7 @@
 /* content -- to make finding & organizing stuff easier
     1. global
-	2. main page/similar
-	3. uploads
+    2. main page/similar
+    3. uploads
 	4. blog
 	5. report form
 */
@@ -171,7 +171,7 @@ div.welcome.info {
     background-color: #66621e;
 }
 
- html body {
+html body {
     background-color: #b08506;
 }
 
@@ -270,9 +270,26 @@ a.logged-in-user {
 
 #navbar-new-button {
     color: #eeff00;
+    border-color: #9e7e00;
 }
 
 ul.left li a {
     color: #eeff00;
+}
+
+pre.entry-contents {
+    background-color: #383503;
+    color: #ffa200;
+}
+
+#entries hr {
+    color: #000000;
+    background-color: #000000;
+    border-color: #000000;
+}
+
+ul.navbar-dropdown li a {
+    color: #4d4d00;
+    background-color: #b37304;
 }
 
