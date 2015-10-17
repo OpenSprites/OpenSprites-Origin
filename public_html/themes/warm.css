@@ -1,19 +1,3 @@
-/* content -- to make finding & organizing stuff easier
-    1. global
-    2. main page/similar
-    3. uploads
-	4. blog
-	5. report form
-*/
-
-/* theme should have lots of oranges and yellows 
-   theme suggested by @cheeseeater
-*/
-
-/* add !important to everything that needs to be overwritten */
-
-/* global -> all pages */
-
 body {
     background-color: #B26B00 ;
     display: inherit;
@@ -120,11 +104,11 @@ select {
 }
 
 #upload-area {
-    background-color: rgb(92, 61, 0) ;
+    background-color: #b89300;
 }
 
 #upload-status {
-    background: rgba(203, 164, 10, 0.5) ;
+    background-color: #a38800;
 }
 
 .upload-message {
@@ -168,21 +152,19 @@ div#entries hr:last-child {
 }
 
 div.welcome.info {
-    background-color: #66621e;
+    background-color: #615401;
 }
 
 html body {
-    background-color: #b08506;
+    background-color: #c99700;
 }
 
 div.box h1 {
-    background-color: #806512;
-    color: #e0ce0d;
+    background-color: #b88b06;
 }
 
 select.footer-select {
-    background-color: #7a710d;
-    color: #0f0c00;
+    background-color: #a3a302;
 }
 
 h2.centered-heading {
@@ -220,7 +202,7 @@ div.sortby.toggleset {
 }
 
 div.symbol.warning {
-    color: #ed8403;
+    color: #ff0000;
 }
 
 button.selected {
@@ -252,7 +234,7 @@ a.search-link {
 }
 
 button.btn.orange {
-    color: #ffffff;
+    color: #f5cf11;
     background-color: #756307;
 }
 
@@ -278,7 +260,7 @@ ul.left li a {
 }
 
 pre.entry-contents {
-    background-color: #383503;
+    background-color: #875a00;
     color: #ffa200;
 }
 
@@ -291,5 +273,134 @@ pre.entry-contents {
 ul.navbar-dropdown li a {
     color: #4d4d00;
     background-color: #b37304;
+}
+
+#body-content {
+    background-color: #b3aa00;
+}
+
+#body {
+    background-color: #947702;
+}
+
+#wrapper {
+    background-color: #6e6500;
+}
+
+div.footer {
+    background-color: #c2b204;
+}
+
+html {
+    background-color: #bdb404;
+}
+
+input.text {
+    background-color: #756f00;
+}
+
+a.popupButton.button {
+    background-color: #a69000;
+}
+
+ul.channels.tabs {
+    background-color: #786400;
+}
+
+a.newtopic.channel {
+    background-color: #c95e00;
+}
+
+div.col-replies span a {
+    color: #704c04;
+}
+
+#conversationTitle input {
+    background-color: #756c06;
+}
+
+span.allowedList.action {
+    background-color: #9e8900;
+    color: #000000;
+}
+
+div.area {
+    background-color: #ab9400;
+}
+
+div.postBody textarea {
+    background-color: #b89900;
+}
+
+div.postHeader {
+    background-color: #a88c00;
+}
+
+div.editButtons {
+    background-color: #8c6902;
+}
+
+a.button.big.discardDraft {
+    background-color: #a3a308;
+}
+
+a.channel.channel-1 {
+    background-color: #b88606;
+}
+
+#control-markAllAsRead {
+    background-color: #8f7200;
+}
+
+#control-markListedAsRead {
+    background-color: #8f7200;
+}
+
+li.item-markListedAsRead li a {
+    background-color: #8f7200;
+}
+
+ul.popupMenu {
+    background-color: #5e4c02;
+}
+
+#url-input {
+    background-color: #5e4e00;
+}
+
+#collection-name {
+    background-color: #9e7100;
+}
+
+div.sheetBody {
+    background-color: #695505;
+}
+
+div.sheetContent h3 {
+    background-color: #b1bd06;
+}
+
+div.sheet.active {
+    background-color: #8f5804;
+}
+
+div.box-content.assets-list {
+    background-color: #fad903;
+}
+
+a.btn {
+    background-color: #756500;
+}
+
+div.box-content {
+    background-color: #d4b800;
+}
+
+div.box {
+    background-color: #666100;
+}
+
+h1.entry-header span {
+    color: #730202;
 }
 
