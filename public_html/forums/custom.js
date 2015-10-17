@@ -1,5 +1,5 @@
 // is theme defined / valid?
-var themes = ['Regular', 'Dark'];
+var themes = ['Regular', 'Dark', 'Warm'];
 if(typeof localStorage['os-theme'] === 'undefined' || themes.indexOf(localStorage['os-theme']) === -1) {
     console.log('wrong theme');
     localStorage['os-theme'] = 'Regular';
@@ -33,7 +33,7 @@ window.onload = function() {
 
     // themes
     $('#ftr-content .menu').append('<li id="theme"></li>');
-    $('#theme').append('Theme: <select id="theme-select" style="border-radius:5px;outline:none;"><option>Regular</option><option>Dark</option></select>');
+    $('#theme').append('Theme: <select id="theme-select" style="border-radius:5px;outline:none;"><option>Regular</option><option>Dark</option><option>Warm</option></select>');
 
     // when theme selection is changed
     $('#theme-select').on('change', function() {
