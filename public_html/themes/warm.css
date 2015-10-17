@@ -1,0 +1,278 @@
+/* content -- to make finding & organizing stuff easier
+    1. global
+	2. main page/similar
+	3. uploads
+	4. blog
+	5. report form
+*/
+
+/* theme should have lots of oranges and yellows 
+   theme suggested by @cheeseeater
+*/
+
+/* add !important to everything that needs to be overwritten */
+
+/* global -> all pages */
+
+body {
+    background-color: #B26B00 ;
+    display: inherit;
+}
+
+.footer {
+    background-color: #663300 ;
+    color: #FFCC00 ;
+}
+
+/* links */
+
+.main-inner a {
+    /* Exclude the navigation bar */
+    color: #663300 ;
+}
+
+.footer a {
+    /* Yet include the footer! */
+    color: #B26B00 ;
+}
+
+/* main page/similar */
+
+.welcome .symbol {
+    color: rgb(153, 51, 0) ;
+}
+
+.themebg {
+    background-color: #CC6600;
+}
+
+.container.main {
+    color: white ;
+}
+
+h1.firstHeading, h2 {
+    border-bottom: solid 1px white ;
+}
+
+#opensprites-heading {
+    color: #fff;
+}
+
+.box > h1 {
+    border-top: none ;
+}
+
+.box {
+    background: #A35200 ;
+    border: 1px solid #595959 ;
+    border-top: none ;
+    -webkit-box-shadow: 0 2px 3px #2E1F00 ;
+    -moz-box-shadow: 0 2px 3px #2E1F00 ;
+    -o-box-shadow: 0 2px 3px #2E1F00 ;
+    box-shadow: 0 2px 3px #2E1F00 ;
+}
+
+.box-content {
+    background: #B26B00 ;
+    border-top: none ;
+    color: #fff;
+}
+
+/* the 'sort by' buttons */
+
+.toggleset button {
+    background: #B28F00;
+}
+
+.toggleset button:hover {
+    background: #8E7200;
+}
+
+.toggleset button.selected {
+    background: #8E7200;
+}
+
+select {
+    background-color: black ;
+    color: grey ;
+}
+
+#cats {
+    -webkit-filter: brightness(0%) ;
+    -moz-filter: brightness(0%) ;
+    -o-filter: brightness(0%) ;
+    filter: brightness(0%) ;
+}
+
+.btn {
+    color: white ;
+    background-color: #B26B00 ;
+}
+
+.welcome {
+    background-color: #595959 ;
+}
+
+/* upload */
+
+#upload-method-select img.method:hover {
+    box-shadow: 5px 5px 10px black ;
+}
+
+#upload-area {
+    background-color: rgb(92, 61, 0) ;
+}
+
+#upload-status {
+    background: rgba(203, 164, 10, 0.5) ;
+}
+
+.upload-message {
+    color: #140A00 ;
+}
+
+#select-button, #upload-button, #url-button {
+    background: rgba(88, 96, 0, 0.84) ;
+}
+
+#select-button:hover, #upload-button:hover, #url-button:hover {
+    background-color: brown ;
+}
+
+/* blog */
+
+div#entries div.entry h1.entry-header a {
+    color: rgb(255, 204, 0) ;
+}
+
+div#entries div.entry pre.entry-contents {
+    background-color: #0A0500 ;
+    color: white ;
+    padding: 13px;
+    border-radius: 21px;
+}
+
+div#entries hr {
+    margin-top: 60px;
+}
+
+div#entries hr:last-child {
+    display: none;
+}
+
+/* report form */
+
+#report_details {
+    background-color: #331A00;
+    color: #FFFFCC;
+}
+
+div.welcome.info {
+    background-color: #66621e;
+}
+
+ html body {
+    background-color: #b08506;
+}
+
+div.box h1 {
+    background-color: #806512;
+    color: #e0ce0d;
+}
+
+select.footer-select {
+    background-color: #7a710d;
+    color: #0f0c00;
+}
+
+h2.centered-heading {
+    color: #574d0b;
+}
+
+#about p a {
+    color: #a82a19;
+    text-decoration: underline;
+}
+
+#about p {
+    color: #262007;
+}
+
+p.welcome-text {
+    color: #9fb812;
+}
+
+h2.welcome-title {
+    color: #a5bf11;
+}
+
+div.header {
+    color: #fff200;
+    background-color: #803d11;
+}
+
+a.scratch {
+    color: #ebc015;
+}
+
+div.sortby.toggleset {
+    color: #000000;
+}
+
+div.symbol.warning {
+    color: #ed8403;
+}
+
+button.selected {
+    color: #e6e600;
+    background-color: #6b4000;
+}
+
+div.container.main {
+    border-style: none;
+    border-width: 1px;
+}
+
+#search-input {
+    color: #e8d503;
+    background-color: #856105;
+}
+
+div.search-popup {
+    color: #403501;
+    background-color: #998000;
+}
+
+button.btn.blue {
+    background-color: #7a6600;
+}
+
+a.search-link {
+    color: #ffc003;
+}
+
+button.btn.orange {
+    color: #ffffff;
+    background-color: #756307;
+}
+
+span.symbol.plus-circle {
+    color: #d8f04d;
+}
+
+li.last a {
+    color: #eeff00;
+}
+
+a.logged-in-user {
+    color: #eeff00;
+}
+
+#navbar-new-button {
+    color: #eeff00;
+}
+
+ul.left li a {
+    color: #eeff00;
+}
+

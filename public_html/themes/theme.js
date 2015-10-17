@@ -11,7 +11,7 @@ $('#theme-select').on('change', function() {
 });
 
 // is theme defined / valid?
-var themes = ['Regular', 'Dark', 'Halloween'];
+var themes = ['Regular', 'Dark', 'Halloween', 'Warm'];
 if(typeof localStorage['os-theme'] === 'undefined' || !themes.contains(localStorage['os-theme'])) {
 	localStorage['os-theme'] = 'Regular';
 	OpenSprites.theme = 'Regular';
