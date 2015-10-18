@@ -88,9 +88,12 @@
     <?php echo file_get_contents('footer.html'); ?>
 	<script>
 		var model = OpenSprites.models.AssetList($("#top-assets-list"));
-		var model = OpenSprites.models.AssetList($("#feat-assets-list"));
-		var model = OpenSprites.models.AssetList($("#top-collections-list"));
-		var model = OpenSprites.models.AssetList($("#featured-collections"));
+		$.get("my-api-endpoint", function(data){
+		model.updateJson(data);
+		});
+		//var model = OpenSprites.models.AssetList($("#feat-assets-list"));
+		//var model = OpenSprites.models.AssetList($("#top-collections-list"));
+		//var model = OpenSprites.models.AssetList($("#featured-collections"));
 	</script>
 </body>
 </html>
