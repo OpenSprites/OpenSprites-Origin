@@ -87,10 +87,15 @@
     <!-- footer -->
     <?php echo file_get_contents('footer.html'); ?>
 	<script>
-		var model = OpenSprites.models.AssetList($("#top-assets-list"));
+		var modelPopularity = OpenSprites.models.AssetList($("#top-assets-list"));
 		$.get("/site-api/list.php?max=15&sort=popularity&type=all", function(data){
-		model.loadJson(data);
+		modelPopularity.loadJson(data);
 		});
+
+        var modelFeatured = OpenSprites.models.AssetList($("#feat-assets-list"));
+        $.get("/site-api/list.php?max=15&sort=featured&type=all", function(data){
+            modelFeatured.loadJson(data);
+        });
 		//var model = OpenSprites.models.AssetList($("#feat-assets-list"));
 		//var model = OpenSprites.models.AssetList($("#top-collections-list"));
 		//var model = OpenSprites.models.AssetList($("#featured-collections"));
