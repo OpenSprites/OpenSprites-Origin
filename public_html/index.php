@@ -88,9 +88,9 @@
     <?php echo file_get_contents('footer.html'); ?>
 	<script>
 		var model = OpenSprites.models.SortableAssetList($("#top-assets-list"));
-		var model = OpenSprites.models.SortableAssetList($("#feat-assets-list"));
-		var model = OpenSprites.models.SortableAssetList($("#top-collections-list"));
-		var model = OpenSprites.models.SortableAssetList($("#featured-collections"));
+		model = OpenSprites.models.SortableAssetList($("#feat-assets-list"));
+		model = OpenSprites.models.SortableAssetList($("#top-collections-list"));
+		model = OpenSprites.models.SortableAssetList($("#featured-collections"));
 	</script>
 </body>
 </html>
