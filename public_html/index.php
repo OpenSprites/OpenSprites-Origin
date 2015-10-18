@@ -88,7 +88,7 @@
     <?php echo file_get_contents('footer.html'); ?>
 	<script>
 		var model = OpenSprites.models.AssetList($("#top-assets-list"));
-		$.get("list.php?popularitymax=15&sort=?&type=", function(data){
+		$.get("/site-api/list.php?max=15&sort=popularity&type=all", function(data){
 		model.updateJson(data);
 		});
 		//var model = OpenSprites.models.AssetList($("#feat-assets-list"));
