@@ -163,7 +163,7 @@ OpenSprites.models.AssetList = function(_target){
 
 OpenSprites.models.SortableAssetList = function(_target){
 	var modelObj = OpenSprites.models.BaseModel(_target);
-	
+
 	modelObj.currentSort = "popularity";
 	modelObj.currentType = "all";
 	
