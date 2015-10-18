@@ -53,22 +53,22 @@
             
 			<div id="top-assets" class="box">
                     <h1>Top Media</h1>
-                    <div class="box-content" id="top-assets-list"></div>
+                    <div class="box-content assets-list" id="top-assets-list"></div>
             </div>
 
             <div id="feat-assets" class="box">
                     <h1>Featured Media</h1>
-                    <div class="box-content" id="feat-assets-list"></div>
+                    <div class="box-content assets-list" id="feat-assets-list"></div>
             </div>
 			
 			<div id="top-collections" class="box">
                     <h1>Top Collections</h1>
-					<div class="box-content" id="top-collections-list"></div>
+					<div class="box-content assets-list" id="top-collections-list"></div>
             </div>
 			
 			<div id="feat-collections" class="box">
                     <h1>Featured Collections</h1>
-                    <div class="box-content" id="featured-collections"></div>
+                    <div class="box-content assets-list" id="featured-collections"></div>
             </div>
     </div>
     <!-- <div id="teams-favorite">
