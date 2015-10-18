@@ -89,7 +89,7 @@
 	<script>
 		var model = OpenSprites.models.AssetList($("#top-assets-list"));
 		$.get("/site-api/list.php?max=15&sort=popularity&type=all", function(data){
-		model.updateJson(data);
+		model.loadJson(data);
 		});
 		//var model = OpenSprites.models.AssetList($("#feat-assets-list"));
 		//var model = OpenSprites.models.AssetList($("#top-collections-list"));
