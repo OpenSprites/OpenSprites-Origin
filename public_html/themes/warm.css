@@ -155,9 +155,9 @@ div.welcome.info {
     background-color: #615401;
 }
 
-html body {
+/*html body {
     background-color: #c99700;
-}
+} This line changing background colour overrides the one at the top */
 
 div.box h1 {
     background-color: #b88b06;
