@@ -23,7 +23,7 @@ body {
 /* main page/similar */
 
 .welcome .symbol {
-    color: rgb(153, 51, 0) ;
+    color: #38311B;
 }
 
 .themebg {
@@ -152,7 +152,7 @@ div#entries hr:last-child {
 }
 
 div.welcome.info {
-    background-color: #615401;
+    background-color: #C9A83A;
 }
 
 /*html body {
@@ -181,11 +181,11 @@ h2.centered-heading {
 }
 
 p.welcome-text {
-    color: #9fb812;
+    color: #3D351A;
 }
 
 h2.welcome-title {
-    color: #a5bf11;
+    color: #38311B;
 }
 
 div.header {
