@@ -87,10 +87,10 @@
     <!-- footer -->
     <?php echo file_get_contents('footer.html'); ?>
 	<script>
-		var model = OpenSprites.models.SortableAssetList($("#top-assets-list"));
-		var model = OpenSprites.models.SortableAssetList($("#feat-assets-list"));
-		var model = OpenSprites.models.SortableAssetList($("#top-collections-list"));
-		var model = OpenSprites.models.SortableAssetList($("#featured-collections"));
+		var model = OpenSprites.models.AssetList($("#top-assets-list"));
+		var model = OpenSprites.models.AssetList($("#feat-assets-list"));
+		var model = OpenSprites.models.AssetList($("#top-collections-list"));
+		var model = OpenSprites.models.AssetList($("#featured-collections"));
 	</script>
 </body>
 </html>
