@@ -61,7 +61,7 @@ if($type == "all"){
 	array_push($params, "image", "sound");
 } else if($type == "collections") {
 	$query .= " WHERE (`assetType`=?)";
-	array_push($params,"collections")
+	array_push($params,"collections");
 } else {
 	$query .= " WHERE `assetType`=?";
 	array_push($params, $type);
