@@ -12,7 +12,7 @@ if (is_numeric($_GET['id'])) {
         $id = forumQuery("SELECT * FROM `$forum_member_table` WHERE `username`=?", array($_GET['id']))[0]['memberId'];
     } catch (Exception $e) {
         echo "Test1";
-        include '../404.php';
+        //include '../404.php';
         die();
     }
 }
@@ -20,7 +20,7 @@ if (is_numeric($_GET['id'])) {
 $user = getUserInfo(intval($id));
 if (!isset($user['userid'])) {
     echo "Test2";
-    include '../404.php';
+    //include '../404.php';
     die();
 } else {
     $user_exist = true;
@@ -32,7 +32,7 @@ if (!isset($user['userid'])) {
 // no matter how big the offence was. Suspending a user is basically deleting them
 if ($user['usertype'] == "suspended" && !$is_admin) {
     echo "Test3";
-    include '../404.php';
+    //include '../404.php';
     die();
 }
 
