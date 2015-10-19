@@ -193,6 +193,10 @@ div.header {
     background-color: #F5A133;
 }
 
+div.header ul li:hover {
+    background-color:#ED7600 !important;
+}
+
 a.scratch {
     color: #ebc015;
 }
