@@ -11,37 +11,56 @@
 .main-inner a {
     color: #EDB959 !important;
 }
+
 .footer a{
     color: #EDB959 !important;
 }
-.header {
-    background-color:#F9B332 !important;
-}
+
 .assets-list::-webkit-scrollbar-thumb {
     background: #EDB959 !important;
 }
+
 a {
     color: #EDB959;
 }
+
 a:visited {
     background-color: #EDB959 !important;
 }
 
 /*NAVBAR*/
+.header {
+    background-color:#F9B332 !important;
+}
+
+.header li a:hover:not(.search-link),
+.header li span:hover:not(.search-link),
+#userfcttoggle.open {
+    background-color: #E64906 !important;
+}
+
+#browse-li:hover #navbar-browse, #os-new:hover #navbar-new-button {
+	background-color: #E64906 !important;
+}
+
 #browse-li:hover #navbar-browse, #os-new:hover #navbar-new-button {
     background-color: #EDB959 !important;
 }
+
 ul.navbar-dropdown {
     background-color: #EDB959 !important;
 }
+
 .search-popup {
     background-color: #EDB959 !important;
 }
+
 /*MOST BROWSERS, CHROME, IE, OPERA, SAFARI*/
 ::selection {
     background-color: #D09830 !important;
     color: white !important;
 }
+
 /*FIREFOX*/
 ::-moz-selection {
     background-color: #D09830 !important;
