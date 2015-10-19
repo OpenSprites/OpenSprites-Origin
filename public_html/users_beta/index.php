@@ -1,4 +1,5 @@
 <?php
+/////////////////FROM THE OTHER USERPAGE/////////////////
 require "../assets/includes/connect.php";
 require "../assets/includes/validate.php";
 
@@ -10,6 +11,7 @@ if (is_numeric($_GET['id'])) {
     try {
         $id = forumQuery("SELECT * FROM `$forum_member_table` WHERE `username`=?", array($_GET['id']))[0]['memberId'];
     } catch (Exception $e) {
+        echo "Test1";
         include '../404.php';
         die();
     }
@@ -17,6 +19,7 @@ if (is_numeric($_GET['id'])) {
 
 $user = getUserInfo(intval($id));
 if (!isset($user['userid'])) {
+    echo "Test2";
     include '../404.php';
     die();
 } else {
@@ -28,6 +31,7 @@ if (!isset($user['userid'])) {
 // we don't want to have a system to delete users because we should accept appeals
 // no matter how big the offence was. Suspending a user is basically deleting them
 if ($user['usertype'] == "suspended" && !$is_admin) {
+    echo "Test3";
     include '../404.php';
     die();
 }
@@ -58,6 +62,7 @@ function unescape($inp)
 }
 
 $profileSettings = getProfileSettings($user['userid']);
+///////////////////////////////////////////////////////
 ?>
 <!DOCTYPE html>
 <html>
