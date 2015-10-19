@@ -59,6 +59,9 @@ if($type == "all"){
 } else if($type == "media") {
 	$query .= " WHERE (`assetType`=? OR `assetType`=?)";
 	array_push($params, "image", "sound");
+} else if($type == "collections") {
+	$query .= " WHERE (`assetType`=?)";
+	array_push($params,"collections")
 } else {
 	$query .= " WHERE `assetType`=?";
 	array_push($params, $type);
