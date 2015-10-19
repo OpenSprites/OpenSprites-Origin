@@ -197,7 +197,9 @@
                 User not found!
             </div>
             <?php } ?>
+        <?php if ($username == $logged_in_user){ ?>
         </div>
+		<?php } ?>
         <div id="user-pane-left">
             <?php
                 if($user_exist) {
@@ -214,6 +216,10 @@
                 }
             ?>
         </div>
+
+        <?php if ($username != $logged_in_user){ ?>
+        </div>
+		<?php } ?>
 
     </div></div>
 
