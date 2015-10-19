@@ -197,6 +197,7 @@
                 User not found!
             </div>
             <?php } ?>
+        </div>
         <div id="user-pane-left">
             <?php
                 if($user_exist) {
