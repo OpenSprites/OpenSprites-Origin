@@ -193,7 +193,9 @@ div.header {
     background-color: #F5A133;
 }
 
-div.header ul li:hover {
+.header li a:hover:not(.search-link),
+.header li span:hover:not(.search-link),
+#userfcttoggle.open
     background-color:#ED7600 !important;
 }
 
