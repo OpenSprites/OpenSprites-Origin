@@ -13,14 +13,10 @@ For more information, please visit the [discussion thread](http://scratch.mit.ed
 
 The-Cheese-Eater mainly manages hosting, forums, organisation, accounts and domain fees.
 
- - Project coordination
- - Supervising
- - Task delegating
- - Keeper of the FTP keys
+ - Project supervisation
  - Moderation
  - Documentation/things that involve writing/blog posts
- - HTML
- - CSS
+ - HTML/CSS
 
 ### [jbayfield](https://github.com/jbayfield) ###
 ![GitHub Logo](https://avatars0.githubusercontent.com/u/10786277?s=100)
@@ -111,11 +107,3 @@ DM5555 is a dev on the OS team.
  - CSS
  - JavaScript
  - PHP(If necessary)
-
-### [pilppe](http://opensprites.org/users/8/) ###
-![GitHub Logo](https://avatars2.githubusercontent.com/u/8099538?s=100)
-
-pilppe is a dev on the OS team.
-
- - HTML
- - JavaScript
