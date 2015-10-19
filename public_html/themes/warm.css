@@ -196,7 +196,11 @@ div.header {
 .header li a:hover:not(.search-link),
 .header li span:hover:not(.search-link),
 #userfcttoggle.open {
-    background-color:#ED7600 !important;
+    background-color: #ED7600 !important;
+}
+
+#browse-li:hover #navbar-browse, #os-new:hover #navbar-new-button {
+	background-color: #ED7600 !important;
 }
 
 a.scratch {
