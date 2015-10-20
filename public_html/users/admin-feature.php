@@ -17,6 +17,10 @@ if ($is_admin == false){
     die();
 }
 
+//////DEBUG OUTPUT TESTING//////
+echo imagesQuery("SELECT * FROM `" . getAssetsTableName() . "`",null);
+die();
+////////////////////////////////
 
 //Check if asset exists
 $query = imagesQuery("SELECT * FROM `" . getAssetsTableName() . "` WHERE `md5`=?",array($md5));
