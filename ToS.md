@@ -24,7 +24,7 @@ This policy forms an agreement between the end-user (You, User, Your), and OpenS
    - The PII describes the user sharing it, and the user fully understands the consequences involved.
    - The PII describes some other user, and the user has given explicit consent for others to share this PII.
  - Under European Union and United States law, the uploading of (but not limited to) Racial Aggravation or Hate Speech, Child Pornography and illegal downloads is legal violation and OpenSprites shall contact law enforcement if deemed management sees fit.
- - We respect our web-host and it's users. Do not mass upload electronic content with the intention of disrupting the web-hosting service, or OpenSprites and it's users.
+ - We respect our web-host and their customers. Do not mass upload electronic content with the intention of disrupting the web-hosting service, or OpenSprites and our users.
  - Bullying, harassment, stalking or any other form of malicious electronic communication towards ANY person is strictly prohibited. 
  - Do not attempt to overload, or otherwise disrupt any OpenSprites infrastructure. Doing so will result in an IP ban to our servers. Our infrastructure includes and is not limited to:
    - The OpenSprites Website
@@ -32,5 +32,5 @@ This policy forms an agreement between the end-user (You, User, Your), and OpenS
    - Content Delivery Network
    - Development Tools (such as TeamCity)
 
-OpenSprites terms of service revision one. Originally written by cheeseeater on 04/21/2015. Most recent edits by MegaApuTurkUltra on 04/26/2015.  
+OpenSprites terms of service revision one. Originally written by cheeseeater on 04/21/2015. Most recent edits by cheeseeater on 10/20/2015.  
 The OpenSprites Team reserves the right to change, modify, remove and add text to this document without prior notice. This policy is subject to change.
