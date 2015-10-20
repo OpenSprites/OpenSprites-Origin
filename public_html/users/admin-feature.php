@@ -7,8 +7,9 @@ if(!(isset($_GET['md5']) and isset($_GET['featured']))){
     die("Not enough arguments supplied");
 }
 
-$md5 = mysqli_real_escape_string($_GET['md5']);
+$md5 = mysqli_real_escape_string(strval($_GET['md5']));
 $feature = boolval($_GET['featured']);
+
 
 if ($is_admin == false){
     echo '403 - Permission Denied';
