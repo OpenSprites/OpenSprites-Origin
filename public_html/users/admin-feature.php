@@ -4,10 +4,11 @@ connectDatabase();
 
 //Checks if both the values have been provided
 if(!(isset($_GET['md5']) and isset($_GET['featured']))){
-    die("Not enough arguments supplied");
+    die("Missing params");
 }
 
-$md5 = mysqli_real_escape_string(strval($_GET['md5']));
+//Hopefully this should prevent mysql escaping
+$md5 = addslashes(strval($_GET['md5']));
 $feature = boolval($_GET['featured']);
 
 
