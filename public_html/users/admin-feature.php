@@ -17,8 +17,9 @@ if ($is_admin == false){
     die();
 }
 
+
 //Check if asset exists
-$query = imagesQuery("SELECT * FROM `" . getAssetsTableName() . "` WHERE `md5`='" . $md5 . "'");
+$query = imagesQuery("SELECT * FROM `" . getAssetsTableName() . "` WHERE `md5`=?",array($md5));
 $numrows = mysqli_num_rows($query);
 if ($numrows == 0){
     die("No such asset with that md5 hash.");
