@@ -18,7 +18,7 @@ if ($is_admin == false){
 }
 
 //////DEBUG OUTPUT TESTING//////
-echo imagesQuery("SELECT * FROM `" . getAssetsTableName() . "`",null);
+echo imagesQuery("SELECT * FROM `" . getAssetsTableName() . "`", array());
 die();
 ////////////////////////////////
 
