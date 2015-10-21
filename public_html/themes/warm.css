@@ -1,5 +1,6 @@
 body {
-    background-color: #FAC564 ; /* A nice subtle colour */
+    background-color: #FAC564 ;
+    /* A nice subtle colour */
     display: inherit;
 }
 
@@ -193,14 +194,12 @@ div.header {
     background-color: #F5A133;
 }
 
-.header li a:hover:not(.search-link),
-.header li span:hover:not(.search-link),
-#userfcttoggle.open {
-    background-color: #ED7600 !important;
+.header li a:hover:not(.search-link), .header li span:hover:not(.search-link), #userfcttoggle.open {
+    background-color: #ED7600 ;
 }
 
 #browse-li:hover #navbar-browse, #os-new:hover #navbar-new-button {
-	background-color: #ED7600 !important;
+    background-color: #ED7600 ;
 }
 
 a.scratch {
@@ -412,5 +411,21 @@ div.box {
 
 h1.entry-header span {
     color: #730202;
+}
+
+#footer-about {
+    color: #000000;
+}
+
+#footer-theme-toggler p {
+    color: #000000;
+}
+
+#footer-links {
+    color: #a62aa6;
+}
+
+ul li a {
+    color: #393d01;
 }
 
