@@ -30,6 +30,8 @@ if (theme.toLowerCase() != "halloween") {
 	$('head').append('<link href="/themes/' + "halloween" + '.css" rel="stylesheet" type="text/css">');
 }else if(theme.toLowerCase() == "warm"){
 		$('head').append('<link href="/themes/' + "warm" + '.css" rel="stylesheet" type="text/css">');
+}else if(theme.toLowerCase() == "ocean"){
+		$('head').append('<link href="/themes/' + "ocean" + '.css" rel="stylesheet" type="text/css">');
 }else{ //Fallback
 	$('head').append('<link href="/themes/' + "regular" + '.css" rel="stylesheet" type="text/css">');
 }
