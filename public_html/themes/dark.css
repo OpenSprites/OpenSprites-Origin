@@ -41,7 +41,7 @@ body {
 }
 
 h1.firstHeading, h2 {
-	border-bottom: solid 1px white !important;
+	border-color:#fff !important;
 }
 
 #opensprites-heading {
