@@ -1,5 +1,5 @@
 // is theme defined / valid?
-var themes = ['Regular', 'Dark', 'Warm'];
+var themes = ['Regular', 'Dark', 'Warm', 'Ocean'];
 if(typeof localStorage['os-theme'] === 'undefined' || themes.indexOf(localStorage['os-theme']) === -1) {
     console.log('wrong theme');
     localStorage['os-theme'] = 'Regular';
