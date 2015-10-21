@@ -1,0 +1,174 @@
+ html body {
+    background-color: #69adff;
+}
+
+div.welcome.info {
+    background-color: #4400ff;
+}
+
+div.box h1 {
+    background-color: #0c00b8;
+    color: #ffa3ff;
+}
+
+div.box-content {
+    background-color: #3651ff;
+}
+
+div.footer {
+    background-color: #0900ff;
+    padding-bottom: 100px;
+}
+
+div.symbol.warning {
+    color: #000000;
+}
+
+div.header {
+    background-color: #1e1e9e;
+    font-weight: bold;
+}
+
+  html {
+    background-color: #000000;
+}
+
+#footer-about {
+    color: #ffffff;
+    border-color: #000000;
+}
+
+#footer-theme-toggler p {
+    color: #fcfcfc;
+}
+
+#about {
+    border-top-width: 1px;
+    border-right-width: 1px;
+    border-left-width: 1px;
+    border-bottom-width: 1px;
+    border-style: solid;
+    border-width: 1px;
+}
+
+#search-input {
+    background-color: #737fff;
+    color: #000000;
+}
+
+ul.navbar-dropdown li a {
+    background-color: #3636ff;
+}
+
+input.login-field {
+    background-color: #0022ff;
+    color: #ffffff;
+}
+
+#footer-about a {
+    color: #c4c9ff;
+}
+
+select.footer-select {
+    background-color: #6e6eff;
+    color: #000000;
+    text-transform: none;
+    font-variant: small-caps;
+}
+
+div.search-popup {
+    background-color: #0829ff;
+}
+
+#body-content {
+    background-color: #73b7ff;
+}
+
+input.text {
+    background-color: #6e92ff;
+}
+
+div.col-replies span a {
+    color: #170029;
+}
+
+a.channel-6 {
+    color: #2e072e;
+}
+
+a.channel-3 {
+    color: #2e072e;
+}
+
+a.channel-5 {
+    color: #2e072e;
+}
+
+a.channel-4 {
+    color: #2e072e;
+}
+
+button.selected {
+    background-color: #4f72ff;
+}
+
+div.types.toggleset button {
+    background-color: #113399;
+}
+
+div.sortby.toggleset button {
+    background-color: #113399;
+}
+
+div.container.main {
+    background-color: #669eff;
+}
+
+#upload-status {
+    background-color: #1008ff;
+}
+
+#upload-area {
+    background-color: #1c42ff;
+}
+
+#collection-name {
+    background-color: #6b57ff;
+}
+
+div.postBody textarea {
+    background-color: #5b4fff;
+}
+
+div.postHeader {
+    background-color: #4c64ff;
+    color: #000000;
+}
+
+div.editButtons {
+    background-color: #1100ff;
+}
+
+div.area {
+    background-color: #617bff;
+}
+
+#conversationTitle input {
+    background-color: #5462ff;
+    color: #000000;
+}
+
+a.button.big.discardDraft {
+    background-color: #928aff;
+    color: #ffffff;
+}
+
+#reply-previewCheckbox {
+    background-color: #0015ff;
+    color: #0040ff;
+}
+
+#dark-overlay {
+    background-color: #321399;
+}
+
