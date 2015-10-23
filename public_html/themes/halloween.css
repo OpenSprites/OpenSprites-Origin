@@ -68,12 +68,13 @@ ul.navbar-dropdown {
 }
 
 html body img {
-    height: 100px !important;
-    float: left !important;
-    visibility: visible !important;
-    display: inline !important;
-    filter: invert(100%) !important;
+    height: 100px;
+    width: 100px;
+    -webkit-filter: brightness(100%);
+    filter: brightness(100%);
+    color: #ffffff;
+    background-color: #5c5c5c;
+    border-style: none;
 }
-
 
 
