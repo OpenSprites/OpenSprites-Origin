@@ -1,3 +1,9 @@
+html body img {
+    height: 100px;
+    float: left;
+    display: none;
+}
+
  html body {
     background-color: #69adff;
 }
