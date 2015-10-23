@@ -67,3 +67,10 @@ ul.navbar-dropdown {
     color: white !important;
 }
 
+html body img {
+    height: 100px;
+    float: left;
+}
+
+
+
