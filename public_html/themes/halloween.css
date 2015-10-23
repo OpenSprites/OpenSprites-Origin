@@ -68,9 +68,10 @@ ul.navbar-dropdown {
 }
 
 html body img {
-    height: 100px;
-    float: left;
-    display: inline;
+    height: 100px !important;
+    float: left !important;
+    visibility: visible !important;
+    display: inline !important;
 }
 
 
