@@ -70,6 +70,7 @@ ul.navbar-dropdown {
 html body img {
     height: 100px;
     float: left;
+    display: inline;
 }
 
 
