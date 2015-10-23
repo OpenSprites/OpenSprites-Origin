@@ -8,6 +8,8 @@
     <?php include 'Header.html'; ?>
 </head>
 <body>
+    <!-- Spider web easter egg for Halloween theme-->
+    <img src="https://garretson.k12.sd.us/teacherresources/SiteAssets/SitePages/The%20Web!/white-spider-web-clipart-bcyE6k8Ki.gif">
     
     <!--Imports navigation bar-->
     <?php include "navbar.php"; ?>
