@@ -5,7 +5,7 @@ This policy forms an agreement between the end-user (You, User, Your), and OpenS
  - OpenSprites welcomes people of all ages, races, ethnicities, religions, sexual orientations, and gender identities.
  - OpenSprites cannot and does not guarantee reliability, uptime, bug fixes, stability, security, or service.
  - OpenSprites reserves the right to revoke or terminate Your use of the site without prior notice.
- - Any content uploaded is open sourced immediately from upload.
+ - Any content uploaded is licensed under the [Creative Commons Attribution-ShareAlike 2.0 Generic](http://creativecommons.org/licenses/by-sa/2.0/deed.en) license immediately from upload.
  - OpenSprites reserves the right to revoke any electronic content You upload without any prior notice. OpenSprites claims no responsibility for data loss.
  - By using our services, OpenSprites will accept no responsibility for loss, damage, errors or other circumstances.
 
@@ -32,5 +32,5 @@ This policy forms an agreement between the end-user (You, User, Your), and OpenS
    - Content Delivery Network
    - Development Tools (such as TeamCity)
 
-OpenSprites terms of service revision one. Originally written by cheeseeater on 04/21/2015. Most recent edits by cheeseeater on 10/20/2015.  
+OpenSprites terms of service revision one. Originally written by cheeseeater on 04/21/2015. Most recent edits by cheeseeater on 10/24/2015.  
 The OpenSprites Team reserves the right to change, modify, remove and add text to this document without prior notice. This policy is subject to change.
