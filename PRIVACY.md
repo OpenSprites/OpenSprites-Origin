@@ -12,7 +12,7 @@ When you connect to any website, anywhere on the web, your computer will always 
 
 ## What does OpenSprites do with my information? ##
 
-We keep it safe from prying eyes. The IP address we mentioned is logged in a file only accessible to trusted administrators and information about your computer are also in a password protected area. We promise never to ever share details about your setup (Operating System, Browser, IP address) with anyone else out of the OpenSprites administrator team unless forced to do so by law. We use your Operating System and Browser information to help us understand what type device people use OpenSprites on, and how to improve their experience on the site. For example, if 10% of users use OpenSprites on a mobile phone, we can adjust our website to fit their screen. We stored your unique password you made when you created your account in a secure <sub><sup>(Well, not at the moment, but once OS goes into production it will be secure)</sup></sub> database which only trusted administrators have access to. Your email address is also stored in this database.
+We keep it safe from prying eyes. The IP address we mentioned is logged in a file only accessible to trusted administrators and information about your computer are also in a password protected area. We promise never to ever share details about your setup (Operating System, Browser, IP address) with anyone else out of the OpenSprites administrator team unless forced to do so by law. We use your Operating System and Browser information to help us understand what type device people use OpenSprites on, and how to improve their experience on the site. For example, if 10% of users use OpenSprites on a mobile phone, we can adjust our website to fit their screen. We stored your unique password you made when you created your account in a secure database which only trusted administrators have access to. Your email address is also stored in this database.
 
 ## I've heard about "cookies", does OpenSprites place these on my computer? ##
 
@@ -20,5 +20,5 @@ A cookie is a small and harmless piece of text that most websites place on your 
 
 We use cookies to keep you logged in without you needing to enter your password again. We also use cookies to make sure that you don't see a notice more than once. If you want to clear your cookies, [this article](http://www.wikihow.com/Clear-Your-Browser%27s-Cookies) how-to may explain how.
 
-Easy read privacy policy revision one. Originally written by cheeseeater on 02/08/2015, adapted on 18/04/2015. Most recent edits by MegaApuTurkUltra on 05/02/2015.  
+Easy read privacy policy revision one. Originally written by cheeseeater on 02/08/2015, adapted on 18/04/2015. Most recent edits by cheeseeater on 24/10/2015.  
 The OpenSprites Team reserves the right to change, modify, remove and add text to this document without prior notice. This policy is subject to change.
