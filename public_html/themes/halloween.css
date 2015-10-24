@@ -7,6 +7,10 @@
     border: 3px solid #EDB959 !important;
 }
 
+#spiderweb {
+	display:block;
+}
+
 /*OTHER STUFF*/
 .main-inner a {
     color: #EDB959 !important;
