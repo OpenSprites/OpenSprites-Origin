@@ -9,7 +9,7 @@
 </head>
 <body>
     <!-- Spider web easter egg for Halloween theme-->
-    <img src="https://garretson.k12.sd.us/teacherresources/SiteAssets/SitePages/The%20Web!/white-spider-web-clipart-bcyE6k8Ki.gif">
+    <img src="https://garretson.k12.sd.us/teacherresources/SiteAssets/SitePages/The%20Web!/white-spider-web-clipart-bcyE6k8Ki.gif" id="spiderweb" style="height:100px;width:100px;display:none;">
     
     <!--Imports navigation bar-->
     <?php include "navbar.php"; ?>
