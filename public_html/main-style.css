@@ -965,7 +965,3 @@ a:visited {
 
 .fold.closed .fold-toggle .fold-arrow::after {
 	content: "{";
-}
-#spider{
-    position: absolute;
-}
