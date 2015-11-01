@@ -965,8 +965,8 @@ a:visited {
 
 .fold.closed .fold-toggle .fold-arrow::after {
 	content: "{";
-	
-	.img-preview {
-		display: block !important;
 }
-	}
+
+.img-preview {
+	display: block !important;
+}
