@@ -155,6 +155,7 @@
     height: 200px !important;
     min-height: 200px !important;
     padding-right: 80px;
+    display: block !important; /* overwrites style css' - for some reason this is hidden? */
 }
 
 #change-image {
