@@ -1,9 +1,9 @@
-html body img {
+img {
     height: 100px;
     float: left;
 }
 
- html body {
+body {
     background-color: #69adff;
 }
 
@@ -32,10 +32,6 @@ div.symbol.warning {
 div.header {
     background-color: #1e1e9e;
     font-weight: bold;
-}
-
-  html {
-    background-color: #000000;
 }
 
 #footer-about {
