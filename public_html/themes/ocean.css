@@ -1,10 +1,11 @@
+body {
+    background-color: #69adff;
+    display:block;
+}
+
 img {
     height: 100px;
     float: left;
-}
-
-body {
-    background-color: #69adff;
 }
 
 div.welcome.info {
