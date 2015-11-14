@@ -1,3 +1,15 @@
+@font-face {
+	font-family: Palanquin300;
+	src: url('/assets/includes/Palanquin-Light.ttf');
+}
+@font-face {
+	font-family: Palanquin600;
+	src: url('/assets/includes/Palanquin-SemiBold.ttf');
+}
+@font-face {
+	font-family: Oxygen;
+	src: url('/assets/includes/Oxygen-Light.ttf');
+}
 :focus {
     outline: none;
 }
@@ -15,8 +27,7 @@
 }
 
 body {
-	font-family: 'Palanquin', sans-serif !important;
-    font-weight: 300;
+	font-family: 'Palanquin300', sans-serif !important;
     margin: 0;
     background-color: white;
     color:#000; /* Not everything is #000, but you can rely on CSS specifity */
