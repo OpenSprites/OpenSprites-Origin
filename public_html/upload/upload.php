@@ -128,7 +128,8 @@ if(isset($_FILES['uploadedfile'])){
 							$ext = ".mp3";
 							$proceed = TRUE;
 						} else {
-							$current_json['message'] = "Whoops! Our servers didn't recognize this file's format."; 
+							$current_json['message'] = "Whoops! Our servers didn't recognize this file's format.";
+							echo "<a target="_blank" href="" title="We support the formats: PNG, JPEG, GIF, SVG, MPEG-3, WAV, Scripts in the JSON format specified by MIT Scratch"><img src="http://shots.jotform.com/kade/Screenshots/blue_question_mark.png" height="13px"/></a>";
 							$current_json['hash'] = hash_file('md5', $tmpName);
 						}
 					}
