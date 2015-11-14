@@ -486,7 +486,7 @@ function processFiles(files){
 	}
 	
 	if(addedFiles != totalFiles){
-		$("#upload-status p").text("Some files unrecognized. <a target="_blank" href="" title="We support the formats: PNG, JPEG, GIF, SVG, MPEG-3, WAV, Scripts in the JSON format specified by MIT Scratch"><img src="http://shots.jotform.com/kade/Screenshots/blue_question_mark.png" height="13px"/></a>");
+		$("#upload-status p").text("Some files unrecognized. <a target="_blank" href="" title="We support the formats: PNG, JPEG, GIF, SVG, MPEG-3, WAV, Scripts in the JSON format specified by MIT Scratch"><img src="shots.jotform.com/kade/Screenshots/blue_question_mark.png" height="13px"/></a>");
 	} else {
 		$("#upload-status p").text("Added files.");
 		if(hasSounds) $("#upload-status p").append(" <span class='audiomsg'>Generating previews for sounds...</span>");
