@@ -1,14 +1,14 @@
 @font-face {
 	font-family: Palanquin300;
-	src: url('http://opensprites.org/assets/includes/Palanquin-Light.ttf');
+	src: url('/assets/includes/Palanquin-Light.ttf');
 }
 @font-face {
 	font-family: Palanquin600;
-	src: url('http://opensprites.org/assets/includes/Palanquin-SemiBold.ttf');
+	src: url('/assets/includes/Palanquin-SemiBold.ttf');
 }
 @font-face {
 	font-family: Oxygen;
-	src: url('http://opensprites.org/assets/includes/Oxygen-Light.ttf');
+	src: url('/assets/includes/Oxygen-Light.ttf');
 }
 :focus {
     outline: none;
