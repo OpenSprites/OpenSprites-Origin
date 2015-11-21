@@ -19,7 +19,7 @@
         <div class="main-inner">
             <h1 id="opensprites-heading">Nope.</h1>
             <div id="about">
-                <img src='/assets/images/403.png' style='position: absolute; margin: auto; left: 0; right: 0;'>
+                <img src='/assets/images/403.png' style='position: absolute; margin: auto; left: 0; right: 0; height: 400px;'>
                 <div style='width: 100%; height: 470px;'>&nbsp;</div>
                 <p style='position: absolute; margin: auto; top: 480px; left: 0; right: 0; width: 50%; text-align: center; font-size: 18px;'>It looks like you don't have permission to go here.<br>You may want to <a href='/'>go back to the main page</a>.</p>
             </div>
