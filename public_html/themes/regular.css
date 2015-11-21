@@ -1,7 +1,7 @@
-html body img {
+/*html body img {
     height: 100px;
     float: left;
-}
+}*/
 
 body {
 	display: inherit !important;
