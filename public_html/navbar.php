@@ -148,6 +148,9 @@
     </div>
 </div>
 
+<!-- On mobile, chrome will change title bar colors -->
+<meta name="theme-color" content="#659593">
+
 <!-- Search -->
 <script>
 	var timeoutKey = -1;
