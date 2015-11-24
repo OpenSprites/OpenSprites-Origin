@@ -9,3 +9,8 @@ var mainView = myApp.addView('.view-main', {
 	// Because we want to use dynamic navbar, we need to enable it for this view:
 	dynamicNavbar: true
 });
+
+// Now we need to run the code that will be executed only for About page.
+myApp.onPageInit('about', function (page) {
+  alert('Look at the swag!');
+});
