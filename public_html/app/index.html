@@ -1,45 +1,60 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
-		<meta charset="utf-8" />
-		<meta name="format-detection" content="telephone=no" />
-		<meta name="msapplication-tap-highlight" content="no" />
-		<!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
-		<meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
-		<!-- <link rel="stylesheet" type="text/css" href="css/index.css" /> -->
-		<title>OpenSprites Mobile App</title>
-
-		<link rel="stylesheet" type="text/css" href="css/opensprites.css" />
-
-	</head>
-<body>
-
-<!-- TOP BAR -->
-<div class="bar">
-<div style="vertical-align: center;">
-	<span><b>OPEN</b>SPRITES</span>
-</div>
-</div>
-
-<!-- CONTENT -->
-<div class="content">
-	<div class="box">
-
-		<h2 class="text-center">Welcome</h2><br/>
-		<p class="text-center">Thank you for downloading the OpenSprites mobile app! To get started, please log in to your OpenSprites account or create a new one!</p><br>
-		<a href="http://www.opensprites.org/login" class="btn" style="float: center;margin-left: auto;margin-right: auto;color: #282828;font-size: 1.1em;background-color: #CACACA;padding: 0.3em;border-radius: 5px;-webkit-border-radius: 10px;-moz-border-radius: 10px;border: 0;text-decoration: none;transition: 200ms all;margin-left: 5px;font-family: sans-serif;">Continue</a>
-
-	</div>
-</div>
-
-
-<!-- SCRIPTS -->
-<script type="text/javascript" src="cordova.js"></script>
-<script type="text/javascript" src="js/index.js"></script>
-<script type="text/javascript">
-	app.initialize();
-</script>
-
-</body>
-</html>
+  <head>
+    <!-- Required meta tags-->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <!-- Color theme for statusbar -->
+    <meta name="theme-color" content="#2196f3">
+    <!-- Your app title -->
+    <title>OpenSprites App</title>
+    <!-- Path to Framework7 Library CSS, Material Theme -->
+    <link rel="stylesheet" href="css/framework7.material.min.css">
+    <!-- Path to Framework7 color related styles, Material Theme -->
+    <link rel="stylesheet" href="css/framework7.material.colors.min.css">
+    <!-- Path to your custom app styles-->
+    <link rel="stylesheet" href="css/app.css">
+  </head>
+  <body>
+    <!-- Views -->
+    <div class="views">
+      <!-- Your main view, should have "view-main" class -->
+      <div class="view view-main">
+        <!-- Pages container, because we use fixed navbar and toolbar, it has additional appropriate classes-->
+        <div class="pages navbar-fixed toolbar-fixed">
+          <!-- Page, "data-page" contains page name -->
+          <div data-page="index" class="page">
+ 
+            <!-- Top Navbar. In Material theme it should be inside of the page-->
+            <div class="navbar">
+              <div class="navbar-inner">
+                <div class="center">Awesome App</div>
+              </div>
+            </div>
+ 
+            <!-- Bottom Toolbar. In Material theme it should be inside of the page-->
+            <div class="toolbar">
+              <div class="toolbar-inner">
+                <!-- Toolbar links -->
+                <a href="#" class="link">Link 1</a>
+                <a href="#" class="link">Link 2</a>
+              </div>
+            </div>
+ 
+            <!-- Scrollable page content -->
+            <div class="page-content">
+              <p>Page content goes here</p>
+              <!-- Link to another page -->
+              <a href="about.html">About app</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Path to Framework7 Library JS-->
+    <script type="text/javascript" src="js/framework7.min.js"></script>
+    <!-- Path to your app js-->
+    <script type="text/javascript" src="js/app.js"></script>
+  </body>
+</html> 
