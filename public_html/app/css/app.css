@@ -1,6 +1,6 @@
-.page-content {
-  margin-left: 3vw;
-  margin-right: 3vw;
+#pagecontent {
+  margin-top: 104px;
+  padding: 20px;
 }
 
 .noselect {
