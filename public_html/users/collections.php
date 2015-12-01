@@ -36,26 +36,32 @@ if($is_creating){
 	</script>
 	<style>
 		h1 {
-			font-size:48px;
-			font-weight:300;
-			text-align:center;
+			font-size: 48px;
+			font-weight: 300;
+			text-align: center;
 		}
         
 		#id {
-			font-size:20px;
-			margin-top:-10px;
+			font-size: 20px;
+			margin-top: -10px;
 		}
         
-        #description {
-            font-size:22px;
-            text-align:center;
-        }
-        
-        /* When creating collection */
-        #create-collection {
-            width:150px;
-            margin:auto;
-        }
+	        #description {
+	            font-size: 22px;
+	            text-align: center;
+	            margin-top: 30px;
+	        }
+	        
+	        #collection-search {
+	        	margin-bottom: 15px;
+	        }
+	        
+	        /* When creating collection */
+	        #create-collection {
+	            width: 150px;
+	            margin: auto;
+	        }
+	        
 	</style>
 </head>
 <body>
