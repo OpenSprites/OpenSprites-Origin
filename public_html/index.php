@@ -50,41 +50,20 @@
 
             <div id="about">
                 <h2 class="centered-heading">Welcome!</h2>
-                <p>Welcome to OpenSprites, the free open-source site that allows <a href='//scratch.mit.edu'>Scratch</a> users to share their own creations, such as scripts, sprites, sounds, and costumes! Designed with kids in mind, we promote the idea of creating and sharing, and provide a kid-safe platform for this. So, what are you waiting for? Get creating and sharing!</p>
+                <p>Welcome to OpenSprites, the free open-source site that allows <a href='//scratch.mit.edu'>Scratch</a> users to share their own creations, such as scripts, sprites, sounds, and costumes! Designed with children in mind, we promote the idea of creating and sharing, and provide a child-safe platform for this. So, what are you waiting for? Get creating and sharing!</p>
             </div>
             
-			<div id="top-assets" class="box">
-                    <h1>Top Media</h1>
-                    <div class="box-content assets-list" id="top-assets-list"></div>
-            </div>
-
-            <div id="feat-assets" class="box">
-                    <h1>Featured Media</h1>
-                    <div class="box-content assets-list" id="feat-assets-list"></div>
-            </div>
-			
-			<div id="top-collections" class="box">
-                    <h1>Top Collections</h1>
-					<div class="box-content assets-list" id="top-collections-list"></div>
-            </div>
-			
-			<div id="feat-collections" class="box">
-                    <h1>Featured Collections</h1>
-                    <div class="box-content assets-list" id="featured-collections"></div>
-            </div>
-    </div>
-    <!-- <div id="teams-favorite">
-           <div class="box">
-               <h1>Featured Scripts and Sprites</h1>
-                   <div class="box-content">
-                        <p>The OS Team will choose two scripts and two sprites daily.
-                        </p>
-                        PHP guys, get in here!
-                    </div>
-                </div>
-            </div>
         </div>
-    </div> -->
+            
+		<div class="main container" id="top-assets">
+            <h2 class="centered-heading">Top Media</h2>
+            <div class="box-content assets-list" id="top-assets-list"></div>
+        </div>
+        
+        <div class="main container" id="feat-assets">
+            <h2 class="centered-heading">Featured Assets</h2>
+            <div class="box-content assets-list" id="top-assets-list"></div>
+        </div>
     
     <!-- footer -->
     <?php echo file_get_contents('footer.html'); ?>
