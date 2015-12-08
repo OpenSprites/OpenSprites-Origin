@@ -25,7 +25,7 @@
     <?php include "../navbar.php"; ?>
     
     <!-- Main wrapper -->
-    <div class="container main" style="height:440px;">
+    <div class="container main" style="height:440px;background-color:transparent>
         <div class="main-inner">
             <form enctype="multipart/form-data" id="login-form">
 				<p id="login-message"></p>
