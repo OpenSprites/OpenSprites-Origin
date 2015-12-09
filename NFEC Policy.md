@@ -17,9 +17,9 @@ Not For Everyone Content (NFEC) is content that could potentially be pushing the
 
 OpenSprites handles NFEC similarly to Scratch. NFEC **is allowed** on the site, but with the following restrictions:
 
-* NFE listed content is disallowed from showing on the front page or on the resource pages under the browse menu.
+* NFEC listed content is disallowed from showing on the front page or on the resource pages under the browse menu.
 * Staff are disallowed to link to NFEC publically.
 * Post on the forums which link to NFE content are generally disallowed.
-* Comments on non-NFE content which link to NFE are generally disallowed.
+* Comments on non-NFEC content which link to NFEC are generally disallowed.
 
 OpenSprites moderators reserve the right to deal with NFEC policy violations at their own discretion, depending on the severity.
