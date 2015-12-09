@@ -1162,12 +1162,23 @@ a:hover {
 
 .welcome-title, .welcome-text, .welcome .symbol, .welcome a { color: #333333 !important; }
 
+.header .search {
+	height: 54px;
+	line-height: 54px;
+}
+
+.header .search #search-input {
+	border-radius: 0;
+	height: 36px;
+	line-height: 36px;
+}
+
 /* {material design} shadows */
 .depth-0 {
 	box-shadow: none;
 }
 
-.main.container, .depth-1 {
+.main.container, .btn, .file, #search-input, .depth-1 {
 	box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
 }
 
