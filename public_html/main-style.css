@@ -1180,6 +1180,10 @@ a:hover {
 	line-height: 36px;
 }
 
+.assets-list:empty::after {
+	content: 'No assets.';
+}
+
 /* {material design} shadows */
 .depth-0 {
 	box-shadow: none !important;
