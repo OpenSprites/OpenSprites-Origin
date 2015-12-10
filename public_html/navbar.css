@@ -164,6 +164,7 @@ ul.navbar-dropdown li {
 	border-bottom-left-radius: 1em;
 	border-bottom-right-radius: 1em;
 	z-index: 99999;
+	margin-top: 19px;
 }
 
 .search-popup .search-message {
