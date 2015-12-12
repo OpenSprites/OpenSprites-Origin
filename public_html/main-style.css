@@ -249,12 +249,6 @@ a.external {
     padding-right: 13px;
 }
 
-a:hover,
-a:focus,
-a:active {
-    text-decoration: underline;
-}
-
 .catlinks {
     background-color: #EEEEEE;
     border: 1px solid #CCCCCC;
@@ -304,6 +298,10 @@ a:active {
     font-size: 11px;
     margin: 0;
     padding: 1em 0 0;
+}
+
+.footer a:hover {
+	color: #176060;
 }
 
 .printfooter {
