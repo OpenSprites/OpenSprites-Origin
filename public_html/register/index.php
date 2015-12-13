@@ -20,10 +20,10 @@
     ?>
     
     <!-- Main wrapper -->
-    <div class="container main" style="height:700px;">
+    <div class="container main" style="height:700px;position: relative;">
         <div class="main-inner">
-            <!--<div style="position: absolute;left: 0;right: 0;height: 70px;" class="themebg"></div>-->
-            <iframe scrolling="no" src="http://opensprites.org/forums/?p=user/join&amp;return=http://opensprites.org/&amp;iframe=true" style="width: 100%; height: 620px;overflow: hidden;border: none;margin-top:-80px;"></iframe>
+            <div style="position: absolute;left: 0;right: 0;height: 70px;background: white;"></div>
+            <iframe scrolling="no" src="http://opensprites.org/forums/?p=user/join&amp;return=http://opensprites.org/&amp;iframe=true" style="width: 100%; height: 620px;overflow: hidden;border: none;"></iframe>
         </div>
     </div>
     
