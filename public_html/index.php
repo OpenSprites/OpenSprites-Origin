@@ -16,7 +16,7 @@
     <!-- Info for new visitors. -->
 	<div class="main container" id="top-assets">
         <h2 class="centered-heading">Share your Scratch resources with the world!</h2>
-        <p class="welcome-text">OpenSprites allows users to share their sprites, scripts, costumes and other Scratch-related resources for others to easily download and use.</p>
+        <p class="welcome-text">OpenSprites allows Scratch users to share their sprites, scripts, costumes and other Scratch-related resources for others to easily download and use.</p>
 		<a href="/register" class="btn">Create a free account</a>
     </div>
     <?php } ?>
@@ -40,12 +40,12 @@
     <?php echo file_get_contents('footer.html'); ?>
 	<script>
 		var modelPopularity = OpenSprites.models.AssetList($("#top-assets-list"));
-		$.get("/site-api/list.php?max=15&sort=popularity&type=all", function(data){
+		$.get("/site-api/list.php?max=8&sort=popularity&type=all", function(data){
 		modelPopularity.loadJson(data);
 		});
 
         var modelFeatured = OpenSprites.models.AssetList($("#feat-assets-list"));
-        $.get("/site-api/list.php?max=15&sort=featured&type=all", function(data){
+        $.get("/site-api/list.php?max=8&sort=featured&type=all", function(data){
             modelFeatured.loadJson(data);
         });
 		//var model = OpenSprites.models.AssetList($("#feat-assets-list"));
