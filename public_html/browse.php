@@ -3,7 +3,7 @@
 	
 	$mtype = $_GET['type'];
 	
-	$allowed_types = array("media", "script", "collections");
+	$allowed_types = array("resources", "script", "collections");
 	
 	$descriptions = array(
 		"resources" => "Find new and awesome resources from OpenSprites users here.",
