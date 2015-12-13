@@ -3,10 +3,10 @@
 	
 	$mtype = $_GET['type'];
 	
-	$allowed_types = array("resources", "script", "collections");
+	$allowed_types = array("media", "script", "collections");
 	
 	$descriptions = array(
-		"resources" => "Find new and awesome resources from OpenSprites users here.",
+		"media" => "Find new and awesome resources from OpenSprites users here.",
 		"scripts" => "Browse Scratch scripts from OpenSprites users, and download them for your own projects.",
 		"collections" => "Collections are groups resources. Some collections are meant to be used as sprites out of the box, others may just be a way of grouping different resources that have something in common. You can find new and awesome collections from OpenSprites users here!");
 	
