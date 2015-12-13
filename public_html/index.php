@@ -27,13 +27,13 @@
     </div>
         
 	<div class="main container" id="top-assets">
-        <h2 class="centered-heading">Top Media</h2>
+        <h2 class="centered-heading">Top Resources</h2>
         <div class="box-content assets-list" id="top-assets-list"></div>
     </div>
     
     <div class="main container" id="feat-assets">
-        <h2 class="centered-heading">Featured Assets</h2>
-        <div class="box-content assets-list" id="top-assets-list"></div>
+        <h2 class="centered-heading">Featured Resources</h2>
+        <div class="box-content assets-list" id="feat-assets-list"></div>
     </div>
     
     <!-- footer -->
