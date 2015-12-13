@@ -113,10 +113,6 @@
     padding: 20px !important;
     margin-bottom: 80px;
     transition: height 500ms;
-    border-radius: 20px;
-    
-	background-color: rgba(0, 0, 0, 0.5) !important;
-	color: rgb(244, 244, 244);
 }
 
 #user-pane-left {
