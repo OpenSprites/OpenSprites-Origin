@@ -19,5 +19,6 @@ We keep it safe from prying eyes. The IP address we mentioned is logged in a fil
 A cookie is a small and harmless piece of text that most websites place on your computer. This text is usually used by those sites to identify you across their site.
 
 We use cookies to keep you logged in without you needing to enter your password again. We also use cookies to make sure that you don't see a notice more than once. If you want to clear your cookies, [this how-to](http://www.wikihow.com/Clear-Your-Browser%27s-Cookies) website will explain the process for the major browsers. Instructions for other browsers can generally be found in the documentation. 
-Most recent edits by cheeseeater on 24/10/2015.  
+
+OpenSprites privacy policy effective from 9th Febuary 2015. Most recent edits by cheeseeater on 29th December 2015. 
 The OpenSprites Team reserves the right to change, modify, remove and add text to this document without prior notice. This policy is subject to change.
