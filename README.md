@@ -93,7 +93,8 @@ Rumanti is a front-end developer on the OS team and the only one who does not li
 ### [Firedrake969](https://github.com/Firedrake969) ###
 ![GitHub Logo](https://avatars3.githubusercontent.com/u/8008245?s=100)
 
-Firedrake969 is one of the lead developers of OS. He is also one of the main overseers of the project.
+~~Firedrake969 is one of the lead developers of OS. He is also one of the main overseers of the project.~~
+Firedrake969 used to do stuff.  Now he just chats in the Gitter room, like everybody else.
 
  - HTML
  - CSS
