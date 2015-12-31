@@ -19,6 +19,7 @@
     <!-- Main wrapper -->
     <div class="container main" style="height:700px;position: relative;">
         <div class="main-inner">
+            <div style="position: absolute;left: 0;right: 0;height: 70px;background: white;"></div>
             <!--Content here? -->
         </div>
     </div>
