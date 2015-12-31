@@ -26,3 +26,4 @@
     
     <!--Footer -->
     <?php include 'footer.html'; ?>
+</body>
