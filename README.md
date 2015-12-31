@@ -76,7 +76,7 @@ Arinerron mainly works on fixing bugs, front-end stuff, and mobile and desktop a
  - HTML
  - CSS
  - JS
- - PHP
+ - Enough PHP to get me through the day
  - Java
  - Swift
 
