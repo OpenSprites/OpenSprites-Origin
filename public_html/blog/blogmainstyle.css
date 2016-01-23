@@ -314,9 +314,14 @@ a:active {
     padding: 1em 0 0;
 }
 
+.footer a:hover {
+	color: #176060;
+}
+
 .printfooter {
     display: none;
 }
+
 /*TO BE ORGANIZED */
 /* search bar */
 /* By the way, will we need this? Are we adding a search bar? */
