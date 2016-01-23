@@ -3,7 +3,7 @@
     <head>
         <title>OpenSprites Blog</title>
         <link href='../navbar.css' type="text/css" rel=stylesheet>
-        <link href='../main-style.css' type="text/css" rel=stylesheet>
+        <link href='/blogmainstyle.css' type="text/css" rel=stylesheet>
         <?php include("header.php"); ?>
     </head>
     <body>
