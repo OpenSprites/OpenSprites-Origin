@@ -62,6 +62,16 @@ if($is_creating){
 	            margin: auto;
 	        }
 	        
+	        button.action.btn.orange {
+    padding-top: 0;
+}
+
+button.btn.orange {
+    padding-top: 0;
+}
+
+
+	        
 	</style>
 </head>
 <body>
