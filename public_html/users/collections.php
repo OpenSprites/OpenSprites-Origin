@@ -106,7 +106,7 @@
                     <div id="collection-actions">
                         <p class='label' style='float:left;margin-top:2px;margin-right:8px;'>Actions:</p>
                         <button class="action btn orange" type="button" id="action-edit" data-toggle="action-edit" data-target="#action-edit-modal">Edit Details</button>
-                        <button class="action btn orange" type="button" id="action-add">Add Assets</button>
+                        <button class="action btn orange" type="button" id="action-add">Add Assets</button>  <input type="file" id="filechooser" style="display:none;">
                         <button class="action on-select btn orange" type="button" id="action-remove">Remove Selected Assets</button>
                         <button class="action btn orange" type="button" id="action-collab">Manage Collaborators</button>
                     </div>
@@ -166,6 +166,10 @@
                     var name = encodeURIComponent($('#collection-name-input').val());
                     var description = encodeURIComponent($('#collection-description-input').val());
                     $.post("/site-api/collection_edit.php?cid=<?php echo urlencode($cid);?>&name=" + name + "&description=" + description, {}, function(data, status) {});
+                });
+                $("#action-add").click(function(e){
+                    e.preventDefault();
+                    $("#filechooser").trigger('click');
                 });
             </script>
             <!-- footer -->
