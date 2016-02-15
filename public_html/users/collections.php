@@ -102,8 +102,8 @@
                 <?php } ?>
                 <div id="collection-assets">
                     <div id="collection-search">
-                        <input type="text" placeholder="Search in collection" />
                         <h2 class="centered-heading">Collection Resources</h2>
+                        <input type="text" placeholder="Search collection" />
                         <div class="box-content assets-list" id="collection-assets-list">
                             Render asset list here
                         </div>
