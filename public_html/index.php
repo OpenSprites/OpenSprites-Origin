@@ -10,32 +10,27 @@
 <body>
     <!--Imports navigation bar-->
     <?php include "navbar.php"; ?>
-    
+
     <!-- Main wrapper -->
     <?php if($logged_in_user == 'not logged in') { ?>
     <!-- Info for new visitors. -->
-	<div class="main container" id="top-assets">
+	<div class="main container" id="about">
         <h2 class="centered-heading">Share your Scratch resources with the world!</h2>
-        <p class="welcome-text">OpenSprites allows Scratch users to share their sprites, scripts, costumes and other Scratch-related resources for others to easily download and use.</p>
+        <p class="welcome-text">Spice up your Scratch projects with awesome sounds, costumes, backdrops and more - made by people just like you. OpenSprites is the place where Scratchers can upload and download super-cool resources to use in their projects, with new stuff being added daily by users all over the globe. All you need to do to get started is sign up!</p>
 		<a href="/register" class="btn">Create a free account</a>
     </div>
     <?php } ?>
 
-	<div class="main container" id="about">
-        <h2 class="centered-heading">Welcome!</h2>
-        <p>Welcome to OpenSprites, the free open-source site that allows <a href='//scratch.mit.edu'>Scratch</a> users to share their own creations, such as scripts, sprites, sounds, and costumes! Designed with children in mind, we promote the idea of creating and sharing, and provide a child-safe platform for this. So, what are you waiting for? Get creating and sharing!</p>
-    </div>
-        
 	<div class="main container" id="top-assets">
         <h2 class="centered-heading">Top Resources</h2>
         <div class="box-content assets-list" id="top-assets-list"></div>
     </div>
-    
+
     <div class="main container" id="feat-assets">
         <h2 class="centered-heading">Featured Resources</h2>
         <div class="box-content assets-list" id="feat-assets-list"></div>
     </div>
-    
+
     <!-- footer -->
     <?php echo file_get_contents('footer.html'); ?>
 	<script>
