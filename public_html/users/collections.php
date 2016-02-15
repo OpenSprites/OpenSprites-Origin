@@ -105,6 +105,10 @@
                         <input type="text" placeholder="Search in collection" />
                     </div>
                     Render asset list here
+                    <div class="main container" id="collection-assets">
+                        <h2 class="centered-heading">Collection Resources</h2>
+                        <div class="box-content assets-list" id="collection-assets-list"></div>
+                    </div>
                 </div>
                 <?php } ?>
             </div>
