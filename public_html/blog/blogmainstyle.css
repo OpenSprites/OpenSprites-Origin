@@ -984,3 +984,8 @@ a:visited {
 .img-preview {
 	display: block !important;
 }
+
+div.header {
+    padding-bottom: 1.4%; /* Temporary fix ONLY */
+}
+
