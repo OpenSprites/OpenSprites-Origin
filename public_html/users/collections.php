@@ -136,7 +136,7 @@
                                 <input type="name" class="form-control" id="collection-name-input" placeholder="Collection Name" maxlength="32">
                             </div>
                             <div class="form-group">
-                                <label for="collection-description-input">Collection Description:</label>
+                                <label for="collection-description-input">Collection Description</label>
                                 <textarea class="form-control" rows="5" id="collection-description-input" placeholder="Collection Description" maxlength="500"></textarea>
                             </div>
                         </div>
