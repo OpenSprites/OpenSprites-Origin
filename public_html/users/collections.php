@@ -149,6 +149,11 @@
                 </div>
             </div>
             <br/><br/>
+            <div class="container main">
+                <div class="main-inner">
+                    test
+                </div>
+            </div>
             <script src="/users/collections.js"></script>
             <script>
                 var modelCollections = OpenSprites.models.AssetList($("#collection-assets-list"));
