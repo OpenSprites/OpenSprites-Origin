@@ -104,9 +104,7 @@
                     <div id="collection-search">
                         <h2 class="centered-heading">Collection Resources</h2>
                         <input type="text" placeholder="Search collection" />
-                        <div class="box-content assets-list" id="collection-assets-list">
-                            Render asset list here
-                        </div>
+                        <div class="box-content assets-list" id="collection-assets-list"></div>
                     </div>
                 </div>
                 <?php } ?>
@@ -114,6 +112,12 @@
         </div>
         <br/><br/>
         <script src="/users/collections.js"></script>
+        <script>
+        var modelCollections = OpenSprites.models.AssetList($("#collection-assets-list"));
+        $.get("/site-api/collection_get.php?userid=<?php echo urlencode($username);?>&cid=<?php echo urlencode($cid);?>", function(data){
+            modelCollections.loadJson(data);
+        });
+        </script>
         <!-- footer -->
         <?php echo file_get_contents('../footer.html'); ?>
     </body>
