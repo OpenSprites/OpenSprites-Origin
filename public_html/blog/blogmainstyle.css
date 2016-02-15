@@ -989,3 +989,7 @@ div.header {
     padding-bottom: 1.4%; /* Temporary fix ONLY */
 }
 
+h1.entry-header a {
+    color: #328f75;
+}
+
