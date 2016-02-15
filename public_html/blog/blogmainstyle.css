@@ -43,7 +43,6 @@ body {
     top: 0;
     left: 0;
     right: 0;
-    height: 35px;
     padding: 0 10px;
     background-color: #659593;
     z-index: 200;
@@ -983,10 +982,6 @@ a:visited {
 
 .img-preview {
 	display: block !important;
-}
-
-div.header {
-    padding-bottom: 1.4% !important;
 }
 
 h1.entry-header a {
