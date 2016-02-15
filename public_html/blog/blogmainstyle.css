@@ -986,10 +986,10 @@ a:visited {
 }
 
 div.header {
-    padding-bottom: 1.4%; /* Temporary fix ONLY */
+    padding-bottom: 1.4% !important;
 }
 
 h1.entry-header a {
-    color: #328f75;
+    color: #328f75 !important;
 }
 
