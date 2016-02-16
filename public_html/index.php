@@ -21,7 +21,15 @@
     </div>
     <?php } ?>
 
-	<div class="main container" id="top-assets">
+    <?php if($logged_in_user != 'not logged in') { ?>
+    <!-- Info for logged in visitors. -->
+  <div class="main container" id="about">
+        <h2 class="centered-heading">Hey, <?php echo $logged_in_user?>!</h2>
+        <p class="welcome-text">Check out today's popular resources below...</p>
+    </div>
+    <?php } ?>
+
+  <div class="main container" id="top-assets">
         <h2 class="centered-heading">Top Resources</h2>
         <div class="box-content assets-list" id="top-assets-list"></div>
     </div>
