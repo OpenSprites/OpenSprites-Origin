@@ -25,7 +25,7 @@
     <!-- Info for logged in visitors. -->
   <div class="main container" id="about">
         <h2 class="centered-heading">Hey, <?php echo $logged_in_user?>!</h2>
-        <p class="welcome-text">Check out today's popular resources below...</p>
+        <p class="welcome-text">For updates, news and more, check out our <a href="https://opensprites.org/blog/">blog</a>. Need help? Head over to our <a href="https://opensprites.org/forums/">forums</a> and ask away!</p>
     </div>
     <?php } ?>
 
