@@ -8,7 +8,7 @@ ET::$pluginInfo["CommentVerify"] = array(
 	"version" => "1.0.0",
 	"author" => "GrannyCookies",
 	"authorEmail" => "16batesa@gmail.com",
-	"authorURL" => "http://stefanbates.com",
+	"authorURL" => "https://stefanbates.com",
 	"license" => "MIT",
 );
 
@@ -63,7 +63,7 @@ class ETPlugin_CommentVerify extends ETPlugin {
 	function processScratchField($form, $key, &$data)
 	{
         // process stuff
-        $url = 'http://opensprites.org/register/comments.php?user=' . $data["username"] . '&key=' . $_SESSION['token'];
+        $url = 'https://opensprites.org/register/comments.php?user=' . $data["username"] . '&key=' . $_SESSION['token'];
         $resp = file_get_contents($url);
         
 		if($resp == 'false') {

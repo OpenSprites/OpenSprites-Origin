@@ -17,7 +17,7 @@
   
   /**
    * Great function slightly modified as posted by Minux at
-   * http://forums.clantemplates.com/showthread.php?t=133805
+   * https://forums.clantemplates.com/showthread.php?t=133805
    */
   function html2rgb($input) {
     $input=($input[0]=="#")?substr($input, 1,6):substr($input, 0,6);
@@ -46,7 +46,7 @@
 	  
       /**
        * Below as posted by "zvoneM" on
-       * http://forums.devshed.com/php-development-5/reading-16-bit-wav-file-318740.html
+       * https://forums.devshed.com/php-development-5/reading-16-bit-wav-file-318740.html
        * as findValues() defined above
        * Translated from Croation to English - July 11, 2011
        */

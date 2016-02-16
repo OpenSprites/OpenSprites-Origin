@@ -1,7 +1,7 @@
 <?php
 require '../assets/includes/connect.php';
 
-$project_comments = file_get_html('http://scratch.mit.edu/site-api/comments/project/47606468/'.'?_='.mt_rand());
+$project_comments = file_get_html('https://scratch.mit.edu/site-api/comments/project/47606468/'.'?_='.mt_rand());
 $comments = $project_comments -> find('.comment .info');
 $is_good_reg = false;
 foreach ($comments as $comment) {

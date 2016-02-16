@@ -38,7 +38,7 @@ $file = $_GET['file'];
 if($_SERVER['HTTP_HOST'] === "osdev.opensprites.org"){
 	if(substr($file, strlen($file) - 3) === "svg") header("Content-Type: image/svg+xml");
 	else header("Content-Type: image/png");
-	die(file_get_contents("http://opensprites.org/uploads/thumbnail.php?file=" . urlencode($file)));
+	die(file_get_contents("https://opensprites.org/uploads/thumbnail.php?file=" . urlencode($file)));
 }
 
 if(strpos($file, "..") !== FALSE

@@ -11,7 +11,7 @@ if(!$is_admin) {
 <head>
     <title>Moderation Tools</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-    <link href='http://fonts.googleapis.com/css?family=Palanquin' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Palanquin' rel='stylesheet' type='text/css'>
     <link href="style.css" rel="stylesheet" type="text/css">
 </head>
 <body>
@@ -37,7 +37,7 @@ if(!$is_admin) {
 		<h3>Useful Links</h3>
 		<a href="https://opensprites.atlassian.net/wiki/display/OS/Moderation+Situation+Resolution+Guide">Moderation Situation Resolution Guide</a><br>
 		<a href="https://opensprites.atlassian.net/wiki/display/OS/Developer+Agreement">Developer Agreement</a><br>
-		<a href="http://opensprites.org:9988/">Citadel Mail service</a><br>
+		<a href="https://opensprites.org:9988/">Citadel Mail service</a><br>
 		<a href="https://opensprites.atlassian.net/wiki/display/KB/OpenSprites+KB"> OpenSprites Knowledge Base</a><br>
 		<a href="https://opensprites.atlassian.net/wiki/display/OS/Useful+URLs">Developer URLs</a><br>
     </div>

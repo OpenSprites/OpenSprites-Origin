@@ -21,7 +21,7 @@
             <div id="about">
                 <img src='/assets/images/500.png' style='position: absolute; margin: auto; left: 0; right: 0; height: 400px;'>
                 <div style='width: 100%; height: 470px;'>&nbsp;</div>
-                <p style='position: absolute; margin: auto; top: 480px; left: 0; right: 0; width: 50%; text-align: center; font-size: 18px;'>Whoopsies! Our server can't complete your request just now.<br>If this issue keeps happening, please report it on the <a href="http://opensprites.org/forums/">forums</a>, or <a href="https://github.com/OpenSprites/OpenSprites/issues">GitHub</a>. For more help, you can send a ticket to our <a href="https://opensprites.atlassian.net/servicedesk/customer/portal/2" target="_blank">help desk</a>.</p>
+                <p style='position: absolute; margin: auto; top: 480px; left: 0; right: 0; width: 50%; text-align: center; font-size: 18px;'>Whoopsies! Our server can't complete your request just now.<br>If this issue keeps happening, please report it on the <a href="https://opensprites.org/forums/">forums</a>, or <a href="https://github.com/OpenSprites/OpenSprites/issues">GitHub</a>. For more help, you can send a ticket to our <a href="https://opensprites.atlassian.net/servicedesk/customer/portal/2" target="_blank">help desk</a>.</p>
             </div>
         </div>
     </div>

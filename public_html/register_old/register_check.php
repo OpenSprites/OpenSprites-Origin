@@ -10,7 +10,7 @@
 	$row = mysqli_fetch_assoc(mysqli_query($connection, $query));
 	$reg_key = $row['reg_key'];
 	
-	$project_comments = file_get_html('http://scratch.mit.edu/site-api/comments/project/47606468/');
+	$project_comments = file_get_html('https://scratch.mit.edu/site-api/comments/project/47606468/');
 	$comments = $project_comments -> find('.comment .info');
 	foreach ($comments as $comment) {
 		$creator = $comment -> find('name .a');

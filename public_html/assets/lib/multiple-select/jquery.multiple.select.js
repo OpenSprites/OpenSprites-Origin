@@ -2,7 +2,7 @@
  * @author zhixin wen <wenzhixin2010@gmail.com>
  * @version 1.1.0
  *
- * http://wenzhixin.net.cn/p/multiple-select/
+ * https://wenzhixin.net.cn/p/multiple-select/
  */
 
 (function ($) {

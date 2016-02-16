@@ -78,7 +78,7 @@
 				You can also combine these symbols. For example, <code>+apple -banana cantaloupe</code> matches "apple cantaloupe", and "apple", but not "apple banana" or "cantaloupe"
 			</p>
 			<h2>Need more help?</h2>
-			<p>You can post for help on the <a href="http://opensprites.org/forums/">forums</a> for a response from OpenSprites users, or send a ticket to our <a href="https://opensprites.atlassian.net/servicedesk/customer/portal/2" target="_blank">help desk</a> for a response from OpenSprites moderators.</p>
+			<p>You can post for help on the <a href="https://opensprites.org/forums/">forums</a> for a response from OpenSprites users, or send a ticket to our <a href="https://opensprites.atlassian.net/servicedesk/customer/portal/2" target="_blank">help desk</a> for a response from OpenSprites moderators.</p>
 		</div>
 		<br/><br/>
 	</div>

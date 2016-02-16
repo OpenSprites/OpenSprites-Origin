@@ -65,6 +65,6 @@
 			error_reporting(0);
 		}
         if($user_banned){
-            header( 'Location: http://opensprites.org/suspended.php' ) ;
+            header( 'Location: https://opensprites.org/suspended.php' ) ;
         }
     }

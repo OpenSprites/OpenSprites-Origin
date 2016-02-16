@@ -1,1 +1,1 @@
-http://www.fontsquirrel.com/fonts/web-symbols - look at glyphs
+https://www.fontsquirrel.com/fonts/web-symbols - look at glyphs

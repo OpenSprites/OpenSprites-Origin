@@ -1,17 +1,17 @@
 <?php
 /* OLD CODE
 function is_404($url) {
-    $returned = get_headers('http://opensprites.org/forums/?p=member/' . $url, 1)[0];
+    $returned = get_headers('https://opensprites.org/forums/?p=member/' . $url, 1)[0];
     return $returned == 'HTTP/1.1 404 Not Found';
 }
 
 function username_of($id) {
-    $html = file_get_html('http://opensprites.org/forums/?p=member/' . $id);
+    $html = file_get_html('https://opensprites.org/forums/?p=member/' . $id);
     return $html->find('h1#memberName', 0)->innertext;
 }
 
 function usertype_of($id) {
-    $html = file_get_html('http://opensprites.org/forums/?p=member/' . $id);
+    $html = file_get_html('https://opensprites.org/forums/?p=member/' . $id);
     $r = $html->find('p#memberGroup', 0)->first_child();
     if($r == null) {
         $r = $html->find('p#memberGroup', 0);
@@ -22,17 +22,17 @@ function usertype_of($id) {
 
 function avatar_of($id) {
     
-    if(get_headers('http://opensprites.org/uploads/avatars/' . $id . '.png')[0] == 'HTTP/1.1 404 Not Found') {
+    if(get_headers('https://opensprites.org/uploads/avatars/' . $id . '.png')[0] == 'HTTP/1.1 404 Not Found') {
         $username_grabbed = username_of($id);
         $raw_json = file_get_contents("https://scratch.mit.edu/site-api/users/all/" . $username_grabbed . "/");
         $user_arr = json_decode($raw_json, true);
         $user_avatar = $user_arr["thumbnail_url"];
         return "http:$user_avatar";
         
-        $html = file_get_html('http://opensprites.org/forums/?p=member/' . $id);
+        $html = file_get_html('https://opensprites.org/forums/?p=member/' . $id);
         return $html->find('#memberProfile', 0)->first_child()->src;
     } else {
-        return 'http://opensprites.org/uploads/avatars/' . $id . '.png';
+        return 'https://opensprites.org/uploads/avatars/' . $id . '.png';
     }
 }
 
@@ -52,7 +52,7 @@ if(isset($_GET['userid'])) {
 }
 
 error_reporting(0);
-$raw = file_get_contents("http://opensprites.org/forums/?p=member/".$userid);
+$raw = file_get_contents("https://opensprites.org/forums/?p=member/".$userid);
 if($raw === FALSE) {
     echo 'FALSE';
 } else {
@@ -68,7 +68,7 @@ if($raw === FALSE) {
     echo '"avatar": "' . $avatar . '"}';
 }
 ///////////////////////// NEWER OLD CODE
-$raw = file_get_html("http://opensprites.org/forums/?p=member/" . $userid);
+$raw = file_get_html("https://opensprites.org/forums/?p=member/" . $userid);
 if($raw == FALSE) {
     echo 'FALSE';
     die();
@@ -78,10 +78,10 @@ $r = preg_replace('/\s+/', '', $raw->find('p#memberGroup', 0)->plaintext);
 
 if($raw->find('img.avatar', 0) !== null) {
     // they have an uploaded avatar image
-    $avatar = 'http://opensprites.org/' . $raw->find('img.avatar', 0)->src;
+    $avatar = 'https://opensprites.org/' . $raw->find('img.avatar', 0)->src;
 } else {
     // they have not uploaded an avatar image
-    $avatar = 'http://opensprites.org/assets/images/defaultfile.png';
+    $avatar = 'https://opensprites.org/assets/images/defaultfile.png';
 }
 
 $json = array('userid' => $userid, 'username' => $raw->find('h1#memberName', 0)->innertext, 'usertype' => $r, 'avatar' => $avatar);*/
@@ -100,7 +100,7 @@ if(isset($_GET['userid'])) {
 
 connectForumDatabase();
 $userInfo2 = getUserInfo(intval($userid));
-$userInfo2['avatar'] = "http://opensprites.org/forums/uploads/avatars/" . $userid . ".png?_=" . time();
+$userInfo2['avatar'] = "https://opensprites.org/forums/uploads/avatars/" . $userid . ".png?_=" . time();
 
 $handle = curl_init($userInfo2['avatar']);
 curl_setopt($handle,  CURLOPT_RETURNTRANSFER, TRUE);

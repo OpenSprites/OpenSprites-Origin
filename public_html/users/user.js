@@ -272,7 +272,7 @@ $(".modal.cropavatar .btn.blue").click(function(){
 						$(".progress-container").text(data.message);
 					} else {
 						$(".modal-overlay, .modal.cropavatar").fadeOut();
-						$(".user-avatar.x100").attr("src", "http://opensprites.org/forums/uploads/avatars/"+OpenSprites.user.id+".png?_=" + Math.random());
+						$(".user-avatar.x100").attr("src", "https://opensprites.org/forums/uploads/avatars/"+OpenSprites.user.id+".png?_=" + Math.random());
 						drawBg();
 					}
 				} catch(e){

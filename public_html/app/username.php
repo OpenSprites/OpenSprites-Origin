@@ -6,7 +6,7 @@
 <head>
     <title>Logged in user</title>
     <style>
-    @import url(http://fonts.googleapis.com/css?family=Open+Sans:300);
+    @import url(https://fonts.googleapis.com/css?family=Open+Sans:300);
   
     span {
     margin:0px;

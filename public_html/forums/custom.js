@@ -25,11 +25,11 @@ window.onload = function() {
     //$('body').append(navbar);
     
     // back to the main site link on navbar
-    $('#forumTitle').before('<a id="back-to-the-main-site" style="position:absolute;top:40px;color:white;" href="http://opensprites.org/">Back to the main site</a>');
+    $('#forumTitle').before('<a id="back-to-the-main-site" style="position:absolute;top:40px;color:white;" href="https://opensprites.org/">Back to the main site</a>');
     $('#forumTitle').attr('style', 'padding-top:10px;padding-bottom:20px;');
 
     // logout fix
-    $('.item-logout a').attr('href', 'http://opensprites.org/logout.php?return=http://opensprites.org/forums/?p=conversations');
+    $('.item-logout a').attr('href', 'https://opensprites.org/logout.php?return=https://opensprites.org/forums/?p=conversations');
 
     // themes
     $('#ftr-content .menu').append('<li id="theme"></li>');

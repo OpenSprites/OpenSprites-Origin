@@ -39,7 +39,7 @@ if(isset($_POST['action'])){
         OpenSprites Admin - Add / Remove Mods
     </title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-    <link href='http://fonts.googleapis.com/css?family=Palanquin:300,400' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Palanquin:300,400' rel='stylesheet' type='text/css'>
     <link href="style.css" rel="stylesheet" type="text/css">
 	<style>
 		input[type=hidden] {

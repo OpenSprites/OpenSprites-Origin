@@ -85,7 +85,7 @@
                     <h1><?php echo ($is_creating ? "New Collection" : $info['customName'] . " <br><!--Is there a reason why we need this ID?--><div id='id'>(#" . $info['id'] . ")</div>"); ?></h1>
                     <div id="description">
                         <strong>By: </strong>
-                        <a href="http://opensprites.org/users/<?php echo urlencode($username); ?>" target="blank">
+                        <a href="https://opensprites.org/users/<?php echo urlencode($username); ?>" target="blank">
                             <?php echo ($uid === $logged_in_userid ? "You" : $username) /*. " (#" . $uid . ")"*/; ?>
                         </a>
                     </div>

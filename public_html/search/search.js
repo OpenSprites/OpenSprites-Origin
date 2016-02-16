@@ -243,9 +243,9 @@ function doSearch(){
 							var preClass = "blocks" + Math.round(Math.random() * 100000000);
 							var pre = $("<pre>").addClass(preClass).css("display", "none").html(scratchblocks).appendTo($("body"));
 							scratchblocks2.parse("pre." + preClass);
-							var data = '<svg xmlns="http://www.w3.org/2000/svg" width="500" height="1000">' +
+							var data = '<svg xmlns="https://www.w3.org/2000/svg" width="500" height="1000">' +
 									'<foreignObject width="100%" height="100%">' +
-									'<div xmlns="http://www.w3.org/1999/xhtml" style="font-size: 40px;height:100%;">' +
+									'<div xmlns="https://www.w3.org/1999/xhtml" style="font-size: 40px;height:100%;">' +
 										pre.html() +
 										"<style type='text/css'>\n" +
 											OpenSprites.data.scratchblocks2css +

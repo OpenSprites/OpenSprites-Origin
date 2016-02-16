@@ -39,7 +39,7 @@
 			<div class="register" id="labels">Email:</div><input class="register" name="email" type="email" /><br>
             <div class="register" id="labels">Choose a Password:<br>(Please use a different password than your Scratch one)</div><input class="register" name="password" type="password" /><br>
             <div class="register" id="labels">Confirm Password:</div><input class="register" name="password_check" type="password" /><br>
-			Please paste this code into <a href='http://scratch.mit.edu/projects/47606468/'>this</a> project:<br />
+			Please paste this code into <a href='https://scratch.mit.edu/projects/47606468/'>this</a> project:<br />
 			<?php
 				//get a random code...
 				$id = uniqid();

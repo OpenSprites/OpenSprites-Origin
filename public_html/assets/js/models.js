@@ -25,9 +25,9 @@ OpenSprites.models.ScriptPreview = function(_target){
 		var pre = $("<pre>").addClass(preClass).css("display", "none").html(scratchblocks).appendTo(_target);
 		scratchblocks2.parse("pre." + preClass);
 		
-		var data = '<svg xmlns="http://www.w3.org/2000/svg" width="500" height="1000">' +
+		var data = '<svg xmlns="https://www.w3.org/2000/svg" width="500" height="1000">' +
 			'<foreignObject width="100%" height="100%">' +
-				'<div xmlns="http://www.w3.org/1999/xhtml" style="font-size: 40px;height:100%;">' +
+				'<div xmlns="https://www.w3.org/1999/xhtml" style="font-size: 40px;height:100%;">' +
 					pre.html() +
 					"<style type='text/css'>\n" +
 						OpenSprites.data.scratchblocks2css +
@@ -59,12 +59,12 @@ OpenSprites.data._$ = function() {
 		$(this).html($(this).html().replace(/Sprites/g, 'Sloths').replace(/kid/g, 'sloth'));
 		
 		if($(this).css('background-image') !== 'none') {
-			$(this).css('background-image', 'url("http://place-sloth.com/'+(Math.floor(rand(100, 800)/100)*100)+'/'+(Math.floor(rand(100, 800)/100)*100)+'")');
+			$(this).css('background-image', 'url("https://place-sloth.com/'+(Math.floor(rand(100, 800)/100)*100)+'/'+(Math.floor(rand(100, 800)/100)*100)+'")');
 		}
 	});
 	
 	$('img').each(function() {
-		$(this).attr('src', 'http://place-sloth.com/'+(Math.floor($(this).width()/100)*100)+'/'+(Math.floor($(this).height()/100)*100));
+		$(this).attr('src', 'https://place-sloth.com/'+(Math.floor($(this).width()/100)*100)+'/'+(Math.floor($(this).height()/100)*100));
 	});
 	
 	$('a.scratch').css('background-image', 'url("/assets/images/openswag.png?ver=sloth")');
@@ -97,9 +97,9 @@ OpenSprites.models.AssetList = function(_target){
 						var pre = $("<pre>").addClass(preClass).css("display", "none").html(scratchblocks).appendTo(html);
 						scratchblocks2.parse("pre." + preClass);
 						
-						var data = '<svg xmlns="http://www.w3.org/2000/svg" width="500" height="1000">' +
+						var data = '<svg xmlns="https://www.w3.org/2000/svg" width="500" height="1000">' +
 								'<foreignObject width="100%" height="100%">' +
-								'<div xmlns="http://www.w3.org/1999/xhtml" style="font-size: 40px;height:100%;">' +
+								'<div xmlns="https://www.w3.org/1999/xhtml" style="font-size: 40px;height:100%;">' +
 									pre.html() +
 									"<style type='text/css'>\n" +
 										OpenSprites.data.scratchblocks2css +

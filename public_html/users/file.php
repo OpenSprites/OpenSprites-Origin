@@ -157,9 +157,9 @@
 			<?php if($obj['type'] == 'image'){ ?>
 				<h2>Direct links</h2>
 				<p>Use this link to embed this image on websites.</p>
-				<input type="text" value="http://opensprites.org/uploads/uploaded/<?php echo urlencode($obj['filename']); ?>" class="image-url" onfocus="$(this).select();" />
+				<input type="text" value="https://opensprites.org/uploads/uploaded/<?php echo urlencode($obj['filename']); ?>" class="image-url" onfocus="$(this).select();" />
 				<p>Copy and paste this BBCode to embed the image on forums such as the Scratch forums.</p>
-				<input type="text" value="[img]http://opensprites.org/uploads/uploaded/<?php echo urlencode($obj['filename']); ?>[/img]" class="image-url" onfocus="$(this).select();" />
+				<input type="text" value="[img]https://opensprites.org/uploads/uploaded/<?php echo urlencode($obj['filename']); ?>[/img]" class="image-url" onfocus="$(this).select();" />
 			<?php } ?>
 			<?php if($obj['type'] == 'script') { ?>
         	    <h2>Script</h2>
@@ -268,7 +268,7 @@
 			<p class='input-error' style='opacity:0;'>Sample Text</p>
 			<input type="text" id="file-name" maxlength='32' value="<?php echo htmlspecialchars($obj['name']); ?>"/><br/><br/>
 			<textarea id="file-desc" maxlength='500' value="<?php echo htmlspecialchars($obj['description']); ?>"></textarea><br/>
-			<p>Descriptions support <acronym title="A simple text-formatting system">Markdown</acronym>. Click <a href="http://markdowntutorial.com/" target="_blank">here</a> to learn more about Markdown.</p>
+			<p>Descriptions support <acronym title="A simple text-formatting system">Markdown</acronym>. Click <a href="https://markdowntutorial.com/" target="_blank">here</a> to learn more about Markdown.</p>
 			<div class="buttons-container">
 				<button class='btn red'>Cancel</button>
 				<button class='btn blue'>OK</button>

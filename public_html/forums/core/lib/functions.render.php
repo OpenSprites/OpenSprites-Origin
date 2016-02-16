@@ -75,9 +75,9 @@ if (!function_exists("memberURL")) {
 function memberURL($memberId, $username = "", $pane = "")
 {
 	//return "member/".($pane ? "$pane/" : "").$memberId.(($username = slug($username)) ? "-$username" : "");
-	//header( 'Location: http://opensprites.org/users/' . $memberId) ;
+	//header( 'Location: https://opensprites.org/users/' . $memberId) ;
 	
-	return "http://opensprites.org/users/" . $memberId;
+	return "https://opensprites.org/users/" . $memberId;
 }
 
 }

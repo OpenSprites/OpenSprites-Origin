@@ -1,5 +1,5 @@
 <div class="header">
     <div class="container">
-        <a class="scratch" href="http://opensprites.org"></a>
+        <a class="scratch" href="https://opensprites.org"></a>
     </div>
 </div>

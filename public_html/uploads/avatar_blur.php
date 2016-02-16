@@ -6,7 +6,7 @@ if(!isset($_GET['userid'])){
 
 $userid = intval($_GET['userid']);
 
-$handle = curl_init("http://opensprites.org/forums/uploads/avatars/" . $userid . ".png");
+$handle = curl_init("https://opensprites.org/forums/uploads/avatars/" . $userid . ".png");
 curl_setopt($handle,  CURLOPT_RETURNTRANSFER, TRUE);
 $response = curl_exec($handle);
 $httpCode = curl_getinfo($handle, CURLINFO_HTTP_CODE);

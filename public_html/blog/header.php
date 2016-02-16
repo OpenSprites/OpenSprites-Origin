@@ -2,7 +2,7 @@
 
 <?php /* Important things; don't remove or change. */ ?>
 <meta coding="utf-8">
-<link rel="icon" type="image/png" href="http://opensprites.org/favicon.ico">
+<link rel="icon" type="image/png" href="https://opensprites.org/favicon.ico">
 <link rel="stylesheet" href="themes/global.css">
 <link rel="stylesheet" href="hightlight.css">
 <script src="highlight.min.js"></script>

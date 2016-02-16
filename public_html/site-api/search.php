@@ -99,7 +99,7 @@ if(!in_array($place, $places)){
 }
 
 // a bug (?) in MySQL prevents using query parameters in MATCH, so we have to escape
-// http://stackoverflow.com/a/13682516/1021196
+// https://stackoverflow.com/a/13682516/1021196
 
 $fulltext_search = join(" ", $keywords);
 $fulltext_search = getDbh()->quote($fulltext_search);

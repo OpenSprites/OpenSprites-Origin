@@ -14,7 +14,7 @@
         echo file_get_contents('../Header.html'); //Imports the metadata and information that will go in the <head> of every page
     ?>
     
-    <link href='http://<?php
+    <link href='https://<?php
         echo $_SERVER['SERVER_NAME']; // Imports styling
     ?>/uploads/style.css' rel='stylesheet' type='text/css'>
 </head>
