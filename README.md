@@ -13,21 +13,11 @@ For more information, please visit the [discussion thread](http://scratch.mit.ed
 
 The-Cheese-Eater mainly manages hosting, forums, organisation, accounts and domain fees.
 
- - Project supervisation
+ - Project coordination
+ - Server administration
  - Moderation
- - Documentation/things that involve writing/blog posts
+ - Writing related tasks
  - HTML/CSS
-
-### [jbayfield](https://github.com/jbayfield) ###
-![GitHub Logo](https://avatars0.githubusercontent.com/u/10786277?s=100)
-
-jbayfield is an OpenSprites administrator and developer.
-
- - Web host administration
- - Atlassian services
- - PHP / server-side
- - Moderation
- - Advice
 
 ### [MegaApuTurkUltra](http://opensprites.org/users/6/) ###
 ![GitHub Logo](https://avatars0.githubusercontent.com/u/8547938?s=100)
