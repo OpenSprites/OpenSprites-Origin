@@ -106,7 +106,7 @@
                     <div id="collection-actions">
                         <p class='label' style='float:left;margin-top:2px;margin-right:8px;'>Actions:</p>
                         <button class="action btn orange" type="button" id="action-edit" data-toggle="modal" data-target="#action-edit-modal">Edit Details</button>
-                        <button class="action btn orange" type="button" id="action-add">Add Assets</button>  <input type="file" id="filechooser" style="display:none;">
+                        <span class="btn orange btn-file"> Add Assets <input type="file" style="display: block; filter: alpha(opacity=0); opacity: 0;" multiple=""></span>
                         <button class="action on-select btn orange" type="button" id="action-remove">Remove Selected Assets</button>
                         <button class="action btn orange" type="button" id="action-collab">Manage Collaborators</button>
                     </div>
