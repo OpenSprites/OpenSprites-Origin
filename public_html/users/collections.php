@@ -141,8 +141,8 @@
                             </div>
                         </div>
                         <div class="modal-footer">
-                            <button type="button" class="btn btn-default" data-dismiss="action-edit-modal" id="action-edit-modal-close">Close</button>
-                            <button type="button" class="btn btn-default" data-dismiss="action-edit-modal" id="action-edit-modal-save-close">Save & Close</button>
+                            <button type="button" class="btn btn-danger" data-dismiss="action-edit-modal" id="action-edit-modal-close">Cancel</button>
+                            <button type="button" class="btn btn-success" data-dismiss="action-edit-modal" id="action-edit-modal-save-close">Save & Close</button>
                         </div>
                     </div>
 
