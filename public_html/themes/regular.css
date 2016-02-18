@@ -19,3 +19,8 @@ body {
 h2.centered-heading {
     text-align: center !important;
 }
+
+/* Ignore this: I don't know if the non-centering was on purpose, so this below css element is for if everything is not supposed to be centered, then I'll uncenter everything except the logged in 'Hey, <user>' message. I know, that was a confusing sentence :P */
+h2.centered-heading.center {
+    text-align: center !important;
+}
