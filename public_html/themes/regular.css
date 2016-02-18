@@ -15,3 +15,7 @@ body {
 	background-color: #D5D5D5 !important;
 	color: grey !important;
 }
+
+h2.centered-heading {
+    text-align: center !important;
+}
