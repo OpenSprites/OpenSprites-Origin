@@ -1045,7 +1045,7 @@ body {
 .header .scratch {
 	height: 100%;
 	padding: 0 10px;
-	/* background-image: url(/assets/images/os-logo-2.svg); */
+	background-image: url(/assets/images/os-logo-2.svg);
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: 90%;
