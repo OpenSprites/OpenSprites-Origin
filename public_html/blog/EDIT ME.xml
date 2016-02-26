@@ -5,18 +5,17 @@
 <title>OpenSprites Blog</title>
 <link>https://opensprites.org/blog/<link>
 <description>Keep up to date on the latest news from the OpenSprites Team</description>
-<!--Just an example to help people in the future.--!>
-<!--<item>--!>
-<!--<title>Content Title</title>--!>
-<!--<link>Direct URL to content</link>--!>
-<!--<guid>Unique ID for content. Copy the URL again</guid>--!>
-<!--<pubDate>Wed, 27 Nov 2013 15:17:32 GMT --!>
-<!--(Note: The date must be in this format)</pubDate>--!>
-<!--<description>Description for your content.</description>--!>
-<!--</item>--!>
+
+<item>
+<title>Introducing the RSS Feed!</title>
+<link>https://opensprites.org/blog/#9</link>
+<guid>https://opensprites.org/blog/#9</guid>
+<description>Happy Valentines Day to all! To celebrate this worldwide holiday, why not upload for your project a picture of gratitude to your friends, family, the OpenSprites team, or maybe even Bob the Cactus? :D
+Arinerron</description>
+</item>
 <item>
 <title>Happy Valentines Day</title>
-<link>https://opensprites.org/blog/#8/link>
+<link>https://opensprites.org/blog/#8/</link>
 <guid>https://opensprites.org/blog/#8</guid>
 <description>Happy Valentines Day to all! To celebrate this worldwide holiday, why not upload for your project a picture of gratitude to your friends, family, the OpenSprites team, or maybe even Bob the Cactus? :D
 Arinerron</description>
