@@ -1,0 +1,132 @@
+</channel>
+<<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0">
+<channel>
+<title>OpenSprites Blog</title>
+<link>https://opensprites.org/blog/<link>
+<description>Keep up to date on the latest news from the OpenSprites Team</description>
+<!--Just an example to help people in the future.--!>
+<!--<item>--!>
+<!--<title>Content Title</title>--!>
+<!--<link>Direct URL to content</link>--!>
+<!--<guid>Unique ID for content. Copy the URL again</guid>--!>
+<!--<pubDate>Wed, 27 Nov 2013 15:17:32 GMT --!>
+<!--(Note: The date must be in this format)</pubDate>--!>
+<!--<description>Description for your content.</description>--!>
+<!--</item>--!>
+<item>
+<title>Happy Valentines Day</title>
+<link>https://opensprites.org/blog/#8/link>
+<guid>https://opensprites.org/blog/#8</guid>
+<description>Happy Valentines Day to all! To celebrate this worldwide holiday, why not upload for your project a picture of gratitude to your friends, family, the OpenSprites team, or maybe even Bob the Cactus? :D
+Arinerron</description>
+</item>
+<item>
+<title>Introducting new themes, Halloween and Warm</title>
+<link>https://opensprites.org/blog/#7</link>
+<guid>https://opensprites.org/blog/#7</guid>
+<description>October the 31st is on its way, and that only means one thing; halloween! We've decided to add a new halloween style theme, by DM5555, to the theme selection box at the bottom of every page. However, if feeling cosy on cold days is more of your cup of tea, we've got that covered too. The warm theme, courtesy of Arinerron, is the second of these two new themes to be added to the site. To use these themes, simply click the dropdown at the bottom of the page to select a theme: Regular, Dark, Halloween or Warm. These themes will also be added to the forums in the near future. Enjoy!
+
+EDIT: You may need to clear your cache before you can use the themes!
+DM5555
+
+</description>
+</item>
+<item>
+<title>Searching the Site!</title>
+<link>https://opensprites.org/blog/#6</link>
+<guid>https://opensprites.org/blog/#6</guid>
+<description>You can now search the site with our fancy custom search tool at the top of the page. Just type in a keyword or two for what you're looking for, and it should come up while you are typing!
+
+For example, you could type in Bob the Cactus and it will bring up all the uploads of our lovely cactus, Bob (of whom you should know - Bob is getting his picture taken once every month to see him as he grows).
+
+You can also click on See all results + Search options to make a more customized search result to get what you're looking for in a shorter amount of time. It'll also show all the results, in case the thing you're looking for has a whole bunch of </description>
+</item>
+<item>
+<title>Our new domain!</title>
+<link>https://opensprites.org/blog/#5</link>
+<guid>https://opensprites.org/blog/#5</guid>
+<description>We are happy to announce that OpenSprites now has it's very own domain name! From now onwards, the OpenSprites             website shall be hosted on the new web-address, and we expect to see some major changes go underway within the new          few weeks.
+
+You can expect:
+
+
+    Faster Read-Write speeds on our servers.
+
+    Faster site development with new team software to organize the team better.
+
+    Emails for each developer and support email line.
+
+    JIRA help desk support system to better aid users.
+
+    Copyright Infringement report catagory on help desk.
+
+</description>
+</item>
+<item>
+<title>Migration Complete!</title>
+<link>https://opensprites.org/blog/#4</link>
+<guid>https://opensprites.org/blog/#4</guid>
+<description>The migration to the main site is now complete.
+This means that this blog, if you've noticed, has moved over to /blog/ instead of being on a subdomain.
+
+So it's now much easier for people like me to update the site!
+
+GrannyCookies
+</description>
+</item>
+<item>
+<title>Moving over to our main domain</title>
+<link>https://opensprites.org/blog/#3</link>
+<guid>https://opensprites.org/blog/#3</guid>
+<description>You may have already noticed that instead of the plain old 'Whoops' page on our main domain, we have replaced it with the OpenSprites site. To make it easier for us to get things working, we need everything on the same web address; we've decided to start migrating the website from our developer domain to our main one. At the moment, we have not fully completed the migration, and some small issues may occur. Also, be aware that the main domain won't be updated as often as the developer domain, so you may experience problems. For this reason, please use the developer domain until we have completed this transition. Thanks! cheeseeater</description>
+</item>
+<item>
+<title>Moving over to our main domain</title>
+<link>https://opensprites.org/blog/#3</link>
+<guid>https://opensprites.org/blog/#3https://opensprites.org/blog/#3</guid>
+<description>You may have already noticed that instead of the plain old 'Whoops' page on our main domain, we have replaced it with the OpenSprites site. To make it easier for us to get things working, we need everything on the same web address; we've decided to start migrating the website from our developer domain to our main one. At the moment, we have not fully completed the migration, and some small issues may occur. Also, be aware that the main domain won't be updated as often as the developer domain, so you may experience problems. For this reason, please use the developer domain until we have completed this transition. Thanks! cheeseeater</description>
+</item>
+<item>
+<title>Updates/title>
+<link>https://opensprites.org/blog/#2</link>
+<guid>https://opensprites.org/blog/#2</guid>
+<description>Since the Winter holidays, the OpenSprites Team has been working hard to add new features, squash bugs, and get the basic site working.
+Here is what we've done so far:
+
+
+    Migrated over to Gwiddle for better performance, flexibility, and stability.
+
+    Set up the EsoTalk forums running with our colour theme, along with our registration and user verification system.
+
+    Set up our own secure upload system working using MySQL.
+
+    Media 'profiles' display a link for users to directly link to uploaded images so they can use them in forums.
+
+    Image preview thumbnails successfully render for sound, scripts and images.
+
+    Fixed major bug with sessions after updates.
+
+    We now have a fully working blog that uses markdown.
+
+    We have enabled our OpenSprites guidelines, privacy policy, and terms of service.
+
+
+Stay tuned for more updates!
+cheeseeater
+
+</description>
+</item>
+<item>
+<titleWelcome!</title>
+<link>https://opensprites.org/blog/#1</link>
+<guid>https://opensprites.org/blog/#1</guid>
+<description>Welcome!#1
+
+Welcome to the all-new OpenSprites Blog developed and maintained by the team! On this blog, we'll be updating you with the new features, fixes and planned features. Members of the team will also be encouraged to make posts on the blog. Be sure to bookmark the blog and keep up with the latest info!
+
+cheeseeater
+</description>
+</item>
+</channel>
+</rss>
