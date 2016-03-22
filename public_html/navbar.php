@@ -148,8 +148,18 @@
     </div>
 </div>
 
-<!-- On mobile, chrome will change title bar colors -->
+<!-- Chrome, Firefox OS and Opera -->
 <meta name="theme-color" content="#659593">
+<meta name="mobile-web-app-capable" content="yes">
+<link rel="shortcut icon" sizes="200x200" href="https://avatars2.githubusercontent.com/u/10785331?v=3&s=200"> 
+<!-- Windows Phone -->
+<meta name="msapplication-navbutton-color" content="#659593">
+<!-- iOS Safari -->
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<link rel="apple-touch-icon" sizes="200x200" href="https://avatars2.githubusercontent.com/u/10785331?v=3&s=200">
+<link rel="apple-touch-icon-precomposed" sizes="200x200" href="https://avatars2.githubusercontent.com/u/10785331?v=3&s=200">
+
 
 <!-- Search -->
 <script>
