@@ -63,9 +63,7 @@ liam4 is a tester / bug reporter / feature suggester on the OS team. He designed
 
 Arinerron mainly works on fixing bugs, front-end stuff, and mobile and desktop applications.
 
- - HTML
- - CSS
- - JS
+ - Web Development (front-end)
  - Enough PHP to get me through the day
  - Java
  - Swift
