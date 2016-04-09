@@ -71,13 +71,13 @@ function setAccountType($user, $type){
 	$stmt = NULL;
 	if(is_int($user)) $stmt = $forum_dbh->prepare("UPDATE `$forum_member_table` SET `account`=? WHERE `memberId`=?");
 	else $stmt = $forum_dbh->prepare("UPDATE `$forum_member_table` SET `account`=? WHERE `username`=?");
-	
+
 	$stmt->execute(array($type, $user));
 }
 
 function setProfileSettings($userid, $settings){
 	global $forum_dbh;
-	
+
 	$res = forumQuery("SELECT * FROM `os_profile_settings` WHERE `userid`=?", array($userid));
 	if(sizeof($res) == 0){
 		$stmt = $forum_dbh->prepare("INSERT INTO `os_profile_settings` (`userid`, `bgcolor`) VALUES (:userid, :bgcolor)");
@@ -90,10 +90,10 @@ function setProfileSettings($userid, $settings){
 
 function getProfileSettings($userid){
 	global $forum_dbh;
-	
+
 	$res = forumQuery("SELECT * FROM `os_profile_settings` WHERE `userid`=?", array($userid));
 	if(sizeof($res) == 0) return array("bgcolor" => "avatar");
-	
+
 	return $res[0];
 }
 
@@ -104,7 +104,7 @@ function getUserInfo($userid){
 	global $forum_profile_data_table;
 	$res = forumQuery("SELECT * FROM `$forum_member_table` WHERE `memberId`=?", array($userid));
 	if(sizeof($res) == 0) return FALSE;
-	
+
 	// the order by here is so we can avoid having to look through the entire array and access by groupId - 1
 	$groupRes = forumQuery("SELECT * FROM `$forum_group_table` ORDER BY `groupId`", array());
 	$memberGroupRes = forumQuery("SELECT * FROM `$forum_group_member_table` WHERE `memberId`=?", array($userid));
@@ -114,7 +114,7 @@ function getUserInfo($userid){
 		$groupName = $groupRes[intval($groupId) - 1]['name'];
 		array_push($groups, $groupName);
 	}
-	
+
 	// look up profile fields
 	$about = "No about section given";
 	$location = "No location set";
@@ -127,7 +127,7 @@ function getUserInfo($userid){
 			$location = $profileRes[$j]['data'];
 		}
 	}
-	
+
 	$userInfo = array(
 		"userid" => $userid,
 		"username" => $res[0]['username'],
@@ -251,20 +251,20 @@ function checkFailedLogin($userid){
 	if(sizeof($res) == 0){
 		$stmt2 = $forum_dbh->prepare("INSERT INTO `os_login_attempts` (`ipAddr`,`userAgent`, `lastLoginTime`, `loginAttempts`, `userid`)"
 			. " VALUES(:ip, :ua, NOW(), 1, :userid)");
-		$stmt2->execute(array(":userid"=>$userid, ":ip" => $_SERVER['X_FORWARDED_FOR'], ":ua" => $_SERVER['HTTP_USER_AGENT']));
+		$stmt2->execute(array(":userid"=>$userid, ":ip" => $_SERVER['REMOTE_ADDR'], ":ua" => $_SERVER['HTTP_USER_AGENT']));
 		return TRUE;
 	} else {
 		$lastDate = $res[0]['lastLoginTime'];
 		$numAttempts = $res[0]['loginAttempts'] + 1;
-		
+
 		$stmt4 = $forum_dbh->prepare("SELECT UNIX_TIMESTAMP(?) as timestamp");
 		$stmt4->execute(array($lastDate));
 		$res4 = $stmt4->fetchAll(PDO::FETCH_ASSOC);
 		$lastDate = $res4[0]['timestamp'];
-		
+
 		if($numAttempts < 5){
 			$stmt3 = $forum_dbh->prepare("UPDATE `os_login_attempts` SET `ipAddr`=:ip, `userAgent`=:ua, `lastLoginTime`=NOW(), `loginAttempts`=`loginAttempts`+1 WHERE `userid`=:userid");
-			$stmt3->execute(array(":userid"=>$userid, ":ip" => $_SERVER['X_FORWARDED_FOR'], ":ua" => $_SERVER['HTTP_USER_AGENT']));
+			$stmt3->execute(array(":userid"=>$userid, ":ip" => $_SERVER['REMOTE_ADDR'], ":ua" => $_SERVER['HTTP_USER_AGENT']));
 			return TRUE;
 		} else {
 			$val1 = time() - $lastDate;
@@ -272,7 +272,7 @@ function checkFailedLogin($userid){
 				return 120 - $val1;
 			}
 			$stmt3 = $forum_dbh->prepare("UPDATE `os_login_attempts` SET `ipAddr`=:ip, `userAgent`=:ua, `lastLoginTime`=NOW(), `loginAttempts`=0 WHERE `userid`=:userid");
-			$stmt3->execute(array(":userid"=>$userid, ":ip" => $_SERVER['X_FORWARDED_FOR'], ":ua" => $_SERVER['HTTP_USER_AGENT']));
+			$stmt3->execute(array(":userid"=>$userid, ":ip" => $_SERVER['REMOTE_ADDR'], ":ua" => $_SERVER['HTTP_USER_AGENT']));
 			return TRUE;
 		}
 	}
@@ -287,22 +287,22 @@ function isUserAbleToReport($userid){
 	if(sizeof($res) == 0){
 		$stmt2 = $dbh->prepare("INSERT INTO `$user_report_table_name` (`userid`,`lastReportTime`, `ipAddr`, `userAgent`)"
 			. " VALUES(:userid, NOW(), :ip, :ua)");
-		$stmt2->execute(array(":userid"=>$userid, ":ip" => $_SERVER['X_FORWARDED_FOR'], ":ua" => $_SERVER['HTTP_USER_AGENT']));
+		$stmt2->execute(array(":userid"=>$userid, ":ip" => $_SERVER['REMOTE_ADDR'], ":ua" => $_SERVER['HTTP_USER_AGENT']));
 		return TRUE;
 	} else {
 		$lastDate = $res[0]['lastReportTime'];
-		
+
 		$stmt2 = $dbh->prepare("SELECT UNIX_TIMESTAMP(?) as timestamp");
 		$stmt2->execute(array($lastDate));
 		$res2 = $stmt2->fetchAll(PDO::FETCH_ASSOC);
 		$lastDate = $res2[0]['timestamp'];
-		
+
 		$reports_per_sec = 1 / 60; // 1 report per minute
 		$val1 = time() - $lastDate;
 		$val2 = 1 / $reports_per_sec;
 		if($val1 > $val2){
 			$stmt3 = $dbh->prepare("UPDATE `$user_report_table_name` SET `lastReportTime`=NOW(), `ipAddr`=:ip, `userAgent`=:ua WHERE `userid`=:userid");
-			$stmt3->execute(array(":userid" => $userid, ":ip" => $_SERVER['X_FORWARDED_FOR'], ":ua" => $_SERVER['HTTP_USER_AGENT']));
+			$stmt3->execute(array(":userid" => $userid, ":ip" => $_SERVER['REMOTE_ADDR'], ":ua" => $_SERVER['HTTP_USER_AGENT']));
 			return TRUE;
 		} else {
 			return $val2 - $val1; // no spam pls
@@ -319,24 +319,24 @@ function isUserAbleToUpload($userid, $post_size){
 	if(sizeof($res) == 0){
 		$stmt2 = $dbh->prepare("INSERT INTO `$user_upload_table_name` (`userid`,`bytesUploaded`,`lastUploadTime`, `ipAddr`, `userAgent`)"
 			. " VALUES(:userid, :postSize, NOW(), :ip, :ua)");
-		$stmt2->execute(array(":userid"=>$userid, ":postSize" => $post_size, ":ip" => $_SERVER['X_FORWARDED_FOR'], ":ua" => $_SERVER['HTTP_USER_AGENT']));
+		$stmt2->execute(array(":userid"=>$userid, ":postSize" => $post_size, ":ip" => $_SERVER['REMOTE_ADDR'], ":ua" => $_SERVER['HTTP_USER_AGENT']));
 		return TRUE;
 	} else {
 		$lastDate = $res[0]['lastUploadTime'];
-		
+
 		$stmt2 = $dbh->prepare("SELECT UNIX_TIMESTAMP(?) as timestamp");
 		$stmt2->execute(array($lastDate));
 		$res2 = $stmt2->fetchAll(PDO::FETCH_ASSOC);
 		$lastDate = $res2[0]['timestamp'];
-		
+
 		$uploadSize = $res[0]['bytesUploaded'];
-		
+
 		$bytes_per_sec = 1024 * 1024 * 10 / 60; // 10MB / min
 		$val1 = time() - $lastDate;
 		$val2 = $uploadSize / $bytes_per_sec;
 		if($val1 > $val2){
 			$stmt3 = $dbh->prepare("UPDATE `$user_upload_table_name` SET `lastUploadTime`=NOW(), `bytesUploaded`=:bytes, `ipAddr`=:ip, `userAgent`=:ua WHERE `userid`=:userid");
-			$stmt3->execute(array(":bytes" => $post_size, ":userid" => $userid, ":ip" => $_SERVER['X_FORWARDED_FOR'], ":ua" => $_SERVER['HTTP_USER_AGENT']));
+			$stmt3->execute(array(":bytes" => $post_size, ":userid" => $userid, ":ip" => $_SERVER['REMOTE_ADDR'], ":ua" => $_SERVER['HTTP_USER_AGENT']));
 			return TRUE;
 		} else {
 			return $val2 - $val1; // no spam pls
