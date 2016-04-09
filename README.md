@@ -1,7 +1,5 @@
 # OpenSprites #
 
-OSDev Staging: [See status at TeamCity](http://opensprites.org:8111/)
-
 Inspired by Scratch Resources, OpenSprites is a new sharing platform designed for Scratchers to upload their own content, as well as download other's content for free use in their projects. It is being developed open-source by a small group of collaborating Scratchers. The code is available on [GitHub](https://github.com/OpenSprites/OpenSprites/).
 
 For more information, please visit the [discussion thread](http://scratch.mit.edu/discuss/topic/85320/). The main website  is hosted [here](http://opensprites.org/). If you have any questions, don't hesitate to use our [forums](http://opensprites.org/forums/). Thank you to [cauzality](https://scratch.mit.edu/users/cauzality/) who kindly made our logos and various graphical mockups!
