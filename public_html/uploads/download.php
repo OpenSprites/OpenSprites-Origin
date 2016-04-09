@@ -86,12 +86,12 @@ function addFile($zip, $filename, $localname){
 function closeAndPrint($zip, $tmpname){
 	$res = $zip->close();
 	if($res === FALSE) dieWith500();
-	
+
 	sendHeaders();
 	header("Content-Length: " . filesize($tmpname));
-	
+
 	readfile($tmpname);
-	
+
 	unlink($tmpname);
 }
 
@@ -103,21 +103,24 @@ function getScript($filename){
 if($asset['assetType'] == "script"){
 	$tmp = newTempZip("../assets/sb2/default.sb2");
 	$zip = zipOpen($tmp);
-	
+
 	$project = getProjectJson($zip);
 	$project['children'][0]['scripts'] = array(array(0, 0, getScript($file_url)));
-	
+
 	setProjectJson($zip, $project);
-	
-	header("Content-disposition: attachment; filename=\"" . $asset[0]['customName'] . ".sb2\"");
-	
+
+	header("Content-disposition: attachment; filename=" . 'OpenSprites-Script-Download' . ".sb2");
+
 	closeAndPrint($zip, $tmp);
 } else if($ext == "gif") {
-	// todo: implement
+	sendHeaders();
+	header('Content-Length: ' . filesize($file_url));
+	header("Content-disposition: attachment; filename=" . 'OpenSprites-Gif-Download' . '.' . ".gif");
+	readfile($file_url);
 } else {
 	sendHeaders();
 	header('Content-Length: ' . filesize($file_url));
-	header("Content-disposition: attachment; filename=\"" . $asset[0]['customName'] . '.' . $ext . "\"");
+	header("Content-disposition: attachment; filename=" . 'OpenSprites-Download' . '.' . $ext);
 	readfile($file_url);
 }
 ?>
