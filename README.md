@@ -28,10 +28,10 @@ MegaApuTurkUltra is a sample text, who is mostly responsible for OS not deciding
  - OS Moderator (as is the entire team)
  - Frequently switches between very active and very inactive 
 
-### [GrannyCookies](http://opensprites.org/users/4/) ###
+### [nanalan](http://opensprites.org/users/4/) ###
 ![GitHub Logo](https://avatars0.githubusercontent.com/u/9429556?s=100)
 
-GrannyCookies mainly does frontend development and helps administrate and moderate the site/forums. He also edited the forum source code, styling it to fit in with the rest of the site.
+nanalan mainly does frontend development and helps administrate and moderate the site/forums. He also edited the forum source code, styling it to fit in with the rest of the site.
 
  - HTML
  - CSS
