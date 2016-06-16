@@ -47,11 +47,11 @@ RewriteRule ^users/([^/]+)/collection/([^/]+)$ users/collections.php?uid=$1&cid=
 ## user pages ##
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule ^users/([^/]+)$ /users/$1/ [R=301,L]
+RewriteRule ^users/([^/]+)$ https://opensprites.org/users/$1/ [R=301,L]
 
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule ^users/([^/]+)/$ users/index.php?id=$1 [QSA,L]
+RewriteRule ^users/([^/]+)/$ https://opensprites.org/users/index.php?id=$1 [QSA,L]
 
 RewriteCond %{HTTPS} !=on
 RewriteRule ^(.*)$ https://opensprites.org$1 [R,L]
