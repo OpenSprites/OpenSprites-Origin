@@ -1,5 +1,8 @@
 # OpenSprites #
 
+##Retirement
+This is the original version of OpenSprites, written in PHP. The project is now being rewritten in node.js, under the name of [OpenSprites-Next](https://github.com/OpenSprites/OpenSprites-next). This repository remains for historical purposes, and has been renamed to OpenSprites Origin.
+
 Inspired by Scratch Resources, OpenSprites is a new sharing platform designed for Scratchers to upload their own content, as well as download other's content for free use in their projects. It is being developed open-source by a small group of collaborating Scratchers. The code is available on [GitHub](https://github.com/OpenSprites/OpenSprites/).
 
 For more information, please visit the [discussion thread](http://scratch.mit.edu/discuss/topic/85320/). The main website  is hosted [here](http://opensprites.org/). If you have any questions, don't hesitate to use our [forums](http://opensprites.org/forums/). Thank you to [cauzality](https://scratch.mit.edu/users/cauzality/) who kindly made our logos and various graphical mockups!
