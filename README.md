@@ -1,4 +1,4 @@
-##Retirement
+## Retirement
 This is the original version of OpenSprites, written in PHP. The project is now being rewritten in node.js, under the name of [OpenSprites-Next](https://github.com/OpenSprites/OpenSprites-next). This repository remains for historical purposes, and has been renamed to OpenSprites Origin.
 
 # OpenSprites
